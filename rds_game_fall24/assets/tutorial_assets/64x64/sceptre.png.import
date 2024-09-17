@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csmogf1w3kqwt"
-path="res://.godot/imported/sceptre.png-62c8de6716164822502ebe3bfa551c43.ctex"
+path="res://.godot/imported/sceptre.png-c39a635c5f519e1965fae9b4992e7a81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial_assets/sceptre.png"
-dest_files=["res://.godot/imported/sceptre.png-62c8de6716164822502ebe3bfa551c43.ctex"]
+source_file="res://assets/tutorial_assets/64x64/sceptre.png"
+dest_files=["res://.godot/imported/sceptre.png-c39a635c5f519e1965fae9b4992e7a81.ctex"]
 
 [params]
 

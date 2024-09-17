@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgng7vmx3lu86"
-path="res://.godot/imported/pocket.png-9fe7a498ffe03b6216915be52b24419a.ctex"
+path="res://.godot/imported/pocket.png-ade6f8fbfa546a69b5adcb46931becf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial_assets/pocket.png"
-dest_files=["res://.godot/imported/pocket.png-9fe7a498ffe03b6216915be52b24419a.ctex"]
+source_file="res://assets/tutorial_assets/64x64/pocket.png"
+dest_files=["res://.godot/imported/pocket.png-ade6f8fbfa546a69b5adcb46931becf0.ctex"]
 
 [params]
 

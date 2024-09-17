@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3dmfju8tjqd2"
-path="res://.godot/imported/wood.png-49d5584c437f05b26d2e4a3c841e28dc.ctex"
+uid="uid://c3toqxl3ojlon"
+path="res://.godot/imported/empty_hole.png-cc4638077f705f505b70d358110d9e8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial_assets/wood.png"
-dest_files=["res://.godot/imported/wood.png-49d5584c437f05b26d2e4a3c841e28dc.ctex"]
+source_file="res://assets/tutorial_assets/16x16/empty_hole.png"
+dest_files=["res://.godot/imported/empty_hole.png-cc4638077f705f505b70d358110d9e8a.ctex"]
 
 [params]
 

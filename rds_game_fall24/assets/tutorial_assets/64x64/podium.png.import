@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckfodxk41eqx6"
-path="res://.godot/imported/podium.png-b6b71e259b2753917d84408a5244e888.ctex"
+path="res://.godot/imported/podium.png-a9d94f5e199975e1bb6edb4835b8c9e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial_assets/podium.png"
-dest_files=["res://.godot/imported/podium.png-b6b71e259b2753917d84408a5244e888.ctex"]
+source_file="res://assets/tutorial_assets/64x64/podium.png"
+dest_files=["res://.godot/imported/podium.png-a9d94f5e199975e1bb6edb4835b8c9e8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6wl5ud48lcbg"
-path="res://.godot/imported/memory_ball.png-6f047db159eaca5f9f28ec5ab11c89e2.ctex"
+uid="uid://c7hgr2be00p8l"
+path="res://.godot/imported/character_4.png-2be808db6452c4fbbce93af185f078cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial_assets/memory_ball.png"
-dest_files=["res://.godot/imported/memory_ball.png-6f047db159eaca5f9f28ec5ab11c89e2.ctex"]
+source_file="res://assets/tutorial_assets/16x16/character_4.png"
+dest_files=["res://.godot/imported/character_4.png-2be808db6452c4fbbce93af185f078cd.ctex"]
 
 [params]
 
