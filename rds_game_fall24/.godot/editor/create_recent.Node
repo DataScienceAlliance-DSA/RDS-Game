@@ -1,1 +1,7 @@
+AnimationPlayer
+CollisionShape2D
+Area2D
+CharacterBody2D
+TileMap
+Node2D
 Control
