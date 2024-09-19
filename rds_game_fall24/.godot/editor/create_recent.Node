@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 Camera2D
 TileMap
 Sprite2D
+=======
+TextureRect
+HBoxContainer
+VBoxContainer
+MarginContainer
+Control
+CanvasLayer
+AnimationPlayer
+>>>>>>> d5f1980550f749e090f1f6e95763a0f70dde112b
 CollisionShape2D
 Area2D
 AnimationPlayer
 CharacterBody2D
 Node2D
-Control
