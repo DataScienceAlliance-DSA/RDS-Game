@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-﻿50088
-/private/var/folders/0n/l1j1tsq53l9fqhzsrh19x0c40000gn/T/AppTranslocation/879BF4A9-69FC-4FEB-A92A-F021CE157095/d/Godot_mono.app/Contents/MacOS/Godot
-=======
-﻿56830
+﻿63759
 C:/Users/23die/Downloads/Godot_v4.2.2-stable_mono_win64/Godot_v4.2.2-stable_mono_win64/Godot_v4.2.2-stable_mono_win64.exe
->>>>>>> d5f1980550f749e090f1f6e95763a0f70dde112b

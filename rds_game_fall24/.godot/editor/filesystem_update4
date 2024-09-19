@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-res://main_character.tscn
-res://main_character.gd
 res://tile_map.tscn
-=======
 res://UI.tscn
->>>>>>> d5f1980550f749e090f1f6e95763a0f70dde112b
+res://main_character.tscn
