@@ -10,13 +10,13 @@ func _process(_delta):
 	move_direction = Vector2.ZERO
 
 	# Check for input and adjust the move_direction accordingly
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("right"):
 		move_direction.x += 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("left"):
 		move_direction.x -= 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("down"):
 		move_direction.y += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("up"):
 		move_direction.y -= 1
 
 	# Normalize the move_direction vector to prevent faster diagonal movement
