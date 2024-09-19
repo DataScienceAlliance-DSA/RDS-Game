@@ -1,7 +1,12 @@
+TextureRect
+HBoxContainer
+VBoxContainer
+MarginContainer
+Control
+CanvasLayer
 AnimationPlayer
 CollisionShape2D
 Area2D
 CharacterBody2D
 TileMap
 Node2D
-Control
