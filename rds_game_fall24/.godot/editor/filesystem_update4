@@ -1,4 +1,4 @@
-res://main_character.tscn
+res://UI.tscn
 res://main_character.gd
 res://tile_map.tscn
-res://UI.tscn
+res://main_character.tscn
