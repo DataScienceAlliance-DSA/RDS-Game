@@ -1,4 +1,5 @@
-res://UI.tscn
+res://main_character.tscn
 res://main_character.gd
 res://tile_map.tscn
-res://main_character.tscn
+res://UI.tscn
+res://Scene Folder/main_character.tscn
