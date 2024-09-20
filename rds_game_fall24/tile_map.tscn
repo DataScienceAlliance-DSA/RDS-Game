@@ -1755,7 +1755,7 @@ layer_4/tile_data = PackedInt32Array(262149, 327699, 4, 524293, 262163, 4, 65536
 layer_5/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("16_0o7eq")]
-position = Vector2(960, 896)
+position = Vector2(960, 1024)
 
 [node name="Fox" type="CharacterBody2D" parent="."]
 visible = false
