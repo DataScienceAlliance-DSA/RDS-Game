@@ -1,69 +1,222 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=6 format=3 uid="uid://cfqpepeud7y6s"]
 
+[ext_resource type="Script" path="res://Scene Folder/Dialogue.gd" id="1_ojxsf"]
 [ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://icon.svg" id="1_q8u87"]
+
+[sub_resource type="Gradient" id="Gradient_6hbbo"]
+colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_en6ay"]
+gradient = SubResource("Gradient_6hbbo")
+fill_from = Vector2(0.508547, 1)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0170h"]
+gradient = SubResource("Gradient_6hbbo")
+fill_from = Vector2(0.508547, 1)
+fill_to = Vector2(0.5, 0)
 
 [node name="UI" type="CanvasLayer"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
+[node name="Dialogue" type="MarginContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+offset_top = 300.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
+script = ExtResource("1_ojxsf")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
-custom_minimum_size = Vector2(650, 0)
+[node name="PlayerContainer" type="HBoxContainer" parent="Dialogue"]
+custom_minimum_size = Vector2(781, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/HBoxContainer"]
+[node name="PositionControl" type="Control" parent="Dialogue/PlayerContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+
+[node name="ScaleControl" type="Control" parent="Dialogue/PlayerContainer/PositionControl"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = -4.0
+offset_top = 704.0
+offset_right = -4.0
+offset_bottom = 704.0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="IconBanner" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 128.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 128)
+size_flags_vertical = 8
+texture = SubResource("GradientTexture2D_en6ay")
+
+[node name="TextBanner" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconBanner"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 451.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 128)
+size_flags_vertical = 8
+texture = SubResource("GradientTexture2D_en6ay")
+
+[node name="PlayerProfile" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconBanner"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(64, 64)
 size_flags_vertical = 8
 texture = ExtResource("1_q8u87")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/HBoxContainer/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
 layout_mode = 1
-offset_right = 954.0
-offset_bottom = 98.0
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_constants/margin_left = 140
-theme_override_constants/margin_top = 8
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -123.0
+offset_right = 308.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+theme_override_constants/margin_left = 138
+theme_override_constants/margin_bottom = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/HBoxContainer/TextureRect/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/MarginContainer"]
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 bbcode_enabled = true
-text = "[b]Godot[/b]
+text = "[color=black][b]Godot #1[/b]
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
 fit_content = true
 scroll_active = false
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer"]
-visible = false
+[node name="CharacterContainer" type="HBoxContainer" parent="Dialogue"]
+custom_minimum_size = Vector2(521, 0)
 layout_mode = 2
 size_flags_horizontal = 8
+alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/HBoxContainer2"]
+[node name="PositionControl" type="Control" parent="Dialogue/CharacterContainer"]
+modulate = Color(0.454524, 0.454524, 0.454524, 1)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="ScaleControl" type="Control" parent="Dialogue/CharacterContainer/PositionControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = SubResource("GradientTexture2D_0170h")
+
+[node name="TextBanner" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -451.0
+offset_top = -128.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(0, 128)
+size_flags_vertical = 8
+texture = SubResource("GradientTexture2D_en6ay")
+
+[node name="OtherProfile" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+size_flags_horizontal = 8
 size_flags_vertical = 8
 texture = ExtResource("1_q8u87")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -436.0
+offset_top = -115.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(436, 115)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/margin_right = 136
+theme_override_constants/margin_bottom = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/MarginContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "[color=black][b]Godot #2[/b]
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+fit_content = true
+scroll_active = false

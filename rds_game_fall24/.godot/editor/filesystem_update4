@@ -1,5 +1,7 @@
-res://main_character.tscn
-res://main_character.gd
-res://tile_map.tscn
-res://UI.tscn
 res://Scene Folder/main_character.tscn
+res://fox.tscn
+res://fox_area.gd
+res://Scene Folder/Environment/tile_map.tscn
+res://Scene Folder/UI.tscn
+res://Scripts/main_character.gd
+res://Scene Folder/Dialogue.gd

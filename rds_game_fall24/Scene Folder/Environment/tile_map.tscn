@@ -1,13 +1,13 @@
-[gd_scene load_steps=25 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=17 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Texture2D" uid="uid://b8hqa48xdvbd0" path="res://assets/victorian_interior/64x64-ALL-ASSETS.png" id="1_bro23"]
 [ext_resource type="Texture2D" uid="uid://bohtl5hnig5iy" path="res://assets/tutorial_assets/64x64/64x64_Tutorial_Assets.png" id="2_dx041"]
-[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/Cauldron.png" id="3_io7tc"]
+[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/cauldron.png" id="3_io7tc"]
 [ext_resource type="Texture2D" uid="uid://bibqsa3lh501w" path="res://assets/tutorial_assets/16x16/wand.png" id="3_s8v25"]
 [ext_resource type="Texture2D" uid="uid://m4kvn3052aa7" path="res://assets/tutorial_assets/16x16/potions.png" id="5_53snt"]
 [ext_resource type="Texture2D" uid="uid://moy7o3l4fe8n" path="res://assets/tutorial_assets/16x16/sceptre_2.png" id="6_hp220"]
+[ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://fox.tscn" id="8_o1l77"]
 [ext_resource type="PackedScene" uid="uid://cfqpepeud7y6s" path="res://Scene Folder/UI.tscn" id="9_n76cm"]
-[ext_resource type="Texture2D" uid="uid://djl0dug5vhss2" path="res://assets/tutorial_assets/16x16/fox.png" id="15_hhyxp"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="16_0o7eq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sn07g"]
@@ -1621,119 +1621,6 @@ sources/19 = SubResource("TileSetAtlasSource_mvp6i")
 sources/20 = SubResource("TileSetAtlasSource_onljr")
 sources/21 = SubResource("TileSetAtlasSource_46e28")
 
-[sub_resource type="Animation" id="Animation_gdaj2"]
-resource_name = "LeftIdle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [12]
-}
-
-[sub_resource type="Animation" id="Animation_8rlon"]
-resource_name = "LeftRun"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [18, 19, 20, 21, 22, 23]
-}
-
-[sub_resource type="Animation" id="Animation_emjr0"]
-resource_name = "LeftWalk"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [12, 13, 14, 15, 16, 17]
-}
-
-[sub_resource type="Animation" id="Animation_seo77"]
-resource_name = "RightIdle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_l4xx5"]
-resource_name = "LeftWalk"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 0.965936, 1, 1, 1),
-"update": 1,
-"values": [6, 7, 8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_rsvvq"]
-resource_name = "LeftWalk"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ewee1"]
-_data = {
-"LeftIdle": SubResource("Animation_gdaj2"),
-"LeftRun": SubResource("Animation_8rlon"),
-"LeftWalk": SubResource("Animation_emjr0"),
-"RightIdle": SubResource("Animation_seo77"),
-"RightRun": SubResource("Animation_l4xx5"),
-"RightWalk": SubResource("Animation_rsvvq")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nccn4"]
-size = Vector2(20, 9)
-
 [node name="Cauldron Room" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1757,25 +1644,10 @@ layer_5/tile_data = PackedInt32Array()
 [node name="Player" parent="." instance=ExtResource("16_0o7eq")]
 position = Vector2(960, 1024)
 
-[node name="Fox" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(472, 272)
-
-[node name="FoxSprite" type="Sprite2D" parent="Fox"]
-texture_filter = 3
-texture = ExtResource("15_hhyxp")
-hframes = 6
-vframes = 4
-frame = 12
-
-[node name="FoxAnim" type="AnimationPlayer" parent="Fox/FoxSprite"]
-libraries = {
-"": SubResource("AnimationLibrary_ewee1")
-}
-
-[node name="FoxCollider" type="CollisionShape2D" parent="Fox"]
-position = Vector2(4, -1)
-shape = SubResource("RectangleShape2D_nccn4")
-debug_color = Color(0, 0.6, 0.701961, 0)
+[node name="Fox" parent="." instance=ExtResource("8_o1l77")]
 
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
+visible = false
+
+[connection signal="mouse_entered" from="Fox" to="Fox" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Fox" to="Fox" method="_on_mouse_exited"]

@@ -1,4 +1,6 @@
 CollisionShape2D
+Area2D
+Control
 Camera2D
 TileMap
 Sprite2D
@@ -6,9 +8,7 @@ TextureRect
 HBoxContainer
 VBoxContainer
 MarginContainer
-Control
 CanvasLayer
 AnimationPlayer
-Area2D
 AnimationPlayer
 CharacterBody2D
