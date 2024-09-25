@@ -3,6 +3,7 @@ extends Area2D
 var interactor
 
 @onready var dialogue_ui: MarginContainer = UI.get_node("Dialogue")
+@onready var interactions = 0
 
 func _ready():
 	self.set_process(false)
@@ -12,12 +13,13 @@ func interact(interactor_object):
 	interactor = interactor_object # set interactor source
 	self.set_process(true) # enable area interaction screen
 	
-	dialogue_ui.visible = true
-	dialogue_ui.open_dialogue("Fox")
+	interactions = interactions + 1	# increment interactions made with this area
+	match interactions:
+		1:
+			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxIntro.json", self)
+		_:
+			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxBlurb.json", self)
 
-## PROCESS runs after interaction starts. player can disable interaction while this is running
-func _process(_delta):
-	if Input.is_action_just_pressed("interaction"):
-		interactor.enable_process() # activate player
-		self.set_process(false)		# disable area interaction screen
-		dialogue_ui.visible = false
+func end_interaction():
+	interactor.set_process(true)
+	self.set_process(false)

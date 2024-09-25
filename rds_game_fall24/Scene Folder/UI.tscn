@@ -38,6 +38,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="PositionControl" type="Control" parent="Dialogue/PlayerContainer"]
+modulate = Color(0.909804, 0.909804, 0.909804, 1)
 layout_mode = 2
 
 [node name="ScaleControl" type="Control" parent="Dialogue/PlayerContainer/PositionControl"]
@@ -47,11 +48,11 @@ offset_left = -4.0
 offset_top = 704.0
 offset_right = -4.0
 offset_bottom = 704.0
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.25, 1.25)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="IconBanner" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+[node name="IconCenter" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -63,7 +64,7 @@ pivot_offset = Vector2(0, 128)
 size_flags_vertical = 8
 texture = SubResource("GradientTexture2D_en6ay")
 
-[node name="TextBanner" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconBanner"]
+[node name="TextBanner" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -75,7 +76,7 @@ pivot_offset = Vector2(0, 128)
 size_flags_vertical = 8
 texture = SubResource("GradientTexture2D_en6ay")
 
-[node name="PlayerProfile" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconBanner"]
+[node name="Avatar" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -107,7 +108,7 @@ size_flags_vertical = 8
 theme_override_constants/margin_left = 138
 theme_override_constants/margin_bottom = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/MarginContainer"]
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/MarginContainer"]
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
@@ -127,7 +128,6 @@ size_flags_horizontal = 8
 alignment = 2
 
 [node name="PositionControl" type="Control" parent="Dialogue/CharacterContainer"]
-modulate = Color(0.454524, 0.454524, 0.454524, 1)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -141,8 +141,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 
-[node name="TextureRect" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+[node name="IconCenter" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -158,7 +159,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 texture = SubResource("GradientTexture2D_0170h")
 
-[node name="TextBanner" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/TextureRect"]
+[node name="TextBanner" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -173,7 +174,7 @@ pivot_offset = Vector2(0, 128)
 size_flags_vertical = 8
 texture = SubResource("GradientTexture2D_en6ay")
 
-[node name="OtherProfile" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/TextureRect"]
+[node name="Avatar" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -208,14 +209,14 @@ size_flags_vertical = 8
 theme_override_constants/margin_right = 136
 theme_override_constants/margin_bottom = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/MarginContainer"]
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/MarginContainer"]
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 bbcode_enabled = true
-text = "[color=black][b]Godot #2[/b]
+text = "[color=black][b]Fox[/b]
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
 fit_content = true

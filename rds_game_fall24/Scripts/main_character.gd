@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var player_speed = 200
 @onready var player_area = self.get_node("Area2D")
+@onready var enter_cutscene = true
 
 # movement stack & directional velocity constants
 var NO_MOVEMENT = Vector2(0, 0)
@@ -9,9 +10,28 @@ var RIGHT_MOVEMENT = Vector2(player_speed, 0)
 var LEFT_MOVEMENT = Vector2(-1 * player_speed, 0)
 var UP_MOVEMENT = Vector2(0, -1 * player_speed)
 var DOWN_MOVEMENT = Vector2(0, player_speed)
-@onready var movement_stack = [NO_MOVEMENT]
+@onready var movement_stack = [UP_MOVEMENT]
+
+# global variables for finding interactable areas
+var closest_area_index
+var neighbor_areas
 
 func _process(_delta):
+	# Find all areas before any cutscene/player-inputs
+	find_interactables()
+	
+	# Scene Cutscene Conditional (moves player to position)
+	if (enter_cutscene) and (self.position.y >= 828):
+		self.velocity = movement_stack.front() # constantly move player into position during cutscene
+		self.move_and_slide()
+		return	# end process if players not in position yet
+	elif (enter_cutscene):
+		# following line commented due to bug (interaction occurs several times if uncommented)
+		# await get_tree().create_timer(0.25).timeout	# wait a quarter-second
+		confirmed_interaction()	# interact with fox
+		enter_cutscene = false # disable cutscene-movement
+		movement_stack = [NO_MOVEMENT] # reset player movement stack
+	
 	############################################################################
 	## TENTATIVE MOVEMENT STACK SYSTEM for limiting movement to four directions.
 	# ...i want to refactor so that its not 8 conditionals in a row if possible 
@@ -43,26 +63,10 @@ func _process(_delta):
 	self.velocity = movement_stack.front()
 	self.move_and_slide()
 	
-	## AREA DETECTION for detecting and interacting with interactables
-	
-	var closest_area_index = 0
-	var closest_distance = 0
-	var neighbor_areas = player_area.get_overlapping_areas();
-	
-	for i in neighbor_areas.size():
-		var x_distance = ((neighbor_areas[i].position.x - player_area.position.x) ** 2)
-		var y_distance = ((neighbor_areas[i].position.y - player_area.position.y) ** 2)
-		var total_distance = ((x_distance + y_distance) ** 0.5)
-		closest_area_index = i if (total_distance < closest_distance) else closest_area_index
-		closest_distance = total_distance if (total_distance < closest_distance) else closest_distance
-	
-	if neighbor_areas.size() != 0:
+	## AREA INTERACTION for interactables
+	if (neighbor_areas.size() != 0) and (Input.is_action_just_pressed("interaction")):
 		# place code for drawing an interact UI button over closest area
-		if Input.is_action_just_pressed("interaction"):
-			neighbor_areas[closest_area_index].interact(self)
-			self.set_process(false)
-	
-	print(movement_stack)
+		confirmed_interaction()
 	
 	## -diego
 	############################################################################
@@ -71,3 +75,21 @@ func _process(_delta):
 func enable_process():
 	movement_stack = [NO_MOVEMENT]	# reset movement stack
 	self.set_process(true)			# enable player
+
+# successfully interacts with an in-area object...
+func confirmed_interaction():
+	neighbor_areas[closest_area_index].interact(self)
+	self.set_process(false)
+
+# finds all interactables and sets which one is nearest to target interactable...
+func find_interactables():
+	closest_area_index = 0
+	neighbor_areas = player_area.get_overlapping_areas();
+	var closest_distance = 0
+	
+	for i in neighbor_areas.size():
+		var x_distance = ((neighbor_areas[i].position.x - player_area.position.x) ** 2)
+		var y_distance = ((neighbor_areas[i].position.y - player_area.position.y) ** 2)
+		var total_distance = ((x_distance + y_distance) ** 0.5)
+		closest_area_index = i if (total_distance < closest_distance) else closest_area_index
+		closest_distance = total_distance if (total_distance < closest_distance) else closest_distance
