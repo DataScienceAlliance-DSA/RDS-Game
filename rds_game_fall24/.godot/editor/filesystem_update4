@@ -3,12 +3,3 @@ res://fox_area.gd
 res://Scene Folder/UI.tscn
 res://Scene Folder/main_character.tscn
 res://fox.tscn
-<<<<<<< HEAD
-=======
-res://Scripts/main_character.gd
-res://fox_area.gd
-res://Scripts/Dialogues/FoxIntro.json
-res://Scene Folder/Dialogue.gd
-res://Scripts/Dialogues/Cauldron/FoxIntro.json
-res://Scripts/Dialogues/Cauldron/FoxBlurb.json
->>>>>>> parent of 36668c3 (choices assets)
