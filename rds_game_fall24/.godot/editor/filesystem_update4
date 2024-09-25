@@ -1,2 +1,5 @@
 res://Scene Folder/Environment/tile_map.tscn
 res://fox_area.gd
+res://Scene Folder/UI.tscn
+res://Scene Folder/main_character.tscn
+res://fox.tscn
