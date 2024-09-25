@@ -4,6 +4,9 @@ var player_speed = 200
 @onready var player_area = self.get_node("Area2D")
 @onready var enter_cutscene = true
 
+# for setting called-animation based on character velocity
+@onready var animations = $AnimationPlayer
+
 # movement stack & directional velocity constants
 var NO_MOVEMENT = Vector2(0, 0)
 var RIGHT_MOVEMENT = Vector2(player_speed, 0)
@@ -15,6 +18,17 @@ var DOWN_MOVEMENT = Vector2(0, player_speed)
 # global variables for finding interactable areas
 var closest_area_index
 var neighbor_areas
+
+func updateAnimation():
+	if velocity.length() == 0:
+		animations.stop()
+	else:
+		var direction = "Down"
+		if velocity.x < 0: direction = "Left"
+		elif velocity.x >0: direction = "Right"
+		elif velocity.y < 0: direction = "Up"
+	
+		animations.play("walk" + direction)
 
 func _process(_delta):
 	# Find all areas before any cutscene/player-inputs
@@ -62,6 +76,7 @@ func _process(_delta):
 	# set the velocity to top of stack (most recently pressed direction)
 	self.velocity = movement_stack.front()
 	self.move_and_slide()
+	self.updateAnimation()
 	
 	## AREA INTERACTION for interactables
 	if (neighbor_areas.size() != 0) and (Input.is_action_just_pressed("interaction")):

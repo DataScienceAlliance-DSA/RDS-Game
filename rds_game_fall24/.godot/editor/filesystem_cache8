@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1727227422
 fox.tscn::PackedScene::1859519243384973732::1727226942::0::1::::<><>::uid://djl0dug5vhss2::::res://assets/tutorial_assets/16x16/fox.png<>res://fox_area.gd
 fox_area.gd::GDScript::-1::1727227091::0::1::::<>Area2D<>::
@@ -66,3 +67,70 @@ main_character.gd::GDScript::-1::1727224243::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/Dialogues/Cauldron/::1727227422
 FoxIntro.json::JSON::-1::1727226975::0::1::::<><>::
 ::res://Scripts/Dialogues/Monologues/::1727226839
+=======
+::res://::1727295253
+fox.tscn::PackedScene::1859519243384973732::1727244187::0::1::::<><>::uid://djl0dug5vhss2::::res://assets/tutorial_assets/16x16/fox.png<>res://fox_area.gd
+fox_area.gd::GDScript::-1::1726894635::0::1::::<>Area2D<>::
+icon.svg::CompressedTexture2D::3648582972397847862::1726689391::1726689391::1::::<><>::
+main_character.gd::GDScript::-1::1726894635::0::1::::<>CharacterBody2D<>::
+main_character.tscn::PackedScene::3113528464361542574::1726894635::0::1::::<><>::uid://ds86qx5cqmeie::::res://assets/tutorial_assets/Additional_Test_Assets/IMG_1400.PNG<>res://main_character.gd
+UI.tscn::PackedScene::6370659473448383308::1726894635::0::1::::<><>::uid://br8nvmsg2wo75::::res://icon.svg
+::res://assets/::1727242116
+::res://assets/tutorial_assets/::1727242116
+::res://assets/tutorial_assets/16x16/::1726689412
+black_smoke.png::CompressedTexture2D::307400641101880703::1726689391::1726689391::1::::<><>::
+bookshelf_1.png::CompressedTexture2D::4456679736205681766::1726689391::1726689391::1::::<><>::
+bookshelf_2.png::CompressedTexture2D::1826707126558234908::1726689391::1726689391::1::::<><>::
+candle.png::CompressedTexture2D::7807169343059221404::1726689391::1726689391::1::::<><>::
+cannon.png::CompressedTexture2D::6981147979441259231::1726689391::1726689391::1::::<><>::
+cauldron.png::CompressedTexture2D::3649404786255937523::1726689391::1726689391::1::::<><>::
+cauldron_smokes.png::CompressedTexture2D::6890872337318916078::1726689391::1726689391::1::::<><>::
+chair.png::CompressedTexture2D::1444849520433372260::1726689391::1726689391::1::::<><>::
+character_1.png::CompressedTexture2D::2058836266737294598::1726689391::1726689391::1::::<><>::
+character_2.png::CompressedTexture2D::2257715868120121443::1726689391::1726689391::1::::<><>::
+character_3.png::CompressedTexture2D::8412593096801735661::1726689391::1726689391::1::::<><>::
+character_4.png::CompressedTexture2D::7033731088426048321::1726689391::1726689391::1::::<><>::
+character_5.png::CompressedTexture2D::8926881337466903007::1726689391::1726689391::1::::<><>::
+conveyor_belt_1.png::CompressedTexture2D::5929297110967171094::1726689391::1726689391::1::::<><>::
+conveyor_belt_2.png::CompressedTexture2D::1571957116622005973::1726689391::1726689391::1::::<><>::
+conveyor_belt_3.png::CompressedTexture2D::6600253709383794690::1726689391::1726689391::1::::<><>::
+desks.png::CompressedTexture2D::8225341569204122174::1726689391::1726689391::1::::<><>::
+empty_hole.png::CompressedTexture2D::6778232003500622845::1726689391::1726689391::1::::<><>::
+fox.png::CompressedTexture2D::7815194142444380175::1726689391::1726689391::1::::<><>::
+orbs.png::CompressedTexture2D::2743307397627363103::1726689391::1726689391::1::::<><>::
+pocket.png::CompressedTexture2D::4287931863935342131::1726689391::1726689391::1::::<><>::
+podium.png::CompressedTexture2D::8397592169787206017::1726689391::1726689391::1::::<><>::
+potions.png::CompressedTexture2D::902778477358902008::1726689391::1726689391::1::::<><>::
+sceptre_1.png::CompressedTexture2D::6973334519468218918::1726689391::1726689391::1::::<><>::
+sceptre_2.png::CompressedTexture2D::872682544564748631::1726689391::1726689391::1::::<><>::
+wand.png::CompressedTexture2D::2950999470490848046::1726689391::1726689391::1::::<><>::
+::res://assets/tutorial_assets/64x64/::1727120423
+64x64_Tutorial_Assets.png::CompressedTexture2D::3384689992615246768::1726778405::1726778408::1::::<><>::
+64x64_Tutorial_Assets_Tilesheet.png::CompressedTexture2D::971198736402007261::1726778069::1726778144::1::::<><>::
+Cauldron.png::CompressedTexture2D::6146976664387159585::1726778516::1727120423::1::::<><>::
+::res://assets/tutorial_assets/Additional_Test_Assets/::1727242117
+character_sprite_sheet.png::CompressedTexture2D::7683345507389963778::1727242114::1727242117::1::::<><>::
+IMG_1400.PNG::CompressedTexture2D::8492697756420011972::1726696849::1726696849::1::::<><>::
+MC.png::CompressedTexture2D::4418747963849723768::1727128630::1727129604::1::::<><>::
+::res://assets/victorian_interior/::1726778084
+64x64-ALL-ASSETS.png::CompressedTexture2D::4718076215116401915::1726771919::1726771925::1::::<><>::
+read_me.txt::TextFile::-1::1726689391::0::1::::<><>::
+::res://assets/victorian_interior/16x16/::1726689407
+16x16-ALL-ASSETS.png::CompressedTexture2D::4500454506605413039::1726689391::1726689391::1::::<><>::
+16x16-OBJECTS.png::CompressedTexture2D::1986606510025668864::1726689391::1726689391::1::::<><>::
+16x16-TEXTURES.png::CompressedTexture2D::2543907100348303720::1726689391::1726689391::1::::<><>::
+::res://assets/victorian_interior/32x32/::1726689407
+32x32-ALL-ASSETS.png::CompressedTexture2D::3096138358071517853::1726689391::1726689391::1::::<><>::
+32x32-OBJECTS.png::CompressedTexture2D::1871899482873753038::1726689391::1726689391::1::::<><>::
+32x32-TEXTURES.png::CompressedTexture2D::6105803643741807861::1726689391::1726689391::1::::<><>::
+::res://Scene Folder/::1727244308
+Dialogue.gd::GDScript::-1::1726894635::0::1::::<>MarginContainer<>::
+main_character.tscn::PackedScene::5817375992330108292::1727244301::0::1::::<><>::res://Scripts/main_character.gd<>uid://dhp4twd8ix603::::res://assets/tutorial_assets/Additional_Test_Assets/character_sprite_sheet.png
+UI.tscn::PackedScene::5157734322651910848::1727244187::0::1::::<><>::res://Scene Folder/Dialogue.gd<>uid://br8nvmsg2wo75::::res://icon.svg
+::res://Scene Folder/Environment/::1727244308
+tile_map.tscn::PackedScene::1495173672702862107::1727244303::0::1::::<><>::uid://b8hqa48xdvbd0::::res://assets/victorian_interior/64x64-ALL-ASSETS.png<>uid://bohtl5hnig5iy::::res://assets/tutorial_assets/64x64/64x64_Tutorial_Assets.png<>uid://cttv2ptbpq3vx::::res://assets/tutorial_assets/64x64/Cauldron.png<>uid://bibqsa3lh501w::::res://assets/tutorial_assets/16x16/wand.png<>uid://m4kvn3052aa7::::res://assets/tutorial_assets/16x16/potions.png<>uid://moy7o3l4fe8n::::res://assets/tutorial_assets/16x16/sceptre_2.png<>uid://1q1al4h8xolo::::res://fox.tscn<>uid://cfqpepeud7y6s::::res://Scene Folder/UI.tscn<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn
+::res://Scene Folder/Minigames/::1726894618
+Dartboard_Game.tscn::PackedScene::3717415725170487665::1726894618::0::1::::<><>::
+::res://Scripts/::1727244182
+main_character.gd::GDScript::-1::1727244179::0::1::::<>CharacterBody2D<>::
+>>>>>>> Stashed changes

@@ -1,3 +1,4 @@
+AnimationPlayer
 CollisionShape2D
 Area2D
 Control
@@ -9,6 +10,4 @@ HBoxContainer
 VBoxContainer
 MarginContainer
 CanvasLayer
-AnimationPlayer
-AnimationPlayer
 CharacterBody2D
