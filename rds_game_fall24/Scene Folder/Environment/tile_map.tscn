@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8hqa48xdvbd0" path="res://assets/victorian_interior/64x64-ALL-ASSETS.png" id="1_bro23"]
 [ext_resource type="Texture2D" uid="uid://bohtl5hnig5iy" path="res://assets/tutorial_assets/64x64/64x64_Tutorial_Assets.png" id="2_dx041"]
-[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/Cauldron.png" id="3_io7tc"]
+[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/cauldron.png" id="3_io7tc"]
 [ext_resource type="Texture2D" uid="uid://bibqsa3lh501w" path="res://assets/tutorial_assets/16x16/wand.png" id="3_s8v25"]
 [ext_resource type="Texture2D" uid="uid://m4kvn3052aa7" path="res://assets/tutorial_assets/16x16/potions.png" id="5_53snt"]
 [ext_resource type="Texture2D" uid="uid://moy7o3l4fe8n" path="res://assets/tutorial_assets/16x16/sceptre_2.png" id="6_hp220"]
