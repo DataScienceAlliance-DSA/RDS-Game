@@ -21,5 +21,6 @@ func interact(interactor_object):
 			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxBlurb.json", self)
 
 func end_interaction():
+	# disable interactable, enable player (interactor)
 	interactor.set_process(true)
 	self.set_process(false)
