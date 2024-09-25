@@ -1,7 +1,5 @@
 res://Scene Folder/Environment/tile_map.tscn
-res://fox_area.gd
-res://Scripts/Dialogues/Cauldron/FoxIntro.json
 res://Scene Folder/UI.tscn
 res://Scene Folder/main_character.tscn
 res://fox.tscn
-res://Scripts/main_character.gd
+res://fox_area.gd

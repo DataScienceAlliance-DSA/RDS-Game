@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://1q1al4h8xolo"]
 
-[ext_resource type="Texture2D" uid="uid://djl0dug5vhss2" path="res://assets/tutorial_assets/16x16/fox.png" id="1_v7gbf"]
+[ext_resource type="Texture2D" uid="uid://ceook2jgpk3ak" path="res://assets/tutorial_assets/Additional_Test_Assets/IMG_1482.PNG" id="1_diq4l"]
 [ext_resource type="Script" path="res://fox_area.gd" id="2_lp4ex"]
 
 [sub_resource type="Animation" id="Animation_gdaj2"]
@@ -125,10 +125,8 @@ scale = Vector2(4, 4)
 
 [node name="FoxSprite" type="Sprite2D" parent="."]
 texture_filter = 3
-texture = ExtResource("1_v7gbf")
-hframes = 6
-vframes = 4
-frame = 12
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_diq4l")
 
 [node name="FoxAnim" type="AnimationPlayer" parent="FoxSprite"]
 libraries = {

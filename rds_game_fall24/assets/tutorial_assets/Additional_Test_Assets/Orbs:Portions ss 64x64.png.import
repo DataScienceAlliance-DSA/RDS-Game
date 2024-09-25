@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxloh8l76rnun"
-path="res://.godot/imported/Frame 25.png-0b04a5387923f2c7778124be1e0c2680.ctex"
+uid="uid://c3td8i8o2qaf7"
+path="res://.godot/imported/Orbs:Portions ss 64x64.png-abda3c595cfff63505461c556c6f189d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial_assets/Additional_Test_Assets/Frame 25.png"
-dest_files=["res://.godot/imported/Frame 25.png-0b04a5387923f2c7778124be1e0c2680.ctex"]
+source_file="res://assets/tutorial_assets/Additional_Test_Assets/Orbs:Portions ss 64x64.png"
+dest_files=["res://.godot/imported/Orbs:Portions ss 64x64.png-abda3c595cfff63505461c556c6f189d.ctex"]
 
 [params]
 
