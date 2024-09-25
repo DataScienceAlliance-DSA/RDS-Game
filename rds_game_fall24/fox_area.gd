@@ -22,5 +22,5 @@ func interact(interactor_object):
 
 func end_interaction():
 	# disable interactable, enable player (interactor)
-	interactor.set_process(true)
+	interactor.enable_process()
 	self.set_process(false)

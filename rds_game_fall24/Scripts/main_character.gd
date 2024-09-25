@@ -36,12 +36,14 @@ func _process(_delta):
 	
 	# Scene Cutscene Conditional (moves player to position)
 	if (enter_cutscene) and (self.position.y >= 828):
+		self.animations.current_animation = "walkUp"
 		self.velocity = movement_stack.front() # constantly move player into position during cutscene
 		self.move_and_slide()
 		return	# end process if players not in position yet
 	elif (enter_cutscene):
 		# following line commented due to bug (interaction occurs several times if uncommented)
 		# await get_tree().create_timer(0.25).timeout	# wait a quarter-second
+		self.animations.current_animation = "walkRight"
 		confirmed_interaction()	# interact with fox
 		enter_cutscene = false # disable cutscene-movement
 		movement_stack = [NO_MOVEMENT] # reset player movement stack
@@ -83,7 +85,7 @@ func _process(_delta):
 		# place code for drawing an interact UI button over closest area
 		confirmed_interaction()
 	
-	## -diego
+	## -deeg
 	############################################################################
 
 # enables player to move again...
@@ -95,6 +97,8 @@ func enable_process():
 func confirmed_interaction():
 	neighbor_areas[closest_area_index].interact(self)
 	self.set_process(false)
+	movement_stack = [NO_MOVEMENT] # reset movement stack
+	# above line is for if player is enabled post-interactable area
 
 # finds all interactables and sets which one is nearest to target interactable...
 func find_interactables():
