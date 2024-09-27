@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=30 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Texture2D" uid="uid://b8hqa48xdvbd0" path="res://assets/victorian_interior/64x64-ALL-ASSETS.png" id="1_bro23"]
 [ext_resource type="Texture2D" uid="uid://bohtl5hnig5iy" path="res://assets/tutorial_assets/64x64/64x64_Tutorial_Assets.png" id="2_dx041"]
@@ -1698,7 +1698,11 @@ sources/12 = SubResource("TileSetAtlasSource_komiv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u0ug"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qsrq"]
+size = Vector2(112, 48)
+
 [node name="Cauldron Room" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 3
@@ -1719,24 +1723,37 @@ layer_4/tile_data = PackedInt32Array(262149, 327699, 4, 524293, 2, 1, 655366, 2,
 layer_5/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("16_0o7eq")]
+y_sort_enabled = true
 position = Vector2(960, 1168)
 
 [node name="Fox" parent="." instance=ExtResource("8_o1l77")]
-position = Vector2(1064, 840)
+y_sort_enabled = true
+position = Vector2(1029, 899)
 
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
 visible = false
 
-[node name="Cauldron" type="Sprite2D" parent="."]
-position = Vector2(960, 640)
-texture = ExtResource("3_io7tc")
+[node name="Cauldron" type="StaticBody2D" parent="."]
+y_sort_enabled = true
 
 [node name="Area2D" type="Area2D" parent="Cauldron"]
+position = Vector2(960, 640)
 script = ExtResource("15_u11sj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/Area2D"]
-scale = Vector2(6.4, 12.8)
+position = Vector2(0, 64)
+scale = Vector2(6.4, 6.4)
 shape = SubResource("RectangleShape2D_7u0ug")
+
+[node name="CauldronSprite" type="Sprite2D" parent="Cauldron"]
+y_sort_enabled = true
+position = Vector2(960, 704)
+texture = ExtResource("3_io7tc")
+offset = Vector2(0, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron"]
+position = Vector2(960, 744)
+shape = SubResource("RectangleShape2D_1qsrq")
 
 [connection signal="mouse_entered" from="Fox" to="Fox" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Fox" to="Fox" method="_on_mouse_exited"]

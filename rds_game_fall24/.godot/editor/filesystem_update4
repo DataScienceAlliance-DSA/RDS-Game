@@ -6,3 +6,7 @@ res://Scene Folder/Environment/tile_map.tscn
 res://Scripts/monologue.gd
 res://Scripts/cauldron_area.gd
 res://Scene Folder/main_character.tscn
+res://Scripts/3choice_dialogue.gd
+res://Scripts/Monologues/Cauldron/CauldronBlurb.json
+res://Scripts/main_character.gd
+res://Scripts/dialogue.gd

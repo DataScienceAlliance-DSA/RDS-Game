@@ -65,12 +65,12 @@ func process_next_text():
 		close_dialogue()
 	else:
 		# get/set character name and text accordingly from dictionary
-		var name = dialogue_dict[current_dialogue_id]["name"]
-		var text = dialogue_dict[current_dialogue_id]["text"]["en"]
+		var card_name = dialogue_dict[current_dialogue_id]["name"]
+		var card_text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
 		# if dialogue entry name is not Player, edit right text box of UI
 		if (dialogue_dict[current_dialogue_id]["name"] != "Player"):
-			opposing_text.text = "[color=black][b]"+name+"[/b]"+"\n\n"+text
+			opposing_text.text = "[color=black][b]"+card_name+"[/b]"+"\n\n"+card_text
 			opposing_scale.scale = Vector2(1.5, 1.5)
 			opposing_color.modulate.v = 1
 			
@@ -78,7 +78,7 @@ func process_next_text():
 			player_color.modulate.v = 0.5
 		# else, edit left text box of UI
 		else:
-			player_text.text = "[color=black][b]"+name+"[/b]"+"\n\n"+text
+			player_text.text = "[color=black][b]"+card_name+"[/b]"+"\n\n"+card_text
 			player_scale.scale = Vector2(1.5, 1.5)
 			player_color.modulate.v = 1
 			

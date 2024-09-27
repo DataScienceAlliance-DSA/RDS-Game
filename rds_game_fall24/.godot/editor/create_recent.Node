@@ -1,5 +1,6 @@
-Control
+StaticBody2D
 CollisionShape2D
+Control
 Area2D
 TextEdit
 TextureRect

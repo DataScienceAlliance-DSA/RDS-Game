@@ -16,9 +16,9 @@ func interact(interactor_object):
 	interactions = interactions + 1	# increment interactions made with this area
 	match interactions:
 		1:
-			monologue_ui.open_monologue("res://Scripts/Monologues/Cauldron/OrbHypothesis.json", self)
+			monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Cauldron/OrbHypothesis.json", self)
 		_:
-			monologue_ui.open_monologue("res://Scripts/Dialogues/Cauldron/CauldronBlurb.json", self)
+			monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Cauldron/CauldronBlurb.json", self)
 
 func end_interaction():
 	# disable interactable, enable player (interactor)

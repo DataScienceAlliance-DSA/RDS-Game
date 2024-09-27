@@ -24,6 +24,12 @@ var choice1_hovered
 var choice2_hovered
 var choice3_hovered
 
+# strings, next id for each choice
+var choice1_next
+var choice2_next
+var choice3_next
+var potential_next_choice	# currently hovered choice
+
 # properties for opposing character's dialogue box
 @onready var response_scale = (get_node("TextContainer/PositionControl/ScaleControl") as Control)
 @onready var response_avatar = (get_node("TextContainer/PositionControl/ScaleControl/IconCenter/Avatar") as TextureRect)
@@ -32,7 +38,7 @@ var choice3_hovered
 func _ready():
 	self.set_process(false)
 
-func open_monologue(json_path, area):
+func open_3choice_dialogue(json_path, area):
 	# after disabling player & enabling interactable, enable dialogue
 	self.visible = true
 	self.set_process(true)
@@ -41,7 +47,7 @@ func open_monologue(json_path, area):
 	interacted_area = area
 	
 	# parse dialogue and process first line
-	dialogue_dict = parse_monologue(json_path)
+	dialogue_dict = parse_dialogue(json_path)
 	current_dialogue_id = "root"
 	process_next_text()
 	self.position.y = 300
@@ -56,8 +62,11 @@ func _process(_delta):
 	# check for and process dialogue if next button (E) is pressed
 	if (Input.is_action_just_pressed("interaction") and !choosing):
 		process_next_text()
+	elif (choosing) and (Input.is_action_just_pressed("left_click")) and (potential_next_choice != ""):
+		current_dialogue_id = potential_next_choice
+		process_next_text()
 
-func parse_monologue(json_path):
+func parse_dialogue(json_path):
 	# .json parseing magic a la GDscript manual
 	if FileAccess.file_exists(json_path):
 		var data_file = FileAccess.open(json_path, FileAccess.READ)
@@ -70,10 +79,13 @@ func parse_monologue(json_path):
 
 func process_next_text():	
 	# get/set current dialogue_id from dictionary
-	current_dialogue_id = dialogue_dict[current_dialogue_id]["next"]
+	if choosing:
+		choosing = false
+	else:
+		current_dialogue_id = dialogue_dict[current_dialogue_id]["next"]
 	
 	if current_dialogue_id == "end":	# "next": "end" is end-dialogue keyword in json
-		close_dialogue()
+		close_3choice_dialogue()
 	else:
 		# get/set character name and text accordingly from dictionary
 		var name = dialogue_dict[current_dialogue_id]["name"]
@@ -88,6 +100,10 @@ func process_next_text():
 			choice2_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][1]["text"]["en"]
 			choice3_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][2]["text"]["en"]
 			
+			choice1_next = dialogue_dict[current_dialogue_id]["choices"][0]["next"]
+			choice2_next = dialogue_dict[current_dialogue_id]["choices"][1]["next"]
+			choice3_next = dialogue_dict[current_dialogue_id]["choices"][2]["next"]
+			
 			choice1_box.position = Vector2(0, 550)
 			choice2_box.position = Vector2(0, 550)
 			choice3_box.position = Vector2(0, 550)
@@ -100,7 +116,7 @@ func process_next_text():
 			choice2_box.visible = false
 			choice3_box.visible = false
 
-func close_dialogue():
+func close_3choice_dialogue():
 	# disable dialogue & interactable, enable player
 	self.visible = false
 	self.set_process(false)
@@ -109,23 +125,29 @@ func close_dialogue():
 func _on_choice_bounds_3_mouse_entered():
 	choice3_hovered = true
 	choice3_scale.scale = Vector2(0.9, 0.9)
+	potential_next_choice = choice3_next
 
 func _on_choice_bounds_3_mouse_exited():
 	choice3_hovered = false
 	choice3_scale.scale = Vector2(1, 1)
+	potential_next_choice = ""
 
 func _on_choice_bounds_2_mouse_entered():
 	choice2_hovered = true
 	choice2_scale.scale = Vector2(0.9, 0.9)
+	potential_next_choice = choice2_next
 
 func _on_choice_bounds_2_mouse_exited():
 	choice2_hovered = false
 	choice2_scale.scale = Vector2(1, 1)
+	potential_next_choice = ""
 
 func _on_choice_bounds_1_mouse_entered():
 	choice1_hovered = true
 	choice1_scale.scale = Vector2(0.9, 0.9)
+	potential_next_choice = choice1_next
 
 func _on_choice_bounds_1_mouse_exited():
 	choice1_hovered = false
 	choice1_scale.scale = Vector2(1, 1)
+	potential_next_choice = ""

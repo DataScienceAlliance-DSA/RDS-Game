@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w8xd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpqrn"]
-size = Vector2(80, 71)
+size = Vector2(60, 22)
 
 [sub_resource type="Animation" id="Animation_jq2ma"]
 length = 0.001
@@ -239,11 +239,11 @@ script = ExtResource("1_xf38u")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="AreaCollision" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(7, 7)
+scale = Vector2(3, 7)
 shape = SubResource("RectangleShape2D_1w8xd")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
-position = Vector2(1, 34.5)
+position = Vector2(0, 57)
 shape = SubResource("RectangleShape2D_cpqrn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -253,6 +253,7 @@ limit_right = 1856
 limit_bottom = 1280
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("2_npfm4")
 hframes = 4

@@ -35,7 +35,7 @@ func _process(_delta):
 	find_interactables()
 	
 	# Scene Cutscene Conditional (moves player to position)
-	if (enter_cutscene) and (self.position.y >= 828):
+	if (enter_cutscene) and (self.position.y >= 882):
 		self.animations.current_animation = "walkUp"
 		self.velocity = movement_stack.front() # constantly move player into position during cutscene
 		self.move_and_slide()
