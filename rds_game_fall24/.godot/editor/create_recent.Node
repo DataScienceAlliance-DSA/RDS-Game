@@ -1,3 +1,8 @@
+TextEdit
+TextureRect
+MarginContainer
+HBoxContainer
+VBoxContainer
 AnimationPlayer
 CollisionShape2D
 Area2D
@@ -5,9 +10,5 @@ Control
 Camera2D
 TileMap
 Sprite2D
-TextureRect
-HBoxContainer
-VBoxContainer
-MarginContainer
 CanvasLayer
 CharacterBody2D
