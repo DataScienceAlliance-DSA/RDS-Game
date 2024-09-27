@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cttv2ptbpq3vx"
-path="res://.godot/imported/Cauldron.png-7e0ce425f0f95b433ecc2f5c00804ead.ctex"
+uid="uid://72ofvvnma033"
+path="res://.godot/imported/floor v3 1.png-99431bbbc534253110abccd354b28d3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial_assets/64x64/Cauldron.png"
-dest_files=["res://.godot/imported/Cauldron.png-7e0ce425f0f95b433ecc2f5c00804ead.ctex"]
+source_file="res://assets/tutorial_assets/Additional_Test_Assets/floor v3 1.png"
+dest_files=["res://.godot/imported/floor v3 1.png-99431bbbc534253110abccd354b28d3d.ctex"]
 
 [params]
 

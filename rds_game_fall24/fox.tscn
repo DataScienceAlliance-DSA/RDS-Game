@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://1q1al4h8xolo"]
 
-[ext_resource type="Texture2D" path="res://assets/tutorial_assets/Additional_Test_Assets/IMG_1482.PNG" id="1_diq4l"]
+[ext_resource type="Texture2D" uid="uid://ceook2jgpk3ak" path="res://assets/tutorial_assets/Additional_Test_Assets/IMG_1482.PNG" id="1_diq4l"]
 [ext_resource type="Script" path="res://fox_area.gd" id="2_lp4ex"]
 
 [sub_resource type="Animation" id="Animation_gdaj2"]
