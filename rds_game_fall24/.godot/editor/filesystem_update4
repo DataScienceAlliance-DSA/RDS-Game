@@ -5,3 +5,4 @@ res://Scene Folder/UI.tscn
 res://Scene Folder/Environment/tile_map.tscn
 res://Scripts/monologue.gd
 res://Scripts/cauldron_area.gd
+res://Scene Folder/main_character.tscn

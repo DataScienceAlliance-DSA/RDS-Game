@@ -1,8 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=29 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Texture2D" uid="uid://b8hqa48xdvbd0" path="res://assets/victorian_interior/64x64-ALL-ASSETS.png" id="1_bro23"]
 [ext_resource type="Texture2D" uid="uid://bohtl5hnig5iy" path="res://assets/tutorial_assets/64x64/64x64_Tutorial_Assets.png" id="2_dx041"]
-[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/Cauldron.png" id="3_io7tc"]
+[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/cauldron.png" id="3_io7tc"]
 [ext_resource type="Texture2D" uid="uid://bibqsa3lh501w" path="res://assets/tutorial_assets/16x16/wand.png" id="3_s8v25"]
 [ext_resource type="Texture2D" uid="uid://ck4n7y5t5d4a" path="res://assets/tutorial_assets/Additional_Test_Assets/image 3.png" id="5_3pqxa"]
 [ext_resource type="Texture2D" uid="uid://m4kvn3052aa7" path="res://assets/tutorial_assets/16x16/potions.png" id="5_53snt"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cfqpepeud7y6s" path="res://Scene Folder/UI.tscn" id="9_n76cm"]
 [ext_resource type="Texture2D" uid="uid://72ofvvnma033" path="res://assets/tutorial_assets/Additional_Test_Assets/floor v3 1.png" id="10_0wc6b"]
 [ext_resource type="Texture2D" uid="uid://qnn4ialv5110" path="res://assets/tutorial_assets/Additional_Test_Assets/floor v2 1.png" id="10_pn5xk"]
+[ext_resource type="Script" path="res://Scripts/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="16_0o7eq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sn07g"]
@@ -968,6 +969,9 @@ texture_region_size = Vector2i(64, 64)
 20:20/0 = 0
 20:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 20:20/0/physics_layer_0/angular_velocity = 0.0
+15:12/0 = 0
+15:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:12/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_komiv"]
 texture = ExtResource("10_pn5xk")
@@ -1692,6 +1696,8 @@ sources/4 = SubResource("TileSetAtlasSource_ahy5r")
 sources/9 = SubResource("TileSetAtlasSource_h7of4")
 sources/12 = SubResource("TileSetAtlasSource_komiv")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u0ug"]
+
 [node name="Cauldron Room" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1707,7 +1713,7 @@ layer_1/tile_data = PackedInt32Array(327681, 12, 0, 393217, 12, 0, 458753, 12, 0
 layer_2/name = "Background Objects"
 layer_2/tile_data = PackedInt32Array(131077, 655377, 6, 196614, 524305, 6, 196613, 524305, 6, 131078, 786449, 6, 196612, 524305, 6, 131076, 786449, 6, 196615, 655377, 6, 196611, 655377, 6, 262149, 131089, 6, 327685, 131089, 6, 393221, 131089, 6, 458757, 131089, 6, 524293, 131089, 6, 589829, 131089, 6, 655365, 262161, 6, 655366, 262161, 6, 655367, 262161, 6, 655368, 262161, 6, 655369, 262161, 6, 655370, 262161, 6, 655371, 262161, 6, 655372, 262161, 6, 786446, 1376273, 6, 786447, 1441809, 6, 655373, 327697, 6, 131081, 131073, 0, 196617, 131073, 1, 131082, 196609, 0, 196618, 196609, 1, 262153, 262145, 0, 327689, 262145, 1, 262154, 327681, 0, 327690, 327681, 1, 262163, 720897, 0, 327699, 720897, 1, 262164, 786433, 0, 327700, 786433, 1, 262165, 851969, 0, 327701, 851969, 1, 262158, 6, 2, 196622, 6, 1, 196623, 65542, 1, 262159, 65542, 2, 131087, 65542, 0, 131086, 6, 0, 131088, 131078, 0, 196624, 131078, 1, 262160, 131078, 2, 262167, 1507345, 6, 196631, 1507345, 6, 131095, 1507345, 6, 131096, 1507345, 6, 131097, 1507345, 6, 196633, 1507345, 6, 262169, 1507345, 6, 262168, 1507345, 6, 196632, 1507345, 6, 917505, 196609, 2, 983041, 196609, 3, 1048577, 196609, 4, 917506, 262145, 2, 983042, 262145, 3, 1048578, 262145, 4, 393217, 196609, 2, 458753, 196609, 3, 524289, 196609, 4, 393218, 262145, 2, 458754, 262145, 3, 524290, 262145, 4, 655386, 196609, 2, 720922, 196609, 3, 786458, 196609, 4, 655387, 262145, 2, 720923, 262145, 3, 786459, 262145, 4, 131092, 1, 1)
 layer_3/name = "Cauldron"
-layer_3/tile_data = PackedInt32Array(524302, 18, 0, 589838, 18, 1, 655374, 18, 2, 720910, 18, 3, 524303, 65554, 0, 589839, 65554, 1, 655375, 65554, 2, 720911, 65554, 3)
+layer_3/tile_data = PackedInt32Array(524302, 983041, 12, 589838, 983041, 12, 655374, 983041, 12, 720910, 983041, 12, 524303, 983041, 12, 589839, 983041, 12, 655375, 983041, 12, 720911, 983041, 12)
 layer_4/name = "Items"
 layer_4/tile_data = PackedInt32Array(262149, 327699, 4, 524293, 2, 1, 655366, 2, 0, 655370, 131074, 2, 655373, 262163, 4, 655367, 2, 1, 655369, 131074, 1, 327685, 262165, 4, 393221, 2, 0, 655368, 65538, 1, 655372, 2, 2, 458757, 262164, 1610612740, 655365, 262164, 1073741828, 589829, 327699, 4, 655371, 65538, 2)
 layer_5/tile_data = PackedInt32Array()
@@ -1716,10 +1722,21 @@ layer_5/tile_data = PackedInt32Array()
 position = Vector2(960, 1168)
 
 [node name="Fox" parent="." instance=ExtResource("8_o1l77")]
-position = Vector2(1088, 840)
+position = Vector2(1064, 840)
 
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
 visible = false
+
+[node name="Cauldron" type="Sprite2D" parent="."]
+position = Vector2(960, 640)
+texture = ExtResource("3_io7tc")
+
+[node name="Area2D" type="Area2D" parent="Cauldron"]
+script = ExtResource("15_u11sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/Area2D"]
+scale = Vector2(6.4, 12.8)
+shape = SubResource("RectangleShape2D_7u0ug")
 
 [connection signal="mouse_entered" from="Fox" to="Fox" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Fox" to="Fox" method="_on_mouse_exited"]

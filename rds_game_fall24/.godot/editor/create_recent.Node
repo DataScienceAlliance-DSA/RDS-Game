@@ -1,12 +1,12 @@
+Control
+CollisionShape2D
+Area2D
 TextEdit
 TextureRect
 MarginContainer
 HBoxContainer
 VBoxContainer
 AnimationPlayer
-CollisionShape2D
-Area2D
-Control
 Camera2D
 TileMap
 Sprite2D
