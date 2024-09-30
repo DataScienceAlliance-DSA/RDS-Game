@@ -1,7 +1,9 @@
+Sprite2D
+CollisionShape2D
+RigidBody2D
 Camera2D
 Node2D
 StaticBody2D
-CollisionShape2D
 Control
 Area2D
 TextEdit
@@ -10,5 +12,3 @@ MarginContainer
 HBoxContainer
 VBoxContainer
 AnimationPlayer
-TileMap
-Sprite2D
