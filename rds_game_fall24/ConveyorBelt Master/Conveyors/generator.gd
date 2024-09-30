@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var box_path = preload("res://ConveyorBelt Master/box.tscn")
+@onready var box_path = preload("res://Orb_TEST.tscn")
 @onready var timer: Timer = $Timer
 @export var directions : Array[Enums.Direction] = []
 
