@@ -1,12 +1,27 @@
-res://fox.tscn
-res://fox_area.gd
+res://Scene Folder/Environment/tile_map.tscn
 res://Scripts/Dialogues/Cauldron/FoxIntro.json
 res://Scene Folder/UI.tscn
-res://Scene Folder/Environment/tile_map.tscn
-res://Scripts/monologue.gd
-res://Scripts/cauldron_area.gd
 res://Scene Folder/main_character.tscn
-res://Scripts/3choice_dialogue.gd
-res://Scripts/Monologues/Cauldron/CauldronBlurb.json
-res://Scripts/main_character.gd
-res://Scripts/dialogue.gd
+res://fox.tscn
+res://ConveyorBelt/ConveyorBelt.tscn
+res://ConveyorBelt/Conveyors/generator.tscn
+res://ConveyorBelt/Conveyors/belt.tscn
+res://ConveyorBelt/Conveyors/belt.gd
+res://ConveyorBelt/Conveyors/Components/Controller/from_direction_controller.gd
+res://ConveyorBelt Master/main.tscn
+res://ConveyorBelt Master/Conveyors/belt.tscn
+res://ConveyorBelt Master/Conveyors/generator.tscn
+res://ConveyorBelt Master/Conveyors/trash.tscn
+res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.gd
+res://ConveyorBelt Master/Conveyors/belt.gd
+res://ConveyorBelt Master/Conveyors/Components/Controller/from_direction_controller.gd
+res://ConveyorBelt Master/Conveyors/generator.gd
+res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn
+res://ConveyorBelt Master/Conveyors/Components/Detectors/direction_detector.gd
+res://ConveyorBelt Master/Conveyors/Components/Detectors/direction_detector.tscn
+res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detector.tscn
+res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn
+res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
+res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn
+res://ConveyorBelt Master/conveyor_icon.tscn
+res://ConveyorBelt Master/box.tscn

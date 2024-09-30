@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 UI="*res://Scene Folder/UI.tscn"
+Enums="*res://ConveyorBelt Master/Managers/Enums.gd"
+Constants="*res://ConveyorBelt Master/Managers/Constants.gd"
 
 [display]
 

@@ -1,8 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=31 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Texture2D" uid="uid://b8hqa48xdvbd0" path="res://assets/victorian_interior/64x64-ALL-ASSETS.png" id="1_bro23"]
 [ext_resource type="Texture2D" uid="uid://bohtl5hnig5iy" path="res://assets/tutorial_assets/64x64/64x64_Tutorial_Assets.png" id="2_dx041"]
-[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/cauldron.png" id="3_io7tc"]
+[ext_resource type="Texture2D" uid="uid://cttv2ptbpq3vx" path="res://assets/tutorial_assets/64x64/Cauldron.png" id="3_io7tc"]
 [ext_resource type="Texture2D" uid="uid://bibqsa3lh501w" path="res://assets/tutorial_assets/16x16/wand.png" id="3_s8v25"]
 [ext_resource type="Texture2D" uid="uid://ck4n7y5t5d4a" path="res://assets/tutorial_assets/Additional_Test_Assets/image 3.png" id="5_3pqxa"]
 [ext_resource type="Texture2D" uid="uid://m4kvn3052aa7" path="res://assets/tutorial_assets/16x16/potions.png" id="5_53snt"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://qnn4ialv5110" path="res://assets/tutorial_assets/Additional_Test_Assets/floor v2 1.png" id="10_pn5xk"]
 [ext_resource type="Script" path="res://Scripts/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="16_0o7eq"]
+[ext_resource type="PackedScene" uid="uid://cnq52axw13wrl" path="res://ConveyorBelt Master/main.tscn" id="16_ukm0n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sn07g"]
 texture = ExtResource("1_bro23")
@@ -1754,6 +1755,9 @@ offset = Vector2(0, -64)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron"]
 position = Vector2(960, 744)
 shape = SubResource("RectangleShape2D_1qsrq")
+
+[node name="Main" parent="." instance=ExtResource("16_ukm0n")]
+position = Vector2(256, 256)
 
 [connection signal="mouse_entered" from="Fox" to="Fox" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Fox" to="Fox" method="_on_mouse_exited"]
