@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxkyh7jeud7s0"]
-
-[ext_resource type="Texture2D" uid="uid://boitk5y0ias65" path="res://ConveyorBelt Master/Art/box.png" id="1_b1ani"]
-
-[node name="Box" type="Sprite2D"]
-z_index = 5
-texture = ExtResource("1_b1ani")

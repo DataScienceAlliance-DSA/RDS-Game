@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c148s2paf02fr"]
-
-[ext_resource type="Texture2D" uid="uid://dr7417ucamppf" path="res://orb 3.PNG" id="1_o3h0o"]
-
-[node name="Sprite2D" type="Sprite2D"]
-z_index = 5
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("1_o3h0o")
