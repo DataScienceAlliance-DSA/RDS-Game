@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://d215x53gvybky"]
+[gd_scene load_steps=2 format=3 uid="uid://d215x53gvybky"]
+
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd" id="1_cb0d7"]
 
 [node name="Cannon" type="Node2D"]
+script = ExtResource("1_cb0d7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
