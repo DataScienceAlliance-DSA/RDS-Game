@@ -579,10 +579,6 @@ position = Vector2(264.917, 954.647)
 scale = Vector2(0.373178, 0.373178)
 texture = ExtResource("6_dbxr2")
 
-[node name="ShortTextDialogueBoxFocusedRdsGame2" type="Sprite2D" parent="."]
-position = Vector2(1224, 936)
-texture = ExtResource("6_dbxr2")
-
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2" to="Monologue" method="_on_choice_bounds_2_mouse_entered"]
