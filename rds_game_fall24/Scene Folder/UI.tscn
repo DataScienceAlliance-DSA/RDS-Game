@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=11 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
 [ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://icon.svg" id="1_q8u87"]
 [ext_resource type="Texture2D" uid="uid://1cqiv22renjj" path="res://assets/tutorial_assets/Additional_Test_Assets/Frame 28.png" id="3_p8e4f"]
 [ext_resource type="Script" path="res://Scripts/3choice_dialogue.gd" id="3_rj2pq"]
 [ext_resource type="Shader" path="res://Scene Folder/UI.gdshader" id="4_8evkt"]
+[ext_resource type="Texture2D" uid="uid://be7o2npmrub3j" path="res://Short Text_Dialogue Box_Focused_RDS Game.png" id="6_dbxr2"]
 
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
@@ -26,7 +27,6 @@ shader_parameter/lod = 2.0
 [node name="UI" type="CanvasLayer"]
 
 [node name="Dialogue" type="MarginContainer" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -573,6 +573,15 @@ text = "[color=black][b]Godot #1[/b]
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
 fit_content = true
 scroll_active = false
+
+[node name="ShortTextDialogueBoxFocusedRdsGame" type="Sprite2D" parent="."]
+position = Vector2(264.917, 954.647)
+scale = Vector2(0.373178, 0.373178)
+texture = ExtResource("6_dbxr2")
+
+[node name="ShortTextDialogueBoxFocusedRdsGame2" type="Sprite2D" parent="."]
+position = Vector2(1224, 936)
+texture = ExtResource("6_dbxr2")
 
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_exited"]
