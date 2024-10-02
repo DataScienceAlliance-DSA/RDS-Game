@@ -16,6 +16,17 @@ func _on_conveyor_detectors_inventory_found(inventory: ConveyorInventory):
 
 func _on_timer_timeout():
 	var box = box_path.instantiate()
+	var item_number = randi() % 10
+	
+	var box_node = box.get_root()
+	var box_sprite = box.get_root() as Sprite2D
+	
+	match item_number:
+		0:	# 
+			box_node.name = "YellowOrb"
+			
+		1: 
+	
 	$ConveyorInventory.generate_item(box)
 	# var item_number = rng(10)
 	# match(item_number):
