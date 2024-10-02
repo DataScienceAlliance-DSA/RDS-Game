@@ -88,10 +88,10 @@ func process_next_text():
 		close_3choice_dialogue()
 	else:
 		# get/set character name and text accordingly from dictionary
-		var name = dialogue_dict[current_dialogue_id]["name"]
+		var character_name = dialogue_dict[current_dialogue_id]["name"]
 		var text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
-		response_text.text = "[color=black][b]"+name+"[/b]\n\n"+text
+		response_text.text = "[color=black][b]"+character_name+"[/b]\n\n"+text
 		
 		if (dialogue_dict[current_dialogue_id].has("choices")):
 			choosing = true

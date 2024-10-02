@@ -232,7 +232,6 @@ fit_content = true
 scroll_active = false
 
 [node name="Monologue" type="MarginContainer" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -290,7 +289,6 @@ pivot_offset = Vector2(172, 208)
 mouse_filter = 2
 
 [node name="ChoiceTexture1" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl"]
-visible = false
 layout_direction = 1
 layout_mode = 1
 anchors_preset = 8
@@ -433,7 +431,6 @@ pivot_offset = Vector2(172, 208)
 mouse_filter = 2
 
 [node name="ChoiceTexture3" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl"]
-visible = false
 layout_direction = 1
 layout_mode = 1
 anchors_preset = 8
