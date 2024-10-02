@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://co48lktbon2ou"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_xf38u"]
-[ext_resource type="Texture2D" uid="uid://dhp4twd8ix603" path="res://assets/tutorial_assets/Additional_Test_Assets/character_sprite_sheet.png" id="2_npfm4"]
+[ext_resource type="Texture2D" uid="uid://dhp4twd8ix603" path="res://assets/dummy_assets/Additional_Test_Assets/character_sprite_sheet.png" id="2_npfm4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w8xd"]
 
