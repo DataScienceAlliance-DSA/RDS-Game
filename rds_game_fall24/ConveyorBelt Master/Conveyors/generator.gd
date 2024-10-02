@@ -17,6 +17,11 @@ func _on_conveyor_detectors_inventory_found(inventory: ConveyorInventory):
 func _on_timer_timeout():
 	var box = box_path.instantiate()
 	$ConveyorInventory.generate_item(box)
+	# var item_number = rng(10)
+	# match(item_number):
+		# case 0:
+		#	box.object = yellow_orb
+		#	box.name = "Yellow Orb"
 	$ConveyorDetectors.start_checking()
 
 

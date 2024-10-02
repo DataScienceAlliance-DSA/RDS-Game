@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
 [ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://icon.svg" id="1_q8u87"]
-[ext_resource type="Texture2D" uid="uid://1cqiv22renjj" path="res://assets/tutorial_assets/Additional_Test_Assets/Frame 28.png" id="3_p8e4f"]
+[ext_resource type="Texture2D" uid="uid://1cqiv22renjj" path="res://assets/dummy_assets/Additional_Test_Assets/Frame 28.png" id="3_p8e4f"]
 [ext_resource type="Script" path="res://Scripts/3choice_dialogue.gd" id="3_rj2pq"]
 [ext_resource type="Shader" path="res://Scene Folder/UI.gdshader" id="4_8evkt"]
 

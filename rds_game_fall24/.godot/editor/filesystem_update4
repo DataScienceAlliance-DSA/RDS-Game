@@ -1,9 +1,5 @@
 res://Scene Folder/Environment/tile_map.tscn
 res://Scene Folder/UI.gdshader
-res://Scene Folder/UI.tscn
 res://ConveyorBelt Master/main.tscn
-res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
-res://ConveyorBelt Master/Conveyors/generator.tscn
 res://ConveyorBelt Master/Conveyors/generator.gd
-res://Orb_TEST.tscn
-res://ConveyorBelt Master/box.tscn
+res://Scene Folder/main_character.tscn
