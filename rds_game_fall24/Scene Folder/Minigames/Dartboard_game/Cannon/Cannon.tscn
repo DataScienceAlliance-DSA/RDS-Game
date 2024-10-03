@@ -1,8 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://d215x53gvybky"]
+[gd_scene load_steps=5 format=3 uid="uid://d215x53gvybky"]
 
+[ext_resource type="Texture2D" uid="uid://cblii2b26c5c5" path="res://assets/working_assets/Cannon Game Asset/cannon.png" id="1_2rs0g"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd" id="1_cb0d7"]
 
-[node name="Cannon" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs2dp"]
+atlas = ExtResource("1_2rs0g")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0rglo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs2dp")
+}],
+"loop": true,
+"name": &"static",
+"speed": 5.0
+}]
+
+[node name="cannon" type="AnimatableBody2D"]
 script = ExtResource("1_cb0d7")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="cannon body" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0rglo")
+animation = &"static"
+frame_progress = 0.488216
+flip_h = true
+
+[node name="collision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-40, 0, -24, -16, 0, -24, 16, -24, 24, -32, 32, -32, 40, -16, 40, -8, 40, 0, 16, 0, 8, 8, 0, 16, 0, 24, 8, 24, 8, 32, -40, 32, -40, 24, -24, 16, -32, 16, -40, 8)
+
+[node name="dart_spawn" type="Marker2D" parent="."]
+position = Vector2(32, -16)
