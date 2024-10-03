@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var box_path = preload("res://Orb_TEST.tscn")
+@onready var item_scene = preload("res://Orb_TEST.tscn")
 @onready var timer: Timer = $Timer
 @export var directions : Array[Enums.Direction] = []
 
@@ -15,24 +15,29 @@ func _on_conveyor_detectors_inventory_found(inventory: ConveyorInventory):
 
 
 func _on_timer_timeout():
-	var box = box_path.instantiate()
+	var item_sprite = item_scene.instantiate()
 	var item_number = randi() % 10
 	
-	var box_node = box.get_root()
-	var box_sprite = box.get_root() as Sprite2D
+	var item_node = item_sprite as Node
+	item_sprite.frame = item_number
 	
 	match item_number:
 		0:	# 
-			box_node.name = "YellowOrb"
-			
+			item_node.name = "RedOrb"
 		1: 
+			item_node.name = "OrangeOrb"
+		2:
+			item_node.name = "TealOrb"
+		3:
+			item_node.name = "BlueOrb"
+		4:
+			item_node.name = "GreenOrb"
+		5:
+			item_node.name = "YellowOrb"
+		_:
+			item_node.name = "NonOrb"
 	
-	$ConveyorInventory.generate_item(box)
-	# var item_number = rng(10)
-	# match(item_number):
-		# case 0:
-		#	box.object = yellow_orb
-		#	box.name = "Yellow Orb"
+	$ConveyorInventory.generate_item(item_sprite)
 	$ConveyorDetectors.start_checking()
 
 

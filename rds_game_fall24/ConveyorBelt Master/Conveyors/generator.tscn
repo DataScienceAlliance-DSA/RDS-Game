@@ -34,7 +34,7 @@ shape = SubResource("RectangleShape2D_te7xo")
 [node name="ConveyorDetectors" parent="." instance=ExtResource("5_vh6hn")]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.5
+wait_time = 5.0
 one_shot = true
 autostart = true
 
