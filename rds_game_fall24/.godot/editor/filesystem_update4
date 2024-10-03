@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 res://Scene Folder/Minigames/Dartboard_game/dartboard_game.gd
 res://Scene Folder/Minigames/Dartboard_game/Dartboard_Game.tscn
 res://Scene Folder/Minigames/Dartboard_game/Bullet.tscn
@@ -5,3 +6,14 @@ res://Scene Folder/Minigames/Dartboard_game/dart.gd
 res://Scene Folder/Minigames/Dartboard_game/Dart.tscn
 res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn
 res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd
+=======
+res://Scene Folder/Environment/tile_map.tscn
+res://Scene Folder/UI.gdshader
+res://Scene Folder/UI.tscn
+res://ConveyorBelt Master/main.tscn
+res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
+res://ConveyorBelt Master/Conveyors/generator.tscn
+res://Orb_TEST.tscn
+res://Scripts/3choice_dialogue.gd
+res://ConveyorBelt Master/Conveyors/generator.gd
+>>>>>>> f9298c65fbb899cd8bfff7724ffe2d63a2fbff4f
