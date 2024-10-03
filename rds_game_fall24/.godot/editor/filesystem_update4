@@ -5,3 +5,7 @@ res://ConveyorBelt Master/main.tscn
 res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
 res://ConveyorBelt Master/Conveyors/generator.tscn
 res://Orb_TEST.tscn
+<<<<<<< Updated upstream
+=======
+res://Scene Folder/main_character.tscn
+>>>>>>> Stashed changes
