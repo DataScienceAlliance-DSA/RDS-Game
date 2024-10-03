@@ -1,228 +1,228 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727973603
-fox.tscn::PackedScene::1859519243384973732::1727911516::0::1::::<><>::uid://ceook2jgpk3ak::::res://assets/dummy_assets/Additional_Test_Assets/IMG_1482.PNG<>res://Scripts/fox_area.gd
-icon.svg::CompressedTexture2D::3648582972397847862::1727911516::1727911516::1::::<><>::
-main_character.tscn::PackedScene::3113528464361542574::1727911516::0::1::::<><>::uid://ds86qx5cqmeie::::res://assets/dummy_assets/Additional_Test_Assets/IMG_1400.PNG<>res://main_character.gd
-orb 3.PNG::CompressedTexture2D::8420341416222174559::1727911516::1727911516::1::::<><>::
-Orb_TEST.tscn::PackedScene::9059308459810554174::1727913029::0::1::::<><>::res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png
-Short Text_Dialogue Box_Focused_RDS Game.png::CompressedTexture2D::2734135107253655221::1727911515::1727911515::1::::<><>::
-UI.tscn::PackedScene::6370659473448383308::1727911515::0::1::::<><>::uid://br8nvmsg2wo75::::res://icon.svg
-::res://assets/::1727911516
-::res://assets/dummy_assets/::1727911515
-::res://assets/dummy_assets/16x16/::1727911515
-black_smoke.png::CompressedTexture2D::307400641101880703::1727911515::1727911515::1::::<><>::
-bookshelf_1.png::CompressedTexture2D::4456679736205681766::1727911515::1727911515::1::::<><>::
-bookshelf_2.png::CompressedTexture2D::1826707126558234908::1727911515::1727911515::1::::<><>::
-candle.png::CompressedTexture2D::7807169343059221404::1727911515::1727911515::1::::<><>::
-cannon.png::CompressedTexture2D::6981147979441259231::1727911515::1727911515::1::::<><>::
-cauldron.png::CompressedTexture2D::3649404786255937523::1727911515::1727911515::1::::<><>::
-cauldron_smokes.png::CompressedTexture2D::6890872337318916078::1727911515::1727911515::1::::<><>::
-chair.png::CompressedTexture2D::1444849520433372260::1727911515::1727911515::1::::<><>::
-character_1.png::CompressedTexture2D::2058836266737294598::1727911515::1727911515::1::::<><>::
-character_2.png::CompressedTexture2D::2257715868120121443::1727911515::1727911515::1::::<><>::
-character_3.png::CompressedTexture2D::8412593096801735661::1727911515::1727911515::1::::<><>::
-character_4.png::CompressedTexture2D::7033731088426048321::1727911515::1727911515::1::::<><>::
-character_5.png::CompressedTexture2D::8926881337466903007::1727911515::1727911515::1::::<><>::
-conveyor_belt_1.png::CompressedTexture2D::5929297110967171094::1727911515::1727911515::1::::<><>::
-conveyor_belt_2.png::CompressedTexture2D::1571957116622005973::1727911515::1727911515::1::::<><>::
-conveyor_belt_3.png::CompressedTexture2D::6600253709383794690::1727911515::1727911515::1::::<><>::
-desks.png::CompressedTexture2D::8225341569204122174::1727911515::1727911515::1::::<><>::
-empty_hole.png::CompressedTexture2D::6778232003500622845::1727911515::1727911515::1::::<><>::
-fox.png::CompressedTexture2D::7815194142444380175::1727911515::1727911515::1::::<><>::
-orbs.png::CompressedTexture2D::2743307397627363103::1727911515::1727911515::1::::<><>::
-pocket.png::CompressedTexture2D::4287931863935342131::1727911515::1727911515::1::::<><>::
-podium.png::CompressedTexture2D::8397592169787206017::1727911515::1727911515::1::::<><>::
-potions.png::CompressedTexture2D::902778477358902008::1727911515::1727911515::1::::<><>::
-sceptre_1.png::CompressedTexture2D::6973334519468218918::1727911515::1727911515::1::::<><>::
-sceptre_2.png::CompressedTexture2D::872682544564748631::1727911515::1727911515::1::::<><>::
-wand.png::CompressedTexture2D::2950999470490848046::1727911515::1727911515::1::::<><>::
-::res://assets/dummy_assets/64x64/::1727911515
-64x64_Tutorial_Assets.png::CompressedTexture2D::3384689992615246768::1727911515::1727911515::1::::<><>::
-64x64_Tutorial_Assets_Tilesheet.png::CompressedTexture2D::971198736402007261::1727911515::1727911515::1::::<><>::
-Cauldron.png::CompressedTexture2D::6146976664387159585::1727911515::1727911515::1::::<><>::
-::res://assets/dummy_assets/Additional_Test_Assets/::1727911516
-BookShelf Tilesheet.png::CompressedTexture2D::1993362314716301824::1727911515::1727911515::1::::<><>::
-character_sprite_sheet.png::CompressedTexture2D::7683345507389963778::1727911516::1727911516::1::::<><>::
-floor draft1.png::CompressedTexture2D::1363495273442821225::1727911516::1727911516::1::::<><>::
-floor v2 1.png::CompressedTexture2D::1150699938656365205::1727911516::1727911516::1::::<><>::
-floor v3 1.png::CompressedTexture2D::2302641298682877400::1727911516::1727911516::1::::<><>::
-Frame 28.png::CompressedTexture2D::1830025594282183103::1727911515::1727911515::1::::<><>::
-Frame 29.png::CompressedTexture2D::9151929039302937121::1727911515::1727911515::1::::<><>::
-Frame 30.png::CompressedTexture2D::1420975227437303469::1727911515::1727911515::1::::<><>::
-image 3.png::CompressedTexture2D::162807192139800902::1727911516::1727911516::1::::<><>::
-IMG_0688.PNG::CompressedTexture2D::1217963610149697808::1727911515::1727911516::1::::<><>::
-IMG_0690.PNG::CompressedTexture2D::5208429533393741222::1727911516::1727911516::1::::<><>::
-IMG_0691.PNG::CompressedTexture2D::617946446897416897::1727911516::1727911516::1::::<><>::
-IMG_1400.PNG::CompressedTexture2D::8492697756420011972::1727911516::1727911516::1::::<><>::
-IMG_1482.PNG::CompressedTexture2D::5083367358659724602::1727911516::1727911516::1::::<><>::
-IMG_1488.PNG::CompressedTexture2D::6866301495433220398::1727911516::1727911516::1::::<><>::
-MC.png::CompressedTexture2D::4418747963849723768::1727911516::1727911516::1::::<><>::
-mc_pfp.png::CompressedTexture2D::3525382327785809138::1727911516::1727911516::1::::<><>::
-::res://assets/tutorial_assets/::1727906656
-::res://assets/tutorial_assets/16x16/::1727906656
-::res://assets/victorian_interior/::1727911516
-64x64-ALL-ASSETS.png::CompressedTexture2D::4718076215116401915::1727911516::1727911516::1::::<><>::
-read_me.txt::TextFile::-1::1727911516::0::1::::<><>::
-::res://assets/victorian_interior/16x16/::1727911516
-16x16-ALL-ASSETS.png::CompressedTexture2D::4500454506605413039::1727911516::1727911516::1::::<><>::
-16x16-OBJECTS.png::CompressedTexture2D::1986606510025668864::1727911516::1727911516::1::::<><>::
-16x16-TEXTURES.png::CompressedTexture2D::2543907100348303720::1727911516::1727911516::1::::<><>::
-::res://assets/victorian_interior/32x32/::1727911516
-32x32-ALL-ASSETS.png::CompressedTexture2D::3096138358071517853::1727911516::1727911516::1::::<><>::
-32x32-OBJECTS.png::CompressedTexture2D::1871899482873753038::1727911516::1727911516::1::::<><>::
-32x32-TEXTURES.png::CompressedTexture2D::6105803643741807861::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/::1727911516
-::res://assets/working_assets/Base Asset/::1727911516
-base 3.PNG::CompressedTexture2D::6631120200912357008::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Bookshelf assets/::1727911516
-bookshelf 1.PNG::CompressedTexture2D::6991131086098410755::1727911516::1727911516::1::::<><>::
-bookshelf 2.PNG::CompressedTexture2D::2391095279700858430::1727911516::1727911516::1::::<><>::
-bookshelf 3.PNG::CompressedTexture2D::7672758026308987198::1727911516::1727911516::1::::<><>::
-bookshelf.png::CompressedTexture2D::8786389072271205055::1727911516::1727911516::1::::<><>::
-side bookshelf.PNG::CompressedTexture2D::4448300618119040291::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Cauldron Assets/::1727911516
-cauldron.png::CompressedTexture2D::6353373446220099244::1727911516::1727911516::1::::<><>::
-smoke animation blue frame 1.PNG::CompressedTexture2D::3594691038308083273::1727911516::1727911516::1::::<><>::
-smoke animation blue frame 2.PNG::CompressedTexture2D::4178100358497396153::1727911516::1727911516::1::::<><>::
-smoke animation blue frame 3.PNG::CompressedTexture2D::2731758845263704841::1727911516::1727911516::1::::<><>::
-smoke animation blue frame 4.PNG::CompressedTexture2D::1585218976036509772::1727911516::1727911516::1::::<><>::
-smoke animation blue frame 5.PNG::CompressedTexture2D::3571925462407094410::1727911516::1727911516::1::::<><>::
-smoke animation green frame 1.PNG::CompressedTexture2D::7317427808777890557::1727911516::1727911516::1::::<><>::
-smoke animation green frame 2.PNG::CompressedTexture2D::4113743745910893541::1727911516::1727911516::1::::<><>::
-smoke animation green frame 3.PNG::CompressedTexture2D::8437467011708010302::1727911516::1727911516::1::::<><>::
-smoke animation green frame 4.PNG::CompressedTexture2D::8708874934379693061::1727911516::1727911516::1::::<><>::
-smoke animation green frame 5.PNG::CompressedTexture2D::361793862591569149::1727911516::1727911516::1::::<><>::
-smoke animation lightblue frame 1.PNG::CompressedTexture2D::4692208993585601215::1727911516::1727911516::1::::<><>::
-smoke animation lightblue frame 2.PNG::CompressedTexture2D::3538427054490224180::1727911516::1727911516::1::::<><>::
-smoke animation lightblue frame 3.PNG::CompressedTexture2D::5192932234454975137::1727911516::1727911516::1::::<><>::
-smoke animation lightblue frame 4.PNG::CompressedTexture2D::8143032816175744644::1727911516::1727911516::1::::<><>::
-smoke animation lightblue frame 5.PNG::CompressedTexture2D::1319969292191194429::1727911516::1727911516::1::::<><>::
-smoke animation pink frame 1.png::CompressedTexture2D::4983865804759213263::1727911516::1727911516::1::::<><>::
-smoke animation pink frame 2.png::CompressedTexture2D::3689737653797902660::1727911516::1727911516::1::::<><>::
-smoke animation pink frame 3.png::CompressedTexture2D::9220444080073693827::1727911516::1727911516::1::::<><>::
-smoke animation pink frame 4.png::CompressedTexture2D::7313531173763050500::1727911516::1727911516::1::::<><>::
-smoke animation pink frame 5.png::CompressedTexture2D::8235293559116766699::1727911516::1727911516::1::::<><>::
-smoke animation purple frame 1.PNG::CompressedTexture2D::8774207244259059775::1727911516::1727911516::1::::<><>::
-smoke animation purple frame 2.PNG::CompressedTexture2D::7504357625472534103::1727911516::1727911516::1::::<><>::
-smoke animation purple frame 3.PNG::CompressedTexture2D::3589117991099228689::1727911516::1727911516::1::::<><>::
-smoke animation purple frame 4.PNG::CompressedTexture2D::2162301384008521648::1727911516::1727911516::1::::<><>::
-smoke animation purple frame 5.PNG::CompressedTexture2D::4939597366804673388::1727911516::1727911516::1::::<><>::
-smoke animation yellow frame 1.PNG::CompressedTexture2D::5375323828497694187::1727911516::1727911516::1::::<><>::
-smoke animation yellow frame 2.PNG::CompressedTexture2D::2298649988876434913::1727911516::1727911516::1::::<><>::
-smoke animation yellow frame 3.PNG::CompressedTexture2D::1360575668391263745::1727911516::1727911516::1::::<><>::
-smoke animation yellow frame 4.PNG::CompressedTexture2D::747501767988878558::1727911516::1727911516::1::::<><>::
-smoke animation yellow frame 5.PNG::CompressedTexture2D::9127847868702622277::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Conveyor belt Assets/::1727911516
-conveyor belt legs.png::CompressedTexture2D::5214762792280136418::1727911516::1727911516::1::::<><>::
-conveyor frame 1.PNG::CompressedTexture2D::341566936383358314::1727911516::1727911516::1::::<><>::
-conveyor frame 2.PNG::CompressedTexture2D::1534398249657112141::1727911516::1727911516::1::::<><>::
-conveyor frame 3.PNG::CompressedTexture2D::1053273013275819026::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Exit Assets/::1727911516
-exit 1.PNG::CompressedTexture2D::5685696128316500475::1727911516::1727911516::1::::<><>::
-exit 2.PNG::CompressedTexture2D::1241601215021352889::1727911516::1727911516::1::::<><>::
-exit 3.PNG::CompressedTexture2D::5165969077405708018::1727911516::1727911516::1::::<><>::
-exits.png::CompressedTexture2D::1633191856319643966::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Floor Tile Asset/::1727911516
-floor v3.PNG::CompressedTexture2D::8066722460497719032::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Fox Assets/::1727911516
-OfficialSpread2.png::CompressedTexture2D::8911909800575767063::1727911516::1727911516::1::::<><>::
-Rough.PNG::CompressedTexture2D::8380747843020981507::1727911516::1727911516::1::::<><>::
-Xrough.PNG::CompressedTexture2D::230467394031630387::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Hero Assets/::1727911516
-Icon.PNG::CompressedTexture2D::3423149103277005779::1727911516::1727911516::1::::<><>::
-OfficialSpread.png::CompressedTexture2D::4127747093328980781::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Orbs Assets/::1727912110
-orb 1.PNG::CompressedTexture2D::7357482566117556811::1727911516::1727911516::1::::<><>::
-orb 2.PNG::CompressedTexture2D::1418167098780491388::1727911516::1727911516::1::::<><>::
-orb 3.PNG::CompressedTexture2D::456173510085995814::1727911516::1727911516::1::::<><>::
-orb 4.PNG::CompressedTexture2D::8868821296555459780::1727911516::1727911516::1::::<><>::
-orb 5.PNG::CompressedTexture2D::1453525704103781863::1727911516::1727911516::1::::<><>::
-orb 6.PNG::CompressedTexture2D::6308936708996031699::1727911516::1727911516::1::::<><>::
-OrbsWandsPotions.png::CompressedTexture2D::5489189116816699045::1727912110::1727912110::1::::<><>::
-::res://assets/working_assets/Potions Assets/::1727911516
-potion 1.PNG::CompressedTexture2D::8990318555765668556::1727911516::1727911516::1::::<><>::
-potion 2.PNG::CompressedTexture2D::7434879050955049610::1727911516::1727911516::1::::<><>::
-potion 3.PNG::CompressedTexture2D::8573512387227407635::1727911516::1727911516::1::::<><>::
-potions.png::CompressedTexture2D::9204762095307500548::1727911516::1727911516::1::::<><>::
-::res://assets/working_assets/Wall Assets/::1727911516
-border.png::CompressedTexture2D::1926822493993945375::1727911516::1727911516::1::::<><>::
-wall.png::CompressedTexture2D::5047752202279880619::1727911516::1727911516::1::::<><>::
-walls.png::CompressedTexture2D::1833204141849541176::1727911516::1727911516::1::::<><>::
-::res://ConveyorBelt Master/::1727913029
-box.tscn::PackedScene::4022879268151241365::1727911515::0::1::::<><>::uid://boitk5y0ias65::::res://ConveyorBelt Master/Art/box.png
-ConveyorIcon.gd::GDScript::-1::1727911515::0::1::::<>Area2D<>::
-conveyor_icon.tscn::PackedScene::4500718582291409818::1727911515::0::1::::<><>::res://ConveyorBelt Master/ConveyorIcon.gd<>uid://cnxmkieinng6s::::res://ConveyorBelt Master/Art/conveyors_1.png<>res://adjacent_conveyors.tscn
-Label.gd::GDScript::-1::1727911515::0::1::::<>Label<>::
-main.tscn::PackedScene::5720196141529957797::1727913029::0::1::::<><>::uid://br4gu02oyltp0::::res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn<>uid://2sdi7rhr14fh::::res://ConveyorBelt Master/Conveyors/generator.tscn<>uid://d3r5ri72l82h6::::res://ConveyorBelt Master/Conveyors/trash.tscn<>uid://cfwfejmwtkwmg::::res://ConveyorBelt Master/Conveyors/belt.tscn
-::res://ConveyorBelt Master/Art/::1727911515
-box.png::CompressedTexture2D::3386752611382052900::1727911515::1727911515::1::::<><>::
-conveyors_1.png::CompressedTexture2D::5733523911623638016::1727911515::1727911515::1::::<><>::
-icon.svg::CompressedTexture2D::2062041730011701816::1727911515::1727973608::1::::<><>::
-item delete.png::CompressedTexture2D::7636801454442732052::1727911515::1727911515::1::::<><>::
-item give.png::CompressedTexture2D::6471735892284149110::1727911515::1727911515::1::::<><>::
-splitter_all_sheet.png::CompressedTexture2D::1398317851368286391::1727911515::1727911515::1::::<><>::
-thumbnail.png::CompressedTexture2D::2975250330685684224::1727911515::1727911515::1::::<><>::
-::res://ConveyorBelt Master/Conveyors/::1727913029
-belt(right).tscn::PackedScene::7785651163594222182::1727911515::0::1::::<><>::res://Conveyors/belt.gd<>uid://ct44m1aobfnpe::::res://Conveyors/Components/Detectors/conveyor_detectors.tscn<>uid://cnxmkieinng6s::::res://Art/conveyors_1.png<>uid://des4s18nx8jee::::res://Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://Conveyors/Components/Controller/direction_controller.tscn<>res://Conveyors/Components/Controller/from_direction_controller.gd
-belt(toptoright).tscn::PackedScene::3639899353704177467::1727913029::0::1::::<><>::res://ConveyorBelt Master/Conveyors/belt.gd<>uid://ct44m1aobfnpe::::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn<>uid://cnxmkieinng6s::::res://ConveyorBelt Master/Art/conveyors_1.png<>uid://des4s18nx8jee::::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn<>res://ConveyorBelt Master/Conveyors/Components/Controller/from_direction_controller.gd
-belt.gd::GDScript::-1::1727911515::0::1::::<>Node2D<>::
-belt.tscn::PackedScene::5169513116578323894::1727911515::0::1::::<><>::uid://ct44m1aobfnpe::::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn<>res://ConveyorBelt Master/Conveyors/belt.gd<>uid://cnxmkieinng6s::::res://ConveyorBelt Master/Art/conveyors_1.png<>uid://des4s18nx8jee::::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn<>res://ConveyorBelt Master/Conveyors/Components/Controller/from_direction_controller.gd
-generator.gd::GDScript::-1::1727912600::0::1::::<>Node2D<>::
-generator.tscn::PackedScene::1932455722480189861::1727913029::0::1::::<><>::res://ConveyorBelt Master/Conveyors/generator.gd<>uid://cyg7srtqubxl3::::res://ConveyorBelt Master/Art/item give.png<>uid://bu00ntiiddy1k::::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn<>res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd<>uid://ct44m1aobfnpe::::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn
-splitter.gd::GDScript::-1::1727911515::0::1::::<>Node2D<>::
-splitter.tscn::PackedScene::4838116156281601208::1727911515::0::1::::<><>::res://Conveyors/splitter.gd<>uid://dclvralyryqa4::::res://Art/splitter_all_sheet.png<>uid://bu00ntiiddy1k::::res://Conveyors/Components/Controller/direction_controller.tscn<>uid://des4s18nx8jee::::res://Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://ct44m1aobfnpe::::res://Conveyors/Components/Detectors/conveyor_detectors.tscn
-trash.gd::GDScript::-1::1727911515::0::1::::<>Node2D<>::
-trash.tscn::PackedScene::9161496433905930385::1727911515::0::1::::<><>::uid://des4s18nx8jee::::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn<>res://ConveyorBelt Master/Conveyors/trash.gd<>uid://dg2lae4h8h8qi::::res://ConveyorBelt Master/Art/item delete.png
-::res://ConveyorBelt Master/Conveyors/Components/::1727911515
-::res://ConveyorBelt Master/Conveyors/Components/Controller/::1727911515
-direction_controller.gd::GDScript::-1::1727911515::0::1::::DirectionController<>Area2D<>::
-direction_controller.tscn::PackedScene::3843349151114895398::1727911515::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.gd
-from_direction_controller.gd::GDScript::-1::1727911515::0::1::::FromDirectionController<>Node2D<>::
-::res://ConveyorBelt Master/Conveyors/Components/Detectors/::1727911515
-conveyor_detector.gd::GDScript::-1::1727911515::0::1::::ConveyorDetector<>Area2D<>::
-conveyor_detector.tscn::PackedScene::264843707370104787::1727911515::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detector.gd
-conveyor_detectors.gd::GDScript::-1::1727911515::0::1::::ConveyorDetectors<>Node2D<>::
-conveyor_detectors.tscn::PackedScene::6168079939938385198::1727911515::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.gd
-direction_detector.gd::GDScript::-1::1727911515::0::1::::DirectionDetector<>Area2D<>::
-direction_detector.tscn::PackedScene::7010175979125736559::1727911515::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Detectors/direction_detector.gd
-::res://ConveyorBelt Master/Conveyors/Components/Inventory/::1727911515
-conveyor_inventory.gd::GDScript::-1::1727911515::0::1::::ConveyorInventory<>Area2D<>::
-conveyor_inventory.tscn::PackedScene::7478970579493377544::1727911515::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd
-::res://ConveyorBelt Master/Conveyors/Helpers/::1727911515
-conveyor_sprite_helper.gd::GDScript::-1::1727911515::0::1::::ConveyorSpriteHelper<>Node<>::
-direction_helper.gd::GDScript::-1::1727911515::0::1::::DirectionHelper<>Node<>::
-::res://ConveyorBelt Master/Managers/::1727911515
-BuildingCoordinator.gd::GDScript::-1::1727911515::0::1::::<>Node<>::
-Constants.gd::GDScript::-1::1727911515::0::1::::<>Node<>::
-Enums.gd::GDScript::-1::1727911515::0::1::::<>Node<>::
-::res://Scene Folder/::1727913060
-main_character.tscn::PackedScene::5817375992330108292::1727911515::0::1::::<><>::res://Scripts/main_character.gd<>uid://dhp4twd8ix603::::res://assets/dummy_assets/Additional_Test_Assets/character_sprite_sheet.png
-UI.gdshader::Shader::-1::1727913060::0::1::::<><>::
-UI.tscn::PackedScene::5157734322651910848::1727913029::0::1::::<><>::res://Scripts/dialogue.gd<>res://icon.svg<>uid://1cqiv22renjj::::res://assets/dummy_assets/Additional_Test_Assets/Frame 28.png<>res://Scripts/3choice_dialogue.gd<>res://Scene Folder/UI.gdshader<>res://Short Text_Dialogue Box_Focused_RDS Game.png
-::res://Scene Folder/Environment/::1727913058
-tile_map.tscn::PackedScene::1495173672702862107::1727913058::0::1::::<><>::uid://b8hqa48xdvbd0::::res://assets/victorian_interior/64x64-ALL-ASSETS.png<>uid://bohtl5hnig5iy::::res://assets/dummy_assets/64x64/64x64_Tutorial_Assets.png<>uid://cttv2ptbpq3vx::::res://assets/dummy_assets/64x64/Cauldron.png<>uid://bibqsa3lh501w::::res://assets/dummy_assets/16x16/wand.png<>uid://ck4n7y5t5d4a::::res://assets/dummy_assets/Additional_Test_Assets/image 3.png<>uid://m4kvn3052aa7::::res://assets/dummy_assets/16x16/potions.png<>uid://moy7o3l4fe8n::::res://assets/dummy_assets/16x16/sceptre_2.png<>uid://3nunek4kcjtg::::res://assets/dummy_assets/Additional_Test_Assets/BookShelf Tilesheet.png<>uid://toqtksqu6rdh::::res://assets/dummy_assets/Additional_Test_Assets/floor draft1.png<>res://fox.tscn<>uid://cfqpepeud7y6s::::res://Scene Folder/UI.tscn<>uid://72ofvvnma033::::res://assets/dummy_assets/Additional_Test_Assets/floor v3 1.png<>uid://qnn4ialv5110::::res://assets/dummy_assets/Additional_Test_Assets/floor v2 1.png<>res://Scripts/cauldron_area.gd<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://cnq52axw13wrl::::res://ConveyorBelt Master/main.tscn
-::res://Scene Folder/Minigames/::1727911515
-::res://Scene Folder/Minigames/Dartboard_game/::1727911515
-::res://Scene Folder/Minigames/Dartboard_game/Cannon/::1727911515
-Cannon.tscn::PackedScene::9109898853211186624::1727911515::0::1::::<><>::
-::res://Scene Folder/Minigames/Dartboard_game/Dart/::1727911515
-dart.gd::GDScript::-1::1727911515::0::1::::<>RigidBody2D<>::
-Dart.tscn::PackedScene::168879098445437694::1727911515::0::1::::<><>::res://Scene Folder/Minigames/Dartboard_game/Dart/dart.gd<>uid://br8nvmsg2wo75::::res://icon.svg
-::res://Scene Folder/Minigames/Dartboard_game/GameManager/::1727911515
-dartboard_game.gd::GDScript::-1::1727911515::0::1::::<>Node2D<>::
-Dartboard_Game.tscn::PackedScene::3717415725170487665::1727911515::0::1::::<><>::res://Scene Folder/Minigames/Dartboard_game/GameManager/utilities.gd
-utilities.gd::GDScript::-1::1727911515::0::1::::<>Node2D<>::
-::res://Scripts/::1727911515
-3choice_dialogue.gd::GDScript::-1::1727911515::0::1::::<>MarginContainer<>::
-cauldron_area.gd::GDScript::-1::1727911515::0::1::::<>Area2D<>::
-dialogue.gd::GDScript::-1::1727911515::0::1::::<>MarginContainer<>::
-fox_area.gd::GDScript::-1::1727911515::0::1::::<>Area2D<>::
-main_character.gd::GDScript::-1::1727911515::0::1::::<>CharacterBody2D<>::
-::res://Scripts/Dialogues/::1727911515
-::res://Scripts/Dialogues/Cauldron/::1727911515
-FoxBlurb.json::JSON::-1::1727911515::0::1::::<><>::
-FoxIntro.json::JSON::-1::1727911515::0::1::::<><>::
-::res://Scripts/Monologues/::1727911515
-::res://Scripts/Monologues/Cauldron/::1727911515
-CauldronBlurb.json::JSON::-1::1727911515::0::1::::<><>::
-OrbHypothesis.json::JSON::-1::1727911515::0::1::::<><>::
+::res://::1727992734
+fox.tscn::PackedScene::1859519243384973732::1727990270::0::1::::<><>::uid://ceook2jgpk3ak::::res://assets/dummy_assets/Additional_Test_Assets/IMG_1482.PNG<>res://Scripts/fox_area.gd
+icon.svg::CompressedTexture2D::3648582972397847862::1727990270::1727990270::1::::<><>::
+main_character.tscn::PackedScene::3113528464361542574::1727990270::0::1::::<><>::uid://ds86qx5cqmeie::::res://assets/dummy_assets/Additional_Test_Assets/IMG_1400.PNG<>res://main_character.gd
+orb 3.PNG::CompressedTexture2D::8420341416222174559::1727990270::1727990270::1::::<><>::
+Orb_TEST.tscn::PackedScene::9059308459810554174::1727990489::0::1::::<><>::uid://ckhae4btifobd::::res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png
+Short Text_Dialogue Box_Focused_RDS Game.png::CompressedTexture2D::2734135107253655221::1727990270::1727990270::1::::<><>::
+UI.tscn::PackedScene::6370659473448383308::1727990270::0::1::::<><>::uid://br8nvmsg2wo75::::res://icon.svg
+::res://assets/::1727992734
+::res://assets/dummy_assets/::1727990360
+::res://assets/dummy_assets/16x16/::1727990355
+black_smoke.png::CompressedTexture2D::307400641101880703::1727990270::1727990270::1::::<><>::
+bookshelf_1.png::CompressedTexture2D::4456679736205681766::1727990270::1727990270::1::::<><>::
+bookshelf_2.png::CompressedTexture2D::1826707126558234908::1727990270::1727990270::1::::<><>::
+candle.png::CompressedTexture2D::7807169343059221404::1727990270::1727990270::1::::<><>::
+cannon.png::CompressedTexture2D::6981147979441259231::1727990270::1727990270::1::::<><>::
+cauldron.png::CompressedTexture2D::3649404786255937523::1727990270::1727990270::1::::<><>::
+cauldron_smokes.png::CompressedTexture2D::6890872337318916078::1727990270::1727990270::1::::<><>::
+chair.png::CompressedTexture2D::1444849520433372260::1727990270::1727990270::1::::<><>::
+character_1.png::CompressedTexture2D::2058836266737294598::1727990270::1727990270::1::::<><>::
+character_2.png::CompressedTexture2D::2257715868120121443::1727990270::1727990270::1::::<><>::
+character_3.png::CompressedTexture2D::8412593096801735661::1727990270::1727990270::1::::<><>::
+character_4.png::CompressedTexture2D::7033731088426048321::1727990270::1727990270::1::::<><>::
+character_5.png::CompressedTexture2D::8926881337466903007::1727990270::1727990270::1::::<><>::
+conveyor_belt_1.png::CompressedTexture2D::5929297110967171094::1727990270::1727990270::1::::<><>::
+conveyor_belt_2.png::CompressedTexture2D::1571957116622005973::1727990270::1727990270::1::::<><>::
+conveyor_belt_3.png::CompressedTexture2D::6600253709383794690::1727990270::1727990270::1::::<><>::
+desks.png::CompressedTexture2D::8225341569204122174::1727990270::1727990270::1::::<><>::
+empty_hole.png::CompressedTexture2D::6778232003500622845::1727990270::1727990270::1::::<><>::
+fox.png::CompressedTexture2D::7815194142444380175::1727990270::1727990270::1::::<><>::
+orbs.png::CompressedTexture2D::2743307397627363103::1727990270::1727990270::1::::<><>::
+pocket.png::CompressedTexture2D::4287931863935342131::1727990270::1727990270::1::::<><>::
+podium.png::CompressedTexture2D::8397592169787206017::1727990270::1727990270::1::::<><>::
+potions.png::CompressedTexture2D::902778477358902008::1727990270::1727990270::1::::<><>::
+sceptre_1.png::CompressedTexture2D::6973334519468218918::1727990270::1727990270::1::::<><>::
+sceptre_2.png::CompressedTexture2D::872682544564748631::1727990270::1727990270::1::::<><>::
+wand.png::CompressedTexture2D::2950999470490848046::1727990270::1727990270::1::::<><>::
+::res://assets/dummy_assets/64x64/::1727990355
+64x64_Tutorial_Assets.png::CompressedTexture2D::3384689992615246768::1727990270::1727990270::1::::<><>::
+64x64_Tutorial_Assets_Tilesheet.png::CompressedTexture2D::971198736402007261::1727990270::1727990270::1::::<><>::
+Cauldron.png::CompressedTexture2D::6146976664387159585::1727990270::1727990270::1::::<><>::
+::res://assets/dummy_assets/Additional_Test_Assets/::1727990360
+BookShelf Tilesheet.png::CompressedTexture2D::1993362314716301824::1727990270::1727990270::1::::<><>::
+character_sprite_sheet.png::CompressedTexture2D::7683345507389963778::1727990270::1727990270::1::::<><>::
+floor draft1.png::CompressedTexture2D::1363495273442821225::1727990270::1727990270::1::::<><>::
+floor v2 1.png::CompressedTexture2D::1150699938656365205::1727990270::1727990270::1::::<><>::
+floor v3 1.png::CompressedTexture2D::2302641298682877400::1727990270::1727990270::1::::<><>::
+Frame 28.png::CompressedTexture2D::1830025594282183103::1727990270::1727990270::1::::<><>::
+Frame 29.png::CompressedTexture2D::9151929039302937121::1727990270::1727990270::1::::<><>::
+Frame 30.png::CompressedTexture2D::1420975227437303469::1727990270::1727990270::1::::<><>::
+image 3.png::CompressedTexture2D::162807192139800902::1727990270::1727990270::1::::<><>::
+IMG_0688.PNG::CompressedTexture2D::1217963610149697808::1727990270::1727990270::1::::<><>::
+IMG_0690.PNG::CompressedTexture2D::5208429533393741222::1727990270::1727990270::1::::<><>::
+IMG_0691.PNG::CompressedTexture2D::617946446897416897::1727990270::1727990270::1::::<><>::
+IMG_1400.PNG::CompressedTexture2D::8492697756420011972::1727990270::1727990270::1::::<><>::
+IMG_1482.PNG::CompressedTexture2D::5083367358659724602::1727990270::1727990270::1::::<><>::
+IMG_1488.PNG::CompressedTexture2D::6866301495433220398::1727990270::1727990270::1::::<><>::
+MC.png::CompressedTexture2D::4418747963849723768::1727990270::1727990270::1::::<><>::
+mc_pfp.png::CompressedTexture2D::3525382327785809138::1727990270::1727990270::1::::<><>::
+::res://assets/victorian_interior/::1727990355
+64x64-ALL-ASSETS.png::CompressedTexture2D::4718076215116401915::1727990270::1727990270::1::::<><>::
+read_me.txt::TextFile::-1::1727990270::0::1::::<><>::
+::res://assets/victorian_interior/16x16/::1727990355
+16x16-ALL-ASSETS.png::CompressedTexture2D::4500454506605413039::1727990270::1727990270::1::::<><>::
+16x16-OBJECTS.png::CompressedTexture2D::1986606510025668864::1727990270::1727990270::1::::<><>::
+16x16-TEXTURES.png::CompressedTexture2D::2543907100348303720::1727990270::1727990270::1::::<><>::
+::res://assets/victorian_interior/32x32/::1727990355
+32x32-ALL-ASSETS.png::CompressedTexture2D::3096138358071517853::1727990270::1727990270::1::::<><>::
+32x32-OBJECTS.png::CompressedTexture2D::1871899482873753038::1727990270::1727990270::1::::<><>::
+32x32-TEXTURES.png::CompressedTexture2D::6105803643741807861::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/::1727992734
+::res://assets/working_assets/Base Asset/::1727990360
+base 3.PNG::CompressedTexture2D::6631120200912357008::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Bookshelf assets/::1727992734
+bookshelf.png::CompressedTexture2D::8786389072271205055::1727990270::1727990270::1::::<><>::
+side bookshelf.PNG::CompressedTexture2D::4448300618119040291::1727990270::1727990270::1::::<><>::
+Untitled_Artwork3.png::CompressedTexture2D::289436074560233896::1727992732::1727992747::1::::<><>::
+Untitled_Artwork 1.png::CompressedTexture2D::337319330382749854::1727992732::1727992747::1::::<><>::
+Untitled_Artwork.png::CompressedTexture2D::7925940021762365631::1727992732::1727992747::1::::<><>::
+::res://assets/working_assets/Cauldron Assets/::1727990366
+cauldron.png::CompressedTexture2D::6353373446220099244::1727990270::1727990270::1::::<><>::
+smoke animation blue frame 1.PNG::CompressedTexture2D::3594691038308083273::1727990270::1727990270::1::::<><>::
+smoke animation blue frame 2.PNG::CompressedTexture2D::4178100358497396153::1727990270::1727990270::1::::<><>::
+smoke animation blue frame 3.PNG::CompressedTexture2D::2731758845263704841::1727990270::1727990270::1::::<><>::
+smoke animation blue frame 4.PNG::CompressedTexture2D::1585218976036509772::1727990270::1727990270::1::::<><>::
+smoke animation blue frame 5.PNG::CompressedTexture2D::3571925462407094410::1727990270::1727990270::1::::<><>::
+smoke animation green frame 1.PNG::CompressedTexture2D::7317427808777890557::1727990270::1727990270::1::::<><>::
+smoke animation green frame 2.PNG::CompressedTexture2D::4113743745910893541::1727990270::1727990270::1::::<><>::
+smoke animation green frame 3.PNG::CompressedTexture2D::8437467011708010302::1727990270::1727990270::1::::<><>::
+smoke animation green frame 4.PNG::CompressedTexture2D::8708874934379693061::1727990270::1727990270::1::::<><>::
+smoke animation green frame 5.PNG::CompressedTexture2D::361793862591569149::1727990270::1727990270::1::::<><>::
+smoke animation lightblue frame 1.PNG::CompressedTexture2D::4692208993585601215::1727990270::1727990270::1::::<><>::
+smoke animation lightblue frame 2.PNG::CompressedTexture2D::3538427054490224180::1727990270::1727990270::1::::<><>::
+smoke animation lightblue frame 3.PNG::CompressedTexture2D::5192932234454975137::1727990270::1727990270::1::::<><>::
+smoke animation lightblue frame 4.PNG::CompressedTexture2D::8143032816175744644::1727990270::1727990270::1::::<><>::
+smoke animation lightblue frame 5.PNG::CompressedTexture2D::1319969292191194429::1727990270::1727990270::1::::<><>::
+smoke animation pink frame 1.png::CompressedTexture2D::4983865804759213263::1727990270::1727990270::1::::<><>::
+smoke animation pink frame 2.png::CompressedTexture2D::3689737653797902660::1727990270::1727990270::1::::<><>::
+smoke animation pink frame 3.png::CompressedTexture2D::9220444080073693827::1727990270::1727990270::1::::<><>::
+smoke animation pink frame 4.png::CompressedTexture2D::7313531173763050500::1727990270::1727990270::1::::<><>::
+smoke animation pink frame 5.png::CompressedTexture2D::8235293559116766699::1727990270::1727990270::1::::<><>::
+smoke animation purple frame 1.PNG::CompressedTexture2D::8774207244259059775::1727990270::1727990270::1::::<><>::
+smoke animation purple frame 2.PNG::CompressedTexture2D::7504357625472534103::1727990270::1727990270::1::::<><>::
+smoke animation purple frame 3.PNG::CompressedTexture2D::3589117991099228689::1727990270::1727990270::1::::<><>::
+smoke animation purple frame 4.PNG::CompressedTexture2D::2162301384008521648::1727990270::1727990270::1::::<><>::
+smoke animation purple frame 5.PNG::CompressedTexture2D::4939597366804673388::1727990270::1727990270::1::::<><>::
+smoke animation yellow frame 1.PNG::CompressedTexture2D::5375323828497694187::1727990270::1727990270::1::::<><>::
+smoke animation yellow frame 2.PNG::CompressedTexture2D::2298649988876434913::1727990270::1727990270::1::::<><>::
+smoke animation yellow frame 3.PNG::CompressedTexture2D::1360575668391263745::1727990270::1727990270::1::::<><>::
+smoke animation yellow frame 4.PNG::CompressedTexture2D::747501767988878558::1727990270::1727990270::1::::<><>::
+smoke animation yellow frame 5.PNG::CompressedTexture2D::9127847868702622277::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Conveyor belt Assets/::1727992139
+conveyor belt legs.png::CompressedTexture2D::5214762792280136418::1727990270::1727990270::1::::<><>::
+conveyor frame 1.PNG::CompressedTexture2D::341566936383358314::1727990270::1727990270::1::::<><>::
+conveyor frame 2.PNG::CompressedTexture2D::1534398249657112141::1727990270::1727990270::1::::<><>::
+conveyor frame 3.PNG::CompressedTexture2D::1053273013275819026::1727990270::1727990270::1::::<><>::
+Untitled_Artwork.png::CompressedTexture2D::5589481748718936594::1727992133::1727992134::1::::<><>::
+::res://assets/working_assets/Exit Assets/::1727990365
+exit 1.PNG::CompressedTexture2D::5685696128316500475::1727990270::1727990270::1::::<><>::
+exit 2.PNG::CompressedTexture2D::1241601215021352889::1727990270::1727990270::1::::<><>::
+exit 3.PNG::CompressedTexture2D::5165969077405708018::1727990270::1727990270::1::::<><>::
+exits.png::CompressedTexture2D::1633191856319643966::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Floor Tile Asset/::1727990365
+floor v3.PNG::CompressedTexture2D::8066722460497719032::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Fox Assets/::1727990365
+OfficialSpread2.png::CompressedTexture2D::8911909800575767063::1727990270::1727990270::1::::<><>::
+Rough.PNG::CompressedTexture2D::8380747843020981507::1727990270::1727990270::1::::<><>::
+Xrough.PNG::CompressedTexture2D::230467394031630387::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Hero Assets/::1727990365
+Icon.PNG::CompressedTexture2D::3423149103277005779::1727990270::1727990270::1::::<><>::
+OfficialSpread.png::CompressedTexture2D::4127747093328980781::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Orbs Assets/::1727990360
+orb 1.PNG::CompressedTexture2D::7357482566117556811::1727990270::1727990270::1::::<><>::
+orb 2.PNG::CompressedTexture2D::1418167098780491388::1727990270::1727990270::1::::<><>::
+orb 3.PNG::CompressedTexture2D::456173510085995814::1727990270::1727990270::1::::<><>::
+orb 4.PNG::CompressedTexture2D::8868821296555459780::1727990270::1727990270::1::::<><>::
+orb 5.PNG::CompressedTexture2D::1453525704103781863::1727990270::1727990270::1::::<><>::
+orb 6.PNG::CompressedTexture2D::6308936708996031699::1727990270::1727990270::1::::<><>::
+OrbsWandsPotions.png::CompressedTexture2D::5489189116816699045::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Potions Assets/::1727990360
+potion 1.PNG::CompressedTexture2D::8990318555765668556::1727990270::1727990270::1::::<><>::
+potion 2.PNG::CompressedTexture2D::7434879050955049610::1727990270::1727990270::1::::<><>::
+potion 3.PNG::CompressedTexture2D::8573512387227407635::1727990270::1727990270::1::::<><>::
+potions.png::CompressedTexture2D::9204762095307500548::1727990270::1727990270::1::::<><>::
+::res://assets/working_assets/Wall Assets/::1727990365
+border.png::CompressedTexture2D::1926822493993945375::1727990270::1727990270::1::::<><>::
+wall.png::CompressedTexture2D::5047752202279880619::1727990270::1727990270::1::::<><>::
+walls.png::CompressedTexture2D::1833204141849541176::1727990270::1727990270::1::::<><>::
+::res://ConveyorBelt Master/::1727990488
+box.tscn::PackedScene::4022879268151241365::1727990270::0::1::::<><>::uid://boitk5y0ias65::::res://ConveyorBelt Master/Art/box.png
+ConveyorIcon.gd::GDScript::-1::1727990270::0::1::::<>Area2D<>::
+conveyor_icon.tscn::PackedScene::4500718582291409818::1727990270::0::1::::<><>::res://ConveyorBelt Master/ConveyorIcon.gd<>uid://cnxmkieinng6s::::res://ConveyorBelt Master/Art/conveyors_1.png<>res://adjacent_conveyors.tscn
+Label.gd::GDScript::-1::1727990270::0::1::::<>Label<>::
+main.tscn::PackedScene::5720196141529957797::1727990488::0::1::::<><>::uid://br4gu02oyltp0::::res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn<>uid://2sdi7rhr14fh::::res://ConveyorBelt Master/Conveyors/generator.tscn<>uid://d3r5ri72l82h6::::res://ConveyorBelt Master/Conveyors/trash.tscn<>uid://cfwfejmwtkwmg::::res://ConveyorBelt Master/Conveyors/belt.tscn
+::res://ConveyorBelt Master/Art/::1727990484
+box.png::CompressedTexture2D::3386752611382052900::1727990270::1727990270::1::::<><>::
+conveyors_1.png::CompressedTexture2D::5733523911623638016::1727990270::1727990270::1::::<><>::
+icon.svg::CompressedTexture2D::2062041730011701816::1727990270::1727990484::1::::<><>::
+item delete.png::CompressedTexture2D::7636801454442732052::1727990270::1727990270::1::::<><>::
+item give.png::CompressedTexture2D::6471735892284149110::1727990270::1727990270::1::::<><>::
+splitter_all_sheet.png::CompressedTexture2D::1398317851368286391::1727990270::1727990270::1::::<><>::
+thumbnail.png::CompressedTexture2D::2975250330685684224::1727990270::1727990270::1::::<><>::
+::res://ConveyorBelt Master/Conveyors/::1727990489
+belt(right).tscn::PackedScene::7785651163594222182::1727990270::0::1::::<><>::res://Conveyors/belt.gd<>uid://ct44m1aobfnpe::::res://Conveyors/Components/Detectors/conveyor_detectors.tscn<>uid://cnxmkieinng6s::::res://Art/conveyors_1.png<>uid://des4s18nx8jee::::res://Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://Conveyors/Components/Controller/direction_controller.tscn<>res://Conveyors/Components/Controller/from_direction_controller.gd
+belt(toptoright).tscn::PackedScene::3639899353704177467::1727990488::0::1::::<><>::res://ConveyorBelt Master/Conveyors/belt.gd<>uid://ct44m1aobfnpe::::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn<>uid://cnxmkieinng6s::::res://ConveyorBelt Master/Art/conveyors_1.png<>uid://des4s18nx8jee::::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn<>res://ConveyorBelt Master/Conveyors/Components/Controller/from_direction_controller.gd
+belt.gd::GDScript::-1::1727990270::0::1::::<>Node2D<>::
+belt.tscn::PackedScene::5169513116578323894::1727990270::0::1::::<><>::uid://ct44m1aobfnpe::::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn<>res://ConveyorBelt Master/Conveyors/belt.gd<>uid://cnxmkieinng6s::::res://ConveyorBelt Master/Art/conveyors_1.png<>uid://des4s18nx8jee::::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn<>res://ConveyorBelt Master/Conveyors/Components/Controller/from_direction_controller.gd
+generator.gd::GDScript::-1::1727990270::0::1::::<>Node2D<>::
+generator.tscn::PackedScene::1932455722480189861::1727990489::0::1::::<><>::res://ConveyorBelt Master/Conveyors/generator.gd<>uid://cyg7srtqubxl3::::res://ConveyorBelt Master/Art/item give.png<>uid://bu00ntiiddy1k::::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn<>res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd<>uid://ct44m1aobfnpe::::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn
+splitter.gd::GDScript::-1::1727990270::0::1::::<>Node2D<>::
+splitter.tscn::PackedScene::4838116156281601208::1727990270::0::1::::<><>::res://Conveyors/splitter.gd<>uid://dclvralyryqa4::::res://Art/splitter_all_sheet.png<>uid://bu00ntiiddy1k::::res://Conveyors/Components/Controller/direction_controller.tscn<>uid://des4s18nx8jee::::res://Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://ct44m1aobfnpe::::res://Conveyors/Components/Detectors/conveyor_detectors.tscn
+trash.gd::GDScript::-1::1727990270::0::1::::<>Node2D<>::
+trash.tscn::PackedScene::9161496433905930385::1727990270::0::1::::<><>::uid://des4s18nx8jee::::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn<>res://ConveyorBelt Master/Conveyors/trash.gd<>uid://dg2lae4h8h8qi::::res://ConveyorBelt Master/Art/item delete.png
+::res://ConveyorBelt Master/Conveyors/Components/::1727990355
+::res://ConveyorBelt Master/Conveyors/Components/Controller/::1727990355
+direction_controller.gd::GDScript::-1::1727990270::0::1::::DirectionController<>Area2D<>::
+direction_controller.tscn::PackedScene::3843349151114895398::1727990270::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.gd
+from_direction_controller.gd::GDScript::-1::1727990270::0::1::::FromDirectionController<>Node2D<>::
+::res://ConveyorBelt Master/Conveyors/Components/Detectors/::1727990355
+conveyor_detector.gd::GDScript::-1::1727990270::0::1::::ConveyorDetector<>Area2D<>::
+conveyor_detector.tscn::PackedScene::264843707370104787::1727990270::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detector.gd
+conveyor_detectors.gd::GDScript::-1::1727990270::0::1::::ConveyorDetectors<>Node2D<>::
+conveyor_detectors.tscn::PackedScene::6168079939938385198::1727990270::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.gd
+direction_detector.gd::GDScript::-1::1727990270::0::1::::DirectionDetector<>Area2D<>::
+direction_detector.tscn::PackedScene::7010175979125736559::1727990270::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Detectors/direction_detector.gd
+::res://ConveyorBelt Master/Conveyors/Components/Inventory/::1727990355
+conveyor_inventory.gd::GDScript::-1::1727990270::0::1::::ConveyorInventory<>Area2D<>::
+conveyor_inventory.tscn::PackedScene::7478970579493377544::1727990270::0::1::::<><>::res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd
+::res://ConveyorBelt Master/Conveyors/Helpers/::1727990355
+conveyor_sprite_helper.gd::GDScript::-1::1727990270::0::1::::ConveyorSpriteHelper<>Node<>::
+direction_helper.gd::GDScript::-1::1727990270::0::1::::DirectionHelper<>Node<>::
+::res://ConveyorBelt Master/Managers/::1727990350
+BuildingCoordinator.gd::GDScript::-1::1727990270::0::1::::<>Node<>::
+Constants.gd::GDScript::-1::1727990270::0::1::::<>Node<>::
+Enums.gd::GDScript::-1::1727990270::0::1::::<>Node<>::
+::res://Scene Folder/::1727992340
+main_character.tscn::PackedScene::5817375992330108292::1727990270::0::1::::<><>::res://Scripts/main_character.gd<>uid://dhp4twd8ix603::::res://assets/dummy_assets/Additional_Test_Assets/character_sprite_sheet.png
+UI.gdshader::Shader::-1::1727992340::0::1::::<><>::
+UI.tscn::PackedScene::5157734322651910848::1727990488::0::1::::<><>::res://Scripts/dialogue.gd<>uid://br8nvmsg2wo75::::res://icon.svg<>uid://1cqiv22renjj::::res://assets/dummy_assets/Additional_Test_Assets/Frame 28.png<>res://Scripts/3choice_dialogue.gd<>res://Scene Folder/UI.gdshader<>uid://be7o2npmrub3j::::res://Short Text_Dialogue Box_Focused_RDS Game.png
+::res://Scene Folder/Environment/::1727992323
+tile_map.tscn::PackedScene::1495173672702862107::1727992319::0::1::::<><>::uid://b8hqa48xdvbd0::::res://assets/victorian_interior/64x64-ALL-ASSETS.png<>uid://bohtl5hnig5iy::::res://assets/dummy_assets/64x64/64x64_Tutorial_Assets.png<>uid://cttv2ptbpq3vx::::res://assets/dummy_assets/64x64/Cauldron.png<>uid://bibqsa3lh501w::::res://assets/dummy_assets/16x16/wand.png<>uid://ck4n7y5t5d4a::::res://assets/dummy_assets/Additional_Test_Assets/image 3.png<>uid://m4kvn3052aa7::::res://assets/dummy_assets/16x16/potions.png<>uid://moy7o3l4fe8n::::res://assets/dummy_assets/16x16/sceptre_2.png<>uid://3nunek4kcjtg::::res://assets/dummy_assets/Additional_Test_Assets/BookShelf Tilesheet.png<>uid://toqtksqu6rdh::::res://assets/dummy_assets/Additional_Test_Assets/floor draft1.png<>uid://1q1al4h8xolo::::res://fox.tscn<>uid://cfqpepeud7y6s::::res://Scene Folder/UI.tscn<>uid://72ofvvnma033::::res://assets/dummy_assets/Additional_Test_Assets/floor v3 1.png<>uid://qnn4ialv5110::::res://assets/dummy_assets/Additional_Test_Assets/floor v2 1.png<>res://Scripts/cauldron_area.gd<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://cnq52axw13wrl::::res://ConveyorBelt Master/main.tscn
+::res://Scene Folder/Minigames/::1727990350
+::res://Scene Folder/Minigames/Dartboard_game/::1727990350
+::res://Scene Folder/Minigames/Dartboard_game/Cannon/::1727990350
+cannon.gd::GDScript::-1::1727990270::0::1::::<>Node2D<>::
+Cannon.tscn::PackedScene::9109898853211186624::1727990270::0::1::::<><>::res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd
+::res://Scene Folder/Minigames/Dartboard_game/Dart/::1727990350
+dart.gd::GDScript::-1::1727990270::0::1::::<>RigidBody2D<>::
+Dart.tscn::PackedScene::168879098445437694::1727990270::0::1::::<><>::res://Scene Folder/Minigames/Dartboard_game/Dart/dart.gd<>uid://br8nvmsg2wo75::::res://icon.svg
+::res://Scene Folder/Minigames/Dartboard_game/GameManager/::1727990350
+dartboard_game.gd::GDScript::-1::1727990270::0::1::::<>Node2D<>::
+Dartboard_Game.tscn::PackedScene::3717415725170487665::1727990270::0::1::::<><>::res://Scene Folder/Minigames/Dartboard_game/GameManager/utilities.gd
+utilities.gd::GDScript::-1::1727990270::0::1::::<>Node2D<>::
+::res://Scripts/::1727990355
+3choice_dialogue.gd::GDScript::-1::1727990270::0::1::::<>MarginContainer<>::
+cauldron_area.gd::GDScript::-1::1727990270::0::1::::<>Area2D<>::
+dialogue.gd::GDScript::-1::1727990270::0::1::::<>MarginContainer<>::
+fox_area.gd::GDScript::-1::1727990270::0::1::::<>Area2D<>::
+main_character.gd::GDScript::-1::1727990270::0::1::::<>CharacterBody2D<>::
+::res://Scripts/Dialogues/::1727990350
+::res://Scripts/Dialogues/Cauldron/::1727990350
+FoxBlurb.json::JSON::-1::1727990270::0::1::::<><>::
+FoxIntro.json::JSON::-1::1727990270::0::1::::<><>::
+::res://Scripts/Monologues/::1727990355
+::res://Scripts/Monologues/Cauldron/::1727990355
+CauldronBlurb.json::JSON::-1::1727990270::0::1::::<><>::
+OrbHypothesis.json::JSON::-1::1727990270::0::1::::<><>::
