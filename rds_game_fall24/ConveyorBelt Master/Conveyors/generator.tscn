@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://2sdi7rhr14fh"]
+[gd_scene load_steps=8 format=3 uid="uid://2sdi7rhr14fh"]
 
 [ext_resource type="Script" path="res://ConveyorBelt Master/Conveyors/generator.gd" id="1_asr8x"]
+[ext_resource type="Texture2D" uid="uid://cyg7srtqubxl3" path="res://ConveyorBelt Master/Art/item give.png" id="2_8t16q"]
 [ext_resource type="PackedScene" uid="uid://bu00ntiiddy1k" path="res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn" id="3_dpaix"]
 [ext_resource type="Script" path="res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd" id="4_fg00e"]
 [ext_resource type="PackedScene" uid="uid://ct44m1aobfnpe" path="res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn" id="5_vh6hn"]
@@ -17,6 +18,7 @@ script = ExtResource("1_asr8x")
 directions = Array[int]([0])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8t16q")
 
 [node name="DirectionController" parent="." instance=ExtResource("3_dpaix")]
 
