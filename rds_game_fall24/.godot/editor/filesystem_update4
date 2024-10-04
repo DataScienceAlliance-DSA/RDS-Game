@@ -1,8 +1,6 @@
-res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn
-res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Dartboard_game/GameManager/Dartboard_Game.tscn
-res://Scene Folder/Minigames/Dartboard_game/Dart/Dart.tscn
-res://Scene Folder/Environment/tile_map.tscn
+res://Scene Folder/UI.gdshader
+res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn
 res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn
-res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd
 res://Scene Folder/Minigames/Dartboard_game/Dart/dart.gd
+res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd

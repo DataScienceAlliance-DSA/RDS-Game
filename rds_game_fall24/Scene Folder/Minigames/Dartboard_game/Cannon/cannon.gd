@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
 # Dart Angel
-var dart_angle = 350
+var dart_angle = 300
 # Dart Speed
 var dart_speed = 8
 # Dart Gravity

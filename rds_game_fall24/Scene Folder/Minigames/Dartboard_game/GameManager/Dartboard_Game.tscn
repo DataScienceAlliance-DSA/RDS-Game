@@ -13,9 +13,9 @@ script = ExtResource("1_uggsu")
 [node name="background" parent="." instance=ExtResource("2_52hpf")]
 
 [node name="dart" parent="." instance=ExtResource("3_y4byc")]
-position = Vector2(273, 528)
+position = Vector2(-32, 320)
 
 [node name="cannon" parent="." instance=ExtResource("2_rncxl")]
-position = Vector2(232, 544)
+position = Vector2(200, 547)
 collision_layer = 2
 collision_mask = 2
