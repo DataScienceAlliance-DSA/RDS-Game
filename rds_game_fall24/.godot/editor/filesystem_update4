@@ -5,7 +5,6 @@ res://ConveyorBelt Master/main.tscn
 res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
 res://ConveyorBelt Master/Conveyors/generator.tscn
 res://Orb_TEST.tscn
-res://Scripts/cauldron_area.gd
 res://fox.tscn
 res://Scene Folder/main_character.tscn
 res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd

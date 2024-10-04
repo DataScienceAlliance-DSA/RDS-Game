@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfuo0x40wdj1c"
-path="res://.godot/imported/exit 3.PNG-d1b26a2a1fdc0ff1c0bef4350f71184e.ctex"
+uid="uid://blaeuafsqnao0"
+path="res://.godot/imported/floors_walls_spritesheet.png-2cf874fe7f140dc6317f42f8c58e7136.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/working_assets/Exit Assets/exit 3.PNG"
-dest_files=["res://.godot/imported/exit 3.PNG-d1b26a2a1fdc0ff1c0bef4350f71184e.ctex"]
+source_file="res://assets/working_assets/Wall Assets/floors_walls_spritesheet.png"
+dest_files=["res://.godot/imported/floors_walls_spritesheet.png-2cf874fe7f140dc6317f42f8c58e7136.ctex"]
 
 [params]
 
