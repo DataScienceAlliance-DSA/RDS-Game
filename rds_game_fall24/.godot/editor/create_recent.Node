@@ -1,3 +1,6 @@
+Timer
+AnimationPlayer
+AnimationTree
 Sprite2D
 Area2D
 CollisionShape2D
@@ -10,5 +13,3 @@ StaticBody2D
 Control
 TextEdit
 TextureRect
-MarginContainer
-HBoxContainer

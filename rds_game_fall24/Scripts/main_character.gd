@@ -6,6 +6,7 @@ var player_speed = 200
 
 # for setting called-animation based on character velocity
 @onready var animations = $AnimationPlayer
+var last_direction = "Down" # Initial default direction
 
 # movement stack & directional velocity constants
 var NO_MOVEMENT = Vector2(0, 0)
@@ -21,15 +22,19 @@ var neighbor_areas
 
 func updateAnimation():
 	if velocity.length() == 0:
-		animations.stop()
+		# Plays idle animation based on last movement direcition
+		animations.play("idle" + last_direction)  # Play idle animation
 	else:
 		var direction = "Down"
 		if velocity.x < 0: direction = "Left"
 		elif velocity.x >0: direction = "Right"
 		elif velocity.y < 0: direction = "Up"
 	
+		# Updates last_direction with current direction
+		last_direction = direction
+		# Plays walking animation for current direction
 		animations.play("walk" + direction)
-
+	
 func _process(_delta):
 	# Find all areas before any cutscene/player-inputs
 	find_interactables()

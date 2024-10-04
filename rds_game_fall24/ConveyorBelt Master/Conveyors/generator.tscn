@@ -18,7 +18,6 @@ script = ExtResource("1_asr8x")
 directions = Array[int]([0])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -2
 texture = ExtResource("2_8t16q")
 
 [node name="DirectionController" parent="." instance=ExtResource("3_dpaix")]
@@ -35,6 +34,7 @@ shape = SubResource("RectangleShape2D_te7xo")
 [node name="ConveyorDetectors" parent="." instance=ExtResource("5_vh6hn")]
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
 one_shot = true
 autostart = true
 
