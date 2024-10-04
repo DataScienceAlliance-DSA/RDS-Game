@@ -15,7 +15,7 @@ var item_animations = {
 
 func _ready():
 	self.set_process(false)
-	connect("body_entered", self, "_on_body_entered")
+	# connect("body_entered", self, "_on_body_entered")
 
 ## INTERACT METHOD, called when player interacts with this area
 func interact(interactor_object):

@@ -1663,7 +1663,6 @@ sources/17 = SubResource("TileSetAtlasSource_amodv")
 sources/6 = SubResource("TileSetAtlasSource_no81t")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u0ug"]
-size = Vector2(20, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qsrq"]
 size = Vector2(112, 48)
@@ -1866,7 +1865,7 @@ shape = SubResource("RectangleShape2D_7u0ug")
 
 [node name="CauldronSprite" type="Sprite2D" parent="Cauldron"]
 y_sort_enabled = true
-position = Vector2(960, 768)
+position = Vector2(960, 752)
 texture = ExtResource("20_rac73")
 offset = Vector2(0, -64)
 hframes = 6

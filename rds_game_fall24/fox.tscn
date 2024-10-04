@@ -126,8 +126,10 @@ scale = Vector2(4, 4)
 [node name="FoxSprite" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 3
+position = Vector2(0, 5)
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_diq4l")
+offset = Vector2(0, -128)
 
 [node name="FoxAnim" type="AnimationPlayer" parent="FoxSprite"]
 libraries = {

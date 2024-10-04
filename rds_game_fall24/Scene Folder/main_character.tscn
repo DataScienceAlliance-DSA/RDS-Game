@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://co48lktbon2ou"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_xf38u"]
-[ext_resource type="Texture2D" uid="uid://cck3dgf7fxv45" path="res://assets/working_assets/Hero Assets/main_character_spritesheet.png" id="2_xtdbk"]
+[ext_resource type="Texture2D" path="res://assets/working_assets/Hero Assets/main_character_spritesheet.png" id="2_xtdbk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w8xd"]
 
@@ -216,8 +216,10 @@ position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
+position = Vector2(0, 74)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("2_xtdbk")
+offset = Vector2(0, -320)
 hframes = 4
 vframes = 5
 frame = 12
