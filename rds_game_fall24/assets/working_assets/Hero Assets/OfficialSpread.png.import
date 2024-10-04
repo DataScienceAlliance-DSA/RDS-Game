@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h684lcu4tsqq"
-path="res://.godot/imported/Spreadsheet.PNG-abbb77d76f69f2784fe9640b5369d3d7.ctex"
+uid="uid://by2rnkvyavv4x"
+path="res://.godot/imported/OfficialSpread.png-68c8b257af9cfe30f0b988dd291f0a8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/working_assets/Hero Assets/Spreadsheet.PNG"
-dest_files=["res://.godot/imported/Spreadsheet.PNG-abbb77d76f69f2784fe9640b5369d3d7.ctex"]
+source_file="res://assets/working_assets/Hero Assets/OfficialSpread.png"
+dest_files=["res://.godot/imported/OfficialSpread.png-68c8b257af9cfe30f0b988dd291f0a8f.ctex"]
 
 [params]
 
