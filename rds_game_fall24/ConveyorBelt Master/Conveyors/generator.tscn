@@ -6,16 +6,22 @@
 [ext_resource type="Script" path="res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd" id="4_fg00e"]
 [ext_resource type="PackedScene" uid="uid://ct44m1aobfnpe" path="res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn" id="5_vh6hn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vqll"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te7xo"]
 size = Vector2(16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_te7xo"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vqll"]
 size = Vector2(16, 16)
 
 [node name="Generator" type="Node2D"]
 rotation = -1.5708
 script = ExtResource("1_asr8x")
 directions = Array[int]([0])
+
+[node name="ConveyorInventory" type="Area2D" parent="."]
+script = ExtResource("4_fg00e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConveyorInventory"]
+shape = SubResource("RectangleShape2D_te7xo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_8t16q")
@@ -24,12 +30,6 @@ texture = ExtResource("2_8t16q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DirectionController"]
 shape = SubResource("RectangleShape2D_8vqll")
-
-[node name="ConveyorInventory" type="Area2D" parent="."]
-script = ExtResource("4_fg00e")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ConveyorInventory"]
-shape = SubResource("RectangleShape2D_te7xo")
 
 [node name="ConveyorDetectors" parent="." instance=ExtResource("5_vh6hn")]
 

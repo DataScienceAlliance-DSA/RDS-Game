@@ -11,3 +11,10 @@ res://Scene Folder/main_character.tscn
 res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd
 res://ConveyorBelt Master/Managers/cauldron_item.gd
 res://Scripts/main_character.gd
+res://ConveyorBelt Master/Conveyors/belt.tscn
+res://ConveyorBelt Master/conveyor.gd
+res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn
+res://ConveyorBelt Master/Conveyors/trash.tscn
+res://ConveyorBelt Master/Conveyors/trash.gd
+res://Scripts/3choice_dialogue.gd
+res://conveyor.gd

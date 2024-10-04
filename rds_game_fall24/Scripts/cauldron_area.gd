@@ -38,7 +38,7 @@ func interact(interactor_object):
 func end_interaction():
 	# disable interactable, enable player (interactor)
 	interactor.enable_process()
-	self.set_process(false)
+	self.set_process(true)
 
 func set_animation(anim_name: String):
 	animation_player.current_animation = anim_name

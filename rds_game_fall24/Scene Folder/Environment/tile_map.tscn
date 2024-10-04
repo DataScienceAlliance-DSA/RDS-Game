@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=34 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Texture2D" path="res://assets/working_assets/Bookshelf assets/Untitled_Artwork3.png" id="1_di71i"]
 [ext_resource type="Texture2D" path="res://assets/working_assets/Exit Assets/Exit3.png" id="2_psswd"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cfqpepeud7y6s" path="res://Scene Folder/UI.tscn" id="9_n76cm"]
 [ext_resource type="Texture2D" path="res://assets/working_assets/Bookshelf assets/Untitled_Artwork 1.png" id="10_bfrj1"]
 [ext_resource type="Texture2D" path="res://assets/working_assets/Bookshelf assets/Untitled_Artwork.png" id="12_7h20l"]
+[ext_resource type="Script" path="res://conveyor.gd" id="12_y73ja"]
 [ext_resource type="Script" path="res://Scripts/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="16_0o7eq"]
 [ext_resource type="PackedScene" uid="uid://cnq52axw13wrl" path="res://ConveyorBelt Master/main.tscn" id="16_ukm0n"]
@@ -422,9 +423,10 @@ position = Vector2(1029, 899)
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
 visible = false
 
-[node name="Main" parent="." instance=ExtResource("16_ukm0n")]
+[node name="Conveyor" parent="." instance=ExtResource("16_ukm0n")]
 z_index = -2
 position = Vector2(256, 256)
+script = ExtResource("12_y73ja")
 
 [node name="Cauldron" type="StaticBody2D" parent="."]
 y_sort_enabled = true

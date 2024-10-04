@@ -17,16 +17,16 @@ rotation = 3.14159
 script = ExtResource("1_5twi8")
 directions = Array[int]([0])
 
+[node name="ConveyorInventory" parent="." instance=ExtResource("4_nkkct")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConveyorInventory"]
+shape = SubResource("RectangleShape2D_luv85")
+
 [node name="ConveyorDetectors" parent="." instance=ExtResource("2_8tt4n")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
 hframes = 3
-
-[node name="ConveyorInventory" parent="." instance=ExtResource("4_nkkct")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ConveyorInventory"]
-shape = SubResource("RectangleShape2D_luv85")
 
 [node name="DirectionController" parent="." instance=ExtResource("5_nne5y")]
 
@@ -36,6 +36,6 @@ shape = SubResource("RectangleShape2D_s75kh")
 [node name="FromDirectionController" type="Node2D" parent="."]
 script = ExtResource("5_omcx5")
 
-[connection signal="inventory_found" from="ConveyorDetectors" to="." method="_on_conveyor_detectors_inventory_found"]
 [connection signal="item_held" from="ConveyorInventory" to="." method="_on_conveyor_inventory_item_held"]
+[connection signal="inventory_found" from="ConveyorDetectors" to="." method="_on_conveyor_detectors_inventory_found"]
 [connection signal="directions_changed" from="DirectionController" to="." method="_on_direction_controller_directions_changed"]
