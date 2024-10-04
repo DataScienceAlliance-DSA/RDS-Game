@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clvt7hvcmi8h7"
-path="res://.godot/imported/Untitled_Artwork.png-38102e209e9ea149d51165f25cb08815.ctex"
+uid="uid://c3ua1ar51grfb"
+path="res://.godot/imported/Podium.png-4788a5197e8d8517d55718d887bc98ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/working_assets/Conveyor belt Assets/Untitled_Artwork.png"
-dest_files=["res://.godot/imported/Untitled_Artwork.png-38102e209e9ea149d51165f25cb08815.ctex"]
+source_file="res://assets/working_assets/Cauldron Assets/Podium.png"
+dest_files=["res://.godot/imported/Podium.png-4788a5197e8d8517d55718d887bc98ab.ctex"]
 
 [params]
 

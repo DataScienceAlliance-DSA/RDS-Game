@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e4ps7rrak5ra"
-path="res://.godot/imported/conveyor frame 1.PNG-c4d3d48939e331f3368970837fb58af9.ctex"
+uid="uid://iapwdf0m3w66"
+path="res://.godot/imported/conveyor_belt_spritesheet.png-edd2d7a35c83c980fcbefdb97bf7b08e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/working_assets/Conveyor belt Assets/conveyor frame 1.PNG"
-dest_files=["res://.godot/imported/conveyor frame 1.PNG-c4d3d48939e331f3368970837fb58af9.ctex"]
+source_file="res://assets/working_assets/Conveyor belt Assets/conveyor_belt_spritesheet.png"
+dest_files=["res://.godot/imported/conveyor_belt_spritesheet.png-edd2d7a35c83c980fcbefdb97bf7b08e.ctex"]
 
 [params]
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfwfejmwtkwmg"]
+[gd_scene load_steps=8 format=3 uid="uid://cfwfejmwtkwmg"]
 
 [ext_resource type="PackedScene" uid="uid://ct44m1aobfnpe" path="res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn" id="1_4004i"]
 [ext_resource type="Script" path="res://ConveyorBelt Master/Conveyors/belt.gd" id="1_dm624"]
 [ext_resource type="PackedScene" uid="uid://des4s18nx8jee" path="res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn" id="3_oakon"]
-[ext_resource type="Texture2D" path="res://assets/working_assets/Conveyor belt Assets/conveyor all frames.png" id="3_txvg0"]
 [ext_resource type="PackedScene" uid="uid://bu00ntiiddy1k" path="res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn" id="5_f6dtg"]
 [ext_resource type="Script" path="res://ConveyorBelt Master/Conveyors/Components/Controller/from_direction_controller.gd" id="8_hf156"]
 
@@ -25,7 +24,6 @@ directions = Array[int]([0])
 z_index = -1
 texture_filter = 1
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_txvg0")
 hframes = 3
 
 [node name="ConveyorInventory" parent="." instance=ExtResource("3_oakon")]
