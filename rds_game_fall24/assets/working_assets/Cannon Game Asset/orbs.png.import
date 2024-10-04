@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhk0g6p2nftry"
-path="res://.godot/imported/bookshelf 3.PNG-a6f265827e3f61c3184dcde0f0de9e1c.ctex"
+uid="uid://dqte4koq86yl1"
+path="res://.godot/imported/orbs.png-c82b10fd78fad6d8712c821f72ab46a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/working_assets/Bookshelf assets/bookshelf 3.PNG"
-dest_files=["res://.godot/imported/bookshelf 3.PNG-a6f265827e3f61c3184dcde0f0de9e1c.ctex"]
+source_file="res://assets/working_assets/Cannon Game Asset/orbs.png"
+dest_files=["res://.godot/imported/orbs.png-c82b10fd78fad6d8712c821f72ab46a7.ctex"]
 
 [params]
 

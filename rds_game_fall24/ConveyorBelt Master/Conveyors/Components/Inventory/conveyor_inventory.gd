@@ -36,4 +36,3 @@ func _physics_process(delta):
 		item.global_position = item.global_position.move_toward(global_position, speed * delta)
 		if item.global_position == global_position:
 			hold_item()
-

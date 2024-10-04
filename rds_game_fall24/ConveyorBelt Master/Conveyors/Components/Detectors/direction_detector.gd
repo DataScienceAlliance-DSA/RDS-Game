@@ -25,5 +25,3 @@ func _on_area_exited(area: Area2D) -> void:
 				direction_controller.disconnect("directions_changed", emit_directions_changed)
 			direction_controller = null
 			emit_directions_changed()
-
-

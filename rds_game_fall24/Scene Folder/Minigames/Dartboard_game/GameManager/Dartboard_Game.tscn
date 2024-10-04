@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs70j8ymfu2l6"]
+[gd_scene load_steps=5 format=3 uid="uid://bs70j8ymfu2l6"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Dartboard_game/GameManager/utilities.gd" id="1_uggsu"]
+[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn" id="2_52hpf"]
+[ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn" id="2_rncxl"]
+[ext_resource type="PackedScene" uid="uid://cn2ocw6e0h8y" path="res://Scene Folder/Minigames/Dartboard_game/Dart/Dart.tscn" id="3_y4byc"]
 
-[node name="Node2D" type="Node2D"]
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_uggsu")
+
+[node name="background" parent="." instance=ExtResource("2_52hpf")]
+
+[node name="dart" parent="." instance=ExtResource("3_y4byc")]
+position = Vector2(-32, 320)
+
+[node name="cannon" parent="." instance=ExtResource("2_rncxl")]
+position = Vector2(200, 547)
+collision_layer = 2
+collision_mask = 2
