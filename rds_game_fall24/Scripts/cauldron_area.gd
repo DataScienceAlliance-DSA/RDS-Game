@@ -8,14 +8,21 @@ var interactor
 
 # Mapping frame names to animation names
 var item_animations = {
-	"item1": "animation_item1",
-	"item2": "animation_item2",
-	"item3": "animation_item3"
+	"PinkOrb": "PinkOrb",
+	"TealOrb": "TealOrb",
+	"BlueOrb": "BlueOrb",
+	"GreenOrb": "GreenOrb",
+	"YellowOrb": "YellowOrb",
+	"NonOrb": "NonOrb"
 }
 
 func _ready():
 	self.set_process(false)
-	connect("body_entered", self, "_on_body_entered")
+
+# Triggered when an item enters the cauldron's Area2D
+func on_item_entered(item_name: String):
+	if item_name in item_animations:
+		animation_player.play(item_animations[item_name])
 
 ## INTERACT METHOD, called when player interacts with this area
 func interact(interactor_object):

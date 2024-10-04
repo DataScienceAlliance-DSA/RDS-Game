@@ -8,3 +8,5 @@ res://ConveyorBelt Master/Conveyors/generator.tscn
 res://Scene Folder/UI.tscn
 res://Scripts/cauldron_area.gd
 res://ConveyorBelt Master/Conveyors/generator.gd
+res://ConveyorBelt Master/Managers/ConveyorItem.tscn
+res://ConveyorBelt Master/Managers/ConveyorItem.gd
