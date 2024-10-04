@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2cnqsxjvay2y"]
+
+[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png" id="1_p702c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqe3t"]
+
+[node name="Area2D" type="Area2D"]
+z_index = -1
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_p702c")
+hframes = 6
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dqe3t")

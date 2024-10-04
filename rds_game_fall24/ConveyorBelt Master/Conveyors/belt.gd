@@ -11,10 +11,7 @@ func determine_from_direction():
 func set_direction():
 	sprite.frame = ConveyorSpriteHelper.get_sprite_frame(to_direction, from_direction)
 
-
-
 func _ready():
-	print(global_position)
 	$DirectionController.set_directions(directions)
 
 func update_to_direction(to_directions: Array[Enums.Direction]):

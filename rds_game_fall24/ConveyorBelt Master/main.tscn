@@ -37,7 +37,7 @@ position = Vector2(96, -32)
 scale = Vector2(2, 2)
 
 [node name="Trash" parent="." instance=ExtResource("5_1poeg")]
-position = Vector2(672, 416)
+position = Vector2(656, 416)
 scale = Vector2(2, 2)
 
 [node name="Belt(Curve)" parent="." instance=ExtResource("2_anhij")]

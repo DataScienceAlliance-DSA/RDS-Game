@@ -1,7 +1,7 @@
 extends Area2D
 class_name ConveyorInventory
 var moving_item = false
-@export var speed: int = 50
+@export var speed: int = 100
 signal item_held
 
 var holder: Node2D

@@ -251,6 +251,7 @@ limit_left = 0
 limit_top = 0
 limit_right = 1856
 limit_bottom = 1280
+position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true

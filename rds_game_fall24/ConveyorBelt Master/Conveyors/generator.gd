@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var item_scene = preload("res://Orb_TEST.tscn")
+@onready var item_scene = preload("res://ConveyorBelt Master/Managers/ConveyorItem.tscn")
 @onready var timer: Timer = $Timer
 @export var directions : Array[Enums.Direction] = []
 
@@ -15,10 +15,15 @@ func _on_conveyor_detectors_inventory_found(inventory: ConveyorInventory):
 
 
 func _on_timer_timeout():
-	var item_sprite = item_scene.instantiate()
+	var item_area = item_scene.instantiate()
 	var item_number = randi() % 10
 	
-	var item_node = item_sprite as Node
+	var item_script = load("res://ConveyorBelt Master/Managers/cauldron_item.gd")
+	item_area.set_script(item_script)
+	
+	var item_node = item_area as Node
+	
+	var item_sprite = item_area.get_child(0) as Sprite2D
 	item_sprite.frame = item_number
 	
 	match item_number:
@@ -37,7 +42,7 @@ func _on_timer_timeout():
 		_:
 			item_node.name = "NonOrb"
 	
-	$ConveyorInventory.generate_item(item_sprite)
+	$ConveyorInventory.generate_item(item_area)
 	$ConveyorDetectors.start_checking()
 
 

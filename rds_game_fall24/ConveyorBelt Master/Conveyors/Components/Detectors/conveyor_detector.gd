@@ -15,7 +15,6 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is ConveyorInventory:
 		conveyor_inventory = area
 
-
 func _on_area_exited(area: Area2D) -> void:
 	if area is ConveyorInventory and area == conveyor_inventory:
 		conveyor_inventory = null

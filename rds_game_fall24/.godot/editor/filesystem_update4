@@ -1,7 +1,20 @@
 res://Scene Folder/Environment/tile_map.tscn
 res://Scene Folder/UI.gdshader
+res://ConveyorBelt Master/Conveyors/generator.tscn
 res://Scene Folder/UI.tscn
 res://ConveyorBelt Master/main.tscn
 res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
-res://ConveyorBelt Master/Conveyors/generator.tscn
 res://Orb_TEST.tscn
+res://Scene Folder/main_character.tscn
+res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd
+res://ConveyorBelt Master/Conveyors/trash.tscn
+res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detector.gd
+res://ConveyorBelt Master/Conveyors/belt.tscn
+res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn
+res://ConveyorBelt Master/Conveyors/belt.gd
+res://ConveyorBelt Master/Conveyors/trash.gd
+res://cauldron_item.gd
+res://ConveyorBelt Master/Conveyors/generator.gd
+res://Scripts/cauldron_item.gd
+res://ConveyorBelt Master/Managers/cauldron_item.gd
+res://ConveyorBelt Master/Managers/ConveyorItem.tscn

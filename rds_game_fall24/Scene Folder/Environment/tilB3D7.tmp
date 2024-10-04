@@ -1706,7 +1706,6 @@ size = Vector2(112, 48)
 y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
-z_index = -5
 texture_filter = 3
 position = Vector2(-1, 0)
 tile_set = SubResource("TileSet_rj5tj")
@@ -1733,9 +1732,9 @@ y_sort_enabled = true
 position = Vector2(1029, 899)
 
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
+visible = false
 
 [node name="Main" parent="." instance=ExtResource("16_ukm0n")]
-z_index = -2
 position = Vector2(256, 256)
 
 [node name="Cauldron" type="StaticBody2D" parent="."]
