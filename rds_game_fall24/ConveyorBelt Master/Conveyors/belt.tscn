@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://ct44m1aobfnpe" path="res://ConveyorBelt Master/Conveyors/Components/Detectors/conveyor_detectors.tscn" id="1_4004i"]
 [ext_resource type="Script" path="res://ConveyorBelt Master/Conveyors/belt.gd" id="1_dm624"]
-[ext_resource type="Texture2D" uid="uid://cnxmkieinng6s" path="res://ConveyorBelt Master/Art/conveyors_1.png" id="2_p4kum"]
 [ext_resource type="PackedScene" uid="uid://des4s18nx8jee" path="res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn" id="3_oakon"]
+[ext_resource type="Texture2D" uid="uid://doguvlic5dm6d" path="res://assets/working_assets/Conveyor belt Assets/conveyor all frames.png" id="3_txvg0"]
 [ext_resource type="PackedScene" uid="uid://bu00ntiiddy1k" path="res://ConveyorBelt Master/Conveyors/Components/Controller/direction_controller.tscn" id="5_f6dtg"]
 [ext_resource type="Script" path="res://ConveyorBelt Master/Conveyors/Components/Controller/from_direction_controller.gd" id="8_hf156"]
 
@@ -14,6 +14,7 @@ size = Vector2(16, 16)
 size = Vector2(16, 16)
 
 [node name="Belt" type="Node2D"]
+position = Vector2(32, 32)
 rotation = -1.5708
 script = ExtResource("1_dm624")
 directions = Array[int]([0])
@@ -21,11 +22,18 @@ directions = Array[int]([0])
 [node name="ConveyorDetectors" parent="." instance=ExtResource("1_4004i")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+<<<<<<< Updated upstream
 z_index = -2
 texture = ExtResource("2_p4kum")
 hframes = 5
 vframes = 3
 frame = 1
+=======
+texture_filter = 1
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_txvg0")
+hframes = 3
+>>>>>>> Stashed changes
 
 [node name="ConveyorInventory" parent="." instance=ExtResource("3_oakon")]
 
