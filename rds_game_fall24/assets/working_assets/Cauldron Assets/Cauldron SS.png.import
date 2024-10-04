@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://70qouqjmdwpt"
-path="res://.godot/imported/smoke animation yellow frame 2.PNG-5f9b7db3e4ca6e9d518c54c62f2cea2e.ctex"
+uid="uid://v3fe3rbixa55"
+path="res://.godot/imported/Cauldron SS.png-64ed32e7f9990fed0a238ab3c14681dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/working_assets/Cauldron Assets/smoke animation yellow frame 2.PNG"
-dest_files=["res://.godot/imported/smoke animation yellow frame 2.PNG-5f9b7db3e4ca6e9d518c54c62f2cea2e.ctex"]
+source_file="res://assets/working_assets/Cauldron Assets/Cauldron SS.png"
+dest_files=["res://.godot/imported/Cauldron SS.png-64ed32e7f9990fed0a238ab3c14681dd.ctex"]
 
 [params]
 
