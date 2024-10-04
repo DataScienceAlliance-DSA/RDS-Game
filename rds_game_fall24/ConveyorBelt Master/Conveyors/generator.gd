@@ -28,9 +28,9 @@ func _on_timer_timeout():
 	
 	match item_number:
 		0:	# 
-			item_node.name = "RedOrb"
+			item_node.name = "MagentaOrb"
 		1: 
-			item_node.name = "OrangeOrb"
+			item_node.name = "PinkOrb"
 		2:
 			item_node.name = "TealOrb"
 		3:

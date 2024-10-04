@@ -6,3 +6,5 @@ res://ConveyorBelt Master/Conveyors/belt.tscn
 res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
 res://ConveyorBelt Master/Conveyors/generator.tscn
 res://Scene Folder/UI.tscn
+res://Scripts/cauldron_area.gd
+res://ConveyorBelt Master/Conveyors/generator.gd

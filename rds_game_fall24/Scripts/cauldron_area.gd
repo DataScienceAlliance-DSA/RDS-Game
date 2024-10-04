@@ -4,9 +4,18 @@ var interactor
 
 @onready var monologue_ui: MarginContainer = UI.get_node("Monologue")
 @onready var interactions = 0
+@onready var animation_player = $AnimationPlayer
+
+# Mapping frame names to animation names
+var item_animations = {
+	"item1": "animation_item1",
+	"item2": "animation_item2",
+	"item3": "animation_item3"
+}
 
 func _ready():
 	self.set_process(false)
+	connect("body_entered", self, "_on_body_entered")
 
 ## INTERACT METHOD, called when player interacts with this area
 func interact(interactor_object):
