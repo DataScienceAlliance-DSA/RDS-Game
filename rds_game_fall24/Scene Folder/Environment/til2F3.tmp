@@ -1663,7 +1663,6 @@ sources/17 = SubResource("TileSetAtlasSource_amodv")
 sources/6 = SubResource("TileSetAtlasSource_no81t")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u0ug"]
-size = Vector2(20, 16.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qsrq"]
 size = Vector2(112, 48)
@@ -1872,7 +1871,7 @@ position = Vector2(960, 672)
 script = ExtResource("15_u11sj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/CauldronArea"]
-position = Vector2(0, 76)
+position = Vector2(0, 64)
 scale = Vector2(6.4, 6.4)
 shape = SubResource("RectangleShape2D_7u0ug")
 

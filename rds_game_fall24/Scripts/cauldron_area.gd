@@ -4,18 +4,24 @@ var interactor
 
 @onready var monologue_ui: MarginContainer = UI.get_node("Monologue")
 @onready var interactions = 0
-@onready var animation_player = $AnimationPlayer
+@onready var animation_player = self.get_node("../AnimationPlayer")
+@onready var item_stack = []
 
-# Mapping frame names to animation names
-var item_animations = {
-	"item1": "animation_item1",
-	"item2": "animation_item2",
-	"item3": "animation_item3"
-}
+func _process(delta):
+	for area in get_overlapping_areas():
+		if (!item_stack.has(area)):
+			item_stack.push_back(area)
+	
+	enable_animation()
 
-func _ready():
-	self.set_process(false)
-	# connect("body_entered", self, "_on_body_entered")
+func enable_animation():
+	if (!item_stack.is_empty()):
+		var item_name = item_stack.pop_back().name
+		if (item_name != "PlayerArea"):
+			print(item_name)
+			set_animation(item_name)
+		else:
+			enable_animation()
 
 ## INTERACT METHOD, called when player interacts with this area
 func interact(interactor_object):
@@ -33,3 +39,6 @@ func end_interaction():
 	# disable interactable, enable player (interactor)
 	interactor.enable_process()
 	self.set_process(false)
+
+func set_animation(anim_name: String):
+	animation_player.current_animation = anim_name

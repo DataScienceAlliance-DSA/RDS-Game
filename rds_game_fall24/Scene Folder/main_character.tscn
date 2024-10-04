@@ -197,9 +197,9 @@ _data = {
 position = Vector2(432, 272)
 script = ExtResource("1_xf38u")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PlayerArea" type="Area2D" parent="."]
 
-[node name="AreaCollision" type="CollisionShape2D" parent="Area2D"]
+[node name="AreaCollision" type="CollisionShape2D" parent="PlayerArea"]
 scale = Vector2(3, 7)
 shape = SubResource("RectangleShape2D_1w8xd")
 

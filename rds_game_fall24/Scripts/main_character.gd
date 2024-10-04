@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var player_speed = 200
-@onready var player_area = self.get_node("Area2D")
+@onready var player_area = self.get_node("PlayerArea")
 @onready var enter_cutscene = true
 
 # for setting called-animation based on character velocity
