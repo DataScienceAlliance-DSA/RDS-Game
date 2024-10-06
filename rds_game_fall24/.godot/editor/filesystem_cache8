@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728253405
+::res://::1728253470
 conveyor.gd::GDScript::-1::1728068826::0::1::::<>Node2D<>::
 fox.tscn::PackedScene::1859519243384973732::1728248274::0::1::::<><>::uid://ceook2jgpk3ak::::res://assets/dummy_assets/Additional_Test_Assets/IMG_1482.PNG<>res://Scripts/fox_area.gd
 icon.svg::CompressedTexture2D::3648582972397847862::1728059404::1728059404::1::::<><>::
@@ -10,8 +10,11 @@ PowerGauge.tscn::PackedScene::5040745362939221277::1728252377::0::1::::<><>::res
 ProgressBar.gd::GDScript::-1::1728252376::0::1::::<>ProgressBar<>::
 Short Text_Dialogue Box_Focused_RDS Game.png::CompressedTexture2D::2734135107253655221::1728059404::1728059404::1::::<><>::
 UI.tscn::PackedScene::6370659473448383308::1728059404::0::1::::<><>::uid://br8nvmsg2wo75::::res://icon.svg
-::res://assets/::1728253458
-::res://assets/cannon_game_draft_assets/::1728253458
+::res://assets/::1728253469
+::res://assets/cannon_game_draft_assets/::1728253763
+PowerGaugeBG.png::CompressedTexture2D::8099482091183273667::1728253763::1728253765::1::::<><>::
+PowerGuageTxture.png::CompressedTexture2D::3182656663781966178::1728253763::1728253765::1::::<><>::
+::res://assets/cannon_game_working_assets/::1728253469
 ::res://assets/dummy_assets/::1728059607
 ::res://assets/dummy_assets/16x16/::1728059460
 black_smoke.png::CompressedTexture2D::307400641101880703::1728059404::1728059404::1::::<><>::

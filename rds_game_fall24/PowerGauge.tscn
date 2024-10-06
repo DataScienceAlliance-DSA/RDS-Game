@@ -1,15 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cd21lswhh1b46"]
+[gd_scene load_steps=4 format=3 uid="uid://cd21lswhh1b46"]
 
 [ext_resource type="Script" path="res://ProgressBar.gd" id="1_hfwws"]
+[ext_resource type="Texture2D" uid="uid://dnnpj0ofx5u08" path="res://assets/cannon_game_draft_assets/PowerGaugeBG.png" id="1_riatp"]
+[ext_resource type="Texture2D" uid="uid://bllx5je2gxyte" path="res://assets/cannon_game_draft_assets/PowerGuageTxture.png" id="2_crwjt"]
 
 [node name="PowerGauge" type="CanvasLayer"]
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = 64.0
-offset_top = 32.0
-offset_right = 96.0
-offset_bottom = 232.0
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 5
+offset_left = 16.0
+offset_right = 32.0
+offset_bottom = 383.0
 max_value = 10.0
 step = 0.0
 fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("1_riatp")
+texture_progress = ExtResource("2_crwjt")
+texture_progress_offset = Vector2(2, 2)
 script = ExtResource("1_hfwws")

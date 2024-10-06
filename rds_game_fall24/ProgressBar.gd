@@ -1,4 +1,4 @@
-extends ProgressBar
+extends TextureProgressBar
 
 var direction: int = 1  # 1 for increasing, -1 for decreasing
 var speed: float = 5.0  # Adjust this value for speed
