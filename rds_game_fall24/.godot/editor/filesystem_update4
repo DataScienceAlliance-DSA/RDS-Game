@@ -5,16 +5,12 @@ res://ConveyorBelt Master/main.tscn
 res://ConveyorBelt Master/Conveyors/belt(toptoright).tscn
 res://ConveyorBelt Master/Conveyors/generator.tscn
 res://Orb_TEST.tscn
-res://Scripts/cauldron_area.gd
 res://fox.tscn
 res://Scene Folder/main_character.tscn
-res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.gd
-res://ConveyorBelt Master/Managers/cauldron_item.gd
-res://Scripts/main_character.gd
-res://ConveyorBelt Master/Conveyors/belt.tscn
-res://ConveyorBelt Master/conveyor.gd
 res://ConveyorBelt Master/Conveyors/Components/Inventory/conveyor_inventory.tscn
+res://ConveyorBelt Master/Conveyors/belt.tscn
 res://ConveyorBelt Master/Conveyors/trash.tscn
-res://ConveyorBelt Master/Conveyors/trash.gd
-res://Scripts/3choice_dialogue.gd
-res://conveyor.gd
+res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn
+res://Scene Folder/Minigames/Dartboard_game/GameManager/Dartboard_Game.tscn
+res://ProgressBar.gd
+res://PowerGauge.tscn
