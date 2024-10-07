@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var power_gauge: TextureProgressBar = $"../PowerGauge/power_gauge"  # Reference to the power gauge
-@onready var cannonball_scene: PackedScene = preload("res://Scene Folder/Minigames/Dartboard_game/Dart/Cannonball.tscn")  # Preload the cannonball scene
+@onready var cannonball_scene: PackedScene = preload("res://Scene Folder/Minigames/Dartboard_game/Cannonball/Cannonball.tscn")  # Preload the cannonball scene
 
 var cannon_tip_position: Vector2 = Vector2(32, -16)  # Replace with the actual position of the cannon's tip
 

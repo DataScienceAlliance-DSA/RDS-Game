@@ -7,3 +7,6 @@ res://Scene Folder/Minigames/Dartboard_game/Dart/Cannonball.tscn
 res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn
 res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd
 res://power_gauge.gd
+res://Scene Folder/Minigames/Dartboard_game/Cannonball_Game.tscn
+res://Scene Folder/Minigames/Dartboard_game/Cannonball/Cannonball.tscn
+res://Scene Folder/Minigames/Dartboard_game/GameManager/Cannonball_Game.tscn

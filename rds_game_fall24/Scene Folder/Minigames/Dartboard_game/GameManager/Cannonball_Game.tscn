@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://qcsqbwsppj2l"]
+
+[ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn" id="1_jsivw"]
+[ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://PowerGauge.tscn" id="2_gjkr3"]
+[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn" id="3_bhwgh"]
+[ext_resource type="Texture2D" uid="uid://bonht2qyb3836" path="res://assets/cannon_game_draft_assets/bottomboundary.png" id="4_i47tb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wih2h"]
+size = Vector2(1368, 104)
+
+[node name="Cannonball_Game" type="Node2D"]
+
+[node name="cannon" parent="." instance=ExtResource("1_jsivw")]
+visibility_layer = 17
+z_index = 2
+position = Vector2(128, 624)
+
+[node name="PowerGauge" parent="." instance=ExtResource("2_gjkr3")]
+
+[node name="background" parent="." instance=ExtResource("3_bhwgh")]
+layer = -1
+
+[node name="BottomBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder"]
+position = Vector2(684, 716)
+shape = SubResource("RectangleShape2D_wih2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="BottomBorder"]
+position = Vector2(0, 664)
+texture = ExtResource("4_i47tb")
+offset = Vector2(683, 52)
