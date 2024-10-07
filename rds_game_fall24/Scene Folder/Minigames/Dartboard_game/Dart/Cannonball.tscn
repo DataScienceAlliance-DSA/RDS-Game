@@ -7,6 +7,7 @@
 radius = 110.0
 
 [node name="Cannonball" type="RigidBody2D"]
+gravity_scale = 7.685
 script = ExtResource("1_76fri")
 
 [node name="dart" type="Sprite2D" parent="."]

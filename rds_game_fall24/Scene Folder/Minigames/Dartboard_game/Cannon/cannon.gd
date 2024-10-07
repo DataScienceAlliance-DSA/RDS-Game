@@ -1,17 +1,26 @@
 extends Node2D
 
-@onready var power_gauge: TextureProgressBar = $"../PowerGauge/TextureProgressBar"  # Reference to the power gauge
+@onready var power_gauge: TextureProgressBar = $"../PowerGauge/power_gauge"  # Reference to the power gauge
 @onready var cannonball_scene: PackedScene = preload("res://Scene Folder/Minigames/Dartboard_game/Dart/Cannonball.tscn")  # Preload the cannonball scene
 
 var cannon_tip_position: Vector2 = Vector2(32, -16)  # Replace with the actual position of the cannon's tip
 
+func _ready() -> void:
+	if power_gauge == null:
+		print("Power gauge not found!")
+		
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("cannon shoot"):  # Assuming you have an input action called "shoot"
-		shoot_cannon()
+		power_gauge.start_fluctuating()
+		
+	# Stop fluctuating and shoot the cannon when space bar is released
+	if Input.is_action_just_released("cannon shoot"):
+		var power = power_gauge.stop_fluctuating() # Get the last value before resetting
+		shoot_cannon(power)  #Shoot using the current power
 
-func shoot_cannon():
-	# Get the current power from the progress bar
-	var power = 5 * 10
+func shoot_cannon(power: float):
+	print("Current Power: ", power)
+
 	#power_gauge.value
 	# Instance a new cannonball
 	var cannonball = cannonball_scene.instantiate() as RigidBody2D
