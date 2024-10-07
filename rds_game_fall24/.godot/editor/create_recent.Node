@@ -1,3 +1,4 @@
+Node2D
 TextureProgressBar
 ProgressBar
 CanvasLayer
@@ -12,4 +13,3 @@ Area2D
 CharacterBody2D
 ColorRect
 Camera2D
-Node2D
