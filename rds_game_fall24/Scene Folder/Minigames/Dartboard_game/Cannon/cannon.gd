@@ -1,78 +1,30 @@
 extends Node2D
 
-# Ball Angle
-var ball_angle = 300
-# Ball Speed
-var ball_speed = 8
-# Ball Gravity
-var ball_gravity = 5
+@onready var power_gauge: TextureProgressBar = $"../PowerGauge/TextureProgressBar"  # Reference to the power gauge
+@onready var cannonball_scene: PackedScene = preload("res://Scene Folder/Minigames/Dartboard_game/Dart/Cannonball.tscn")  # Preload the cannonball scene
 
-# Delay
-var ball_delay = 0.5 # seconds
-var waited = 0
+var cannon_tip_position: Vector2 = Vector2(32, -16)  # Replace with the actual position of the cannon's tip
 
-# Shooting as false by default
-var shooting = false
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("cannon shoot"):  # Assuming you have an input action called "shoot"
+		shoot_cannon()
 
-# Dart Scene
-var ball_scene = preload("res://Scene Folder/Minigames/Dartboard_game/Dart/Cannonball.tscn")
-# Dart Spawn
-@onready var ball_spawn = $dart_spawn
-
-# Directional Force for the dart, changes with speed and angle
-var directional_force = Vector2()
-
-
-# ensure the dart angle within a range
-func set_dart_angle(value):
-	ball_angle = clamp(value, 0, 359)
+func shoot_cannon():
+	# Get the current power from the progress bar
+	var power = 5 * 10
+	#power_gauge.value
+	# Instance a new cannonball
+	var cannonball = cannonball_scene.instantiate() as RigidBody2D
 	
+	# Set its starting position at the cannon's tip
+	cannonball.position = global_position + cannon_tip_position.rotated(rotation)  # Adjust to the cannon's rotation
 	
-#
-func update_directional_force():
-	directional_force = Vector2(
-		cos(ball_angle * (PI/180)), 
-		sin(ball_angle * (PI/180)) * ball_speed
-		)
+	# Add the cannonball to the scene
+	get_parent().add_child(cannonball)
 	
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready(): 
-	# update directional force
-	update_directional_force()
+	# Calculate velocity based on the cannon's direction and power
+	var direction = Vector2(1, 0).rotated(rotation)  # Direction the cannon is facing
+	var cannonball_velocity = direction * power * 10  # Multiply by a factor to adjust speed
 	
-	# enable user input
-	set_process_input(true)
-	
-	# enable processing
-	set_process(true)
-	
-func _input(event):
-	# if space bar is pressed
-	if(event.is_action_pressed('space')):
-		shooting = true
-	elif(event.is_action_released('space')):
-		shooting = false
-		
-		
-func _process(delta):
-	if(shooting && waited > ball_delay):
-		fire_once()
-		waited = 0
-	elif(waited <= ball_delay):
-		waited += delta
-		
-		
-func fire_once():
-	shoot()
-	shooting = false
-
-
-# A function that allows the cannon to shoot bullet
-func shoot():
-	var ball = ball_scene.instantiate()
-	ball.global_position = (ball_spawn.global_position)
-	ball.shoot(directional_force, ball_gravity)
-	get_parent().add_child(ball)
-	
+	# Set the cannonball's velocity
+	cannonball.set_linear_velocity(cannonball_velocity)

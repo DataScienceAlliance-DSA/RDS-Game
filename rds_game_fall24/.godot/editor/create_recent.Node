@@ -1,3 +1,5 @@
+Camera2D
+ColorRect
 Node2D
 TextureProgressBar
 ProgressBar
@@ -10,6 +12,3 @@ Timer
 AnimationTree
 Sprite2D
 Area2D
-CharacterBody2D
-ColorRect
-Camera2D

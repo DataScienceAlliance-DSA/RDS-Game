@@ -6,3 +6,6 @@ res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd
 res://Scene Folder/Environment/tile_map.tscn
 res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn
 res://PowerGauge.tscn
+res://Scene Folder/Minigames/Dartboard_game/Dart/Cannonball.gd
+res://PowerGauge.gdshader
+res://ProgressBar.gd
