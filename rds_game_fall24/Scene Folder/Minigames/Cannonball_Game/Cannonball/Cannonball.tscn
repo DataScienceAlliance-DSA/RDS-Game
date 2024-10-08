@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cn2ocw6e0h8y"]
 
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Dartboard_game/Cannonball/Cannonball.gd" id="1_vyk7d"]
-[ext_resource type="Texture2D" uid="uid://dr7417ucamppf" path="res://orb 3.PNG" id="2_kcroy"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd" id="1_0ru8n"]
+[ext_resource type="Texture2D" uid="uid://dr7417ucamppf" path="res://orb 3.PNG" id="2_bnd7p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_brnf3"]
 radius = 110.0
 
 [node name="Cannonball" type="RigidBody2D"]
-script = ExtResource("1_vyk7d")
+script = ExtResource("1_0ru8n")
 
 [node name="dart" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_kcroy")
+texture = ExtResource("2_bnd7p")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(2, 0)
