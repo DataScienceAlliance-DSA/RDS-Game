@@ -1,3 +1,5 @@
+Marker2D
+Line2D
 Camera2D
 Sprite2D
 CollisionShape2D
@@ -11,4 +13,3 @@ TextureProgressBar
 ProgressBar
 RigidBody2D
 AnimationPlayer
-Timer

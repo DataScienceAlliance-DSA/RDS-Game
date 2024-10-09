@@ -3,10 +3,13 @@
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_1_wings.gd" id="1_dkchn"]
 [ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="1_ibp8t"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_dkchn")
+[node name="bag_1_wings" type="Node2D"]
+position = Vector2(682, 380)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_ibp8t")
+script = ExtResource("1_dkchn")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(286, 0)
