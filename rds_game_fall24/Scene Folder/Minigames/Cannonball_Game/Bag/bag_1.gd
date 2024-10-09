@@ -1,7 +1,7 @@
 extends Node2D
 
 var A: float = 460  # Horizontal size of the figure-eight
-var B: float = 0  # Vertical size of the figure-eight
+var B: float = 200  # Vertical size of the figure-eight
 var speed: float = 1.0  # Controls how fast the object moves
 var time: float = 0.0  # Time variable for the parametric equation
 
@@ -11,7 +11,7 @@ var rotation_speed: float = 1.0
 var rotation_direction: int = 1
 
 # Set origin for movement
-var custom_origin: Vector2 = Vector2(185, 0) # Use Marker2D to help determine origin position
+var custom_origin: Vector2 = Vector2(683, 384) # Use Marker2D to help determine origin position
 
 # Angle in radians for the figure-eight path (PI / 6 = 30 degrees)
 var rotation_angle: float = PI / 12 
