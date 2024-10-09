@@ -22,6 +22,8 @@ animations = [{
 script = ExtResource("1_cb0d7")
 
 [node name="cannon body" type="AnimatedSprite2D" parent="."]
+position = Vector2(14.3837, -1.61635)
+rotation = 0.261799
 sprite_frames = SubResource("SpriteFrames_0rglo")
 animation = &"static"
 frame_progress = 0.488216
@@ -29,7 +31,9 @@ flip_h = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 visible = false
+position = Vector2(14.3837, -1.61635)
+rotation = 0.261799
 polygon = PackedVector2Array(-40, 0, -24, -16, 0, -24, 16, -24, 24, -32, 32, -32, 40, -16, 40, -8, 40, 0, 16, 0, 8, 8, 0, 16, 0, 24, 8, 24, 8, 32, -40, 32, -40, 24, -24, 16, -32, 16, -40, 8)
 
 [node name="dart_spawn" type="Marker2D" parent="."]
-position = Vector2(32, -16)
+position = Vector2(56, -11.0001)
