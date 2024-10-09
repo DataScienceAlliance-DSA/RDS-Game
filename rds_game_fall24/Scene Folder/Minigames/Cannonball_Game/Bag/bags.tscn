@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck2tvb0m7kmog"]
+
+[ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="1_7sqgq"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_1.gd" id="2_4gb01"]
+
+[node name="Bags" type="Node2D"]
+position = Vector2(682, 380)
+
+[node name="bag_6" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7sqgq")
+
+[node name="bag_5" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7sqgq")
+
+[node name="bag_4" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7sqgq")
+
+[node name="bag_3" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7sqgq")
+
+[node name="bag_2" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7sqgq")
+
+[node name="bag_1" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7sqgq")
+script = ExtResource("2_4gb01")
