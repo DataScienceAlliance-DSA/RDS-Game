@@ -33,7 +33,8 @@ var potential_next_choice	# currently hovered choice
 # properties for opposing character's dialogue box
 @onready var response_scale = (get_node("TextContainer/PositionControl/ScaleControl") as Control)
 @onready var response_avatar = (get_node("TextContainer/PositionControl/ScaleControl/IconCenter/Avatar") as TextureRect)
-@onready var response_text = (get_node("TextContainer/PositionControl/ScaleControl/MarginContainer/MonologueText") as RichTextLabel)
+@onready var response_name = (get_node("TextContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
+@onready var response_text = (get_node("TextContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
 
 func _ready():
 	self.set_process(false)
@@ -89,9 +90,11 @@ func process_next_text():
 	else:
 		# get/set character name and text accordingly from dictionary
 		var character_name = dialogue_dict[current_dialogue_id]["name"]
-		var text = dialogue_dict[current_dialogue_id]["text"]["en"]
+		var character_text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
-		response_text.text = "[color=black][b]"+character_name+"[/b]\n\n"+text
+		response_avatar.texture = load("res://assets/ui_assets/portraits/"+character_name+".PNG")
+		response_name.text = "[left][color=white][b]"+character_name+"[/b]"
+		response_text.text = "[left][color=white]"+character_text
 		
 		if (dialogue_dict[current_dialogue_id].has("choices")):
 			choosing = true

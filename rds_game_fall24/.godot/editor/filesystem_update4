@@ -10,3 +10,7 @@ res://Scene Folder/Minigames/Cannonball_Game/Cannon/cannon.gd
 res://Scene Folder/UI.tscn
 res://Scripts/dialogue.gd
 res://Scripts/Dialogues/Cauldron/FoxIntro.json
+res://Scripts/3choice_dialogue.gd
+res://Scripts/cauldron_area.gd
+res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
+res://Scene Folder/UI.gd

@@ -18,7 +18,6 @@ func enable_animation():
 	if (!item_stack.is_empty()):
 		var item_name = item_stack.pop_back().name
 		if (item_name != "PlayerArea"):
-			print(item_name)
 			set_animation(item_name)
 		else:
 			enable_animation()
@@ -39,6 +38,9 @@ func end_interaction():
 	# disable interactable, enable player (interactor)
 	interactor.enable_process()
 	self.set_process(true)
+	
+	if (interactions == 1):
+		UI.start_scene_change()
 
 func set_animation(anim_name: String):
 	animation_player.current_animation = anim_name

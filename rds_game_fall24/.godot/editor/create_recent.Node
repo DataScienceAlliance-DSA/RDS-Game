@@ -1,6 +1,6 @@
 TextureRect
-RichTextLabel
 MarginContainer
+RichTextLabel
 VBoxContainer
 CollisionShape2D
 Area2D
