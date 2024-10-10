@@ -93,6 +93,7 @@ shape = SubResource("CapsuleShape2D_imjvi")
 polygon = PackedVector2Array(-18, -22, 0, -22, 16, -22, 26, -7, 30, 9, 29, 17, 23, 26, 12, 31, 0, 32, -14, 30, -24, 25, -29, 17, -31, 8, -28, -4, -24, -12)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 zoom = Vector2(3, 3)
 
 [connection signal="body_entered" from="bag_6/goal_6" to="." method="_on_goal_body_entered"]

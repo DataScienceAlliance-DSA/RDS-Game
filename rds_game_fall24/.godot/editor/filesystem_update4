@@ -1,10 +1,14 @@
-res://Scene Folder/Environment/tile_map.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_1_wings.tscn
 res://Scene Folder/UI.gdshader
 res://power_gauge.gd
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_1_wings.gd
+res://Scene Folder/Environment/tile_map.tscn
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://PowerGauge.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bags.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.tscn
+<<<<<<< Updated upstream
 res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannon/cannon.gd
 res://Scene Folder/UI.tscn
@@ -14,3 +18,7 @@ res://Scripts/3choice_dialogue.gd
 res://Scripts/cauldron_area.gd
 res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
 res://Scene Folder/UI.gd
+=======
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_1.gd
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.gd
+>>>>>>> Stashed changes

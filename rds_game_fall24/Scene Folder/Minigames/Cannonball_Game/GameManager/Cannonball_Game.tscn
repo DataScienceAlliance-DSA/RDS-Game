@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://qcsqbwsppj2l"]
+[gd_scene load_steps=11 format=3 uid="uid://qcsqbwsppj2l"]
 
 [ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_jsivw"]
 [ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://PowerGauge.tscn" id="2_gjkr3"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bonht2qyb3836" path="res://assets/cannon_game_draft_assets/bottomboundary.png" id="4_i47tb"]
 [ext_resource type="Texture2D" uid="uid://cn127hcovajsn" path="res://assets/cannon_game_draft_assets/topboundary.png" id="5_r207l"]
 [ext_resource type="Texture2D" uid="uid://ba48bosu8eme5" path="res://assets/cannon_game_draft_assets/sideboundary.png" id="6_nn6q7"]
-[ext_resource type="PackedScene" uid="uid://ctdgui7cpegy1" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.tscn" id="7_b3vpo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wih2h"]
 size = Vector2(1365.5, 104)
@@ -18,7 +17,7 @@ size = Vector2(1370, 63)
 size = Vector2(20, 768)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_862xi"]
-size = Vector2(382, 80)
+size = Vector2(21, 765)
 
 [node name="Cannonball_Game" type="Node2D"]
 
@@ -44,7 +43,6 @@ texture = ExtResource("4_i47tb")
 offset = Vector2(683, 52)
 
 [node name="TopBorder" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopBorder"]
 position = Vector2(681, 31.5)
@@ -70,11 +68,8 @@ position = Vector2(1377, 384)
 texture = ExtResource("6_nn6q7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBorder"]
-position = Vector2(1377, 384)
+position = Vector2(1377.5, 383.5)
 shape = SubResource("RectangleShape2D_862xi")
-
-[node name="bag" parent="." instance=ExtResource("7_b3vpo")]
-position = Vector2(0, 0)
 
 [node name="RightBorder2" type="StaticBody2D" parent="."]
 position = Vector2(-1012, 510)

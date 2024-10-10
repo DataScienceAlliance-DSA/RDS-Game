@@ -27,10 +27,10 @@ func _ready():
 	# Load the cannonball scene
 	cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")  # Update the path to your cannonball scene
 
-func _process(delta):
+#func _process(delta):
 	# Check for spacebar press to spawn a new cannonball
-	if Input.is_action_just_pressed("ui_accept"):  # "ui_accept" is typically mapped to the spacebar
-		spawn_cannonball()
+	#if Input.is_action_just_pressed("ui_accept"):  # "ui_accept" is typically mapped to the spacebar
+		#spawn_cannonball()
 		
 # Called when the orb enters the bag
 func _on_goal_body_entered(body):
