@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=12 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
 [ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://icon.svg" id="1_q8u87"]
+[ext_resource type="Texture2D" uid="uid://dm5jdoqrcadmb" path="res://assets/ui_assets/dialogue_text_box.png" id="2_6dacs"]
 [ext_resource type="Texture2D" uid="uid://1cqiv22renjj" path="res://assets/dummy_assets/Additional_Test_Assets/Frame 28.png" id="3_p8e4f"]
 [ext_resource type="Script" path="res://Scripts/3choice_dialogue.gd" id="3_rj2pq"]
 [ext_resource type="Shader" path="res://Scene Folder/UI.gdshader" id="4_8evkt"]
-[ext_resource type="Texture2D" uid="uid://be7o2npmrub3j" path="res://Short Text_Dialogue Box_Focused_RDS Game.png" id="6_dbxr2"]
+[ext_resource type="Texture2D" uid="uid://c1ltxtksg64vc" path="res://assets/ui_assets/Selection Box.png" id="7_wdcv8"]
 
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
@@ -50,19 +51,20 @@ size_flags_horizontal = 0
 [node name="PositionControl" type="Control" parent="Dialogue/PlayerContainer"]
 modulate = Color(0.909804, 0.909804, 0.909804, 1)
 layout_mode = 2
+size_flags_vertical = 8
 
 [node name="ScaleControl" type="Control" parent="Dialogue/PlayerContainer/PositionControl"]
-layout_mode = 2
-anchors_preset = 0
-offset_left = -4.0
-offset_top = 704.0
-offset_right = -4.0
-offset_bottom = 704.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
 scale = Vector2(1.25, 1.25)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
 [node name="IconCenter" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -74,19 +76,14 @@ pivot_offset = Vector2(0, 128)
 size_flags_vertical = 8
 texture = SubResource("GradientTexture2D_en6ay")
 
-[node name="TextBanner" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -128.0
-offset_right = 451.0
-grow_vertical = 0
-pivot_offset = Vector2(0, 128)
-size_flags_vertical = 8
-texture = SubResource("GradientTexture2D_en6ay")
+[node name="TextureRect" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("2_6dacs")
 
-[node name="Avatar" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
+[node name="PlayerAvatar" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -100,34 +97,58 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.75, 0.75)
-pivot_offset = Vector2(64, 64)
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(64, 70)
 size_flags_vertical = 8
 texture = ExtResource("1_q8u87")
+expand_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+[node name="Namecont" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -126.0
+offset_right = 450.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+theme_override_constants/margin_left = 125
+theme_override_constants/margin_top = 18
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/Namecont"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 18
+bbcode_enabled = true
+text = "[b]Player[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="Textcont" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -123.0
-offset_right = 308.0
+offset_right = 450.0
 grow_vertical = 0
 pivot_offset = Vector2(0, 123)
 size_flags_vertical = 8
-theme_override_constants/margin_left = 138
+theme_override_constants/margin_left = 125
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_bottom = 0
 
-[node name="DialogueText" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/MarginContainer"]
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/Textcont"]
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
-text = "[color=black][b]Godot #1[/b]
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
 fit_content = true
 scroll_active = false
 
@@ -151,9 +172,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.25, 1.25)
 
 [node name="IconCenter" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -164,71 +186,98 @@ offset_left = -128.0
 offset_top = -128.0
 grow_horizontal = 0
 grow_vertical = 0
-pivot_offset = Vector2(64, 64)
+pivot_offset = Vector2(128, 128)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 texture = SubResource("GradientTexture2D_0170h")
 
 [node name="TextBanner" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
 layout_mode = 1
-anchors_preset = 3
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -451.0
-offset_top = -128.0
+offset_left = -1423.0
+offset_bottom = 387.0
 grow_horizontal = 0
-grow_vertical = 0
-pivot_offset = Vector2(0, 128)
+scale = Vector2(0.34, 0.34)
+pivot_offset = Vector2(1423, 0)
 size_flags_vertical = 8
-texture = SubResource("GradientTexture2D_en6ay")
+texture = ExtResource("2_6dacs")
 
-[node name="Avatar" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
+[node name="CharacterAvatar" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -112.0
-offset_right = 16.0
-offset_bottom = 16.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(0.75, 0.75)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(64, 70)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 texture = ExtResource("1_q8u87")
+expand_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+[node name="Namecont" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -436.0
-offset_top = -115.0
+offset_left = -414.015
+offset_top = -125.0
+offset_bottom = -81.0
 grow_horizontal = 0
 grow_vertical = 0
-pivot_offset = Vector2(436, 115)
-size_flags_horizontal = 4
+pivot_offset = Vector2(0, 123)
 size_flags_vertical = 8
-theme_override_constants/margin_right = 136
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 125
 
-[node name="DialogueText" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/MarginContainer"]
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/Namecont"]
+clip_contents = false
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 18
+bbcode_enabled = true
+text = "[right][color=white][b]Fox[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="Textcont" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -450.0
+offset_top = -123.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 125
+theme_override_constants/margin_bottom = 0
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/Textcont"]
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
-text = "[color=black][b]Fox[/b]
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+text = "[right]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
 fit_content = true
 scroll_active = false
 
@@ -291,7 +340,6 @@ pivot_offset = Vector2(172, 208)
 mouse_filter = 2
 
 [node name="ChoiceTexture1" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl"]
-visible = false
 layout_direction = 1
 layout_mode = 1
 anchors_preset = 8
@@ -306,20 +354,21 @@ offset_bottom = 208.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_p8e4f")
+texture = ExtResource("7_wdcv8")
+expand_mode = 3
 
 [node name="MonologueText" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
+anchor_left = 0.2
 anchor_top = 0.5
-anchor_right = 0.9
+anchor_right = 0.8
 anchor_bottom = 0.5
-offset_left = -0.742447
-offset_top = -57.0
-offset_right = -0.742432
-offset_bottom = 48.0
+offset_left = -0.742004
+offset_top = -41.5
+offset_right = -0.742004
+offset_bottom = 98.5002
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -363,7 +412,6 @@ pivot_offset = Vector2(172, 208)
 mouse_filter = 2
 
 [node name="ChoiceTexture2" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl"]
-visible = false
 layout_direction = 1
 layout_mode = 1
 anchors_preset = 8
@@ -378,7 +426,8 @@ offset_bottom = 213.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_p8e4f")
+texture = ExtResource("7_wdcv8")
+expand_mode = 3
 
 [node name="MonologueText" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2"]
 clip_contents = false
@@ -388,10 +437,10 @@ anchor_left = 0.2
 anchor_top = 0.5
 anchor_right = 0.8
 anchor_bottom = 0.5
-offset_left = -0.5
-offset_top = -52.5
-offset_right = 0.5
-offset_bottom = 52.5
+offset_left = -0.742004
+offset_top = -41.5
+offset_right = -0.742004
+offset_bottom = 98.5002
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -400,7 +449,7 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 25
 bbcode_enabled = true
-text = "[center][color=black][b]This is the second choice a player can choose to make."
+text = "[center][color=black][b]This is the first choice a player can choose to make."
 fit_content = true
 scroll_active = false
 
@@ -435,7 +484,6 @@ pivot_offset = Vector2(172, 208)
 mouse_filter = 2
 
 [node name="ChoiceTexture3" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl"]
-visible = false
 layout_direction = 1
 layout_mode = 1
 anchors_preset = 8
@@ -450,20 +498,21 @@ offset_bottom = 213.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_p8e4f")
+texture = ExtResource("7_wdcv8")
+expand_mode = 3
 
 [node name="MonologueText" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
+anchor_left = 0.2
 anchor_top = 0.5
-anchor_right = 0.9
+anchor_right = 0.8
 anchor_bottom = 0.5
-offset_left = 2.96975
-offset_top = -52.5
-offset_right = 2.96976
-offset_bottom = 52.5
+offset_left = -0.742004
+offset_top = -41.5
+offset_right = -0.742004
+offset_bottom = 98.5002
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -472,7 +521,7 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 25
 bbcode_enabled = true
-text = "[center][color=black][b]This is the third choice a player can choose to make."
+text = "[center][color=black][b]This is the first choice a player can choose to make."
 fit_content = true
 scroll_active = false
 
@@ -575,11 +624,6 @@ text = "[color=black][b]Godot #1[/b]
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
 fit_content = true
 scroll_active = false
-
-[node name="ShortTextDialogueBoxFocusedRdsGame" type="Sprite2D" parent="."]
-position = Vector2(264.917, 954.647)
-scale = Vector2(0.373178, 0.373178)
-texture = ExtResource("6_dbxr2")
 
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_exited"]

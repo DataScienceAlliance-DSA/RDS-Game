@@ -1,3 +1,7 @@
+TextureRect
+RichTextLabel
+MarginContainer
+VBoxContainer
 CollisionShape2D
 Area2D
 Marker2D
@@ -8,7 +12,3 @@ Camera2D
 Sprite2D
 Node
 Node2D
-TextureRect
-CanvasLayer
-ColorRect
-TextureProgressBar
