@@ -1,9 +1,9 @@
 extends Node2D
 
 @onready var power_gauge: TextureProgressBar = $"../PowerGauge/power_gauge"  # Reference to the power gauge
-@onready var cannonball_scene: PackedScene = preload("res://Scene Folder/Minigames/Dartboard_game/Cannonball/Cannonball.tscn")  # Preload the cannonball scene
+@onready var cannonball_scene: PackedScene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")  # Preload the cannonball scene
 
-var cannon_tip_position: Vector2 = Vector2(32, -16)  # Replace with the actual position of the cannon's tip
+@onready var cannon_tip_position: Vector2 = self.get_node("./dart_spawn").position  # Replace with the actual position of the cannon's tip
 
 func _ready() -> void:
 	if power_gauge == null:
@@ -17,6 +17,17 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_released("cannon shoot"):
 		var power = power_gauge.stop_fluctuating() # Get the last value before resetting
 		shoot_cannon(power)  #Shoot using the current power
+	
+	if Input.is_action_pressed("up"):
+		var rot = self.get_rotation()
+		rot = rot - _delta if rot > -(PI/2) else -(PI/2)
+		self.set_rotation(rot)
+	if Input.is_action_pressed("down"):
+		var rot = self.get_rotation()
+		rot = rot + _delta if rot < 0 else 0
+		self.set_rotation(rot)
+	
+	cannon_tip_position = self.get_node("./dart_spawn").position
 
 func shoot_cannon(power: float):
 	print("Current Power: ", power)

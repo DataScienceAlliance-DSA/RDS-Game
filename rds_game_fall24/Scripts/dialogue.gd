@@ -8,14 +8,16 @@ var interacted_area
 # properties for player character's dialogue box
 @onready var player_color = (get_node("PlayerContainer/PositionControl") as CanvasItem)
 @onready var player_scale = (get_node("PlayerContainer/PositionControl/ScaleControl") as Control)
-@onready var player_avatar = (get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/Avatar") as TextureRect)
-@onready var player_text = (get_node("PlayerContainer/PositionControl/ScaleControl/MarginContainer/DialogueText") as RichTextLabel)
+@onready var player_avatar = (get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/PlayerAvatar") as TextureRect)
+@onready var player_name = (get_node("PlayerContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
+@onready var player_text = (get_node("PlayerContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
 
 # properties for opposing character's dialogue box
 @onready var opposing_color = (get_node("CharacterContainer/PositionControl") as CanvasItem)
 @onready var opposing_scale = (get_node("CharacterContainer/PositionControl/ScaleControl") as Control)
-@onready var opposing_avatar = (get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/Avatar") as TextureRect)
-@onready var opposing_text = (get_node("CharacterContainer/PositionControl/ScaleControl/MarginContainer/DialogueText") as RichTextLabel)
+@onready var opposing_avatar = (get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/CharacterAvatar") as TextureRect)
+@onready var opposing_name = (get_node("CharacterContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
+@onready var opposing_text = (get_node("CharacterContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
 
 func _ready():
 	self.set_process(false)
@@ -29,8 +31,8 @@ func open_dialogue(json_path, area):
 	interacted_area = area
 	
 	# reset player and opposing character text to "..." before dialogue starts
-	player_text.text = "[color=black][b]...[/b]"
-	opposing_text.text = "[color=black][b]...[/b]"
+	player_text.text = "[left][color=white][b]...[/b]"
+	opposing_text.text = "[right][color=white][b]...[/b]"
 	
 	# parse dialogue and process first line
 	dialogue_dict = parse_dialogue(json_path)
@@ -70,17 +72,21 @@ func process_next_text():
 		
 		# if dialogue entry name is not Player, edit right text box of UI
 		if (dialogue_dict[current_dialogue_id]["name"] != "Player"):
-			opposing_text.text = "[color=black][b]"+card_name+"[/b]"+"\n\n"+card_text
-			opposing_scale.scale = Vector2(1.5, 1.5)
+			opposing_name.text = "[right][color=white][b]"+card_name+"[/b]"
+			opposing_text.text = "[right][color=white]"+card_text
+			opposing_scale.scale = Vector2(1.4, 1.4)
 			opposing_color.modulate.v = 1
+			opposing_avatar.texture = load("res://assets/ui_assets/portraits/"+card_name+".PNG")
 			
 			player_scale.scale = Vector2(1.25, 1.25)
 			player_color.modulate.v = 0.5
 		# else, edit left text box of UI
 		else:
-			player_text.text = "[color=black][b]"+card_name+"[/b]"+"\n\n"+card_text
-			player_scale.scale = Vector2(1.5, 1.5)
+			player_name.text = "[left][color=white][b]"+card_name+"[/b]"
+			player_text.text = "[left][color=white]"+card_text
+			player_scale.scale = Vector2(1.4, 1.4)
 			player_color.modulate.v = 1
+			player_avatar.texture = load("res://assets/ui_assets/portraits/"+card_name+".PNG")
 			
 			opposing_scale.scale = Vector2(1.25, 1.25)
 			opposing_color.modulate.v = 0.5

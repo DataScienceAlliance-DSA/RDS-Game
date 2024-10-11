@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://ctdgui7cpegy1"]
+
+[ext_resource type="Texture2D" uid="uid://ciqd0nuvy138t" path="res://assets/cannon_game_draft_assets/bag_6.png" id="1_hbghc"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.gd" id="1_p2cig"]
+[ext_resource type="Texture2D" uid="uid://cgtcr63osjoyq" path="res://assets/cannon_game_draft_assets/bag_5.png" id="2_ayscl"]
+[ext_resource type="Texture2D" uid="uid://de8oak7wklwso" path="res://assets/cannon_game_draft_assets/bag_4.png" id="3_aewr2"]
+[ext_resource type="Texture2D" uid="uid://bm1a4akqqcow5" path="res://assets/cannon_game_draft_assets/bag_3.png" id="4_4j2bb"]
+[ext_resource type="Texture2D" uid="uid://c562me0xi46pk" path="res://assets/cannon_game_draft_assets/bag_2.png" id="5_wlxx7"]
+[ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="6_pdly7"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_1.gd" id="7_2hh0t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_imjvi"]
+radius = 39.9958
+height = 379.959
+
+[node name="bag" type="StaticBody2D"]
+position = Vector2(660, 406)
+script = ExtResource("1_p2cig")
+
+[node name="bag_6" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_hbghc")
+
+[node name="goal_6" type="Area2D" parent="bag_6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bag_6/goal_6"]
+position = Vector2(-10, -310)
+rotation = -1.58535
+shape = SubResource("CapsuleShape2D_imjvi")
+
+[node name="bag_5" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ayscl")
+
+[node name="goal_5" type="Area2D" parent="bag_5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bag_5/goal_5"]
+position = Vector2(4.76837e-06, -310)
+rotation = -1.58535
+shape = SubResource("CapsuleShape2D_imjvi")
+
+[node name="bag_4" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_aewr2")
+
+[node name="goal_4" type="Area2D" parent="bag_4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bag_4/goal_4"]
+position = Vector2(4.76837e-06, -310)
+rotation = -1.58535
+shape = SubResource("CapsuleShape2D_imjvi")
+
+[node name="bag_3" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_4j2bb")
+
+[node name="goal_3" type="Area2D" parent="bag_3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bag_3/goal_3"]
+position = Vector2(4.76837e-06, -310)
+rotation = -1.58535
+shape = SubResource("CapsuleShape2D_imjvi")
+
+[node name="bag_2" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_wlxx7")
+
+[node name="goal_2" type="Area2D" parent="bag_2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bag_2/goal_2"]
+position = Vector2(4.76837e-06, -310)
+rotation = -1.58535
+shape = SubResource("CapsuleShape2D_imjvi")
+
+[node name="bag_1" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("6_pdly7")
+script = ExtResource("7_2hh0t")
+
+[node name="goal_1" type="Area2D" parent="bag_1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bag_1/goal_1"]
+position = Vector2(-0.000282288, -364.706)
+rotation = -1.56551
+shape = SubResource("CapsuleShape2D_imjvi")
+
+[node name="body" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-18, -22, 0, -22, 16, -22, 26, -7, 30, 9, 29, 17, 23, 26, 12, 31, 0, 32, -14, 30, -24, 25, -29, 17, -31, 8, -28, -4, -24, -12)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+zoom = Vector2(3, 3)
+
+[connection signal="body_entered" from="bag_6/goal_6" to="." method="_on_goal_body_entered"]
+[connection signal="body_entered" from="bag_5/goal_5" to="." method="_on_goal_body_entered"]
+[connection signal="body_entered" from="bag_4/goal_4" to="." method="_on_goal_body_entered"]
+[connection signal="body_entered" from="bag_3/goal_3" to="." method="_on_goal_body_entered"]
+[connection signal="body_entered" from="bag_2/goal_2" to="." method="_on_goal_body_entered"]
+[connection signal="body_entered" from="bag_1/goal_1" to="." method="_on_goal_body_entered"]
