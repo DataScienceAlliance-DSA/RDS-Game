@@ -6,6 +6,7 @@ extends Node2D
 @onready var cannon_tip_position: Vector2 = self.get_node("./dart_spawn").position  # Replace with the actual position of the cannon's tip
 
 func _ready() -> void:
+	UI.start_scene_change(false, false)
 	if power_gauge == null:
 		print("Power gauge not found!")
 		
@@ -30,7 +31,6 @@ func _process(_delta: float) -> void:
 	cannon_tip_position = self.get_node("./dart_spawn").position
 
 func shoot_cannon(power: float):
-	print("Current Power: ", power)
 
 	#power_gauge.value
 	# Instance a new cannonball
