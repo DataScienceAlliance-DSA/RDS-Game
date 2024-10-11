@@ -8,13 +8,20 @@ radius = 110.0
 
 [node name="Cannonball" type="RigidBody2D"]
 gravity_scale = 7.685
-script = ExtResource("1_vyk7d")
 
 [node name="dart" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_kcroy")
 
 [node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CircleShape2D_brnf3")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_vyk7d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, 0)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_brnf3")
