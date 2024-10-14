@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj6od5m0ulmml"]
+
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Dartboard_game/GameManager/utilities.gd" id="1_uggsu"]
+[ext_resource type="PackedScene" uid="uid://f8j8yguko5vo" path="res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn" id="2_52hpf"]
+[ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://PowerGauge.tscn" id="2_rm2se"]
+[ext_resource type="PackedScene" uid="uid://c33h25kp11kq" path="res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn" id="2_rncxl"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uggsu")
+
+[node name="cannon" parent="." instance=ExtResource("2_rncxl")]
+visibility_layer = 17
+z_index = 2
+position = Vector2(128, 624)
+
+[node name="PowerGauge" parent="." instance=ExtResource("2_rm2se")]
+
+[node name="background" parent="." instance=ExtResource("2_52hpf")]
+layer = -1

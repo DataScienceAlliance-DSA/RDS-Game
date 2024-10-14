@@ -18,34 +18,28 @@ extends StaticBody2D
 	$bag_1/goal_1   # Area2D for phase 1
 ]
 
-var cannonball_scene: PackedScene
-var initial_cannonball_position: Vector2 = Vector2(0, -102)
 var current_phase: int = 0  # Tracks the current phase
 var bag_phase_changed: bool = false  # Tracks if a bag phase has changed
-	
+var cannonball_scene: PackedScene  # Reference to the cannonball scene
+var last_spawn_position: Vector2  # Stores the last spawn position
+
 func _ready():
-	cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")
-	spawn_cannonball()
-# Function for spawning cannonballs
-func spawn_cannonball():
-	var new_cannonball = cannonball_scene.instantiate()
+	# Load the cannonball scene
+	cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")  # Update the path to your cannonball scene
+
+#func _process(delta):
+	# Check for spacebar press to spawn a new cannonball
+	#if Input.is_action_just_pressed("ui_accept"):  # "ui_accept" is typically mapped to the spacebar
+		#spawn_cannonball()
 		
-	new_cannonball.position = Vector2(0, -120)
-	new_cannonball.add_to_group("Cannonballs")
-	get_parent().add_child(new_cannonball)
-	print("Spawned new cannonball at initial position")
 # Called when the orb enters the bag
 func _on_goal_body_entered(body):
 	if body.name == "Cannonball" and not bag_phase_changed:  # Check if the orb is named "Cannonball" and phase hasn't changed
 		body.queue_free()  # Remove the orb after it enters
 		change_bag_phase()
-		
-		# Spawn a new cannonball after removing previous cannonballs
-		spawn_cannonball()
-		
 		bag_phase_changed = true  # Mark that a phase change has occurred
 		print("Orb entered:", body.name)
-		
+
 # Function to switch between the bag phases
 func change_bag_phase():
 	# Hide all phases first
@@ -62,7 +56,6 @@ func change_bag_phase():
 	# Show the current phase sprite and enable its Area2D
 	bag_phases[current_phase].visible = true
 	goal_areas[current_phase].set_deferred("monitoring", true)  # Enable Area2D for the current phase
-
 	
 	print("Current Bag Index:", current_phase)
 

@@ -40,7 +40,7 @@ func end_interaction():
 	self.set_process(true)
 	
 	if (interactions == 1):
-		UI.start_scene_change()
+		UI.start_scene_change(true, true)
 
 func set_animation(anim_name: String):
 	animation_player.current_animation = anim_name

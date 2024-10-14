@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://ctdgui7cpegy1"]
+[gd_scene load_steps=10 format=3 uid="uid://ctdgui7cpegy1"]
 
 [ext_resource type="Texture2D" uid="uid://ciqd0nuvy138t" path="res://assets/cannon_game_draft_assets/bag_6.png" id="1_hbghc"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.gd" id="1_p2cig"]
-[ext_resource type="PackedScene" uid="uid://cn2ocw6e0h8y" path="res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn" id="2_48hdl"]
 [ext_resource type="Texture2D" uid="uid://cgtcr63osjoyq" path="res://assets/cannon_game_draft_assets/bag_5.png" id="2_ayscl"]
 [ext_resource type="Texture2D" uid="uid://de8oak7wklwso" path="res://assets/cannon_game_draft_assets/bag_4.png" id="3_aewr2"]
 [ext_resource type="Texture2D" uid="uid://bm1a4akqqcow5" path="res://assets/cannon_game_draft_assets/bag_3.png" id="4_4j2bb"]
@@ -15,15 +14,10 @@ radius = 39.9958
 height = 379.959
 
 [node name="bag" type="StaticBody2D"]
+position = Vector2(660, 406)
 script = ExtResource("1_p2cig")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -120)
-
-[node name="Cannonball" parent="." instance=ExtResource("2_48hdl")]
-
 [node name="bag_6" type="Sprite2D" parent="."]
-position = Vector2(0.400001, 0.400001)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_hbghc")
 
@@ -96,8 +90,11 @@ rotation = -1.56551
 shape = SubResource("CapsuleShape2D_imjvi")
 
 [node name="body" type="CollisionPolygon2D" parent="."]
-position = Vector2(0.400002, 0.400002)
 polygon = PackedVector2Array(-18, -22, 0, -22, 16, -22, 26, -7, 30, 9, 29, 17, 23, 26, 12, 31, 0, 32, -14, 30, -24, 25, -29, 17, -31, 8, -28, -4, -24, -12)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+zoom = Vector2(3, 3)
 
 [connection signal="body_entered" from="bag_6/goal_6" to="." method="_on_goal_body_entered"]
 [connection signal="body_entered" from="bag_5/goal_5" to="." method="_on_goal_body_entered"]

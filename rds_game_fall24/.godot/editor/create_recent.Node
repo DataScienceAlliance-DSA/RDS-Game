@@ -1,20 +1,6 @@
-<<<<<<< Updated upstream
 CollisionShape2D
 Area2D
 RigidBody2D
-=======
-Camera2D
-Marker2D
-TextureRect
-MarginContainer
-RichTextLabel
-VBoxContainer
-CollisionShape2D
-Area2D
-CollisionPolygon2D
-StaticBody2D
-Line2D
->>>>>>> Stashed changes
 Sprite2D
 StaticBody2D
 Node
