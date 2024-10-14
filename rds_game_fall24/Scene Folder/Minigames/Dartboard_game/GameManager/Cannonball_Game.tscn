@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://qcsqbwsppj2l"]
 
-[ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_jsivw"]
+[ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn" id="1_jsivw"]
 [ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://PowerGauge.tscn" id="2_gjkr3"]
-[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn" id="3_bhwgh"]
+[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn" id="3_bhwgh"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Dartboard_game/GameManager/collidable.gd" id="4_61nmo"]
 [ext_resource type="Texture2D" uid="uid://bonht2qyb3836" path="res://assets/cannon_game_draft_assets/bottomboundary.png" id="4_i47tb"]
 
@@ -15,7 +15,6 @@ size = Vector2(1368, 104)
 visibility_layer = 17
 z_index = 2
 position = Vector2(128, 624)
-rotation = -0.785397
 
 [node name="PowerGauge" parent="." instance=ExtResource("2_gjkr3")]
 
@@ -24,7 +23,6 @@ layer = -1
 
 [node name="BottomBorder" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
-freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder"]
 position = Vector2(684, 716)
@@ -41,5 +39,3 @@ script = ExtResource("4_61nmo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder/Area2D"]
 position = Vector2(684, 716)
 shape = SubResource("RectangleShape2D_wih2h")
-
-[connection signal="area_entered" from="BottomBorder/Area2D" to="BottomBorder/Area2D" method="_on_area_entered"]

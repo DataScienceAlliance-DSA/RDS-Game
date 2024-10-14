@@ -10,6 +10,7 @@ res://PowerGauge.tscn
 res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn
 res://Scene Folder/Minigames/Dartboard_game/GameManager/Dartboard_Game.tscn
 res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn
+<<<<<<< HEAD
 res://Cannonball.tscn
 res://Cannon.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
@@ -30,3 +31,5 @@ res://PowerGauge.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.tscn
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 86b04ef (progress on scene change)
