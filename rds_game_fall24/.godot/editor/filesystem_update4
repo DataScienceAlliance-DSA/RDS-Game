@@ -1,3 +1,21 @@
-res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
-res://power_gauge.gd
+res://Scene Folder/Minigames/Dartboard_game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/UI.gdshader
+res://power_gauge.gd
+res://Scene Folder/Minigames/Dartboard_game/GameManager/collidable.gd
+res://Scene Folder/Minigames/Dartboard_game/Cannonball/Cannonball.tscn
+res://Scene Folder/Minigames/Dartboard_game/Cannonball/Cannonball.gd
+res://Scene Folder/Environment/tile_map.tscn
+res://PowerGauge.tscn
+res://Scene Folder/Minigames/Dartboard_game/Cannon/Cannon.tscn
+res://Scene Folder/Minigames/Dartboard_game/GameManager/Dartboard_Game.tscn
+res://Scene Folder/Minigames/Dartboard_game/Background/tile_map.tscn
+res://Cannonball.tscn
+res://Cannon.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
+res://cannon_map.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
+res://Scene Folder/Minigames/Dartboard_game/Cannon/cannon.gd
+res://Scene Folder/UI.tscn
+res://Scene Folder/UI.gd
+res://Scripts/cauldron_area.gd
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
