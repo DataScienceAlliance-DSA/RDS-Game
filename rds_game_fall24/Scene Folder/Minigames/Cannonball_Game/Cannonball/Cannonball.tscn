@@ -1,13 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cn2ocw6e0h8y"]
 
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Dartboard_game/Cannonball/Cannonball.gd" id="1_vyk7d"]
 [ext_resource type="Texture2D" uid="uid://dr7417ucamppf" path="res://orb 3.PNG" id="2_kcroy"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd" id="2_l36d6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_brnf3"]
 radius = 110.0
 
 [node name="Cannonball" type="RigidBody2D"]
-gravity_scale = 7.685
+collision_layer = 2
+gravity_scale = 0.981
+linear_damp_mode = 1
+angular_damp_mode = 1
 
 [node name="dart" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
@@ -18,10 +21,10 @@ position = Vector2(1, 0)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_brnf3")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("1_vyk7d")
+[node name="Cannonball" type="Area2D" parent="."]
+script = ExtResource("2_l36d6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cannonball"]
 position = Vector2(1, 0)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_brnf3")
