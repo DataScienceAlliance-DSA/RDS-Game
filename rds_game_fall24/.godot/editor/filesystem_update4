@@ -7,3 +7,6 @@ res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
 res://Scene Folder/UI.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.gd
+res://Scene Folder/Minigames/Cannonball_Game/Cannon/cannon.gd

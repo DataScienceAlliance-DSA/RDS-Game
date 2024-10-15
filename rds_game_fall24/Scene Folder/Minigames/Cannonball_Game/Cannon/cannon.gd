@@ -35,6 +35,7 @@ func shoot_cannon(power: float):
 	#power_gauge.value
 	# Instance a new cannonball
 	var cannonball = cannonball_scene.instantiate() as RigidBody2D
+	cannonball.name = "Cannonball"  # Set its name to "Cannonball"
 	
 	# Set its starting position at the cannon's tip
 	cannonball.position = global_position + cannon_tip_position.rotated(rotation)  # Adjust to the cannon's rotation

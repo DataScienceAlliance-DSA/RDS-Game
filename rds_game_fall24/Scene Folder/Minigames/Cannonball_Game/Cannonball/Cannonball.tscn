@@ -7,7 +7,8 @@
 radius = 110.0
 
 [node name="Cannonball" type="RigidBody2D"]
-collision_layer = 2
+collision_layer = 131
+collision_mask = 127
 gravity_scale = 0.981
 linear_damp_mode = 1
 angular_damp_mode = 1
@@ -22,6 +23,7 @@ scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_brnf3")
 
 [node name="Cannonball" type="Area2D" parent="."]
+collision_mask = 252
 script = ExtResource("2_l36d6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cannonball"]

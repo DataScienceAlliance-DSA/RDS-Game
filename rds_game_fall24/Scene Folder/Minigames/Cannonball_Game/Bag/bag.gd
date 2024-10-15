@@ -20,21 +20,11 @@ extends StaticBody2D
 
 var current_phase: int = 0  # Tracks the current phase
 var bag_phase_changed: bool = false  # Tracks if a bag phase has changed
-var cannonball_scene: PackedScene  # Reference to the cannonball scene
 var last_spawn_position: Vector2  # Stores the last spawn position
-
-func _ready():
-	# Load the cannonball scene
-	cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")  # Update the path to your cannonball scene
-
-#func _process(delta):
-	# Check for spacebar press to spawn a new cannonball
-	#if Input.is_action_just_pressed("ui_accept"):  # "ui_accept" is typically mapped to the spacebar
-		#spawn_cannonball()
 		
 # Called when the orb enters the bag
 func _on_goal_body_entered(body):
-	if body.name == "Cannonball" and not bag_phase_changed:  # Check if the orb is named "Cannonball" and phase hasn't changed
+	if body.name == "Cannonball":# Check if the orb is named "Cannonball" and phase hasn't changed
 		body.queue_free()  # Remove the orb after it enters
 		change_bag_phase()
 		bag_phase_changed = true  # Mark that a phase change has occurred

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://qcsqbwsppj2l"]
+[gd_scene load_steps=12 format=3 uid="uid://qcsqbwsppj2l"]
 
 [ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_rfhu6"]
 [ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://PowerGauge.tscn" id="2_5q4oa"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/collidable.gd" id="5_14kka"]
 [ext_resource type="Texture2D" uid="uid://cn127hcovajsn" path="res://assets/cannon_game_draft_assets/topboundary.png" id="6_ye18m"]
 [ext_resource type="Texture2D" uid="uid://ba48bosu8eme5" path="res://assets/cannon_game_draft_assets/sideboundary.png" id="7_2knck"]
+[ext_resource type="PackedScene" uid="uid://ctdgui7cpegy1" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.tscn" id="8_d5xs4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wih2h"]
 size = Vector2(1368, 104)
@@ -85,5 +86,8 @@ offset = Vector2(11, 384)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBorder"]
 position = Vector2(1376, 384)
 shape = SubResource("RectangleShape2D_a40c4")
+
+[node name="bag" parent="." instance=ExtResource("8_d5xs4")]
+position = Vector2(200, 629)
 
 [connection signal="area_entered" from="BottomBorder/Area2D" to="BottomBorder/Area2D" method="_on_area_entered"]
