@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	var collision = characterbody.move_and_collide(characterbody.velocity * delta)
 	if collision:
 		# Make the ball bounce off the surface
+		print(characterbody.velocity)
 		characterbody.velocity = characterbody.velocity.bounce(collision.get_normal()) * 0.5
 	
 	characterbody.move_and_slide()
