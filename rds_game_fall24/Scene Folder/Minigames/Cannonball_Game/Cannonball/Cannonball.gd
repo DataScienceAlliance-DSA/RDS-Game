@@ -16,17 +16,15 @@ func _ready():
 	timer.start(5)
 
 func _physics_process(delta: float) -> void:
-	characterbody.velocity.y -= env_gravity * delta
+	characterbody.velocity.y += env_gravity * delta  # Apply gravity
 	
 	var collision = characterbody.move_and_collide(characterbody.velocity * delta)
-	if not collision:
-		pass
-	else:
-		print("GOOBERNAUT")
-		characterbody.velocity *= collision.get_normal() * 100
+	if collision:
+		# Make the ball bounce off the surface
+		characterbody.velocity = characterbody.velocity.bounce(collision.get_normal())
 	
-	print(characterbody.velocity)
 	characterbody.move_and_slide()
+
 
 func change_trajectory(n, fric, rest):
 	var v = characterbody.get_linear_velocity()
