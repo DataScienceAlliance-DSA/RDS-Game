@@ -4,6 +4,7 @@ var velocity: Vector2
 @onready var characterbody : CharacterBody2D = get_node("..")
 @onready var timer : Timer = get_node("../Timer")
 @onready var env_gravity : float = 981
+@onready var ricocheting : bool = true
 
 var prev_y_vel : float
 var prev_x_vel : float
@@ -19,10 +20,12 @@ func _physics_process(delta: float) -> void:
 	characterbody.velocity.y += env_gravity * delta  # Apply gravity
 	
 	var collision = characterbody.move_and_collide(characterbody.velocity * delta)
-	if collision:
+	if collision and ricocheting:
 		# Make the ball bounce off the surface
-		print(characterbody.velocity)
-		characterbody.velocity = characterbody.velocity.bounce(collision.get_normal()) * 0.5
+		characterbody.velocity *= collision.get_normal() * 0.75
+		if (abs(characterbody.velocity.y) < 8):
+			print(str(abs(characterbody.velocity.y)) + " < " + "2" + " = " + str(abs(characterbody.velocity.y) < 2))
+			ricocheting = false
 	
 	characterbody.move_and_slide()
 

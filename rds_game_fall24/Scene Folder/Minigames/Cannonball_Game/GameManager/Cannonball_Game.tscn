@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://qcsqbwsppj2l"]
+[gd_scene load_steps=10 format=3 uid="uid://qcsqbwsppj2l"]
 
 [ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_rfhu6"]
 [ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://PowerGauge.tscn" id="2_5q4oa"]
@@ -7,11 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://cn127hcovajsn" path="res://assets/cannon_game_draft_assets/topboundary.png" id="6_ye18m"]
 [ext_resource type="PackedScene" uid="uid://ctdgui7cpegy1" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.tscn" id="8_d5xs4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkuka"]
+size = Vector2(1024, 64)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wih2h"]
 size = Vector2(1368, 104)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p25jy"]
-size = Vector2(1366, 64)
+size = Vector2(1368, 64)
 
 [node name="Cannonball_Game" type="Node2D"]
 
@@ -26,25 +29,40 @@ rotation = -0.785397
 [node name="background" parent="." instance=ExtResource("3_kaw3j")]
 layer = -1
 
+[node name="SideBorder2" type="RigidBody2D" parent="."]
+position = Vector2(1808, 400)
+rotation = 3.14159
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideBorder2"]
+position = Vector2(1840, -15.9998)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_mkuka")
+
+[node name="SideBorder" type="RigidBody2D" parent="."]
+position = Vector2(704, 1104)
+rotation = -1.5708
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideBorder"]
+position = Vector2(640, 716)
+shape = SubResource("RectangleShape2D_wih2h")
+
 [node name="BottomBorder" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder"]
-position = Vector2(684, 716)
-shape = SubResource("RectangleShape2D_wih2h")
-
 [node name="Sprite2D" type="Sprite2D" parent="BottomBorder"]
 position = Vector2(0, 664)
+scale = Vector2(0.937042, 1)
 texture = ExtResource("4_lekcb")
 offset = Vector2(683, 52)
 
-[node name="Area2D" type="Area2D" parent="BottomBorder"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder"]
 position = Vector2(684, 716)
 shape = SubResource("RectangleShape2D_wih2h")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="TopBorder" type="RigidBody2D" parent="."]
 position = Vector2(683, 32)
@@ -53,20 +71,14 @@ gravity_scale = 0.0
 freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="TopBorder"]
+position = Vector2(-43, 0)
+scale = Vector2(0.937042, 1)
 texture = ExtResource("6_ye18m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopBorder"]
-shape = SubResource("RectangleShape2D_p25jy")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
-
-[node name="Area2D" type="Area2D" parent="TopBorder"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TopBorder/Area2D"]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_p25jy")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="bag" parent="." instance=ExtResource("8_d5xs4")]
 position = Vector2(200, 629)
-
-[connection signal="area_entered" from="BottomBorder/Area2D" to="BottomBorder/Area2D" method="_on_area_entered"]
-[connection signal="area_entered" from="TopBorder/Area2D" to="TopBorder/Area2D" method="_on_area_entered"]
