@@ -8,8 +8,9 @@ extends Node2D
 func _ready() -> void:
 	UI.start_scene_change(false, false)
 	if power_gauge == null:
-		print("Power gauge not found!")
-		
+		# print("Power gauge not found!")
+		pass
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("cannon shoot"):  # Assuming you have an input action called "shoot"
 		power_gauge.start_fluctuating()

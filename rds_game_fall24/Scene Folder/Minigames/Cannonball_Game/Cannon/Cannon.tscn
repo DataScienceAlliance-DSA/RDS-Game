@@ -12,8 +12,9 @@ script/source = "extends Node2D
 
 func _ready() -> void:
 	if power_gauge == null:
-		print(\"Power gauge not found!\")
-		
+		# print(\"Power gauge not found!\")
+		pass
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed(\"cannon shoot\"):  # Assuming you have an input action called \"shoot\"
 		power_gauge.start_fluctuating()
@@ -32,10 +33,11 @@ func _process(_delta: float) -> void:
 		rot = rot + _delta if rot < 0 else 0
 		self.set_rotation(rot)
 	
+	
 	cannon_tip_position = self.get_node(\"./dart_spawn\").position
 
 func shoot_cannon(power: float):
-	print(\"Current Power: \", power)
+	# print(\"Current Power: \", power)
 
 	#power_gauge.value
 	# Instance a new cannonball

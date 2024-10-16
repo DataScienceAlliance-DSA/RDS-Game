@@ -16,7 +16,7 @@ func _ready():
 	screen_hide.visible = false
 
 func _process(delta):
-	print(scene_hide_timer)
+	# print(scene_hide_timer)
 	if (scene_hide_timer < scene_hide_max) and (scene_change_active):
 		screen_hide.size = screen_hide_begin.lerp(screen_hide_goal, (((scene_hide_timer - scene_hide_max) ** 3.0) / (scene_hide_max ** 3.0)) + 1.0) 
 		scene_hide_timer += delta

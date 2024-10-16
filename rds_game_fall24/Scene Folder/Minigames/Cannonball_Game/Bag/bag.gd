@@ -28,7 +28,7 @@ func _on_goal_body_entered(body):
 		body.queue_free()  # Remove the orb after it enters
 		change_bag_phase()
 		bag_phase_changed = true  # Mark that a phase change has occurred
-		print("Orb entered:", body.name)
+		# print("Orb entered:", body.name)
 
 # Function to switch between the bag phases
 func change_bag_phase():
@@ -47,7 +47,7 @@ func change_bag_phase():
 	bag_phases[current_phase].visible = true
 	goal_areas[current_phase].set_deferred("monitoring", true)  # Enable Area2D for the current phase
 	
-	print("Current Bag Index:", current_phase)
+	# print("Current Bag Index:", current_phase)
 
 # Resetting the bag_phase_changed flag for new orbs
 func _on_new_orb_spawned():
