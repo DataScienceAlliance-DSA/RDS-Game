@@ -7,8 +7,6 @@
 radius = 110.0
 
 [node name="Cannonball" type="CharacterBody2D"]
-collision_layer = 131
-collision_mask = 127
 
 [node name="dart" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
