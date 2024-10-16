@@ -3,7 +3,7 @@ extends Area2D
 var velocity: Vector2
 @onready var characterbody : CharacterBody2D = get_node("..")
 @onready var timer : Timer = get_node("../Timer")
-@onready var env_gravity : float = 9.81
+@onready var env_gravity : float = 981
 
 var prev_y_vel : float
 var prev_x_vel : float
@@ -21,19 +21,9 @@ func _physics_process(delta: float) -> void:
 	var collision = characterbody.move_and_collide(characterbody.velocity * delta)
 	if collision:
 		# Make the ball bounce off the surface
-		characterbody.velocity = characterbody.velocity.bounce(collision.get_normal())
+		characterbody.velocity = characterbody.velocity.bounce(collision.get_normal()) * 0.5
 	
 	characterbody.move_and_slide()
-
-
-func change_trajectory(n, fric, rest):
-	var v = characterbody.get_linear_velocity()
-	# var perp = (v.dot(n) / n.dot(n)) * n
-	# var para = v - perp
-	# characterbody.linear_velocity = ((fric * para) - (rest * perp))
-	v.y = prev_y_vel * -0.5
-	v.x = prev_x_vel * 0.5
-	characterbody.set_linear_velocity(v)
 
 func _process(delta):
 	prev_y_vel = characterbody.velocity.y
