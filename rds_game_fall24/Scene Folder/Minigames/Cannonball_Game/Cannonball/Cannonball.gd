@@ -16,18 +16,35 @@ func _ready():
 	
 	timer.start(5)
 
+var dampening_factor: float = 0.85
+var min_bounce_velocity: float =      0.0  # Minimum velocity below which the ball stops bouncing
+
+
 func _physics_process(delta: float) -> void:
-	characterbody.velocity.y += env_gravity * delta  # Apply gravity
+	# Apply gravity to the y-component
+	characterbody.velocity.y += env_gravity * delta
 	
+	# Handle collision
 	var collision = characterbody.move_and_collide(characterbody.velocity * delta)
-	if collision and ricocheting:
-		# Make the ball bounce off the surface
-		characterbody.velocity *= collision.get_normal() * 0.75
-		if (abs(characterbody.velocity.y) < 8):
-			print(str(abs(characterbody.velocity.y)) + " < " + "2" + " = " + str(abs(characterbody.velocity.y) < 2))
-			ricocheting = false
+	if collision:
+		# Get the normal of the surface
+		var normal = collision.get_normal()
+		
+		# Reflect velocity off the surface normal
+		var bounced_velocity = characterbody.velocity.bounce(normal)
+		
+		# Apply the dampening factor to both x and y velocities
+		bounced_velocity.x *= dampening_factor
+		bounced_velocity.y *= dampening_factor
+		
+		# Ensure there's a minimum velocity to avoid inconsistencies
+		if bounced_velocity.length() < min_bounce_velocity:
+			bounced_velocity = Vector2.ZERO  # Stop movement if velocity gets too small
+		
+		characterbody.velocity = bounced_velocity
 	
 	characterbody.move_and_slide()
+
 
 func _process(delta):
 	prev_y_vel = characterbody.velocity.y
