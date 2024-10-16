@@ -35,7 +35,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_ayscl")
 
 [node name="goal_5" type="Area2D" parent="bag_5"]
-collision_mask = 64
+collision_layer = 64
 collision_priority = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_5/goal_5"]
@@ -49,7 +49,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_aewr2")
 
 [node name="goal_4" type="Area2D" parent="bag_4"]
-collision_mask = 32
+collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_4/goal_4"]
 position = Vector2(4.76837e-06, -310)
@@ -62,8 +62,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_4j2bb")
 
 [node name="goal_3" type="Area2D" parent="bag_3"]
-collision_layer = 8
-collision_mask = 0
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_3/goal_3"]
 position = Vector2(4.76837e-06, -310)
@@ -76,8 +75,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_wlxx7")
 
 [node name="goal_2" type="Area2D" parent="bag_2"]
-collision_layer = 4
-collision_mask = 0
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_2/goal_2"]
 position = Vector2(4.76837e-06, -310)
@@ -91,8 +89,7 @@ texture = ExtResource("6_pdly7")
 script = ExtResource("7_2hh0t")
 
 [node name="goal_1" type="Area2D" parent="bag_1"]
-collision_layer = 2
-collision_mask = 0
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_1/goal_1"]
 position = Vector2(-0.000282288, -364.706)

@@ -1,8 +1,9 @@
 extends Area2D
 
 var velocity: Vector2
-@onready var rigidbody : RigidBody2D = get_node("..")
+@onready var characterbody : CharacterBody2D = get_node("..")
 @onready var timer : Timer = get_node("../Timer")
+@onready var env_gravity : float = 9.81
 
 var prev_y_vel : float
 var prev_x_vel : float
@@ -10,23 +11,35 @@ var current_y_vel : float
 
 func _ready():
 	self.add_to_group("Cannonball")
-	rigidbody.set_linear_velocity(velocity)
 	get_node("../../cannon").set_process(false) # disable cannon
 	
 	timer.start(5)
 
+func _physics_process(delta: float) -> void:
+	characterbody.velocity.y -= env_gravity * delta
+	
+	var collision = characterbody.move_and_collide(characterbody.velocity * delta)
+	if not collision:
+		pass
+	else:
+		print("GOOBERNAUT")
+		characterbody.velocity *= collision.get_normal() * 100
+	
+	print(characterbody.velocity)
+	characterbody.move_and_slide()
+
 func change_trajectory(n, fric, rest):
-	var v = rigidbody.get_linear_velocity()
+	var v = characterbody.get_linear_velocity()
 	# var perp = (v.dot(n) / n.dot(n)) * n
 	# var para = v - perp
-	# rigidbody.linear_velocity = ((fric * para) - (rest * perp))
+	# characterbody.linear_velocity = ((fric * para) - (rest * perp))
 	v.y = prev_y_vel * -0.5
 	v.x = prev_x_vel * 0.5
-	rigidbody.set_linear_velocity(v)
+	characterbody.set_linear_velocity(v)
 
 func _process(delta):
-	prev_y_vel = rigidbody.get_linear_velocity().y
-	prev_x_vel = rigidbody.get_linear_velocity().x
+	prev_y_vel = characterbody.velocity.y
+	prev_x_vel = characterbody.velocity.x
 
 func _on_timer_timeout():
 	# cannonball deletes self if failed

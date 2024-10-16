@@ -6,12 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_brnf3"]
 radius = 110.0
 
-[node name="Cannonball" type="RigidBody2D"]
+[node name="Cannonball" type="CharacterBody2D"]
 collision_layer = 131
 collision_mask = 127
-gravity_scale = 0.981
-linear_damp_mode = 1
-angular_damp_mode = 1
 
 [node name="dart" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
