@@ -7,5 +7,5 @@ extends Area2D
 var cannonball_hit
 
 func _on_area_entered(area):
-	print("help")
+	print(area.name + " hit on " + self.get_parent().name)
 	get_tree().call_group("Cannonball","change_trajectory",Vector2(0,1),friction, restitution)
