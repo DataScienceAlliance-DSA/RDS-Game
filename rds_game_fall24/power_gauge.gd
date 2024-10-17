@@ -1,7 +1,7 @@
 extends TextureProgressBar
 
 var direction: int = 1  # 1 for increasing, -1 for decreasing
-var speed: float = 75.0  # Adjust this value for speed
+var speed: float = 80.0  # Adjust this value for speed
 var is_fluctuating: bool = false # Controls whether it flucuates
 var last_value: float = 0 # Variable to store the last value
 
@@ -17,8 +17,8 @@ func _process(delta: float) -> void:
 		last_value = value
 
 	# If the value reaches the boundaries, reverse the direction
-	if value >= 75:
-		value = 75
+	if value >= 80:
+		value = 80
 		direction = -1
 	elif value <= 0:
 		value = 0

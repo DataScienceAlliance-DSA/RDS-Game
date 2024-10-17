@@ -44,9 +44,10 @@ position = Vector2(704, 1104)
 rotation = -1.5708
 gravity_scale = 0.0
 freeze = true
+constant_force = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SideBorder"]
-position = Vector2(640, 716)
+position = Vector2(637.997, 710.002)
 shape = SubResource("RectangleShape2D_wih2h")
 
 [node name="BottomBorder" type="RigidBody2D" parent="."]
