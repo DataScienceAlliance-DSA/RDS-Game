@@ -35,6 +35,5 @@ target_position = Vector2(10.6, 10.6)
 remote_path = NodePath("../RayCast2D")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
 
 [connection signal="timeout" from="Timer" to="Cannonball" method="_on_timer_timeout"]
