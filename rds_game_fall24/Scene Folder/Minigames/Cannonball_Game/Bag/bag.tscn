@@ -30,7 +30,6 @@ rotation = -1.58535
 shape = SubResource("CapsuleShape2D_imjvi")
 
 [node name="bag_5" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_ayscl")
 
@@ -44,7 +43,6 @@ rotation = -1.58535
 shape = SubResource("CapsuleShape2D_imjvi")
 
 [node name="bag_4" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_aewr2")
 
@@ -57,7 +55,6 @@ rotation = -1.58535
 shape = SubResource("CapsuleShape2D_imjvi")
 
 [node name="bag_3" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_4j2bb")
 
@@ -70,7 +67,6 @@ rotation = -1.58535
 shape = SubResource("CapsuleShape2D_imjvi")
 
 [node name="bag_2" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_wlxx7")
 
@@ -83,7 +79,6 @@ rotation = -1.58535
 shape = SubResource("CapsuleShape2D_imjvi")
 
 [node name="bag_1" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.085, 0.085)
 texture = ExtResource("6_pdly7")
 script = ExtResource("7_2hh0t")

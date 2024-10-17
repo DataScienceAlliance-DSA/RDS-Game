@@ -10,6 +10,9 @@ script/source = "extends Node2D
 
 @onready var cannon_tip_position: Vector2 = self.get_node(\"./dart_spawn\").position  # Replace with the actual position of the cannon's tip
 
+# track the phase of the bag
+var bag_phase = 0
+
 func _ready() -> void:
 	if power_gauge == null:
 		# print(\"Power gauge not found!\")

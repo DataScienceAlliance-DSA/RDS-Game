@@ -67,3 +67,10 @@ func _on_timer_timeout():
 
 func get_trajectory_angle():
 	pass
+	
+# Detect when the cannonball collides with something
+func _on_body_entered(body):
+	if body.name == "Bag":
+		if body.is_in_hit_area(global_position):  # Call a custom function to check hit area
+			emit_signal("scored")
+			queue_free()  # Remove the cannonball after scoring

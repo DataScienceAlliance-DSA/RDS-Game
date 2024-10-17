@@ -21,7 +21,14 @@ extends StaticBody2D
 var current_phase: int = 0  # Tracks the current phase
 var bag_phase_changed: bool = false  # Tracks if a bag phase has changed
 var last_spawn_position: Vector2  # Stores the last spawn position
-		
+
+
+# Define the hit area using an Area2D or specific region of the Bag
+@onready var hit_area = $bag_2/goal_2/CollisionShape2D
+
+func is_in_hit_area(point):
+	return hit_area.has_point(to_local(point))		
+	
 # Called when the orb enters the bag
 func _on_goal_body_entered(body):
 	if body.name == "Cannonball":# Check if the orb is named "Cannonball" and phase hasn't changed
@@ -47,7 +54,7 @@ func change_bag_phase():
 	bag_phases[current_phase].visible = true
 	goal_areas[current_phase].set_deferred("monitoring", true)  # Enable Area2D for the current phase
 	
-	# print("Current Bag Index:", current_phase)
+	#print("Current Bag Index:", current_phase)
 
 # Resetting the bag_phase_changed flag for new orbs
 func _on_new_orb_spawned():
