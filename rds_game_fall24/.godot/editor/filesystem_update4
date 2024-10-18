@@ -4,7 +4,6 @@ res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
 res://PowerGauge.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Bag/bag.gd
+res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd

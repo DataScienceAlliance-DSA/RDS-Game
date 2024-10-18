@@ -44,7 +44,7 @@ func shoot_cannon(power: float):
 
 	#power_gauge.value
 	# Instance a new cannonball
-	var cannonball = cannonball_scene.instantiate() as CharacterBody2D
+	var cannonball = cannonball_scene.instantiate() as RigidBody2D
 	cannonball.name = \"Cannonball\"
 	
 	# Set its starting position at the cannon's tip
@@ -55,10 +55,7 @@ func shoot_cannon(power: float):
 	
 	# Calculate velocity based on the cannon's direction and power
 	var direction = Vector2(1, 0).rotated(rotation)  # Direction the cannon is facing
-	var cannonball_velocity = direction * power * 10  # Multiply by a factor to adjust speed
-	
-	# Set the cannonball's velocity
-	cannonball.velocity = cannonball_velocity
+	cannonball.linear_velocity = direction * power * 10  # Multiply by a factor to adjust speed
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fs2dp"]

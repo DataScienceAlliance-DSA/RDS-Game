@@ -1,3 +1,4 @@
+RigidBody2D
 CharacterBody2D
 RemoteTransform2D
 RayCast2D
@@ -5,11 +6,9 @@ CollisionShape2D
 Area2D
 Timer
 Sprite2D
-RigidBody2D
 StaticBody2D
 Node
 Node2D
 TextureRect
 CanvasLayer
 Camera2D
-ColorRect
