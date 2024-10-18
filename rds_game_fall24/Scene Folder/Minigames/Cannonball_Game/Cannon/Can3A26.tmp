@@ -16,7 +16,6 @@ script/source = "extends Node2D
 var bag_phase = 0
 
 func _ready() -> void:
-	trajectory.visible = false
 	if power_gauge == null:
 		# print(\"Power gauge not found!\")
 		pass
@@ -24,11 +23,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed(\"cannon shoot\"):  # Assuming you have an input action called \"shoot\"
 		power_gauge.start_fluctuating()
-		trajectory.visible = true
 		
 	# Stop fluctuating and shoot the cannon when space bar is released
 	if Input.is_action_just_released(\"cannon shoot\"):
-		trajectory.visible = false
 		var power = power_gauge.stop_fluctuating() # Get the last value before resetting
 		shoot_cannon(power)  #Shoot using the current power
 	
@@ -41,12 +38,12 @@ func _process(_delta: float) -> void:
 		rot = rot + _delta if rot < 0 else 0
 		self.set_rotation(rot)
 	
-	var max_line_dots = 300
+	var max_line_dots = 1
 	trajectory.clear_points()
-	var pos = trajectory.position
-	trajectory.set_rotation(- self.rotation)
-	print(pos)
-	var vel = Vector2(1, 0).rotated(rotation) * power_gauge.last_value * 17
+	var pos = get_node(\"dart_spawn\").position
+	print(cannon_tip_position)
+	print(power_gauge.last_value)
+	var vel = Vector2(1, 0).rotated(rotation) * power_gauge.last_value
 	for dot in max_line_dots:
 		trajectory.add_point(pos)
 		vel.y += env_gravity * _delta
@@ -101,9 +98,8 @@ flip_h = true
 [node name="collision" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-40, 0, -24, -16, 0, -24, 16, -24, 24, -32, 32, -32, 40, -16, 40, -8, 40, 0, 16, 0, 8, 8, 0, 16, 0, 24, 8, 24, 8, 32, -40, 32, -40, 24, -24, 16, -32, 16, -40, 8)
 
-[node name="Trajectory" type="Line2D" parent="."]
-position = Vector2(32, -16)
-width = 5.0
-
 [node name="dart_spawn" type="Marker2D" parent="."]
 position = Vector2(32, -16)
+
+[node name="Trajectory" type="Line2D" parent="."]
+top_level = true
