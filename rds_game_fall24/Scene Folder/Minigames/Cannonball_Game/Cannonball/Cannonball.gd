@@ -13,6 +13,13 @@ func _ready():
 	get_node("../cannon").set_process(false) # disable cannon
 	
 	timer.start(5)
+	
+	if self.physics_material_override:
+		self.physics_material_override.friction = 100  # Set the friction to a value higher than 1
+	else:
+		var material = PhysicsMaterial.new()
+		material.friction = 100  # Set your desired friction value
+		self.physics_material_override = material
 
 var initial_dampening: float = 0.75  # Initial dampening factor
 var min_bounce_velocity: float = 20.0  # Minimum 	velocity for both x and y to keep the orb bouncing
