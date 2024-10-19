@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://qcsqbwsppj2l"]
+[gd_scene load_steps=16 format=3 uid="uid://qcsqbwsppj2l"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd" id="1_nb67d"]
 [ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_rfhu6"]
@@ -6,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn" id="3_kaw3j"]
 [ext_resource type="Texture2D" uid="uid://bonht2qyb3836" path="res://assets/cannon_game_draft_assets/bottomboundary.png" id="4_lekcb"]
 [ext_resource type="Texture2D" uid="uid://cn127hcovajsn" path="res://assets/cannon_game_draft_assets/topboundary.png" id="6_ye18m"]
+[ext_resource type="Texture2D" uid="uid://ciqd0nuvy138t" path="res://assets/cannon_game_draft_assets/bag_6.png" id="7_hgudh"]
+[ext_resource type="Texture2D" uid="uid://cgtcr63osjoyq" path="res://assets/cannon_game_draft_assets/bag_5.png" id="8_yngfa"]
+[ext_resource type="Texture2D" uid="uid://de8oak7wklwso" path="res://assets/cannon_game_draft_assets/bag_4.png" id="9_vegwf"]
+[ext_resource type="Texture2D" uid="uid://bm1a4akqqcow5" path="res://assets/cannon_game_draft_assets/bag_3.png" id="10_ildvm"]
+[ext_resource type="Texture2D" uid="uid://c562me0xi46pk" path="res://assets/cannon_game_draft_assets/bag_2.png" id="11_fveiw"]
+[ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="12_4lwbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkuka"]
 size = Vector2(1024, 64)
@@ -83,5 +89,38 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_p25jy")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(322.849, 630.978)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(367.241, 629.979)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_hgudh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1219.76, 629.979)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_yngfa")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(500.416, 372.397)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_vegwf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(949.377, 204.668)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_ildvm")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1083.56, 526.148)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_fveiw")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(681.009, 373.395)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("12_4lwbe")

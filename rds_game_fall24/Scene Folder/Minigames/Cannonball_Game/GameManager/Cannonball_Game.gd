@@ -14,12 +14,12 @@ var bag_scenes = [
 
 # Array of positions corresponding to each bag
 var bag_positions = [
-	Vector2(258, 646),  # Position for Bag 6
-	Vector2(258, 596),  # Position for Bag 5
-	Vector2(258, 546),  # Position for Bag 4
-	Vector2(258, 496),  # Position for Bag 3
-	Vector2(258, 446),  # Position for Bag 2
-	Vector2(258, 396)   # Position for Bag 1
+	Vector2(367, 629),  # Position for Bag 6
+	Vector2(1219, 629),  # Position for Bag 5
+	Vector2(500, 372),  # Position for Bag 4
+	Vector2(949, 204),  # Position for Bag 3
+	Vector2(1083, 526),  # Position for Bag 2
+	Vector2(681, 373)   # Position for Bag 1
 ]
 
 var current_bag_index = 0  # Start with bag 6 (index 0 in the array)
