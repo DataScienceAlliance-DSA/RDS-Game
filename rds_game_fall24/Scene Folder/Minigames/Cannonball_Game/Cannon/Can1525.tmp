@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d215x53gvybky"]
+[gd_scene load_steps=6 format=3 uid="uid://d215x53gvybky"]
 
 [ext_resource type="Texture2D" uid="uid://cblii2b26c5c5" path="res://assets/working_assets/Cannon Game Asset/cannon.png" id="1_2rs0g"]
-[ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://assets/cannon_game_draft_assets/trajectory dot.png" id="2_ee8mj"]
-[ext_resource type="Shader" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader" id="2_inmcu"]
+[ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="2_3ics6"]
 
 [sub_resource type="GDScript" id="GDScript_3go7r"]
 script/source = "extends Node2D
@@ -13,7 +12,6 @@ script/source = "extends Node2D
 @onready var env_gravity : float = 981
 @onready var cannon_tip_position : Vector2 = self.get_node(\"./dart_spawn\").position  # Replace with the actual position of the cannon's tip
 @onready var trajectory : Line2D = self.get_node(\"Trajectory\")
-@onready var collision_test : CharacterBody2D = self.get_node(\"Trajectory/CollisionTest\")
 
 # track the phase of the bag
 var bag_phase = 0
@@ -44,29 +42,18 @@ func _process(_delta: float) -> void:
 		rot = rot + _delta if rot < 0 else 0
 		self.set_rotation(rot)
 	
-	cannon_tip_position = self.get_node(\"dart_spawn\").position
-
-func _physics_process(_delta):
-	
 	var max_line_dots = 300
 	trajectory.clear_points()
 	var pos = trajectory.position
 	trajectory.set_rotation(- self.rotation)
-	
+	print(pos)
 	var vel = Vector2(1, 0).rotated(rotation) * power_gauge.last_value * 17
 	for dot in max_line_dots:
 		trajectory.add_point(pos)
 		vel.y += env_gravity * _delta
-		
-		var collision = collision_test.move_and_collide(vel * _delta, false, true, true)
-		if collision:
-			print(\"hit\")
-			return
-		
 		pos += vel * _delta
-		collision_test.position = pos
 	
-	# print(str(collision_test.position) + \" \" + str(collision_test.rotation))
+	cannon_tip_position = self.get_node(\"dart_spawn\").position
 
 func shoot_cannon(power: float):
 	# print(\"Current Power: \", power)
@@ -102,12 +89,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q06xq"]
-shader = ExtResource("2_inmcu")
-shader_parameter/scrolling_speed = 2.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_q0ujv"]
-
 [node name="cannon" type="Node2D"]
 scale = Vector2(0.99761, 1)
 script = SubResource("GDScript_3go7r")
@@ -122,17 +103,10 @@ flip_h = true
 polygon = PackedVector2Array(-40, 0, -24, -16, 0, -24, 16, -24, 24, -32, 32, -32, 40, -16, 40, -8, 40, 0, 16, 0, 8, 8, 0, 16, 0, 24, 8, 24, 8, 32, -40, 32, -40, 24, -24, 16, -32, 16, -40, 8)
 
 [node name="Trajectory" type="Line2D" parent="."]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_q06xq")
 position = Vector2(32, -16)
-width = 30.0
-texture = ExtResource("2_ee8mj")
+width = 500.0
+texture = ExtResource("2_3ics6")
 texture_mode = 1
-
-[node name="CollisionTest" type="CharacterBody2D" parent="Trajectory"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trajectory/CollisionTest"]
-shape = SubResource("CircleShape2D_q0ujv")
 
 [node name="dart_spawn" type="Marker2D" parent="."]
 position = Vector2(32, -16)

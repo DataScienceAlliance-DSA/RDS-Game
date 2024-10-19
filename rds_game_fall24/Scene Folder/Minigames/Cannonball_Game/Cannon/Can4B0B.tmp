@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d215x53gvybky"]
+[gd_scene load_steps=8 format=3 uid="uid://d215x53gvybky"]
 
 [ext_resource type="Texture2D" uid="uid://cblii2b26c5c5" path="res://assets/working_assets/Cannon Game Asset/cannon.png" id="1_2rs0g"]
 [ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://assets/cannon_game_draft_assets/trajectory dot.png" id="2_ee8mj"]
-[ext_resource type="Shader" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader" id="2_inmcu"]
 
 [sub_resource type="GDScript" id="GDScript_3go7r"]
 script/source = "extends Node2D
@@ -60,13 +59,13 @@ func _physics_process(_delta):
 		
 		var collision = collision_test.move_and_collide(vel * _delta, false, true, true)
 		if collision:
-			print(\"hit\")
 			return
 		
 		pos += vel * _delta
 		collision_test.position = pos
 	
-	# print(str(collision_test.position) + \" \" + str(collision_test.rotation))
+	print(str(collision_test.position) + \" \" + str(collision_test.rotation))
+	
 
 func shoot_cannon(power: float):
 	# print(\"Current Power: \", power)
@@ -102,9 +101,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q06xq"]
-shader = ExtResource("2_inmcu")
-shader_parameter/scrolling_speed = 2.0
+[sub_resource type="Curve" id="Curve_xlw5l"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.749271, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q0ujv"]
 
@@ -123,13 +122,14 @@ polygon = PackedVector2Array(-40, 0, -24, -16, 0, -24, 16, -24, 24, -32, 32, -32
 
 [node name="Trajectory" type="Line2D" parent="."]
 texture_repeat = 2
-material = SubResource("ShaderMaterial_q06xq")
 position = Vector2(32, -16)
 width = 30.0
+width_curve = SubResource("Curve_xlw5l")
 texture = ExtResource("2_ee8mj")
 texture_mode = 1
 
 [node name="CollisionTest" type="CharacterBody2D" parent="Trajectory"]
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trajectory/CollisionTest"]
 shape = SubResource("CircleShape2D_q0ujv")
