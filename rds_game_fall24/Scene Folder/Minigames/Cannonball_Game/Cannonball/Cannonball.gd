@@ -10,9 +10,9 @@ var current_y_vel : float
 
 func _ready():
 	self.add_to_group("Cannonball")
-	get_node("../cannon").set_process(false) # disable cannon
+	#get_node("../cannon").set_process(false) # disable cannon
 	
-	timer.start(5)
+	timer.start(3)
 	
 	if self.physics_material_override:
 		self.physics_material_override.friction = 100  # Set the friction to a value higher than 1
@@ -51,7 +51,7 @@ func _physics_process(delta: float) -> void:
 func _on_timer_timeout():
 	# cannonball deletes self if failed
 	self.queue_free() #delete whole cannonball object
-	get_node("../cannon").set_process(true) # re-enable cannon
+	#get_node("../cannon").set_process(true) # re-enable cannon
 
 func get_trajectory_angle():
 	pass

@@ -10,6 +10,7 @@ bounce = 0.5
 radius = 110.0
 
 [node name="Cannonball" type="RigidBody2D"]
+collision_mask = 255
 physics_material_override = SubResource("PhysicsMaterial_31evt")
 script = ExtResource("2_l36d6")
 

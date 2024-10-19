@@ -8,3 +8,13 @@ res://PowerGauge.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
 res://trajectory_path.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_6.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6.tscn
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6.gd
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag5.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag1.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag2.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag3.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag4.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd

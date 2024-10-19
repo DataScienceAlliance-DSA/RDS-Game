@@ -15,6 +15,8 @@ height = 379.959
 
 [node name="bag" type="StaticBody2D"]
 position = Vector2(660, 406)
+collision_layer = 255
+collision_mask = 0
 script = ExtResource("1_p2cig")
 
 [node name="bag_6" type="Sprite2D" parent="."]
@@ -23,6 +25,7 @@ texture = ExtResource("1_hbghc")
 
 [node name="goal_6" type="Area2D" parent="bag_6"]
 collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_6/goal_6"]
 position = Vector2(-10, -310)
@@ -36,6 +39,7 @@ texture = ExtResource("2_ayscl")
 
 [node name="goal_5" type="Area2D" parent="bag_5"]
 collision_layer = 64
+collision_mask = 0
 collision_priority = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_5/goal_5"]
@@ -50,6 +54,7 @@ texture = ExtResource("3_aewr2")
 
 [node name="goal_4" type="Area2D" parent="bag_4"]
 collision_layer = 32
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_4/goal_4"]
 position = Vector2(4.76837e-06, -310)
@@ -63,6 +68,7 @@ texture = ExtResource("4_4j2bb")
 
 [node name="goal_3" type="Area2D" parent="bag_3"]
 collision_layer = 16
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_3/goal_3"]
 position = Vector2(4.76837e-06, -310)
@@ -76,6 +82,7 @@ texture = ExtResource("5_wlxx7")
 
 [node name="goal_2" type="Area2D" parent="bag_2"]
 collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_2/goal_2"]
 position = Vector2(4.76837e-06, -310)
@@ -90,6 +97,7 @@ script = ExtResource("7_2hh0t")
 
 [node name="goal_1" type="Area2D" parent="bag_1"]
 collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bag_1/goal_1"]
 position = Vector2(-0.000282288, -364.706)
