@@ -31,11 +31,11 @@ func is_in_hit_area(point):
 	
 # Called when the orb enters the bag
 func _on_goal_body_entered(body):
+	print(body.get_node(".."))
 	if body.name == "Cannonball":# Check if the orb is named "Cannonball" and phase hasn't changed
 		body.queue_free()  # Remove the orb after it enters
 		change_bag_phase()
 		bag_phase_changed = true  # Mark that a phase change has occurred
-		# print("Orb entered:", body.name)
 
 # Function to switch between the bag phases
 func change_bag_phase():

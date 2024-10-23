@@ -56,6 +56,7 @@ func update_rotation(delta: float) -> void:
 func _on_trigger_area_body_entered(body):
 	print("Entered area: ", body.name)  # Debug statement
 	if body.name == "Cannonball" and not has_triggered:
+		print("HELP ME")
 		emit_signal("bag_triggered")
 		has_triggered = true
 		print("cannonball has entered and triggered")

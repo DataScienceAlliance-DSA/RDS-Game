@@ -10,7 +10,7 @@ var current_y_vel : float
 
 func _ready():
 	self.add_to_group("Cannonball")
-	#get_node("../cannon").set_process(false) # disable cannon
+	get_node("../cannon").set_process(false) # disable cannon
 	
 	timer.start(3)
 	
@@ -50,15 +50,19 @@ func _physics_process(delta: float) -> void:
 
 func _on_timer_timeout():
 	# cannonball deletes self if failed
+	print("goober")
 	self.queue_free() #delete whole cannonball object
-	#get_node("../cannon").set_process(true) # re-enable cannon
+	get_node("../cannon").set_process(true) # re-enable cannon
 
 func get_trajectory_angle():
 	pass
-	
+
 # Detect when the cannonball collides with something
 func _on_body_entered(body):
+	print("\n")
 	if body.name == "Bag":
 		if body.is_in_hit_area(global_position):  # Call a custom function to check hit area
 			emit_signal("scored")
-			queue_free()  # Remove the cannonball after scoring
+			get_node("../cannon").set_process(true) # re-enable cannon
+			print("GOOBERNAUT!?!?!?!?")
+			self.queue_free()  # Remove the cannonball after scoring
