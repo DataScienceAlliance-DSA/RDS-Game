@@ -24,8 +24,32 @@ var bag_positions = [
 
 var current_bag_index = 0  # Start with bag 6 (index 0 in the array)
 
+# References to the platforms and their collision shapes
+var platform_1
+var platform_1_collision
+var platform_2
+var platform_2_collision
+var platform_3
+var platform_3_collision
+
 func _ready():
-	load_new_bag()  # Initially load a bag when the scene starts
+# Get the platform nodes and their collision shapes
+	platform_1 = $platform_1
+	platform_1_collision = $platform_1/CollisionShape2D
+	platform_2 = $platform_2
+	platform_2_collision = $platform_2/CollisionShape2D
+	platform_3 = $platform_3
+	platform_3_collision = $platform_3/CollisionShape2D
+
+	# Set platforms to be hidden and their collisions to be disabled at the start
+	platform_1.visible = false
+	platform_1_collision.disabled = true
+	platform_2.visible = false
+	platform_2_collision.disabled = true
+	platform_3.visible = false
+	platform_3_collision.disabled = true
+
+	load_new_bag()
 
 func load_new_bag():
 	# Use call_deferred to ensure the state changes happen after the physics engine processes
@@ -46,6 +70,12 @@ func _load_new_bag():
 	# Connect the bag's custom signal to detect the orb hit
 	current_bag.bag_triggered.connect(_on_bag_triggered)
 
+# Show platforms if we're on Bag 4 (index 2), and keep them visible until Bag 2 (index 4)
+	if current_bag_index <= 4 and current_bag_index >= 2:  # Between Bag 4 and Bag 2
+		show_platforms()
+	else:
+		hide_platforms()
+
 	# Update the index for the next bag, decreasing by 1 each time
 	current_bag_index += 1
 
@@ -53,6 +83,24 @@ func _load_new_bag():
 	if current_bag_index >= bag_scenes.size():
 		current_bag_index = 0  # Loop back to the first bag
 
+# Function to show platforms and enable their collision shapes
+func show_platforms():
+	platform_1.visible = true
+	platform_1_collision.disabled = false
+	platform_2.visible = true
+	platform_2_collision.disabled = false
+	platform_3.visible = true
+	platform_3_collision.disabled = false
+
+# Function to hide platforms and disable their collision shapes
+func hide_platforms():
+	platform_1.visible = false
+	platform_1_collision.disabled = true
+	platform_2.visible = false
+	platform_2_collision.disabled = true
+	platform_3.visible = false
+	platform_3_collision.disabled = true
+	
 # Function triggered when the bag's custom signal is emitted
 func _on_bag_triggered():
 	load_new_bag()  # Load the next bag in sequence when the signal is received

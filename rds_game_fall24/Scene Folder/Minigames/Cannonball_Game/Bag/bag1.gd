@@ -1,9 +1,12 @@
-extends Node2D
+extends StaticBody2D
 
 var A: float = 460  # Horizontal size of the figure-eight
 var B: float = 200  # Vertical size of the figure-eight
 var speed: float = 1.0  # Controls how fast the object moves
 var time: float = 0.0  # Time variable for the parametric equation
+
+signal bag_triggered  # Custom signal
+var has_triggered = false
 
 # Rotation variables
 var max_rotation_degrees: float = 35.0
@@ -49,3 +52,13 @@ func update_rotation(delta: float) -> void:
 	elif rotation_degrees <= -max_rotation_degrees:
 		rotation_degrees = -max_rotation_degrees
 		rotation_direction = 1
+		
+func _on_trigger_area_body_entered(body):
+	print("Entered area: ", body.name)  # Debug statement
+	if body.name == "Cannonball" and not has_triggered:
+		emit_signal("bag_triggered")
+		has_triggered = true
+		print("cannonball has entered and triggered")
+
+		#disable cannonball after collision
+		body.queue_free()

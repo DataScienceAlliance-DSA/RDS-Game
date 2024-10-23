@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bm1a4akqqcow5" path="res://assets/cannon_game_draft_assets/bag_3.png" id="4_4j2bb"]
 [ext_resource type="Texture2D" uid="uid://c562me0xi46pk" path="res://assets/cannon_game_draft_assets/bag_2.png" id="5_wlxx7"]
 [ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="6_pdly7"]
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag_1.gd" id="7_2hh0t"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/bag1.gd" id="7_2hh0t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_imjvi"]
 radius = 39.9958

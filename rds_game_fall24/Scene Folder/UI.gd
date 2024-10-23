@@ -38,4 +38,4 @@ func start_scene_change(close, switch):
 	scene_change_switching = switch
 
 func enter_next_scene():
-	get_tree().change_scene_to_file("res://Scene Folder/Minigames/Dartbkard_game/GameManager/Cannonball_Game.tscn")
+	get_tree().change_scene_to_file("res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn")
