@@ -33,6 +33,7 @@ var platform_3
 var platform_3_collision
 
 func _ready():
+	UI.start_scene_change(false, false)
 # Get the platform nodes and their collision shapes
 	platform_1 = $platform_1
 	platform_1_collision = $platform_1/CollisionShape2D

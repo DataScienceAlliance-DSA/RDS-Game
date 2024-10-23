@@ -64,19 +64,9 @@ func _physics_process(_delta):
 		
 		var collision = collision_test.move_and_collide(vel * _delta, false, true, true)
 		
-		if collision:
-			print(\"HIT \" + str(dot))
-			break
-		else:
-			print(\"NOPe\")
-
-	
-	# print(str(collision_test.position) + \" \" + str(collision_test.rotation))
+		if collision: break
 
 func shoot_cannon(power: float):
-	# print(\"Current Power: \", power)
-
-	#power_gauge.value
 	# Instance a new cannonball
 	var cannonball = cannonball_scene.instantiate() as RigidBody2D
 	cannonball.name = \"Cannonball\"
