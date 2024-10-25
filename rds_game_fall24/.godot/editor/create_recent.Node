@@ -1,6 +1,6 @@
+AnimationPlayer
 CollisionShape2D
 Timer
-AnimationPlayer
 Sprite2D
 StaticBody2D
 CharacterBody2D

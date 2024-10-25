@@ -162,6 +162,14 @@ func perform_auto_drop():
 	else:
 		if current_velocity != Vector2.ZERO:
 			current_velocity = Vector2.ZERO  # Stop the bag's motion if it's not the final bag
-	var cannonball = cannonball_scene.instantiate()
+	
+	var cannonball = cannonball_scene.instantiate() as RigidBody2D
+	var cannonball_sprite = cannonball.get_node("dart") as Sprite2D;
+	cannonball.name = "Cannonball"
+	
+	# Set its starting position at the cannon's tip
 	cannonball.position = current_bag.position + Vector2(0, -100)  # Position orb above the bag
+	
+	# Add the cannonball to the scene
 	add_child(cannonball)
+	cannonball_sprite.frame = current_bag_index
