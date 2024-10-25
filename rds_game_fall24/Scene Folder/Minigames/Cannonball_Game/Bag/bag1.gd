@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+@onready var animation_player = $AnimationPlayer
+
 var A: float = 460  # Horizontal size of the figure-eight
 var B: float = 200  # Vertical size of the figure-eight
 var speed: float = 1.0  # Controls how fast the object moves
@@ -21,6 +23,7 @@ var rotation_angle: float = PI / 12
 
 func _ready():
 	set_process(true)
+	animation_player.play("flying")
 	
 func _process(delta: float) -> void:
 	# Update time

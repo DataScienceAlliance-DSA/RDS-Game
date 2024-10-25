@@ -159,6 +159,7 @@ texture = ExtResource("14_i1cpy")
 shape = SubResource("RectangleShape2D_38nu6")
 
 [node name="platform_3" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(1081.54, 573.072)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform_3"]
@@ -169,4 +170,5 @@ position = Vector2(-1.00891, 0.245483)
 shape = SubResource("RectangleShape2D_6iy2t")
 
 [node name="Marker2D" type="Marker2D" parent="."]
+visible = false
 position = Vector2(794.006, 536.131)
