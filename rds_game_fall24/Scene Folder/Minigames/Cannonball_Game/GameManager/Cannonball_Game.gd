@@ -61,7 +61,7 @@ func _ready():
 	load_new_bag()
 
 # Update loop for moving the bags side-to-side
-func _process(delta):
+func _process(delta): 
 	if current_bag and current_velocity != Vector2.ZERO:
 		# Handle side-to-side movement with smooth slow down
 		var pos = current_bag.position
@@ -115,14 +115,7 @@ func _load_new_bag():
 		show_platforms()
 	else:
 		hide_platforms()
-
-	# Update the index for the next bag, decreasing by 1 each time
-	current_bag_index += 1
-
-	# If we've reached the last bag, loop back to the first bag
-	if current_bag_index >= bag_scenes.size():
-		current_bag_index = 0  # Loop back to the first bag
-
+		
 # Function to show platforms and enable their collision shapes
 func show_platforms():
 	platform_1.visible = true
@@ -143,5 +136,13 @@ func hide_platforms():
 	
 # Function triggered when the bag's custom signal is emitted
 func _on_bag_triggered():
+	# Update the index for the next bag, decreasing by 1 each time
+	current_bag_index += 1
+
+	# If we've reached the last bag, loop back to the first bag
+	if current_bag_index >= bag_scenes.size():
+		current_bag_index = 0  # Loop back to the first bag
+	
 	load_new_bag()  # Load the next bag in sequence when the signal is received
 	print("loaded new bag")
+	print(current_bag_index)

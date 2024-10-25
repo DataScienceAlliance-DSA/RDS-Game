@@ -4,8 +4,5 @@ res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag1.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
-res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd
 res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag4.tscn
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd
