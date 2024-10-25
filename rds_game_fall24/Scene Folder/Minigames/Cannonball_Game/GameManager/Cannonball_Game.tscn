@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://qcsqbwsppj2l"]
+[gd_scene load_steps=23 format=3 uid="uid://qcsqbwsppj2l"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd" id="1_nb67d"]
 [ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_rfhu6"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cppwh6hy58fgj" path="res://assets/cannon_game_draft_assets/Rectangle 687.png" id="13_685u0"]
 [ext_resource type="Texture2D" uid="uid://i81w0udxi8vp" path="res://assets/cannon_game_draft_assets/Rectangle 688.png" id="14_i1cpy"]
 [ext_resource type="Texture2D" uid="uid://bey5j5dbjne2a" path="res://assets/cannon_game_draft_assets/Rectangle 689.png" id="15_u1eug"]
+[ext_resource type="Texture2D" uid="uid://bf630pjeiu443" path="res://assets/working_assets/Orbs Assets/orbs_counter/pink_counter.png" id="16_32hnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkuka"]
 size = Vector2(1024, 64)
@@ -172,3 +173,8 @@ shape = SubResource("RectangleShape2D_6iy2t")
 [node name="Marker2D" type="Marker2D" parent="."]
 visible = false
 position = Vector2(794.006, 536.131)
+
+[node name="PinkCounter" type="Sprite2D" parent="."]
+position = Vector2(71.6321, 726.823)
+scale = Vector2(0.564871, 0.564871)
+texture = ExtResource("16_32hnj")
