@@ -2,6 +2,8 @@ extends StaticBody2D
 
 @onready var animation_player = $AnimationPlayer
 
+signal stop_moving
+
 var A: float = 460  # Horizontal size of the figure-eight
 var B: float = 200  # Vertical size of the figure-eight
 var speed: float = 1.0  # Controls how fast the object moves
@@ -24,6 +26,7 @@ var rotation_angle: float = PI / 12
 func _ready():
 	set_process(true)
 	animation_player.play("flying")
+	stop_moving.connect(_on_stop_moving)
 	
 func _process(delta: float) -> void:
 	# Update time
@@ -66,3 +69,8 @@ func _on_trigger_area_body_entered(body):
 
 		#disable cannonball after collision
 		body.queue_free()
+
+func _on_stop_moving():
+	print("im trying to stop moving")
+	# Stop the bag's movement
+	speed = 0  # Or set to whatever you use to stop movement

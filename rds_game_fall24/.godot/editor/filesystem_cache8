@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729840979
+::res://::1729849604
 conveyor.gd::GDScript::-1::1729837578::0::1::::<>Node2D<>::
 Copy of Short Text_Dialogue Box_Focused_RDS Game.png::CompressedTexture2D::412281730972181593::1729837578::1729837578::1::::<><>::
 fox.tscn::PackedScene::1859519243384973732::1729837578::0::1::::<><>::uid://ceook2jgpk3ak::::res://assets/dummy_assets/Additional_Test_Assets/IMG_1482.PNG<>res://Scripts/fox_area.gd
@@ -8,13 +8,14 @@ main_character.tscn::PackedScene::3113528464361542574::1729837578::0::1::::<><>:
 orb 3.PNG::CompressedTexture2D::8420341416222174559::1729837578::1729837578::1::::<><>::
 Orb_TEST.tscn::PackedScene::7071972327926901487::1729837578::0::1::::<><>::uid://ckhae4btifobd::::res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png
 PowerGauge.gdshader::Shader::-1::1729837578::0::1::::<><>::
-PowerGauge.tscn::PackedScene::5040745362939221277::1729837578::0::1::::<><>::uid://dnnpj0ofx5u08::::res://assets/cannon_game_draft_assets/PowerGaugeBG.png<>uid://bllx5je2gxyte::::res://assets/cannon_game_draft_assets/PowerGuageTxture.png<>res://power_gauge.gd<>uid://uo74sb26jg22::::res://assets/cannon_game_draft_assets/Intro MG 1 - Screen 59.png
+PowerGauge.tscn::PackedScene::5040745362939221277::1729849602::0::1::::<><>::uid://dnnpj0ofx5u08::::res://assets/cannon_game_draft_assets/PowerGaugeBG.png<>uid://bllx5je2gxyte::::res://assets/cannon_game_draft_assets/PowerGuageTxture.png<>res://power_gauge.gd<>uid://dir60xich1dle::::res://assets/cannon_game_draft_assets/Background.PNG
 power_gauge.gd::GDScript::-1::1729837640::0::1::::<>TextureProgressBar<>::
 Short Text_Dialogue Box_Focused_RDS Game.png::CompressedTexture2D::2734135107253655221::1729837578::1729837578::1::::<><>::
 trajectory_path.tscn::PackedScene::8023279939376405042::1729837578::0::1::::<><>::
 UI.tscn::PackedScene::6370659473448383308::1729837578::0::1::::<><>::uid://br8nvmsg2wo75::::res://icon.svg
-::res://assets/::1729840979
-::res://assets/cannon_game_draft_assets/::1729837782
+::res://assets/::1729849197
+::res://assets/cannon_game_draft_assets/::1729849708
+Background.PNG::CompressedTexture2D::7757795314122700806::1729849187::1729849193::1::::<><>::
 bag.png::CompressedTexture2D::7484758718919807572::1729837578::1729837578::1::::<><>::
 bag_2.png::CompressedTexture2D::6944163425004972556::1729837578::1729837578::1::::<><>::
 bag_3.png::CompressedTexture2D::3282412433174773714::1729837578::1729837578::1::::<><>::
@@ -27,6 +28,7 @@ cannon body.png::CompressedTexture2D::8187631103042742600::1729837578::172983757
 flying bag spritesheet.png::CompressedTexture2D::3948718325409133304::1729836085::1729837778::1::::<><>::
 flyingbagdraft.png::CompressedTexture2D::9121442966958343031::1729837578::1729837578::1::::<><>::
 Intro MG 1 - Screen 59.png::CompressedTexture2D::1434673841342904865::1729837578::1729837578::1::::<><>::
+Platform2.PNG::CompressedTexture2D::5167395769912706346::1729849708::1729849709::1::::<><>::
 PowerGaugeBG.png::CompressedTexture2D::8099482091183273667::1729837578::1729837578::1::::<><>::
 PowerGuageTxture.png::CompressedTexture2D::3182656663781966178::1729837578::1729837578::1::::<><>::
 Rectangle 687.png::CompressedTexture2D::5857989602835109649::1729837578::1729837578::1::::<><>::
@@ -106,7 +108,7 @@ read_me.txt::TextFile::-1::1729837578::0::1::::<><>::
 32x32-ALL-ASSETS.png::CompressedTexture2D::3096138358071517853::1729837578::1729837578::1::::<><>::
 32x32-OBJECTS.png::CompressedTexture2D::1871899482873753038::1729837578::1729837578::1::::<><>::
 32x32-TEXTURES.png::CompressedTexture2D::6105803643741807861::1729837578::1729837578::1::::<><>::
-::res://assets/working_assets/::1729840979
+::res://assets/working_assets/::1729840987
 ::res://assets/working_assets/Bookshelf assets/::1729837691
 Untitled_Artwork3.png::CompressedTexture2D::289436074560233896::1729837578::1729837578::1::::<><>::
 Untitled_Artwork 1.png::CompressedTexture2D::337319330382749854::1729837578::1729837578::1::::<><>::
@@ -132,7 +134,7 @@ Xrough.PNG::CompressedTexture2D::230467394031630387::1729837578::1729837578::1::
 ::res://assets/working_assets/Hero Assets/::1729837691
 Icon.PNG::CompressedTexture2D::3423149103277005779::1729837578::1729837578::1::::<><>::
 main_character_spritesheet.png::CompressedTexture2D::4935568589707707796::1729837578::1729837578::1::::<><>::
-::res://assets/working_assets/Orbs Assets/::1729840979
+::res://assets/working_assets/Orbs Assets/::1729840987
 orb 1.PNG::CompressedTexture2D::7357482566117556811::1729837578::1729837578::1::::<><>::
 orb 2.PNG::CompressedTexture2D::1418167098780491388::1729837578::1729837578::1::::<><>::
 orb 3.PNG::CompressedTexture2D::456173510085995814::1729837578::1729837578::1::::<><>::
@@ -140,7 +142,7 @@ orb 4.PNG::CompressedTexture2D::8868821296555459780::1729837578::1729837578::1::
 orb 5.PNG::CompressedTexture2D::1453525704103781863::1729837578::1729837578::1::::<><>::
 orb 6.PNG::CompressedTexture2D::6308936708996031699::1729837578::1729837578::1::::<><>::
 OrbsWandsPotions.png::CompressedTexture2D::5489189116816699045::1729837578::1729837578::1::::<><>::
-::res://assets/working_assets/Orbs Assets/orbs_counter/::1729840979
+::res://assets/working_assets/Orbs Assets/orbs_counter/::1729840987
 blue_counter.png::CompressedTexture2D::6811452999128212832::1729840968::1729840984::1::::<><>::
 cyan_counter.png::CompressedTexture2D::855900169090284510::1729840968::1729840984::1::::<><>::
 green_counter.png::CompressedTexture2D::7100181336207219535::1729840968::1729840984::1::::<><>::
@@ -204,39 +206,39 @@ Constants.gd::GDScript::-1::1729837578::0::1::::<>Node<>::
 ConveyorItem.gd::GDScript::-1::1729837578::0::1::::<>Area2D<>::
 ConveyorItem.tscn::PackedScene::1455437186119604433::1729837578::0::1::::<><>::uid://ckhae4btifobd::::res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png<>res://ConveyorBelt Master/Managers/ConveyorItem.gd
 Enums.gd::GDScript::-1::1729837578::0::1::::<>Node<>::
-::res://Scene Folder/::1729838347
+::res://Scene Folder/::1729849602
 main_character.tscn::PackedScene::5817375992330108292::1729837578::0::1::::<><>::res://Scripts/main_character.gd<>uid://cck3dgf7fxv45::::res://assets/working_assets/Hero Assets/main_character_spritesheet.png
 UI.gd::GDScript::-1::1729837578::0::1::::<>CanvasLayer<>::
-UI.gdshader::Shader::-1::1729838127::0::1::::<><>::
+UI.gdshader::Shader::-1::1729849602::0::1::::<><>::
 UI.tscn::PackedScene::5157734322651910848::1729837578::0::1::::<><>::res://Scene Folder/UI.gd<>res://Scripts/dialogue.gd<>uid://br8nvmsg2wo75::::res://icon.svg<>uid://dm5jdoqrcadmb::::res://assets/ui_assets/dialogue_text_box.png<>uid://1cqiv22renjj::::res://assets/dummy_assets/Additional_Test_Assets/Frame 28.png<>res://Scripts/3choice_dialogue.gd<>uid://fo5qgy74gui::::res://assets/ui_assets/monologue_text_box.png<>uid://c1ltxtksg64vc::::res://assets/ui_assets/Selection Box.png
 ::res://Scene Folder/Environment/::1729837657
 Cauldron_Room.tscn::PackedScene::1495173672702862107::1729837578::0::1::::<><>::uid://eeg78fn8y1aq::::res://assets/working_assets/Bookshelf assets/Untitled_Artwork3.png<>uid://cp1rewxufvy6b::::res://assets/working_assets/Exit Assets/Exit3.png<>uid://blaeuafsqnao0::::res://assets/working_assets/Wall Assets/floors_walls_spritesheet.png<>uid://c3ua1ar51grfb::::res://assets/working_assets/Cauldron Assets/Podium.png<>uid://iapwdf0m3w66::::res://assets/working_assets/Conveyor belt Assets/conveyor_belt_spritesheet.png<>uid://1q1al4h8xolo::::res://fox.tscn<>uid://cfqpepeud7y6s::::res://Scene Folder/UI.tscn<>uid://e2nunx41ng6a::::res://assets/working_assets/Bookshelf assets/Untitled_Artwork 1.png<>uid://dk6ncry7fgb64::::res://assets/working_assets/Bookshelf assets/Untitled_Artwork.png<>res://conveyor.gd<>res://Scripts/cauldron_area.gd<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://cnq52axw13wrl::::res://ConveyorBelt Master/main.tscn<>uid://v3fe3rbixa55::::res://assets/working_assets/Cauldron Assets/Cauldron SS.png
-::res://Scene Folder/Minigames/::1729838347
-::res://Scene Folder/Minigames/Cannonball_Game/::1729838347
-::res://Scene Folder/Minigames/Cannonball_Game/Background/::1729838113
-tile_map.tscn::PackedScene::4233666246272337093::1729838113::0::1::::<><>::uid://uo74sb26jg22::::res://assets/cannon_game_draft_assets/Intro MG 1 - Screen 59.png
-::res://Scene Folder/Minigames/Cannonball_Game/Bag/::1729838347
+::res://Scene Folder/Minigames/::1729849594
+::res://Scene Folder/Minigames/Cannonball_Game/::1729849594
+::res://Scene Folder/Minigames/Cannonball_Game/Background/::1729849602
+tile_map.tscn::PackedScene::4233666246272337093::1729849602::0::1::::<><>::uid://dir60xich1dle::::res://assets/cannon_game_draft_assets/Background.PNG
+::res://Scene Folder/Minigames/Cannonball_Game/Bag/::1729849602
 bag1.gd::GDScript::-1::1729838111::0::1::::<>StaticBody2D<>::
-Bag1.tscn::PackedScene::75186779359140241::1729838338::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/bag1.gd<>uid://bwi12w4x6ahy3::::res://assets/cannon_game_draft_assets/flying bag spritesheet.png
+Bag1.tscn::PackedScene::75186779359140241::1729849602::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/bag1.gd<>uid://bwi12w4x6ahy3::::res://assets/cannon_game_draft_assets/flying bag spritesheet.png
 Bag2.tscn::PackedScene::6377697098252512368::1729837578::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://c562me0xi46pk::::res://assets/cannon_game_draft_assets/bag_2.png
 Bag3.tscn::PackedScene::413957059423585468::1729837578::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://bm1a4akqqcow5::::res://assets/cannon_game_draft_assets/bag_3.png
-Bag4.tscn::PackedScene::4616496271638652416::1729838113::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://de8oak7wklwso::::res://assets/cannon_game_draft_assets/bag_4.png
+Bag4.tscn::PackedScene::4616496271638652416::1729849602::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://de8oak7wklwso::::res://assets/cannon_game_draft_assets/bag_4.png
 Bag5.tscn::PackedScene::8822897665185269267::1729837578::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://cgtcr63osjoyq::::res://assets/cannon_game_draft_assets/bag_5.png
 Bag6.tscn::PackedScene::789983486622316115::1729837578::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://ciqd0nuvy138t::::res://assets/cannon_game_draft_assets/bag_6.png
 Bag6_2.gd::GDScript::-1::1729837578::0::1::::<>StaticBody2D<>::
-::res://Scene Folder/Minigames/Cannonball_Game/Cannon/::1729838113
+::res://Scene Folder/Minigames/Cannonball_Game/Cannon/::1729849601
 cannon.gd::GDScript::-1::1729837578::0::1::::<>Node2D<>::
-Cannon.tscn::PackedScene::9109898853211186624::1729838113::0::1::::<><>::uid://dowfc81kafhnk::::res://assets/cannon_game_draft_assets/cannon body.png<>uid://b1lsbaaj37mn3::::res://assets/cannon_game_draft_assets/trajectory dot.png<>res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader<>uid://qmjfamltg3oh::::res://assets/cannon_game_draft_assets/cannnon wheel.png
+Cannon.tscn::PackedScene::9109898853211186624::1729849601::0::1::::<><>::uid://dowfc81kafhnk::::res://assets/cannon_game_draft_assets/cannon body.png<>uid://b1lsbaaj37mn3::::res://assets/cannon_game_draft_assets/trajectory dot.png<>res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader<>uid://qmjfamltg3oh::::res://assets/cannon_game_draft_assets/cannnon wheel.png<>uid://b1k24nnqgwa42::::res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
 projection.gdshader::Shader::-1::1729837578::0::1::::<><>::
-::res://Scene Folder/Minigames/Cannonball_Game/Cannonball/::1729838113
-Cannonball.gd::GDScript::-1::1729837578::0::1::::<>RigidBody2D<>::
-Cannonball.tscn::PackedScene::168879098445437694::1729838113::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd<>uid://ckhae4btifobd::::res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png
+::res://Scene Folder/Minigames/Cannonball_Game/Cannonball/::1729849602
+Cannonball.gd::GDScript::-1::1729845885::0::1::::<>RigidBody2D<>::
+Cannonball.tscn::PackedScene::168879098445437694::1729849602::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd<>uid://ckhae4btifobd::::res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png
 CannonballKinematics.gd::GDScript::-1::1729837578::0::1::::<>CharacterBody2D<>::
-::res://Scene Folder/Minigames/Cannonball_Game/GameManager/::1729838129
-Cannonball_Game.gd::GDScript::-1::1729837578::0::1::::<>Node2D<>::
-Cannonball_Game.tscn::PackedScene::1128271819636443245::1729838127::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd<>uid://d215x53gvybky::::res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn<>uid://cd21lswhh1b46::::res://PowerGauge.tscn<>uid://b1k24nnqgwa42::::res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn<>uid://bonht2qyb3836::::res://assets/cannon_game_draft_assets/bottomboundary.png<>uid://cn127hcovajsn::::res://assets/cannon_game_draft_assets/topboundary.png<>uid://ciqd0nuvy138t::::res://assets/cannon_game_draft_assets/bag_6.png<>uid://cgtcr63osjoyq::::res://assets/cannon_game_draft_assets/bag_5.png<>uid://de8oak7wklwso::::res://assets/cannon_game_draft_assets/bag_4.png<>uid://bm1a4akqqcow5::::res://assets/cannon_game_draft_assets/bag_3.png<>uid://c562me0xi46pk::::res://assets/cannon_game_draft_assets/bag_2.png<>uid://devw5aiju1gw7::::res://assets/cannon_game_draft_assets/bag.png<>uid://cppwh6hy58fgj::::res://assets/cannon_game_draft_assets/Rectangle 687.png<>uid://i81w0udxi8vp::::res://assets/cannon_game_draft_assets/Rectangle 688.png<>uid://bey5j5dbjne2a::::res://assets/cannon_game_draft_assets/Rectangle 689.png
+::res://Scene Folder/Minigames/Cannonball_Game/GameManager/::1729849602
+Cannonball_Game.gd::GDScript::-1::1729848985::0::1::::<>Node2D<>::
+Cannonball_Game.tscn::PackedScene::1128271819636443245::1729849602::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd<>uid://d215x53gvybky::::res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn<>uid://cd21lswhh1b46::::res://PowerGauge.tscn<>uid://b1k24nnqgwa42::::res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn<>uid://ciqd0nuvy138t::::res://assets/cannon_game_draft_assets/bag_6.png<>uid://cgtcr63osjoyq::::res://assets/cannon_game_draft_assets/bag_5.png<>uid://de8oak7wklwso::::res://assets/cannon_game_draft_assets/bag_4.png<>uid://bm1a4akqqcow5::::res://assets/cannon_game_draft_assets/bag_3.png<>uid://c562me0xi46pk::::res://assets/cannon_game_draft_assets/bag_2.png<>uid://devw5aiju1gw7::::res://assets/cannon_game_draft_assets/bag.png<>uid://cppwh6hy58fgj::::res://assets/cannon_game_draft_assets/Rectangle 687.png<>uid://i81w0udxi8vp::::res://assets/cannon_game_draft_assets/Rectangle 688.png<>uid://bey5j5dbjne2a::::res://assets/cannon_game_draft_assets/Rectangle 689.png<>uid://bf630pjeiu443::::res://assets/working_assets/Orbs Assets/orbs_counter/pink_counter.png
 collidable.gd::GDScript::-1::1729837578::0::1::::<>Area2D<>::
-trajection.gdshader::Shader::-1::1729838127::0::1::::<><>::
+trajection.gdshader::Shader::-1::1729849602::0::1::::<><>::
 utilities.gd::GDScript::-1::1729837578::0::1::::<>Control<>::
 ::res://Scripts/::1729837697
 3choice_dialogue.gd::GDScript::-1::1729837578::0::1::::<>MarginContainer<>::

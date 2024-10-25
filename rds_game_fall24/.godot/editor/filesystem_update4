@@ -8,3 +8,8 @@ res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag4.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag1.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/bag1.gd
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd
+res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
+res://PowerGauge.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6.tscn

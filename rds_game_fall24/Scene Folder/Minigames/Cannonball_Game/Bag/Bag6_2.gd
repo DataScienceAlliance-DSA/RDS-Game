@@ -6,6 +6,8 @@ var has_triggered = false
 func _on_trigger_area_body_entered(body):
 	print("Entered area: ", body.name)  # Debug statement
 	if body.name == "Cannonball" and not has_triggered:
+		var cannon = get_node("../cannon")
+		cannon.timer.stop()
 		print(body.get_node("../cannon"))
 		body.get_node("../cannon").set_process(true)
 		emit_signal("bag_triggered")

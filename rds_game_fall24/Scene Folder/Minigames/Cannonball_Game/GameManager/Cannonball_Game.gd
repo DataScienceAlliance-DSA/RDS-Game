@@ -1,5 +1,7 @@
 extends Node2D
 
+signal stop_moving
+
 var current_bag: Node = null
 var current_bag_index = 0  # Start with bag 6 (index 0 in the array)
 
@@ -32,6 +34,10 @@ var bag_positions = [
 var current_velocity: Vector2 = Vector2.ZERO  # Current velocity of the bag
 var moving_left: bool = true  # Direction flag
 
+# Variables for tracking missed attempts
+var missed_attempts = 0
+var max_attempts = 3 # max allowed attempts
+
 # References to the platforms and their collision shapes
 var platform_1
 var platform_1_collision
@@ -39,6 +45,9 @@ var platform_2
 var platform_2_collision
 var platform_3
 var platform_3_collision
+
+# Referencing cannonball scene
+var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")
 
 func _ready():
 	UI.start_scene_change(false, false)
@@ -57,7 +66,7 @@ func _ready():
 	platform_2_collision.disabled = true
 	platform_3.visible = false
 	platform_3_collision.disabled = true
-
+	
 	load_new_bag()
 
 # Update loop for moving the bags side-to-side
@@ -65,7 +74,7 @@ func _process(delta):
 	if current_bag and current_velocity != Vector2.ZERO:
 		# Handle side-to-side movement with smooth slow down
 		var pos = current_bag.position
-		print(pos)
+		#print(pos)
 		if moving_left:
 			current_velocity.x = lerp(current_velocity.x, -velocities[current_bag_index].x, 0.05)  # Slow down left
 		else:
@@ -75,7 +84,7 @@ func _process(delta):
 
 		# Check movement limits
 		var limits = movement_limits[current_bag_index]
-		print(current_bag_index)
+		#print(current_bag_index)
 		if pos.x <= limits.x:  # Reached the left limit
 			pos.x = limits.x
 			moving_left = false
@@ -136,6 +145,9 @@ func hide_platforms():
 	
 # Function triggered when the bag's custom signal is emitted
 func _on_bag_triggered():
+	# Reset missed attempts in the cannon
+	var cannon = $cannon
+	cannon.reset_missed_attempts()
 	# Update the index for the next bag, decreasing by 1 each time
 	current_bag_index += 1
 
@@ -144,5 +156,16 @@ func _on_bag_triggered():
 		current_bag_index = 0  # Loop back to the first bag
 	
 	load_new_bag()  # Load the next bag in sequence when the signal is received
-	print("loaded new bag")
+	
 	print(current_bag_index)
+
+# Function to stop bag motion and drop an orb into it
+func perform_auto_drop():
+	if current_bag_index == 5:  # Assuming index 5 is the final bag
+		emit_signal("stop_moving")  # Emit the signal to stop movement for the final bag
+	else:
+		if current_velocity != Vector2.ZERO:
+			current_velocity = Vector2.ZERO  # Stop the bag's motion if it's not the final bag
+	var cannonball = cannonball_scene.instantiate()
+	cannonball.position = current_bag.position + Vector2(0, -50)  # Position orb above the bag
+	add_child(cannonball)
