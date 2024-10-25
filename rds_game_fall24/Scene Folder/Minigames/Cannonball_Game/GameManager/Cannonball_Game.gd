@@ -106,6 +106,9 @@ func _load_new_bag():
 	# Load the current bag based on the current index
 	current_bag = bag_scenes[current_bag_index].instantiate()
 	
+	# Setting main scene reference in the bag
+	current_bag.main_scene = self
+	
 	# Set the new bag's position
 	current_bag.position = bag_positions[current_bag_index]
 	add_child(current_bag)
@@ -154,10 +157,11 @@ func _on_bag_triggered():
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():
 	if current_bag_index == 5:  # Assuming index 5 is the final bag
+		print("stop_moving signal")
 		emit_signal("stop_moving")  # Emit the signal to stop movement for the final bag
 	else:
 		if current_velocity != Vector2.ZERO:
 			current_velocity = Vector2.ZERO  # Stop the bag's motion if it's not the final bag
 	var cannonball = cannonball_scene.instantiate()
-	cannonball.position = current_bag.position + Vector2(0, -50)  # Position orb above the bag
+	cannonball.position = current_bag.position + Vector2(0, -100)  # Position orb above the bag
 	add_child(cannonball)

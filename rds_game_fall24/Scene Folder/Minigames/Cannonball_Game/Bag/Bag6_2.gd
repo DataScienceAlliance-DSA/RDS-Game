@@ -2,6 +2,7 @@ extends StaticBody2D
 
 signal bag_triggered  # Custom signal
 var has_triggered = false
+var main_scene: Node = null
 
 func _on_trigger_area_body_entered(body):
 	if body.name == "Cannonball" and not has_triggered:
