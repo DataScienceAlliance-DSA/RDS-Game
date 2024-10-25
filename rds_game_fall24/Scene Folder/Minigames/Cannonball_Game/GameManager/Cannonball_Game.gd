@@ -23,8 +23,8 @@ var movement_limits = [Vector2.ZERO, Vector2.ZERO, Vector2(408, 594), Vector2(78
 
 # Array of positions corresponding to each bag
 var bag_positions = [
-	Vector2(367, 629),  # Position for Bag 6
-	Vector2(1219, 629),  # Position for Bag 5
+	Vector2(367, 684),  # Position for Bag 6
+	Vector2(1219, 684),  # Position for Bag 5
 	Vector2(408, 372),  # Position for Bag 4
 	Vector2(949, 204),  # Position for Bag 3
 	Vector2(1083, 526),  # Position for Bag 2

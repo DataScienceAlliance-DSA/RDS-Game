@@ -9,9 +9,6 @@ res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag1.tscn
 res://PowerGauge.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd
-res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
+res://Scene Folder/Minigames/Cannonball_Game/Bag/bag1.gd
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd
-res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag5.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag3.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag2.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://qcsqbwsppj2l"]
+[gd_scene load_steps=19 format=3 uid="uid://qcsqbwsppj2l"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd" id="1_nb67d"]
 [ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_rfhu6"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://c562me0xi46pk" path="res://assets/cannon_game_draft_assets/bag_2.png" id="11_fveiw"]
 [ext_resource type="Texture2D" uid="uid://cfveiu5idd6ok" path="res://assets/cannon_game_draft_assets/Platform2.PNG" id="11_qwkcx"]
 [ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="12_4lwbe"]
-[ext_resource type="Texture2D" uid="uid://bf630pjeiu443" path="res://assets/working_assets/Orbs Assets/orbs_counter/pink_counter.png" id="16_32hnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sapuo"]
 size = Vector2(43.8422, 361.9)
@@ -92,13 +91,13 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(367.241, 629.979)
+position = Vector2(367.241, 684.891)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("7_hgudh")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1219.76, 629.979)
+position = Vector2(1219.76, 684.891)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_yngfa")
 
@@ -127,6 +126,7 @@ scale = Vector2(0.085, 0.085)
 texture = ExtResource("12_4lwbe")
 
 [node name="platform_1" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(502.433, 418.322)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform_1"]
@@ -139,6 +139,7 @@ position = Vector2(-1.09076e-05, 0)
 shape = SubResource("RectangleShape2D_1hh85")
 
 [node name="platform_2" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(948.368, 251.592)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform_2"]
@@ -150,6 +151,7 @@ texture = ExtResource("11_qwkcx")
 shape = SubResource("RectangleShape2D_38nu6")
 
 [node name="platform_3" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(1081.54, 573.072)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform_3"]
@@ -164,12 +166,5 @@ shape = SubResource("RectangleShape2D_6iy2t")
 [node name="Marker2D" type="Marker2D" parent="."]
 visible = false
 position = Vector2(794.006, 536.131)
-
-[node name="PinkCounter" type="Sprite2D" parent="."]
-position = Vector2(76.6766, 115.812)
-scale = Vector2(0.657658, 0.657658)
-texture = ExtResource("16_32hnj")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PinkCounter"]
 
 [node name="autodelaytimer" type="Timer" parent="."]
