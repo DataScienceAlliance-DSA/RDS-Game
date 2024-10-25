@@ -22,21 +22,19 @@ script/source = "extends Node2D
 
 # track the phase of the bag
 var bag_phase = 0
-var bag_attempts = 3
+# track missed attempts of shooting
+var missed_attempts = 0
+var max_attempts = 3 # max allowed attempts
 
 func _ready() -> void:
 	trajectory.visible = false
 	if power_gauge == null:
 		# print(\"Power gauge not found!\")
 		pass
+	timer.timeout.connect(_on_timer_timeout)
 	pause_timer.timeout.connect(_on_PauseTimer_timeout)
 
 func _process(_delta: float) -> void:
-	var bag = get_tree().get_first_node_in_group(\"Bags\")
-	if bag:
-		if !bag.get_parent().is_connected(\"bag_triggered\", bag_hit):
-			bag.get_parent().connect(\"bag_triggered\", bag_hit)
-	
 	if Input.is_action_just_pressed(\"cannon shoot\"):  # Assuming you have an input action called \"shoot\"
 		power_gauge.start_fluctuating()
 		trajectory.visible = true
@@ -45,7 +43,6 @@ func _process(_delta: float) -> void:
 	# Stop fluctuating and shoot the cannon when space bar is released
 	if Input.is_action_just_released(\"cannon shoot\"):
 		trajectory.visible = false
-		bag_attempts -= 1
 		var power = power_gauge.stop_fluctuating() # Get the last value before resetting
 		shoot_cannon(power)  #Shoot using the current power
 		collision_test.get_child(0).disabled = true
@@ -99,7 +96,20 @@ func shoot_cannon(power: float):
 	
 	#Start shot timer
 	start_shot_attempt_timer()
+	print(\"Timer has started\")
+# Function to reset missed attempts
+func reset_missed_attempts():
+	missed_attempts = 0
 
+func _on_timer_timeout():
+	missed_attempts += 1
+	print(\"Timeout\", missed_attempts)
+	if missed_attempts >= max_attempts:
+		set_process(false)
+		pause_timer.start()
+	else:
+		pass
+	
 func start_shot_attempt_timer():
 	timer.start() #Start when shot is fired // matches the duration of the cannon ball spawn of 3 seconds
 	
@@ -111,9 +121,6 @@ func _on_PauseTimer_timeout():
 	get_parent().perform_auto_drop()
 	set_process(true)
 
-func bag_hit():
-	bag_attempts += 3
-	print(bag_attempts)
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q06xq"]
@@ -122,7 +129,7 @@ shader_parameter/scrolling_speed = 2.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q0ujv"]
 
-[node name="cannon" type="Node2D" groups=["Cannon"]]
+[node name="cannon" type="Node2D"]
 z_index = -1
 scale = Vector2(0.99761, 1)
 script = SubResource("GDScript_3go7r")

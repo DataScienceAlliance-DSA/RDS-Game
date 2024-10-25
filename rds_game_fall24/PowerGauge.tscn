@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cd21lswhh1b46"]
+[gd_scene load_steps=6 format=3 uid="uid://cd21lswhh1b46"]
 
 [ext_resource type="Texture2D" uid="uid://dnnpj0ofx5u08" path="res://assets/cannon_game_draft_assets/PowerGaugeBG.png" id="1_riatp"]
 [ext_resource type="Texture2D" uid="uid://bllx5je2gxyte" path="res://assets/cannon_game_draft_assets/PowerGuageTxture.png" id="2_crwjt"]
 [ext_resource type="Script" path="res://power_gauge.gd" id="3_ypa3w"]
 [ext_resource type="Texture2D" uid="uid://dir60xich1dle" path="res://assets/cannon_game_draft_assets/Background.PNG" id="4_1hf14"]
+[ext_resource type="Texture2D" uid="uid://bf630pjeiu443" path="res://assets/working_assets/Orbs Assets/orbs_counter/pink_counter.png" id="5_18fs4"]
 
 [node name="PowerGauge" type="CanvasLayer"]
 
@@ -11,10 +12,10 @@
 texture_filter = 5
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 31.0
-offset_top = 207.0
-offset_right = 63.0
-offset_bottom = -185.0
+offset_left = 38.0
+offset_top = 219.0
+offset_right = 70.0
+offset_bottom = -173.0
 grow_vertical = 2
 max_value = 80.0
 step = 0.0
@@ -32,3 +33,8 @@ custom_minimum_size = Vector2(1366, 768)
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_1hf14")
+
+[node name="PinkCounter" type="Sprite2D" parent="."]
+position = Vector2(98, 129)
+scale = Vector2(0.793305, 0.793305)
+texture = ExtResource("5_18fs4")
