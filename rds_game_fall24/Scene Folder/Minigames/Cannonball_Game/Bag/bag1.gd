@@ -2,15 +2,14 @@ extends StaticBody2D
 
 @onready var animation_player = $AnimationPlayer
 
-signal stop_moving
-
 var A: float = 460  # Horizontal size of the figure-eight
 var B: float = 200  # Vertical size of the figure-eight
-var speed: float = 1.0  # Controls how fast the object moves
+var speed: float = 5.0  # Controls how fast the object moves
 var time: float = 0.0  # Time variable for the parametric equation
 
 signal bag_triggered  # Custom signal
 var has_triggered = false
+var main_scene: Node = null
 
 # Rotation variables
 var max_rotation_degrees: float = 35.0
@@ -26,7 +25,8 @@ var rotation_angle: float = PI / 12
 func _ready():
 	set_process(true)
 	animation_player.play("flying")
-	stop_moving.connect(_on_stop_moving)
+	if main_scene:
+		main_scene.stop_moving.connect(_on_stop_moving)
 	
 func _process(delta: float) -> void:
 	# Update time

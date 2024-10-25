@@ -180,7 +180,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="PauseTimer" type="Timer" parent="."]
-wait_time = 8.0
+wait_time = 3.0
 one_shot = true
 
 [node name="background" parent="." instance=ExtResource("5_2pikp")]
