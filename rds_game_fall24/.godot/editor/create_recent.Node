@@ -1,3 +1,10 @@
+RichTextLabel
+MarginContainer
+TextureRect
+TextEdit
+HBoxContainer
+VBoxContainer
+Control
 AnimationPlayer
 CollisionShape2D
 Timer
@@ -5,10 +12,3 @@ Sprite2D
 StaticBody2D
 CharacterBody2D
 Marker2D
-Camera2D
-Area2D
-Line2D
-RigidBody2D
-RemoteTransform2D
-RayCast2D
-Node

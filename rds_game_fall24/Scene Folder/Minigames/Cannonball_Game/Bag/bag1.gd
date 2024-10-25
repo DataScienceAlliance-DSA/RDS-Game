@@ -60,17 +60,13 @@ func update_rotation(delta: float) -> void:
 		rotation_direction = 1
 		
 func _on_trigger_area_body_entered(body):
-	print("Entered area: ", body.name)  # Debug statement
 	if body.name == "Cannonball" and not has_triggered:
-		print("HELP ME")
 		emit_signal("bag_triggered")
 		has_triggered = true
-		print("cannonball has entered and triggered")
 
 		#disable cannonball after collision
 		body.queue_free()
 
 func _on_stop_moving():
-	print("im trying to stop moving")
 	# Stop the bag's movement
 	speed = 0  # Or set to whatever you use to stop movement

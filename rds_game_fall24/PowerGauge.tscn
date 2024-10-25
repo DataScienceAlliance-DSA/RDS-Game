@@ -38,3 +38,13 @@ texture = ExtResource("4_1hf14")
 position = Vector2(98, 129)
 scale = Vector2(0.793305, 0.793305)
 texture = ExtResource("5_18fs4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PinkCounter"]
+offset_left = 16.3871
+offset_top = 1.26055
+offset_right = 68.3871
+offset_bottom = 56.2606
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[center][b]4"
+fit_content = true

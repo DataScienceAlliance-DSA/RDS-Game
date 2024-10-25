@@ -18,23 +18,25 @@ script/source = "extends Node2D
 @onready var collision_test : CharacterBody2D = self.get_node(\"Trajectory/CollisionTest\")
 
 @onready var timer = $Timer # Matching the amount of time that the orb stays in the scene before being removed
-@onready var pause_timer = $PauseTimer # If we exceed 3 attempts, this will give a delay before the auto drop feature starts
+@onready var spawn_ball_delay = false # Bool to trigger unhappy ball spawn over bag after a time delay (mitigates one-ball-in-scene to trigger bag issue)
 
 # track the phase of the bag
 var bag_phase = 0
-# track missed attempts of shooting
-var missed_attempts = 0
-var max_attempts = 3 # max allowed attempts
+var bag_attempts = 3
 
 func _ready() -> void:
 	trajectory.visible = false
 	if power_gauge == null:
 		# print(\"Power gauge not found!\")
 		pass
-	timer.timeout.connect(_on_timer_timeout)
-	pause_timer.timeout.connect(_on_PauseTimer_timeout)
+	timer.timeout.connect(_on_PauseTimer_timeout)
 
 func _process(_delta: float) -> void:
+	var bag = get_tree().get_first_node_in_group(\"Bags\")
+	if bag:
+		if !bag.get_parent().is_connected(\"bag_triggered\", bag_hit):
+			bag.get_parent().connect(\"bag_triggered\", bag_hit)
+	
 	if Input.is_action_just_pressed(\"cannon shoot\"):  # Assuming you have an input action called \"shoot\"
 		power_gauge.start_fluctuating()
 		trajectory.visible = true
@@ -43,6 +45,7 @@ func _process(_delta: float) -> void:
 	# Stop fluctuating and shoot the cannon when space bar is released
 	if Input.is_action_just_released(\"cannon shoot\"):
 		trajectory.visible = false
+		bag_attempts -= 1
 		var power = power_gauge.stop_fluctuating() # Get the last value before resetting
 		shoot_cannon(power)  #Shoot using the current power
 		collision_test.get_child(0).disabled = true
@@ -96,31 +99,31 @@ func shoot_cannon(power: float):
 	
 	#Start shot timer
 	start_shot_attempt_timer()
-	print(\"Timer has started\")
-# Function to reset missed attempts
-func reset_missed_attempts():
-	missed_attempts = 0
 
-func _on_timer_timeout():
-	missed_attempts += 1
-	print(\"Timeout\", missed_attempts)
-	if missed_attempts >= max_attempts:
-		set_process(false)
-		pause_timer.start()
-	else:
-		pass
-	
 func start_shot_attempt_timer():
 	timer.start() #Start when shot is fired // matches the duration of the cannon ball spawn of 3 seconds
 	
 func start_PauseTimer():
-	pause_timer.start()
 	set_process(false) #these are not working for some reason, but I do not know why.
-	
-func _on_PauseTimer_timeout():
-	get_parent().perform_auto_drop()
-	set_process(true)
+	timer.start()
 
+func _on_PauseTimer_timeout():
+	if (bag_attempts == 0):
+		if (spawn_ball_delay):
+			spawn_ball_delay = false
+			get_parent().perform_auto_drop()
+		else:
+			timer.wait_time = 0.5
+			timer.start()
+			start_PauseTimer()
+			spawn_ball_delay = true
+	else:
+		timer.wait_time = 3
+		timer.start()
+		set_process(true)
+
+func bag_hit():
+	bag_attempts += 3
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q06xq"]
@@ -129,7 +132,7 @@ shader_parameter/scrolling_speed = 2.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q0ujv"]
 
-[node name="cannon" type="Node2D"]
+[node name="cannon" type="Node2D" groups=["Cannon"]]
 z_index = -1
 scale = Vector2(0.99761, 1)
 script = SubResource("GDScript_3go7r")
@@ -180,7 +183,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="PauseTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 8.0
 one_shot = true
 
 [node name="background" parent="." instance=ExtResource("5_2pikp")]

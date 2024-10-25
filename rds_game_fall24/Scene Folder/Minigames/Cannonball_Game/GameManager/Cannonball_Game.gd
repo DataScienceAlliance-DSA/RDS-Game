@@ -51,6 +51,7 @@ var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Can
 
 func _ready():
 	UI.start_scene_change(false, false)
+	UI.get_node("Instructions").set_process(true)
 	# Get the platform nodes and their collision shapes
 	platform_1 = $platform_1
 	platform_1_collision = $platform_1/CollisionShape2D
@@ -71,6 +72,8 @@ func _ready():
 
 # Update loop for moving the bags side-to-side
 func _process(delta): 
+	self.get_node("PowerGauge/PinkCounter/RichTextLabel").text = "[center][b]" + str(get_node("cannon").bag_attempts)
+	
 	if current_bag and current_velocity != Vector2.ZERO:
 		# Handle side-to-side movement with smooth slow down
 		var pos = current_bag.position
@@ -145,9 +148,12 @@ func hide_platforms():
 func _on_bag_triggered():
 	# Reset missed attempts in the cannon
 	var cannon = $cannon
+	if current_bag_index == 5:
+		end_game()
+		return
 	# Update the index for the next bag, decreasing by 1 each time
 	current_bag_index += 1
-
+	
 	# If we've reached the last bag, loop back to the first bag
 	if current_bag_index >= bag_scenes.size():
 		current_bag_index = 0  # Loop back to the first bag
@@ -157,7 +163,6 @@ func _on_bag_triggered():
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():
 	if current_bag_index == 5:  # Assuming index 5 is the final bag
-		print("stop_moving signal")
 		emit_signal("stop_moving")  # Emit the signal to stop movement for the final bag
 	else:
 		if current_velocity != Vector2.ZERO:
@@ -173,3 +178,6 @@ func perform_auto_drop():
 	# Add the cannonball to the scene
 	add_child(cannonball)
 	cannonball_sprite.frame = current_bag_index
+
+func end_game():
+	UI.get_node("Monologue-CannonGame").set_process(true)
