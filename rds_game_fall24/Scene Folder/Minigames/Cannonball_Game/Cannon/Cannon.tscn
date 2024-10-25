@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://d215x53gvybky"]
 
-[ext_resource type="Texture2D" uid="uid://dowfc81kafhnk" path="res://assets/cannon_game_draft_assets/cannon body.png" id="1_o1g55"]
+[ext_resource type="Texture2D" path="res://assets/cannon_game_draft_assets/cannon body.png" id="1_o1g55"]
 [ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://assets/cannon_game_draft_assets/trajectory dot.png" id="2_ee8mj"]
 [ext_resource type="Shader" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader" id="2_inmcu"]
-[ext_resource type="Texture2D" uid="uid://qmjfamltg3oh" path="res://assets/cannon_game_draft_assets/cannnon wheel.png" id="4_2rgn1"]
+[ext_resource type="Texture2D" path="res://assets/cannon_game_draft_assets/cannnon wheel.png" id="4_2rgn1"]
 
 [sub_resource type="GDScript" id="GDScript_3go7r"]
 script/source = "extends Node2D
@@ -71,6 +71,7 @@ func _physics_process(_delta):
 func shoot_cannon(power: float):
 	# Instance a new cannonball
 	var cannonball = cannonball_scene.instantiate() as RigidBody2D
+	var cannonball_sprite = cannonball.get_node(\"dart\") as Sprite2D;
 	cannonball.name = \"Cannonball\"
 	
 	# Set its starting position at the cannon's tip
@@ -78,6 +79,7 @@ func shoot_cannon(power: float):
 	
 	# Add the cannonball to the scene
 	get_parent().add_child(cannonball)
+	cannonball_sprite.frame = get_node(\"..\").current_bag_index
 	
 	# Calculate velocity based on the cannon's direction and power
 	var direction = Vector2(1, 0).rotated(rotation)  # Direction the cannon is facing
@@ -99,7 +101,7 @@ script = SubResource("GDScript_3go7r")
 top_level = true
 z_index = 1
 y_sort_enabled = true
-position = Vector2(114.492, 649.605)
+position = Vector2(125, 642)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("4_2rgn1")
 
