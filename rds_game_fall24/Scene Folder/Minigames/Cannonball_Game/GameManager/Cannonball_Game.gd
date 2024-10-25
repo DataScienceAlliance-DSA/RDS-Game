@@ -109,16 +109,11 @@ func _load_new_bag():
 	# Set the new bag's position
 	current_bag.position = bag_positions[current_bag_index]
 	add_child(current_bag)
-
 	# Set the velocity for side-to-side movement (for bags 4, 3, 2)
 	current_velocity = velocities[current_bag_index]
-
 	# Debugging: Print the velocity assigned
-	print("Assigned Velocity: ", current_velocity)
-
 	# Connect the bag's custom signal to detect the orb hit
 	current_bag.bag_triggered.connect(_on_bag_triggered)
-
 	# Show platforms if we're on Bag 4 (index 2), and keep them visible until Bag 2 (index 4)
 	if current_bag_index <= 4 and current_bag_index >= 2:  # Between Bag 4 and Bag 2
 		show_platforms()
@@ -147,7 +142,6 @@ func hide_platforms():
 func _on_bag_triggered():
 	# Reset missed attempts in the cannon
 	var cannon = $cannon
-	cannon.reset_missed_attempts()
 	# Update the index for the next bag, decreasing by 1 each time
 	current_bag_index += 1
 
@@ -156,8 +150,6 @@ func _on_bag_triggered():
 		current_bag_index = 0  # Loop back to the first bag
 	
 	load_new_bag()  # Load the next bag in sequence when the signal is received
-	
-	print(current_bag_index)
 
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():

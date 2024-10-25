@@ -22,7 +22,6 @@ script/source = "extends Node2D
 
 # track the phase of the bag
 var bag_phase = 0
-var bag_attempts = 3
 
 func _ready() -> void:
 	trajectory.visible = false
@@ -34,8 +33,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var bag = get_tree().get_first_node_in_group(\"Bags\")
 	if bag:
-		if !bag.get_parent().is_connected(\"bag_triggered\", bag_hit):
-			bag.get_parent().connect(\"bag_triggered\", bag_hit)
+		bag.get_parent().connect(bag_hit())
 	
 	if Input.is_action_just_pressed(\"cannon shoot\"):  # Assuming you have an input action called \"shoot\"
 		power_gauge.start_fluctuating()
@@ -45,7 +43,6 @@ func _process(_delta: float) -> void:
 	# Stop fluctuating and shoot the cannon when space bar is released
 	if Input.is_action_just_released(\"cannon shoot\"):
 		trajectory.visible = false
-		bag_attempts -= 1
 		var power = power_gauge.stop_fluctuating() # Get the last value before resetting
 		shoot_cannon(power)  #Shoot using the current power
 		collision_test.get_child(0).disabled = true
@@ -112,8 +109,7 @@ func _on_PauseTimer_timeout():
 	set_process(true)
 
 func bag_hit():
-	bag_attempts += 3
-	print(bag_attempts)
+	pass
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q06xq"]

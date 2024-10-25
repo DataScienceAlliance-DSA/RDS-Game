@@ -16,7 +16,7 @@ script = ExtResource("1_nddnn")
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_ao8nd")
 
-[node name="TriggerArea" type="Area2D" parent="."]
+[node name="TriggerArea" type="Area2D" parent="." groups=["Bags"]]
 position = Vector2(0, -31)
 disable_mode = 1
 collision_layer = 0

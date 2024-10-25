@@ -14,7 +14,7 @@ script = ExtResource("1_mfpl3")
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_una27")
 
-[node name="TriggerArea" type="Area2D" parent="."]
+[node name="TriggerArea" type="Area2D" parent="." groups=["Bags"]]
 position = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
