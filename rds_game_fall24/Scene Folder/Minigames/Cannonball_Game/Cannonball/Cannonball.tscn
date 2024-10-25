@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cn2ocw6e0h8y"]
 
-[ext_resource type="Texture2D" uid="uid://dr7417ucamppf" path="res://orb 3.PNG" id="2_kcroy"]
+[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://assets/working_assets/Orbs Assets/OrbsWandsPotions.png" id="2_0ih7s"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd" id="2_l36d6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_31evt"]
@@ -14,8 +14,9 @@ physics_material_override = SubResource("PhysicsMaterial_31evt")
 script = ExtResource("2_l36d6")
 
 [node name="dart" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_kcroy")
+texture = ExtResource("2_0ih7s")
+hframes = 6
+vframes = 2
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)

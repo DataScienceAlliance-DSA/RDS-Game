@@ -11,7 +11,7 @@ func _on_trigger_area_body_entered(body):
 		emit_signal("bag_triggered")
 		has_triggered = true
 		print("cannonball has entered and berfed")
-
+		
 		#disable cannonball after collision
 		body.queue_free()
 

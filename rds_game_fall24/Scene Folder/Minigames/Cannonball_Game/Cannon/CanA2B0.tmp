@@ -53,8 +53,7 @@ func _physics_process(_delta):
 	
 	var max_line_dots = 300
 	trajectory.clear_points()
-	var rot = get_rotation()
-	var pos = Vector2(cos(rot), sin(rot)) * 60
+	var pos = cannon_tip_position
 	trajectory.set_rotation(- self.rotation)
 	
 	var vel = Vector2(1, 0).rotated(rotation) * power_gauge.last_value * 17
@@ -92,6 +91,7 @@ shader_parameter/scrolling_speed = 2.0
 
 [node name="cannon" type="Node2D"]
 z_index = -1
+rotation = -1.16667
 scale = Vector2(0.99761, 1)
 script = SubResource("GDScript_3go7r")
 
