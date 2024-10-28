@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd" id="1_nb67d"]
 [ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn" id="1_rfhu6"]
-[ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://PowerGauge.tscn" id="2_5q4oa"]
+[ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PowerGauge.tscn" id="2_5q4oa"]
 [ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn" id="3_kaw3j"]
-[ext_resource type="Texture2D" uid="uid://ciqd0nuvy138t" path="res://assets/cannon_game_draft_assets/bag_6.png" id="7_hgudh"]
-[ext_resource type="Texture2D" uid="uid://cgtcr63osjoyq" path="res://assets/cannon_game_draft_assets/bag_5.png" id="8_yngfa"]
-[ext_resource type="Texture2D" uid="uid://de8oak7wklwso" path="res://assets/cannon_game_draft_assets/bag_4.png" id="9_vegwf"]
-[ext_resource type="Texture2D" uid="uid://bm1a4akqqcow5" path="res://assets/cannon_game_draft_assets/bag_3.png" id="10_ildvm"]
-[ext_resource type="Texture2D" uid="uid://c562me0xi46pk" path="res://assets/cannon_game_draft_assets/bag_2.png" id="11_fveiw"]
-[ext_resource type="Texture2D" uid="uid://cfveiu5idd6ok" path="res://assets/cannon_game_draft_assets/Platform2.PNG" id="11_qwkcx"]
-[ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/cannon_game_draft_assets/bag.png" id="12_4lwbe"]
+[ext_resource type="Texture2D" uid="uid://ciqd0nuvy138t" path="res://assets/Cannon_Game/bag_6.png" id="7_hgudh"]
+[ext_resource type="Texture2D" uid="uid://cgtcr63osjoyq" path="res://assets/Cannon_Game/bag_5.png" id="8_yngfa"]
+[ext_resource type="Texture2D" uid="uid://de8oak7wklwso" path="res://assets/Cannon_Game/bag_4.png" id="9_vegwf"]
+[ext_resource type="Texture2D" uid="uid://bm1a4akqqcow5" path="res://assets/Cannon_Game/bag_3.png" id="10_ildvm"]
+[ext_resource type="Texture2D" uid="uid://c562me0xi46pk" path="res://assets/Cannon_Game/bag_2.png" id="11_fveiw"]
+[ext_resource type="Texture2D" uid="uid://cfveiu5idd6ok" path="res://assets/Cannon_Game/Platform2.PNG" id="11_qwkcx"]
+[ext_resource type="Texture2D" uid="uid://devw5aiju1gw7" path="res://assets/Cannon_Game/bag.png" id="12_4lwbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sapuo"]
 size = Vector2(43.8422, 361.9)

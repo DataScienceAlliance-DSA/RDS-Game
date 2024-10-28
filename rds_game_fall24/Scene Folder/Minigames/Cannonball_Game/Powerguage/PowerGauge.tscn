@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd21lswhh1b46"]
+
+[ext_resource type="Texture2D" uid="uid://dnnpj0ofx5u08" path="res://assets/Cannon_Game/PowerGaugeBG.png" id="1_riatp"]
+[ext_resource type="Texture2D" uid="uid://bllx5je2gxyte" path="res://assets/Cannon_Game/PowerGuageTxture.png" id="2_crwjt"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Powerguage/power_gauge.gd" id="3_ypa3w"]
+[ext_resource type="Texture2D" uid="uid://dir60xich1dle" path="res://assets/Cannon_Game/Background.PNG" id="4_1hf14"]
+[ext_resource type="Texture2D" uid="uid://bf630pjeiu443" path="res://assets/Cauldron_Room/Orbs Assets/orbs_counter/pink_counter.png" id="5_tm3s0"]
+
+[node name="PowerGauge" type="CanvasLayer"]
+
+[node name="power_gauge" type="TextureProgressBar" parent="."]
+texture_filter = 5
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 219.0
+offset_right = 70.0
+offset_bottom = -173.0
+grow_vertical = 2
+max_value = 80.0
+step = 0.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("1_riatp")
+texture_progress = ExtResource("2_crwjt")
+texture_progress_offset = Vector2(2, 2)
+script = ExtResource("3_ypa3w")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+z_index = -1
+custom_minimum_size = Vector2(1366, 768)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_1hf14")
+
+[node name="PinkCounter" type="Sprite2D" parent="."]
+position = Vector2(98, 129)
+scale = Vector2(0.793305, 0.793305)
+texture = ExtResource("5_tm3s0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PinkCounter"]
+offset_left = 16.3871
+offset_top = 1.26055
+offset_right = 68.3871
+offset_bottom = 56.2606
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[center][b]4"
+fit_content = true

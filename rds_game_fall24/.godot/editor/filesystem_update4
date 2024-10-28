@@ -16,3 +16,7 @@ res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag2.tscn
 res://UI.tscn
 res://Scene Folder/UI.tscn
 res://fox.tscn
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/conveyor.gd
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/from_direction_controller.gd
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.gd
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/generator.gd

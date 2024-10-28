@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://d215x53gvybky"]
 
-[ext_resource type="Texture2D" uid="uid://dowfc81kafhnk" path="res://assets/cannon_game_draft_assets/cannon body.png" id="1_o1g55"]
-[ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://assets/cannon_game_draft_assets/trajectory dot.png" id="2_ee8mj"]
+[ext_resource type="Texture2D" uid="uid://dowfc81kafhnk" path="res://assets/Cannon_Game/cannon body.png" id="1_o1g55"]
+[ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://assets/Cannon_Game/trajectory dot.png" id="2_ee8mj"]
 [ext_resource type="Shader" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader" id="2_inmcu"]
-[ext_resource type="Texture2D" uid="uid://qmjfamltg3oh" path="res://assets/cannon_game_draft_assets/cannnon wheel.png" id="4_2rgn1"]
+[ext_resource type="Texture2D" uid="uid://qmjfamltg3oh" path="res://assets/Cannon_Game/cannnon wheel.png" id="4_2rgn1"]
 [ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn" id="5_2pikp"]
 
 [sub_resource type="GDScript" id="GDScript_3go7r"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b1k24nnqgwa42"]
 
-[ext_resource type="Texture2D" uid="uid://dir60xich1dle" path="res://assets/cannon_game_draft_assets/Background.PNG" id="1_8mdpe"]
+[ext_resource type="Texture2D" uid="uid://dir60xich1dle" path="res://assets/Cannon_Game/Background.PNG" id="1_8mdpe"]
 
 [node name="background" type="CanvasLayer"]
 
