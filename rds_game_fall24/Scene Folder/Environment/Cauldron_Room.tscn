@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cfqpepeud7y6s" path="res://Scene Folder/UI.tscn" id="9_n76cm"]
 [ext_resource type="Texture2D" uid="uid://e2nunx41ng6a" path="res://assets/working_assets/Bookshelf assets/Untitled_Artwork 1.png" id="10_bfrj1"]
 [ext_resource type="Texture2D" uid="uid://dk6ncry7fgb64" path="res://assets/working_assets/Bookshelf assets/Untitled_Artwork.png" id="12_7h20l"]
-[ext_resource type="Script" path="res://conveyor.gd" id="12_y73ja"]
+[ext_resource type="Script" path="res://ConveyorBelt Master/conveyor.gd" id="12_y73ja"]
 [ext_resource type="Script" path="res://Scripts/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="16_0o7eq"]
 [ext_resource type="PackedScene" uid="uid://cnq52axw13wrl" path="res://ConveyorBelt Master/main.tscn" id="16_ukm0n"]

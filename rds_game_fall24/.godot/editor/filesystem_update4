@@ -1,7 +1,8 @@
-res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
+res://Scene Folder/Environment/Cauldron_Room.tscn
 res://power_gauge.gd
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
 res://Scene Folder/UI.gdshader
+res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag4.tscn
@@ -14,3 +15,4 @@ res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag3.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag2.tscn
 res://UI.tscn
 res://Scene Folder/UI.tscn
+res://fox.tscn
