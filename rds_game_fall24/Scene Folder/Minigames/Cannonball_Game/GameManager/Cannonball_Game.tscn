@@ -170,6 +170,7 @@ texture = ExtResource("6_1k8v2")
 hframes = 5
 
 [node name="animation_marker" type="Marker2D" parent="."]
+visible = false
 
 [node name="poof_animation" type="AnimationPlayer" parent="animation_marker"]
 root_node = NodePath("../..")
