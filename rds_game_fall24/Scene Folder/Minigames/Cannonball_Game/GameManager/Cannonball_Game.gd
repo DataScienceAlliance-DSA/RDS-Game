@@ -2,6 +2,9 @@ extends Node2D
 
 signal stop_moving
 
+var animation_player: AnimationPlayer
+var animation_position_node: Marker2D
+
 var current_bag: Node = null
 var current_bag_index = 0  # Start with bag 6 (index 0 in the array)
 
@@ -52,6 +55,11 @@ var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Can
 func _ready():
 	UI.start_scene_change(false, false)
 	UI.get_node("Instructions").set_process(true)
+	
+	#poof animations
+	animation_player = $animation_marker/poof_animation
+	animation_position_node = $animation_marker
+	
 	# Get the platform nodes and their collision shapes
 	platform_1 = $platform_1
 	platform_1_collision = $platform_1/CollisionShape2D
@@ -98,7 +106,7 @@ func _process(delta):
 		current_bag.position = pos
 
 func load_new_bag():
-	# Use call_deferred to ensure the state changes happen after the physics engine processes
+# Use call_deferred to ensure the state changes happen after the physics engine processes
 	call_deferred("_load_new_bag")
 	
 func _load_new_bag():
@@ -114,12 +122,16 @@ func _load_new_bag():
 	
 	# Set the new bag's position
 	current_bag.position = bag_positions[current_bag_index]
+	play_bag_animation()
 	add_child(current_bag)
+	
 	# Set the velocity for side-to-side movement (for bags 4, 3, 2)
 	current_velocity = velocities[current_bag_index]
+	
 	# Debugging: Print the velocity assigned
 	# Connect the bag's custom signal to detect the orb hit
 	current_bag.bag_triggered.connect(_on_bag_triggered)
+	
 	# Show platforms if we're on Bag 4 (index 2), and keep them visible until Bag 2 (index 4)
 	if current_bag_index <= 4 and current_bag_index >= 2:  # Between Bag 4 and Bag 2
 		show_platforms()
@@ -178,6 +190,11 @@ func perform_auto_drop():
 	# Add the cannonball to the scene
 	add_child(cannonball)
 	cannonball_sprite.frame = current_bag_index
+
+func play_bag_animation():
+	#Set position of the animation to the bag's location
+	animation_position_node.position = current_bag.position
+	animation_player.play("bagpoof")
 
 func end_game():
 	UI.get_node("Monologue-CannonGame").set_process(true)

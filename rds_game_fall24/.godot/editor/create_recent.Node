@@ -1,3 +1,6 @@
+Marker2D
+Sprite2D
+AnimationPlayer
 RichTextLabel
 MarginContainer
 TextureRect
@@ -5,10 +8,7 @@ TextEdit
 HBoxContainer
 VBoxContainer
 Control
-AnimationPlayer
 CollisionShape2D
 Timer
-Sprite2D
 StaticBody2D
 CharacterBody2D
-Marker2D
