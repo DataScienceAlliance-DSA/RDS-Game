@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cn2ocw6e0h8y"]
 
+[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png" id="2_1qsp8"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd" id="2_l36d6"]
-[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png" id="2_nneu7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_31evt"]
 bounce = 0.5
@@ -14,7 +14,7 @@ physics_material_override = SubResource("PhysicsMaterial_31evt")
 script = ExtResource("2_l36d6")
 
 [node name="dart" type="Sprite2D" parent="."]
-texture = ExtResource("2_nneu7")
+texture = ExtResource("2_1qsp8")
 hframes = 6
 vframes = 2
 
