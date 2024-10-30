@@ -76,6 +76,10 @@ func _ready():
 func _process(delta): 
 	self.get_node("PowerGauge/PinkCounter/RichTextLabel").text = "[center][b]" + str(get_node("cannon").bag_attempts)
 	
+	# if (bag_poof):
+	# 	if (bag_poof.frame == 4):
+	#		_load_new_bag() 
+	
 	if current_bag and current_velocity != Vector2.ZERO:
 		# Handle side-to-side movement with smooth slow down
 		var pos = current_bag.position
@@ -96,14 +100,16 @@ func _process(delta):
 		elif pos.x >= limits.y:  # Reached the right limit
 			pos.x = limits.y
 			moving_left = true
-
+		
 		current_bag.position = pos
 
 func load_new_bag():
-# Play animation before the bag appears
+	# Use call_deferred to ensure the state changes happen after the physics engine processes
 	_play_animation_at_position(bag_positions[current_bag_index])
-# Use call_deferred to ensure the state changes happen after the physics engine processes
-	#call_deferred("_load_new_bag")
+	if (current_bag_index - 1 >= 0):
+		_play_animation_at_position(current_bag.position)
+	# Play animation before the bag appears
+
 	
 func _load_new_bag():
 	# If there is an existing bag, remove it
@@ -140,6 +146,8 @@ func _play_animation_at_position(position: Vector2):
 	
 	bag_poof.get_node("AnimationPlayer").play("bagpoof")  # Replace with your animation name
 	bag_poof.animation_complete.connect(_load_new_bag)
+
+
 
 # Function to show platforms and enable their collision shapes
 func show_platforms():
