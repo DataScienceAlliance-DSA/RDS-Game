@@ -49,6 +49,8 @@ var platform_3_collision
 
 # Referencing cannonball scene
 var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")
+@onready var bag_load_phase : int = 1
+@onready var bag_load_timer : float = 0.5
 
 func _ready():
 	UI.start_scene_change(false, false)
@@ -76,9 +78,10 @@ func _ready():
 func _process(delta): 
 	self.get_node("PowerGauge/PinkCounter/RichTextLabel").text = "[center][b]" + str(get_node("cannon").bag_attempts)
 	
-	# if (bag_poof):
-	# 	if (bag_poof.frame == 4):
-	#		_load_new_bag() 
+	if (bag_load_phase == 1) and (bag_load_timer < 0.5):
+		bag_load_timer += delta
+	elif (bag_load_phase == 1):
+		load_new_bag()
 	
 	if current_bag and current_velocity != Vector2.ZERO:
 		# Handle side-to-side movement with smooth slow down
@@ -105,12 +108,15 @@ func _process(delta):
 
 func load_new_bag():
 	# Use call_deferred to ensure the state changes happen after the physics engine processes
-	_play_animation_at_position(bag_positions[current_bag_index])
-	if (current_bag_index - 1 >= 0):
-		_play_animation_at_position(current_bag.position)
-	# Play animation before the bag appears
+	if (bag_load_phase == 0):
+		bag_load_timer = 0.0
+		bag_load_phase = 1
+		current_bag.visible = false
+		_play_animation_at_position(current_bag.position, "bagpoof_go")
+	else:
+		bag_load_phase = 0
+		_play_animation_at_position(bag_positions[current_bag_index], "bagpoof_come")
 
-	
 func _load_new_bag():
 	# If there is an existing bag, remove it
 	if current_bag != null:
@@ -139,12 +145,15 @@ func _load_new_bag():
 	else:
 		hide_platforms()
 
-func _play_animation_at_position(position: Vector2):
+func _play_animation_at_position(position: Vector2, animation_name: String):
 	var bag_poof = bag_poof_animation.instantiate()
 	bag_poof.position = position
 	add_child(bag_poof)
 	
-	bag_poof.get_node("AnimationPlayer").play("bagpoof")  # Replace with your animation name
+	if (current_bag):
+		bag_poof.bag_position = current_bag.position
+	
+	bag_poof.get_node("AnimationPlayer").play(animation_name)  # Replace with your animation name
 	bag_poof.animation_complete.connect(_load_new_bag)
 
 
