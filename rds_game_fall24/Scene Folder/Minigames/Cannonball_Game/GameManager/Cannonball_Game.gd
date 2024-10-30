@@ -150,9 +150,6 @@ func _play_animation_at_position(position: Vector2, animation_name: String):
 	bag_poof.position = position
 	add_child(bag_poof)
 	
-	if (current_bag):
-		bag_poof.bag_position = current_bag.position
-	
 	bag_poof.get_node("AnimationPlayer").play(animation_name)  # Replace with your animation name
 	bag_poof.animation_complete.connect(_load_new_bag)
 
