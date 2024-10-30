@@ -1,4 +1,5 @@
 AnimationPlayer
+AnimationTree
 Sprite2D
 Marker2D
 RichTextLabel
@@ -11,4 +12,3 @@ Control
 CollisionShape2D
 Timer
 StaticBody2D
-CharacterBody2D

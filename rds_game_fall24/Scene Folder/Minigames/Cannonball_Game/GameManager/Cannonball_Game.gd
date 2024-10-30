@@ -100,13 +100,12 @@ func _process(delta):
 		current_bag.position = pos
 
 func load_new_bag():
+# Play animation before the bag appears
+	_play_animation_at_position(bag_positions[current_bag_index])
 # Use call_deferred to ensure the state changes happen after the physics engine processes
-	call_deferred("_load_new_bag")
+	#call_deferred("_load_new_bag")
 	
 func _load_new_bag():
-	# Play animation before the bag appears
-	_play_animation_at_position(bag_positions[current_bag_index])
-	
 	# If there is an existing bag, remove it
 	if current_bag != null:
 		current_bag.queue_free()
@@ -139,11 +138,9 @@ func _play_animation_at_position(position: Vector2):
 	bag_poof.position = position
 	add_child(bag_poof)
 	
-	var bag_poof_animation_player = bag_poof.get_node("AnimationPlayer")
-	bag_poof_animation_player.play("bagpoof")  # Replace with your animation name
-	
-	animation_player.connect("animation_finished", animation_instance, "queue_free")
-	
+	bag_poof.get_node("AnimationPlayer").play("bagpoof")  # Replace with your animation name
+	bag_poof.animation_complete.connect(_load_new_bag)
+
 # Function to show platforms and enable their collision shapes
 func show_platforms():
 	platform_1.visible = true
