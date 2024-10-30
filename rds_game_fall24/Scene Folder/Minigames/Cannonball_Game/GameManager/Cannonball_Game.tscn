@@ -33,7 +33,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("poof:frame")
+tracks/0/path = NodePath("animation_marker/poof:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -45,12 +45,12 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_ngc35"]
 resource_name = "bagpoof"
-length = 0.8
+length = 0.45
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("poof:frame")
+tracks/0/path = NodePath("animation_marker/poof:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -162,15 +162,15 @@ shape = SubResource("RectangleShape2D_6iy2t")
 
 [node name="autodelaytimer" type="Timer" parent="."]
 
-[node name="poof" type="Sprite2D" parent="."]
+[node name="animation_marker" type="Marker2D" parent="."]
+visible = false
+
+[node name="poof" type="Sprite2D" parent="animation_marker"]
 visible = false
 position = Vector2(579.11, 661.928)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("6_1k8v2")
 hframes = 5
-
-[node name="animation_marker" type="Marker2D" parent="."]
-visible = false
 
 [node name="poof_animation" type="AnimationPlayer" parent="animation_marker"]
 root_node = NodePath("../..")

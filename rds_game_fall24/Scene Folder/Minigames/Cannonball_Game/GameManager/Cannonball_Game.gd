@@ -2,11 +2,10 @@ extends Node2D
 
 signal stop_moving
 
-var animation_player: AnimationPlayer
-var animation_position_node: Marker2D
-
 var current_bag: Node = null
 var current_bag_index = 0  # Start with bag 6 (index 0 in the array)
+var bag_poof_animation = preload("res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn")
+
 
 # Declare an array to store your bag scenes
 var bag_scenes = [
@@ -22,7 +21,6 @@ var bag_scenes = [
 # Range of movement for bags 4, 3, and 2 (x min/max values)
 var velocities = [Vector2.ZERO, Vector2.ZERO, Vector2(100, 0), Vector2(120, 0), Vector2(150, 0), Vector2.ZERO]
 var movement_limits = [Vector2.ZERO, Vector2.ZERO, Vector2(408, 594), Vector2(782, 1100), Vector2(794, 1369), Vector2.ZERO]
-
 
 # Array of positions corresponding to each bag
 var bag_positions = [
@@ -55,10 +53,6 @@ var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Can
 func _ready():
 	UI.start_scene_change(false, false)
 	UI.get_node("Instructions").set_process(true)
-	
-	#poof animations
-	animation_player = $animation_marker/poof_animation
-	animation_position_node = $animation_marker
 	
 	# Get the platform nodes and their collision shapes
 	platform_1 = $platform_1
@@ -110,6 +104,9 @@ func load_new_bag():
 	call_deferred("_load_new_bag")
 	
 func _load_new_bag():
+	# Play animation before the bag appears
+	_play_animation_at_position(bag_positions[current_bag_index])
+	
 	# If there is an existing bag, remove it
 	if current_bag != null:
 		current_bag.queue_free()
@@ -122,7 +119,6 @@ func _load_new_bag():
 	
 	# Set the new bag's position
 	current_bag.position = bag_positions[current_bag_index]
-	play_bag_animation()
 	add_child(current_bag)
 	
 	# Set the velocity for side-to-side movement (for bags 4, 3, 2)
@@ -137,7 +133,17 @@ func _load_new_bag():
 		show_platforms()
 	else:
 		hide_platforms()
-		
+
+func _play_animation_at_position(position: Vector2):
+	var bag_poof = bag_poof_animation.instantiate()
+	bag_poof.position = position
+	add_child(bag_poof)
+	
+	var bag_poof_animation_player = bag_poof.get_node("AnimationPlayer")
+	bag_poof_animation_player.play("bagpoof")  # Replace with your animation name
+	
+	animation_player.connect("animation_finished", animation_instance, "queue_free")
+	
 # Function to show platforms and enable their collision shapes
 func show_platforms():
 	platform_1.visible = true
@@ -190,11 +196,6 @@ func perform_auto_drop():
 	# Add the cannonball to the scene
 	add_child(cannonball)
 	cannonball_sprite.frame = current_bag_index
-
-func play_bag_animation():
-	#Set position of the animation to the bag's location
-	animation_position_node.position = current_bag.position
-	animation_player.play("bagpoof")
 
 func end_game():
 	UI.get_node("Monologue-CannonGame").set_process(true)

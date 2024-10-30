@@ -5,3 +5,6 @@ res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
 res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt(toptoright).tscn
 res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt.tscn
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd
+res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn
+res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.gd

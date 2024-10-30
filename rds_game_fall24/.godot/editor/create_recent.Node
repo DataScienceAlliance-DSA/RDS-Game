@@ -1,6 +1,6 @@
-Marker2D
-Sprite2D
 AnimationPlayer
+Sprite2D
+Marker2D
 RichTextLabel
 MarginContainer
 TextureRect
