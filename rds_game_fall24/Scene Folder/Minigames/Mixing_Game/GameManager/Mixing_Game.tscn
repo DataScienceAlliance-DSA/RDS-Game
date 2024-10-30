@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dc867tjqrrdyl"]
+[gd_scene load_steps=2 format=3 uid="uid://dc867tjqrrdyl"]
+
+[ext_resource type="Texture2D" uid="uid://bcnjy7v2fdcgx" path="res://assets/Mixing_Game/Mixing Game Backgdrop.png" id="1_gd8yd"]
 
 [node name="MixingGame" type="Node2D"]
+
+[node name="Backdrop" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_gd8yd")

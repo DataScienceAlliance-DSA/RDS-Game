@@ -1,10 +1,10 @@
+TextureRect
 AnimationPlayer
 AnimationTree
 Sprite2D
 Marker2D
 RichTextLabel
 MarginContainer
-TextureRect
 TextEdit
 HBoxContainer
 VBoxContainer
