@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bcnjy7v2fdcgx" path="res://assets/Mixing_Game/Mixing Game Backgdrop.png" id="1_gd8yd"]
 [ext_resource type="Texture2D" uid="uid://d3ts7tyirdj4b" path="res://assets/Mixing_Game/Podium.png" id="2_g2hsw"]
-[ext_resource type="Texture2D" uid="uid://diqyb1vgpq0ko" path="res://assets/Mixing_Game/cauldron.png" id="3_av52k"]
+[ext_resource type="Texture2D" uid="uid://cbfbpnlxrxdql" path="res://assets/Mixing_Game/resizable_cauldron.png" id="3_qxygh"]
 
 [node name="MixingGame" type="Node2D"]
 
@@ -17,6 +17,6 @@ texture = ExtResource("2_g2hsw")
 
 [node name="Cauldron" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(683, 395)
-scale = Vector2(5, 5)
-texture = ExtResource("3_av52k")
+position = Vector2(685, 317)
+scale = Vector2(0.382286, 0.382286)
+texture = ExtResource("3_qxygh")
