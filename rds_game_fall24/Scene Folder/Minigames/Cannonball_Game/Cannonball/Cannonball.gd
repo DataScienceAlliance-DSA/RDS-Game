@@ -24,6 +24,11 @@ func _ready():
 var initial_dampening: float = 0.75  # Initial dampening factor
 var min_bounce_velocity: float = 20.0  # Minimum 	velocity for both x and y to keep the orb bouncing
 
+func _process(delta):
+	if timer.time_left <= 1.5:
+		var sprite = get_node("dart") as CanvasItem
+		sprite.modulate.a = fmod((timer.time_left * 10), 2.0)
+
 func _physics_process(delta: float) -> void:
 	# Apply gravity to the y-component
 	linear_velocity.y += env_gravity * delta
