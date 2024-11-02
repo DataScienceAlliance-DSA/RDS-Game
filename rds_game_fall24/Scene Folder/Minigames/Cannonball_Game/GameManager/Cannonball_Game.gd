@@ -54,6 +54,7 @@ var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Can
 
 func _ready():
 	UI.start_scene_change(false, false)
+	UI.get_node("Instructions").visible = true
 	UI.get_node("Instructions").set_process(true)
 	
 	# Get the platform nodes and their collision shapes
