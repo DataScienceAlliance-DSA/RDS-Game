@@ -95,4 +95,6 @@ func close_dialogue():
 	# disable dialogue & interactable, enable player
 	self.visible = false
 	self.set_process(false)
-	interacted_area.end_interaction()
+	
+	if interacted_area:
+		interacted_area.end_interaction()
