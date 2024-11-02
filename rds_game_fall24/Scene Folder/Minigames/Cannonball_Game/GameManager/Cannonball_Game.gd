@@ -155,8 +155,6 @@ func _play_animation_at_position(position: Vector2, animation_name: String):
 	if (animation_name == "bagpoof_come"):
 		bag_poof.animation_complete.connect(_load_new_bag)
 
-
-
 # Function to show platforms and enable their collision shapes
 func show_platforms():
 	platform_1.visible = true
@@ -193,6 +191,9 @@ func _on_bag_triggered():
 
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():
+	var dialogue_completed = UI.get_node("Dialogue").open_dialogue("res://Scripts/Dialogues/Cannon/UnhappyCannon.json", null)
+	await dialogue_completed
+	
 	if current_bag_index == 5:  # Assuming index 5 is the final bag
 		emit_signal("stop_moving")  # Emit the signal to stop movement for the final bag
 	else:

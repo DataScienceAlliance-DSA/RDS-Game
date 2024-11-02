@@ -4,6 +4,7 @@ var dialogue_dict = {}		# current dialogue dictionary
 var current_dialogue_id		# current dialogue id
 
 var interacted_area
+signal dialogue_complete()
 
 # properties for player character's dialogue box
 @onready var player_color = (get_node("PlayerContainer/PositionControl") as CanvasItem)
@@ -21,6 +22,7 @@ var interacted_area
 
 func _ready():
 	self.set_process(false)
+	self.connect("dialogue_complete", get_dialogue_finished)
 
 func open_dialogue(json_path, area):
 	# after disabling player & enabling interactable, enable dialogue
@@ -39,6 +41,9 @@ func open_dialogue(json_path, area):
 	current_dialogue_id = "root"
 	process_next_text()
 	self.position.y = 300
+	
+	await get_dialogue_finished()
+	return true
 
 func _process(_delta):
 	# move dialogue boxes into position post-open_dialogue
@@ -95,6 +100,10 @@ func close_dialogue():
 	# disable dialogue & interactable, enable player
 	self.visible = false
 	self.set_process(false)
+	dialogue_complete.emit()
 	
 	if interacted_area:
 		interacted_area.end_interaction()
+
+func get_dialogue_finished():
+	return true
