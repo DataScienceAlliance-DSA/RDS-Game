@@ -127,30 +127,30 @@ func close_3choice_dialogue():
 
 func _on_choice_bounds_3_mouse_entered():
 	choice3_hovered = true
-	choice3_scale.scale = Vector2(0.9, 0.9)
+	choice3_scale.scale = Vector2(0.7, 0.7)
 	potential_next_choice = choice3_next
 
 func _on_choice_bounds_3_mouse_exited():
 	choice3_hovered = false
-	choice3_scale.scale = Vector2(1, 1)
+	choice3_scale.scale = Vector2(0.8, 0.8)
 	potential_next_choice = ""
 
 func _on_choice_bounds_2_mouse_entered():
 	choice2_hovered = true
-	choice2_scale.scale = Vector2(0.9, 0.9)
+	choice2_scale.scale = Vector2(0.7, 0.7)
 	potential_next_choice = choice2_next
 
 func _on_choice_bounds_2_mouse_exited():
 	choice2_hovered = false
-	choice2_scale.scale = Vector2(1, 1)
+	choice2_scale.scale = Vector2(0.8, 0.8)
 	potential_next_choice = ""
 
 func _on_choice_bounds_1_mouse_entered():
 	choice1_hovered = true
-	choice1_scale.scale = Vector2(0.9, 0.9)
+	choice1_scale.scale = Vector2(0.7, 0.7)
 	potential_next_choice = choice1_next
 
 func _on_choice_bounds_1_mouse_exited():
 	choice1_hovered = false
-	choice1_scale.scale = Vector2(1, 1)
+	choice1_scale.scale = Vector2(0.8, 0.8)
 	potential_next_choice = ""
