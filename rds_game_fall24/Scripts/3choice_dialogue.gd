@@ -93,8 +93,8 @@ func process_next_text():
 		var character_text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
 		response_avatar.texture = load("res://assets/ui_assets/portraits/"+character_name+".PNG")
-		response_name.text = "[left][color=white][b]"+character_name+"[/b]"
-		response_text.text = "[left][color=white]"+character_text
+		response_name.text = "[left][color=#282561][b]"+character_name+"[/b]"
+		response_text.text = "[left][color=#282561]"+character_text
 		
 		if (dialogue_dict[current_dialogue_id].has("choices")):
 			choosing = true
