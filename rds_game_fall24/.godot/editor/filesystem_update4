@@ -1,8 +1,14 @@
-res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PowerGauge.tscn
+res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
-res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn
-res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
+res://Scene Folder/UI.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
-res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.tscn
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detector.tscn
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.tscn
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/direction_detector.tscn
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
+res://Scripts/dialogue.gd

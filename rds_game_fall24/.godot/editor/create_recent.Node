@@ -1,7 +1,7 @@
 TextureProgressBar
 TextureRect
-HBoxContainer
 MarginContainer
+HBoxContainer
 CanvasLayer
 PanelContainer
 Control
