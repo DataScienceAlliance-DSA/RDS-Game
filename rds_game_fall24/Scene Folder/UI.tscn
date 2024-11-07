@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=23 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scene Folder/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/3choice_dialogue.gd" id="3_rj2pq"]
 [ext_resource type="Texture2D" uid="uid://b5frrkjp1weq3" path="res://assets/ui_assets/Dialogue Box_Small_Focused.png" id="3_vhxjd"]
 [ext_resource type="Texture2D" uid="uid://d6kvpuxma1dd" path="res://assets/ui_assets/portraits/Player.PNG" id="4_faomy"]
+[ext_resource type="Texture2D" uid="uid://cbkf5sgpllvuf" path="res://assets/ui_assets/Dialogue Button.png" id="4_fcxgh"]
 [ext_resource type="Texture2D" uid="uid://fo5qgy74gui" path="res://assets/ui_assets/monologue_text_box.png" id="7_i34rw"]
 [ext_resource type="Texture2D" uid="uid://c1ltxtksg64vc" path="res://assets/ui_assets/Selection Box.png" id="7_wdcv8"]
 [ext_resource type="Texture2D" uid="uid://budh7mgyhuha0" path="res://assets/ui_assets/Dialogue Box_Long_Focused.png" id="8_7wnso"]
@@ -96,6 +97,25 @@ offset_right = 1431.0
 offset_bottom = 404.0
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("3_vhxjd")
+
+[node name="ArrowContainer" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.958628, 1)
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="Arrow" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect/ArrowContainer"]
+layout_mode = 2
+texture = ExtResource("4_fcxgh")
 
 [node name="PlayerAvatar" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
 custom_minimum_size = Vector2(64, 64)
@@ -219,6 +239,25 @@ scale = Vector2(-0.34, 0.34)
 pivot_offset = Vector2(1423, 0)
 size_flags_vertical = 8
 texture = ExtResource("3_vhxjd")
+
+[node name="ArrowContainer" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.958628, 1)
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="Arrow" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer"]
+layout_mode = 2
+texture = ExtResource("4_fcxgh")
 
 [node name="CharacterAvatar" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
 layout_mode = 1

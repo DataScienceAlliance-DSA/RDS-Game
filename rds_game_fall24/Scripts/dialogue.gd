@@ -15,6 +15,7 @@ var card_text
 @onready var player_avatar = (get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/PlayerAvatar") as TextureRect)
 @onready var player_name = (get_node("PlayerContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
 @onready var player_text = (get_node("PlayerContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
+@onready var player_arrow = (get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect/ArrowContainer") as MarginContainer)
 
 # properties for opposing character's dialogue box
 @onready var opposing_color = (get_node("CharacterContainer/PositionControl") as CanvasItem)
@@ -22,6 +23,7 @@ var card_text
 @onready var opposing_avatar = (get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/CharacterAvatar") as TextureRect)
 @onready var opposing_name = (get_node("CharacterContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
 @onready var opposing_text = (get_node("CharacterContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
+@onready var opposing_arrow = (get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer") as MarginContainer)
 
 # variables for timing and speed of a line of dialogue moving
 var next_char_timer : float	# time passed since last character added to string
@@ -66,6 +68,7 @@ func _process(_delta):
 	if not interactable: return
 	
 	var target_text = opposing_text if card_name != "Player" else player_text
+	var target_arrow = opposing_arrow if card_name != "Player" else player_arrow
 	# timer system for dialogue string to write itself on UI
 	if (next_char_timer >= next_char_wait) and (char_index <= card_text.length()):
 		next_char_timer = 0.0
@@ -79,6 +82,8 @@ func _process(_delta):
 		if (Input.is_action_just_pressed("interaction")):
 			char_index = card_text.length()
 	else:
+		target_arrow.visible = true
+		target_arrow.add_theme_constant_override("margin_bottom", (25 * cos(5 * next_char_timer) + 125) / 2)
 		if (Input.is_action_just_pressed("interaction")):
 			process_next_text()
 
@@ -107,6 +112,8 @@ func process_next_text():
 		
 		next_char_timer = 0.0
 		
+		player_arrow.visible = false
+		opposing_arrow.visible = false
 		# if dialogue entry name is not Player, edit right text box of UI
 		if (dialogue_dict[current_dialogue_id]["name"] != "Player"):
 			opposing_name.text = "[right][color=#282561][b]"+card_name+"[/b][/color]"
