@@ -9,7 +9,7 @@
 [sub_resource type="GDScript" id="GDScript_3go7r"]
 script/source = "extends Node2D
 
-@onready var power_gauge = get_node(\"../PowerGauge/power_gauge\") # Reference to the power gauge
+@onready var power_gauge = get_node(\"../PowerGauge/gaugebar/power_gauge\") # Reference to the power gauge
 @onready var cannonball_scene: PackedScene = preload(\"res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn\")  # Preload the cannonball scene
 
 @onready var env_gravity : float = 981

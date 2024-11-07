@@ -1,3 +1,4 @@
+TextureProgressBar
 TextureRect
 HBoxContainer
 MarginContainer
@@ -11,4 +12,3 @@ StaticBody2D
 Button
 VBoxContainer
 AnimationPlayer
-AnimationTree
