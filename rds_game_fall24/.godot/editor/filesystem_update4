@@ -7,3 +7,6 @@ res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn
 res://Scripts/3choice_dialogue.gd
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.gd
+res://Scene Folder/Minigames/Mixing_Game/MixingScenes/MixsingScene.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn

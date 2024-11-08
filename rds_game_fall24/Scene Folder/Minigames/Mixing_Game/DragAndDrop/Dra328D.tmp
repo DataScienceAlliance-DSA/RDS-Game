@@ -55,12 +55,12 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("2_fbe2l")
 
-[node name="DropSpotRight" parent="." instance=ExtResource("4_clvvt")]
-position = Vector2(1097, 242)
-scale = Vector2(5.08, 5.08)
-
 [node name="DropSpotLeft" parent="." instance=ExtResource("4_clvvt")]
 position = Vector2(871, 242)
+scale = Vector2(5.08, 5.08)
+
+[node name="DropSpotRight" parent="." instance=ExtResource("4_clvvt")]
+position = Vector2(1097, 242)
 scale = Vector2(5.08, 5.08)
 
 [node name="Draggable6" parent="." instance=ExtResource("4_o6hdc")]
