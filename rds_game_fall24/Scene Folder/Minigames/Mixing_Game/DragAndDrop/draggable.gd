@@ -32,9 +32,11 @@ func _input(event):
 			var planned_position
 			for drop_spot in drop_spots:
 				print(str(drop_spot) + "     " + str(drop_spot.get_overlapping_areas()))
-				if (drop_spot.has_overlapping_areas() 
+				if ((drop_spot.has_overlapping_areas())
 					and 
-					drop_spot.get_overlapping_areas().has(self.get_node("Area2D"))
+					(drop_spot.get_overlapping_areas().has(self.get_node("Area2D")))
+					and
+					(drop_spot.get_overlapping_areas().size() == 1)
 				):
 					var snap_position = drop_spot.position
 					var tween = get_tree().create_tween()
