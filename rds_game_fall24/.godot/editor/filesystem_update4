@@ -6,3 +6,4 @@ res://Scene Folder/UI.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn
+res://Scripts/3choice_dialogue.gd

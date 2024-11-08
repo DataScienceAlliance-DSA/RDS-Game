@@ -30,11 +30,21 @@ var choice2_next
 var choice3_next
 var potential_next_choice	# currently hovered choice
 
+# varaibles for ui dynamic changes
+var interactable : bool
+@onready var target_position : Vector2 = Vector2(0, 0)
+var character_text : String
+# variables for timing and speed of a line of dialogue moving
+var next_char_timer : float	# time passed since last character added to string
+@onready var next_char_wait : float = 0.015	# time needed to elapse for next character to be added
+var char_index : int
+
 # properties for opposing character's dialogue box
 @onready var response_scale = (get_node("TextContainer/PositionControl/ScaleControl") as Control)
 @onready var response_avatar = (get_node("TextContainer/PositionControl/ScaleControl/IconCenter/Avatar") as TextureRect)
 @onready var response_name = (get_node("TextContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
 @onready var response_text = (get_node("TextContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
+@onready var response_arrow = (get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer") as MarginContainer)
 
 func _ready():
 	self.set_process(false)
@@ -51,18 +61,40 @@ func open_3choice_dialogue(json_path, area):
 	dialogue_dict = parse_dialogue(json_path)
 	current_dialogue_id = "root"
 	process_next_text()
+	interactable = true
 	self.position.y = 300
+	target_position = Vector2(0, 0)
 
 func _process(_delta):
 	# move dialogue boxes into position post-open_dialogue
-	self.position = self.position.lerp(Vector2(0, 0), _delta * 10)
+	self.position = self.position.lerp(target_position, _delta * 10)
 	choice1_box.position = 	choice1_box.position.lerp(Vector2(0, 0), _delta * 10)
 	choice2_box.position = 	choice1_box.position.lerp(Vector2(0, 0), _delta * 10)
 	choice3_box.position = 	choice1_box.position.lerp(Vector2(0, 0), _delta * 10)
 	
+	if not interactable: return
+	
+	# timer system for dialogue string to write itself on UI
+	if (next_char_timer >= next_char_wait) and (char_index <= +character_text.length()):
+		next_char_timer = 0.0
+		response_text.text = "[color=#282561]"+character_text.substr(0,char_index)+"[/color]"
+		char_index = char_index + 1
+	else:
+		next_char_timer += _delta
+	
 	# check for and process dialogue if next button (E) is pressed
+	if !choosing:
+		print(choosing)
+		response_arrow.visible = true
+		response_arrow.add_theme_constant_override("margin_bottom", (25 * cos(5 * next_char_timer) + 125) / 2)
+	elif (Input.is_action_just_pressed("interaction")) and (char_index <= character_text.length()):
+		char_index = character_text.length()
+	
 	if (Input.is_action_just_pressed("interaction") and !choosing):
-		process_next_text()
+		if (char_index <= character_text.length()):
+			char_index = character_text.length()
+		else:
+			process_next_text()
 	elif (choosing) and (Input.is_action_just_pressed("left_click")) and (potential_next_choice != ""):
 		current_dialogue_id = potential_next_choice
 		process_next_text()
@@ -79,6 +111,8 @@ func parse_dialogue(json_path):
 			print("Error reading JSON file. Must result in a dictionary.")
 
 func process_next_text():	
+	char_index = 1
+	
 	# get/set current dialogue_id from dictionary
 	if choosing:
 		choosing = false
@@ -88,9 +122,12 @@ func process_next_text():
 	if current_dialogue_id == "end":	# "next": "end" is end-dialogue keyword in json
 		close_3choice_dialogue()
 	else:
+		next_char_timer = 0.0
+		
+		response_arrow.visible = false
 		# get/set character name and text accordingly from dictionary
 		var character_name = dialogue_dict[current_dialogue_id]["name"]
-		var character_text = dialogue_dict[current_dialogue_id]["text"]["en"]
+		character_text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
 		response_avatar.texture = load("res://assets/ui_assets/portraits/"+character_name+".PNG")
 		response_name.text = "[left][color=#282561][b]"+character_name+"[/b]"
@@ -121,9 +158,11 @@ func process_next_text():
 
 func close_3choice_dialogue():
 	# disable dialogue & interactable, enable player
-	self.visible = false
-	self.set_process(false)
-	interacted_area.end_interaction()
+	target_position = Vector2(0, 300)
+	interactable = false
+	
+	if interacted_area:
+		interacted_area.end_interaction()
 
 func _on_choice_bounds_3_mouse_entered():
 	choice3_hovered = true
