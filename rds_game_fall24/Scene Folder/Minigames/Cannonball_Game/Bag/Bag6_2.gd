@@ -14,4 +14,3 @@ func _on_trigger_area_body_entered(body):
 		
 		#disable cannonball after collision
 		body.queue_free()
-

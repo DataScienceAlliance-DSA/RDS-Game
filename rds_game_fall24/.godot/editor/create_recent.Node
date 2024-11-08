@@ -1,5 +1,9 @@
-TextureProgressBar
+Area2D
+CollisionShape2D
+MeshInstance2D
+Sprite2D
 TextureRect
+TextureProgressBar
 MarginContainer
 HBoxContainer
 CanvasLayer
@@ -7,8 +11,4 @@ PanelContainer
 Control
 Panel
 ColorRect
-Sprite2D
 StaticBody2D
-Button
-VBoxContainer
-AnimationPlayer
