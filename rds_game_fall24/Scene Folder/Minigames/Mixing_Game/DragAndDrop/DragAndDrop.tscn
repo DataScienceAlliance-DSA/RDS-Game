@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dw5rykc2ps4g3"]
+[gd_scene load_steps=11 format=3 uid="uid://dw5rykc2ps4g3"]
 
 [ext_resource type="Texture2D" uid="uid://e8y24jfjuqws" path="res://assets/Mixing_Game/Orb Placement UI.png" id="1_lji7o"]
 [ext_resource type="Texture2D" uid="uid://bgwwsgq3lyrw4" path="res://assets/Mixing_Game/empty_bag.png" id="2_fbe2l"]
 [ext_resource type="Texture2D" uid="uid://cnli6oka52tgt" path="res://assets/Mixing_Game/Button_Inactive.png" id="2_x4ypn"]
 [ext_resource type="PackedScene" uid="uid://dl510nt7j3vra" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn" id="4_clvvt"]
 [ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn" id="4_o6hdc"]
+[ext_resource type="Texture2D" uid="uid://cv5djbk75mub8" path="res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG" id="6_7l24o"]
+[ext_resource type="Texture2D" uid="uid://dymegq2gsesuu" path="res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG" id="7_v7e68"]
+[ext_resource type="Texture2D" uid="uid://ug8afxm6hldc" path="res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG" id="8_t5oxb"]
+[ext_resource type="Texture2D" uid="uid://dc3awslq62bux" path="res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG" id="9_my8so"]
+[ext_resource type="Texture2D" uid="uid://uydmdruacy60" path="res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG" id="10_t1ucu"]
 
 [node name="Control" type="CanvasLayer"]
 
@@ -43,10 +48,13 @@ texture = ExtResource("2_x4ypn")
 expand_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_top = 133.0
-offset_right = 10655.0
-offset_bottom = 10793.0
+offset_right = 12175.0
+offset_bottom = 10660.0
 scale = Vector2(0.06, 0.06)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = 750
+theme_override_constants/margin_top = 1205
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -64,19 +72,30 @@ position = Vector2(871, 242)
 scale = Vector2(5.08, 5.08)
 
 [node name="Draggable6" parent="." instance=ExtResource("4_o6hdc")]
-position = Vector2(276, 471)
+position = Vector2(321, 410.3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_7l24o")
 
 [node name="Draggable5" parent="." instance=ExtResource("4_o6hdc")]
-position = Vector2(233, 545)
+position = Vector2(278, 484.3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_v7e68")
 
 [node name="Draggable4" parent="." instance=ExtResource("4_o6hdc")]
-position = Vector2(320, 548)
+position = Vector2(365, 487.3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_t5oxb")
 
 [node name="Draggable3" parent="." instance=ExtResource("4_o6hdc")]
-position = Vector2(404, 548)
+position = Vector2(449, 487.3)
+scale = Vector2(0.25, 0.25)
 
 [node name="Draggable2" parent="." instance=ExtResource("4_o6hdc")]
-position = Vector2(363, 471)
+position = Vector2(408, 410.3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_my8so")
 
 [node name="Draggable" parent="." instance=ExtResource("4_o6hdc")]
-position = Vector2(320, 398)
+position = Vector2(365, 337.3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_t1ucu")

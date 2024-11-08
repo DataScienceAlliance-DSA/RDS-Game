@@ -46,4 +46,3 @@ func _input(event):
 					)
 					return
 			self.position = start_position
-			
