@@ -7,14 +7,17 @@ var choosing				# boolean, true if player is selecting a choice
 var interacted_area
 
 # properties for player character's dialogue box
+@onready var choice1_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1") as Control)
 @onready var choice1_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1") as TextureRect)
 @onready var choice1_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1/MonologueText") as RichTextLabel)
 @onready var choice1_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl") as Control)
 
+@onready var choice2_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2") as Control)
 @onready var choice2_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2") as TextureRect)
 @onready var choice2_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2/MonologueText") as RichTextLabel)
 @onready var choice2_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl") as Control)
 
+@onready var choice3_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3") as Control)
 @onready var choice3_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3") as TextureRect)
 @onready var choice3_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3/MonologueText") as RichTextLabel)
 @onready var choice3_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl") as Control)
@@ -50,6 +53,11 @@ func _ready():
 	self.set_process(false)
 
 func open_3choice_dialogue(json_path, area):
+	# make choice priming active when dialogue opened
+	choice1_bounds.mouse_filter = 1
+	choice2_bounds.mouse_filter = 1
+	choice3_bounds.mouse_filter = 1
+
 	# after disabling player & enabling interactable, enable dialogue
 	self.visible = true
 	self.set_process(true)
@@ -157,6 +165,11 @@ func process_next_text():
 			choice3_box.visible = false
 
 func close_3choice_dialogue():
+	# make choice priming inactive when dialogue closed
+	choice1_bounds.mouse_filter = 2
+	choice2_bounds.mouse_filter = 2
+	choice3_bounds.mouse_filter = 2
+	
 	# disable dialogue & interactable, enable player
 	target_position = Vector2(0, 300)
 	interactable = false

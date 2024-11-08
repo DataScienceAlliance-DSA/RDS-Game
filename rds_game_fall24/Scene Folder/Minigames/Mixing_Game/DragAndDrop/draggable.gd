@@ -9,7 +9,6 @@ var start_position = Vector2()
 func _ready():
 	start_position = self.position
 	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
-	print(drop_spots)
 
 func _physics_process(delta):
 	if is_dragging == true:
@@ -31,7 +30,6 @@ func _input(event):
 			is_dragging = false
 			var planned_position
 			for drop_spot in drop_spots:
-				print(str(drop_spot) + "     " + str(drop_spot.get_overlapping_areas()))
 				if ((drop_spot.has_overlapping_areas())
 					and 
 					(drop_spot.get_overlapping_areas().has(self.get_node("Area2D")))

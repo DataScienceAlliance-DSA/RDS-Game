@@ -6,7 +6,6 @@ var current_bag: Node = null
 var current_bag_index = 0  # Start with bag 6 (index 0 in the array)
 var bag_poof_animation = preload("res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn")
 
-
 # Declare an array to store your bag scenes
 var bag_scenes = [
 	preload("res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6.tscn"),
