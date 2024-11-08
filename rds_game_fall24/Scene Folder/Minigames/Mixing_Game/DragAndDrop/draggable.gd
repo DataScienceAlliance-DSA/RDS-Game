@@ -29,6 +29,7 @@ func _input(event):
 				mouse_offset = get_global_mouse_position() - global_position
 		else:
 			is_dragging = false
+			var planned_position
 			for drop_spot in drop_spots:
 				print(str(drop_spot) + "     " + str(drop_spot.get_overlapping_areas()))
 				if (drop_spot.has_overlapping_areas() 
@@ -43,8 +44,6 @@ func _input(event):
 						snap_position, 
 						delay
 					)
-				else:
-					self.position = start_position
-				print(drop_spot.get_overlapping_areas())
-				
+					return
+			self.position = start_position
 			
