@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://e8y24jfjuqws" path="res://assets/Mixing_Game/Orb Placement UI.png" id="1_lji7o"]
 [ext_resource type="Texture2D" uid="uid://bgwwsgq3lyrw4" path="res://assets/Mixing_Game/empty_bag.png" id="2_fbe2l"]
 [ext_resource type="Texture2D" uid="uid://cnli6oka52tgt" path="res://assets/Mixing_Game/Button_Inactive.png" id="2_x4ypn"]
-[ext_resource type="PackedScene" uid="uid://b1vtruyjhd3nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn" id="4_clvvt"]
-[ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/Draggable.tscn" id="4_o6hdc"]
+[ext_resource type="PackedScene" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn" id="4_clvvt"]
+[ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn" id="4_o6hdc"]
 
 [node name="Control" type="CanvasLayer"]
 
@@ -64,4 +64,4 @@ position = Vector2(1097, 242)
 scale = Vector2(5.08, 5.08)
 
 [node name="Draggable" parent="." instance=ExtResource("4_o6hdc")]
-position = Vector2(317, 395)
+position = Vector2(320, 398)
