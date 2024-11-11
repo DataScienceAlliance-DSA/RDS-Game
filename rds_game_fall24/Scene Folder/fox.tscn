@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://1q1al4h8xolo"]
 
-[ext_resource type="Texture2D" uid="uid://ceook2jgpk3ak" path="res://assets/Cauldron_Room/Fox Assets/IMG_1482.PNG" id="1_diq4l"]
+[ext_resource type="Texture2D" uid="uid://clmihdldimcmt" path="res://assets/Cauldron_Room/Fox Assets/fox_spritesheet.png" id="1_jm7ln"]
 [ext_resource type="Script" path="res://Scripts/fox_area.gd" id="2_lp4ex"]
 
 [sub_resource type="Animation" id="Animation_gdaj2"]
@@ -128,8 +128,11 @@ y_sort_enabled = true
 texture_filter = 3
 position = Vector2(0, 5)
 scale = Vector2(0.04, 0.04)
-texture = ExtResource("1_diq4l")
+texture = ExtResource("1_jm7ln")
 offset = Vector2(0, -128)
+hframes = 9
+vframes = 5
+frame = 4
 
 [node name="FoxAnim" type="AnimationPlayer" parent="FoxSprite"]
 libraries = {
