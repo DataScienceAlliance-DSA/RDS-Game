@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp1rewxufvy6b"
-path="res://.godot/imported/Exit3.png-561e760c8f1802b4f0d415424f5a2814.ctex"
+uid="uid://cauw3ec0j282c"
+path="res://.godot/imported/entrance_carpet.png-a5439b9e272a826d50081df3c9f40204.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Exit Assets/Exit3.png"
-dest_files=["res://.godot/imported/Exit3.png-561e760c8f1802b4f0d415424f5a2814.ctex"]
+source_file="res://assets/Cauldron_Room/Exit Assets/entrance_carpet.png"
+dest_files=["res://.godot/imported/entrance_carpet.png-a5439b9e272a826d50081df3c9f40204.ctex"]
 
 [params]
 
