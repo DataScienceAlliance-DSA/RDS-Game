@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cd21lswhh1b46"]
 
-[ext_resource type="Texture2D" uid="uid://bwar8pk8rnu64" path="res://assets/Cannon_Game/Asset 8.png" id="3_kepju"]
+[ext_resource type="Texture2D" uid="uid://bqwwd6ymmd3vt" path="res://assets/Cannon_Game/power_gauge/unfilled_gauge.png" id="3_6y40d"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Powerguage/power_gauge.gd" id="3_ypa3w"]
 [ext_resource type="Texture2D" uid="uid://dir60xich1dle" path="res://assets/Cannon_Game/Background.PNG" id="4_1hf14"]
-[ext_resource type="Texture2D" uid="uid://rn127ks01fuh" path="res://assets/Cannon_Game/Asset 9.png" id="4_ynjec"]
+[ext_resource type="Texture2D" uid="uid://duawkrfo2d6tt" path="res://assets/Cannon_Game/power_gauge/filled_gauge.png" id="4_7j3sp"]
 [ext_resource type="Texture2D" uid="uid://bf630pjeiu443" path="res://assets/Cauldron_Room/Orbs Assets/orbs_counter/pink_counter.png" id="5_tm3s0"]
 
 [node name="PowerGauge" type="CanvasLayer"]
@@ -32,6 +32,7 @@ text = "[center][b]4"
 fit_content = true
 
 [node name="gaugebar" type="TextureRect" parent="."]
+texture_filter = 1
 offset_left = 11.0
 offset_top = 174.0
 offset_right = 168.0
@@ -39,7 +40,7 @@ offset_bottom = 734.0
 scale = Vector2(0.874628, 0.874628)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("3_kepju")
+texture = ExtResource("3_6y40d")
 
 [node name="power_gauge" type="TextureProgressBar" parent="gaugebar"]
 layout_mode = 0
@@ -49,5 +50,5 @@ pivot_offset = Vector2(-292, 362)
 max_value = 80.0
 step = 0.0
 fill_mode = 3
-texture_progress = ExtResource("4_ynjec")
+texture_progress = ExtResource("4_7j3sp")
 script = ExtResource("3_ypa3w")

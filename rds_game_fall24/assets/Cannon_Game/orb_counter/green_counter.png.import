@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwar8pk8rnu64"
-path="res://.godot/imported/Asset 8.png-8507f24ee470ca619279c065f16653ab.ctex"
+uid="uid://tawwultu4xet"
+path="res://.godot/imported/green_counter.png-2ba0b9d5950bbd4da6efbe4a8d2433ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/Asset 8.png"
-dest_files=["res://.godot/imported/Asset 8.png-8507f24ee470ca619279c065f16653ab.ctex"]
+source_file="res://assets/Cannon_Game/orb_counter/green_counter.png"
+dest_files=["res://.godot/imported/green_counter.png-2ba0b9d5950bbd4da6efbe4a8d2433ba.ctex"]
 
 [params]
 

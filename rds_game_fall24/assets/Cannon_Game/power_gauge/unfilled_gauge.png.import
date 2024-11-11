@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1641l4yqgny7"
-path="res://.godot/imported/nopower.png-6ad3e8253c215391a3db0d3e73e62021.ctex"
+uid="uid://bqwwd6ymmd3vt"
+path="res://.godot/imported/unfilled_gauge.png-8e97bc6230ea62396026416c515f9701.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/nopower.png"
-dest_files=["res://.godot/imported/nopower.png-6ad3e8253c215391a3db0d3e73e62021.ctex"]
+source_file="res://assets/Cannon_Game/power_gauge/unfilled_gauge.png"
+dest_files=["res://.godot/imported/unfilled_gauge.png-8e97bc6230ea62396026416c515f9701.ctex"]
 
 [params]
 
