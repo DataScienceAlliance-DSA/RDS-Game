@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=25 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scene Folder/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
@@ -15,7 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://cydbt015clspk" path="res://assets/Cannon_Game/Instruction_Left Arrow Button.png" id="10_ew5jl"]
 [ext_resource type="Texture2D" uid="uid://40nh0v5kv7kf" path="res://assets/Cannon_Game/Instruction_Right Arrow Button.png" id="11_t5f1i"]
 [ext_resource type="Texture2D" uid="uid://csjx177krhdpr" path="res://assets/Cannon_Game/Instruction_Spacebar.png" id="12_sildp"]
+[ext_resource type="FontFile" uid="uid://b0k5nntucjrmk" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
 [ext_resource type="Texture2D" uid="uid://pmg5kljsjmeo" path="res://assets/ui_assets/portraits/Fox.PNG" id="14_0sp5b"]
+[ext_resource type="FontFile" uid="uid://ctgrrtvdhlt02" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
 
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
@@ -165,8 +167,9 @@ clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 mouse_filter = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 0
-theme_override_font_sizes/bold_font_size = 18
+theme_override_font_sizes/bold_font_size = 23
 bbcode_enabled = true
 text = "[color=#282561][b]Player"
 fit_content = true
@@ -193,7 +196,8 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.141176, 0.133333, 0.345098, 1)
-theme_override_font_sizes/normal_font_size = 15
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 17
 theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
 text = "[color=#282561]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
@@ -324,8 +328,9 @@ layout_direction = 2
 layout_mode = 2
 size_flags_vertical = 0
 mouse_filter = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 0
-theme_override_font_sizes/bold_font_size = 18
+theme_override_font_sizes/bold_font_size = 23
 bbcode_enabled = true
 text = "[right][color=#282561][b]Fox[/b]"
 fit_content = true
@@ -353,7 +358,8 @@ clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 15
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 17
 theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
 text = "[right][color=#282561]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
@@ -450,8 +456,10 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_font_size = 35
 bbcode_enabled = true
 text = "[center][color=black][b]This is the first choice a player can choose to make."
 fit_content = true
@@ -524,8 +532,10 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_font_size = 35
 bbcode_enabled = true
 text = "[center][color=black][b]This is the first choice a player can choose to make."
 fit_content = true
@@ -598,8 +608,10 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_font_size = 35
 bbcode_enabled = true
 text = "[center][color=black][b]This is the first choice a player can choose to make."
 fit_content = true
@@ -720,8 +732,9 @@ theme_override_constants/margin_top = 13
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 0
-theme_override_font_sizes/bold_font_size = 18
+theme_override_font_sizes/bold_font_size = 23
 bbcode_enabled = true
 text = "[color=#282561][b]Fox"
 fit_content = true
@@ -741,7 +754,8 @@ theme_override_constants/margin_bottom = 0
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 15
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 17
 theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
 text = "[color=#282561]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
@@ -813,7 +827,8 @@ theme_override_constants/margin_bottom = 20
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
-theme_override_font_sizes/bold_font_size = 65
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
+theme_override_font_sizes/bold_font_size = 90
 bbcode_enabled = true
 text = "[center][b][color=black]INSTRUCTIONS"
 fit_content = true
@@ -847,7 +862,8 @@ custom_minimum_size = Vector2(450, 90)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/normal_font_size = 60
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 80
 bbcode_enabled = true
 text = "[right][color=black]Movement"
 
@@ -872,7 +888,8 @@ custom_minimum_size = Vector2(280, 90)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/normal_font_size = 60
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 80
 bbcode_enabled = true
 text = "[right][color=black]Shoot"
 
@@ -885,7 +902,8 @@ theme_override_constants/margin_right = 165
 [node name="RichTextLabel" type="RichTextLabel" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(200, 500)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 60
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 text = "[center][color=black]Aim the cannon, hold the spacebar to increase power, and release to fire an orb into every bag!"
 
