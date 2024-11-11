@@ -24,6 +24,9 @@ script/source = "extends Node2D
 var bag_phase = 0
 var bag_attempts = 3
 
+signal update_counter
+signal update_orb
+
 func _ready() -> void:
 	trajectory.visible = false
 	if power_gauge == null:
@@ -121,8 +124,10 @@ func _on_PauseTimer_timeout():
 		timer.wait_time = 3
 		timer.start()
 		set_process(true)
-
+		
 func bag_hit():
+	#emit signal to powergauge/pinkcounter to change sprite
+	emit_signal(\"update_counter\")
 	bag_attempts += 3
 "
 

@@ -10,3 +10,6 @@ res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scene Folder/UI.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/Minigames/Mixing_Game/orb.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PinkCounter.gd
