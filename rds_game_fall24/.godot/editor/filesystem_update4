@@ -5,3 +5,5 @@ res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/UI.tscn
 res://Scene Folder/fox.tscn
+res://Scene Folder/fox.gd
+res://Scene Folder/main_character.tscn
