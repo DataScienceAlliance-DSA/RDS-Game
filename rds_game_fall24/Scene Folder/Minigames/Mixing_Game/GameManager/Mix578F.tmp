@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dc867tjqrrdyl"]
+[gd_scene load_steps=22 format=3 uid="uid://dc867tjqrrdyl"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd" id="1_43cay"]
 [ext_resource type="Texture2D" uid="uid://bcnjy7v2fdcgx" path="res://assets/Mixing_Game/Mixing Game Backgdrop.png" id="1_gd8yd"]
@@ -181,22 +181,6 @@ loop_mode = 1
 resource_name = "bubbles"
 loop_mode = 1
 
-[sub_resource type="Animation" id="Animation_248ib"]
-resource_name = "none"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CauldronSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ix4m5"]
 _data = {
 "BlueOrb": SubResource("Animation_h0cuk"),
@@ -209,7 +193,6 @@ _data = {
 "YellowOrb": SubResource("Animation_d3xp8"),
 "bubbles": SubResource("Animation_dnwps"),
 "greenyellow": SubResource("Animation_x2r5r"),
-"none": SubResource("Animation_248ib"),
 "redviolet": SubResource("Animation_gwfp7"),
 "tealblue": SubResource("Animation_p4omg")
 }
