@@ -52,7 +52,7 @@ var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Can
 @onready var bag_load_timer : float = 0.5
 
 func _ready():
-	UI.start_scene_change(false, false)
+	UI.start_scene_change(false, false, "")
 	UI.get_node("Instructions").visible = true
 	UI.get_node("Instructions").set_process(true)
 	
@@ -190,8 +190,8 @@ func _on_bag_triggered():
 
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():
-	var dialogue_completed = UI.get_node("Dialogue").open_dialogue("res://Scripts/Dialogues/Cannon/UnhappyCannon.json", null)
-	await dialogue_completed
+	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/UnhappyCannon.json", null)
+	await UI.get_node("Monologue").closed_signal
 	
 	if current_bag_index == 5:  # Assuming index 5 is the final bag
 		emit_signal("stop_moving")  # Emit the signal to stop movement for the final bag
@@ -211,4 +211,6 @@ func perform_auto_drop():
 	cannonball_sprite.frame = current_bag_index
 
 func end_game():
-	UI.get_node("Monologue-CannonGame").set_process(true)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/MixingSegue.json", null)
+	await UI.get_node("Monologue").closed_signal
+	UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn")

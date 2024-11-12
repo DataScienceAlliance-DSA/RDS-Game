@@ -20,4 +20,5 @@ func _ready():
 func _on_update_counter():
 	print(states)
 	states += 1
-	texture = counter_textures[states]
+	if states != 6:
+		texture = counter_textures[states]

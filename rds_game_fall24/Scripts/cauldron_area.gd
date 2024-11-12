@@ -40,7 +40,7 @@ func end_interaction():
 	self.set_process(true)
 	
 	if (interactions == 1):
-		UI.start_scene_change(true, true)
+		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn")
 
 func set_animation(anim_name: String):
 	animation_player.current_animation = anim_name

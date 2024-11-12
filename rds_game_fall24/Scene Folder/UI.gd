@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var scene_change_active = false
 @onready var scene_change_switching = false
 
+var next_scene : String 			# string to next scene
+
 @onready var scene_hide_max = 1.0	# time it takes for screen to hide before scene_changes
 
 @onready var screen_hide_start = Vector2(1366, 0)
@@ -23,8 +25,10 @@ func _process(delta):
 	elif (scene_change_active) and (scene_change_switching):
 		enter_next_scene()
 
-func start_scene_change(close, switch): 
+func start_scene_change(close, switch, scene): 
 	screen_hide.visible = true
+	
+	next_scene = scene
 	
 	if (close == true):
 		screen_hide_begin.y = screen_hide_start.y
@@ -38,4 +42,4 @@ func start_scene_change(close, switch):
 	scene_change_switching = switch
 
 func enter_next_scene():
-	get_tree().change_scene_to_file("res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn")
+	get_tree().change_scene_to_file(next_scene)

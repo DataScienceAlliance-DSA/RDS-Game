@@ -5,7 +5,7 @@ var drop_spots
 var orb_slot	# array of the orbs occupying dropspots
 
 func _ready():
-	UI.start_scene_change(false, false)
+	UI.start_scene_change(false, false, "")
 	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Mixing/MixingIntro.json", null)
 	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
 

@@ -42,6 +42,9 @@ var next_char_timer : float	# time passed since last character added to string
 @onready var next_char_wait : float = 0.015	# time needed to elapse for next character to be added
 var char_index : int
 
+# signal: tells non-area caller that the dialogue is closed
+signal closed_signal
+
 # properties for opposing character's dialogue box
 @onready var response_scale = (get_node("TextContainer/PositionControl/ScaleControl") as Control)
 @onready var response_avatar = (get_node("TextContainer/PositionControl/ScaleControl/IconCenter/Avatar") as TextureRect)
@@ -173,6 +176,7 @@ func close_3choice_dialogue():
 	# disable dialogue & interactable, enable player
 	target_position = Vector2(0, 300)
 	interactable = false
+	emit_signal("closed_signal")
 	
 	if interacted_area:
 		interacted_area.end_interaction()
