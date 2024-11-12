@@ -13,3 +13,5 @@ res://Scripts/Monologues/MixingSegue.json
 res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scripts/cauldron_area.gd
 res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
+res://assets/Mixing_Game/smoke assets/blank.tres

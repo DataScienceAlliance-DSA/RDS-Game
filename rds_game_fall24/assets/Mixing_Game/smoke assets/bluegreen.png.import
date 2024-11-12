@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfoe0hy3up4"
-path="res://.godot/imported/smokesheet.png-d07f43bcea71a2da0fec0092f14f2836.ctex"
+uid="uid://dbin0r06e4mm0"
+path="res://.godot/imported/bluegreen.png-6d91970ad23ae5a35696100b446a33f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mixing_Game/smoke assets/smokesheet.png"
-dest_files=["res://.godot/imported/smokesheet.png-d07f43bcea71a2da0fec0092f14f2836.ctex"]
+source_file="res://assets/Mixing_Game/smoke assets/bluegreen.png"
+dest_files=["res://.godot/imported/bluegreen.png-6d91970ad23ae5a35696100b446a33f9.ctex"]
 
 [params]
 

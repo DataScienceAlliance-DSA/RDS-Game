@@ -1,7 +1,7 @@
+Sprite2D
 TextureRect
 Container
 CollisionShape2D
-Sprite2D
 RigidBody2D
 Area2D
 RichTextLabel
