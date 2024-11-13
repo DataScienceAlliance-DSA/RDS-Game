@@ -113,31 +113,31 @@ scale = Vector2(5.08, 5.08)
 position = Vector2(871, 242)
 scale = Vector2(5.08, 5.08)
 
-[node name="green" parent="." instance=ExtResource("4_o6hdc")]
+[node name="green" parent="." groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 position = Vector2(321, 410.3)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("6_7l24o")
 
-[node name="yellow" parent="." instance=ExtResource("4_o6hdc")]
+[node name="yellow" parent="." groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 position = Vector2(278, 484.3)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("7_v7e68")
 
-[node name="red" parent="." instance=ExtResource("4_o6hdc")]
+[node name="red" parent="." groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 position = Vector2(365, 487.3)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("8_t5oxb")
 
-[node name="teal" parent="." instance=ExtResource("4_o6hdc")]
+[node name="teal" parent="." groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 position = Vector2(449, 487.3)
 scale = Vector2(0.125, 0.125)
 
-[node name="violet" parent="." instance=ExtResource("4_o6hdc")]
+[node name="violet" parent="." groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 position = Vector2(408, 410.3)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("9_my8so")
 
-[node name="blue" parent="." instance=ExtResource("4_o6hdc")]
+[node name="blue" parent="." groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 position = Vector2(365, 337.3)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("10_t1ucu")
