@@ -146,15 +146,16 @@ script = SubResource("GDScript_3go7r")
 top_level = true
 z_index = 1
 y_sort_enabled = true
-position = Vector2(130, 695)
-scale = Vector2(0.05, 0.05)
+texture_filter = 1
+position = Vector2(215, 667)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_2rgn1")
 
 [node name="cannon body" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-2.86102e-06, 2.86102e-06)
-rotation = 3.27598
-scale = Vector2(0.05, 0.05)
+position = Vector2(-70.1677, 46)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_o1g55")
 offset = Vector2(-500, 250)
 flip_h = true
