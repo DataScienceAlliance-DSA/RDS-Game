@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnnpj0ofx5u08"
-path="res://.godot/imported/PowerGaugeBG.png-08bd62e2d7767a1e17c641e508ae2322.ctex"
+uid="uid://qapi487lx3j6"
+path="res://.godot/imported/Bag5.PNG-154b7350958bed70f02218affa5fd7c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/PowerGaugeBG.png"
-dest_files=["res://.godot/imported/PowerGaugeBG.png-08bd62e2d7767a1e17c641e508ae2322.ctex"]
+source_file="res://assets/Cannon_Game/bags/Bag5.PNG"
+dest_files=["res://.godot/imported/Bag5.PNG-154b7350958bed70f02218affa5fd7c2.ctex"]
 
 [params]
 

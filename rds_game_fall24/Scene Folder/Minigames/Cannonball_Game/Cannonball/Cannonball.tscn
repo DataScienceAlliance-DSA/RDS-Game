@@ -14,6 +14,7 @@ physics_material_override = SubResource("PhysicsMaterial_31evt")
 script = ExtResource("2_l36d6")
 
 [node name="dart" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_1qsp8")
 hframes = 6
 vframes = 2

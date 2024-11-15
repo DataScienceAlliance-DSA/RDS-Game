@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cppwh6hy58fgj"
-path="res://.godot/imported/Rectangle 687.png-b59827d3fa5d188f078be780d057eb68.ctex"
+uid="uid://bp5xu33omo7wo"
+path="res://.godot/imported/Bag4.PNG-7b451608150206c65dced52efdc50beb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/Rectangle 687.png"
-dest_files=["res://.godot/imported/Rectangle 687.png-b59827d3fa5d188f078be780d057eb68.ctex"]
+source_file="res://assets/Cannon_Game/bags/Bag4.PNG"
+dest_files=["res://.godot/imported/Bag4.PNG-7b451608150206c65dced52efdc50beb.ctex"]
 
 [params]
 
