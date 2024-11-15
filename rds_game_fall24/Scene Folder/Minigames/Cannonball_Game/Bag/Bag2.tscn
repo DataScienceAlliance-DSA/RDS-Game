@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw4n0e075s57i"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd" id="1_nddnn"]
-[ext_resource type="Texture2D" uid="uid://c562me0xi46pk" path="res://assets/Cannon_Game/bag_2.png" id="2_ao8nd"]
+[ext_resource type="Texture2D" uid="uid://cgvw1fpn0li0r" path="res://assets/Cannon_Game/bags/Bag2.PNG" id="2_0s52d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uhxg"]
 radius = 5.0
@@ -13,8 +13,8 @@ collision_mask = 255
 script = ExtResource("1_nddnn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_ao8nd")
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_0s52d")
 
 [node name="TriggerArea" type="Area2D" parent="." groups=["Bags"]]
 position = Vector2(0, -31)
