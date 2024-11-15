@@ -683,48 +683,6 @@ energy = 2.0
 texture = ExtResource("11_bl43j")
 script = ExtResource("12_1uavd")
 
-[node name="PointLight2D3" type="PointLight2D" parent="TileMap"]
-position = Vector2(76, 1124)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D4" type="PointLight2D" parent="TileMap"]
-position = Vector2(608, 148)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D5" type="PointLight2D" parent="TileMap"]
-position = Vector2(928, 150)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D6" type="PointLight2D" parent="TileMap"]
-position = Vector2(1248, 150)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D7" type="PointLight2D" parent="TileMap"]
-position = Vector2(1568, 150)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D8" type="PointLight2D" parent="TileMap"]
-position = Vector2(1484, 804)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
 [node name="Player" parent="." instance=ExtResource("16_0o7eq")]
 y_sort_enabled = true
 position = Vector2(960, 1168)
