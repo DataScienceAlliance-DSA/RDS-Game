@@ -95,7 +95,6 @@ func _process(_delta):
 	
 	# check for and process dialogue if next button (E) is pressed
 	if !choosing:
-		print(choosing)
 		response_arrow.visible = true
 		response_arrow.add_theme_constant_override("margin_bottom", (25 * cos(5 * next_char_timer) + 125) / 2)
 	elif (Input.is_action_just_pressed("interaction")) and (char_index <= character_text.length()):

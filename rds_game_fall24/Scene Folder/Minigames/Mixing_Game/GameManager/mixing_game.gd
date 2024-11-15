@@ -23,45 +23,68 @@ var goal_name : String				# current stage's pair of orb goal name
 @onready var spot_container_target_pos = spot_holder.position
 @onready var mix_button_target_pos = mix_button.position
 @onready var mixing_ui_change_speed = 5.0
+var reopening
 
 func _ready():
 	UI.start_scene_change(false, false, "")
 	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Mixing/MixingIntro.json", null)
 	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
+	next_stage(true, true)
 
-func next_stage(success : bool):
+func next_stage(success : bool, readying : bool):
 	var cauldron_player = get_node("Cauldron/AnimationPlayer")
 	stage = stage + 1 if success else stage
 	match(stage):
 		1:
 			goal.texture = load("res://assets/Mixing_Game/smoke assets/redviolet.png")
 			goal_name = "redviolet"
+			print("goal is " + goal_name)
 		2:
 			goal.texture = load("res://assets/Mixing_Game/smoke assets/greenyellow.png")
 			goal_name = "greenyellow"
-			get_node("Control/red").queue_free()
-			get_node("Control/violet").queue_free()
+			var orbs = get_tree().get_nodes_in_group("MixingOrbs")
+			for orb in orbs:
+				if (orb.name == 'red') or (orb.name == 'violet'):
+					orb.queue_free()
 			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix1.json", null)
 		3:
 			goal.texture = load("res://assets/Mixing_Game/smoke assets/tealblue.png")
 			goal_name = "tealblue"
-			get_node("Control/green").queue_free()
-			get_node("Control/yellow").queue_free()
+			var orbs = get_tree().get_nodes_in_group("MixingOrbs")
+			for orb in orbs:
+				if (orb.name == 'green') or (orb.name == 'yellow'):
+					orb.queue_free()
 			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix2.json", null)
 		4:
 			goal.texture = load("res://assets/Mixing_Game/smoke assets/blank.tres")
-			get_node("Control/teal").queue_free()
-			get_node("Control/blue").queue_free()
+			var orbs = get_tree().get_nodes_in_group("MixingOrbs")
+			for orb in orbs:
+				if (orb.name == 'teal') or (orb.name == 'blue'):
+					orb.queue_free()
 			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
-	await UI.get_node("Monologue").closed_signal
-	set_mixing_ui_visibility(true)
-	cauldron_player.current_animation = "none"
+	if not readying:
+		await UI.get_node("Monologue").closed_signal
+		set_mixing_ui_visibility(true)
+		cauldron_player.current_animation = "none"
 
 func _process(delta):
 	# ui lerps position when mixing scene opens and closes:
 	orb_container.position = orb_container.position.lerp(orb_container_target_pos, delta * mixing_ui_change_speed)
 	spot_holder.position = spot_holder.position.lerp(spot_container_target_pos, delta * mixing_ui_change_speed)
 	mix_button.position = mix_button.position.lerp(mix_button_target_pos, delta * mixing_ui_change_speed)
+	var orbs = get_tree().get_nodes_in_group("MixingOrbs")
+	for orb in orbs:
+		orb.modulate.a = lerpf(orb.modulate.a, 1.0, delta * mixing_ui_change_speed)
+	
+	if ((orb_container.position.x > orb_container_target_pos.x - 25.0) and reopening):
+		var spots = get_tree().get_nodes_in_group("DropSpots")
+		for orb in orbs:
+			orb.visible = true
+			orb.modulate.a = 0.0
+			orb.reparent(get_node("Control"))
+		for spot in spots:
+			spot.reparent(get_node("Control"))
+		reopening = false
 	
 	# check for drop spot's areas colliding with dragged UI orbs
 	orb_slot = []
@@ -85,15 +108,13 @@ func _process(delta):
 		preview.texture = load("res://assets/Mixing_Game/smoke assets/blank.tres")
 	
 	# check for cauldron's area colliding with spawned RIGIDBODY orbs and play respective animation
-	if (cauldron_triggerable):
-		cauldron_triggerable = false
-		print("work")
-		run_this()
+	#if (cauldron_triggerable):
+	#	cauldron_triggerable = false
+	#	print("work")
+	#	run_this()
 
 func run_this():
-	print("work")
 	# await get_tree().create_timer(1.0).timeout
-	print("work")
 	var possible_name1 = orb_slot[0] + orb_slot[1]
 	var possible_name2 = orb_slot[1] + orb_slot[0]
 	cauldron_triggerable = false
@@ -114,17 +135,17 @@ func set_cauldron_animation(anim_name):
 				3:
 					cauldron_player.current_animation = "BlueOrb"	# TEMP
 			await get_tree().create_timer(2.0).timeout
-			next_stage(true)
+			next_stage(true, false)
 		"bad":
 			cauldron_player.current_animation = "none"	# TEMP
 			await get_tree().create_timer(2.0).timeout
 			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
-			next_stage(false)
+			next_stage(false, false)
 
 func mix():
 	# when user presses mix button
 	if (orb_slot.size() == 2):
-		cauldron_triggerable = true
+		run_this()
 		set_mixing_ui_visibility(false)
 		print("Now mixing... " + str(orb_slot[0]) + " and " + str(orb_slot[1]))
 		
@@ -169,6 +190,7 @@ func set_mixing_ui_visibility(visibility):
 	if (!visibility):
 		for orb in orbs:
 			orb.reparent(orb_holder)
+			orb.visible = false
 		for spot in spots:
 			spot.reparent(spot_holder)
 		
@@ -176,14 +198,10 @@ func set_mixing_ui_visibility(visibility):
 		spot_container_target_pos.x += 750
 		mix_button_target_pos.x += 750
 	else:
-		for orb in orbs:
-			orb.reparent(get_node("Control"))
-		for spot in spots:
-			spot.reparent(get_node("Control"))
-		
 		orb_container_target_pos.x += 750
 		spot_container_target_pos.x -= 750
 		mix_button_target_pos.x -= 750
+		reopening = true
 
 func _play_animation_at_position(position: Vector2, animation_name: String):
 	var bag_poof_animation = load("res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn")
