@@ -1,7 +1,6 @@
 extends Node2D
 
 var drop_spots
-@onready var preview = get_node("Control/OrbPlacement/VBoxContainer/HBoxContainer/MarginContainer2/TextureRect") as TextureRect
 @onready var goal = get_node("Control/OrbPlacement/VBoxContainer/HBoxContainer/MarginContainer/TextureRect") as TextureRect
 var orb_slot	# array of the orbs occupying dropspots
 
@@ -102,19 +101,6 @@ func _process(delta):
 		if (drop_spot.get_overlapping_areas()):
 			orb_slot.append(drop_spot.get_overlapping_areas()[0].get_parent().name)
 		drop_int = drop_int + 1
-	if (orb_slot.size() == 2):
-		var possible_name1 = orb_slot[0] + orb_slot[1]
-		var possible_name2 = orb_slot[1] + orb_slot[0]
-		var possible_texture1
-		var possible_texture2
-		if (ResourceLoader.exists("res://assets/Mixing_Game/smoke assets/"+possible_name1+".png")):
-			preview.texture = load("res://assets/Mixing_Game/smoke assets/"+possible_name1+".png")
-		elif (ResourceLoader.exists("res://assets/Mixing_Game/smoke assets/"+possible_name2+".png")):
-			preview.texture = load("res://assets/Mixing_Game/smoke assets/"+possible_name2+".png")
-		else:
-			preview.texture = load("res://assets/Mixing_Game/smoke assets/blank.tres")
-	else:
-		preview.texture = load("res://assets/Mixing_Game/smoke assets/blank.tres")
 	
 	# check for cauldron's area colliding with spawned RIGIDBODY orbs and play respective animation
 	#if (cauldron_triggerable):
@@ -136,17 +122,19 @@ func set_cauldron_animation(anim_name):
 	var cauldron_player = get_node("Cauldron/AnimationPlayer")
 	match (anim_name):
 		"goal_name":
+			await get_tree().create_timer(1.0).timeout
 			match (stage):
 				1:
-					cauldron_player.current_animation = "MagentaOrb" # TEMP
+					cauldron_player.current_animation = "redviolet"
 				2:
-					cauldron_player.current_animation = "GreenOrb"	# TEMPORARY ANIMATION
+					cauldron_player.current_animation = "greenyellow"
 				3:
-					cauldron_player.current_animation = "BlueOrb"	# TEMP
+					cauldron_player.current_animation = "tealblue"
 			await get_tree().create_timer(2.0).timeout
 			next_stage(true, false)
 		"bad":
-			cauldron_player.current_animation = "none"	# TEMP
+			await get_tree().create_timer(1.0).timeout
+			cauldron_player.current_animation = "bubbles"
 			await get_tree().create_timer(2.0).timeout
 			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 			next_stage(false, false)
