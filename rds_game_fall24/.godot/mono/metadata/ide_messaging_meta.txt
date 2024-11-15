@@ -1,2 +1,2 @@
-﻿63796
-C:/Users/23die/Downloads/Godot_v4.2.2-stable_mono_win64/Godot_v4.2.2-stable_mono_win64/Godot_v4.2.2-stable_mono_win64.exe
+﻿60656
+/private/var/folders/0n/l1j1tsq53l9fqhzsrh19x0c40000gn/T/AppTranslocation/FCC38654-3AAC-4FBB-855C-91E4E7483781/d/Godot_mono.app/Contents/MacOS/Godot
