@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dowfc81kafhnk" path="res://assets/Cannon_Game/cannon body.png" id="1_o1g55"]
 [ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://assets/Cannon_Game/trajectory dot.png" id="2_ee8mj"]
 [ext_resource type="Shader" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader" id="2_inmcu"]
-[ext_resource type="Texture2D" uid="uid://qmjfamltg3oh" path="res://assets/Cannon_Game/cannnon wheel.png" id="4_2rgn1"]
+[ext_resource type="Texture2D" uid="uid://dwgvf5p4iirma" path="res://assets/Cannon_Game/cannnon wheel.png" id="4_2rgn1"]
 [ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn" id="5_2pikp"]
 
 [sub_resource type="GDScript" id="GDScript_3go7r"]
@@ -146,15 +146,16 @@ script = SubResource("GDScript_3go7r")
 top_level = true
 z_index = 1
 y_sort_enabled = true
-position = Vector2(130, 695)
-scale = Vector2(0.05, 0.05)
+texture_filter = 1
+position = Vector2(201, 668)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_2rgn1")
 
 [node name="cannon body" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-2.86102e-06, 2.86102e-06)
-rotation = 3.27598
-scale = Vector2(0.05, 0.05)
+position = Vector2(-70.1677, 42)
+rotation = 3.14159
+scale = Vector2(0.172, 0.178)
 texture = ExtResource("1_o1g55")
 offset = Vector2(-500, 250)
 flip_h = true

@@ -73,7 +73,7 @@ script = ExtResource("1_nb67d")
 [node name="cannon" parent="." instance=ExtResource("1_rfhu6")]
 visibility_layer = 17
 z_index = 2
-position = Vector2(133.175, 690.881)
+position = Vector2(171.513, 664.923)
 scale = Vector2(1.00051, 0.994446)
 
 [node name="PowerGauge" parent="." instance=ExtResource("2_5q4oa")]
@@ -88,7 +88,7 @@ gravity_scale = 0.0
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SideBorder2"]
-position = Vector2(-11.7122, -1.10599)
+position = Vector2(-37.3293, 2.27174e-06)
 scale = Vector2(1.16241, 2.11378)
 shape = SubResource("RectangleShape2D_sapuo")
 
