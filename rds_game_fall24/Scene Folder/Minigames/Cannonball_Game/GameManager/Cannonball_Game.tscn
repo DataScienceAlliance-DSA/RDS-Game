@@ -73,7 +73,7 @@ script = ExtResource("1_nb67d")
 [node name="cannon" parent="." instance=ExtResource("1_rfhu6")]
 visibility_layer = 17
 z_index = 2
-position = Vector2(133.175, 690.881)
+position = Vector2(185.638, 663.924)
 scale = Vector2(1.00051, 0.994446)
 
 [node name="PowerGauge" parent="." instance=ExtResource("2_5q4oa")]
