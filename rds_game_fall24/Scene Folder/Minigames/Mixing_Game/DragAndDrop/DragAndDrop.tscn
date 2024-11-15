@@ -27,7 +27,7 @@ material = SubResource("ShaderMaterial_ohrwf")
 offset_right = 1366.0
 offset_bottom = 768.0
 mouse_filter = 2
-color = Color(0, 0, 0, 0.484)
+color = Color(0, 0, 0, 0.482353)
 
 [node name="OrbPlacement" type="MarginContainer" parent="."]
 offset_left = 731.0

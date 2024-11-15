@@ -19,9 +19,12 @@ var goal_name : String				# current stage's pair of orb goal name
 @onready var orb_holder = get_node("Control/MarginContainer/HBoxContainer") as Control	# placement for orbs, DONT MOVE THIS
 @onready var spot_holder = get_node("Control/OrbPlacement") as Control	# placement for spots
 @onready var mix_button = get_node("Control/Button") as Control
+@onready var bg_blur_mat = get_node("Control/Blur").material as Material
 @onready var orb_container_target_pos = orb_container.position
 @onready var spot_container_target_pos = spot_holder.position
 @onready var mix_button_target_pos = mix_button.position
+@onready var bg_blur_prop = 1.0
+@onready var blur_target_alpha = 1.0
 @onready var mixing_ui_change_speed = 5.0
 var reopening
 
@@ -75,6 +78,12 @@ func _process(delta):
 	var orbs = get_tree().get_nodes_in_group("MixingOrbs")
 	for orb in orbs:
 		orb.modulate.a = lerpf(orb.modulate.a, 1.0, delta * mixing_ui_change_speed)
+	bg_blur_prop = lerpf(bg_blur_prop, blur_target_alpha, delta * mixing_ui_change_speed)
+	bg_blur_mat.set_shader_parameter("lod", 1.5 * bg_blur_prop)
+	bg_blur_mat.set_shader_parameter("dim", 0.15 * bg_blur_prop)
+	
+	print(bg_blur_mat.get_shader_parameter("LOD"))
+	print(bg_blur_mat.get_shader_parameter("Dim"))
 	
 	if ((orb_container.position.x > orb_container_target_pos.x - 25.0) and reopening):
 		var spots = get_tree().get_nodes_in_group("DropSpots")
@@ -193,14 +202,17 @@ func set_mixing_ui_visibility(visibility):
 			orb.visible = false
 		for spot in spots:
 			spot.reparent(spot_holder)
-		
+		print("OFF")
 		orb_container_target_pos.x -= 750
 		spot_container_target_pos.x += 750
 		mix_button_target_pos.x += 750
+		blur_target_alpha = 0.0;
 	else:
+		print("ON")
 		orb_container_target_pos.x += 750
 		spot_container_target_pos.x -= 750
 		mix_button_target_pos.x -= 750
+		blur_target_alpha = 1.0;
 		reopening = true
 
 func _play_animation_at_position(position: Vector2, animation_name: String):
