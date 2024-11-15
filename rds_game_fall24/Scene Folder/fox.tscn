@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://1q1al4h8xolo"]
 
 [ext_resource type="Script" path="res://Scene Folder/fox.gd" id="1_bp21m"]
-[ext_resource type="Texture2D" uid="uid://clmihdldimcmt" path="res://assets/Cauldron_Room/Fox Assets/fox_spritesheet.png" id="1_jm7ln"]
+[ext_resource type="Texture2D" uid="uid://c0dokkyvohbu2" path="res://assets/Cauldron_Room/Fox Assets/FoxSpreadFINAL2.png" id="2_7mamk"]
 [ext_resource type="Script" path="res://Scripts/fox_area.gd" id="2_lp4ex"]
 
 [sub_resource type="Animation" id="Animation_gdaj2"]
@@ -147,7 +147,7 @@ y_sort_enabled = true
 texture_filter = 3
 position = Vector2(0, 5)
 scale = Vector2(0.04, 0.04)
-texture = ExtResource("1_jm7ln")
+texture = ExtResource("2_7mamk")
 offset = Vector2(0, -128)
 hframes = 9
 vframes = 5
