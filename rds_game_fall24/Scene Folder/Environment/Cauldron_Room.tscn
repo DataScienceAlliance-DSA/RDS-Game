@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=45 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Texture2D" uid="uid://eeg78fn8y1aq" path="res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png" id="1_di71i"]
 [ext_resource type="Texture2D" uid="uid://bdyx8endh4e8r" path="res://assets/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png" id="2_23e28"]
@@ -21,6 +21,9 @@
 [ext_resource type="AudioStream" uid="uid://b25wuu2wcjrup" path="res://assets/sound/bkg_music.ogg" id="17_u1o5p"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/AudioStreamPlayer.gd" id="18_dhoex"]
 [ext_resource type="Texture2D" uid="uid://v3fe3rbixa55" path="res://assets/Cauldron_Room/Cauldron Assets/Cauldron SS.png" id="20_rac73"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bu35p"]
+polygon = PackedVector2Array(264, 24, 328, 88, 328, 1240, 2056, 1240, 2056, 88, 328, 88, 264, 24, 2120, 24, 2120, 1304, 264, 1304)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvrq3"]
 texture = ExtResource("1_di71i")
@@ -663,8 +666,87 @@ _data = {
 [node name="Cauldron Room" type="Node2D"]
 y_sort_enabled = true
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-264, -24)
+occluder = SubResource("OccluderPolygon2D_bu35p")
+occluder_light_mask = 1023
+
+[node name="Lighting" type="TileMap" parent="."]
 modulate = Color(0.690196, 0.690196, 0.690196, 1)
+format = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(108, 656)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(108, 332)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(76, 1124)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(608, 148)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
+[node name="PointLight2D5" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(928, 150)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
+[node name="PointLight2D6" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(1248, 150)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
+[node name="PointLight2D7" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(1568, 150)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
+[node name="PointLight2D8" type="PointLight2D" parent="Lighting"]
+z_as_relative = false
+position = Vector2(1484, 804)
+scale = Vector2(0.25, 0.25)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_bl43j")
+script = ExtResource("12_1uavd")
+
 [node name="v" type="TileMap" parent="."]
 z_index = -5
 texture_filter = 3
@@ -683,62 +765,6 @@ layer_4/name = "Items"
 layer_4/tile_data = PackedInt32Array(131097, 196620, 9, 131096, 65548, 6, 131095, 262156, 9, 131091, 65548, 6, 131090, 65548, 12, 131086, 65548, 6, 131081, 65548, 6, 327681, 65548, 7, 655361, 65548, 7, 786455, 65548, 8)
 layer_5/name = "Layer5"
 layer_5/tile_data = PackedInt32Array(786455, 131084, 5, 458779, 65548, 4, 458775, 196620, 2, 393239, 196620, 1, 393243, 262156, 10, 720919, 262156, 9, 720923, 131084, 12, 786459, 262156, 11, 1179649, 131084, 4, 917505, 196620, 9, 983041, 65548, 9, 1114113, 65548, 8, 589825, 262156, 11, 262145, 262156, 1, 131080, 196620, 0, 131082, 196620, 1, 131085, 131084, 12, 131087, 262156, 13, 131090, 65548, 11, 131092, 131084, 12)
-
-[node name="PointLight2D" type="PointLight2D" parent="TileMap"]
-position = Vector2(108, 656)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D2" type="PointLight2D" parent="TileMap"]
-position = Vector2(108, 332)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D3" type="PointLight2D" parent="TileMap"]
-position = Vector2(76, 1124)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D4" type="PointLight2D" parent="TileMap"]
-position = Vector2(608, 148)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D5" type="PointLight2D" parent="TileMap"]
-position = Vector2(928, 150)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D6" type="PointLight2D" parent="TileMap"]
-position = Vector2(1248, 150)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D7" type="PointLight2D" parent="TileMap"]
-position = Vector2(1568, 150)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
-
-[node name="PointLight2D8" type="PointLight2D" parent="TileMap"]
-position = Vector2(1484, 804)
-scale = Vector2(0.25, 0.25)
-energy = 2.0
-texture = ExtResource("11_bl43j")
-script = ExtResource("12_1uavd")
 
 [node name="Player" parent="." instance=ExtResource("16_0o7eq")]
 y_sort_enabled = true
