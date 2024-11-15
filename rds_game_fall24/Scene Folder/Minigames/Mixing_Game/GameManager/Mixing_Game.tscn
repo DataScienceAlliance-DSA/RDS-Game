@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bcnjy7v2fdcgx" path="res://assets/Mixing_Game/Mixing Game Backgdrop.png" id="1_gd8yd"]
 [ext_resource type="Texture2D" uid="uid://d3ts7tyirdj4b" path="res://assets/Mixing_Game/Podium.png" id="2_g2hsw"]
 [ext_resource type="PackedScene" uid="uid://dw5rykc2ps4g3" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn" id="4_wkjg7"]
+[ext_resource type="Texture2D" uid="uid://8vw07d50xiwm" path="res://assets/Mixing_Game/cauldron_mixing_spritesheet.png" id="6_0kkcw"]
 [ext_resource type="PackedScene" uid="uid://bjsn5l36wjgx2" path="res://Scene Folder/Minigames/Mixing_Game/orb.tscn" id="6_avnpx"]
-[ext_resource type="Texture2D" uid="uid://v3fe3rbixa55" path="res://assets/Cauldron_Room/Cauldron Assets/Cauldron SS.png" id="6_rjobh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3in4"]
 size = Vector2(20, 16.25)
@@ -219,6 +219,7 @@ script = ExtResource("1_43cay")
 
 [node name="Control" parent="." instance=ExtResource("4_wkjg7")]
 layer = 0
+visible = false
 
 [node name="Backdrop" type="TextureRect" parent="."]
 offset_right = 1366.0
@@ -231,9 +232,11 @@ position = Vector2(684, 520)
 texture = ExtResource("2_g2hsw")
 
 [node name="LeftOrb" parent="." instance=ExtResource("6_avnpx")]
+visible = false
 position = Vector2(636, 72)
 
 [node name="RightOrb" parent="." instance=ExtResource("6_avnpx")]
+visible = false
 position = Vector2(731, 72)
 
 [node name="Cauldron" type="StaticBody2D" parent="."]
@@ -249,10 +252,12 @@ shape = SubResource("RectangleShape2D_i3in4")
 
 [node name="CauldronSprite" type="Sprite2D" parent="Cauldron"]
 y_sort_enabled = true
-texture = ExtResource("6_rjobh")
+position = Vector2(0.500002, -47.9)
+scale = Vector2(0.347656, 0.347656)
+texture = ExtResource("6_0kkcw")
 offset = Vector2(0, -64)
-hframes = 6
-vframes = 6
+hframes = 8
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron"]
 shape = SubResource("RectangleShape2D_jw3kg")

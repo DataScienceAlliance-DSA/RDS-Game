@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b1k24nnqgwa42"]
 
-[ext_resource type="Texture2D" uid="uid://dir60xich1dle" path="res://assets/Cannon_Game/Background.PNG" id="1_8mdpe"]
+[ext_resource type="Texture2D" uid="uid://b38u8a4mqr0r3" path="res://assets/Cannon_Game/cannonball_game_bkg.png" id="1_6ejvo"]
 
 [node name="background" type="CanvasLayer"]
 
@@ -8,4 +8,4 @@
 custom_minimum_size = Vector2(1366, 768)
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_8mdpe")
+texture = ExtResource("1_6ejvo")
