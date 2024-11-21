@@ -32,26 +32,6 @@ func _process(delta):
 func _physics_process(delta: float) -> void:
 	# Apply gravity to the y-component
 	linear_velocity.y += env_gravity * delta
-		
-		# Apply the dampening factor to reduce velocity after each bounce
-		# bounced_velocity.x *= initial_dampening
-		# bounced_velocity.y *= initial_dampening
-		
-	# Ensure at least one component of the velocity is above the minimum bounce velocity
-		#if abs(bounced_velocity.x) < min_bounce_velocity and abs(bounced_velocity.y) < min_bounce_velocity:
-		#	bounced_velocity = Vector2.ZERO  # Stop movement if both are too small
-		#else:
-		#	# If only one is below the minimum, adjust it
-		#	if abs(bounced_velocity.x) < min_bounce_velocity:
-		#		bounced_velocity.x = sign(bounced_velocity.x) * min_bounce_velocity
-		
-		#	if abs(bounced_velocity.y) < min_bounce_velocity:
-		#		bounced_velocity.y = sign(bounced_velocity.y) * min_bounce_velocity
-		
-			# Update velocity after bounce
-		#	velocity = bounced_velocity
-	
-	# Move the orb with the updated velocity
 
 func _on_timer_timeout():
 	# cannonball deletes self if failed

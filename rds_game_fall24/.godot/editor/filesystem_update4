@@ -10,3 +10,8 @@ res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Mixing_Game/orb.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn
+res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd
+res://Scripts/dialogue.gd
+res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
+res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn

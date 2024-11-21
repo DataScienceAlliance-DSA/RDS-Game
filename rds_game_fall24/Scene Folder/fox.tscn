@@ -139,7 +139,7 @@ size = Vector2(18.5, 23)
 
 [node name="Fox" type="CharacterBody2D"]
 position = Vector2(48, 48)
-scale = Vector2(4, 4)
+scale = Vector2(-4, 4)
 script = ExtResource("1_bp21m")
 
 [node name="FoxSprite" type="Sprite2D" parent="."]

@@ -772,7 +772,7 @@ position = Vector2(960, 1168)
 
 [node name="Fox" parent="." instance=ExtResource("8_o1l77")]
 y_sort_enabled = true
-position = Vector2(1029, 899)
+position = Vector2(1029, 920)
 
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
 visible = false

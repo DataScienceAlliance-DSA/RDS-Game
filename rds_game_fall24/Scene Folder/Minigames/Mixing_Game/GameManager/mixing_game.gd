@@ -48,7 +48,10 @@ func next_stage(success : bool, readying : bool):
 			for orb in orbs:
 				if (orb.name == 'red') or (orb.name == 'violet'):
 					orb.queue_free()
-			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix1.json", null)
+			if success:
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix1.json", null)
+			else:
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 		3:
 			goal.texture = load("res://assets/Mixing_Game/smoke assets/tealblue.png")
 			goal_name = "tealblue"
@@ -56,14 +59,20 @@ func next_stage(success : bool, readying : bool):
 			for orb in orbs:
 				if (orb.name == 'green') or (orb.name == 'yellow'):
 					orb.queue_free()
-			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix2.json", null)
+			if success:
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix2.json", null)
+			else:
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 		4:
 			goal.texture = load("res://assets/Mixing_Game/smoke assets/blank.tres")
 			var orbs = get_tree().get_nodes_in_group("MixingOrbs")
 			for orb in orbs:
 				if (orb.name == 'teal') or (orb.name == 'blue'):
 					orb.queue_free()
-			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
+			if success:
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
+			else:
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 	if not readying:
 		await UI.get_node("Monologue").closed_signal
 		set_mixing_ui_visibility(true)

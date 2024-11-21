@@ -88,7 +88,7 @@ func _process(_delta):
 			process_next_text()
 
 func parse_dialogue(json_path):
-	# .json parseing magic a la GDscript manual
+	# .json parseing magic via dictionary
 	if FileAccess.file_exists(json_path):
 		var data_file = FileAccess.open(json_path, FileAccess.READ)
 		var parsed_result = JSON.parse_string(data_file.get_as_text())
