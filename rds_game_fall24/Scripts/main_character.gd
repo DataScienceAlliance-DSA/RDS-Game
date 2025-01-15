@@ -9,6 +9,7 @@ var scene_map
 @onready var animations = $AnimationPlayer
 var last_direction = "Down" # Initial default direction
 
+
 # movement stack & directional velocity constants
 var NO_MOVEMENT = Vector2(0, 0)
 var RIGHT_MOVEMENT = Vector2(player_speed, 0)
