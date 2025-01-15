@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3x8du405q3fd"]
+
+[ext_resource type="Texture2D" uid="uid://ceiuaq4axk68q" path="res://assets/Intro_Room/student2.PNG" id="1_vgquf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a3lg"]
+size = Vector2(77, 128)
+
+[node name="student_npc2" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("1_vgquf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 8)
+shape = SubResource("RectangleShape2D_7a3lg")

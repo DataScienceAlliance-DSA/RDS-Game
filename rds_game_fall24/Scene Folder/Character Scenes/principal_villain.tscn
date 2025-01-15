@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg832qlytv3k6"]
+
+[ext_resource type="Texture2D" uid="uid://cira5wskvvr1g" path="res://assets/Intro_Room/principal.PNG" id="1_u53fr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a3lg"]
+size = Vector2(77, 128)
+
+[node name="principal_villain" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("1_u53fr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 8)
+shape = SubResource("RectangleShape2D_7a3lg")
