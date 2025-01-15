@@ -747,7 +747,7 @@ shadow_enabled = true
 texture = ExtResource("11_bl43j")
 script = ExtResource("12_1uavd")
 
-[node name="v" type="TileMap" parent="."]
+[node name="Map" type="TileMap" parent="."]
 z_index = -5
 texture_filter = 3
 tile_set = SubResource("TileSet_rj5tj")

@@ -1,9 +1,9 @@
+Sprite2D
 RigidBody2D
 CharacterBody2D
 LightOccluder2D
 TileMap
 AudioStreamPlayer
-Sprite2D
 TextureRect
 Container
 CollisionShape2D

@@ -3,6 +3,7 @@ extends CharacterBody2D
 var player_speed = 200
 @onready var player_area = self.get_node("PlayerArea")
 @onready var enter_cutscene = true
+var scene_map
 
 # for setting called-animation based on character velocity
 @onready var animations = $AnimationPlayer
@@ -20,6 +21,17 @@ var DOWN_MOVEMENT = Vector2(0, player_speed)
 var closest_area_index
 var neighbor_areas
 
+func _ready():
+	scene_map = self.get_node("../Map") 
+	if scene_map:
+		var map_limits = scene_map.get_used_rect()
+		var map_cellsize = scene_map.rendering_quadrant_size
+		var camera = get_node("Camera2D")
+		camera.limit_left = map_limits.position.x * map_cellsize
+		camera.limit_right = map_limits.end.x * map_cellsize
+		camera.limit_top = map_limits.position.y * map_cellsize
+		camera.limit_bottom = map_limits.end.y * map_cellsize
+
 func updateAnimation():
 	if velocity.length() == 0:
 		# Plays idle animation based on last movement direcition
@@ -34,7 +46,7 @@ func updateAnimation():
 		last_direction = direction
 		# Plays walking animation for current direction
 		animations.play("walk" + direction)
-	
+
 func _process(_delta):
 	# Find all areas before any cutscene/player-inputs
 	find_interactables()
@@ -100,8 +112,9 @@ func enable_process():
 
 # successfully interacts with an in-area object...
 func confirmed_interaction():
-	neighbor_areas[closest_area_index].interact(self)
-	self.set_process(false)
+	if (neighbor_areas.size() != 0):
+		neighbor_areas[closest_area_index].interact(self)
+		self.set_process(false)
 	movement_stack = [NO_MOVEMENT] # reset movement stack
 	# above line is for if player is enabled post-interactable area
 
