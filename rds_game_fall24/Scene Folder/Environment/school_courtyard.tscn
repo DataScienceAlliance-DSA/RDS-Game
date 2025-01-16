@@ -1,3 +1,45 @@
-[gd_scene format=3 uid="uid://dc5ak81orpl5e"]
+[gd_scene load_steps=5 format=3 uid="uid://dc5ak81orpl5e"]
+
+[ext_resource type="Texture2D" uid="uid://cuyrdw52cwvqj" path="res://assets/Library_Courtyard/courtyard_scene.png" id="1_2hobl"]
+[ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="1_4pnkf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8eoy"]
+size = Vector2(1654, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8d4r1"]
+size = Vector2(8, 800)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Main Character" parent="." instance=ExtResource("1_4pnkf")]
+position = Vector2(80, 424)
+
+[node name="temp_courtyard_map" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(824, 384)
+scale = Vector2(1.00121, 1)
+texture = ExtResource("1_2hobl")
+metadata/_edit_lock_ = true
+
+[node name="boundaries" type="Area2D" parent="."]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(822, 84)
+shape = SubResource("RectangleShape2D_p8eoy")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(824, 872)
+shape = SubResource("RectangleShape2D_p8eoy")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(-4, 384)
+shape = SubResource("RectangleShape2D_8d4r1")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(1652, 384)
+shape = SubResource("RectangleShape2D_8d4r1")
+one_way_collision = true

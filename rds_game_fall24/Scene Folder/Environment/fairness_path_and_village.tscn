@@ -1,3 +1,81 @@
-[gd_scene format=3 uid="uid://cuujgu5r8pssb"]
+[gd_scene load_steps=11 format=3 uid="uid://cuujgu5r8pssb"]
+
+[ext_resource type="Texture2D" uid="uid://bmthr21nfdkgj" path="res://assets/Fairness_Village/fairness_town.png" id="1_ke8u4"]
+[ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="2_dqbnr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e38qw"]
+size = Vector2(64, 704)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh6yf"]
+size = Vector2(1368, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p455"]
+size = Vector2(64, 706)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knqas"]
+size = Vector2(1034, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iaor0"]
+size = Vector2(1026, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtseb"]
+size = Vector2(72, 1560)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_af2a2"]
+size = Vector2(888, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl01m"]
+size = Vector2(456, 40)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(1, 1687)
+
+[node name="temp_fairness_village_map" type="Sprite2D" parent="."]
+position = Vector2(1117.5, -491.001)
+scale = Vector2(1.00224, 0.997497)
+texture = ExtResource("1_ke8u4")
+
+[node name="Main Character" parent="." instance=ExtResource("2_dqbnr")]
+position = Vector2(80, 384)
+
+[node name="boundaries" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(-32, 352)
+shape = SubResource("RectangleShape2D_e38qw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(684, 664)
+shape = SubResource("RectangleShape2D_nh6yf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(1376, 351)
+shape = SubResource("RectangleShape2D_6p455")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(1723, -65)
+shape = SubResource("RectangleShape2D_knqas")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(513, -64)
+shape = SubResource("RectangleShape2D_iaor0")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(32, -908)
+shape = SubResource("RectangleShape2D_jtseb")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(2204, -908)
+shape = SubResource("RectangleShape2D_jtseb")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(444, -1656)
+shape = SubResource("RectangleShape2D_af2a2")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(1784, -1656)
+shape = SubResource("RectangleShape2D_af2a2")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="boundaries"]
+position = Vector2(1116, -1708)
+shape = SubResource("RectangleShape2D_kl01m")

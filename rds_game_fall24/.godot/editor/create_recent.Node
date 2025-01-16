@@ -1,5 +1,6 @@
-Node2D
+Area2D
 CollisionShape2D
+Node2D
 Sprite2D
 CharacterBody2D
 RigidBody2D
@@ -8,8 +9,6 @@ TileMap
 AudioStreamPlayer
 TextureRect
 Container
-Area2D
 RichTextLabel
 MarginContainer
 HBoxContainer
-VBoxContainer
