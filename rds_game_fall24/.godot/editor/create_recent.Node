@@ -1,5 +1,3 @@
-TileMap
-Camera2D
 Area2D
 CollisionShape2D
 Node2D
@@ -7,8 +5,10 @@ Sprite2D
 CharacterBody2D
 RigidBody2D
 LightOccluder2D
+TileMap
 AudioStreamPlayer
 TextureRect
 Container
 RichTextLabel
 MarginContainer
+HBoxContainer

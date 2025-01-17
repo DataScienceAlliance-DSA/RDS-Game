@@ -30,7 +30,7 @@ size = Vector2(456, 40)
 [node name="Node2D" type="Node2D"]
 position = Vector2(1, 1687)
 
-[node name="Map" type="Sprite2D" parent="."]
+[node name="temp_fairness_village_map" type="Sprite2D" parent="."]
 position = Vector2(1117.5, -491.001)
 scale = Vector2(1.00224, 0.997497)
 texture = ExtResource("1_ke8u4")
