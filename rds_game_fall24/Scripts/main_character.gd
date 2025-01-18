@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var follower = get_parent().get_node("Follower")  # Reference to the follower
+
 var player_speed = 200
 @onready var player_area = self.get_node("PlayerArea")
 @onready var enter_cutscene = true
@@ -17,6 +19,7 @@ var LEFT_MOVEMENT = Vector2(-1 * player_speed, 0)
 var UP_MOVEMENT = Vector2(0, -1 * player_speed)
 var DOWN_MOVEMENT = Vector2(0, player_speed)
 @onready var movement_stack = [UP_MOVEMENT]
+signal movement_updated(movement_stack)
 
 # global variables for finding interactable areas
 var closest_area_index
@@ -49,7 +52,11 @@ func updateAnimation():
 		animations.play("walk" + direction)
 
 func _process(_delta):
-	# Find all areas before any cutscene/player-inputs
+	############################################################################
+	## Attempt at linking fox and character Movement
+
+		
+	# Find all areas before any cu tscene/player-inputs
 	find_interactables()
 	
 	# Scene Cutscene Conditional (moves player to position)
@@ -97,6 +104,9 @@ func _process(_delta):
 	self.velocity = movement_stack.front()
 	self.move_and_slide()
 	self.updateAnimation()
+	
+	# Emit the updated movement stack
+	emit_signal("movement_updated", movement_stack)
 	
 	## AREA INTERACTION for interactables
 	if (neighbor_areas.size() != 0) and (Input.is_action_just_pressed("interaction")):

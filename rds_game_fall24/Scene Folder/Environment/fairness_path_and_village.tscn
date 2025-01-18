@@ -11,7 +11,7 @@ position = Vector2(1121, -512)
 scale = Vector2(1.00448, 1.0146)
 texture = ExtResource("1_ke8u4")
 
-[node name="Main Character" parent="." instance=ExtResource("2_dqbnr")]
+[node name="Player" parent="." instance=ExtResource("2_dqbnr")]
 position = Vector2(80, 384)
 
 [node name="Map" type="TileMap" parent="."]
