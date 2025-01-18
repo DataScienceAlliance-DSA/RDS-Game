@@ -1,81 +1,23 @@
-[gd_scene load_steps=11 format=3 uid="uid://cuujgu5r8pssb"]
+[gd_scene load_steps=4 format=3 uid="uid://cuujgu5r8pssb"]
 
 [ext_resource type="Texture2D" uid="uid://bmthr21nfdkgj" path="res://assets/Fairness_Village/fairness_town.png" id="1_ke8u4"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="2_dqbnr"]
+[ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://assets/Tilesets/Interior_Tiles.tres" id="3_w6l08"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e38qw"]
-size = Vector2(64, 704)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh6yf"]
-size = Vector2(1368, 80)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p455"]
-size = Vector2(64, 706)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_knqas"]
-size = Vector2(1034, 130)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iaor0"]
-size = Vector2(1026, 128)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtseb"]
-size = Vector2(72, 1560)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_af2a2"]
-size = Vector2(888, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl01m"]
-size = Vector2(456, 40)
-
-[node name="Node2D" type="Node2D"]
-position = Vector2(1, 1687)
+[node name="Node2D2" type="Node2D"]
 
 [node name="temp_fairness_village_map" type="Sprite2D" parent="."]
-position = Vector2(1117.5, -491.001)
-scale = Vector2(1.00224, 0.997497)
+position = Vector2(1121, -512)
+scale = Vector2(1.00448, 1.0146)
 texture = ExtResource("1_ke8u4")
 
-[node name="Main Character" parent="." instance=ExtResource("2_dqbnr")]
+[node name="Player" parent="." instance=ExtResource("2_dqbnr")]
 position = Vector2(80, 384)
 
-[node name="boundaries" type="Node2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(-32, 352)
-shape = SubResource("RectangleShape2D_e38qw")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(684, 664)
-shape = SubResource("RectangleShape2D_nh6yf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(1376, 351)
-shape = SubResource("RectangleShape2D_6p455")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(1723, -65)
-shape = SubResource("RectangleShape2D_knqas")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(513, -64)
-shape = SubResource("RectangleShape2D_iaor0")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(32, -908)
-shape = SubResource("RectangleShape2D_jtseb")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(2204, -908)
-shape = SubResource("RectangleShape2D_jtseb")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(444, -1656)
-shape = SubResource("RectangleShape2D_af2a2")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(1784, -1656)
-shape = SubResource("RectangleShape2D_af2a2")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="boundaries"]
-position = Vector2(1116, -1708)
-shape = SubResource("RectangleShape2D_kl01m")
+[node name="Map" type="TileMap" parent="."]
+position = Vector2(1, 0)
+tile_set = ExtResource("3_w6l08")
+rendering_quadrant_size = 64
+format = 2
+layer_0/name = "Boundary"
+layer_0/tile_data = PackedInt32Array(786431, 196612, 0, 720896, 196612, 0, 720897, 196612, 0, 720898, 196612, 0, 720899, 196612, 0, 720900, 196612, 0, 720901, 196612, 0, 720902, 196612, 0, 720903, 196612, 0, 720904, 196612, 0, 720905, 196612, 0, 720906, 196612, 0, 720907, 196612, 0, 720908, 196612, 0, 720909, 196612, 0, 720910, 196612, 0, 720911, 196612, 0, 720912, 196612, 0, 720913, 196612, 0, 720914, 196612, 0, 720915, 196612, 0, 720916, 196612, 0, 720917, 196612, 0, 655381, 196612, 0, 589845, 196612, 0, 524309, 196612, 0, 458773, 196612, 0, 393237, 196612, 0, 327701, 196612, 0, 262165, 196612, 0, 196629, 196612, 0, 131093, 196612, 0, 65557, 196612, 0, 21, 196612, 0, -65515, 196612, 0, -131051, 196612, 0, -131050, 196612, 0, -131049, 196612, 0, -131048, 196612, 0, -131047, 196612, 0, -131046, 196612, 0, -131045, 196612, 0, -131044, 196612, 0, -131043, 196612, 0, -131042, 196612, 0, -131041, 196612, 0, -131040, 196612, 0, -131039, 196612, 0, -131038, 196612, 0, -1834973, 196612, 0, -1769437, 196612, 0, -1703901, 196612, 0, -1638365, 196612, 0, -1572829, 196612, 0, -1507293, 196612, 0, -1441757, 196612, 0, -1376221, 196612, 0, -1310685, 196612, 0, -1245149, 196612, 0, -1179613, 196612, 0, -1114077, 196612, 0, -1048541, 196612, 0, -983005, 196612, 0, -917469, 196612, 0, -851933, 196612, 0, -786397, 196612, 0, -720861, 196612, 0, -655325, 196612, 0, -589789, 196612, 0, -524253, 196612, 0, -458717, 196612, 0, -393181, 196612, 0, -327645, 196612, 0, -262109, 196612, 0, -196573, 196612, 0, -131037, 196612, 0, -1769473, 196612, 0, -1703937, 196612, 0, -1638401, 196612, 0, -1572865, 196612, 0, -1507329, 196612, 0, -1441793, 196612, 0, -1376257, 196612, 0, -1310721, 196612, 0, -1245185, 196612, 0, -1179649, 196612, 0, -1114113, 196612, 0, -1048577, 196612, 0, -983041, 196612, 0, -917505, 196612, 0, -851969, 196612, 0, -786433, 196612, 0, -720897, 196612, 0, -655361, 196612, 0, -589825, 196612, 0, -524289, 196612, 0, -458753, 196612, 0, -393217, 196612, 0, -327681, 196612, 0, -262145, 196612, 0, -196609, 196612, 0, -131073, 196612, 0, -65537, 196612, 0, -1, 196612, 0, 65535, 196612, 0, 131071, 196612, 0, 196607, 196612, 0, 262143, 196612, 0, 327679, 196612, 0, 393215, 196612, 0, 458751, 196612, 0, 524287, 196612, 0, 589823, 196612, 0, 655359, 196612, 0, 720895, 196612, 0, -1835008, 196612, 0, -1835007, 196612, 0, -1835006, 196612, 0, -1835005, 196612, 0, -1835004, 196612, 0, -1835003, 196612, 0, -1835002, 196612, 0, -1835001, 196612, 0, -1835000, 196612, 0, -1834999, 196612, 0, -1834998, 196612, 0, -1834997, 196612, 0, -1834996, 196612, 0, -1834995, 196612, 0, -1834994, 196612, 0, -1834993, 196612, 0, -1834992, 196612, 0, -1834991, 196612, 0, -1834990, 196612, 0, -1834989, 196612, 0, -1834988, 196612, 0, -1834987, 196612, 0, -1834986, 196612, 0, -1834985, 196612, 0, -1834984, 196612, 0, -1834983, 196612, 0, -1834982, 196612, 0, -1834981, 196612, 0, -1834980, 196612, 0, -1834979, 196612, 0, -1834978, 196612, 0, -1834977, 196612, 0, -1834976, 196612, 0, -1834975, 196612, 0, -1834974, 196612, 0)

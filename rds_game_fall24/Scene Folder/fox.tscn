@@ -1,6 +1,5 @@
-[gd_scene load_steps=14 format=3 uid="uid://1q1al4h8xolo"]
+[gd_scene load_steps=13 format=3 uid="uid://1q1al4h8xolo"]
 
-[ext_resource type="Script" path="res://Scene Folder/fox.gd" id="1_bp21m"]
 [ext_resource type="Texture2D" uid="uid://c0dokkyvohbu2" path="res://assets/Cauldron_Room/Fox Assets/FoxSpreadFINAL2.png" id="2_7mamk"]
 [ext_resource type="Script" path="res://Scripts/fox_area.gd" id="2_lp4ex"]
 
@@ -140,7 +139,6 @@ size = Vector2(18.5, 23)
 [node name="Fox" type="CharacterBody2D"]
 position = Vector2(48, 48)
 scale = Vector2(-4, 4)
-script = ExtResource("1_bp21m")
 
 [node name="FoxSprite" type="Sprite2D" parent="."]
 y_sort_enabled = true
