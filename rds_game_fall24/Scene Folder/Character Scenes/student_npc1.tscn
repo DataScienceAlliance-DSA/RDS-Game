@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b2wb7mi4npj5h" path="res://assets/Intro_Room/student1.PNG" id="1_v01sd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a3lg"]
-size = Vector2(77, 128)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kp300"]
+size = Vector2(60, 22)
 
 [node name="student_npc1" type="CharacterBody2D"]
 
@@ -13,5 +13,5 @@ scale = Vector2(0.225, 0.225)
 texture = ExtResource("1_v01sd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 8)
-shape = SubResource("RectangleShape2D_7a3lg")
+position = Vector2(0, 56)
+shape = SubResource("RectangleShape2D_kp300")

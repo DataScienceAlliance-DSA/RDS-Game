@@ -525,7 +525,7 @@ layer_4/name = "Decor"
 layer_4/tile_data = PackedInt32Array(393245, 131084, 1, 458781, 262156, 0, 393249, 131084, 3, 720938, 262156, 9, 720936, 196620, 10, 786474, 262156, 2, 720925, 196620, 1, 786465, 262156, 9, 786484, 196620, 1, 786483, 196620, 0, 720945, 131084, 1, 786485, 12, 3, 786481, 327692, 10, 327729, 196620, 11, 393265, 262156, 12, 196660, 196620, 10, 196659, 262156, 4, 196648, 196620, 1, 393259, 327692, 9)
 
 [node name="Player" parent="." instance=ExtResource("11_75504")]
-position = Vector2(3960, 592)
+position = Vector2(3608, 576)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -536,26 +536,26 @@ metadata/_edit_lock_ = true
 
 [node name="principal_villain" parent="." instance=ExtResource("12_k4bkc")]
 z_index = 1
-position = Vector2(422, 560)
+position = Vector2(418, 600)
 
 [node name="student_npcs" type="Node2D" parent="."]
 
 [node name="student_npc4" parent="student_npcs" instance=ExtResource("16_gvvgg")]
 z_index = 2
-position = Vector2(4072, 576)
+position = Vector2(3720, 576)
 
 [node name="student_npc1" parent="student_npcs" instance=ExtResource("12_gscw8")]
 z_index = 5
-position = Vector2(3872, 624)
+position = Vector2(3520, 624)
 
 [node name="student_npc2" parent="student_npcs" instance=ExtResource("14_vgbx4")]
 z_index = 1
-position = Vector2(3888, 504)
+position = Vector2(3536, 504)
 
 [node name="student_npc3" parent="student_npcs" instance=ExtResource("15_ujceq")]
 z_index = 3
-position = Vector2(4029, 632)
+position = Vector2(3677, 632)
 
 [node name="student_npc5" parent="student_npcs" instance=ExtResource("17_qotbx")]
 z_index = 1
-position = Vector2(4032, 496)
+position = Vector2(3680, 496)
