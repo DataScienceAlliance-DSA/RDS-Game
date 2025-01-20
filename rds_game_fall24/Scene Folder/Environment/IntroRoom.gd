@@ -40,7 +40,7 @@ func _ready():
 	
 	
 	monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Intro/MalvorenSpeech.json", null)
-	
+	await monologue_ui.monologue_complete
 	# RE ENABLE THE PLAYER
 	player.set_process(true)
 
