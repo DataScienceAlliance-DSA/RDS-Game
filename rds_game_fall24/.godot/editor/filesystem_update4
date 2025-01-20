@@ -13,3 +13,5 @@ res://Scene Folder/Environment/fairness_path_and_village.tscn
 res://Scene Folder/fox.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
 res://Scripts/main_character.gd
+res://Scene Folder/fox.gd
+res://Scene Folder/Environment/school_courtyard.gd
