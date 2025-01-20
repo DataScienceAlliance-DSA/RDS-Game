@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b3tghdg8hnxfu"]
+[gd_scene load_steps=33 format=3 uid="uid://b3tghdg8hnxfu"]
 
 [ext_resource type="Texture2D" uid="uid://eeg78fn8y1aq" path="res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png" id="1_dq7mw"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/IntroRoom.gd" id="1_t4dbg"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://58nyyclu775n" path="res://Scene Folder/Character Scenes/student_npc_3.tscn" id="15_ujceq"]
 [ext_resource type="PackedScene" uid="uid://c18dh30jhlcqd" path="res://Scene Folder/Character Scenes/student_npc_4.tscn" id="16_gvvgg"]
 [ext_resource type="PackedScene" uid="uid://tc6xwxkrs2qo" path="res://Scene Folder/Character Scenes/student_npc_5.tscn" id="17_qotbx"]
+[ext_resource type="Texture2D" uid="uid://ccfd0hhfjvrlj" path="res://assets/Cauldron_Room/Misc Assets/candlelight.PNG" id="19_dwm2n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvrq3"]
 texture = ExtResource("1_dq7mw")
@@ -559,3 +560,7 @@ position = Vector2(4029, 632)
 [node name="student_npc5" parent="student_npcs" instance=ExtResource("17_qotbx")]
 z_index = 1
 position = Vector2(4032, 496)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(2016, 592)
+texture = ExtResource("19_dwm2n")

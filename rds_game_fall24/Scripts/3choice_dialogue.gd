@@ -6,6 +6,8 @@ var choosing				# boolean, true if player is selecting a choice
 
 var interacted_area
 
+signal monologue_complete
+
 # properties for player character's dialogue box
 @onready var choice1_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1") as Control)
 @onready var choice1_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1") as TextureRect)
@@ -176,6 +178,7 @@ func close_3choice_dialogue():
 	target_position = Vector2(0, 300)
 	interactable = false
 	emit_signal("closed_signal")
+	monologue_complete.emit()
 	
 	if interacted_area:
 		interacted_area.end_interaction()
