@@ -1,27 +1,37 @@
 extends CharacterBody2D
 
 @export var follow_speed = 150.0
-@export var lag_distance = 75.0  # Distance to maintain from the main character
+var player_position
+var target_position
+@onready var player =  get_parent().get_node("Player")
 
-#var NO_MOVEMENT = Vector2(0, 0)
-#var RIGHT_MOVEMENT = Vector2(follow_speed, 0)
-#var LEFT_MOVEMENT = Vector2(-1 * follow_speed, 0)
-#var UP_MOVEMENT = Vector2(0, -1 * follow_speed)
-var movement_stack = []
-
-func _ready():
-	var main_character = get_node("../Player")
-	main_character.movement_updated.connect(_on_movement_updated)
-
-func _on_movement_updated(updated_stack):
-	movement_stack = updated_stack.duplicate()
-	print("fox", movement_stack)
-
-func _process(_delta):
-	if movement_stack.size() > 0:
-		var direction = movement_stack.front()
-		var distance = direction.length()
+func _physics_process(_delta):
+	player_position = player.position
+	target_position = (player_position - position).normalized()
+	
+	var magnitude = 0.0
+	
+	if position.distance_to(player_position) > 100:
 		
-		if distance > lag_distance:
-			self.velocity = movement_stack.front()
-			self.move_and_slide()
+		var vel = target_position * follow_speed
+		magnitude = vel.length()
+	
+	#if fox enters player area, stop fox velocity
+	var theta = atan2(target_position.y, target_position.x)
+	
+	theta = fmod(theta, TAU)
+	if theta < 0.:
+		theta += TAU
+	
+	print(theta)
+	
+	if (theta <= PI / 4) and (theta >= 7 * PI / 4):
+		velocity = Vector2(1.,0.) * magnitude
+	if (theta >= PI / 4) and (theta <= 3 * PI / 4):
+		velocity = Vector2(0.,1.) * magnitude
+	if (theta >= 3 * PI / 4) and (theta <= 5 * PI / 4):
+		velocity = Vector2(-1.,0.) * magnitude
+	if (theta >= 5 * PI / 4) and (theta <= 7 * PI / 4):
+		velocity = Vector2(0.,-1.) * magnitude
+	
+	move_and_slide()
