@@ -1,3 +1,4 @@
+Control
 PointLight2D
 DirectionalLight2D
 TileMap
@@ -12,4 +13,3 @@ AudioStreamPlayer
 TextureRect
 Container
 RichTextLabel
-MarginContainer
