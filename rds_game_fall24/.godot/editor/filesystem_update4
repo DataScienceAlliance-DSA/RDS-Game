@@ -10,3 +10,6 @@ res://Scene Folder/Character Scenes/principal_villain.tscn
 res://Scene Folder/Environment/fairness_path_and_village.tscn
 res://Scene Folder/Environment/school_courtyard.tscn
 res://Scene Folder/fox.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
+res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PowerGauge.tscn
