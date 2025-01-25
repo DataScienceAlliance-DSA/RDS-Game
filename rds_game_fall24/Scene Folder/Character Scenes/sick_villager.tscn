@@ -4,16 +4,16 @@
 [ext_resource type="Script" path="res://SickVillager.gd" id="1_uf7cp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7r74"]
-size = Vector2(80, 18)
+size = Vector2(55, 18)
 
 [node name="SickVillager" type="CharacterBody2D"]
 script = ExtResource("1_uf7cp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -48)
 texture = ExtResource("1_7hnb4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 48)
 shape = SubResource("RectangleShape2D_v7r74")
 
 [node name="ShapeSprite" type="Sprite2D" parent="."]

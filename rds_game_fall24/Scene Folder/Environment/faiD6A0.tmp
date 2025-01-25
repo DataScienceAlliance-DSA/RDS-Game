@@ -17,6 +17,7 @@ scale = Vector2(1.00448, 1.0146)
 texture = ExtResource("1_ke8u4")
 
 [node name="Map" type="TileMap" parent="." groups=["Map"]]
+position = Vector2(1, 0)
 tile_set = ExtResource("3_w6l08")
 rendering_quadrant_size = 64
 format = 2
@@ -25,10 +26,9 @@ layer_0/tile_data = PackedInt32Array(1, 3, 2, 65537, 3, 2, 65538, 3, 2, 196611, 
 script = ExtResource("4_ui5n2")
 
 [node name="SickVillager" parent="." instance=ExtResource("4_10oh5")]
-position = Vector2(960, 640)
+position = Vector2(931, 605)
 
 [node name="DEBUG" type="Node2D" parent="."]
 script = ExtResource("6_e6tut")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(658, 384)

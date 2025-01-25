@@ -9,7 +9,7 @@ var move_target : Vector2
 var move_start : Vector2
 @onready var hopping : bool = false
 @onready var hop_interpolation : float = 0.
-var speed : float = 3.
+var speed : float = .1
 
 func _ready():
 	# set random shape for the sick villager
@@ -37,7 +37,7 @@ func _process(delta):
 	
 	# set the pattern
 	var start_pos = self.position
-	var target_pos = Vector2(1600, -1680)
+	var target_pos = Vector2(64, 64)
 	
 	if (!hopping):
 		var path = map.getAStarPath(start_pos, target_pos)
@@ -45,11 +45,16 @@ func _process(delta):
 		if path.size() > 2:
 			path.pop_front() # This removes the starting point from the path
 			move_target = path.pop_front() # This gives us the point towards the enemy should move
+			
+			# move_target.x=16*int(move_target.x/16)+8; move_target.y=16*int(move_target.y/16)+8
+			# Here is the important stuff!
+			self.freeAStarCell(self.position)
+			self.occupyAStarCell(move_target)
+			
 			move_start = self.position
 			hop_interpolation = 0.
 			hopping = true
-			# print("goob")
-			# occupyAStarCell(move_target)
+			print("goob")
 		else:
 			# print(position)
 			pass
@@ -61,6 +66,5 @@ func _process(delta):
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 	if (t >= 1.):
-		# freeAStarCell(target_pos)
 		hopping = false
 	self.position = start_pos.lerp(target_pos, t)
