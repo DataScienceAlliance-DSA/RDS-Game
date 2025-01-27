@@ -16,8 +16,8 @@ func _ready():
 	for i in size.x:
 		for j in size.y:
 			if get_cell_source_id(0, Vector2(i,j))!=-1:
-				var idx = getAStarCellIndex(Vector2(i*4,j*4))
-				aStar.add_point(idx, Vector2(i*4,j*4))
+				var idx = getAStarCellIndex(Vector2(i,j))
+				aStar.add_point(idx, Vector2(i,j))
 	
 	# fill and connect aStar's grid with all valid cells
 	for i in size.x:
@@ -44,16 +44,16 @@ func _ready():
 
 func getAStarPath(vStartPosition:Vector2,vTargetPosition:Vector2)->Array:
 	var vCellStart = vStartPosition
-	print("HELP: " + str(vCellStart))
-	var idxStart = getAStarCellIndex(vCellStart)
+	# print("HELP: " + str(vCellStart))
+	var idxStart = getAStarCellIndex(local_to_map(to_local(vCellStart)))
 	# print(idxStart)
 	var vCellTarget = vTargetPosition
-	var idxTarget = getAStarCellIndex(vCellTarget)
+	var idxTarget = getAStarCellIndex(local_to_map(to_local(vCellTarget)))
 	# Just a small check to see if both points are in the grid
-	print(str(vStartPosition) + " start " + str(aStar.has_point(idxStart)))
-	print(str(vTargetPosition) + " target " + str(aStar.has_point(idxTarget)))
+	# print(str(vStartPosition) + " start " + str(idxStart) + " " + str(aStar.has_point(idxStart)))
+	# print(str(vTargetPosition) + " target " + str(idxTarget) + " " + str(aStar.has_point(idxTarget)))
 	if aStar.has_point(idxStart) and aStar.has_point(idxTarget):
-		print(Array(aStar.get_point_path(idxStart, idxTarget)))
+		# print(Array(aStar.get_point_path(idxStart, idxTarget)))
 		return Array(aStar.get_point_path(idxStart, idxTarget))
 	return []
 

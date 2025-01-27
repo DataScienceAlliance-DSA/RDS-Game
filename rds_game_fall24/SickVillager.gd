@@ -9,7 +9,7 @@ var move_target : Vector2
 var move_start : Vector2
 @onready var hopping : bool = false
 @onready var hop_interpolation : float = 0.
-var speed : float = .1
+var speed : float = 3.
 
 func _ready():
 	# set random shape for the sick villager
@@ -65,6 +65,9 @@ func _process(delta):
 	super(delta)
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
+	print(start_pos)
+	target_pos *= 64.
+	print(target_pos)
 	if (t >= 1.):
 		hopping = false
 	self.position = start_pos.lerp(target_pos, t)
