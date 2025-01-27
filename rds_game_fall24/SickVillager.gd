@@ -13,8 +13,6 @@ var move_start : Vector2
 @export var speed : float = 100. # 100 is default speed
 @export var target_pos : Vector2
 
-# Signal 
-signal interacted
 
 func _ready():
 	# set random shape for the sick villager
@@ -75,11 +73,3 @@ func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 	if (t >= 1.):
 		hopping = false
 	self.position = start_pos.lerp(target_pos, t)
-
-func _input(event):
-	if event.is_action_pressed("interact"):
-		if is_in_interaction_range():
-			_on_interacted()
-
-func _on_interacted():
-	interacted.emit()
