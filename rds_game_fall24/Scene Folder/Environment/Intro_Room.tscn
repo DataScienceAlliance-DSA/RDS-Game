@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://58nyyclu775n" path="res://Scene Folder/Character Scenes/student_npc_3.tscn" id="15_ujceq"]
 [ext_resource type="PackedScene" uid="uid://c18dh30jhlcqd" path="res://Scene Folder/Character Scenes/student_npc_4.tscn" id="16_gvvgg"]
 [ext_resource type="PackedScene" uid="uid://tc6xwxkrs2qo" path="res://Scene Folder/Character Scenes/student_npc_5.tscn" id="17_qotbx"]
-[ext_resource type="Texture2D" uid="uid://k8modbb416u8" path="res://assets/Intro_Room/skylight.png" id="19_r4b5q"]
+[ext_resource type="Texture2D" path="res://assets/Intro_Room/skylight.png" id="19_r4b5q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvrq3"]
 texture = ExtResource("1_dq7mw")
