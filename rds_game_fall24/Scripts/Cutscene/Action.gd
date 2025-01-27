@@ -30,6 +30,8 @@ func _ready():
 
 func cue():
 	print("Actor: " + str(actor) + ", Type: " + str(type))
+	if (type == "AStarMove"):
+		actor.autonomous = true
 	self.set_process(true) # begin performing the action
 	
 	walk_t = 0.
@@ -40,6 +42,13 @@ func cue():
 
 func _process(delta):
 	match type:
+		"AStarMove":
+			actor.target_pos = mark
+			actor.speed = speed
+			if (!actor.autonomous):
+				actor.position = mark
+				action_completed.emit()
+				self.set_process(false)
 		"LerpMove":
 			var diff = mark - start_pos
 			var unit = diff / diff.length()
@@ -51,7 +60,7 @@ func _process(delta):
 			set_directional_anim(theta, true)
 			
 			if (walk_t >= 1.):
-				actor.position = mark  # Snap to the exact target position
+				# actor.position = mark  # Snap to the exact target position
 				set_directional_anim(theta, false)
 				action_completed.emit()
 				self.set_process(false)  # Stop further processing
@@ -80,12 +89,12 @@ func set_directional_anim(theta, moving):
 		next_anim = "walkLeft" if moving else "idleLeft"
 	if (theta >= 5 * PI / 4) and (theta <= 7 * PI / 4):
 		next_anim = "walkDown" if moving else "idleDown"
-		print(theta)
+		# print(theta)
 	
 	if anim_player.current_animation != next_anim:
 		anim_player.play(next_anim)
-		print("hello")
-		print(anim_player.get_queue())
+		# print("hello")
+		# print(anim_player.get_queue())
 
 func approximately_at(a: float, b: float, tolerance: float) -> bool:
 	return abs(a - b) <= tolerance

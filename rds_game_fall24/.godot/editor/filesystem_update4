@@ -15,3 +15,11 @@ res://Scene Folder/Character Scenes/CharacterController.gd
 res://Scene Folder/Environment/ConstructedTileMap.gd
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scripts/main_character.gd
+res://Scene Folder/Character Scenes/student_npc_2.tscn
+res://Scene Folder/Character Scenes/student_npc_3.tscn
+res://Scene Folder/Character Scenes/student_npc1.tscn
+res://Scene Folder/Character Scenes/student_npc_4.tscn
+res://Scene Folder/Character Scenes/student_npc_5.tscn
+res://Scripts/Cutscene/Action.gd
+res://Scripts/Cutscene/CutsceneManager.gd
+res://Scene Folder/Environment/IntroRoom.gd

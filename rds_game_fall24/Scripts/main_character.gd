@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends CharacterController
 
 @onready var follower = get_parent().get_node("Follower")  # Reference to the follower
 
@@ -52,9 +52,13 @@ func updateAnimation():
 		animations.play("walk" + direction)
 
 func _process(_delta):
+	print(autonomous)
+	if (autonomous):
+		super(_delta)
+		return
 	############################################################################
 	## Attempt at linking fox and character Movement
-
+	
 		
 	# Find all areas before any cu tscene/player-inputs
 	find_interactables()

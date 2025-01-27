@@ -13,9 +13,9 @@ size = Vector2(60, 22)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_1mhhl")
+position = Vector2(0, -56)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("1_vgquf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 56)
 shape = SubResource("RectangleShape2D_gl38a")

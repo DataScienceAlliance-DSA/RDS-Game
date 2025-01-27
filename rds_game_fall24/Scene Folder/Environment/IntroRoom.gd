@@ -5,7 +5,7 @@ var cm : CutsceneManager # cutscene manager for this
 func _ready():
 	# DISABLE PLAYER WHILE CUTSCENES ARE OCCURRING
 	var player = get_node("Player")
-	player.set_process(false)
+	player.autonomous = true
 	
 	var monologue_ui = UI.get_node("Monologue")
 	
@@ -28,7 +28,6 @@ func _ready():
 	for action in actions:
 		add_child(action)
 	
-	
 	# ActionGroup A - Parallel Call
 	cm = CutsceneManager.new(actions)
 	cm.parallel_action()
@@ -42,7 +41,7 @@ func _ready():
 	monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Intro/MalvorenSpeech.json", null)
 	await monologue_ui.monologue_complete
 	# RE ENABLE THE PLAYER
-	player.set_process(true)
+	player.autonomous = false
 
 func _process(delta):
 	pass

@@ -194,17 +194,16 @@ _data = {
 }
 
 [node name="Main Character" type="CharacterBody2D"]
-position = Vector2(432, 272)
 script = ExtResource("1_xf38u")
 
 [node name="PlayerArea" type="Area2D" parent="."]
+position = Vector2(0, -56)
 
 [node name="AreaCollision" type="CollisionShape2D" parent="PlayerArea"]
 scale = Vector2(5, 7)
 shape = SubResource("RectangleShape2D_1w8xd")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 57)
 shape = SubResource("RectangleShape2D_cpqrn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -216,7 +215,7 @@ position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0, 74)
+position = Vector2(0, 20)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("2_xtdbk")
 offset = Vector2(0, -320)
