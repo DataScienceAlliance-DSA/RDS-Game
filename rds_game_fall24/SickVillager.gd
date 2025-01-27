@@ -9,7 +9,9 @@ var move_target : Vector2
 var move_start : Vector2
 @onready var hopping : bool = false
 @onready var hop_interpolation : float = 0.
-var speed : float = 3.
+
+@export var speed : float = 100. # 100 is default speed
+@export var target_pos : Vector2
 
 func _ready():
 	# set random shape for the sick villager
@@ -37,7 +39,6 @@ func _process(delta):
 	
 	# set the pattern
 	var start_pos = self.position
-	var target_pos = Vector2(64, 64)
 	
 	if (!hopping):
 		var path = map.getAStarPath(start_pos, target_pos)
@@ -54,7 +55,7 @@ func _process(delta):
 			move_start = self.position
 			hop_interpolation = 0.
 			hopping = true
-			print("goob")
+			# print("goob")
 		else:
 			# print(position)
 			pass
@@ -65,9 +66,9 @@ func _process(delta):
 	super(delta)
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
-	print(start_pos)
 	target_pos *= 64.
-	print(target_pos)
+	target_pos = Vector2(target_pos.x + 32., target_pos.y + 32.)
+	t /= ((target_pos - start_pos).length());
 	if (t >= 1.):
 		hopping = false
 	self.position = start_pos.lerp(target_pos, t)

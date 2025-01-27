@@ -35,11 +35,11 @@ func _ready():
 		for j in size.y:
 			if get_cell_source_id(0, Vector2(i,j)) != -1:
 				var idx = getAStarCellIndex(Vector2(i,j))
-				print("#" + str(idx) + ": " + str(aStar.get_point_connections(idx)))
+				# print("#" + str(idx) + ": " + str(aStar.get_point_connections(idx)))
 	
 	# DEBUG visualize the cells
 	var astar_debugger = get_parent().get_node("DEBUG") as Node2D
-	print(astar_debugger.name)
+	# print(astar_debugger.name)
 	astar_debugger.visualize(aStar)
 
 func getAStarPath(vStartPosition:Vector2,vTargetPosition:Vector2)->Array:
@@ -50,8 +50,8 @@ func getAStarPath(vStartPosition:Vector2,vTargetPosition:Vector2)->Array:
 	var vCellTarget = vTargetPosition
 	var idxTarget = getAStarCellIndex(local_to_map(to_local(vCellTarget)))
 	# Just a small check to see if both points are in the grid
-	# print(str(vStartPosition) + " start " + str(idxStart) + " " + str(aStar.has_point(idxStart)))
-	# print(str(vTargetPosition) + " target " + str(idxTarget) + " " + str(aStar.has_point(idxTarget)))
+	print(str(vStartPosition) + " start " + str(idxStart) + " " + str(aStar.has_point(idxStart)))
+	print(str(vTargetPosition) + " target " + str(idxTarget) + " " + str(aStar.has_point(idxTarget)))
 	if aStar.has_point(idxStart) and aStar.has_point(idxTarget):
 		# print(Array(aStar.get_point_path(idxStart, idxTarget)))
 		return Array(aStar.get_point_path(idxStart, idxTarget))
@@ -59,4 +59,3 @@ func getAStarPath(vStartPosition:Vector2,vTargetPosition:Vector2)->Array:
 
 func getAStarCellIndex(vCell : Vector2):
 	return int(vCell.y + vCell.x * self.get_used_rect().size.y)
-

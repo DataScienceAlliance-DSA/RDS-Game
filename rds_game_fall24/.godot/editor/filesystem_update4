@@ -1,18 +1,17 @@
-res://Scene Folder/Environment/fairness_path_and_village.tscn
+res://Scene Folder/Character Scenes/sick_villager.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://assets/Tilesets/Interior_Tiles.tres
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/Environment/Intro_Room.tscn
+res://SickVillager.gd
 res://Scene Folder/main_character.tscn
 res://Scene Folder/fox.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Mixing_Game/orb.tscn
+res://Scene Folder/Environment/Intro_Room.tscn
+res://Scene Folder/Environment/fairness_path_and_village.tscn
 res://Scene Folder/Environment/school_courtyard.tscn
-res://Scene Folder/Character Scenes/sick_villager.tscn
-res://Scene Folder/Character Scenes/principal_villain.tscn
-res://Scene Folder/Character Scenes/student_npc_4.tscn
-res://Scene Folder/Character Scenes/student_npc1.tscn
-res://Scene Folder/Character Scenes/student_npc_2.tscn
-res://Scene Folder/Character Scenes/student_npc_3.tscn
-res://Scene Folder/Character Scenes/student_npc_5.tscn
+res://Scene Folder/Character Scenes/CharacterController.gd
+res://Scene Folder/Environment/ConstructedTileMap.gd
+res://Scene Folder/Environment/Cauldron_Room.tscn
+res://Scripts/main_character.gd

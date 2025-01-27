@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://co48lktbon2ou"]
+[gd_scene load_steps=15 format=3 uid="uid://co48lktbon2ou"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_xf38u"]
 [ext_resource type="Texture2D" uid="uid://cck3dgf7fxv45" path="res://assets/Cauldron_Room/Hero Assets/main_character_spritesheet.png" id="2_xtdbk"]
@@ -7,9 +7,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpqrn"]
 size = Vector2(60, 22)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n667j"]
-light_mode = 1
 
 [sub_resource type="Animation" id="Animation_3qw5t"]
 resource_name = "RESET"
@@ -219,7 +216,6 @@ position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
-material = SubResource("CanvasItemMaterial_n667j")
 position = Vector2(0, 74)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("2_xtdbk")
