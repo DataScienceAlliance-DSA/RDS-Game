@@ -1,5 +1,6 @@
-PointLight2D
 Sprite2D
+StaticBody2D
+PointLight2D
 TileMap
 Node2D
 Area2D
@@ -11,4 +12,3 @@ Control
 DirectionalLight2D
 RigidBody2D
 LightOccluder2D
-AudioStreamPlayer

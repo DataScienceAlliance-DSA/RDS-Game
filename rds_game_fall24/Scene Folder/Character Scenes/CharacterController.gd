@@ -5,6 +5,7 @@ class_name CharacterController
 extends CharacterBody2D
 # - deeg
 
+@export var start_autonomous : bool # dictates whether autonomous from start of scene
 @export var autonomous : bool # dictates whether or not its own routines control itself
 @export var speed : float = 100. # 100 is default speed
 @export var target_pos : Vector2
@@ -18,7 +19,7 @@ var move_start : Vector2
 @onready var hop_interpolation : float = 0.
 
 func _ready():
-	autonomous = true
+	autonomous = autonomous
 	print("Character controller")
 
 func _process(delta):

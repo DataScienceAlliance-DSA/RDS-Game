@@ -11,7 +11,9 @@ func _ready():
 ## INTERACT METHOD, called when player interacts with this area
 func interact(interactor_object):
 	interactor = interactor_object # set interactor source
-	self.set_process(true) # enable area interaction screen
+	self.set_process(true) # reason why its here... we don't know - deeg
+	
+	#logic
 	
 	interactions = interactions + 1	# increment interactions made with this area
 	match interactions:
