@@ -145,7 +145,3 @@ func find_interactables():
 		var total_distance = ((x_distance + y_distance) ** 0.5)
 		closest_area_index = i if (total_distance < closest_distance) else closest_area_index
 		closest_distance = total_distance if (total_distance < closest_distance) else closest_distance
-
-
-func _on_character_interacted():
-	print("Interaction received!")
