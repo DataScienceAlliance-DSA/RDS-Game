@@ -1,9 +1,8 @@
-res://Scene Folder/Environment/Cauldron_Room.tscn
+res://Scene Folder/main_character.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://assets/Tilesets/Interior_Tiles.tres
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/main_character.tscn
 res://Scene Folder/fox.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Mixing_Game/orb.tscn
@@ -17,3 +16,4 @@ res://Scene Folder/Character Scenes/student_npc1.tscn
 res://Scene Folder/Character Scenes/student_npc_2.tscn
 res://Scene Folder/Character Scenes/student_npc_3.tscn
 res://Scene Folder/Character Scenes/student_npc_5.tscn
+res://Scene Folder/Environment/Cauldron_Room.tscn
