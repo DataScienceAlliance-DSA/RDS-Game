@@ -1,7 +1,6 @@
 # SICK_VILLAGER:
 # NPC controller for the sick villagers in fairness minigame 1
-class_name SickVillager
-extends CharacterController
+extends CharacterBody2D
 # - deeg
 
 @onready var shape_sprite : Sprite2D = get_node("ShapeSprite")
@@ -15,8 +14,10 @@ extends CharacterController
 #@export var speed : float = 100. # 100 is default speed
 #@export var target_pos : Vector2
 
-# Interaction Signal
-signal interacted_with(character)
+# Interaction Signal and Variable
+signal interacted
+
+var can_interact := false # Tracks interaction range
 
 func _ready():
 	# set random shape for the sick villager
@@ -36,21 +37,22 @@ func _ready():
 		5:
 			shape_sprite.texture = load("res://assets/Fairness_Village/Shapes/trianglePLACEHOLDER.PNG")
 	# print(self.position)
+
+func _on_Area2D_body_entered(body):
+	if body.name == "main_character": 
+		can_interact = true
+		
+func _on_Area2D_body_exited(body):
+	if body.name == "main_character":
+		can_interact = false
+
+func is_in_interaction_range() -> bool:
+	return can_interact
 	
-	super()
+func _input(event):
+	if event.is_action_pressed("interact"):
+		if is_in_interaction_range():
+			_on_interacted()
 
-func _process(delta):
-	if (!autonomous): return
-	super(delta)
-
-func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
-	target_pos *= 64.
-	target_pos = Vector2(target_pos.x + 32., target_pos.y + 32.)
-	t /= ((target_pos - start_pos).length());
-	if (t >= 1.):
-		hopping = false
-	self.position = start_pos.lerp(target_pos, t)
-
-func interact(character):
-	interacted_with.emit(character)
-	print("NPC interacted with by:", character.name)
+func _on_interacted():
+	interacted.emit()

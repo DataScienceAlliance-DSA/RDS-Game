@@ -26,6 +26,7 @@ layer_0/tile_data = PackedInt32Array(1, 3, 2, 65537, 3, 2, 65538, 3, 2, 196611, 
 script = ExtResource("4_ui5n2")
 
 [node name="SickVillager2" parent="." instance=ExtResource("4_10oh5")]
+visible = false
 position = Vector2(480, 224)
 speed = 129.665
 target_pos = Vector2(32, 480)
@@ -36,6 +37,7 @@ speed = 75.11
 target_pos = Vector2(352, 288)
 
 [node name="SickVillager3" parent="." instance=ExtResource("4_10oh5")]
+visible = false
 position = Vector2(32, 544)
 speed = 121.16
 target_pos = Vector2(736, 480)
@@ -47,15 +49,16 @@ script = ExtResource("6_e6tut")
 position = Vector2(658, 384)
 
 [node name="SickVillager5" parent="." instance=ExtResource("4_10oh5")]
+visible = false
 position = Vector2(224, 224)
 speed = 157.025
 target_pos = Vector2(738, 608)
 
 [node name="SickVillager4" parent="." instance=ExtResource("4_10oh5")]
+visible = false
 position = Vector2(96, 32)
 speed = 98.64
 target_pos = Vector2(928, 608)
 
 [node name="Main Character" parent="." instance=ExtResource("2_dqbnr")]
-
-[connection signal="interacted" from="SickVillager2" to="Main Character" method="_on_sick_villager_2_interacted"]
+position = Vector2(672, 412)
