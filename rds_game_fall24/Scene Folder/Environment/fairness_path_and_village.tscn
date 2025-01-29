@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bmthr21nfdkgj" path="res://assets/Fairness_Village/fairness_town.png" id="1_ke8u4"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="2_dqbnr"]
 [ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://assets/Tilesets/Interior_Tiles.tres" id="3_w6l08"]
-[ext_resource type="PackedScene" uid="uid://wb0447tmle87" path="res://Scene Folder/Character Scenes/sick_villager.tscn" id="4_10oh5"]
+[ext_resource type="PackedScene" uid="uid://ct4qja5thogdy" path="res://Scene Folder/Character Scenes/sick_villager.tscn" id="4_10oh5"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="4_ui5n2"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/AStar2DVisualizer.gd" id="6_e6tut"]
 
