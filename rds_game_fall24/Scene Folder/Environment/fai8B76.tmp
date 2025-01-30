@@ -34,8 +34,7 @@ speed = 129.665
 target_pos = Vector2(32, 480)
 
 [node name="SickVillager" parent="." instance=ExtResource("4_10oh5")]
-position = Vector2(472, 249)
-start_autonomous = false
+position = Vector2(460, 249)
 speed = 75.11
 target_pos = Vector2(352, 288)
 
