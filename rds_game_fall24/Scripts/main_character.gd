@@ -1,5 +1,11 @@
 extends CharacterController
 
+# Checking to see scene type
+var is_minigame_scene = false
+
+# Variable initialization prior to the Fairness Minigame 1
+var shape_index
+
 # used to create different zoom aspects for individual scenes
 @export var cam_zoom : float = 1. # sets camera zoom
 
@@ -30,6 +36,10 @@ var closest_area_index
 var neighbor_areas
 
 func _ready():
+	if get_tree().current_scene.is_in_group("minigame"):
+		is_minigame_scene = true # Flag as minigame scene
+		print(is_minigame_scene)
+	
 	self.get_node("Camera2D").zoom = Vector2(cam_zoom,cam_zoom)
 	
 	scene_map = self.get_node("../Map") 
@@ -59,7 +69,7 @@ func updateAnimation():
 		animations.play("walk" + direction)
 
 func _process(_delta):
-	print(autonomous)
+	#print(autonomous)
 	if (autonomous):
 		super(_delta)
 		return
@@ -129,10 +139,11 @@ func _process(_delta):
 
 # successfully interacts with an in-area object...
 func confirmed_interaction():
-	#self.set_process(false)
-	if (neighbor_areas.size() != 0):
+	if is_minigame_scene:
+		handle_minigame_interaction()
+	else:
+		(neighbor_areas.size() != 0)
 		neighbor_areas[closest_area_index].interact(self)
-		print("After interaction: ", self.is_processing())
 	movement_stack = [NO_MOVEMENT] # reset movement stack
 	# above line is for if player is enabled post-interactable area
 
@@ -149,18 +160,21 @@ func find_interactables():
 		closest_area_index = i if (total_distance < closest_distance) else closest_area_index
 		closest_distance = total_distance if (total_distance < closest_distance) else closest_distance
 
-### Fairness minigame 1 related script
-
-# Receive the shape and display it on the character's head
-func receive_shape(shape_texture):
-	var shape_sprite = $ShapeSprite
-	shape_sprite.texture =shape_texture
-	print("Character received the shape!")
-
 # enables player to move again...
 func enable_process():
 	self.autonomous = false
-	print("Before setting process: ", self.is_processing())  # Log before enablin
+	#print("Before setting process: ", self.is_processing())  # Log before enablin
 	self.set_process(true)
-	print("After setting process: ", self.is_processing())  # Log after enabling
+	#print("After setting process: ", self.is_processing())  # Log after enabling
 	movement_stack = [NO_MOVEMENT]	# reset movement stack
+
+func handle_minigame_interaction():
+	var canvas_layer = get_tree().current_scene.get_node("UIFairnessMinigame1")
+	
+	if canvas_layer.is_shape_collected(shape_index):
+		print("Shape already collected, skipping NPC interaction.")
+		return
+		
+	(neighbor_areas.size() != 0)
+	neighbor_areas[closest_area_index].interact(self)
+	movement_stack = [NO_MOVEMENT] # reset movement stack

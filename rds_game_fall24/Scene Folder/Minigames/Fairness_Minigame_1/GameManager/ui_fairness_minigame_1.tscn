@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://d38ycv5t2q0ih"]
+
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.gd" id="1_f7l2o"]
+[ext_resource type="Texture2D" uid="uid://t60kslomgrxr" path="res://assets/Fairness_Village/Shapes/circlePLACEHOLDER.png" id="1_g37pq"]
+[ext_resource type="Texture2D" uid="uid://0dhj8mreu86n" path="res://assets/Fairness_Village/Shapes/crossPLACEHOLDER.png" id="2_rcdgv"]
+[ext_resource type="Texture2D" uid="uid://cy237y7orji6n" path="res://assets/Fairness_Village/Shapes/diamondPLACEHOLDER.png" id="3_5alc3"]
+[ext_resource type="Texture2D" uid="uid://dea7yikuureuw" path="res://assets/Fairness_Village/Shapes/hexagonPLACEHOLDER.png" id="4_ejg74"]
+[ext_resource type="Texture2D" uid="uid://dr1vd6mkmh0w6" path="res://assets/Fairness_Village/Shapes/squarePLACEHOLDER.png" id="5_06qeo"]
+[ext_resource type="Texture2D" uid="uid://ssfhv8v0u0mn" path="res://assets/Fairness_Village/Shapes/trianglePLACEHOLDER.png" id="6_etosd"]
+
+[node name="UIFairnessMinigame1" type="CanvasLayer"]
+script = ExtResource("1_f7l2o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 18.0
+offset_top = 15.0
+offset_right = 3497.0
+offset_bottom = 597.0
+scale = Vector2(0.229136, 0.229324)
+alignment = 1
+
+[node name="Circle" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("1_g37pq")
+
+[node name="X" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_rcdgv")
+
+[node name="Diamond" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_5alc3")
+
+[node name="Hexagon" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_ejg74")
+
+[node name="Square" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("5_06qeo")
+
+[node name="Triangle" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("6_etosd")
