@@ -1,6 +1,9 @@
 extends CharacterController
 
+# used to create different zoom aspects for individual scenes
 @export var cam_zoom : float = 1. # sets camera zoom
+
+#used to enable the fox as a following sprite
 @onready var follower = get_parent().get_node("Follower")  # Reference to the follower
 
 var player_speed = 200
@@ -38,6 +41,7 @@ func _ready():
 		camera.limit_right = map_limits.end.x * map_cellsize
 		camera.limit_top = map_limits.position.y * map_cellsize
 		camera.limit_bottom = map_limits.end.y * map_cellsize
+		
 
 func updateAnimation():
 	if velocity.length() == 0:
@@ -127,6 +131,7 @@ func _process(_delta):
 func enable_process():
 	movement_stack = [NO_MOVEMENT]	# reset movement stack
 	self.set_process(true)			# enable player
+	print("character has control!")
 
 # successfully interacts with an in-area object...
 func confirmed_interaction():
@@ -135,10 +140,10 @@ func confirmed_interaction():
 		var closest_area = neighbor_areas[closest_area_index]
 		
 		# Check if the node or its parent implements interact function
-		if closest_area.has_method("interact"):
+		if closest_area and closest_area.has_method("interact"):
 			closest_area.interact(self)
-		elif closest_area.get_parent() and closest_area.get_parent().has_method("interact"):
-			closest_area.get_parent().interact(self)
+		#elif closest_area.get_parent() and closest_area.get_parent().has_method("interact"):
+			#closest_area.get_parent().interact(self)
 		else:
 			print("No valid interact method found on the target node or its parent.")
 		#neighbor_areas[closest_area_index].interact(self)
@@ -161,6 +166,10 @@ func find_interactables():
 		closest_area_index = i if (total_distance < closest_distance) else closest_area_index
 		closest_distance = total_distance if (total_distance < closest_distance) else closest_distance
 
+### Fairness minigame 1 related script
 
-func _on_character_interacted():
-	print("Interaction received!")
+# Receive the shape and display it on the character's head
+func receive_shape(shape_texture):
+	var shape_sprite = $ShapeSprite
+	shape_sprite.texture =shape_texture
+	print("Character received the shape!")

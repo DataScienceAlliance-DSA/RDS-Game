@@ -15,7 +15,7 @@ height = 149.965
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1e0"]
 size = Vector2(189, 165.25)
 
-[node name="fairness_minigame_1" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="." groups=["Map"]]
 tile_set = ExtResource("3_w6l08")
@@ -30,18 +30,20 @@ script = ExtResource("4_ui5n2")
 [node name="SickVillager2" parent="." instance=ExtResource("4_10oh5")]
 visible = false
 position = Vector2(480, 224)
+autonomous = false
 speed = 129.665
 target_pos = Vector2(32, 480)
 
 [node name="SickVillager" parent="." instance=ExtResource("4_10oh5")]
-position = Vector2(472, 249)
-start_autonomous = false
+position = Vector2(460, 249)
+autonomous = false
 speed = 75.11
 target_pos = Vector2(352, 288)
 
 [node name="SickVillager3" parent="." instance=ExtResource("4_10oh5")]
 visible = false
 position = Vector2(32, 544)
+autonomous = false
 speed = 121.16
 target_pos = Vector2(736, 480)
 
@@ -51,12 +53,14 @@ script = ExtResource("6_e6tut")
 [node name="SickVillager5" parent="." instance=ExtResource("4_10oh5")]
 visible = false
 position = Vector2(224, 224)
+autonomous = false
 speed = 157.025
 target_pos = Vector2(738, 608)
 
 [node name="SickVillager4" parent="." instance=ExtResource("4_10oh5")]
 visible = false
 position = Vector2(96, 32)
+autonomous = false
 speed = 98.64
 target_pos = Vector2(928, 608)
 
