@@ -26,7 +26,7 @@ speed = 129.665
 target_pos = Vector2(32, 480)
 
 [node name="SickVillager" parent="." instance=ExtResource("4_10oh5")]
-position = Vector2(460, 249)
+position = Vector2(1414, 908)
 speed = 75.11
 target_pos = Vector2(352, 288)
 
@@ -53,7 +53,6 @@ target_pos = Vector2(928, 608)
 
 [node name="Main Character" parent="." instance=ExtResource("2_dqbnr")]
 position = Vector2(308, 253)
-cam_zoom = 0.75
 
 [node name="Cauldron" type="StaticBody2D" parent="."]
 

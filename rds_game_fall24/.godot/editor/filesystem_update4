@@ -20,5 +20,3 @@ res://Scene Folder/Character Scenes/student_npc_3.tscn
 res://Scene Folder/Character Scenes/student_npc_5.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scripts/fox_area.gd
-res://Scripts/main_character.gd
-res://Scene Folder/Environment/AudioStreamPlayer.gd
