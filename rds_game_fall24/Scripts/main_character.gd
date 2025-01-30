@@ -129,6 +129,7 @@ func _process(_delta):
 
 # successfully interacts with an in-area object...
 func confirmed_interaction():
+	#self.set_process(false)
 	if (neighbor_areas.size() != 0):
 		neighbor_areas[closest_area_index].interact(self)
 		print("After interaction: ", self.is_processing())
