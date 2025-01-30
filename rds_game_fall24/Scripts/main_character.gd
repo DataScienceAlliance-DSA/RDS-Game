@@ -127,29 +127,11 @@ func _process(_delta):
 	## -deeg
 	############################################################################
 
-# enables player to move again...
-func enable_process():
-	movement_stack = [NO_MOVEMENT]	# reset movement stack
-	self.set_process(true)			# enable player
-	print("character has control!")
-
 # successfully interacts with an in-area object...
 func confirmed_interaction():
 	if (neighbor_areas.size() != 0):
-		#Get closest Area2D node
-		var closest_area = neighbor_areas[closest_area_index]
-		
-		# Check if the node or its parent implements interact function
-		if closest_area and closest_area.has_method("interact"):
-			closest_area.interact(self)
-		#elif closest_area.get_parent() and closest_area.get_parent().has_method("interact"):
-			#closest_area.get_parent().interact(self)
-		else:
-			print("No valid interact method found on the target node or its parent.")
-		#neighbor_areas[closest_area_index].interact(self)
-		self.set_process(false)
-		
-	# Reset movement stack
+		neighbor_areas[closest_area_index].interact(self)
+		print("After interaction: ", self.is_processing())
 	movement_stack = [NO_MOVEMENT] # reset movement stack
 	# above line is for if player is enabled post-interactable area
 
@@ -173,3 +155,11 @@ func receive_shape(shape_texture):
 	var shape_sprite = $ShapeSprite
 	shape_sprite.texture =shape_texture
 	print("Character received the shape!")
+
+# enables player to move again...
+func enable_process():
+	self.autonomous = false
+	print("Before setting process: ", self.is_processing())  # Log before enablin
+	self.set_process(true)
+	print("After setting process: ", self.is_processing())  # Log after enabling
+	movement_stack = [NO_MOVEMENT]	# reset movement stack

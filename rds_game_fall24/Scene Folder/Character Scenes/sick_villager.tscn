@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct4qja5thogdy"]
+[gd_scene load_steps=6 format=3 uid="uid://v52v8p8xkuf5"]
 
 [ext_resource type="Texture2D" uid="uid://dxx8v5dgfx0al" path="res://assets/Fairness_Village/SickVillagerSpritePLACEHOLDER.png" id="1_7hnb4"]
 [ext_resource type="Script" path="res://SickVillager.gd" id="1_uf7cp"]

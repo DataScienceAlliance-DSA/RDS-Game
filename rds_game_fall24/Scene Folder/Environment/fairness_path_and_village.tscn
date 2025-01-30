@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="2_dqbnr"]
 [ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://assets/Tilesets/Interior_Tiles.tres" id="3_w6l08"]
-[ext_resource type="PackedScene" uid="uid://ct4qja5thogdy" path="res://Scene Folder/Character Scenes/sick_villager.tscn" id="4_10oh5"]
+[ext_resource type="PackedScene" uid="uid://v52v8p8xkuf5" path="res://Scene Folder/Character Scenes/sick_villager.tscn" id="4_10oh5"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="4_ui5n2"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/Cauldron_Fairness_Village.gd" id="6_3pdxr"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/AStar2DVisualizer.gd" id="6_e6tut"]
