@@ -1,21 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cuujgu5r8pssb"]
+[gd_scene load_steps=7 format=3 uid="uid://cuujgu5r8pssb"]
 
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="2_dqbnr"]
 [ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://assets/Tilesets/Interior_Tiles.tres" id="3_w6l08"]
 [ext_resource type="PackedScene" uid="uid://ct4qja5thogdy" path="res://Scene Folder/Character Scenes/sick_villager.tscn" id="4_10oh5"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="4_ui5n2"]
-[ext_resource type="Script" path="res://Scene Folder/Environment/Cauldron_Fairness_Village.gd" id="6_3pdxr"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/AStar2DVisualizer.gd" id="6_e6tut"]
 [ext_resource type="Texture2D" uid="uid://8vw07d50xiwm" path="res://assets/Mixing_Game/cauldron_mixing_spritesheet.png" id="6_hvobe"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pw6gr"]
-radius = 56.0516
-height = 149.965
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1e0"]
-size = Vector2(189, 165.25)
-
-[node name="fairness_minigame_1" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="." groups=["Map"]]
 tile_set = ExtResource("3_w6l08")
@@ -34,8 +26,7 @@ speed = 129.665
 target_pos = Vector2(32, 480)
 
 [node name="SickVillager" parent="." instance=ExtResource("4_10oh5")]
-position = Vector2(472, 249)
-start_autonomous = false
+position = Vector2(460, 249)
 speed = 75.11
 target_pos = Vector2(352, 288)
 
@@ -65,7 +56,6 @@ position = Vector2(308, 253)
 cam_zoom = 0.75
 
 [node name="Cauldron" type="StaticBody2D" parent="."]
-script = ExtResource("6_3pdxr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cauldron"]
 position = Vector2(864, 510)
@@ -73,14 +63,3 @@ scale = Vector2(0.445312, 0.445312)
 texture = ExtResource("6_hvobe")
 hframes = 8
 vframes = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron"]
-position = Vector2(863, 556)
-rotation = -1.5923
-shape = SubResource("CapsuleShape2D_pw6gr")
-
-[node name="Area2D" type="Area2D" parent="Cauldron"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/Area2D"]
-position = Vector2(866, 547)
-shape = SubResource("RectangleShape2D_bo1e0")

@@ -226,6 +226,3 @@ frame = 12
 libraries = {
 "": SubResource("AnimationLibrary_k66xe")
 }
-
-[node name="ShapeSprite" type="Sprite2D" parent="."]
-position = Vector2(0, -127)
