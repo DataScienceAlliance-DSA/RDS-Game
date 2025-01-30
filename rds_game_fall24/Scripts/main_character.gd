@@ -1,5 +1,6 @@
 extends CharacterController
 
+@export var cam_zoom : float = 1. # sets camera zoom
 @onready var follower = get_parent().get_node("Follower")  # Reference to the follower
 
 var player_speed = 200
@@ -26,6 +27,8 @@ var closest_area_index
 var neighbor_areas
 
 func _ready():
+	self.get_node("Camera2D").zoom = Vector2(cam_zoom,cam_zoom)
+	
 	scene_map = self.get_node("../Map") 
 	if scene_map:
 		var map_limits = scene_map.get_used_rect()
@@ -128,8 +131,20 @@ func enable_process():
 # successfully interacts with an in-area object...
 func confirmed_interaction():
 	if (neighbor_areas.size() != 0):
-		neighbor_areas[closest_area_index].interact(self)
+		#Get closest Area2D node
+		var closest_area = neighbor_areas[closest_area_index]
+		
+		# Check if the node or its parent implements interact function
+		if closest_area.has_method("interact"):
+			closest_area.interact(self)
+		elif closest_area.get_parent() and closest_area.get_parent().has_method("interact"):
+			closest_area.get_parent().interact(self)
+		else:
+			print("No valid interact method found on the target node or its parent.")
+		#neighbor_areas[closest_area_index].interact(self)
 		self.set_process(false)
+		
+	# Reset movement stack
 	movement_stack = [NO_MOVEMENT] # reset movement stack
 	# above line is for if player is enabled post-interactable area
 
