@@ -9,6 +9,10 @@ func interact(character):
 	interactor = character
 	
 	var shape_index = character.shape_index
+	
+	if (shape_index == null):
+		return
+	
 	print("Cauldron index number", shape_index)
 	shape_ui.light_up_shape(shape_index)
 	

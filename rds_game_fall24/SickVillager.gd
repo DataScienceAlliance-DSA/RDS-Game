@@ -6,6 +6,7 @@ extends CharacterController
 
 @onready var shape_sprite : Sprite2D = get_node("ShapeSprite")
 @onready var area2d: Area2D = $Area2D
+var shape_index
 
 
 ### Exists in CharacterController Parent class
@@ -19,7 +20,7 @@ extends CharacterController
 
 func _ready():
 	# set random shape for the sick villager
-	var shape_index = randi() % 6
+	shape_index = randi() % 6
 	area2d.set("shape_index", shape_index)
 	
 	match(shape_index):

@@ -51,7 +51,8 @@ func _ready():
 		camera.limit_right = map_limits.end.x * map_cellsize
 		camera.limit_top = map_limits.position.y * map_cellsize
 		camera.limit_bottom = map_limits.end.y * map_cellsize
-		
+	
+	movement_stack = []
 
 func updateAnimation():
 	if velocity.length() == 0:
@@ -73,26 +74,6 @@ func _process(_delta):
 	if (autonomous):
 		super(_delta)
 		return
-	############################################################################
-	## Attempt at linking fox and character Movement
-	
-		
-	# Find all areas before any cu tscene/player-inputs
-	find_interactables()
-	
-	# Scene Cutscene Conditional (moves player to position)
-	if (enter_cutscene) and (self.position.y >= 882):
-		self.animations.current_animation = "walkUp"
-		self.velocity = movement_stack.front() # constantly move player into position during cutscene
-		self.move_and_slide()
-		return	# end process if players not in position yet
-	elif (enter_cutscene):
-		# following line commented due to bug (interaction occurs several times if uncommented)
-		# await get_tree().create_timer(0.25).timeout	# wait a quarter-second
-		self.animations.current_animation = "walkRight"
-		confirmed_interaction()	# interact with fox
-		enter_cutscene = false # disable cutscene-movement
-		movement_stack = [NO_MOVEMENT] # reset player movement stack
 	
 	############################################################################
 	## TENTATIVE MOVEMENT STACK SYSTEM for limiting movement to four directions.
@@ -122,7 +103,8 @@ func _process(_delta):
 		movement_stack.pop_at(movement_stack.find(DOWN_MOVEMENT))
 	
 	# set the velocity to top of stack (most recently pressed direction)
-	self.velocity = movement_stack.front()
+	if movement_stack.size() != 0: self.velocity = movement_stack.front()
+	else: self.velocity = Vector2(0.,0.)
 	self.move_and_slide()
 	self.updateAnimation()
 	
@@ -130,6 +112,7 @@ func _process(_delta):
 	emit_signal("movement_updated", movement_stack)
 	
 	## AREA INTERACTION for interactables
+	find_interactables()
 	if (neighbor_areas.size() != 0) and (Input.is_action_just_pressed("interaction")):
 		# place code for drawing an interact UI button over closest area
 		confirmed_interaction()
@@ -139,11 +122,7 @@ func _process(_delta):
 
 # successfully interacts with an in-area object...
 func confirmed_interaction():
-	if is_minigame_scene:
-		handle_minigame_interaction()
-	else:
-		(neighbor_areas.size() != 0)
-		neighbor_areas[closest_area_index].interact(self)
+	if (neighbor_areas.size() != 0): neighbor_areas[closest_area_index].interact(self)
 	movement_stack = [NO_MOVEMENT] # reset movement stack
 	# above line is for if player is enabled post-interactable area
 
@@ -167,14 +146,3 @@ func enable_process():
 	self.set_process(true)
 	#print("After setting process: ", self.is_processing())  # Log after enabling
 	movement_stack = [NO_MOVEMENT]	# reset movement stack
-
-func handle_minigame_interaction():
-	var canvas_layer = get_tree().current_scene.get_node("UIFairnessMinigame1")
-	
-	if canvas_layer.is_shape_collected(shape_index):
-		print("Shape already collected, skipping NPC interaction.")
-		return
-		
-	(neighbor_areas.size() != 0)
-	neighbor_areas[closest_area_index].interact(self)
-	movement_stack = [NO_MOVEMENT] # reset movement stack
