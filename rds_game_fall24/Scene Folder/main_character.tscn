@@ -206,10 +206,6 @@ shape = SubResource("RectangleShape2D_1w8xd")
 shape = SubResource("RectangleShape2D_cpqrn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-limit_right = 1856
-limit_bottom = 1280
 position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

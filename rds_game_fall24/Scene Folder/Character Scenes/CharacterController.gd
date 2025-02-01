@@ -19,17 +19,17 @@ var move_start : Vector2
 @onready var hop_interpolation : float = 0.
 
 func _ready():
-	autonomous = autonomous
+	autonomous = start_autonomous
 	print("Character controller")
 
 func _process(delta):
-	
 	# set the pattern
 	var start_pos = self.position
 	
+	print("anmythjing")
 	if (!hopping):
 		var path = map.getAStarPath(start_pos, target_pos)
-		# print(path)
+		
 		if path.size() > 2:
 			path.pop_front() # This removes the starting point from the path
 			move_target = path.pop_front() # This gives us the point towards the enemy should move

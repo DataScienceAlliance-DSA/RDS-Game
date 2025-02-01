@@ -11,7 +11,6 @@ res://Scene Folder/Environment/Intro_Room.tscn
 res://Scene Folder/Environment/school_courtyard.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/fox.tscn
-res://Scripts/main_character.gd
-res://Scene Folder/Character Scenes/SickVillager_Area.gd
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.gd
 res://SickVillager.gd
-res://Scene Folder/Environment/Cauldron_Fairness_Area.gd
+res://Scene Folder/Character Scenes/CharacterController.gd

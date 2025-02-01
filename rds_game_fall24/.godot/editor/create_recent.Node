@@ -1,3 +1,4 @@
+Camera2D
 TextureRect
 HBoxContainer
 CanvasLayer
@@ -9,6 +10,5 @@ StaticBody2D
 PointLight2D
 TileMap
 Node2D
-Camera2D
 CharacterBody2D
 Control
