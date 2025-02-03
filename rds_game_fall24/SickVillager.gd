@@ -18,8 +18,9 @@ var shape_index
 #@export var speed : float = 100. # 100 is default speed
 #@export var target_pos : Vector2
 
-var start
-var target_pos_arr
+var start # total start position of a villager's journey
+var target_pos_arr # array of all points a villager must walk to
+@onready var villager_complete : bool = false # when true, gets freed in minigame script
 
 func _ready():
 	# set random shape for the sick villager
@@ -106,7 +107,7 @@ func _process(delta):
 			target_pos = target_pos_arr.pop_front()
 			autonomous = true
 		else:
-			self.queue_free()
+			villager_complete = true
 	super(delta)
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):

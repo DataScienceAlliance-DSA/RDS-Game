@@ -9,7 +9,13 @@ extends CanvasLayer
 	5: $HBoxContainer/Triangle
 }
 
+@onready var root_scene = get_node("..")
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
+@onready var villagers : Array[SickVillager] = [] # array of all on-screen villagers
+@onready var max_villagers : int = 10 # total # of villagers that can be on screen at a time
+@onready var villager_scene = load("res://Scene Folder/Character Scenes/sick_villager.tscn")
+
+var game_running : bool # runs npc generation in process if true
 
 # Store collected shapes in a set to track which shapes have been collected
 var collected_shapes = []
@@ -20,6 +26,28 @@ func _ready():
 	camera.limit_right = 1920.
 	camera.limit_top = 192.
 	camera.limit_bottom = 1152.
+	
+	UI.start_scene_change(false, false, "")
+	game_running = true
+
+func _process(delta):
+	for villager in villagers:
+		if villager.villager_complete:
+			villagers.erase(villager)
+			villager.queue_free()
+	
+	if (!game_running): return
+	if (collected_shapes.size() == 6): 
+		game_running = false
+		UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Fairness/FairnessSegue.json", null)
+		await UI.get_node("Monologue").closed_signal
+		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn")
+	
+	# BEGINS GAME: SPAWNING SICK VILLAGERS
+	while (villagers.size() != max_villagers):
+		var new_villager = villager_scene.instantiate()
+		root_scene.add_child(new_villager)
+		villagers.append(new_villager)
 
 # Function to light up the shape in the UI
 func light_up_shape(index: int):
