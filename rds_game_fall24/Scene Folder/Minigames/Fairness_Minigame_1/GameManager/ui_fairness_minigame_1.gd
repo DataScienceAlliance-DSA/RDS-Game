@@ -9,6 +9,8 @@ extends CanvasLayer
 	5: $HBoxContainer/Triangle
 }
 
+@onready var timer = $Timer
+@onready var timer_label = $RichTextLabel
 @onready var root_scene = get_node("..")
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
 @onready var villagers : Array[SickVillager] = [] # array of all on-screen villagers
@@ -31,6 +33,19 @@ func _ready():
 	game_running = true
 
 func _process(delta):
+	# Get the remaining time
+	var time_left = timer.time_left
+	
+	#Calculate minutes and seconds
+	var minutes = int(time_left) / 60
+	var seconds = int(time_left) % 60
+	
+	#Format the time as MM:SS
+	var time_text = "%02d:%02d" % [minutes, seconds]
+
+	#Update the RichText Label
+	timer_label.text = time_text
+	
 	for villager in villagers:
 		if villager.villager_complete:
 			villagers.erase(villager)
@@ -62,3 +77,10 @@ func light_up_shape(index: int):
 # Function to check if a shape has been collected
 func is_shape_collected(index: int) -> bool:
 	return index in collected_shapes
+
+func _on_timer_timeout():
+	game_running = false
+	end_game()
+	
+func end_game():
+	print("Game Over")
