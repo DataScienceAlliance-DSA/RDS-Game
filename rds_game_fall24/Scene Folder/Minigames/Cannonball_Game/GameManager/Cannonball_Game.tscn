@@ -174,5 +174,3 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_npncm")
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

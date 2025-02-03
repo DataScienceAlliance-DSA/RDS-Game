@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://cydbt015clspk" path="res://assets/Cannon_Game/Instruction_Left Arrow Button.png" id="10_ew5jl"]
 [ext_resource type="Texture2D" uid="uid://40nh0v5kv7kf" path="res://assets/Cannon_Game/Instruction_Right Arrow Button.png" id="11_t5f1i"]
 [ext_resource type="Texture2D" uid="uid://csjx177krhdpr" path="res://assets/Cannon_Game/Instruction_Spacebar.png" id="12_sildp"]
-[ext_resource type="FontFile" uid="uid://b0k5nntucjrmk" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
-[ext_resource type="FontFile" uid="uid://ctgrrtvdhlt02" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
+[ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
+[ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
 
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)

@@ -28,6 +28,7 @@ func interact(interactor_object):
 	self.set_process(true) # enable area interaction screen
 	
 	interactions = interactions + 1	# increment interactions made with this area
+	interactor.set_process(false)
 	match interactions:
 		1:
 			monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Cauldron/OrbHypothesis.json", self)

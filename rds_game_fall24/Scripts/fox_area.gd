@@ -16,11 +16,8 @@ func interact(interactor_object):
 	#logic
 	
 	interactions = interactions + 1	# increment interactions made with this area
-	match interactions:
-		1:
-			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxIntro.json", self)
-		_:
-			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxBlurb.json", self)
+	interactor_object.set_process(false)
+	dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxBlurb.json", self)
 
 func end_interaction():
 	# disable interactable, enable player (interactor)

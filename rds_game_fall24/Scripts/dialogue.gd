@@ -140,6 +140,8 @@ func close_dialogue():
 	
 	if interacted_area:
 		interacted_area.end_interaction()
+	
+	dialogue_complete.emit()
 
 func get_dialogue_finished():
 	return true

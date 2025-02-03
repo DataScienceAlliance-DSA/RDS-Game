@@ -71,6 +71,8 @@ func next_stage(success : bool, readying : bool):
 					orb.queue_free()
 			if success:
 				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
+				await UI.get_node("Monologue").monologue_complete
+				UI.start_scene_change(true, true, "res://Scene Folder/Environment/fairness_path_and_village.tscn")
 			else:
 				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 	if not readying:
