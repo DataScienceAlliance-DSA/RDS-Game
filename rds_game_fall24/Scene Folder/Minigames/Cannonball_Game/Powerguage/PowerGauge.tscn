@@ -11,7 +11,6 @@ default_font_size = 52
 [node name="PowerGauge" type="CanvasLayer"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 z_index = -1
 custom_minimum_size = Vector2(1366, 768)
 offset_right = 40.0

@@ -15,3 +15,5 @@ res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
 res://Scene Folder/UI.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/Timer_Fairness_Minigame_1.gd
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.gd
+res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
