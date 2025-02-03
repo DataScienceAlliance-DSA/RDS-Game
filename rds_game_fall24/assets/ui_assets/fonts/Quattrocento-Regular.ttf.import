@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ctgrrtvdhlt02"
+uid="uid://2h6tqsybxfa6"
 path="res://.godot/imported/Quattrocento-Regular.ttf-c7577bb704a6df6997ab3645ef69b099.fontdata"
 
 [deps]
@@ -15,7 +15,6 @@ dest_files=["res://.godot/imported/Quattrocento-Regular.ttf-c7577bb704a6df6997ab
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
-disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
