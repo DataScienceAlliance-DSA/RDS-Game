@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://cgpsrkfv7w7x5"]
+[gd_scene load_steps=2 format=3 uid="uid://cgpsrkfv7w7x5"]
+
+[ext_resource type="PackedScene" uid="uid://crwym4shqdj1" path="res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn" id="1_0mgk1"]
 
 [node name="FairnessMinigame2" type="Node2D"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("1_0mgk1")]
