@@ -28,7 +28,7 @@ theme_override_constants/margin_left = -60
 theme_override_constants/margin_top = 155
 theme_override_constants/margin_right = 660
 script = ExtResource("1_a08ok")
-tilt_angle = 50.0
+tilt_angle = 20.0
 
 [node name="Control" type="Control" parent="TippingScale"]
 layout_mode = 2

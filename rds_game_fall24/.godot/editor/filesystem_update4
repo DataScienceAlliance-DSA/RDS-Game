@@ -10,3 +10,5 @@ res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Scale.gd
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn
