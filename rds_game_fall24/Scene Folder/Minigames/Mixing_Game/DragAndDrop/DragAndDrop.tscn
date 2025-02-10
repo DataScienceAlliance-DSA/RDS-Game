@@ -72,7 +72,7 @@ size_flags_vertical = 0
 mouse_filter = 2
 texture = ExtResource("3_esetp")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Bag" type="MarginContainer" parent="."]
 offset_right = 12175.0
 offset_bottom = 11865.0
 scale = Vector2(0.06, 0.06)
@@ -82,40 +82,40 @@ mouse_filter = 0
 theme_override_constants/margin_left = 750
 theme_override_constants/margin_top = 1205
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="BagContainer" type="HBoxContainer" parent="Bag" groups=["Bag"]]
 layout_mode = 2
 mouse_filter = 0
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Bag/BagContainer"]
 layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_fbe2l")
 
-[node name="green" parent="MarginContainer/HBoxContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+[node name="green" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 top_level = true
 position = Vector2(277, 487)
 texture = ExtResource("6_7l24o")
 
-[node name="yellow" parent="MarginContainer/HBoxContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+[node name="yellow" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 top_level = true
 position = Vector2(321, 410)
 texture = ExtResource("7_v7e68")
 
-[node name="red" parent="MarginContainer/HBoxContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+[node name="red" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 top_level = true
 position = Vector2(364, 487)
 texture = ExtResource("8_t5oxb")
 
-[node name="teal" parent="MarginContainer/HBoxContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+[node name="teal" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 top_level = true
 position = Vector2(449, 487)
 
-[node name="violet" parent="MarginContainer/HBoxContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+[node name="violet" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 top_level = true
 position = Vector2(410, 410)
 texture = ExtResource("9_my8so")
 
-[node name="blue" parent="MarginContainer/HBoxContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+[node name="blue" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
 top_level = true
 position = Vector2(364, 336)
 texture = ExtResource("10_t1ucu")
