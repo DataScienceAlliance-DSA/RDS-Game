@@ -35,6 +35,8 @@ func _input(event):
 		else:
 			is_dragging = false
 			var planned_position
+			drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
+			print(drop_spots)
 			for drop_spot in drop_spots:
 				if ((drop_spot.has_overlapping_areas())
 					and 

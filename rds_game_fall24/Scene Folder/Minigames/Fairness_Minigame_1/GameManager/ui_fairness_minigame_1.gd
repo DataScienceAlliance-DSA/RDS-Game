@@ -42,7 +42,7 @@ func _process(delta):
 	
 	#Format the time as MM:SS
 	var time_text = "%02d:%02d" % [minutes, seconds]
-
+	
 	#Update the RichText Label
 	timer_label.text = time_text
 	

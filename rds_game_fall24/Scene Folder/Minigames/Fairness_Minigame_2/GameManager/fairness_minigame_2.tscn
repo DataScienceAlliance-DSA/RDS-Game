@@ -1,7 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgpsrkfv7w7x5"]
+[gd_scene load_steps=3 format=3 uid="uid://cgpsrkfv7w7x5"]
 
 [ext_resource type="PackedScene" uid="uid://crwym4shqdj1" path="res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn" id="1_0mgk1"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/FairnessMinigame2Logic.gd" id="1_jbw3n"]
 
 [node name="FairnessMinigame2" type="Node2D"]
+script = ExtResource("1_jbw3n")
 
-[node name="CanvasLayer" parent="." instance=ExtResource("1_0mgk1")]
+[node name="GameUI" parent="." instance=ExtResource("1_0mgk1")]
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="TimerLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 1184.0
+offset_top = 32.0
+offset_right = 1312.0
+offset_bottom = 128.0
+theme_override_font_sizes/normal_font_size = 48
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
