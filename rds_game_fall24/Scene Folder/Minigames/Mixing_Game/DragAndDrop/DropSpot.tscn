@@ -6,7 +6,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ee1qp"]
 
-[node name="DropSpot" type="Area2D" groups=["DropSpotGroup"]]
+[node name="DropSpot" type="Area2D"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(1, 1, 1, 0)

@@ -82,15 +82,15 @@ texture = ExtResource("4_36r8r")
 centered = false
 offset = Vector2(-2118.9, -221.85)
 
-[node name="DropSpotLeft" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" instance=ExtResource("5_e3dtl")]
+[node name="DropSpotLeft" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
 position = Vector2(0.00195313, 3375)
 scale = Vector2(100, 100)
 
-[node name="DropSpotLeft2" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" instance=ExtResource("5_e3dtl")]
+[node name="DropSpotLeft3" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
 position = Vector2(997.464, 5217.66)
 scale = Vector2(100, 100)
 
-[node name="DropSpotLeft3" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" instance=ExtResource("5_e3dtl")]
+[node name="DropSpotLeft2" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
 position = Vector2(-1073.22, 5166.15)
 scale = Vector2(100, 100)
 
@@ -103,6 +103,7 @@ offset_right = 686.0
 offset_bottom = 129.0
 
 [node name="RightPan" type="Sprite2D" parent="TippingScale/Control/Control/RightPanRotate" groups=["RightPan"]]
+self_modulate = Color(0.639216, 0.639216, 0.639216, 1)
 position = Vector2(312, 0)
 rotation = -0.000486367
 scale = Vector2(0.066, 0.066)
@@ -110,15 +111,15 @@ texture = ExtResource("4_36r8r")
 centered = false
 offset = Vector2(-2118.9, -221.85)
 
-[node name="DropSpotRight" parent="TippingScale/Control/Control/RightPanRotate/RightPan" instance=ExtResource("5_e3dtl")]
+[node name="DropSpotRight" parent="TippingScale/Control/Control/RightPanRotate/RightPan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
 position = Vector2(0.00195313, 3375)
 scale = Vector2(100, 100)
 
-[node name="DropSpotRight2" parent="TippingScale/Control/Control/RightPanRotate/RightPan" instance=ExtResource("5_e3dtl")]
+[node name="DropSpotRight2" parent="TippingScale/Control/Control/RightPanRotate/RightPan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
 position = Vector2(-1083.31, 5140.89)
 scale = Vector2(100, 100)
 
-[node name="DropSpotRight3" parent="TippingScale/Control/Control/RightPanRotate/RightPan" instance=ExtResource("5_e3dtl")]
+[node name="DropSpotRight3" parent="TippingScale/Control/Control/RightPanRotate/RightPan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
 position = Vector2(1012.61, 5217.66)
 scale = Vector2(100, 100)
 
