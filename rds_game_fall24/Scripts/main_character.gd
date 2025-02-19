@@ -15,7 +15,6 @@ var shape_index
 var player_speed = 200
 @onready var player_area = self.get_node("PlayerArea")
 @onready var enter_cutscene = true
-var scene_map
 
 # for setting called-animation based on character velocity
 @onready var animations = $AnimationPlayer
@@ -42,10 +41,9 @@ func _ready():
 	
 	self.get_node("Camera2D").zoom = Vector2(cam_zoom,cam_zoom)
 	
-	scene_map = self.get_node("../Map") 
-	if scene_map:
-		var map_limits = scene_map.get_used_rect()
-		var map_cellsize = scene_map.rendering_quadrant_size
+	if map:
+		var map_limits = map.get_used_rect()
+		var map_cellsize = map.rendering_quadrant_size
 		var camera = get_node("Camera2D")
 		camera.limit_left = map_limits.position.x * map_cellsize
 		camera.limit_right = map_limits.end.x * map_cellsize
