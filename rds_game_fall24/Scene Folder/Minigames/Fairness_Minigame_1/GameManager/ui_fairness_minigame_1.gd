@@ -1,12 +1,12 @@
 extends CanvasLayer
 
 @onready var ui_shapes = {
-	0: $HBoxContainer/Circle,
-	1: $HBoxContainer/X,
-	2: $HBoxContainer/Diamond,
-	3: $HBoxContainer/Hexagon,
-	4: $HBoxContainer/Square,
-	5: $HBoxContainer/Triangle
+	0: $MarginContainer/ScaleShapes/ShapeHolder/Circle,
+	1: $MarginContainer/ScaleShapes/ShapeHolder/Cross,
+	2: $MarginContainer/ScaleShapes/ShapeHolder/Diamond,
+	3: $MarginContainer/ScaleShapes/ShapeHolder/Hexagon,
+	4: $MarginContainer/ScaleShapes/ShapeHolder/Square,
+	5: $MarginContainer/ScaleShapes/ShapeHolder/Triangle,
 }
 
 @onready var timer = $Timer
@@ -70,7 +70,6 @@ func light_up_shape(index: int):
 	if ui_shapes.has(index) and not collected_shapes.has(index):
 		ui_shapes[index].visible = true
 		collected_shapes.append(index)
-		
 	else:
 		print("Error: Invalid index ", index)
 

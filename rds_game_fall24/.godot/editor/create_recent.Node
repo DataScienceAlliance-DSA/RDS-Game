@@ -1,3 +1,7 @@
+TextureRect
+Control
+MarginContainer
+HBoxContainer
 AnimationPlayer
 AnimationTree
 Sprite2D
@@ -5,10 +9,6 @@ TileMap
 CanvasGroup
 RichTextLabel
 TextEdit
-Control
 RemoteTransform2D
 Node2D
-TextureRect
 CanvasLayer
-Node
-Timer

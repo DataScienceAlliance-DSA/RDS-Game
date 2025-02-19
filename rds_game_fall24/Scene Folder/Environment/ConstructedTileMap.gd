@@ -50,8 +50,6 @@ func getAStarPath(vStartPosition:Vector2,vTargetPosition:Vector2)->Array:
 	var vCellTarget = vTargetPosition
 	var idxTarget = getAStarCellIndex(local_to_map(to_local(vCellTarget)))
 	# Just a small check to see if both points are in the grid
-	print(str(vStartPosition) + " start " + str(idxStart) + " " + str(aStar.has_point(idxStart)))
-	print(str(vTargetPosition) + " target " + str(idxTarget) + " " + str(aStar.has_point(idxTarget)))
 	if aStar.has_point(idxStart) and aStar.has_point(idxTarget):
 		# print(Array(aStar.get_point_path(idxStart, idxTarget)))
 		return Array(aStar.get_point_path(idxStart, idxTarget))

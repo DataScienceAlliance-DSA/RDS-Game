@@ -20,13 +20,11 @@ var move_start : Vector2
 
 func _ready():
 	autonomous = start_autonomous
-	print("Character controller")
 
 func _process(delta):
 	# set the pattern
 	var start_pos = self.position
 	
-	print("anmythjing")
 	if (!hopping):
 		var path = map.getAStarPath(start_pos, target_pos)
 		

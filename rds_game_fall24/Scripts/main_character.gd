@@ -30,11 +30,16 @@ var DOWN_MOVEMENT = Vector2(0, player_speed)
 @onready var movement_stack = [UP_MOVEMENT]
 signal movement_updated(movement_stack)
 
+# checks if current frame in process is the first non-autonomous frame
+@onready var first_frame_processing = true
+
 # global variables for finding interactable areas
 var closest_area_index
 var neighbor_areas
 
 func _ready():
+	set_process(false)
+	
 	if get_tree().current_scene.is_in_group("minigame"):
 		is_minigame_scene = true # Flag as minigame scene
 		print(is_minigame_scene)
@@ -51,6 +56,7 @@ func _ready():
 		camera.limit_bottom = map_limits.end.y * map_cellsize
 	
 	movement_stack = []
+	set_process(true)
 
 func updateAnimation():
 	if velocity.length() == 0:
@@ -68,15 +74,21 @@ func updateAnimation():
 		animations.play("walk" + direction)
 
 func _process(_delta):
-	#print(autonomous)
+	
 	if (autonomous):
 		super(_delta)
 		return
 	
+	# safety net to avoid checking inputs if first non-autonomous frame
+	if (first_frame_processing):
+		first_frame_processing = false
+		return
+	# input on first frame plays twice, and breaks the movement stack
+	# hence, safety net :-3
+	
 	############################################################################
 	## TENTATIVE MOVEMENT STACK SYSTEM for limiting movement to four directions.
 	# ...i want to refactor so that its not 8 conditionals in a row if possible 
-	
 	# per each movement key, if just pressed, add the movement to stack
 	if Input.is_action_just_pressed("right"):
 		movement_stack.push_front(RIGHT_MOVEMENT)
@@ -97,8 +109,12 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("down"):
 		movement_stack.push_front(DOWN_MOVEMENT)
+		print("pushed")
 	elif Input.is_action_just_released("down") and movement_stack.has(DOWN_MOVEMENT):
 		movement_stack.pop_at(movement_stack.find(DOWN_MOVEMENT))
+		print("popped")
+	
+	print(movement_stack)
 	
 	# set the velocity to top of stack (most recently pressed direction)
 	if movement_stack.size() != 0: self.velocity = movement_stack.front()
