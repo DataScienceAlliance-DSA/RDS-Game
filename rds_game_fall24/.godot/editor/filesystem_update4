@@ -1,14 +1,18 @@
-res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
+res://Scene Folder/main_character.tscn
 res://assets/Tilesets/Interior_Tiles.tres
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
-res://Scene Folder/main_character.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
-res://Scene Folder/Environment/school_courtyard.tscn
-res://Scene Folder/Environment/fairness_village.tscn
-res://Scene Folder/Environment/tree.tscn
-res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn
-res://Scene Folder/Environment/ConstructedTileMap.gd
-res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.gd
+res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_2/RockWeight.tscn
+res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn
+res://Scene Folder/Environment/fairness_village.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/TooltipUI.gd
