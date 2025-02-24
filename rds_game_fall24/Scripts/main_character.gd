@@ -114,8 +114,6 @@ func _process(_delta):
 		movement_stack.pop_at(movement_stack.find(DOWN_MOVEMENT))
 		print("popped")
 	
-	print(movement_stack)
-	
 	# set the velocity to top of stack (most recently pressed direction)
 	if movement_stack.size() != 0: self.velocity = movement_stack.front()
 	else: self.velocity = Vector2(0.,0.)

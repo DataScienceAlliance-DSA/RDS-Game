@@ -4,6 +4,13 @@ class_name SickVillager
 extends CharacterController
 # - deeg
 
+@onready var circle_sprite = load("res://assets/Fairness_Village/Shapes/circlePLACEHOLDER.PNG")
+@onready var cross_sprite = load("res://assets/Fairness_Village/Shapes/crossPLACEHOLDER.PNG")
+@onready var diamond_sprite = load("res://assets/Fairness_Village/Shapes/diamondPLACEHOLDER.PNG")
+@onready var hexagon_sprite = load("res://assets/Fairness_Village/Shapes/hexagonPLACEHOLDER.PNG")
+@onready var square_sprite = load("res://assets/Fairness_Village/Shapes/squarePLACEHOLDER.PNG")
+@onready var triangle_sprite = load("res://assets/Fairness_Village/Shapes/trianglePLACEHOLDER.PNG")
+
 @onready var shape_sprite : Sprite2D = get_node("ShapeSprite")
 @onready var area2d: Area2D = $Area2D
 var shape_index
@@ -48,7 +55,7 @@ func _ready():
 	
 	match(shape_index):
 		0:
-			shape_sprite.texture = load("res://assets/Fairness_Village/Shapes/circlePLACEHOLDER.PNG")
+			shape_sprite.texture = circle_sprite
 			if (orientation == 0):
 				start = l
 				target_pos_arr = [d,g,c,n]
@@ -56,7 +63,7 @@ func _ready():
 				start = n
 				target_pos_arr = [c,g,d,l]
 		1:
-			shape_sprite.texture = load("res://assets/Fairness_Village/Shapes/crossPLACEHOLDER.PNG")
+			shape_sprite.texture = cross_sprite
 			if (orientation == 0):
 				start = l
 				target_pos_arr = [z]
@@ -64,7 +71,7 @@ func _ready():
 				start = z
 				target_pos_arr = [l]
 		2:
-			shape_sprite.texture = load("res://assets/Fairness_Village/Shapes/diamondPLACEHOLDER.PNG")
+			shape_sprite.texture = diamond_sprite
 			if (orientation == 0):
 				start = m
 				target_pos_arr = [d,g,c,m]
@@ -72,7 +79,7 @@ func _ready():
 				start = m
 				target_pos_arr = [c,g,d,m]
 		3:
-			shape_sprite.texture = load("res://assets/Fairness_Village/Shapes/hexagonPLACEHOLDER.PNG")
+			shape_sprite.texture = hexagon_sprite
 			if (orientation == 0):
 				start = m
 				target_pos_arr = [a,h,g,i,b,m]
@@ -80,7 +87,7 @@ func _ready():
 				start = y
 				target_pos_arr = [f,b,a,e,y]
 		4:
-			shape_sprite.texture = load("res://assets/Fairness_Village/Shapes/squarePLACEHOLDER.PNG")
+			shape_sprite.texture = square_sprite
 			if (orientation == 0):
 				start = l
 				target_pos_arr = [b,f,e,l]
@@ -88,7 +95,7 @@ func _ready():
 				start = z
 				target_pos_arr = [e,a,b,z]
 		5:
-			shape_sprite.texture = load("res://assets/Fairness_Village/Shapes/trianglePLACEHOLDER.PNG")
+			shape_sprite.texture = triangle_sprite
 			if (orientation == 0):
 				start = x
 				target_pos_arr = [b,z]
@@ -108,7 +115,8 @@ func _process(delta):
 			autonomous = true
 		else:
 			villager_complete = true
-	super(delta)
+	else:
+		super(delta)
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 	target_pos *= 64.

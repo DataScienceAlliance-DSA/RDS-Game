@@ -10,7 +10,7 @@ func _process(_delta):
 	
 	# move dialogue boxes into position post-open_dialogue
 	self.position = self.position.lerp(Vector2(0, 0), _delta * 10)
-
+	
 	# check for and process dialogue if next button (E) is pressed
 	if (Input.is_action_just_pressed("interaction")):
 		cannon.set_process(true)

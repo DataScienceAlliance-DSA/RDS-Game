@@ -1,20 +1,40 @@
-[gd_scene load_steps=13 format=3 uid="uid://d38ycv5t2q0ih"]
+[gd_scene load_steps=18 format=3 uid="uid://d38ycv5t2q0ih"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.gd" id="1_f7l2o"]
 [ext_resource type="Texture2D" uid="uid://t60kslomgrxr" path="res://assets/Fairness_Village/Shapes/circlePLACEHOLDER.png" id="1_g37pq"]
 [ext_resource type="Texture2D" uid="uid://0dhj8mreu86n" path="res://assets/Fairness_Village/Shapes/crossPLACEHOLDER.png" id="2_rcdgv"]
 [ext_resource type="Texture2D" uid="uid://cy237y7orji6n" path="res://assets/Fairness_Village/Shapes/diamondPLACEHOLDER.png" id="3_5alc3"]
+[ext_resource type="Texture2D" uid="uid://c2qxjvfoxkxpt" path="res://assets/ui_assets/blank.png" id="3_nyerr"]
 [ext_resource type="Texture2D" uid="uid://dea7yikuureuw" path="res://assets/Fairness_Village/Shapes/hexagonPLACEHOLDER.png" id="4_ejg74"]
 [ext_resource type="Texture2D" uid="uid://dr1vd6mkmh0w6" path="res://assets/Fairness_Village/Shapes/squarePLACEHOLDER.png" id="5_06qeo"]
 [ext_resource type="Texture2D" uid="uid://ssfhv8v0u0mn" path="res://assets/Fairness_Village/Shapes/trianglePLACEHOLDER.png" id="6_etosd"]
 [ext_resource type="Texture2D" uid="uid://0qt8mysmbi6n" path="res://assets/Fairness_Village/Shapes/shape holders.png" id="8_d180v"]
-[ext_resource type="Texture2D" uid="uid://b8lllx8uob7gw" path="res://assets/Fairness_Village/Help Button_Active.png" id="9_7ot2l"]
+[ext_resource type="Texture2D" path="res://assets/Fairness_Village/Help Button_Active.png" id="9_7ot2l"]
 [ext_resource type="Texture2D" uid="uid://dusg5l0kgbhn8" path="res://assets/Fairness_Village/Timer.png" id="9_bpf6p"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/TooltipUI.gd" id="10_f4wxe"]
-[ext_resource type="Texture2D" uid="uid://da2gykps4cwn8" path="res://assets/Fairness_Village/timerbar.png" id="12_8ywbt"]
+[ext_resource type="Texture2D" path="res://assets/Fairness_Village/timerbar.png" id="12_8ywbt"]
+[ext_resource type="Shader" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader" id="14_r32iy"]
+[ext_resource type="Texture2D" path="res://assets/ui_assets/Instruction Box_Blank.png" id="15_fooq8"]
+[ext_resource type="Texture2D" path="res://assets/ui_assets/Spacebar_Instruction Button.png" id="16_jq0gx"]
 
-[node name="UIFairnessMinigame1" type="CanvasLayer"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xc1ba"]
+shader = ExtResource("14_r32iy")
+shader_parameter/lod = 0.75
+shader_parameter/dim = 0.075
+
+[node name="UIFairnessMinigame1" type="CanvasLayer" groups=["MinigameController"]]
 script = ExtResource("1_f7l2o")
+
+[node name="ScreenBlur" type="TextureRect" parent="." groups=["ScreenBlur"]]
+material = SubResource("ShaderMaterial_xc1ba")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_nyerr")
+expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 visible = false
@@ -149,6 +169,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="TimerHolder" type="TextureRect" parent="ScaleTimer"]
+texture_repeat = 1
 layout_mode = 1
 offset_right = 253.6
 offset_bottom = 86.0
@@ -157,6 +178,7 @@ texture = ExtResource("9_bpf6p")
 expand_mode = 3
 
 [node name="TimerBar" type="TextureRect" parent="ScaleTimer"]
+texture_filter = 1
 layout_mode = 0
 offset_left = 84.0
 offset_top = 60.0
@@ -165,6 +187,105 @@ offset_bottom = 1182.0
 scale = Vector2(0.023, 0.023)
 texture = ExtResource("12_8ywbt")
 expand_mode = 1
+
+[node name="Tooltip" type="MarginContainer" parent="." groups=["Tooltip"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 768.0
+offset_bottom = 768.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="Tooltip"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Backdrop" type="TextureRect" parent="Tooltip/Control"]
+material = SubResource("ShaderMaterial_xc1ba")
+offset_left = -2998.5
+offset_top = -3416.0
+offset_right = 2998.5
+offset_bottom = 3416.0
+scale = Vector2(0.063, 0.063)
+pivot_offset = Vector2(2998, 3416)
+mouse_filter = 2
+texture = ExtResource("15_fooq8")
+
+[node name="TextureRect" type="TextureRect" parent="Tooltip/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2998.5
+offset_top = -3416.0
+offset_right = 2998.5
+offset_bottom = 3416.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.063, 0.063)
+pivot_offset = Vector2(2998, 3416)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("15_fooq8")
+
+[node name="MarginContainer" type="MarginContainer" parent="Tooltip/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 505
+theme_override_constants/margin_top = 505
+theme_override_constants/margin_right = 505
+theme_override_constants/margin_bottom = 505
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tooltip/Control/TextureRect/MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 505
+theme_override_font_sizes/bold_font_size = 505
+bbcode_enabled = true
+text = "[center][b][color=white]INSTRUCTIONS"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 300
+bbcode_enabled = true
+text = "[center][color=white]Villagers are running about the town square! Interact with them to collect six different types of data, and then bring each one to the cauldron!"
+fit_content = true
+
+[node name="Control" type="Control" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("16_jq0gx")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(1500, 0)
+layout_direction = 2
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 300
+bbcode_enabled = true
+text = "[center][b][color=white]Interact"
+fit_content = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="MarginContainer/ScaleTimer/TimerHolder" to="MarginContainer/ScaleTimer/TimerHolder" method="_on_mouse_entered"]

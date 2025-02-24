@@ -1,3 +1,9 @@
+SubViewport
+SubViewportContainer
+CanvasLayer
+Node
+Sprite2D
+TileMap
 Control
 RichTextLabel
 TextureRect
@@ -6,9 +12,3 @@ VBoxContainer
 ProgressBar
 MarginContainer
 AnimationPlayer
-AnimationTree
-Sprite2D
-TileMap
-CanvasGroup
-TextEdit
-RemoteTransform2D

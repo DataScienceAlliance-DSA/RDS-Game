@@ -6,7 +6,7 @@ extends CharacterBody2D
 # - deeg
 
 @export var start_autonomous : bool # dictates whether autonomous from start of scene
-@export var autonomous : bool # dictates whether or not its own routines control itself
+var autonomous : bool # dictates whether or not its own routines control itself
 @export var speed : float = 100. # 100 is default speed
 @export var target_pos : Vector2
 
@@ -47,6 +47,10 @@ func _process(delta):
 	else:
 		hop_interpolation += (delta * speed)
 		moveTo(move_start, move_target, hop_interpolation)
+
+func set_autonomous(autonomous):
+	print("CALLME")
+	self.autonomous = autonomous
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 	target_pos *= 64.

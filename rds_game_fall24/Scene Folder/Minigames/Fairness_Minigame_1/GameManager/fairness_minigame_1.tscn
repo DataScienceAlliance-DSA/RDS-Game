@@ -471,6 +471,7 @@ height = 149.965
 size = Vector2(189, 165.25)
 
 [node name="fairness_minigame_1" type="Node2D" groups=["minigame"]]
+texture_filter = 1
 
 [node name="Map" type="TileMap" parent="." groups=["Map"]]
 tile_set = SubResource("TileSet_dkh4x")
@@ -515,6 +516,7 @@ script = ExtResource("6_yxlle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/Area2D"]
 position = Vector2(866, 547)
+scale = Vector2(1.00149, 0.945809)
 shape = SubResource("RectangleShape2D_bo1e0")
 
 [node name="UIFairnessMinigame1" parent="." instance=ExtResource("7_yrw78")]

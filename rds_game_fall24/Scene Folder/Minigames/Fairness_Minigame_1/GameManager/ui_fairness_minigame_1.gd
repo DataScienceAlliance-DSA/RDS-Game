@@ -19,6 +19,7 @@ extends CanvasLayer
 @onready var villager_scene = load("res://Scene Folder/Character Scenes/sick_villager.tscn")
 
 var game_running : bool # runs npc generation in process if true
+var game_paused : bool
 
 # Store collected shapes in a set to track which shapes have been collected
 var collected_shapes = []
@@ -34,6 +35,8 @@ func _ready():
 	game_running = true
 
 func _process(delta):
+	if (game_paused): return
+	
 	# Get the remaining time
 	var time_left = timer.time_left
 	
@@ -68,6 +71,20 @@ func _process(delta):
 		root_scene.add_child(new_villager)
 		villagers.append(new_villager)
 
+func pause_game():
+	for villager in villagers:
+		villager.set_autonomous(true)
+	player.set_autonomous(false)
+	game_paused = true
+	timer.paused = true
+
+func resume_game():
+	for villager in villagers:
+		villager.set_autonomous(false)
+	player.set_autonomous(true)
+	game_paused = false
+	timer.paused = false
+
 # Function to light up the shape in the UI
 func light_up_shape(index: int):
 	#print("light up is being called with index", index)
@@ -84,6 +101,6 @@ func is_shape_collected(index: int) -> bool:
 func _on_timer_timeout():
 	game_running = false
 	end_game()
-	
+
 func end_game():
 	print("Game Over")

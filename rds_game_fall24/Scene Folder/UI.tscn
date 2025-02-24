@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=23 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scene Folder/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
@@ -16,8 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://csjx177krhdpr" path="res://assets/Cannon_Game/Instruction_Spacebar.png" id="12_sildp"]
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
 [ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
-[ext_resource type="Texture2D" uid="uid://c322tj52eg8ox" path="res://assets/ui_assets/Instruction Box_Blank.png" id="17_vpw0u"]
-[ext_resource type="Texture2D" uid="uid://cfxsreqhje1s7" path="res://assets/ui_assets/Spacebar_Instruction Button.png" id="18_qkraf"]
 
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
@@ -906,92 +904,6 @@ theme_override_fonts/normal_font = ExtResource("14_mugcx")
 theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 text = "[center][color=black]Aim the cannon, hold the spacebar to increase power, and release to fire an orb into every bag!"
-
-[node name="Tooltip" type="MarginContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Control" type="Control" parent="Tooltip"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="TextureRect" type="TextureRect" parent="Tooltip/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -2998.5
-offset_top = -3416.0
-offset_right = 2998.5
-offset_bottom = 3416.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.063, 0.063)
-pivot_offset = Vector2(2998, 3416)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("17_vpw0u")
-
-[node name="MarginContainer" type="MarginContainer" parent="Tooltip/Control/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 505
-theme_override_constants/margin_top = 505
-theme_override_constants/margin_right = 505
-theme_override_constants/margin_bottom = 505
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Tooltip/Control/TextureRect/MarginContainer"]
-layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 505
-theme_override_font_sizes/bold_font_size = 505
-bbcode_enabled = true
-text = "[center][b][color=white]INSTRUCTIONS"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 300
-bbcode_enabled = true
-text = "[center][color=white]Villagers are running about the town square! Interact with them to collect six different types of data, and then bring each one to the cauldron!"
-fit_content = true
-
-[node name="Control" type="Control" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 500)
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("18_qkraf")
-expand_mode = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
-clip_contents = false
-custom_minimum_size = Vector2(1500, 0)
-layout_direction = 2
-layout_mode = 2
-theme_override_font_sizes/bold_font_size = 300
-bbcode_enabled = true
-text = "[center][b][color=white]Interact"
-fit_content = true
 
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_exited"]
