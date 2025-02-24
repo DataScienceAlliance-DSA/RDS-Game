@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="1_p4jvy"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="4_2e08x"]
-[ext_resource type="Texture2D" path="res://assets/Fairness_Village/house.png" id="4_cuiqo"]
+[ext_resource type="Texture2D" uid="uid://bjpjy3hb44opj" path="res://assets/Fairness_Village/house.png" id="4_cuiqo"]
 [ext_resource type="PackedScene" path="res://Scene Folder/Environment/tree.tscn" id="6_ljd2i"]
-[ext_resource type="Texture2D" path="res://assets/Fairness_Village/podium (wood).png" id="6_tnlrv"]
-[ext_resource type="Texture2D" path="res://assets/Fairness_Village/VillageCauldron.PNG" id="7_kmh2l"]
+[ext_resource type="Texture2D" uid="uid://cx2g2q0fnhrl2" path="res://assets/Fairness_Village/podium (wood).png" id="6_tnlrv"]
+[ext_resource type="Texture2D" uid="uid://c5eykjcfkvpa2" path="res://assets/Fairness_Village/VillageCauldron.PNG" id="7_kmh2l"]
 
 [sub_resource type="TileSet" id="TileSet_1qbcm"]
 tile_size = Vector2i(64, 64)

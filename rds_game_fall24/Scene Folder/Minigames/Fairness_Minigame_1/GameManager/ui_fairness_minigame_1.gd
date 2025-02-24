@@ -10,6 +10,7 @@ extends CanvasLayer
 }
 
 @onready var timer = $Timer
+@onready var timer_bar = $ScaleTimer/TimerBar
 @onready var timer_label = $RichTextLabel
 @onready var root_scene = get_node("..")
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
@@ -35,6 +36,9 @@ func _ready():
 func _process(delta):
 	# Get the remaining time
 	var time_left = timer.time_left
+	
+	# update timer ui
+	timer_bar.size = Vector2(10130. * (time_left / 60.), 1122.)
 	
 	#Calculate minutes and seconds
 	var minutes = int(time_left) / 60

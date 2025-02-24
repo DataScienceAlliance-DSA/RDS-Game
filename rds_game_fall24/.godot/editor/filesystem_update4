@@ -16,3 +16,5 @@ res://Scene Folder/Minigames/Fairness_Minigame_2/RockWeight.tscn
 res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn
 res://Scene Folder/Environment/fairness_village.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/TooltipUI.gd
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.gd
+res://Scene Folder/UI.tscn

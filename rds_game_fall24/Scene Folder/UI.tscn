@@ -905,6 +905,136 @@ theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 text = "[center][color=black]Aim the cannon, hold the spacebar to increase power, and release to fire an orb into every bag!"
 
+[node name="Tooltip" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="Tooltip"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Tooltip/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -566.0
+offset_top = -696.5
+offset_right = 566.0
+offset_bottom = 696.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(566, 696)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_0lydw")
+
+[node name="MarginContainer" type="MarginContainer" parent="Tooltip/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 505
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tooltip/Control/TextureRect/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
+theme_override_font_sizes/bold_font_size = 90
+bbcode_enabled = true
+text = "[center][b][color=black]INSTRUCTIONS"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 190
+
+[node name="TextureRect" type="TextureRect" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("10_ew5jl")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="TextureRect2" type="TextureRect" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("11_t5f1i")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_right = 90
+
+[node name="TextureRect" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(450, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[right][color=black]Movement"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 190
+
+[node name="TextureRect" type="TextureRect" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("12_sildp")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_right = -180
+
+[node name="TextureRect" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3"]
+custom_minimum_size = Vector2(280, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[right][color=black]Shoot"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 210
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 165
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tooltip/Control/TextureRect/MarginContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(200, 500)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 65
+bbcode_enabled = true
+text = "[center][color=black]Aim the cannon, hold the spacebar to increase power, and release to fire an orb into every bag!"
+
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2" to="Monologue" method="_on_choice_bounds_2_mouse_entered"]
