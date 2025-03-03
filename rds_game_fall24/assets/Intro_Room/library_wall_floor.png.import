@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cll4l3deyperu"
-path="res://.godot/imported/SpreadSheet.png-f9f138694c7341445130103c5de2c3b0.ctex"
+uid="uid://dv1e32o1bdvtd"
+path="res://.godot/imported/library_wall_floor.png-acb6492f2100f09fdf5d870ec39acb86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Hero Assets/SpreadSheet.png"
-dest_files=["res://.godot/imported/SpreadSheet.png-f9f138694c7341445130103c5de2c3b0.ctex"]
+source_file="res://assets/Intro_Room/library_wall_floor.png"
+dest_files=["res://.godot/imported/library_wall_floor.png-acb6492f2100f09fdf5d870ec39acb86.ctex"]
 
 [params]
 
