@@ -4,17 +4,17 @@ var cm : CutsceneManager # cutscene manager for this
 
 func _ready():
 	# DISABLE PLAYER WHILE CUTSCENES ARE OCCURRING
-	var player = get_node("Player")
+	var player = get_tree().get_nodes_in_group("Player")[0]
 	player.autonomous = true
 	
 	var monologue_ui = UI.get_node("Monologue")
 	
 	# Get Actors (Node2Ds)
-	var actorA = get_node("student_npcs/student_npc1")
-	var actorB = get_node("student_npcs/student_npc2")
-	var actorC = get_node("student_npcs/student_npc3")
-	var actorD = get_node("student_npcs/student_npc4")
-	var actorE = get_node("student_npcs/student_npc5")
+	var actorA = get_node("characters/student_npc1")
+	var actorB = get_node("characters/student_npc2")
+	var actorC = get_node("characters/student_npc3")
+	var actorD = get_node("characters/student_npc4")
+	var actorE = get_node("characters/student_npc5")
 	
 	# ActionGroup A - Setup (students walk to principal)
 	var actionA = Action.new(actorA, "LerpMove", actorA.position - Vector2(3150,0), 200)

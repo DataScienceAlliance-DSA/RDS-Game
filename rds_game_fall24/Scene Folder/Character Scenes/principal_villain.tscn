@@ -6,7 +6,7 @@
 light_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7a3lg"]
-size = Vector2(77, 128)
+size = Vector2(67, 22)
 
 [node name="principal_villain" type="CharacterBody2D"]
 
@@ -15,7 +15,7 @@ texture_filter = 1
 material = SubResource("CanvasItemMaterial_tpe3k")
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("1_u53fr")
+offset = Vector2(0, -270)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 8)
 shape = SubResource("RectangleShape2D_7a3lg")

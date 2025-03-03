@@ -9,13 +9,15 @@ light_mode = 1
 size = Vector2(60, 22)
 
 [node name="student_npc4" type="CharacterBody2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_fv23s")
-position = Vector2(0, -56)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("1_335p4")
+offset = Vector2(0, -270)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_oliev")

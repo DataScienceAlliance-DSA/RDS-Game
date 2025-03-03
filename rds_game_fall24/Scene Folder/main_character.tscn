@@ -1,10 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://co48lktbon2ou"]
+[gd_scene load_steps=15 format=3 uid="uid://co48lktbon2ou"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_xf38u"]
 [ext_resource type="Texture2D" uid="uid://d3l0ux0ot7bx7" path="res://assets/Cauldron_Room/Hero Assets/MCSpreadSheet.png" id="2_e7gx1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpqrn"]
 size = Vector2(60, 22)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pqtnd"]
+light_mode = 1
 
 [sub_resource type="Animation" id="Animation_3qw5t"]
 resource_name = "RESET"
@@ -192,6 +195,7 @@ _data = {
 }
 
 [node name="Main Character" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_xf38u")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
@@ -203,10 +207,10 @@ position_smoothing_enabled = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(0, 15)
+material = SubResource("CanvasItemMaterial_pqtnd")
 scale = Vector2(0.22, 0.22)
 texture = ExtResource("2_e7gx1")
-offset = Vector2(0, -320)
+offset = Vector2(0, -269)
 hframes = 10
 vframes = 20
 frame = 30
