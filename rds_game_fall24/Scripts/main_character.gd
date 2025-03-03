@@ -13,7 +13,7 @@ var shape_index
 @onready var follower = get_parent().get_node("Follower")  # Reference to the follower
 
 var player_speed = 200
-@onready var player_area = self.get_node("PlayerArea")
+@onready var player_cast = self.get_node("PlayerCast") as RayCast2D
 @onready var enter_cutscene = true
 
 # for setting called-animation based on character velocity
@@ -74,7 +74,7 @@ func updateAnimation():
 		animations.play("walk" + direction)
 
 func _process(_delta):
-	
+	print("PLAYER IS: " + str(autonomous))
 	if (autonomous):
 		super(_delta)
 		return
@@ -109,10 +109,8 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("down"):
 		movement_stack.push_front(DOWN_MOVEMENT)
-		print("pushed")
 	elif Input.is_action_just_released("down") and movement_stack.has(DOWN_MOVEMENT):
 		movement_stack.pop_at(movement_stack.find(DOWN_MOVEMENT))
-		print("popped")
 	
 	# set the velocity to top of stack (most recently pressed direction)
 	if movement_stack.size() != 0: self.velocity = movement_stack.front()
@@ -124,32 +122,37 @@ func _process(_delta):
 	emit_signal("movement_updated", movement_stack)
 	
 	## AREA INTERACTION for interactables
-	find_interactables()
-	if (neighbor_areas.size() != 0) and (Input.is_action_just_pressed("interaction")):
+	update_cast()
+	if ((player_cast.get_collider() != null) and (Input.is_action_just_pressed("interaction"))):
 		# place code for drawing an interact UI button over closest area
 		confirmed_interaction()
 	
 	## -deeg
 	############################################################################
 
+func update_cast():
+	if (movement_stack.size() > 0):
+		if (movement_stack.front() != NO_MOVEMENT):
+			match(movement_stack.front()):
+				RIGHT_MOVEMENT:
+					player_cast.target_position = Vector2(160,0)
+					player_cast.position = Vector2(-30,0)
+				LEFT_MOVEMENT:
+					player_cast.target_position = Vector2(-160,0)
+					player_cast.position = Vector2(30,0)
+				UP_MOVEMENT:
+					player_cast.target_position = Vector2(0,-111)
+					player_cast.position = Vector2(0,12)
+				DOWN_MOVEMENT:
+					player_cast.target_position = Vector2(0,111)
+					player_cast.position = Vector2(0,-12)
+
+
 # successfully interacts with an in-area object...
 func confirmed_interaction():
-	if (neighbor_areas.size() != 0): neighbor_areas[closest_area_index].interact(self)
+	player_cast.get_collider().interact(self)
 	movement_stack = [NO_MOVEMENT] # reset movement stack
 	# above line is for if player is enabled post-interactable area
-
-# finds all interactables and sets which one is nearest to target interactable...
-func find_interactables():
-	closest_area_index = 0
-	neighbor_areas = player_area.get_overlapping_areas();
-	var closest_distance = 0
-	
-	for i in neighbor_areas.size():
-		var x_distance = ((neighbor_areas[i].position.x - player_area.position.x) ** 2)
-		var y_distance = ((neighbor_areas[i].position.y - player_area.position.y) ** 2)
-		var total_distance = ((x_distance + y_distance) ** 0.5)
-		closest_area_index = i if (total_distance < closest_distance) else closest_area_index
-		closest_distance = total_distance if (total_distance < closest_distance) else closest_distance
 
 # enables player to move again...
 func enable_process():
@@ -158,3 +161,13 @@ func enable_process():
 	self.set_process(true)
 	#print("After setting process: ", self.is_processing())  # Log after enabling
 	movement_stack = [NO_MOVEMENT]	# reset movement stack
+
+# PAUSES ALL STATES OF CHARACTER (animation, movement, etc.)
+func pause():
+	animations.pause()
+	movement_stack = [NO_MOVEMENT]
+	super()
+# RESUMES
+func resume():
+	animations.play()
+	super()

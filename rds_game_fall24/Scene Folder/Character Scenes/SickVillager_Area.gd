@@ -25,7 +25,11 @@ func interact(character):
 		print("This is the character shape index", character.shape_index)
 		shape_sprite.texture = null  # Remove shape from villager
 		end_interaction()
-		
+	else:
+		print("GOOOOPE")
+		print(get_parent().name)
+		get_parent().refuse_shape() # make sick villager refuse shape collection
+
 func end_interaction():
 	# disable interactable, enable player (interactor)
 	interactor.enable_process()

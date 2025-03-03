@@ -21,7 +21,7 @@ extends CanvasLayer
 var game_running : bool # runs npc generation in process if true
 var game_paused : bool
 
-# Store collected shapes in a set to track which shapes have been collected
+# Store collected shapes in an array to track which shapes have been collected
 var collected_shapes = []
 
 func _ready():
@@ -54,6 +54,7 @@ func _process(delta):
 	timer_label.text = time_text
 	
 	for villager in villagers:
+		# villager.set_autonomous(false)
 		if villager.villager_complete:
 			villagers.erase(villager)
 			villager.queue_free()
@@ -63,7 +64,7 @@ func _process(delta):
 		game_running = false
 		UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Fairness/FairnessSegue.json", null)
 		await UI.get_node("Monologue").closed_signal
-		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn")
+		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn")
 	
 	# BEGINS GAME: SPAWNING SICK VILLAGERS
 	while (villagers.size() != max_villagers):
@@ -73,15 +74,15 @@ func _process(delta):
 
 func pause_game():
 	for villager in villagers:
-		villager.set_autonomous(true)
-	player.set_autonomous(false)
+		villager.pause()
+	player.pause()
 	game_paused = true
 	timer.paused = true
 
 func resume_game():
 	for villager in villagers:
-		villager.set_autonomous(false)
-	player.set_autonomous(true)
+		villager.resume()
+	player.resume()
 	game_paused = false
 	timer.paused = false
 
@@ -100,7 +101,6 @@ func is_shape_collected(index: int) -> bool:
 
 func _on_timer_timeout():
 	game_running = false
-	end_game()
-
-func end_game():
-	print("Game Over")
+	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Fairness/FairnessSegue.json", null)
+	await UI.get_node("Monologue").closed_signal
+	UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn")

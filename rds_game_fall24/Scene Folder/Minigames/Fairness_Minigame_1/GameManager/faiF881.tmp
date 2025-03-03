@@ -492,6 +492,9 @@ script = ExtResource("3_dt2da")
 z_index = 1
 position = Vector2(1056, 800)
 cam_zoom = 0.8
+start_autonomous = null
+speed = null
+target_pos = null
 
 [node name="podium" type="Sprite2D" parent="."]
 position = Vector2(1060.9, 718.278)

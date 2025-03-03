@@ -15,6 +15,8 @@ extends CharacterController
 @onready var area2d: Area2D = $Area2D
 var shape_index
 
+# for setting called-animation based on controller instructions
+@onready var animations = $AnimationPlayer
 
 ### Exists in CharacterController Parent class
 #var move_target : Vector2
@@ -28,6 +30,10 @@ var shape_index
 var start # total start position of a villager's journey
 var target_pos_arr # array of all points a villager must walk to
 @onready var villager_complete : bool = false # when true, gets freed in minigame script
+
+@onready var refusing_shape = false # plays indicator for 'shape already gotten' if true
+var refusal_t
+var post_refusal_position
 
 func _ready():
 	# set random shape for the sick villager
@@ -109,6 +115,15 @@ func _ready():
 	super()
 
 func _process(delta):
+	if (refusing_shape):
+		refusal_t += delta
+		var shift = 12.*cos(pow(PI*(refusal_t+0.5),2.))*cos(PI*(refusal_t+0.5))
+		self.position = post_refusal_position + Vector2(shift,0.)
+		if (refusal_t >= 1.):
+			refusing_shape = false
+			self.position = post_refusal_position
+		return
+	
 	if (!autonomous):
 		if (target_pos_arr.size() != 0):
 			target_pos = target_pos_arr.pop_front()
@@ -125,3 +140,18 @@ func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 	if (t >= 1.):
 		hopping = false
 	self.position = start_pos.lerp(target_pos, t)
+
+func refuse_shape():
+	refusal_t = 0.
+	post_refusal_position = self.position
+	refusing_shape = true
+	# SET ANIMATIONS TO FRONT IDLE HERE ONCE IMPORTED
+
+# PAUSES ALL STATES OF CHARACTER (animation, movement, etc.)
+func pause():
+	animations.pause()
+	super()
+# RESUMES
+func resume():
+	animations.play()
+	super()

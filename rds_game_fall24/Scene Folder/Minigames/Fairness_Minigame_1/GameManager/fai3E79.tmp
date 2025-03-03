@@ -488,7 +488,7 @@ script = ExtResource("2_in8vk")
 [node name="DEBUG" type="Node2D" parent="."]
 script = ExtResource("3_dt2da")
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_fl2eq")]
+[node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_fl2eq")]
 z_index = 1
 position = Vector2(1056, 800)
 cam_zoom = 0.8

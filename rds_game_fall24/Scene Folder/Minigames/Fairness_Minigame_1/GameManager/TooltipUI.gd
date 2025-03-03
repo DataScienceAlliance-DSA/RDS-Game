@@ -23,6 +23,7 @@ func _process(delta):
 			ui_state = ui_states.CLICK
 		elif (Input.is_action_just_released("left_click")):
 			visited = !visited
+			print("doop")
 			if (visited): minigame_controller.pause_game()
 			else: minigame_controller.resume_game()
 		else:

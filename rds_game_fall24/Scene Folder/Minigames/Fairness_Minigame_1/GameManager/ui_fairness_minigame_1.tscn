@@ -9,13 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://dr1vd6mkmh0w6" path="res://assets/Fairness_Village/Shapes/squarePLACEHOLDER.png" id="5_06qeo"]
 [ext_resource type="Texture2D" uid="uid://ssfhv8v0u0mn" path="res://assets/Fairness_Village/Shapes/trianglePLACEHOLDER.png" id="6_etosd"]
 [ext_resource type="Texture2D" uid="uid://0qt8mysmbi6n" path="res://assets/Fairness_Village/Shapes/shape holders.png" id="8_d180v"]
-[ext_resource type="Texture2D" path="res://assets/Fairness_Village/Help Button_Active.png" id="9_7ot2l"]
+[ext_resource type="Texture2D" uid="uid://b8lllx8uob7gw" path="res://assets/Fairness_Village/Help Button_Active.png" id="9_7ot2l"]
 [ext_resource type="Texture2D" uid="uid://dusg5l0kgbhn8" path="res://assets/Fairness_Village/Timer.png" id="9_bpf6p"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/TooltipUI.gd" id="10_f4wxe"]
-[ext_resource type="Texture2D" path="res://assets/Fairness_Village/timerbar.png" id="12_8ywbt"]
+[ext_resource type="Texture2D" uid="uid://da2gykps4cwn8" path="res://assets/Fairness_Village/timerbar.png" id="12_8ywbt"]
 [ext_resource type="Shader" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader" id="14_r32iy"]
-[ext_resource type="Texture2D" path="res://assets/ui_assets/Instruction Box_Blank.png" id="15_fooq8"]
-[ext_resource type="Texture2D" path="res://assets/ui_assets/Spacebar_Instruction Button.png" id="16_jq0gx"]
+[ext_resource type="Texture2D" uid="uid://c322tj52eg8ox" path="res://assets/ui_assets/Instruction Box_Blank.png" id="15_fooq8"]
+[ext_resource type="Texture2D" uid="uid://cfxsreqhje1s7" path="res://assets/ui_assets/Spacebar_Instruction Button.png" id="16_jq0gx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xc1ba"]
 shader = ExtResource("14_r32iy")
@@ -145,7 +145,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="TimerHolder" type="TextureRect" parent="MarginContainer/ScaleTimer"]
+[node name="TooltipButton" type="TextureRect" parent="MarginContainer/ScaleTimer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 3
@@ -205,6 +205,7 @@ size_flags_vertical = 4
 
 [node name="Backdrop" type="TextureRect" parent="Tooltip/Control"]
 material = SubResource("ShaderMaterial_xc1ba")
+layout_mode = 0
 offset_left = -2998.5
 offset_top = -3416.0
 offset_right = 2998.5
@@ -288,5 +289,5 @@ text = "[center][b][color=white]Interact"
 fit_content = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="mouse_entered" from="MarginContainer/ScaleTimer/TimerHolder" to="MarginContainer/ScaleTimer/TimerHolder" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/ScaleTimer/TimerHolder" to="MarginContainer/ScaleTimer/TimerHolder" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="MarginContainer/ScaleTimer/TooltipButton" to="MarginContainer/ScaleTimer/TooltipButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/ScaleTimer/TooltipButton" to="MarginContainer/ScaleTimer/TooltipButton" method="_on_mouse_exited"]

@@ -193,6 +193,10 @@ _data = {
 
 [node name="Main Character" type="CharacterBody2D"]
 script = ExtResource("1_xf38u")
+cam_zoom = null
+start_autonomous = null
+speed = null
+target_pos = null
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cpqrn")
@@ -219,8 +223,7 @@ libraries = {
 [node name="ShapeSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -127)
 
-[node name="PlayerCast" type="RayCast2D" parent="."]
-position = Vector2(30, 0)
-target_position = Vector2(-110, 0)
+[node name="PlayerArea" type="RayCast2D" parent="."]
+target_position = Vector2(0, 70.7)
 collide_with_areas = true
 collide_with_bodies = false

@@ -69,3 +69,10 @@ func freeAStarCell(vGlobalPosition:Vector2)->void:
 	var vCell:=map.local_to_map(vGlobalPosition)
 	var idx = map.getAStarCellIndex(vCell)
 	if aStar.has_point(idx): aStar.set_point_disabled(idx, false)
+
+# PAUSES ALL STATES OF CHARACTER (animation, movement, etc.)
+func pause():
+	self.set_process(false)
+# RESUMES
+func resume():
+	self.set_process(true)

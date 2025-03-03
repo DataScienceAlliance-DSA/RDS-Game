@@ -219,8 +219,7 @@ libraries = {
 [node name="ShapeSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -127)
 
-[node name="PlayerCast" type="RayCast2D" parent="."]
-position = Vector2(30, 0)
-target_position = Vector2(-110, 0)
+[node name="PlayerArea" type="RayCast2D" parent="."]
+target_position = Vector2(0, 70.7)
 collide_with_areas = true
 collide_with_bodies = false
