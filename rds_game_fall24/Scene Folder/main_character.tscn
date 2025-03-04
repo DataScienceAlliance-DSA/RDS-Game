@@ -197,6 +197,7 @@ _data = {
 [node name="Main Character" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_xf38u")
+speed = 200.0
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cpqrn")
@@ -219,6 +220,7 @@ frame = 30
 libraries = {
 "": SubResource("AnimationLibrary_k66xe")
 }
+speed_scale = 1.5
 
 [node name="ShapeSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -127)

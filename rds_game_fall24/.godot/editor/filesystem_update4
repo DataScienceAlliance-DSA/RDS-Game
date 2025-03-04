@@ -1,14 +1,11 @@
-res://Scene Folder/Environment/Intro_Room.tscn
+res://Scene Folder/main_character.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/main_character.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
 res://Scene Folder/UI.tscn
-res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
-res://Scene Folder/Character Scenes/sick_villager.tscn
-res://Scene Folder/Minigames/Fairness_Minigame_1/Villagers/Villager_NPC.tscn
-res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
-res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn
 res://Scene Folder/Environment/fairness_village.tscn
-res://assets/Intro_Room/bookshelf.tscn
+res://Scene Folder/Environment/Intro_Room.tscn
+res://Scene Folder/Environment/tree.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
+res://assets/Tilesets/Interior_Tiles.tres

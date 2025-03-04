@@ -1,10 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://drq1vgo2ie7ic"]
 
-[ext_resource type="Texture2D" uid="uid://3fyswbmjb1ju" path="res://assets/Fairness_Village/TreeAnimation.png" id="1_ctvsp"]
+[ext_resource type="Texture2D" uid="uid://ch1c2lr2t5m2i" path="res://assets/Fairness_Village/Tree.PNG" id="1_rokbc"]
 
 [node name="Tree" type="Node2D"]
 
 [node name="TreeSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_ctvsp")
-hframes = 9
+texture = ExtResource("1_rokbc")
