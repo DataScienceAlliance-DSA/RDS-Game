@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://barej8q44ex8p"]
+[gd_scene load_steps=4 format=3 uid="uid://kfgtao24fa7v"]
 
-[ext_resource type="Texture2D" uid="uid://2aq6xh5oemob" path="res://assets/Intro_Room/top shelf.PNG" id="1_roynj"]
-[ext_resource type="Texture2D" uid="uid://kghh4m6i4j6q" path="res://assets/Intro_Room/bottom shelf.PNG" id="2_bcouu"]
+[ext_resource type="Texture2D" path="res://assets/Intro_Room/top shelf.PNG" id="1_roynj"]
+[ext_resource type="Texture2D" path="res://assets/Intro_Room/bottom shelf.PNG" id="2_bcouu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6l4e"]
 size = Vector2(142, 77)
@@ -26,9 +26,3 @@ y_sort_enabled = true
 scale = Vector2(0.0740625, 0.07375)
 texture = ExtResource("2_bcouu")
 offset = Vector2(0, -550)
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-3, -41.5)
-shape = SubResource("RectangleShape2D_l6l4e")

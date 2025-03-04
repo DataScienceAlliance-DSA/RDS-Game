@@ -1,8 +1,7 @@
-res://Scene Folder/Environment/Intro_Room.tscn
+res://Scene Folder/main_character.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/main_character.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
 res://Scene Folder/UI.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
@@ -10,5 +9,22 @@ res://Scene Folder/Character Scenes/sick_villager.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/Villagers/Villager_NPC.tscn
 res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn
+res://Scripts/main_character.gd
 res://Scene Folder/Environment/fairness_village.tscn
+res://Scene Folder/Environment/Intro_Room.tscn
+res://Scene Folder/Character Scenes/student_npc_4.tscn
+res://Scene Folder/Character Scenes/student_npc_3.tscn
+res://Scene Folder/Character Scenes/student_npc_5.tscn
+res://Scene Folder/Character Scenes/student_npc_2.tscn
+res://Scene Folder/Character Scenes/student_npc1.tscn
+res://Scene Folder/Character Scenes/principal_villain.tscn
+res://Scene Folder/Environment/IntroRoom.gd
+res://SecretBookshelfDoorArea.gd
+res://Scene Folder/Environment/LibraryProps/secret_bookshelf.tscn
 res://assets/Intro_Room/bookshelf.tscn
+res://Scene Folder/Environment/Cauldron_Fairness_Area.gd
+res://Scene Folder/UI.gd
+res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn
+res://assets/Tilesets/Interior_Tiles.tres
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn
+res://Scene Folder/Environment/Cauldron_Room.tscn

@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/conveyor.gd" id="12_y73ja"]
 [ext_resource type="Script" path="res://Scripts/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="16_0o7eq"]
-[ext_resource type="PackedScene" uid="uid://cnq52axw13wrl" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn" id="16_ukm0n"]
+[ext_resource type="PackedScene" uid="uid://dvs3cfigo5rlk" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn" id="16_ukm0n"]
 [ext_resource type="Texture2D" uid="uid://v3fe3rbixa55" path="res://assets/Cauldron_Room/Cauldron Assets/Cauldron SS.png" id="20_rac73"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bu35p"]
@@ -295,7 +295,6 @@ layer_6/tile_data = PackedInt32Array(786455, 131084, 5, 458779, 65548, 4, 458775
 script = ExtResource("4_5dn57")
 
 [node name="Player" parent="." instance=ExtResource("16_0o7eq")]
-y_sort_enabled = true
 position = Vector2(960, 1248)
 
 [node name="Follower" parent="." instance=ExtResource("8_o1l77")]
