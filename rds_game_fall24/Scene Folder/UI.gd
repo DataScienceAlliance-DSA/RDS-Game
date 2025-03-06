@@ -1,6 +1,9 @@
 extends CanvasLayer
 
 @onready var screen_hide = get_node("ScreenHide")
+
+@onready var skip_cutscene = get_node("DebugStuff/SkipCutsceneCTRL/ProgressBar")
+
 @onready var scene_hide_timer = 0.0
 @onready var scene_change_active = false
 @onready var screen_fade_active = false
@@ -17,6 +20,8 @@ var next_scene : String 			# string to next scene
 @onready var screen_hide_begin = Vector2(1366, 0)
 var screen_fade_goal
 var current_screen_fade_val
+
+var active_cutscene_manager : CutsceneManager # reference to the current scene's active CM
 
 signal ui_change_complete
 
@@ -40,6 +45,20 @@ func _process(delta):
 		if (!screen_fade_closing):
 			screen_hide.visible = false
 		ui_change_complete.emit()
+	
+	if (active_cutscene_manager.cutscene_active):
+		if (Input.is_action_pressed("skip_cutscene")):
+			skip_cutscene.value = min(1., skip_cutscene.value + delta)
+		else:
+			skip_cutscene.value = max(0., skip_cutscene.value - delta)
+		
+		if (skip_cutscene.value == 0.):
+			skip_cutscene.visible = false
+		elif (skip_cutscene.value == 1.):
+			skip_cutscene.visible = false
+			active_cutscene_manager.skip_cutscene()
+		else:
+			skip_cutscene.visible = true
 
 func start_scene_change(close, switch, scene): 
 	screen_hide.visible = true
@@ -73,3 +92,6 @@ func fade(close):
 
 func enter_next_scene():
 	get_tree().change_scene_to_file(next_scene)
+
+func set_active_cm(active_cutscene_manager):
+	self.active_cutscene_manager = active_cutscene_manager

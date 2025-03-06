@@ -904,6 +904,52 @@ theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 text = "[center][color=black]Aim the cannon, hold the spacebar to increase power, and release to fire an orb into every bag!"
 
+[node name="DebugStuff" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="SkipCutsceneCTRL" type="Control" parent="DebugStuff"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="DebugStuff/SkipCutsceneCTRL"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+offset_right = 4.0
+grow_vertical = 0
+max_value = 1.0
+fill_mode = 3
+show_percentage = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugStuff/SkipCutsceneCTRL/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DebugStuff/SkipCutsceneCTRL/ProgressBar/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[center][b]Skipping..."
+fit_content = true
+
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2" to="Monologue" method="_on_choice_bounds_2_mouse_entered"]

@@ -7,8 +7,6 @@ func _ready():
 	var player = get_tree().get_nodes_in_group("Player")[0]
 	player.autonomous = true
 	
-	var monologue_ui = UI.get_node("Monologue")
-	
 	# Get Actors (Node2Ds)
 	var actorA = get_node("characters/student_npc1")
 	var actorB = get_node("characters/student_npc2")
@@ -30,16 +28,18 @@ func _ready():
 	
 	# ActionGroup A - Parallel Call
 	cm = CutsceneManager.new(actions)
+	add_child(cm)
 	cm.parallel_action()
 	
-	await get_tree().create_timer(1.0).timeout
-	monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Intro/PlayerMonologue.json", null)
+	cm.wait(1.0)
+	cm.call_monologue("res://Scripts/Monologues/Intro/PlayerMonologue.json")
 	
 	await cm.cutscene_complete
 	
+	cm.call_monologue("res://Scripts/Monologues/Intro/MalvorenSpeech.json")
 	
-	monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Intro/MalvorenSpeech.json", null)
-	await monologue_ui.monologue_complete
+	cm.cut()
+	
 	# RE ENABLE THE PLAYER
 	player.autonomous = false
 
