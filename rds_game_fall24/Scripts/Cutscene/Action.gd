@@ -40,6 +40,9 @@ func cue():
 	await action_completed
 	self.set_process(false) # end the action
 
+func skip_action():
+	walk_t = 1.
+
 func _process(delta):
 	match type:
 		"AStarMove":
