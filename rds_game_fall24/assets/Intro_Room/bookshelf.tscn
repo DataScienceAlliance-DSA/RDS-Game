@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://kfgtao24fa7v"]
 
-[ext_resource type="Texture2D" path="res://assets/Intro_Room/top shelf.PNG" id="1_roynj"]
-[ext_resource type="Texture2D" path="res://assets/Intro_Room/bottom shelf.PNG" id="2_bcouu"]
+[ext_resource type="Texture2D" uid="uid://2aq6xh5oemob" path="res://assets/Intro_Room/top shelf.PNG" id="1_roynj"]
+[ext_resource type="Texture2D" uid="uid://kghh4m6i4j6q" path="res://assets/Intro_Room/bottom shelf.PNG" id="2_bcouu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6l4e"]
 size = Vector2(142, 77)

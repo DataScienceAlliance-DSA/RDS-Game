@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # for setting called-animation based on character velocity
 @onready var animations = $FoxSprite/FoxAnim
-var last_direction = "Right" # Initial default direction
+var last_direction = "Down" # Initial default direction
 
 var following_player : bool
 
@@ -11,12 +11,13 @@ var following_player : bool
 @onready var player = get_parent().get_node("Player")
 
 func _ready():
-	animations.play("idleRight")  # Play the Idle animation by default
+	animations.play("idleDown")  # Play the Idle animation by default
 
 func _physics_process(delta):
 	if (following_player):
 		var player_position = player.position
 		var direction = player_position - position
+		print(direction)
 
 		var distance_to_player = direction.length()
 
@@ -38,3 +39,19 @@ func _physics_process(delta):
 			velocity = Vector2.ZERO  # Stop moving when within lag distance
 
 		move_and_slide()
+
+func update_animation():
+	if velocity.length() == 0:
+		animations.play("idle" + last_direction)
+	else:
+		var direction = "Down"
+		if velocity.x < 0:
+			direction = "Left"
+		elif velocity.x > 0:
+			direction = "Right"
+		elif velocity.y < 0:
+			direction = "Up"
+			
+		last_direction = direction
+		animations.play("walk" + direction)
+			
