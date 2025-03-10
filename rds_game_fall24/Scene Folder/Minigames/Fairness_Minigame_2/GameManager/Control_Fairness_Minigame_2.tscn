@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://crwym4shqdj1"]
+[gd_scene load_steps=14 format=3 uid="uid://crwym4shqdj1"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Scale.gd" id="1_a08ok"]
-[ext_resource type="Texture2D" uid="uid://e8halemfwemg" path="res://assets/Fairness_Scale_Game/Group 102.png" id="2_7nriq"]
-[ext_resource type="Texture2D" uid="uid://dplepp2i6chfs" path="res://assets/Fairness_Scale_Game/Rectangle 36.png" id="3_7k0wq"]
-[ext_resource type="Texture2D" uid="uid://dvl2sotwhg801" path="res://assets/Fairness_Scale_Game/GroupBoop.png" id="4_36r8r"]
+[ext_resource type="Texture2D" uid="uid://de0wk7swj03oo" path="res://assets/Fairness_Scale_Game/stand.png" id="2_2juwa"]
+[ext_resource type="Texture2D" uid="uid://b248j6475v3c8" path="res://assets/Fairness_Scale_Game/top part.png" id="3_0t7aq"]
+[ext_resource type="Texture2D" uid="uid://dnke02w5ef4rj" path="res://assets/Fairness_Scale_Game/left scale.png" id="4_boeoj"]
 [ext_resource type="Texture2D" uid="uid://bgwwsgq3lyrw4" path="res://assets/Mixing_Game/empty_bag.png" id="5_1o55c"]
 [ext_resource type="PackedScene" uid="uid://dl510nt7j3vra" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn" id="5_e3dtl"]
+[ext_resource type="Texture2D" uid="uid://bo5canpxj37k6" path="res://assets/Fairness_Scale_Game/right scale.png" id="6_5igny"]
 [ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn" id="6_8prc1"]
 [ext_resource type="Texture2D" uid="uid://cv5djbk75mub8" path="res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG" id="7_g0rvb"]
 [ext_resource type="Texture2D" uid="uid://dymegq2gsesuu" path="res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG" id="8_l65fj"]
@@ -46,25 +47,27 @@ offset_top = 95.0
 offset_right = 934.0
 offset_bottom = 670.0
 
+[node name="Beam" type="Sprite2D" parent="TippingScale/Control/Control/ScaleContainer"]
+position = Vector2(287, -50)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_0t7aq")
+offset = Vector2(0, 650)
+
 [node name="Base" type="TextureRect" parent="TippingScale/Control/Control/ScaleContainer"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.93
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.93
-offset_left = -275.5
-offset_top = -534.75
-offset_right = 275.5
-offset_bottom = 29.2499
+anchor_bottom = 0.5
+offset_left = -656.5
+offset_top = -545.5
+offset_right = 656.5
+offset_bottom = 569.5
 grow_horizontal = 2
-texture = ExtResource("2_7nriq")
+grow_vertical = 2
+texture = ExtResource("2_2juwa")
 expand_mode = 1
-
-[node name="Beam" type="Sprite2D" parent="TippingScale/Control/Control/ScaleContainer"]
-position = Vector2(287, -6)
-scale = Vector2(0.0865944, 0.12395)
-texture = ExtResource("3_7k0wq")
 
 [node name="LeftPanRotate" type="Control" parent="TippingScale/Control/Control"]
 layout_mode = 3
@@ -75,24 +78,24 @@ offset_right = 686.0
 offset_bottom = 129.0
 
 [node name="Left_Pan" type="Sprite2D" parent="TippingScale/Control/Control/LeftPanRotate" groups=["LeftPan"]]
-position = Vector2(-312, 0)
+position = Vector2(-314.333, -60.6666)
 rotation = -0.000486367
-scale = Vector2(0.066, 0.066)
-texture = ExtResource("4_36r8r")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_boeoj")
 centered = false
-offset = Vector2(-2118.9, -221.85)
+offset = Vector2(-550, -350)
 
 [node name="DropSpotLeft" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
-position = Vector2(0.00195313, 3375)
-scale = Vector2(100, 100)
+position = Vector2(3.09511, 490.002)
+scale = Vector2(12.5, 12.5)
 
 [node name="DropSpotLeft3" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
-position = Vector2(997.464, 5217.66)
-scale = Vector2(100, 100)
+position = Vector2(146.304, 746.738)
+scale = Vector2(12.5, 12.5)
 
 [node name="DropSpotLeft2" parent="TippingScale/Control/Control/LeftPanRotate/Left_Pan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
-position = Vector2(-1073.22, 5166.15)
-scale = Vector2(100, 100)
+position = Vector2(-117.033, 753.276)
+scale = Vector2(12.5, 12.5)
 
 [node name="RightPanRotate" type="Control" parent="TippingScale/Control/Control"]
 layout_mode = 3
@@ -103,25 +106,24 @@ offset_right = 686.0
 offset_bottom = 129.0
 
 [node name="RightPan" type="Sprite2D" parent="TippingScale/Control/Control/RightPanRotate" groups=["RightPan"]]
-self_modulate = Color(0.639216, 0.639216, 0.639216, 1)
-position = Vector2(312, 0)
+position = Vector2(315.667, -59)
 rotation = -0.000486367
-scale = Vector2(0.066, 0.066)
-texture = ExtResource("4_36r8r")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_5igny")
 centered = false
-offset = Vector2(-2118.9, -221.85)
+offset = Vector2(-1519.13, -350)
 
 [node name="DropSpotRight" parent="TippingScale/Control/Control/RightPanRotate/RightPan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
-position = Vector2(0.00195313, 3375)
-scale = Vector2(100, 100)
+position = Vector2(-0.252966, 520)
+scale = Vector2(12.5, 12.5)
 
 [node name="DropSpotRight2" parent="TippingScale/Control/Control/RightPanRotate/RightPan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
-position = Vector2(-1083.31, 5140.89)
-scale = Vector2(100, 100)
+position = Vector2(-140.366, 753.265)
+scale = Vector2(12.5, 12.5)
 
 [node name="DropSpotRight3" parent="TippingScale/Control/Control/RightPanRotate/RightPan" groups=["DropSpotGroup"] instance=ExtResource("5_e3dtl")]
-position = Vector2(1012.61, 5217.66)
-scale = Vector2(100, 100)
+position = Vector2(152.965, 756.741)
+scale = Vector2(12.5, 12.5)
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 offset_right = 12175.0

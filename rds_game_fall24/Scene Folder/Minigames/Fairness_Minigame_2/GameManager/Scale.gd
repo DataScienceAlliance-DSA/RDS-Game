@@ -19,6 +19,8 @@ func _ready():
 	right_pan = get_node("Control/Control/RightPanRotate/RightPan")
 	# drop_spot_left = get_node("../DropSpotLeft")
 	# drop_spot_right = get_node("../DropSpotRight")
+	for spot in right_pan_spots:
+		spot.get_node("SlotTexture").visible = false
 
 func _process(delta):
 	# if Input.is_action_pressed("left"):

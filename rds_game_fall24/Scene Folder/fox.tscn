@@ -136,13 +136,11 @@ size = Vector2(15.5, 5.75)
 size = Vector2(16.375, 16.9375)
 
 [node name="Fox" type="CharacterBody2D"]
-position = Vector2(48, 48)
 scale = Vector2(-4, 4)
 
 [node name="FoxSprite" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(1.25, 6.25)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("1_r3l7k")
 offset = Vector2(0, -128)
@@ -155,15 +153,13 @@ libraries = {
 }
 
 [node name="FoxCollider" type="CollisionShape2D" parent="."]
-position = Vector2(1.3, 6.33)
 scale = Vector2(0.7, 0.625)
 shape = SubResource("RectangleShape2D_nccn4")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="FoxArea" type="Area2D" parent="."]
-position = Vector2(12.25, -4.75)
+position = Vector2(0, -6.39)
 script = ExtResource("2_lp4ex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FoxArea"]
-position = Vector2(-33, 4.75)
 shape = SubResource("RectangleShape2D_shrsp")

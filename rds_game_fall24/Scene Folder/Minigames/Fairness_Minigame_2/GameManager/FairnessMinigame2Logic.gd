@@ -44,7 +44,6 @@ func _ready():
 	var drop_spots_right = get_tree().get_nodes_in_group("RightPan")[0].get_children()
 	for spot in get_tree().get_nodes_in_group("DropSpotGroup"):
 		if "DropSpotRight" in spot.name:
-			print(spot.name)
 			spot.remove_from_group("DropSpotGroup")
 			weight_spots.append(spot)
 	
@@ -95,9 +94,9 @@ func spawn_weight(value, spot):
 
 func next_problem():
 	print(current_weights)
-	for weight in current_weights:
-		current_weights.erase(weight)
-		weight.queue_free()
+	for i in range(current_weights.size()):
+		var this_weight = current_weights.pop_back()
+		this_weight.queue_free()
 	print(current_weights)
 	problem_index = problem_index + 1
 	match(problem_index):
