@@ -32,7 +32,8 @@ layer_0/tile_data = PackedInt32Array(65535, 196612, 0, 131071, 196612, 0, 196607
 script = ExtResource("5_ajyox")
 
 [node name="Fox" parent="." instance=ExtResource("4_0q8fu")]
-position = Vector2(152, 395)
+y_sort_enabled = true
+position = Vector2(168, 401)
 script = ExtResource("6_utkob")
 
 [node name="Area2D" type="Area2D" parent="."]
