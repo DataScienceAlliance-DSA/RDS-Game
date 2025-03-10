@@ -1,3 +1,6 @@
+CollisionShape2D
+Area2D
+CharacterBody2D
 VBoxContainer
 RichTextLabel
 HBoxContainer
@@ -5,11 +8,7 @@ ProgressBar
 Control
 MarginContainer
 Sprite2D
-CollisionShape2D
 StaticBody2D
 Node2D
 CollisionPolygon2D
-Area2D
 RayCast2D
-AnimationPlayer
-SubViewport

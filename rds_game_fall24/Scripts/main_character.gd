@@ -74,7 +74,6 @@ func updateAnimation():
 		animations.play("walk" + direction)
 
 func _process(_delta):
-	print("PLAYER IS: " + str(autonomous))
 	if (autonomous):
 		super(_delta)
 		return

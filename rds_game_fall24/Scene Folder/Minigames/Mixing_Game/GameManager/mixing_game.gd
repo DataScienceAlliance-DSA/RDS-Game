@@ -14,8 +14,8 @@ var goal_name : String				# current stage's pair of orb goal name
 @onready var orb_pos1 : Vector2 = Vector2(636, 72)	# starting position of first orb when dropped
 @onready var orb_pos2 : Vector2 = Vector2(731, 72)	# ^ but 2
 
-@onready var orb_container = get_node("Control/MarginContainer") as Control # container for orbs, do move this
-@onready var orb_holder = get_node("Control/MarginContainer/HBoxContainer") as Control	# placement for orbs, DONT MOVE THIS
+@onready var orb_container = get_node("Control/Bag") as Control # container for orbs, do move this
+@onready var orb_holder = get_node("Control/Bag/BagContainer") as Control	# placement for orbs, DONT MOVE THIS
 @onready var spot_holder = get_node("Control/OrbPlacement") as Control	# placement for spots
 @onready var mix_button = get_node("Control/Button") as Control
 @onready var bg_blur_mat = get_node("Control/Blur").material as Material
@@ -72,7 +72,11 @@ func next_stage(success : bool, readying : bool):
 			if success:
 				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
 				await UI.get_node("Monologue").monologue_complete
-				UI.start_scene_change(true, true, "res://Scene Folder/Environment/fairness_path_and_village.tscn")
+				
+				if !FileAccess.file_exists("user://Saves/Cauldron_Room.tscn"):
+					UI.start_scene_change(true, true, "res://Scene Folder/Environment/Cauldron_Room.tscn")
+				else:
+					UI.start_scene_change(true, true, "user://Saves/Cauldron_Room.tscn")
 			else:
 				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 	if not readying:

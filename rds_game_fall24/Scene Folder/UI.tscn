@@ -17,6 +17,13 @@
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
 [ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
 
+[sub_resource type="Gradient" id="Gradient_ci8dm"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_em4cu"]
+gradient = SubResource("Gradient_ci8dm")
+fill_to = Vector2(0.482906, 1)
+
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
 
@@ -33,15 +40,22 @@ fill_to = Vector2(0.5, 0)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n5iv0"]
 load_path = "res://.godot/imported/Frame 28.png-2bb6940214838b5583ea315b9e582350.ctex"
 
-[sub_resource type="Gradient" id="Gradient_ci8dm"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_em4cu"]
-gradient = SubResource("Gradient_ci8dm")
-fill_to = Vector2(0.482906, 1)
-
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_gxgmr")
+
+[node name="ScreenHide" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -683.0
+offset_right = 685.0
+offset_bottom = 696.0
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_em4cu")
+expand_mode = 1
 
 [node name="Dialogue" type="MarginContainer" parent="."]
 visible = false
@@ -369,6 +383,8 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -760,18 +776,6 @@ text = "[color=#282561]Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 fit_content = true
 scroll_active = false
 
-[node name="ScreenHide" type="TextureRect" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -683.0
-offset_right = 685.0
-grow_horizontal = 2
-size_flags_vertical = 0
-mouse_filter = 2
-texture = SubResource("GradientTexture2D_em4cu")
-expand_mode = 1
-
 [node name="Instructions" type="MarginContainer" parent="."]
 visible = false
 anchors_preset = 15
@@ -910,6 +914,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
@@ -919,6 +924,7 @@ theme_override_constants/margin_bottom = 25
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
+mouse_filter = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="DebugStuff/SkipCutsceneCTRL"]
 visible = false
@@ -930,6 +936,7 @@ anchor_bottom = 1.0
 offset_top = -27.0
 offset_right = 4.0
 grow_vertical = 0
+mouse_filter = 2
 max_value = 1.0
 fill_mode = 3
 show_percentage = false
@@ -941,11 +948,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="DebugStuff/SkipCutsceneCTRL/ProgressBar/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+mouse_filter = 2
 bbcode_enabled = true
 text = "[center][b]Skipping..."
 fit_content = true

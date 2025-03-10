@@ -1,17 +1,19 @@
-[gd_scene load_steps=26 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=28 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Script" path="res://Scene Folder/Environment/Cauldron_Room.gd" id="1_qh2ts"]
 [ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://assets/Tilesets/Interior_Tiles.tres" id="3_ja67r"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="4_5dn57"]
 [ext_resource type="Texture2D" uid="uid://c3ua1ar51grfb" path="res://assets/Cauldron_Room/Cauldron Assets/Podium.png" id="6_55uhj"]
+[ext_resource type="Script" path="res://Scene Folder/fox.gd" id="8_k8trx"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scene Folder/fox.tscn" id="8_o1l77"]
 [ext_resource type="PackedScene" uid="uid://cfqpepeud7y6s" path="res://Scene Folder/UI.tscn" id="9_n76cm"]
 [ext_resource type="Texture2D" uid="uid://ccfd0hhfjvrlj" path="res://assets/Cauldron_Room/Misc Assets/candlelight.PNG" id="11_bl43j"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/candle_light.gd" id="12_1uavd"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/conveyor.gd" id="12_y73ja"]
+[ext_resource type="PackedScene" uid="uid://cylx63fkud7d5" path="res://Scene Folder/environment_exit_area.tscn" id="14_a7qit"]
 [ext_resource type="Script" path="res://Scripts/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="16_0o7eq"]
-[ext_resource type="PackedScene" uid="uid://dvs3cfigo5rlk" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn" id="16_ukm0n"]
+[ext_resource type="PackedScene" uid="uid://cosv56386e4bn" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn" id="16_ukm0n"]
 [ext_resource type="Texture2D" uid="uid://v3fe3rbixa55" path="res://assets/Cauldron_Room/Cauldron Assets/Cauldron SS.png" id="20_rac73"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bu35p"]
@@ -294,12 +296,13 @@ layer_6/name = "Layer5"
 layer_6/tile_data = PackedInt32Array(786455, 131084, 5, 458779, 65548, 4, 458775, 196620, 2, 393239, 196620, 1, 393243, 262156, 10, 720919, 262156, 9, 720923, 131084, 12, 786459, 262156, 11, 1179649, 131084, 4, 917505, 196620, 9, 983041, 65548, 9, 1114113, 65548, 8, 589825, 262156, 11, 262145, 262156, 1, 131080, 196620, 0, 131082, 196620, 1, 131085, 131084, 12, 131087, 262156, 13, 131090, 65548, 11, 131092, 131084, 12)
 script = ExtResource("4_5dn57")
 
-[node name="Player" parent="." instance=ExtResource("16_0o7eq")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("16_0o7eq")]
 position = Vector2(960, 1248)
 
-[node name="Follower" parent="." instance=ExtResource("8_o1l77")]
+[node name="Follower" parent="." groups=["Fox"] instance=ExtResource("8_o1l77")]
 y_sort_enabled = true
-position = Vector2(1029, 920)
+position = Vector2(1056, 928)
+script = ExtResource("8_k8trx")
 
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
 visible = false
@@ -342,6 +345,12 @@ libraries = {
 z_index = -5
 position = Vector2(960, 824)
 texture = ExtResource("6_55uhj")
+
+[node name="ExitArea" parent="." instance=ExtResource("14_a7qit")]
+position = Vector2(960, 1344)
+from_scene_name = "Cauldron_Room"
+to_scene_name = "Intro_Room"
+respawn_position = Vector2(959, 1278)
 
 [connection signal="mouse_entered" from="Follower" to="Follower" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Follower" to="Follower" method="_on_mouse_exited"]

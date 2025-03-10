@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dc5ak81orpl5e"]
+[gd_scene load_steps=10 format=3 uid="uid://dc5ak81orpl5e"]
 
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="1_4pnkf"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/school_courtyard.gd" id="1_iknqh"]
@@ -7,11 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scene Folder/fox.tscn" id="4_0q8fu"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="5_ajyox"]
 [ext_resource type="Script" path="res://Scene Folder/fox.gd" id="6_utkob"]
+[ext_resource type="Script" path="res://EnvironmentExitArea.gd" id="8_g2mmf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tqta"]
+size = Vector2(51, 653)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_iknqh")
 
-[node name="Player" parent="." instance=ExtResource("1_4pnkf")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_4pnkf")]
 position = Vector2(80, 424)
 
 [node name="temp_courtyard_map" type="Sprite2D" parent="."]
@@ -30,3 +34,22 @@ script = ExtResource("5_ajyox")
 [node name="Fox" parent="." instance=ExtResource("4_0q8fu")]
 position = Vector2(152, 395)
 script = ExtResource("6_utkob")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("8_g2mmf")
+from_scene_name = "school_courtyard"
+to_scene_name = "Intro_Room"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.5, 445.5)
+shape = SubResource("RectangleShape2D_1tqta")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1663, -2)
+script = ExtResource("8_g2mmf")
+from_scene_name = "school_courtyard"
+to_scene_name = "fairness_village"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-3.5, 445.5)
+shape = SubResource("RectangleShape2D_1tqta")

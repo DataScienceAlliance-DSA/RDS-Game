@@ -1,16 +1,41 @@
-res://Scene Folder/UI.tscn
+res://Scene Folder/main_character.tscn
+res://Scene Folder/Environment/Cauldron_Room.gd
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://assets/Tilesets/Interior_Tiles.tres
-res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/UI.gd
-res://Scripts/Cutscene/CutsceneManager.gd
-res://Scene Folder/Environment/IntroRoom.gd
-res://Scene Folder/Environment/Intro_Room.tscn
-res://Scene Folder/main_character.tscn
+res://Scene Folder/UI.gdshader
 res://Scene Folder/fox.tscn
+res://Scene Folder/UI.tscn
 res://Scene Folder/Environment/fairness_village.tscn
+res://Scene Folder/Environment/Intro_Room.tscn
 res://Scene Folder/Environment/tree.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
 res://Scene Folder/Environment/school_courtyard.tscn
+res://Scene Folder/Environment/LibraryProps/secret_bookshelf.tscn
+res://Scene Folder/Environment/Cauldron_Room.tscn
+res://Scene Folder/Character Scenes/principal_villain.tscn
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
+res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn
+res://Scene Folder/environment_exit_area.tscn
+res://assets/Intro_Room/bookshelf.tscn
+res://EnvironmentExitArea.gd
+res://Scene Folder/Environment/IntroRoom.gd
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
+res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd
+res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
+res://Scene Folder/UI.gd
+res://Scripts/main_character.gd
+res://SecretBookshelfDoorArea.gd
 res://Scripts/Cutscene/Action.gd
+res://UniqueAction.gd
+res://Scene Folder/Character Scenes/Malvoren.gd
+res://Scripts/Cutscene/CutsceneManager.gd
+res://Scene Folder/Character Scenes/student_npc_4.tscn
+res://Scene Folder/Character Scenes/professor_thornewood.tscn
+res://Scene Folder/Character Scenes/sick_villager.tscn
+res://Scripts/cauldron_area.gd
+res://Scene Folder/Environment/school_courtyard.gd
+res://Scene Folder/fox.gd
+res://Scene Folder/Environment/fairness_cauldron_area.gd
+res://Scene Folder/Environment/fairness_village.gd
+res://Scripts/3choice_dialogue.gd

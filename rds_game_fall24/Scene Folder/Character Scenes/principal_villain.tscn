@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dg832qlytv3k6"]
+[gd_scene load_steps=5 format=3 uid="uid://dg832qlytv3k6"]
 
+[ext_resource type="Script" path="res://Scene Folder/Character Scenes/Malvoren.gd" id="1_dv1va"]
 [ext_resource type="Texture2D" uid="uid://cira5wskvvr1g" path="res://assets/Intro_Room/principal.PNG" id="1_u53fr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tpe3k"]
@@ -9,6 +10,7 @@ light_mode = 1
 size = Vector2(67, 22)
 
 [node name="principal_villain" type="CharacterBody2D"]
+script = ExtResource("1_dv1va")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -19,3 +21,4 @@ offset = Vector2(0, -270)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7a3lg")
+disabled = true

@@ -4,11 +4,11 @@ extends CharacterBody2D
 @onready var animations = $FoxSprite/FoxAnim
 var last_direction = "Right" # Initial default direction
 
-var following_player : bool
+@export var following_player : bool
 
 @export var follow_speed = 150.0
 @export var lag_distance = 125.0
-@onready var player = get_parent().get_node("Player")
+@onready var player = get_tree().get_nodes_in_group("Player")[0]
 
 func _ready():
 	animations.play("idleRight")  # Play the Idle animation by default

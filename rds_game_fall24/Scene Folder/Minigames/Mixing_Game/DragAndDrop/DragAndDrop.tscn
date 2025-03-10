@@ -120,11 +120,11 @@ top_level = true
 position = Vector2(364, 336)
 texture = ExtResource("10_t1ucu")
 
-[node name="DropSpotRight" parent="." instance=ExtResource("4_clvvt")]
+[node name="DropSpotRight" parent="." groups=["DropSpotGroup"] instance=ExtResource("4_clvvt")]
 position = Vector2(1097, 242)
 scale = Vector2(5.08, 5.08)
 
-[node name="DropSpotLeft" parent="." instance=ExtResource("4_clvvt")]
+[node name="DropSpotLeft" parent="." groups=["DropSpotGroup"] instance=ExtResource("4_clvvt")]
 position = Vector2(871, 242)
 scale = Vector2(5.08, 5.08)
 

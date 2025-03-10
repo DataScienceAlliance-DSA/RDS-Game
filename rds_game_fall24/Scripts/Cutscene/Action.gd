@@ -8,6 +8,8 @@ var mark : Vector2
 var speed : float
 
 signal action_completed(action)
+@onready var action_finished = false # bool for parallel actions confirming that all actions are done asynchronously
+
 var walk_t : float
 var start_pos : Vector2
 
@@ -29,7 +31,6 @@ func _ready():
 	self.set_process(false) # ensure that the action doesnt run until cue
 
 func cue():
-	print("Actor: " + str(actor) + ", Type: " + str(type))
 	if (type == "AStarMove"):
 		actor.autonomous = true
 	self.set_process(true) # begin performing the action
@@ -38,6 +39,7 @@ func cue():
 	start_pos = actor.position
 	
 	await action_completed
+	action_finished = true
 	self.set_process(false) # end the action
 
 func skip_action():
@@ -61,6 +63,8 @@ func _process(delta):
 			
 			var theta = atan2(diff.y, diff.x)
 			set_directional_anim(theta, true)
+			
+			print(walk_t)
 			
 			if (walk_t >= 1.):
 				# actor.position = mark  # Snap to the exact target position
@@ -87,11 +91,11 @@ func set_directional_anim(theta, moving):
 	if (theta <= PI / 4) and (theta >= 7 * PI / 4):
 		next_anim = "walkRight" if moving else "idleRight"
 	if (theta >= PI / 4) and (theta <= 3 * PI / 4):
-		next_anim = "walkUp" if moving else "idleUp"
+		next_anim = "walkDown" if moving else "idleDown"
 	if (theta >= 3 * PI / 4) and (theta <= 5 * PI / 4):
 		next_anim = "walkLeft" if moving else "idleLeft"
 	if (theta >= 5 * PI / 4) and (theta <= 7 * PI / 4):
-		next_anim = "walkDown" if moving else "idleDown"
+		next_anim = "walkUp" if moving else "idleUp"
 		# print(theta)
 	
 	if anim_player.current_animation != next_anim:

@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var screen_hide = get_node("ScreenHide")
+@onready var screen_hide_canvas = get_node("ScreenHide") as CanvasItem
 
 @onready var skip_cutscene = get_node("DebugStuff/SkipCutsceneCTRL/ProgressBar")
 
@@ -33,35 +34,41 @@ func _process(delta):
 	if (scene_hide_timer < scene_hide_max) and (scene_change_active):
 		screen_hide.size = screen_hide_begin.lerp(screen_hide_goal, (((scene_hide_timer - scene_hide_max) ** 3.0) / (scene_hide_max ** 3.0)) + 1.0) 
 		scene_hide_timer += delta
-	elif (scene_change_active) and (scene_change_switching):
-		enter_next_scene()
+	elif (scene_change_active):
+		print("HERE OM HERE : " + str(scene_change_switching) + " " + str(next_scene))
+		if (scene_change_switching): enter_next_scene()
+		scene_change_active = false
+		scene_change_switching = false
 	
 	if (scene_hide_timer < scene_hide_max) and (screen_fade_active):
 		current_screen_fade_val = lerpf(current_screen_fade_val, screen_fade_goal, delta * 3.)
-		screen_hide.modulate = Vector4(1.,1.,1.,current_screen_fade_val)
+		screen_hide_canvas.modulate = Color(1.,1.,1.,current_screen_fade_val)
 		scene_hide_timer += delta
 	elif (screen_fade_active):
 		screen_fade_active = false
 		if (!screen_fade_closing):
+			screen_hide.size = Vector2(DisplayServer.window_get_size().x, 0.)
 			screen_hide.visible = false
 		ui_change_complete.emit()
 	
-	if (active_cutscene_manager.cutscene_active):
-		if (Input.is_action_pressed("skip_cutscene")):
-			skip_cutscene.value = min(1., skip_cutscene.value + delta)
-		else:
-			skip_cutscene.value = max(0., skip_cutscene.value - delta)
-		
-		if (skip_cutscene.value == 0.):
-			skip_cutscene.visible = false
-		elif (skip_cutscene.value == 1.):
-			skip_cutscene.visible = false
-			active_cutscene_manager.skip_cutscene()
-		else:
-			skip_cutscene.visible = true
+	if (active_cutscene_manager != null):
+		if (active_cutscene_manager.cutscene_active):
+			if (Input.is_action_pressed("skip_cutscene")):
+				skip_cutscene.value = min(1., skip_cutscene.value + delta)
+			else:
+				skip_cutscene.value = max(0., skip_cutscene.value - delta)
+			
+			if (skip_cutscene.value == 0.):
+				skip_cutscene.visible = false
+			elif (skip_cutscene.value == 1.):
+				skip_cutscene.visible = false
+				active_cutscene_manager.skip_cutscene()
+			else:
+				skip_cutscene.visible = true
 
 func start_scene_change(close, switch, scene): 
 	screen_hide.visible = true
+	screen_hide.modulate = Color(1.,1.,1.,1.)
 	
 	next_scene = scene
 	
@@ -78,12 +85,15 @@ func start_scene_change(close, switch, scene):
 
 func fade(close):
 	if (close):
+		screen_fade_active = true
 		current_screen_fade_val = 0.
-		screen_hide.modulate = Vector4(1.,1.,1.,current_screen_fade_val)
+		screen_hide.modulate = Color(1.,1.,1.,current_screen_fade_val)
+		screen_hide.size = DisplayServer.window_get_size()
 		screen_hide.visible = true
 		screen_fade_closing = true
 		screen_fade_goal = 1.0
 	else:
+		screen_fade_active = true
 		current_screen_fade_val = 1.
 		screen_fade_closing = false
 		screen_fade_goal = 0.0
@@ -91,6 +101,7 @@ func fade(close):
 	scene_hide_timer = 0.0
 
 func enter_next_scene():
+	print("GOOP")
 	get_tree().change_scene_to_file(next_scene)
 
 func set_active_cm(active_cutscene_manager):

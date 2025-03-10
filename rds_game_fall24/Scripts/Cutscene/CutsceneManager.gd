@@ -7,45 +7,90 @@ var actions : Array[Action] 	# Action array, to be performed in sequence when .a
 
 @onready var cutscene_active = false
 @onready var skipping_cutscene = false
-signal cutscene_complete
+
+signal actions_complete # emitted after action group (parallel/series) is completed
+signal lines_complete # emitted after monologue/dialogue is completed
+signal wait_complete # emitted after wait is completed
+
+var parallel_completion_holdout
+signal parallel_completed
 
 # UI REFERENCES
-@onready var monologue_ui = UI.get_node("Monologue")
+var monologue_ui
+var dialogue_ui
 
 func _init(actions):
 	UI.set_active_cm(self)
 	self.actions = actions
+	monologue_ui = UI.get_node("Monologue")
+	dialogue_ui = UI.get_node("Dialogue")
+
+func set_actions(actions):
+	self.actions = actions
+	parallel_completion_holdout = false # stop all previous parallel motions?
 
 func series_action():
 	cutscene_active = true
 	for action in actions:
-		await action.cue() if !skipping_cutscene else action.cue()
+		action.cue()
+		if !skipping_cutscene: await action.action_completed
+		else: action.skip_action()
 	
-	cutscene_complete.emit()
+	actions_complete.emit()
 
 func parallel_action():
 	cutscene_active = true
 	for action in actions:
 		action.cue()
 	
-	for action in actions:
-		await action.action_completed if !skipping_cutscene else action.action_completed
+	parallel_completion_holdout = true
+	await self.parallel_completed
 	
-	cutscene_complete.emit()
+	actions_complete.emit()
+
+func _process(delta):
+	if (parallel_completion_holdout):
+		if !skipping_cutscene:
+			var all_actions_finished = true
+			for action in actions:
+				if (!action.action_finished): all_actions_finished = false
+			parallel_completion_holdout = !all_actions_finished
+			if all_actions_finished: parallel_completed.emit()
+		else: 
+			for action in actions:
+				action.skip_action()
+			parallel_completion_holdout = false
+			parallel_completed.emit()
 
 func skip_cutscene():
 	skipping_cutscene = true
 	for action in actions:
 		action.skip_action()
 	monologue_ui.close_3choice_dialogue()
+	dialogue_ui.close_dialogue()
+	
+	actions_complete.emit()
+	lines_complete.emit()
+	wait_complete.emit()
 
 func wait(timer):
-	if !skipping_cutscene: await get_tree().create_timer(timer).timeout
+	if !skipping_cutscene: 
+		await get_tree().create_timer(timer).timeout
+	wait_complete.emit()
 
 func call_monologue(script):
 	if skipping_cutscene: return
 	monologue_ui.open_3choice_dialogue(script, null)
 	await monologue_ui.monologue_complete
+	
+	lines_complete.emit()
+
+func call_dialogue(script):
+	if skipping_cutscene: return
+	dialogue_ui.open_dialogue(script, null)
+	await dialogue_ui.dialogue_complete
+	
+	lines_complete.emit()
 
 # clear all actions, free their nodes
 func cut():
