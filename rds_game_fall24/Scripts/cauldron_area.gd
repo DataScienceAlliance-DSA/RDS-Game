@@ -41,12 +41,6 @@ func end_interaction():
 	self.set_process(true)
 	
 	if (interactions == 1):
-		get_tree().current_scene.scene_state = 1
-		
-		var scene_data = PackedScene.new()
-		scene_data.pack(get_tree().get_current_scene())
-		ResourceSaver.save(scene_data, "user://Saves/Cauldron_Room.tscn")
-		
 		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn")
 
 func set_animation(anim_name: String):

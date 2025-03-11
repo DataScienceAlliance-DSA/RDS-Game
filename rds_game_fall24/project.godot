@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 UI="*res://Scene Folder/UI.tscn"
 Enums="*res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/Enums.gd"
 Constants="*res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/Constants.gd"
+PS="*res://Scene Folder/PlayerState.tscn"
 
 [display]
 

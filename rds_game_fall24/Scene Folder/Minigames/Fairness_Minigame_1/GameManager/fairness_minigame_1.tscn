@@ -488,35 +488,41 @@ script = ExtResource("2_in8vk")
 [node name="DEBUG" type="Node2D" parent="."]
 script = ExtResource("3_dt2da")
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_fl2eq")]
-z_index = 1
-position = Vector2(1056, 800)
-cam_zoom = 0.8
-
 [node name="podium" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(1060.9, 718.278)
 scale = Vector2(0.161032, 0.100474)
 texture = ExtResource("9_silhi")
 
 [node name="Cauldron" type="StaticBody2D" parent="."]
+y_sort_enabled = true
 position = Vector2(192, 96)
 
 [node name="Cauldron2" type="Sprite2D" parent="Cauldron"]
-position = Vector2(867.897, 541.277)
+y_sort_enabled = true
+position = Vector2(867.897, 603.352)
 scale = Vector2(0.0996094, 0.0910912)
 texture = ExtResource("10_auvwt")
+offset = Vector2(0, -550)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron"]
+y_sort_enabled = true
 position = Vector2(863, 556)
 rotation = -1.5923
 shape = SubResource("CapsuleShape2D_pw6gr")
 
 [node name="Area2D" type="Area2D" parent="Cauldron"]
+y_sort_enabled = true
 script = ExtResource("6_yxlle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/Area2D"]
+y_sort_enabled = true
 position = Vector2(866, 547)
 scale = Vector2(1.00149, 0.945809)
 shape = SubResource("RectangleShape2D_bo1e0")
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_fl2eq")]
+position = Vector2(1054, 800)
+cam_zoom = 0.8
 
 [node name="UIFairnessMinigame1" parent="." instance=ExtResource("7_yrw78")]

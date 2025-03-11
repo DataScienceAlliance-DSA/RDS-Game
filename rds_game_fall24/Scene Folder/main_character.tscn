@@ -223,7 +223,8 @@ libraries = {
 speed_scale = 1.5
 
 [node name="ShapeSprite" type="Sprite2D" parent="."]
-position = Vector2(0, -127)
+position = Vector2(0, -165)
+scale = Vector2(0.04, 0.04)
 
 [node name="PlayerCast" type="RayCast2D" parent="."]
 position = Vector2(30, 0)

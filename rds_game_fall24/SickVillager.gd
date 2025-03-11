@@ -4,12 +4,12 @@ class_name SickVillager
 extends CharacterController
 # - deeg
 
-@onready var circle_sprite = load("res://assets/Fairness_Village/Shapes/circlePLACEHOLDER.PNG")
-@onready var cross_sprite = load("res://assets/Fairness_Village/Shapes/crossPLACEHOLDER.PNG")
-@onready var diamond_sprite = load("res://assets/Fairness_Village/Shapes/diamondPLACEHOLDER.PNG")
-@onready var hexagon_sprite = load("res://assets/Fairness_Village/Shapes/hexagonPLACEHOLDER.PNG")
-@onready var square_sprite = load("res://assets/Fairness_Village/Shapes/squarePLACEHOLDER.PNG")
-@onready var triangle_sprite = load("res://assets/Fairness_Village/Shapes/trianglePLACEHOLDER.PNG")
+@onready var circle_sprite = load("res://assets/Fairness_Village/Shapes/shape_2.PNG")
+@onready var cross_sprite = load("res://assets/Fairness_Village/Shapes/shape_6.PNG")
+@onready var diamond_sprite = load("res://assets/Fairness_Village/Shapes/shape_4.PNG")
+@onready var hexagon_sprite = load("res://assets/Fairness_Village/Shapes/shape_5.PNG")
+@onready var square_sprite = load("res://assets/Fairness_Village/Shapes/shape_3.PNG")
+@onready var triangle_sprite = load("res://assets/Fairness_Village/Shapes/shape_1.PNG")
 
 @onready var shape_sprite : Sprite2D = get_node("ShapeSprite")
 @onready var area2d: Area2D = $Area2D

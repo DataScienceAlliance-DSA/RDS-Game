@@ -73,10 +73,9 @@ func next_stage(success : bool, readying : bool):
 				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
 				await UI.get_node("Monologue").monologue_complete
 				
-				if !FileAccess.file_exists("user://Saves/Cauldron_Room.tscn"):
-					UI.start_scene_change(true, true, "res://Scene Folder/Environment/Cauldron_Room.tscn")
-				else:
-					UI.start_scene_change(true, true, "user://Saves/Cauldron_Room.tscn")
+				PS.cauldron_state = 1
+				PS.library_state = 2
+				UI.start_scene_change(true, true, "res://Scene Folder/Environment/Cauldron_Room.tscn")
 			else:
 				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 	if not readying:

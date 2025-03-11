@@ -350,7 +350,8 @@ texture = ExtResource("6_55uhj")
 position = Vector2(960, 1344)
 from_scene_name = "Cauldron_Room"
 to_scene_name = "Intro_Room"
-respawn_position = Vector2(959, 1278)
+from_respawn_position = Vector2(960, 1248)
+to_spawn_position = Vector2(1056, 128)
 
 [connection signal="mouse_entered" from="Follower" to="Follower" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Follower" to="Follower" method="_on_mouse_exited"]
