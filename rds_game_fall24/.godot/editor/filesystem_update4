@@ -4,8 +4,6 @@ res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://assets/Tilesets/Interior_Tiles.tres
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
 res://Scene Folder/UI.gdshader
-res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn
-res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn
 res://Scene Folder/main_character.tscn
 res://Scene Folder/fox.tscn
 res://Scene Folder/UI.tscn
@@ -27,13 +25,13 @@ res://Scene Folder/Character Scenes/professor_thornewood.tscn
 res://Scene Folder/Character Scenes/sick_villager.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn
-res://SaveGame.gd
 res://Scene Folder/Environment/IntroRoom.gd
-res://Scene Folder/PlayerState.tscn
-res://Scene Folder/PlayerState.gd
-res://EnvironmentExitArea.gd
-res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd
-res://Scripts/cauldron_area.gd
-res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
-res://SickVillager.gd
+res://Scripts/Monologues/Intro/PlayerApproachesGlow.json
+res://Scripts/Monologues/Intro/PlayerMonologue.json
+res://Scripts/Monologues/Intro/PlayerNoticesGlow.json
+res://Scripts/Monologues/Intro/ThornewoodLeadsStudents.json
+res://Scripts/Monologues/Intro/ThornewoodSpeech.json
+res://Scripts/Monologues/Intro/MalvorenEntrance.json

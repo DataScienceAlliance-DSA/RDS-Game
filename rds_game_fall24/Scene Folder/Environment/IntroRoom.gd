@@ -8,24 +8,26 @@ var cm : CutsceneManager # cutscene manager for this
 func _ready():
 	var player = get_tree().get_nodes_in_group("Player")[0]
 	player.get_node("Camera2D").limit_right = 3776.
-	get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
 	
-	fox.following_player = false
-	fox.visible = false
-	fox.get_node("FoxCollider").disabled = true
+	# Get Actors (Node2Ds)
+	var actorA = get_node("characters/student_npc1")
+	var actorB = get_node("characters/student_npc2")
+	var actorC = get_node("characters/student_npc3")
+	var actorD = get_node("characters/student_npc4")
+	var actorE = get_node("characters/student_npc5")
+	var malvoren = get_node("characters/principal_villain")
+	var thornewood = get_node("characters/ProfessorThornewood")
 	
 	match (PS.library_state):
 		0:
 			# DISABLE PLAYER WHILE CUTSCENES ARE OCCURRING
 			player.autonomous = true
-			# Get Actors (Node2Ds)
-			var actorA = get_node("characters/student_npc1")
-			var actorB = get_node("characters/student_npc2")
-			var actorC = get_node("characters/student_npc3")
-			var actorD = get_node("characters/student_npc4")
-			var actorE = get_node("characters/student_npc5")
-			var malvoren = get_node("characters/principal_villain")
-			var thornewood = get_node("characters/ProfessorThornewood")
+			
+			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
+			
+			fox.following_player = false
+			fox.visible = false
+			fox.get_node("FoxCollider").disabled = true
 			
 			# ActionGroup A - Setup (students walk to principal)
 			var actionA = Action.new(actorA, "LerpMove", actorA.position - Vector2(3150,0), 200)
@@ -53,7 +55,7 @@ func _ready():
 			
 			await cm.actions_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/Intro/MalvorenSpeech.json")
+			cm.call_monologue("res://Scripts/Monologues/Intro/ThornewoodSpeech.json")
 			
 			await cm.lines_complete
 			
@@ -69,7 +71,7 @@ func _ready():
 			
 			await cm.wait_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/Intro/MalvorenSpeech.json")
+			cm.call_monologue("res://Scripts/Monologues/Intro/MalvorenEntrance.json")
 			
 			await cm.lines_complete
 			
@@ -100,7 +102,10 @@ func _ready():
 			
 			await cm.actions_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/badmix.json")
+			cm.call_monologue("res://Scripts/Monologues/Intro/PlayerNoticesGlow.json")
+			await cm.lines_complete
+			
+			cm.call_monologue("res://Scripts/Monologues/Intro/ThornewoodLeadsStudents.json")
 			await cm.lines_complete
 			
 			actionA = Action.new(actorA, "LerpMove", actorA.position - Vector2(1500,0), 200)
@@ -116,6 +121,9 @@ func _ready():
 			cm.set_actions(actions)
 			cm.parallel_action()
 			
+			cm.wait(1.0)
+			await cm.wait_complete
+			
 			# the player walks vertically aligned to the bookshelf, faces it, then the camera readjusts and cutscene ends
 			var actionPa = Action.new(player, "LerpMove", Vector2(1050, 608), 200)
 			var actionPb = Action.new(player, "LerpMove", Vector2(1050, 500), 200)
@@ -129,6 +137,9 @@ func _ready():
 			
 			await cm.actions_complete
 			
+			cm.call_monologue("res://Scripts/Monologues/Intro/PlayerApproachesGlow.json")
+			await cm.lines_complete
+			
 			cm.cut()
 			
 			PS.library_state = 1 # next time player enters room, scene will be on state #1 from now on
@@ -136,6 +147,9 @@ func _ready():
 			
 		1:
 			player.position = PS.spawning_at
+			
+			malvoren.queue_free()
+			thornewood.queue_free()
 			
 			fox.following_player = false
 			fox.visible = false
@@ -146,6 +160,9 @@ func _ready():
 			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = false
 		2:
 			player.position = PS.spawning_at
+			
+			malvoren.queue_free()
+			thornewood.queue_free()
 			
 			fox.following_player = true
 			fox.visible = true
