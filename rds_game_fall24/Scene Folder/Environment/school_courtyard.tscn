@@ -33,7 +33,7 @@ script = ExtResource("5_ajyox")
 
 [node name="Fox" parent="." instance=ExtResource("4_0q8fu")]
 y_sort_enabled = true
-position = Vector2(168, 401)
+position = Vector2(152, 453)
 script = ExtResource("6_utkob")
 
 [node name="Area2D" type="Area2D" parent="."]
