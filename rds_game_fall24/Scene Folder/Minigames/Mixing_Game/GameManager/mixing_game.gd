@@ -73,6 +73,7 @@ func next_stage(success : bool, readying : bool):
 				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
 				await UI.get_node("Monologue").monologue_complete
 				
+				PS.spawning_at = Vector2(962,902)
 				PS.cauldron_state = 1
 				PS.library_state = 2
 				UI.start_scene_change(true, true, "res://Scene Folder/Environment/Cauldron_Room.tscn")

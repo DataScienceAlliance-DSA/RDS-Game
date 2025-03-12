@@ -37,3 +37,8 @@ res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag2.tscn
 res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag4.tscn
 res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/FairnessMinigame2Logic.gd
+res://Scene Folder/Minigames/Fairness_Minigame_2/RockWeight.tscn
+res://Scene Folder/Environment/school_courtyard.gd
+res://Scene Folder/Environment/fairness_village.gd
+res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd

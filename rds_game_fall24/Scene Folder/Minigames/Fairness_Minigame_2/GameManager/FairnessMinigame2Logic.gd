@@ -85,7 +85,14 @@ func spawn_weight(value, spot):
 	spot.add_child(new_poof)
 	spot.add_child(new_weight)
 	new_weight.name = str(value)
-	new_weight.get_node("TextEdit").text = "[center]" + str(value) + "[/center]"
+	if (value == 30) or (value == 35) or (value == 50): 
+		new_weight.get_node("TextEdit").text = "[center]" + str(value) + "[/center]"
+		new_weight.texture = load("res://assets/Fairness_Scale_Game/weight_50.png")
+	else:
+		new_weight.get_node("TextEdit").text = ""
+		new_weight.texture = load("res://assets/Fairness_Scale_Game/weight_" + str(value) + ".png")
+	
+	
 	
 	new_poof.scale = Vector2(0.025, 0.025)
 	new_poof.get_node("AnimationPlayer").current_animation = "bagpoof_go"

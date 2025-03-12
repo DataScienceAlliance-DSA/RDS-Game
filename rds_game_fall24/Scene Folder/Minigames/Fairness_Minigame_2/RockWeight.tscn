@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_2/RockWeight.gd" id="2_26lm3"]
 
 [node name="Sprite2D" type="Sprite2D"]
-self_modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0.792157, 0.792157, 0.792157, 1)
 scale = Vector2(0.025, 0.025)
 texture = ExtResource("1_bnjii")
 script = ExtResource("2_26lm3")

@@ -35,7 +35,9 @@ func _ready():
 			# RE ENABLE THE PLAYER
 			player.autonomous = false
 		1:
-			player.position = PS.spawning_at
+			player.global_position = PS.spawning_at
+			
+			get_node("Cauldron/CauldronArea").interactions = 2
 			
 			player.autonomous = false
 			get_tree().get_nodes_in_group("Fox")[0].following_player = true

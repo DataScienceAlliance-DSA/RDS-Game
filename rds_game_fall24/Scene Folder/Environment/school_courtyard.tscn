@@ -16,7 +16,7 @@ size = Vector2(51, 653)
 script = ExtResource("1_iknqh")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_4pnkf")]
-position = Vector2(80, 424)
+position = Vector2(72, 449)
 
 [node name="temp_courtyard_map" type="Sprite2D" parent="."]
 z_index = -1
@@ -40,6 +40,8 @@ script = ExtResource("6_utkob")
 script = ExtResource("8_g2mmf")
 from_scene_name = "school_courtyard"
 to_scene_name = "Intro_Room"
+from_respawn_position = Vector2(72, 449)
+to_spawn_position = Vector2(3712, 610)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-3.5, 445.5)
@@ -50,6 +52,8 @@ position = Vector2(1663, -2)
 script = ExtResource("8_g2mmf")
 from_scene_name = "school_courtyard"
 to_scene_name = "fairness_village"
+from_respawn_position = Vector2(1590, 446)
+to_spawn_position = Vector2(-184, -280)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(-3.5, 445.5)
