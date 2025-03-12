@@ -37,7 +37,7 @@ var weight_spots
 var weight_goal
 
 func _ready():
-	# UI.start_scene_change(false, false, "")
+	UI.start_scene_change(false, false, "")
 	
 	# KICK OFF STAGE 1
 	weight_spots = []

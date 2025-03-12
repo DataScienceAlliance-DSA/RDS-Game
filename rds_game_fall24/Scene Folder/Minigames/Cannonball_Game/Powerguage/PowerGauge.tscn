@@ -23,9 +23,9 @@ texture = ExtResource("2_2a1ca")
 script = ExtResource("3_vrws8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PinkCounter"]
-offset_left = 26.4715
-offset_top = -3.78167
-offset_right = 78.4715
+offset_left = 11.3449
+offset_top = -3.78165
+offset_right = 93.3449
 offset_bottom = 52.2183
 theme_override_colors/default_color = Color(1, 0.760784, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

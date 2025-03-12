@@ -18,7 +18,10 @@ script/source = "extends Node2D
 @onready var collision_test : CharacterBody2D = self.get_node(\"Trajectory/CollisionTest\")
 
 @onready var timer = $Timer # Matching the amount of time that the orb stays in the scene before being removed
+@onready var pause_timer = $PauseTimer
 @onready var spawn_ball_delay = false # Bool to trigger unhappy ball spawn over bag after a time delay (mitigates one-ball-in-scene to trigger bag issue)
+
+@onready var cannon_primed = false # true whwn cannon starts charge, false once cannon released. prevents shooting cannon without charging
 
 # track the phase of the bag
 var bag_phase = 0
@@ -40,24 +43,26 @@ func _process(_delta: float) -> void:
 		if !bag.get_parent().is_connected(\"bag_triggered\", bag_hit):
 			bag.get_parent().connect(\"bag_triggered\", bag_hit)
 	
-	if Input.is_action_just_pressed(\"cannon shoot\"):  # Assuming you have an input action called \"shoot\"
+	if Input.is_action_just_pressed(\"cannon shoot\") and (pause_timer.is_stopped()):  # Assuming you have an input action called \"shoot\"
 		power_gauge.start_fluctuating()
 		trajectory.visible = true
 		collision_test.get_child(0).disabled = false
-		
+		cannon_primed = true
+	
 	# Stop fluctuating and shoot the cannon when space bar is released
-	if Input.is_action_just_released(\"cannon shoot\"):
+	if Input.is_action_just_released(\"cannon shoot\") and cannon_primed:
+		cannon_primed = false
 		trajectory.visible = false
 		bag_attempts -= 1
 		var power = power_gauge.stop_fluctuating() # Get the last value before resetting
 		shoot_cannon(power)  #Shoot using the current power
 		collision_test.get_child(0).disabled = true
 	
-	if Input.is_action_pressed(\"up\"):
+	if Input.is_action_pressed(\"tilt_cannon_up\"):
 		var rot = self.get_rotation()
 		rot = rot - _delta if rot > -(PI/2) else -(PI/2)
 		self.set_rotation(rot)
-	if Input.is_action_pressed(\"down\"):
+	if Input.is_action_pressed(\"tilt_cannon_down\"):
 		var rot = self.get_rotation()
 		rot = rot + _delta if rot < 0 else 0
 		self.set_rotation(rot)
@@ -89,6 +94,8 @@ func shoot_cannon(power: float):
 	var cannonball_sprite = cannonball.get_node(\"dart\") as Sprite2D;
 	cannonball.name = \"Cannonball\"
 	
+	pause_timer.start( 3.0)
+	
 	# Set its starting position at the cannon's tip
 	cannonball.position = global_position + cannon_tip_position.rotated(rotation)  # Adjust to the cannon's rotation
 	
@@ -105,21 +112,25 @@ func shoot_cannon(power: float):
 
 func start_shot_attempt_timer():
 	timer.start() #Start when shot is fired // matches the duration of the cannon ball spawn of 3 seconds
-	
+
 func start_PauseTimer():
+	print(\"GOOP\")
 	set_process(false) #these are not working for some reason, but I do not know why.
 	timer.start()
 
 func _on_PauseTimer_timeout():
-	if (bag_attempts == 0):
+	set_process(false)
+	if (bag_attempts <= 0):
 		if (spawn_ball_delay):
 			spawn_ball_delay = false
 			get_parent().perform_auto_drop()
+			set_process(true)
 		else:
 			timer.wait_time = 0.5
 			timer.start()
 			start_PauseTimer()
 			spawn_ball_delay = true
+			print(\"GUMAMELANG\")
 	else:
 		timer.wait_time = 3
 		timer.start()
@@ -127,6 +138,8 @@ func _on_PauseTimer_timeout():
 		
 func bag_hit():
 	#emit signal to powergauge/pinkcounter to change sprite
+	pause_timer.stop()
+	pause_timer.wait_time = 3.0
 	emit_signal(\"update_counter\")
 	bag_attempts += 3
 "

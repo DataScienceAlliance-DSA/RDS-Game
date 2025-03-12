@@ -526,3 +526,4 @@ position = Vector2(1054, 800)
 cam_zoom = 0.8
 
 [node name="UIFairnessMinigame1" parent="." instance=ExtResource("7_yrw78")]
+layer = 0

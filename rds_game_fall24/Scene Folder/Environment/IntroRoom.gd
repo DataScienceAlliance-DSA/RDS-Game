@@ -137,8 +137,28 @@ func _ready():
 			
 			await cm.actions_complete
 			
+
+			actionCam = Action.new(player_cam, "LerpMove", Vector2(0, -100), 200)
+			actions = [actionCam]
+			for action in actions:
+				add_child(action)
+			
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
 			cm.call_monologue("res://Scripts/Monologues/Intro/PlayerApproachesGlow.json")
 			await cm.lines_complete
+			
+			actionCam = Action.new(player_cam, "LerpMove", player.position / 1000., 200)
+			actions = [actionCam]
+			for action in actions:
+				add_child(action)
+			
+			cm.set_actions(actions)
+			cm.series_action()
+			
+			await cm.actions_complete
 			
 			cm.cut()
 			

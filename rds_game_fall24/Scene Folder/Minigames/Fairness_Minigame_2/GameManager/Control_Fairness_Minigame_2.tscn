@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://crwym4shqdj1"]
+[gd_scene load_steps=16 format=3 uid="uid://crwym4shqdj1"]
 
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Scale.gd" id="1_a08ok"]
-[ext_resource type="Texture2D" path="res://assets/Fairness_Scale_Game/2d table.png" id="1_fes48"]
+[ext_resource type="Texture2D" uid="uid://4xdkmq6g5k7n" path="res://assets/Fairness_Scale_Game/2d table.png" id="1_fes48"]
 [ext_resource type="Texture2D" uid="uid://de0wk7swj03oo" path="res://assets/Fairness_Scale_Game/stand.png" id="2_2juwa"]
 [ext_resource type="Texture2D" uid="uid://b248j6475v3c8" path="res://assets/Fairness_Scale_Game/top part.png" id="3_0t7aq"]
 [ext_resource type="Texture2D" uid="uid://dnke02w5ef4rj" path="res://assets/Fairness_Scale_Game/left scale.png" id="4_boeoj"]
@@ -9,11 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://dl510nt7j3vra" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn" id="5_e3dtl"]
 [ext_resource type="Texture2D" uid="uid://bo5canpxj37k6" path="res://assets/Fairness_Scale_Game/right scale.png" id="6_5igny"]
 [ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn" id="6_8prc1"]
-[ext_resource type="Texture2D" uid="uid://cv5djbk75mub8" path="res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG" id="7_g0rvb"]
-[ext_resource type="Texture2D" uid="uid://dymegq2gsesuu" path="res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG" id="8_l65fj"]
-[ext_resource type="Texture2D" uid="uid://ug8afxm6hldc" path="res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG" id="9_tfni3"]
-[ext_resource type="Texture2D" uid="uid://dc3awslq62bux" path="res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG" id="10_tcmtd"]
-[ext_resource type="Texture2D" uid="uid://uydmdruacy60" path="res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG" id="11_rsmim"]
+[ext_resource type="Texture2D" uid="uid://yhfwj6kic0d1" path="res://assets/Fairness_Scale_Game/weight_5.png" id="9_gk146"]
+[ext_resource type="Texture2D" uid="uid://cm5sxmnxevjhq" path="res://assets/Fairness_Scale_Game/weight_10.png" id="11_5jiks"]
+[ext_resource type="Texture2D" uid="uid://d033clm5sfmkg" path="res://assets/Fairness_Scale_Game/weight_15.png" id="12_unq0l"]
+[ext_resource type="Texture2D" uid="uid://b52mcmuluwbw0" path="res://assets/Fairness_Scale_Game/weight_20.png" id="13_s3jgm"]
+[ext_resource type="Texture2D" uid="uid://ck77ho1jxqfh4" path="res://assets/Fairness_Scale_Game/weight_25.png" id="14_etopw"]
+[ext_resource type="Texture2D" uid="uid://dwlp18cogkvgt" path="res://assets/Fairness_Scale_Game/weight_50.png" id="15_17l28"]
 
 [node name="Minigame2" type="CanvasLayer"]
 
@@ -159,9 +160,10 @@ texture = ExtResource("5_1o55c")
 top_level = true
 z_index = 1
 position = Vector2(364, 336)
-texture = ExtResource("11_rsmim")
+texture = ExtResource("9_gk146")
 
 [node name="TextEdit" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/5"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -179,9 +181,10 @@ text = "[center]5[/center]"
 top_level = true
 z_index = 1
 position = Vector2(321, 410)
-texture = ExtResource("8_l65fj")
+texture = ExtResource("11_5jiks")
 
 [node name="TextEdit" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/10"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -199,9 +202,10 @@ text = "[center]10[/center]"
 top_level = true
 z_index = 1
 position = Vector2(410, 410)
-texture = ExtResource("10_tcmtd")
+texture = ExtResource("12_unq0l")
 
 [node name="TextEdit" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/15"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -219,9 +223,10 @@ text = "[center]15[/center]"
 top_level = true
 z_index = 1
 position = Vector2(277, 487)
-texture = ExtResource("7_g0rvb")
+texture = ExtResource("13_s3jgm")
 
 [node name="TextEdit" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/20"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -239,9 +244,10 @@ text = "[center]20[/center]"
 top_level = true
 z_index = 1
 position = Vector2(364, 487)
-texture = ExtResource("9_tfni3")
+texture = ExtResource("14_etopw")
 
 [node name="TextEdit" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/25"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -259,6 +265,7 @@ text = "[center]25[/center]"
 top_level = true
 z_index = 1
 position = Vector2(449, 487)
+texture = ExtResource("15_17l28")
 
 [node name="TextEdit" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/30"]
 anchors_preset = 15
@@ -266,8 +273,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -294.0
 offset_top = -290.0
-offset_right = -294.0
-offset_bottom = -290.0
+offset_right = -445.0
+offset_bottom = -431.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 400

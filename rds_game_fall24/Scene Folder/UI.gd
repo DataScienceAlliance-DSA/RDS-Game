@@ -35,7 +35,6 @@ func _process(delta):
 		screen_hide.size = screen_hide_begin.lerp(screen_hide_goal, (((scene_hide_timer - scene_hide_max) ** 3.0) / (scene_hide_max ** 3.0)) + 1.0) 
 		scene_hide_timer += delta
 	elif (scene_change_active):
-		print("HERE OM HERE : " + str(scene_change_switching) + " " + str(next_scene))
 		if (scene_change_switching): enter_next_scene()
 		scene_change_active = false
 		scene_change_switching = false
@@ -101,7 +100,6 @@ func fade(close):
 	scene_hide_timer = 0.0
 
 func enter_next_scene():
-	print("GOOP")
 	get_tree().change_scene_to_file(next_scene)
 
 func set_active_cm(active_cutscene_manager):

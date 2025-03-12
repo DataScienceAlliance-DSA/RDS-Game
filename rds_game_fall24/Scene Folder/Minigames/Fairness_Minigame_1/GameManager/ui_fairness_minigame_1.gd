@@ -62,6 +62,8 @@ func _process(delta):
 	if (!game_running): return
 	if (collected_shapes.size() == 6): 
 		game_running = false
+		timer.paused = true
+		player.pause()
 		UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Fairness/FairnessSegue.json", null)
 		await UI.get_node("Monologue").closed_signal
 		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn")

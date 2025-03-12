@@ -211,6 +211,9 @@ func perform_auto_drop():
 	cannonball_sprite.frame = current_bag_index
 
 func end_game():
+	bag_load_phase = 0
+	_play_animation_at_position(current_bag.position, "bagpoof_go")
+	current_bag.visible = false
 	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/MixingSegue.json", null)
 	await UI.get_node("Monologue").closed_signal
 	UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn")

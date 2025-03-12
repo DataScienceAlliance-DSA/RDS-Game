@@ -64,8 +64,6 @@ func _process(delta):
 			var theta = atan2(diff.y, diff.x)
 			set_directional_anim(theta, true)
 			
-			print(walk_t)
-			
 			if (walk_t >= 1.):
 				# actor.position = mark  # Snap to the exact target position
 				set_directional_anim(theta, false)
@@ -88,7 +86,7 @@ func set_directional_anim(theta, moving):
 		theta += TAU
 	
 	var next_anim = ""
-	if (theta <= PI / 4) and (theta >= 7 * PI / 4):
+	if ((theta <= PI / 4) and (theta >= 0)) or ((theta >= 7 * PI / 4) and (theta <= 2 * PI)):
 		next_anim = "walkRight" if moving else "idleRight"
 	if (theta >= PI / 4) and (theta <= 3 * PI / 4):
 		next_anim = "walkDown" if moving else "idleDown"

@@ -77,6 +77,7 @@ position = Vector2(185.638, 663.924)
 scale = Vector2(1.00051, 0.994446)
 
 [node name="PowerGauge" parent="." instance=ExtResource("2_5q4oa")]
+layer = 0
 
 [node name="background" parent="." instance=ExtResource("3_kaw3j")]
 layer = -1
