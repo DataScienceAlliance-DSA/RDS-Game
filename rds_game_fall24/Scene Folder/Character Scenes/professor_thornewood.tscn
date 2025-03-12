@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://daxhlrf5d2t45"]
 
-[ext_resource type="Texture2D" uid="uid://dxx8v5dgfx0al" path="res://assets/Fairness_Village/SickVillagerSpritePLACEHOLDER.png" id="1_wcdt7"]
+[ext_resource type="Texture2D" uid="uid://ckd8y4yaxtlia" path="res://assets/Characters/Professor/Professor.PNG" id="1_5q177"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6ds1"]
 size = Vector2(85.3333, 128)
@@ -8,10 +8,10 @@ size = Vector2(85.3333, 128)
 [node name="ProfessorThornewood" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.286275, 1, 1)
 position = Vector2(0, -64)
-texture = ExtResource("1_wcdt7")
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("1_5q177")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -65)
+position = Vector2(-1, -56)
 shape = SubResource("RectangleShape2D_k6ds1")
