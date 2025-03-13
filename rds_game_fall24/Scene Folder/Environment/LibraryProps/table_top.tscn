@@ -1,10 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc887apnq476h"]
+[gd_scene load_steps=3 format=3 uid="uid://cc887apnq476h"]
 
 [ext_resource type="Texture2D" uid="uid://b2lvsqo4m14er" path="res://assets/Intro_Room/Table.png" id="1_wjctm"]
+[ext_resource type="Texture2D" uid="uid://dv5ufswoqaq5j" path="res://assets/Intro_Room/Bench.png" id="2_hf6n8"]
 
-[node name="TableTop" type="StaticBody2D"]
+[node name="TableBenches" type="StaticBody2D"]
+scale = Vector2(1.42185, 1.28912)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 7)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_wjctm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 78)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_wjctm")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(0, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_wjctm")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(-67, 45)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_hf6n8")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-67, 123)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_hf6n8")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(68, 45)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_hf6n8")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(68, 123)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_hf6n8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-77, -4, -43, -4, -43, -44, 43, -44, 43, -6, 77, -6, 78, 163, 43, 163, 43, 200, -44, 200, -44, 164, -77, 164)
