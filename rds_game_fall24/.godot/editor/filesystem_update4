@@ -1,25 +1,16 @@
-res://Scene Folder/UI.tscn
+res://Scene Folder/Environment/Intro_Room.tscn
 res://Scene Folder/Environment/Cauldron_Room.gd
 res://assets/animation_frameworks_hero_player.res
 res://assets/Tilesets/Interior_Tiles.tres
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://assets/animation_frameworks_green_villager.res
-res://assets/animation_frameworks_orange_villager.res
-res://assets/animation_frameworks_peach_villager.res
-res://assets/animation_frameworks_blue_villager.res
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Environment/fairness_village.tscn
 res://Scene Folder/Environment/school_courtyard.tscn
-res://Scene Folder/Environment/Intro_Room.tscn
 res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/fox.tscn
-res://Scene Folder/main_character.tscn
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
+res://Scene Folder/Environment/tree.tscn
+res://Scene Folder/Environment/LibraryProps/fairness_podium.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
-res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
-res://Scene Folder/Character Scenes/sick_villager.tscn
-res://Scene Folder/Environment/SpeakerVillager.gd
-res://Scripts/3choice_dialogue.gd
-res://Scripts/dialogue.gd

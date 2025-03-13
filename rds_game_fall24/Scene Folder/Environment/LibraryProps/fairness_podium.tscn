@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://cqf3f1xk2qp07"]
 
-[ext_resource type="Texture2D" uid="uid://dx4w0ur5pkhpy" path="res://assets/Fairness_Village/Town_Podium.png" id="1_obev3"]
+[ext_resource type="Texture2D" uid="uid://c00w6tfsh7u3q" path="res://assets/Fairness_Village/Town_Podium_2.png" id="1_dqa2e"]
 
 [node name="podium" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_obev3")
+texture = ExtResource("1_dqa2e")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-850, 632, -853, -542, 810, -542, 811, 629, 843, 632, 847, -707, 881, -729, 845, -754, -887, -757, -916, -734, -888, -706, -890, 640)
