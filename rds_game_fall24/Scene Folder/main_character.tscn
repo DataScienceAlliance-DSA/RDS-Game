@@ -221,7 +221,7 @@ frame = 30
 libraries = {
 "": SubResource("AnimationLibrary_k66xe")
 }
-speed_scale = 1.5
+speed_scale = 1.75
 
 [node name="ShapeSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -165)

@@ -282,6 +282,7 @@ position = Vector2(684, 635)
 texture = ExtResource("2_g2hsw")
 
 [node name="LeftOrb" parent="." instance=ExtResource("6_avnpx")]
+visible = false
 position = Vector2(640, 448)
 
 [node name="RightOrb" parent="." instance=ExtResource("6_avnpx")]
