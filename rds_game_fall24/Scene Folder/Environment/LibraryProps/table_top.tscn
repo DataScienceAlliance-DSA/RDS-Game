@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc887apnq476h"]
+
+[ext_resource type="Texture2D" uid="uid://b2lvsqo4m14er" path="res://assets/Intro_Room/Table.png" id="1_wjctm"]
+
+[node name="TableTop" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wjctm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
