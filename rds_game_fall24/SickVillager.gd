@@ -16,7 +16,7 @@ extends CharacterController
 var shape_index
 
 # for setting called-animation based on controller instructions
-@onready var animations = $AnimationPlayer
+var animations
 
 ### Exists in CharacterController Parent class
 #var move_target : Vector2
@@ -50,6 +50,7 @@ func _ready():
 	# Randomly select and show one
 	var chosen_sprite = villager_sprites[randi() % villager_sprites.size()]
 	chosen_sprite.show()
+	animations = chosen_sprite.get_node("AnimationPlayer")
 	#chosen_sprite.play("idle")  # Play default animation
 	
 	# set random shape for the sick villager
