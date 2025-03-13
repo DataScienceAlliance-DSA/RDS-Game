@@ -1973,22 +1973,16 @@ script = ExtResource("2_in8vk")
 [node name="DEBUG" type="Node2D" parent="."]
 script = ExtResource("3_dt2da")
 
-[node name="podium" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(1060.9, 718.278)
-scale = Vector2(0.161032, 0.100474)
-texture = ExtResource("9_silhi")
-
 [node name="Cauldron" type="StaticBody2D" parent="."]
 y_sort_enabled = true
 position = Vector2(192, 96)
 
 [node name="Cauldron2" type="Sprite2D" parent="Cauldron"]
 y_sort_enabled = true
-position = Vector2(867.897, 603.352)
+position = Vector2(867.897, 641.052)
 scale = Vector2(0.0996094, 0.0910912)
 texture = ExtResource("10_auvwt")
-offset = Vector2(0, -550)
+offset = Vector2(0, -1000)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron"]
 y_sort_enabled = true
@@ -2005,6 +1999,12 @@ y_sort_enabled = true
 position = Vector2(866, 547)
 scale = Vector2(1.00149, 0.945809)
 shape = SubResource("RectangleShape2D_bo1e0")
+
+[node name="podium" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1060.9, 718.278)
+scale = Vector2(0.161032, 0.100474)
+texture = ExtResource("9_silhi")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_fl2eq")]
 position = Vector2(1054, 800)

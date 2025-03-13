@@ -18,6 +18,9 @@ var move_target : Vector2
 var move_start : Vector2
 @onready var hop_interpolation : float = 0.
 
+var anim_player
+var anim_lib_name
+
 func _ready():
 	autonomous = start_autonomous
 
@@ -53,6 +56,9 @@ func set_autonomous(autonomous):
 	self.autonomous = autonomous
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
+	var diff = target_pos - position
+	var theta = atan2(diff.y, diff.x)
+	set_directional_anim(theta, true)
 	target_pos *= 64.
 	target_pos = Vector2(target_pos.x + 32., target_pos.y + 32.)
 	t /= ((target_pos - start_pos).length());
@@ -69,6 +75,28 @@ func freeAStarCell(vGlobalPosition:Vector2)->void:
 	var vCell:=map.local_to_map(vGlobalPosition)
 	var idx = map.getAStarCellIndex(vCell)
 	if aStar.has_point(idx): aStar.set_point_disabled(idx, false)
+
+func set_directional_anim(theta, moving):
+	if not anim_player:
+		return
+	
+	theta = fmod(theta, TAU)
+	if theta < 0.:
+		theta += TAU
+	
+	var next_anim = str(anim_lib_name) + "/"
+	if ((theta <= PI / 4) and (theta >= 0)) or ((theta >= 7 * PI / 4) and (theta <= 2 * PI)):
+		next_anim += "walkRight" if moving else "idleRight"
+	if (theta >= PI / 4) and (theta <= 3 * PI / 4):
+		next_anim += "walkDown" if moving else "idleDown"
+	if (theta >= 3 * PI / 4) and (theta <= 5 * PI / 4):
+		next_anim += "walkLeft" if moving else "idleLeft"
+	if (theta >= 5 * PI / 4) and (theta <= 7 * PI / 4):
+		next_anim += "walkUp" if moving else "idleUp"
+		# print(theta)
+	
+	if anim_player.current_animation != next_anim:
+		anim_player.play(next_anim)
 
 # PAUSES ALL STATES OF CHARACTER (animation, movement, etc.)
 func pause():

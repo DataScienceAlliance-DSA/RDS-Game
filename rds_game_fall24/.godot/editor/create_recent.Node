@@ -1,9 +1,9 @@
+Control
 AnimationPlayer
 AnimationTree
 Node2D
 Node
 Sprite2D
-Control
 TextureRect
 PointLight2D
 CollisionShape2D

@@ -90,7 +90,7 @@ func _process(_delta):
 	# timer system for dialogue string to write itself on UI
 	if (next_char_timer >= next_char_wait) and (char_index <= +character_text.length()):
 		next_char_timer = 0.0
-		response_text.text = "[color=#282561]"+character_text.substr(0,char_index)+"[/color]"
+		response_text.text = "[color=black]"+character_text.substr(0,char_index)+"[/color]"
 		char_index = char_index + 1
 	else:
 		next_char_timer += _delta
@@ -142,8 +142,8 @@ func process_next_text():
 		character_text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
 		response_avatar.texture = load("res://assets/ui_assets/portraits/"+character_name+".PNG")
-		response_name.text = "[left][color=#282561][b]"+character_name+"[/b]"
-		response_text.text = "[left][color=#282561]"+character_text
+		response_name.text = "[left][color=black][b]"+character_name+"[/b]"
+		response_text.text = "[left][color=black]"+character_text
 		
 		if (dialogue_dict[current_dialogue_id].has("choices")):
 			choosing = true
