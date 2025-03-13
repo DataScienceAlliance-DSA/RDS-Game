@@ -35,7 +35,23 @@ var target_pos_arr # array of all points a villager must walk to
 var refusal_t
 var post_refusal_position
 
+@onready var villager_sprites = [
+	$villager_sprites/GreenVillager,
+	$villager_sprites/OrangeVillager,
+	$villager_sprites/PeachVillager,
+	$villager_sprites/BlueVillager
+]
+
 func _ready():
+	# randomly choose villager sprite
+	for sprite in villager_sprites:
+		sprite.hide()
+	
+	# Randomly select and show one
+	var chosen_sprite = villager_sprites[randi() % villager_sprites.size()]
+	chosen_sprite.show()
+	#chosen_sprite.play("idle")  # Play default animation
+	
 	# set random shape for the sick villager
 	shape_index = randi() % 6
 	var orientation = randi() % 2

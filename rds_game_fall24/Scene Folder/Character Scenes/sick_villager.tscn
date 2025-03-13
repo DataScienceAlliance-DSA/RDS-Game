@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://v52v8p8xkuf5"]
+[gd_scene load_steps=9 format=3 uid="uid://v52v8p8xkuf5"]
 
-[ext_resource type="Texture2D" uid="uid://dxx8v5dgfx0al" path="res://assets/Fairness_Village/SickVillagerSpritePLACEHOLDER.png" id="1_7hnb4"]
 [ext_resource type="Script" path="res://SickVillager.gd" id="1_uf7cp"]
+[ext_resource type="Texture2D" uid="uid://c7o3d6wrkyjwr" path="res://assets/Characters/Villagers/BlueVillagerSpreadsheet.png" id="2_b30wp"]
+[ext_resource type="Texture2D" uid="uid://dafdjhqy64erc" path="res://assets/Characters/Villagers/GreenVillagerSpread2.png" id="2_iqbff"]
 [ext_resource type="Script" path="res://Scene Folder/Character Scenes/SickVillager_Area.gd" id="3_4tdjf"]
+[ext_resource type="Texture2D" uid="uid://hacq6a2culte" path="res://assets/Characters/Villagers/OrangeSpread.png" id="3_f414n"]
+[ext_resource type="Texture2D" uid="uid://dqhp5ge3cu77i" path="res://assets/Characters/Villagers/PeachVillagerSpreadSheet.png" id="4_opsvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkidu"]
 size = Vector2(85.3333, 128)
@@ -15,10 +18,46 @@ y_sort_enabled = true
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_uf7cp")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="villager_sprites" type="Node2D" parent="."]
+
+[node name="GreenVillager" type="Sprite2D" parent="villager_sprites"]
+position = Vector2(0, -70.4)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_iqbff")
+hframes = 10
+vframes = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/GreenVillager"]
+
+[node name="OrangeVillager" type="Sprite2D" parent="villager_sprites"]
+position = Vector2(0, -75.7333)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("3_f414n")
+hframes = 10
+vframes = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/OrangeVillager"]
+
+[node name="PeachVillager" type="Sprite2D" parent="villager_sprites"]
+position = Vector2(0, -79.7333)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("4_opsvk")
+hframes = 10
+vframes = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/PeachVillager"]
+
+[node name="BlueVillager" type="Sprite2D" parent="villager_sprites"]
 y_sort_enabled = true
-texture = ExtResource("1_7hnb4")
+position = Vector2(0, -62.4)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_b30wp")
 offset = Vector2(0, -55)
+hframes = 10
+vframes = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/BlueVillager"]
+root_node = NodePath("../../..")
 
 [node name="ShapeSprite" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -38,5 +77,3 @@ shape = SubResource("RectangleShape2D_jkidu")
 y_sort_enabled = true
 position = Vector2(0.666668, -9.33333)
 shape = SubResource("RectangleShape2D_1qtyg")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
