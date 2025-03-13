@@ -1,17 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://bk64d5ny17vdm"]
+[gd_scene load_steps=20 format=3 uid="uid://bk64d5ny17vdm"]
 
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="1_p4jvy"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/fairness_village.gd" id="1_x0gev"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scene Folder/fox.tscn" id="2_1u6gi"]
 [ext_resource type="Script" path="res://Scene Folder/fox.gd" id="3_2josw"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="4_2e08x"]
-[ext_resource type="Texture2D" uid="uid://bjpjy3hb44opj" path="res://assets/Fairness_Village/house.png" id="4_cuiqo"]
 [ext_resource type="Texture2D" uid="uid://iqykg7760ug7" path="res://assets/Fairness_Village/EnvironmentSpreadSheetFinal.png" id="4_yipns"]
 [ext_resource type="PackedScene" uid="uid://drq1vgo2ie7ic" path="res://Scene Folder/Environment/tree.tscn" id="6_ljd2i"]
-[ext_resource type="Texture2D" uid="uid://cx2g2q0fnhrl2" path="res://assets/Fairness_Village/podium (wood).png" id="6_tnlrv"]
 [ext_resource type="Texture2D" uid="uid://c5eykjcfkvpa2" path="res://assets/Fairness_Village/VillageCauldron.PNG" id="7_kmh2l"]
+[ext_resource type="PackedScene" uid="uid://dnl4khh4eunli" path="res://Scene Folder/Environment/LibraryProps/fairness_house.tscn" id="8_4ls51"]
 [ext_resource type="Script" path="res://EnvironmentExitArea.gd" id="9_8sig2"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/fairness_cauldron_area.gd" id="9_jppmd"]
+[ext_resource type="PackedScene" uid="uid://cqf3f1xk2qp07" path="res://Scene Folder/Environment/LibraryProps/fairness_podium.tscn" id="9_mq5hf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t1i6"]
 texture = ExtResource("4_yipns")
@@ -567,10 +567,20 @@ size = Vector2(136, 104)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5mqp"]
 size = Vector2(51, 1096)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rryy"]
+size = Vector2(1412, 464)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe0tv"]
+size = Vector2(394, 460)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtqrn"]
+size = Vector2(393, 464)
+
 [node name="Fairness_Village" type="Node2D"]
 script = ExtResource("1_x0gev")
 
 [node name="Fox" parent="." instance=ExtResource("2_1u6gi")]
+z_index = 2
 position = Vector2(-101, -334)
 script = ExtResource("3_2josw")
 following_player = true
@@ -595,7 +605,7 @@ layer_4/tile_data = PackedInt32Array(-851944, 458754, 2, -851943, 262146, 1, -85
 script = ExtResource("4_2e08x")
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("1_p4jvy")]
-z_index = 1
+z_index = 2
 position = Vector2(-184, -280)
 cam_zoom = 0.75
 
@@ -603,35 +613,23 @@ cam_zoom = 0.75
 position = Vector2(-40, -192)
 scale = Vector2(0.832848, 0.832848)
 
-[node name="House" type="Sprite2D" parent="Houses"]
-position = Vector2(965.362, -1592.13)
-scale = Vector2(0.424605, 0.372923)
-texture = ExtResource("4_cuiqo")
+[node name="Houses" parent="Houses" instance=ExtResource("8_4ls51")]
+position = Vector2(962.961, -1589.73)
 
-[node name="House2" type="Sprite2D" parent="Houses"]
-position = Vector2(3038.97, -1592.13)
-scale = Vector2(0.424605, 0.372923)
-texture = ExtResource("4_cuiqo")
+[node name="Houses3" parent="Houses" instance=ExtResource("8_4ls51")]
+position = Vector2(655.582, -2360.57)
 
-[node name="House3" type="Sprite2D" parent="Houses"]
-position = Vector2(3346.35, -2436.22)
-scale = Vector2(0.424605, 0.372923)
-texture = ExtResource("4_cuiqo")
+[node name="Houses5" parent="Houses" instance=ExtResource("8_4ls51")]
+position = Vector2(1348.39, -3126.62)
 
-[node name="House7" type="Sprite2D" parent="Houses"]
-position = Vector2(2654.75, -3126.62)
-scale = Vector2(0.424605, 0.372923)
-texture = ExtResource("4_cuiqo")
+[node name="Houses6" parent="Houses" instance=ExtResource("8_4ls51")]
+position = Vector2(2660.75, -3126.62)
 
-[node name="House8" type="Sprite2D" parent="Houses"]
-position = Vector2(1349.59, -3127.82)
-scale = Vector2(0.424605, 0.372923)
-texture = ExtResource("4_cuiqo")
+[node name="Houses4" parent="Houses" instance=ExtResource("8_4ls51")]
+position = Vector2(3346.35, -2435.02)
 
-[node name="House9" type="Sprite2D" parent="Houses"]
-position = Vector2(656.782, -2359.37)
-scale = Vector2(0.424605, 0.372923)
-texture = ExtResource("4_cuiqo")
+[node name="Houses2" parent="Houses" instance=ExtResource("8_4ls51")]
+position = Vector2(3040.17, -1589.73)
 
 [node name="Trees" type="CanvasGroup" parent="."]
 position = Vector2(0, -224)
@@ -1401,10 +1399,9 @@ position = Vector2(2656, -608)
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 position = Vector2(-384, 552)
 
-[node name="podium" type="Sprite2D" parent="CanvasGroup"]
-position = Vector2(2020.9, -2385.72)
-scale = Vector2(0.161032, 0.100474)
-texture = ExtResource("6_tnlrv")
+[node name="podium" parent="CanvasGroup" instance=ExtResource("9_mq5hf")]
+position = Vector2(2023, -2392)
+scale = Vector2(0.288231, 0.288231)
 
 [node name="Cauldron" type="Sprite2D" parent="CanvasGroup"]
 position = Vector2(2019.9, -2466.72)
@@ -1430,3 +1427,21 @@ to_spawn_position = Vector2(1590, 446)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-124, 380)
 shape = SubResource("RectangleShape2D_t5mqp")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(2688, -288)
+shape = SubResource("RectangleShape2D_3rryy")
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(513, -2784)
+shape = SubResource("RectangleShape2D_qe0tv")
+
+[node name="Area2D4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(2752.5, -2783)
+shape = SubResource("RectangleShape2D_wtqrn")
