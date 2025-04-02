@@ -47,8 +47,8 @@ func open_dialogue(json_path, area):
 	interacted_area = area
 	
 	# reset player and opposing character text to "..." before dialogue starts
-	player_text.text = "[left][color=#282561]. . ."
-	opposing_text.text = "[right][color=#282561]. . ."
+	player_text.text = "[left][color=black]. . ."
+	opposing_text.text = "[right][color=black]. . ."
 	
 	# parse dialogue and process first line
 	dialogue_dict = parse_dialogue(json_path)
@@ -72,7 +72,7 @@ func _process(_delta):
 	# timer system for dialogue string to write itself on UI
 	if (next_char_timer >= next_char_wait) and (char_index <= card_text.length()):
 		next_char_timer = 0.0
-		target_text.text = "[color=#282561]"+card_text.substr(0,char_index)+"[/color]"
+		target_text.text = "[color=black]"+card_text.substr(0,char_index)+"[/color]"
 		char_index = char_index + 1
 	else:
 		next_char_timer += _delta
@@ -116,7 +116,7 @@ func process_next_text():
 		opposing_arrow.visible = false
 		# if dialogue entry name is not Player, edit right text box of UI
 		if (dialogue_dict[current_dialogue_id]["name"] != "Player"):
-			opposing_name.text = "[right][color=#282561][b]"+card_name+"[/b][/color]"
+			opposing_name.text = "[right][color=black][b]"+card_name+"[/b][/color]"
 			opposing_scale.scale = Vector2(1.4, 1.4)
 			opposing_color.modulate.v = 1
 			opposing_avatar.texture = load("res://assets/ui_assets/portraits/"+card_name+".PNG")
@@ -125,7 +125,7 @@ func process_next_text():
 			player_color.modulate.v = 0.5
 		# else, edit left text box of UI
 		else:
-			player_name.text = "[color=#282561][b]"+card_name+"[/b][/color]"
+			player_name.text = "[color=black][b]"+card_name+"[/b][/color]"
 			player_scale.scale = Vector2(1.4, 1.4)
 			player_color.modulate.v = 1
 			player_avatar.texture = load("res://assets/ui_assets/portraits/"+card_name+".PNG")

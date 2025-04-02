@@ -15,8 +15,6 @@ extends CharacterController
 @onready var area2d: Area2D = $Area2D
 var shape_index
 
-# for setting called-animation based on controller instructions
-@onready var animations = $AnimationPlayer
 
 ### Exists in CharacterController Parent class
 #var move_target : Vector2
@@ -35,7 +33,26 @@ var target_pos_arr # array of all points a villager must walk to
 var refusal_t
 var post_refusal_position
 
+@onready var villager_sprites = [
+	$villager_sprites/GreenVillager,
+	$villager_sprites/OrangeVillager,
+	$villager_sprites/PeachVillager,
+	$villager_sprites/BlueVillager
+]
+
 func _ready():
+	# randomly choose villager sprite
+	for sprite in villager_sprites:
+		sprite.hide()
+	
+	# Randomly select and show one
+	var chosen_sprite = villager_sprites[randi() % villager_sprites.size()]
+	chosen_sprite.show()
+	anim_player = chosen_sprite.get_node("AnimationPlayer")
+	anim_lib_name = anim_player.get_animation_list()[0].get_slice("/",0)
+	print(anim_player.get_animation_list())
+	#chosen_sprite.play("idle")  # Play default animation
+	
 	# set random shape for the sick villager
 	shape_index = randi() % 6
 	var orientation = randi() % 2
@@ -133,14 +150,6 @@ func _process(delta):
 	else:
 		super(delta)
 
-func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
-	target_pos *= 64.
-	target_pos = Vector2(target_pos.x + 32., target_pos.y + 32.)
-	t /= ((target_pos - start_pos).length());
-	if (t >= 1.):
-		hopping = false
-	self.position = start_pos.lerp(target_pos, t)
-
 func refuse_shape():
 	refusal_t = 0.
 	post_refusal_position = self.position
@@ -149,9 +158,9 @@ func refuse_shape():
 
 # PAUSES ALL STATES OF CHARACTER (animation, movement, etc.)
 func pause():
-	animations.pause()
+	anim_player.pause()
 	super()
 # RESUMES
 func resume():
-	animations.play()
+	anim_player.play()
 	super()

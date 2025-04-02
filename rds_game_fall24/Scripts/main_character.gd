@@ -61,7 +61,7 @@ func _ready():
 func updateAnimation():
 	if velocity.length() == 0:
 		# Plays idle animation based on last movement direcition
-		animations.play("idle" + last_direction)  # Play idle animation
+		animations.play("animation_frameworks_hero_player/idle" + last_direction)  # Play idle animation
 	else:
 		var direction = "Down"
 		if velocity.x < 0: direction = "Left"
@@ -71,7 +71,7 @@ func updateAnimation():
 		# Updates last_direction with current direction
 		last_direction = direction
 		# Plays walking animation for current direction
-		animations.play("walk" + direction)
+		animations.play("animation_frameworks_hero_player/walk" + direction)
 
 func _process(_delta):
 	if (autonomous):

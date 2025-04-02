@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wxg8xkec11eg"]
+
+[ext_resource type="Texture2D" uid="uid://dd3o4gyn2eamm" path="res://assets/Cauldron_Room/Bookshelf assets/new book shelf cauldron room.png" id="1_khv2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgo6h"]
+size = Vector2(3186, 2222.5)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_khv2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(17, -117.25)
+shape = SubResource("RectangleShape2D_hgo6h")
