@@ -1,8 +1,13 @@
+<<<<<<< Updated upstream
 res://Scene Folder/Minigames/Transparency_Pillar/Cargo_Game.tscn
+=======
+res://Scene Folder/Environment/fairness_village.tscn
+>>>>>>> Stashed changes
 res://Scene Folder/Environment/Cauldron_Room.gd
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
+<<<<<<< Updated upstream
 res://Scene Folder/Environment/fairness_village.tscn
 res://assets/animation_frameworks_hero_player.res
 res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
@@ -15,3 +20,9 @@ res://Scene Folder/main_character.tscn
 res://Scene Folder/Character Scenes/CharacterController.gd
 res://Scripts/Cutscene/Action.gd
 res://Scene Folder/PlayerState.gd
+=======
+res://assets/animation_frameworks_hero_player.res
+res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
+res://Scene Folder/Minigames/Transparency_Pillar/Cargo_Game.tscn
+>>>>>>> Stashed changes
