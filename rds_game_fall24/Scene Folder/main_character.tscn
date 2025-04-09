@@ -14,6 +14,7 @@ light_mode = 1
 y_sort_enabled = true
 script = ExtResource("1_xf38u")
 speed = 200.0
+anim_lib_name = "animation_frameworks_hero_player"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cpqrn")
@@ -31,7 +32,7 @@ texture = ExtResource("2_bu5tt")
 offset = Vector2(0, -269)
 hframes = 10
 vframes = 32
-frame = 164
+frame = 272
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

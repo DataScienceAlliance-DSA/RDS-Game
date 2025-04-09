@@ -19,7 +19,7 @@ var move_start : Vector2
 @onready var hop_interpolation : float = 0.
 
 var anim_player
-var anim_lib_name
+@export var anim_lib_name : String ## IMPORTANT: set name of character's animation_framework here, or else animations in cutscenes/autonav will not work
 
 func _ready():
 	autonomous = start_autonomous

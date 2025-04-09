@@ -97,7 +97,7 @@ func set_directional_anim(theta, moving):
 		# print(theta)
 	
 	if anim_player.current_animation != next_anim:
-		anim_player.play(next_anim)
+		anim_player.play(str(actor.anim_lib_name) + "/" + str(next_anim))
 		# print("hello")
 		# print(anim_player.get_queue())
 
