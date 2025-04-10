@@ -215,6 +215,7 @@ func update_stretch_line_visual(line, length):
 func finish_stretch_line_visual(line, length):
 	var sm = line.material
 	sm.set_shader_parameter("scrolling_speed", 1.5 / length)
+	sm.set_shader_parameter("texture_modulate", Color(.950,.894,.853))
 	line.texture_mode = Line2D.LINE_TEXTURE_TILE
 
 func finish_cargo_line_visual(line, length):
@@ -222,4 +223,6 @@ func finish_cargo_line_visual(line, length):
 	grad = finished_line_grad
 	grad.set_offset(1,1./length)
 	grad.set_offset(2,1-1./length)
+	grad.set_color(1,Color(.922,.812,.737))
+	grad.set_color(2,Color(.922,.812,.737))
 	line.gradient = grad
