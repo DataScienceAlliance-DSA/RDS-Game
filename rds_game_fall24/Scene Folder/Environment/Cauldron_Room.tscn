@@ -192,6 +192,7 @@ _data = {
 [node name="Cauldron Room" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_qh2ts")
+default_spawn = Vector2(960, 928)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 position = Vector2(-264, -24)

@@ -6,6 +6,8 @@ extends Node2D
 @onready var player = get_node("Player")
 @onready var dialogue_ui = UI.get_node("Dialogue")
 
+@export var default_spawn : Vector2
+
 func _ready():
 	match(PS.cauldron_state):
 		0:
@@ -35,7 +37,8 @@ func _ready():
 			# RE ENABLE THE PLAYER
 			player.autonomous = false
 		1:
-			player.global_position = PS.spawning_at
+			if PS.spawning_at != Vector2(0.,0.): player.global_position = PS.spawning_at
+			else: player.global_position = default_spawn
 			
 			get_node("Cauldron/CauldronArea").interactions = 2
 			
