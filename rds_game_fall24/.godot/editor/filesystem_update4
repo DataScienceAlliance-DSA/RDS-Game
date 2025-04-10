@@ -11,3 +11,4 @@ res://assets/Tilesets/Interior_Tiles.tres
 res://Scene Folder/Environment/Intro_Room.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/UI.tscn
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn

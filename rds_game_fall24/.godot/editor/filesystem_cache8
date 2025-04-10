@@ -1,517 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-<<<<<<< Updated upstream
-::res://::1744169843
-EnvironmentExitArea.gd::GDScript::-1::1741670768::0::1::::<>Area2D<>::
-icon.svg::CompressedTexture2D::3648582972397847862::1739575966::1739575966::1::::<><>::
-SaveGame.gd::GDScript::-1::1741659720::0::1::::SaveGame<>Resource<>::
-SecretBookshelfDoorArea.gd::GDScript::-1::1741655657::0::1::::<>Area2D<>::
-SickVillager.gd::GDScript::-1::1743574567::0::1::::SickVillager<>CharacterController<>::
-SoloAction.gd::GDScript::-1::1739575966::0::1::::<>Node<>::
-UniqueAction.gd::GDScript::-1::1741655657::0::1::::UniqueAction<>Action<>::
-::res://assets/::1744167254
-animation_frameworks_blue_villager.res::AnimationLibrary::1555996616260421190::1743574568::0::1::::<><>::
-animation_frameworks_green_villager.res::AnimationLibrary::3329465409297773201::1743574568::0::1::::<><>::
-animation_frameworks_hero_player.res::AnimationLibrary::7354687486437536160::1744167254::0::1::::<><>::
-animation_frameworks_orange_villager.res::AnimationLibrary::3426763214381844553::1743574568::0::1::::<><>::
-animation_frameworks_peach_villager.res::AnimationLibrary::3749138007008459285::1743574568::0::1::::<><>::
-::res://assets/Cannon_Game/::1741655657
-cannnon wheel.png::CompressedTexture2D::1148349432224759827::1739575966::1739575966::1::::<><>::
-cannon body.png::CompressedTexture2D::8187631103042742600::1739575966::1739575966::1::::<><>::
-cannonball_game_bkg.png::CompressedTexture2D::4421106087862803466::1739575966::1739575966::1::::<><>::
-flying bag spritesheet.png::CompressedTexture2D::3948718325409133304::1739575966::1739575966::1::::<><>::
-Instruction_Left Arrow Button.png::CompressedTexture2D::6463662749652975624::1739575966::1739575966::1::::<><>::
-Instruction_Right Arrow Button.png::CompressedTexture2D::2087889077719666977::1739575966::1739575966::1::::<><>::
-Instruction_Spacebar.png::CompressedTexture2D::6056264604790775971::1739575966::1739575966::1::::<><>::
-Platform2.PNG::CompressedTexture2D::5167395769912706346::1739575966::1739575966::1::::<><>::
-RDS Scroll w Crystals.png::CompressedTexture2D::5426320514315861793::1739575966::1739575966::1::::<><>::
-trajectory dot.png::CompressedTexture2D::4235133465687910118::1739575966::1739575966::1::::<><>::
-::res://assets/Cannon_Game/bags/::1739575966
-Bag2.PNG::CompressedTexture2D::5238708852945369547::1739575966::1739575966::1::::<><>::
-Bag3.PNG::CompressedTexture2D::643492930867733180::1739575966::1739575966::1::::<><>::
-Bag4.PNG::CompressedTexture2D::3502618392158154346::1739575966::1739575966::1::::<><>::
-Bag5.PNG::CompressedTexture2D::1123948115076524137::1739575966::1739575966::1::::<><>::
-Bag6.PNG::CompressedTexture2D::7096840305356088823::1739575966::1739575966::1::::<><>::
-::res://assets/Cannon_Game/bag_poof/::1739575966
-poof1.png::CompressedTexture2D::145789648452253::1739575966::1739575966::1::::<><>::
-poof2.png::CompressedTexture2D::925565018636695643::1739575966::1739575966::1::::<><>::
-poof3.png::CompressedTexture2D::5758388932944854250::1739575966::1739575966::1::::<><>::
-poof4.png::CompressedTexture2D::5470517147995736588::1739575966::1739575966::1::::<><>::
-poof5.png::CompressedTexture2D::7694886259260917900::1739575966::1739575966::1::::<><>::
-poof_spritesheet.png::CompressedTexture2D::8370446315346116133::1739575966::1739575966::1::::<><>::
-::res://assets/Cannon_Game/orb_counter/::1739575966
-blue_counter.png::CompressedTexture2D::1473242228190209076::1739575966::1739575966::1::::<><>::
-green_counter.png::CompressedTexture2D::1334964158780403007::1739575966::1739575966::1::::<><>::
-lightblue_counter.png::CompressedTexture2D::5135302019168481258::1739575966::1739575966::1::::<><>::
-pink_counter.png::CompressedTexture2D::5843312525269897848::1739575966::1739575966::1::::<><>::
-purple_counter.png::CompressedTexture2D::3349817318672247621::1739575966::1739575966::1::::<><>::
-yellow_counter.png::CompressedTexture2D::1511583720477186222::1739575966::1739575966::1::::<><>::
-::res://assets/Cannon_Game/power_gauge/::1739575966
-filled_gauge.png::CompressedTexture2D::8564393456913167965::1739575966::1739575966::1::::<><>::
-unfilled_gauge.png::CompressedTexture2D::3556201289574083749::1739575966::1739575966::1::::<><>::
-::res://assets/Cargo_Game/::1743559355
-grid_temp.png::CompressedTexture2D::2041566935614620240::1743559352::1743559355::1::::<><>::
-::res://assets/Cauldron_Room/::1743574567
-Conveyor leg.png::CompressedTexture2D::4746216019450294403::1743574567::1743574567::1::::<><>::
-Conveyor top.png::CompressedTexture2D::1868831862790380099::1743574567::1743574567::1::::<><>::
-Podium.PNG::CompressedTexture2D::4729238626240981413::1743574567::1743574567::1::::<><>::
-::res://assets/Cauldron_Room/Bookshelf assets/::1743574567
-new book shelf cauldron room.png::CompressedTexture2D::7428533337871352596::1743574567::1743574567::1::::<><>::
-Untitled_Artwork3.png::CompressedTexture2D::289436074560233896::1739575966::1739575966::1::::<><>::
-Untitled_Artwork 1.png::CompressedTexture2D::337319330382749854::1739575966::1739575966::1::::<><>::
-Untitled_Artwork.png::CompressedTexture2D::7925940021762365631::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Cannon Game Asset/::1743574567
-bag.png::CompressedTexture2D::2232966362575970459::1739575966::1739575966::1::::<><>::
-bookshelf_cauldron_room.tscn::PackedScene::1592059705206111590::1743574567::0::1::::<><>::uid://dd3o4gyn2eamm::::res://assets/Cauldron_Room/Bookshelf assets/new book shelf cauldron room.png
-cannon.png::CompressedTexture2D::4866239809555817466::1739575966::1739575966::1::::<><>::
-orbs.png::CompressedTexture2D::8321801930242340600::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Cauldron Assets/::1739575966
-Cauldron SS.png::CompressedTexture2D::1532080518624315954::1739575966::1739575966::1::::<><>::
-cauldron.png::CompressedTexture2D::7631761278351579242::1739575966::1739575966::1::::<><>::
-Podium.png::CompressedTexture2D::6779463002633569855::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Conveyor belt Assets/::1739575966
-Conveyer legs.png::CompressedTexture2D::7405770695224148032::1739575966::1739575966::1::::<><>::
-conveyorbelt_corner_spritesheet.png::CompressedTexture2D::2647987933059787259::1739575966::1739575966::1::::<><>::
-conveyor_belt_spritesheet.png::CompressedTexture2D::562460957908784917::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Exit Assets/::1739575966
-entrance_carpet.png::CompressedTexture2D::4815514912869619236::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Floor Tile Asset/::1739575966
-floor v3.PNG::CompressedTexture2D::8066722460497719032::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Fox Assets/::1741655657
-FoxIdleSheet.png::CompressedTexture2D::5211391138967494259::1741655657::1741655657::1::::<><>::
-FoxSpreadFINAL2.png::CompressedTexture2D::6534624050718907519::1739575966::1739575966::1::::<><>::
-FoxSpreadSheet.png::CompressedTexture2D::8411175602857577071::1741655657::1741655657::1::::<><>::
-FoxSpreadSheetNEW.png::CompressedTexture2D::6651745321370589175::1741655657::1741655657::1::::<><>::
-fox_spritesheet.png::CompressedTexture2D::5570189591663111987::1739575966::1739575966::1::::<><>::
-IMG_1482.PNG::CompressedTexture2D::5083367358659724602::1739575966::1739575966::1::::<><>::
-OfficialSpread2.png::CompressedTexture2D::8911909800575767063::1739575966::1739575966::1::::<><>::
-Rough.PNG::CompressedTexture2D::8380747843020981507::1739575966::1739575966::1::::<><>::
-Xrough.PNG::CompressedTexture2D::230467394031630387::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Hero Assets/::1739575995
-Icon.PNG::CompressedTexture2D::3423149103277005779::1739575966::1739575966::1::::<><>::
-MCSpreadSheet.png::CompressedTexture2D::9148812716256036706::1739575966::1739575966::1::::<><>::
-Spreadsheet.png::CompressedTexture2D::5569408714725023006::1739575966::1739575995::1::::<><>::
-::res://assets/Cauldron_Room/Misc Assets/::1739575966
-candlelight.PNG::CompressedTexture2D::4923768117975619035::1739575966::1739575966::1::::<><>::
-tutorial_spritesheet.png::CompressedTexture2D::2859880867871913119::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Orbs Assets/::1739575966
-orb 1.PNG::CompressedTexture2D::7357482566117556811::1739575966::1739575966::1::::<><>::
-orb 2.PNG::CompressedTexture2D::1418167098780491388::1739575966::1739575966::1::::<><>::
-orb 3.PNG::CompressedTexture2D::456173510085995814::1739575966::1739575966::1::::<><>::
-orb 4.PNG::CompressedTexture2D::8868821296555459780::1739575966::1739575966::1::::<><>::
-orb 5.PNG::CompressedTexture2D::1453525704103781863::1739575966::1739575966::1::::<><>::
-orb 6.PNG::CompressedTexture2D::6308936708996031699::1739575966::1739575966::1::::<><>::
-OrbsWandsPotions.png::CompressedTexture2D::5489189116816699045::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Orbs Assets/orbs_counter/::1739575966
-blue_counter.png::CompressedTexture2D::6811452999128212832::1739575966::1739575966::1::::<><>::
-cyan_counter.png::CompressedTexture2D::855900169090284510::1739575966::1739575966::1::::<><>::
-green_counter.png::CompressedTexture2D::7100181336207219535::1739575966::1739575966::1::::<><>::
-magenta_counter.png::CompressedTexture2D::7222562710328611434::1739575966::1739575966::1::::<><>::
-pink_counter.png::CompressedTexture2D::2803106134850944330::1739575966::1739575966::1::::<><>::
-yellow_counter.png::CompressedTexture2D::1561129233997648586::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Potions Assets/::1739575966
-potion 1.PNG::CompressedTexture2D::8990318555765668556::1739575966::1739575966::1::::<><>::
-potion 2.PNG::CompressedTexture2D::7434879050955049610::1739575966::1739575966::1::::<><>::
-potion 3.PNG::CompressedTexture2D::8573512387227407635::1739575966::1739575966::1::::<><>::
-potions.png::CompressedTexture2D::9204762095307500548::1739575966::1739575966::1::::<><>::
-::res://assets/Cauldron_Room/Wall Assets/::1743574567
-floors_walls_spritesheet.png::CompressedTexture2D::3158776556124373597::1739575966::1739575966::1::::<><>::
-::res://assets/Characters/::1743574567
-::res://assets/Characters/Fox/::1741834713
-FoxFinalSpreadSheet.png::CompressedTexture2D::3306195540817149182::1741834713::1741834713::1::::<><>::
-::res://assets/Characters/Player/::1741834713
-MCFinalSpreadSheet.png::CompressedTexture2D::6793733883337504451::1741834713::1741834713::1::::<><>::
-::res://assets/Characters/Principal/::1741834713
-Principal.PNG::CompressedTexture2D::6542745396863099227::1741834713::1741834713::1::::<><>::
-::res://assets/Characters/Professor/::1741834713
-Professor.PNG::CompressedTexture2D::5482971017127671748::1741834713::1741834713::1::::<><>::
-::res://assets/Characters/Students/::1741834713
-PrivacyStudent.PNG::CompressedTexture2D::3087954677581465209::1741834713::1741834713::1::::<><>::
-TransparencyStudent.PNG::CompressedTexture2D::695747555277458732::1741834713::1741834713::1::::<><>::
-VeracityStudent1.PNG::CompressedTexture2D::4771471399488841588::1741834713::1741834713::1::::<><>::
-VeracityStudent2.PNG::CompressedTexture2D::344354708730928339::1741834713::1741834713::1::::<><>::
-::res://assets/Characters/Villagers/::1743574567
-BlueVillagerSpreadsheet.png::CompressedTexture2D::7049492748535522593::1743574567::1743574567::1::::<><>::
-GreenVillagerSpread2.png::CompressedTexture2D::7169782556486388780::1743574567::1743574567::1::::<><>::
-OrangeSpread.png::CompressedTexture2D::491473541608320982::1743574567::1743574567::1::::<><>::
-PeachVillagerSpreadSheet.png::CompressedTexture2D::8297698844869890824::1743574567::1743574567::1::::<><>::
-::res://assets/Fairness_Scale_Game/::1741740889
-2d table.png::CompressedTexture2D::2083157819178442661::1741656702::1741656703::1::::<><>::
-Group 100.png::CompressedTexture2D::1245406738208794372::1739575966::1739575966::1::::<><>::
-Group 101.png::CompressedTexture2D::7050676497411126488::1739575966::1739575966::1::::<><>::
-Group 102.png::CompressedTexture2D::349305443874313134::1739575966::1739575966::1::::<><>::
-GroupBoop.png::CompressedTexture2D::8657608191555017872::1739575966::1739575966::1::::<><>::
-left scale.png::CompressedTexture2D::8092649762217799911::1741655657::1741655657::1::::<><>::
-Rectangle 36.png::CompressedTexture2D::8235073345789053848::1739575966::1739575966::1::::<><>::
-right scale.png::CompressedTexture2D::3431117968266678403::1741655657::1741655657::1::::<><>::
-stand.png::CompressedTexture2D::7492982210829144178::1741655657::1741655657::1::::<><>::
-top part.png::CompressedTexture2D::4343407824212210333::1741655657::1741655657::1::::<><>::
-weight_5.png::CompressedTexture2D::1699326285085176436::1741740813::1741740814::1::::<><>::
-weight_10.png::CompressedTexture2D::5678173454207848234::1741740829::1741740830::1::::<><>::
-weight_15.png::CompressedTexture2D::8973489964210889362::1741740846::1741740847::1::::<><>::
-weight_20.png::CompressedTexture2D::4548557029398366937::1741740861::1741740862::1::::<><>::
-weight_25.png::CompressedTexture2D::5542746112154406191::1741740874::1741740875::1::::<><>::
-weight_50.png::CompressedTexture2D::8727083688948392483::1741740888::1741740889::1::::<><>::
-::res://assets/Fairness_Village/::1743574568
-2d table for mini game.png::CompressedTexture2D::2786688335299481969::1743574567::1743574567::1::::<><>::
-bubble cauldron w shadow.png::CompressedTexture2D::7422502765876362005::1743574567::1743574567::1::::<><>::
-EnvironmentSpread.png::CompressedTexture2D::4241798498473421742::1741655657::1741655657::1::::<><>::
-EnvironmentSpreadSheetFinal.png::CompressedTexture2D::596016225004867700::1741834713::1741834713::1::::<><>::
-good cauldron frames.png::CompressedTexture2D::6422289985323863383::1743574568::1743574568::1::::<><>::
-Help Button_Active.png::CompressedTexture2D::4726049469639304970::1740189463::1740188989::1::::<><>::
-Help Button_Hover.png::CompressedTexture2D::8298375666372524857::1740189074::1740189074::1::::<><>::
-Help Button_On-Click.png::CompressedTexture2D::7007481770486547410::1740189074::1740189074::1::::<><>::
-Help Button_Visited.png::CompressedTexture2D::907885420065682478::1740189074::1740189074::1::::<><>::
-house with shadow.png::CompressedTexture2D::3236213829025860069::1743574568::1743574568::1::::<><>::
-house.png::CompressedTexture2D::3049676736287685463::1740188072::1740188072::1::::<><>::
-podium (wood).png::CompressedTexture2D::6443336368051149245::1740188072::1740188072::1::::<><>::
-SickVillagerSpritePLACEHOLDER.png::CompressedTexture2D::8823128886145863671::1739575966::1739575966::1::::<><>::
-SwayingFlowerSpread.png::CompressedTexture2D::4901286852836898484::1740188072::1740188072::1::::<><>::
-Timer.png::CompressedTexture2D::8600616216026154591::1740418429::1740420360::1::::<><>::
-timerbar.png::CompressedTexture2D::7215407960711496979::1740418985::1740419857::1::::<><>::
-timer_centerbar.png::CompressedTexture2D::7069960133808210242::1740418354::1740418368::1::::<><>::
-timer_leftbar.png::CompressedTexture2D::2738659938944814043::1740418345::1740418368::1::::<><>::
-timer_rightbar.png::CompressedTexture2D::7206093010616891683::1740418362::1740418368::1::::<><>::
-TooltipButton.png::CompressedTexture2D::6800080317131357770::1740188072::1740419873::1::::<><>::
-Town_Podium.png::CompressedTexture2D::8834853906422453490::1743574567::1743574567::1::::<><>::
-Town_Podium_2.png::CompressedTexture2D::6580564042136568712::1743574567::1743574567::1::::<><>::
-Tree.PNG::CompressedTexture2D::5318007350150815502::1741655657::1741655657::1::::<><>::
-TreeAnimation.png::CompressedTexture2D::1977100020367718278::1740188072::1740188072::1::::<><>::
-VillageCauldron.PNG::CompressedTexture2D::6888239729350000191::1740188072::1740188072::1::::<><>::
-water_border.png::CompressedTexture2D::3144666775442543204::1741655657::1741655657::1::::<><>::
-::res://assets/Fairness_Village/Shapes/::1741669843
-circlePLACEHOLDER.png::CompressedTexture2D::1399120485322218323::1740188072::1739575966::1::::<><>::
-crossPLACEHOLDER.png::CompressedTexture2D::1761357067894278831::1740188072::1739575966::1::::<><>::
-diamondPLACEHOLDER.png::CompressedTexture2D::6514870345914333411::1740188072::1739575966::1::::<><>::
-hexagonPLACEHOLDER.png::CompressedTexture2D::7442003665024631062::1740188072::1739575966::1::::<><>::
-shape holders.png::CompressedTexture2D::1788964357266621395::1740188072::1740188072::1::::<><>::
-shape_1.png::CompressedTexture2D::8641983894280016158::1741669842::1741669843::1::::<><>::
-shape_2.png::CompressedTexture2D::3860946959147239149::1741669614::1741669654::1::::<><>::
-shape_3.png::CompressedTexture2D::5130279580641789155::1741669802::1741669803::1::::<><>::
-shape_4.png::CompressedTexture2D::7699590044113782269::1741669778::1741669779::1::::<><>::
-shape_5.png::CompressedTexture2D::4189657845952938467::1741669731::1741669732::1::::<><>::
-shape_6.png::CompressedTexture2D::6869758304133255583::1741669696::1741669697::1::::<><>::
-squarePLACEHOLDER.png::CompressedTexture2D::8407428275993420839::1740188072::1739575966::1::::<><>::
-trianglePLACEHOLDER.png::CompressedTexture2D::1300875225536091929::1740188072::1739575966::1::::<><>::
-::res://assets/Intro_Room/::1743574568
-Bench.png::CompressedTexture2D::8696383348988126853::1743574568::1743574568::1::::<><>::
-Boarders 1.png::CompressedTexture2D::4287985832682048536::1743574568::1743574568::1::::<><>::
-BookSheet 1.png::CompressedTexture2D::8932872169972212492::1743574568::1743574568::1::::<><>::
-bookshelf.tscn::PackedScene::712608580084384173::1741741428::0::1::::<><>::uid://2aq6xh5oemob::::res://assets/Intro_Room/top shelf.PNG<>uid://kghh4m6i4j6q::::res://assets/Intro_Room/bottom shelf.PNG
-border_corners.png::CompressedTexture2D::5431204804278944156::1743574568::1743574568::1::::<><>::
-bottom shelf.PNG::CompressedTexture2D::714713765546529306::1741655657::1741655657::1::::<><>::
-bottom wall 1.png::CompressedTexture2D::2903916014866631806::1743574568::1743574568::1::::<><>::
-CandleSheet.png::CompressedTexture2D::5940285416509397655::1743574568::1743574568::1::::<><>::
-Cauldron.PNG::CompressedTexture2D::2146516229695334093::1743574568::1743574568::1::::<><>::
-library_wall_floor.png::CompressedTexture2D::8687195900224456261::1741655657::1741655657::1::::<><>::
-new floor 1.png::CompressedTexture2D::1114135596961016210::1743574568::1743574568::1::::<><>::
-principal.PNG::CompressedTexture2D::5369501295930070134::1739575966::1739575966::1::::<><>::
-SecretEntrance.PNG::CompressedTexture2D::6249241591186400934::1743574568::1743574568::1::::<><>::
-skylight.png::CompressedTexture2D::770766666492265029::1739575966::1739575966::1::::<><>::
-student1.PNG::CompressedTexture2D::4327054278881251343::1739575966::1739575966::1::::<><>::
-student2.PNG::CompressedTexture2D::5071326989030235246::1739575966::1739575966::1::::<><>::
-student3.PNG::CompressedTexture2D::2619261071148507619::1739575966::1739575966::1::::<><>::
-student4.PNG::CompressedTexture2D::5029553043941409374::1739575966::1739575966::1::::<><>::
-student5.PNG::CompressedTexture2D::1649333339797842748::1739575966::1739575966::1::::<><>::
-Table.png::CompressedTexture2D::4305535681688599869::1743574568::1743574568::1::::<><>::
-top shelf.PNG::CompressedTexture2D::1896126829954816781::1741655657::1741655657::1::::<><>::
-::res://assets/Library_Courtyard/::1743574568
-Backdrop.PNG::CompressedTexture2D::529454914679981950::1743574568::1743574568::1::::<><>::
-courtyard_scene.png::CompressedTexture2D::6227202055591183277::1739575966::1739575966::1::::<><>::
-final_schoolcourtyard.png::CompressedTexture2D::1087023462108363238::1740188072::1740188072::1::::<><>::
-Fountain.PNG::CompressedTexture2D::6060835143852358430::1743574568::1743574568::1::::<><>::
-Hallway.PNG::CompressedTexture2D::37313998956244716::1743574568::1743574568::1::::<><>::
-::res://assets/Mixing_Game/::1741655657
-Button_Activated.png::CompressedTexture2D::4071091090533558969::1739575966::1739575966::1::::<><>::
-Button_Inactive.png::CompressedTexture2D::5708546336344583779::1739575966::1739575966::1::::<><>::
-cauldron_mixing_spritesheet.png::CompressedTexture2D::2360965878357811552::1739575966::1739575966::1::::<><>::
-empty_bag.png::CompressedTexture2D::2854338315386587581::1739575966::1739575966::1::::<><>::
-mixing_game_bkg.PNG::CompressedTexture2D::385545614939376383::1739575966::1739575966::1::::<><>::
-Orb Placement UI.png::CompressedTexture2D::350386802018332878::1739575966::1739575966::1::::<><>::
-Podium.png::CompressedTexture2D::9164923936951387815::1739575966::1739575966::1::::<><>::
-Smoke Outline.png::CompressedTexture2D::7915347572806308817::1739575966::1739575966::1::::<><>::
-::res://assets/Mixing_Game/orbs png/::1739575966
-Blue orb no figure.png::CompressedTexture2D::3820216399507295158::1739575966::1739575966::1::::<><>::
-Dark pink orb no figure.png::CompressedTexture2D::6049005749577751813::1739575966::1739575966::1::::<><>::
-Green orb no figure.png::CompressedTexture2D::4683463308433810315::1739575966::1739575966::1::::<><>::
-Light blue orb no figure.png::CompressedTexture2D::5912446462478116160::1739575966::1739575966::1::::<><>::
-Light pink orb no figure.png::CompressedTexture2D::249105121605298265::1739575966::1739575966::1::::<><>::
-Yellow orb no figure.png::CompressedTexture2D::5518679558041472307::1739575966::1739575966::1::::<><>::
-::res://assets/Mixing_Game/smoke assets/::1739575966
-blank.tres::GradientTexture2D::5802546420243628696::1739575966::0::1::::<><>::
-bluegreen.png::CompressedTexture2D::7246800815435460649::1739575966::1739575966::1::::<><>::
-bluered.png::CompressedTexture2D::611528723271330078::1739575966::1739575966::1::::<><>::
-greenred.png::CompressedTexture2D::9060828738585111921::1739575966::1739575966::1::::<><>::
-greenyellow.png::CompressedTexture2D::6751931688320272762::1739575966::1739575966::1::::<><>::
-redviolet.png::CompressedTexture2D::3672428239779366040::1739575966::1739575966::1::::<><>::
-tealblue.png::CompressedTexture2D::7227938868093101761::1739575966::1739575966::1::::<><>::
-tealgreen.png::CompressedTexture2D::2204607217297815171::1739575966::1739575966::1::::<><>::
-tealred.png::CompressedTexture2D::6444974101629674596::1739575966::1739575966::1::::<><>::
-tealyellow.png::CompressedTexture2D::2944251840642436692::1739575966::1739575966::1::::<><>::
-violetblue.png::CompressedTexture2D::5530296769388694147::1739575966::1739575966::1::::<><>::
-violetgreen.png::CompressedTexture2D::7966730293079364039::1739575966::1739575966::1::::<><>::
-violetteal.png::CompressedTexture2D::6494522290595835734::1739575966::1739575966::1::::<><>::
-violetyellow.png::CompressedTexture2D::7574096527619385635::1739575966::1739575966::1::::<><>::
-yellowblue.png::CompressedTexture2D::6285038883167987072::1739575966::1739575966::1::::<><>::
-yellowred.png::CompressedTexture2D::2301782048711310499::1739575966::1739575966::1::::<><>::
-::res://assets/Mixing_Game/stand assets/::1739575966
-::res://assets/sound/::1739575966
-bkg_music.ogg::AudioStreamOggVorbis::4344823377440077027::1739575966::1739575966::1::::<><>::
-::res://assets/Tilesets/::1744169744
-Interior_Tiles.tres::TileSet::6753504080096748866::1744169744::0::1::::<><>::uid://eeg78fn8y1aq::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png<>uid://bdyx8endh4e8r::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png<>uid://bg0l248v0ag2b::::res://assets/Cauldron_Room/Misc Assets/tutorial_spritesheet.png<>uid://ddrn7xlbtcd5y::::res://assets/Cauldron_Room/Conveyor belt Assets/Conveyer legs.png<>uid://e2nunx41ng6a::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork 1.png<>uid://blaeuafsqnao0::::res://assets/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png<>uid://dk6ncry7fgb64::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork.png<>uid://iapwdf0m3w66::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyor_belt_spritesheet.png<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>uid://cauw3ec0j282c::::res://assets/Cauldron_Room/Exit Assets/entrance_carpet.png
-::res://assets/ui_assets/::1743574568
-blank.png::CompressedTexture2D::6702383864038432557::1741655657::1741655657::1::::<><>::
-Dialogue Arrow_Active_Light.png::CompressedTexture2D::197025119159215438::1743574568::1743574568::1::::<><>::
-Dialogue Box_Long_Active_Light (1).png::CompressedTexture2D::7447363224899305837::1743574568::1743574568::1::::<><>::
-Dialogue Box_Long_Active_Light (2).png::CompressedTexture2D::6758957057977286464::1743574568::1743574568::1::::<><>::
-Dialogue Box_Long_Active_Light.png::CompressedTexture2D::4922244850654406257::1743574568::1743574568::1::::<><>::
-Dialogue Box_Long_Focused.png::CompressedTexture2D::3796873494719876933::1739575966::1739575966::1::::<><>::
-Dialogue Box_Short_Disabled_Light.png::CompressedTexture2D::4174415076360423767::1743574568::1743574568::1::::<><>::
-Dialogue Box_Small_Focused.png::CompressedTexture2D::4503470968831671740::1739575966::1739575966::1::::<><>::
-Dialogue Button.png::CompressedTexture2D::4864032102731628905::1739575966::1739575966::1::::<><>::
-dialogue_text_box.png::CompressedTexture2D::8064012078492949349::1739575966::1739575966::1::::<><>::
-dialogue_text_reference.png::CompressedTexture2D::236886943284258709::1739575966::1739575966::1::::<><>::
-Down Arrow.png::CompressedTexture2D::1114337288978206911::1741731397::1741731398::1::::<><>::
-Frame 28.png::CompressedTexture2D::1830025594282183103::1739575966::1739575966::1::::<><>::
-Instruction Box_Blank.png::CompressedTexture2D::6795540997786270407::1740420868::1740420870::1::::<><>::
-Instruction_Spacebar.png::CompressedTexture2D::1454464989177940862::1739575966::1739575966::1::::<><>::
-monologue_text_box.png::CompressedTexture2D::11226351262965424::1739575966::1739575966::1::::<><>::
-monologue_text_reference.png::CompressedTexture2D::3175642982238195564::1739575966::1739575966::1::::<><>::
-Orb Placement_Brewing Game.png::CompressedTexture2D::5402395522308124233::1739575966::1739575966::1::::<><>::
-Selection Box.png::CompressedTexture2D::6621655167610882264::1739575966::1739575966::1::::<><>::
-Spacebar.png::CompressedTexture2D::6505785503946862409::1741731430::1741731430::1::::<><>::
-Spacebar_Instruction Button.png::CompressedTexture2D::5172389773426452604::1740421889::1740421890::1::::<><>::
-Up Arrow.png::CompressedTexture2D::7471105100489761875::1741731332::1741731348::1::::<><>::
-::res://assets/ui_assets/fonts/::1739575966
-Quattrocento-Bold.ttf::FontFile::3515505684913534848::1739575966::1739575966::1::::<><>::
-Quattrocento-Regular.ttf::FontFile::1911466448638024315::1739575966::1739575966::1::::<><>::
-::res://assets/ui_assets/portraits/::1739575966
-Cauldron.png::CompressedTexture2D::5505114885120407269::1739575966::1739575966::1::::<><>::
-Fox.PNG::CompressedTexture2D::1078023606052639374::1739575966::1739575966::1::::<><>::
-Player.PNG::CompressedTexture2D::275207732697039089::1739575966::1739575966::1::::<><>::
-::res://Scene Folder/::1744169826
-environment_exit_area.tscn::PackedScene::6481535099297379420::1741741427::0::1::::<><>::res://EnvironmentExitArea.gd
-fox.gd::GDScript::-1::1741655657::0::1::::<>CharacterBody2D<>::
-fox.tscn::PackedScene::1859519243384973732::1741834713::0::1::::<><>::uid://bndss7qu042es::::res://assets/Characters/Fox/FoxFinalSpreadSheet.png<>res://Scripts/fox_area.gd
-fox_move.gd::GDScript::-1::1739575966::0::1::::<>CharacterBody2D<>::
-Instruction Box_Blank.png::CompressedTexture2D::458581522552643946::1740420855::1740420856::1::::<><>::
-instructions.gd::GDScript::-1::1741655657::0::1::::<>MarginContainer<>::
-main_character.tscn::PackedScene::5817375992330108292::1743574567::0::1::::<><>::res://Scripts/main_character.gd<>uid://c3162l8l012kd::::res://assets/Characters/Player/MCFinalSpreadSheet.png<>uid://dc1wvmnnh2l7m::::res://assets/animation_frameworks_hero_player.res
-PlayerState.gd::GDScript::-1::1741670508::0::1::::<>Node2D<>::
-PlayerState.tscn::PackedScene::853462858186353456::1741741429::0::1::::<><>::res://Scene Folder/PlayerState.gd
-testing_scene.tscn::PackedScene::6905889153291700995::1739575966::0::1::::<><>::uid://c3hphwxbvrqnq::::res://assets/Tilesets/Interior_Tiles.tres<>uid://wb0447tmle87::::res://Scene Folder/Character Scenes/sick_villager.tscn<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn
-UI.gd::GDScript::-1::1741728719::0::1::::<>CanvasLayer<>::
-UI.gdshader::Shader::-1::1744169826::0::1::::<><>::
-UI.tscn::PackedScene::5157734322651910848::1743574567::0::1::::<><>::res://Scene Folder/UI.gd<>res://Scripts/dialogue.gd<>uid://br8nvmsg2wo75::::res://icon.svg<>uid://b0qeahoitxahb::::res://assets/ui_assets/Dialogue Box_Short_Disabled_Light.png<>res://Scripts/3choice_dialogue.gd<>uid://c2o8far2sc0u::::res://assets/ui_assets/Dialogue Arrow_Active_Light.png<>uid://d6kvpuxma1dd::::res://assets/ui_assets/portraits/Player.PNG<>uid://c1ltxtksg64vc::::res://assets/ui_assets/Selection Box.png<>res://Scene Folder/instructions.gd<>uid://deds8p1uj33pp::::res://assets/ui_assets/Dialogue Box_Long_Active_Light (1).png<>uid://bqc64n7kj3qia::::res://assets/ui_assets/fonts/Quattrocento-Bold.ttf<>uid://c322tj52eg8ox::::res://assets/ui_assets/Instruction Box_Blank.png<>uid://depcak66xf1yd::::res://assets/ui_assets/Up Arrow.png<>uid://2h6tqsybxfa6::::res://assets/ui_assets/fonts/Quattrocento-Regular.ttf<>uid://p418ca7vm0ql::::res://assets/ui_assets/Down Arrow.png<>uid://cyxplpjlubiq8::::res://assets/ui_assets/Spacebar.png
-::res://Scene Folder/Character Scenes/::1743574567
-CharacterController.gd::GDScript::-1::1743574567::0::1::::CharacterController<>CharacterBody2D<>::
-Malvoren.gd::GDScript::-1::1741655657::0::1::::<>CharacterController<>::
-principal_villain.tscn::PackedScene::7650268729507512827::1741834713::0::1::::<><>::res://Scene Folder/Character Scenes/Malvoren.gd<>uid://c0hmcci4r5byh::::res://assets/Characters/Principal/Principal.PNG
-professor_thornewood.tscn::PackedScene::7207188304094127564::1741834713::0::1::::<><>::uid://ckd8y4yaxtlia::::res://assets/Characters/Professor/Professor.PNG
-SickVillager_Area.gd::GDScript::-1::1741655657::0::1::::<>Area2D<>::
-sick_villager.tscn::PackedScene::1537575667470312760::1743574567::0::1::::<><>::res://SickVillager.gd<>uid://c7o3d6wrkyjwr::::res://assets/Characters/Villagers/BlueVillagerSpreadsheet.png<>uid://dafdjhqy64erc::::res://assets/Characters/Villagers/GreenVillagerSpread2.png<>res://Scene Folder/Character Scenes/SickVillager_Area.gd<>uid://hacq6a2culte::::res://assets/Characters/Villagers/OrangeSpread.png<>uid://bno22rbbtr61j::::res://assets/animation_frameworks_green_villager.res<>uid://dqhp5ge3cu77i::::res://assets/Characters/Villagers/PeachVillagerSpreadSheet.png<>uid://bo27j3v5s5k5v::::res://assets/animation_frameworks_orange_villager.res<>uid://btod0xbfayfkn::::res://assets/animation_frameworks_peach_villager.res<>uid://wf0bixyyngpi::::res://assets/animation_frameworks_blue_villager.res
-sick_villager_interaction.gd::GDScript::-1::1739575966::0::1::::<>CharacterBody2D<>::
-student_npc1.tscn::PackedScene::3220650248786956099::1741655657::0::1::::<><>::uid://b2wb7mi4npj5h::::res://assets/Intro_Room/student1.PNG
-student_npc_2.tscn::PackedScene::4401199108487358685::1741655657::0::1::::<><>::uid://ceiuaq4axk68q::::res://assets/Intro_Room/student2.PNG
-student_npc_3.tscn::PackedScene::2174623219162450089::1741655657::0::1::::<><>::uid://bdk132k5nncc6::::res://assets/Intro_Room/student3.PNG
-student_npc_4.tscn::PackedScene::6666071929087273171::1741741428::0::1::::<><>::uid://cdwmaenvgoxvi::::res://assets/Intro_Room/student4.PNG
-student_npc_5.tscn::PackedScene::1339641276188323770::1741655657::0::1::::<><>::uid://xq7jqxfj4txk::::res://assets/Intro_Room/student5.PNG
-::res://Scene Folder/Environment/::1744169826
-AStar2DVisualizer.gd::GDScript::-1::1739575966::0::1::::AStar2DVisualizer<>Node2D<>::
-AudioStreamPlayer.gd::GDScript::-1::1739575966::0::1::::<>AudioStreamPlayer<>::
-candle_light.gd::GDScript::-1::1739575966::0::1::::<>PointLight2D<>::
-Cauldron_Fairness_Area.gd::GDScript::-1::1739575966::0::1::::<>Area2D<>::
-Cauldron_Fairness_Village.gd::GDScript::-1::1739575966::0::1::::<>StaticBody2D<>::
-Cauldron_Room.gd::GDScript::-1::1744169826::0::1::::Cauldron_Room<>Node2D<>::
-Cauldron_Room.tscn::PackedScene::1495173672702862107::1744169826::0::1::::<><>::res://Scene Folder/Environment/Cauldron_Room.gd<>uid://c3hphwxbvrqnq::::res://assets/Tilesets/Interior_Tiles.tres<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>res://Scene Folder/fox.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>uid://cfqpepeud7y6s::::res://Scene Folder/UI.tscn<>uid://ccfd0hhfjvrlj::::res://assets/Cauldron_Room/Misc Assets/candlelight.PNG<>res://Scene Folder/Environment/candle_light.gd<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/conveyor.gd<>uid://cylx63fkud7d5::::res://Scene Folder/environment_exit_area.tscn<>res://Scripts/cauldron_area.gd<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://cosv56386e4bn::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn<>uid://v3fe3rbixa55::::res://assets/Cauldron_Room/Cauldron Assets/Cauldron SS.png
-ConstructedTileMap.gd::GDScript::-1::1740188072::0::1::::ConstructedTileMap<>TileMap<>::
-fairness_cauldron_area.gd::GDScript::-1::1741655657::0::1::::<>Area2D<>::
-fairness_village.gd::GDScript::-1::1741834711::0::1::::<>Node2D<>::
-fairness_village.tscn::PackedScene::3154072577530658854::1744167402::0::1::::<><>::uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>res://Scene Folder/Environment/fairness_village.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/fox.gd<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://iqykg7760ug7::::res://assets/Fairness_Village/EnvironmentSpreadSheetFinal.png<>uid://drq1vgo2ie7ic::::res://Scene Folder/Environment/tree.tscn<>uid://c5eykjcfkvpa2::::res://assets/Fairness_Village/VillageCauldron.PNG<>uid://dnl4khh4eunli::::res://Scene Folder/Environment/LibraryProps/fairness_house.tscn<>res://EnvironmentExitArea.gd<>res://Scene Folder/Environment/fairness_cauldron_area.gd<>uid://cqf3f1xk2qp07::::res://Scene Folder/Environment/LibraryProps/fairness_podium.tscn
-IntroRoom.gd::GDScript::-1::1741730922::0::1::::<>Node2D<>::
-Intro_Room.tscn::PackedScene::4391308453747214610::1743574567::0::1::::<><>::uid://eeg78fn8y1aq::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png<>res://Scene Folder/Environment/IntroRoom.gd<>uid://bdyx8endh4e8r::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png<>uid://bg0l248v0ag2b::::res://assets/Cauldron_Room/Misc Assets/tutorial_spritesheet.png<>uid://b2derahe20hjs::::res://assets/Intro_Room/Boarders 1.png<>uid://dv1e32o1bdvtd::::res://assets/Intro_Room/library_wall_floor.png<>uid://ddrn7xlbtcd5y::::res://assets/Cauldron_Room/Conveyor belt Assets/Conveyer legs.png<>uid://e2nunx41ng6a::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork 1.png<>uid://blaeuafsqnao0::::res://assets/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png<>uid://dk6ncry7fgb64::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork.png<>uid://bhmxcp2o50hfq::::res://assets/Intro_Room/bottom wall 1.png<>uid://p4xwd8o34jyw::::res://assets/Intro_Room/new floor 1.png<>uid://iapwdf0m3w66::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyor_belt_spritesheet.png<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>uid://cjm6fc7tjr8mi::::res://assets/Intro_Room/border_corners.png<>uid://cauw3ec0j282c::::res://assets/Cauldron_Room/Exit Assets/entrance_carpet.png<>uid://d0jfdnb7f1soi::::res://assets/Intro_Room/BookSheet 1.png<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://bl5dvy0nyd8yx::::res://Scene Folder/Character Scenes/student_npc1.tscn<>uid://dg832qlytv3k6::::res://Scene Folder/Character Scenes/principal_villain.tscn<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://b3x8du405q3fd::::res://Scene Folder/Character Scenes/student_npc_2.tscn<>uid://bn0did6g2b5vr::::res://Scene Folder/Environment/LibraryProps/secret_bookshelf.tscn<>uid://58nyyclu775n::::res://Scene Folder/Character Scenes/student_npc_3.tscn<>uid://cqvrvrwoiyist::::res://assets/Intro_Room/CandleSheet.png<>uid://c18dh30jhlcqd::::res://Scene Folder/Character Scenes/student_npc_4.tscn<>uid://tc6xwxkrs2qo::::res://Scene Folder/Character Scenes/student_npc_5.tscn<>uid://k8modbb416u8::::res://assets/Intro_Room/skylight.png<>uid://kfgtao24fa7v::::res://assets/Intro_Room/bookshelf.tscn<>uid://daxhlrf5d2t45::::res://Scene Folder/Character Scenes/professor_thornewood.tscn<>res://EnvironmentExitArea.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/fox.gd<>uid://cc887apnq476h::::res://Scene Folder/Environment/LibraryProps/table_top.tscn
-school_courtyard.gd::GDScript::-1::1741742395::0::1::::<>Node2D<>::
-school_courtyard.tscn::PackedScene::7361590703011096692::1743574567::0::1::::<><>::uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>res://Scene Folder/Environment/school_courtyard.gd<>uid://pqtd87lsm22e::::res://assets/Library_Courtyard/final_schoolcourtyard.png<>uid://c3hphwxbvrqnq::::res://assets/Tilesets/Interior_Tiles.tres<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/Environment/ConstructedTileMap.gd<>res://Scene Folder/fox.gd<>res://EnvironmentExitArea.gd
-SpeakerVillager.gd::GDScript::-1::1743574567::0::1::::<>Sprite2D<>::
-tree.tscn::PackedScene::8387118918479745298::1743574567::0::1::::<><>::uid://ch1c2lr2t5m2i::::res://assets/Fairness_Village/Tree.PNG
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/::1741741427
-box.tscn::PackedScene::4022879268151241365::1739575966::0::1::::<><>::uid://boitk5y0ias65::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/box.png
-conveyor.gd::GDScript::-1::1739575966::0::1::::<>Node2D<>::
-ConveyorIcon.gd::GDScript::-1::1739575966::0::1::::<>Area2D<>::
-conveyor_icon.tscn::PackedScene::4500718582291409818::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/ConveyorIcon.gd<>uid://cnxmkieinng6s::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/conveyors_1.png<>res://adjacent_conveyors.tscn
-Label.gd::GDScript::-1::1739575966::0::1::::<>Label<>::
-main.tscn::PackedScene::5793974281576338387::1741741427::0::1::::<><>::uid://br4gu02oyltp0::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt(toptoright).tscn<>uid://2sdi7rhr14fh::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/generator.tscn<>uid://d3r5ri72l82h6::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/trash.tscn<>uid://cfwfejmwtkwmg::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt.tscn
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/::1742956574
-box.png::CompressedTexture2D::3386752611382052900::1739575966::1739575966::1::::<><>::
-conveyors_1.png::CompressedTexture2D::5733523911623638016::1739575966::1739575966::1::::<><>::
-icon.svg::CompressedTexture2D::2062041730011701816::1739575966::1742956574::1::::<><>::
-item delete.png::CompressedTexture2D::7636801454442732052::1739575966::1739575966::1::::<><>::
-item give.png::CompressedTexture2D::6471735892284149110::1739575966::1739575966::1::::<><>::
-splitter_all_sheet.png::CompressedTexture2D::1398317851368286391::1739575966::1739575966::1::::<><>::
-thumbnail.png::CompressedTexture2D::2975250330685684224::1739575966::1739575966::1::::<><>::
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/::1739575966
-belt(right).tscn::PackedScene::7785651163594222182::1739575966::0::1::::<><>::res://Conveyors/belt.gd<>uid://ct44m1aobfnpe::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.tscn<>uid://cnxmkieinng6s::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/conveyors_1.png<>uid://des4s18nx8jee::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.tscn<>res://Conveyors/Components/Controller/from_direction_controller.gd
-belt(toptoright).tscn::PackedScene::3639899353704177467::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt.gd<>uid://ct44m1aobfnpe::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.tscn<>uid://des4s18nx8jee::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.tscn<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/from_direction_controller.gd
-belt.gd::GDScript::-1::1739575966::0::1::::<>Node2D<>::
-belt.tscn::PackedScene::5169513116578323894::1739575966::0::1::::<><>::uid://ct44m1aobfnpe::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.tscn<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt.gd<>uid://des4s18nx8jee::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://bu00ntiiddy1k::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.tscn<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/from_direction_controller.gd
-generator.gd::GDScript::-1::1739575966::0::1::::<>Node2D<>::
-generator.tscn::PackedScene::1932455722480189861::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/generator.gd<>uid://bu00ntiiddy1k::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.tscn<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.gd<>uid://ct44m1aobfnpe::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.tscn
-splitter.gd::GDScript::-1::1739575966::0::1::::<>Node2D<>::
-splitter.tscn::PackedScene::4838116156281601208::1739575966::0::1::::<><>::res://Conveyors/splitter.gd<>res://Art/splitter_all_sheet.png<>uid://bu00ntiiddy1k::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.tscn<>uid://des4s18nx8jee::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn<>uid://ct44m1aobfnpe::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.tscn
-trash.gd::GDScript::-1::1739575966::0::1::::<>Node2D<>::
-trash.tscn::PackedScene::9161496433905930385::1739575966::0::1::::<><>::uid://des4s18nx8jee::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/trash.gd<>uid://dg2lae4h8h8qi::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/item delete.png
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/::1739575966
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/::1739575966
-direction_controller.gd::GDScript::-1::1739575966::0::1::::DirectionController<>Area2D<>::
-direction_controller.tscn::PackedScene::3843349151114895398::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.gd
-from_direction_controller.gd::GDScript::-1::1739575966::0::1::::FromDirectionController<>Node2D<>::
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/::1739575966
-conveyor_detector.gd::GDScript::-1::1739575966::0::1::::ConveyorDetector<>Area2D<>::
-conveyor_detector.tscn::PackedScene::264843707370104787::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detector.gd
-conveyor_detectors.gd::GDScript::-1::1739575966::0::1::::ConveyorDetectors<>Node2D<>::
-conveyor_detectors.tscn::PackedScene::6168079939938385198::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.gd
-direction_detector.gd::GDScript::-1::1739575966::0::1::::DirectionDetector<>Area2D<>::
-direction_detector.tscn::PackedScene::7010175979125736559::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/direction_detector.gd
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/::1739575966
-conveyor_inventory.gd::GDScript::-1::1739575966::0::1::::ConveyorInventory<>Area2D<>::
-conveyor_inventory.tscn::PackedScene::7478970579493377544::1739575966::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.gd
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Helpers/::1739575966
-conveyor_sprite_helper.gd::GDScript::-1::1739575966::0::1::::ConveyorSpriteHelper<>Node<>::
-direction_helper.gd::GDScript::-1::1739575966::0::1::::DirectionHelper<>Node<>::
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/::1739575966
-BuildingCoordinator.gd::GDScript::-1::1739575966::0::1::::<>Node<>::
-cauldron_item.gd::GDScript::-1::1739575966::0::1::::<>Area2D<>::
-Constants.gd::GDScript::-1::1739575966::0::1::::<>Node<>::
-ConveyorItem.gd::GDScript::-1::1739575966::0::1::::<>Area2D<>::
-ConveyorItem.tscn::PackedScene::1455437186119604433::1739575966::0::1::::<><>::uid://ckhae4btifobd::::res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/ConveyorItem.gd
-Enums.gd::GDScript::-1::1739575966::0::1::::<>Node<>::
-::res://Scene Folder/Environment/LibraryProps/::1743574567
-deco_tables.tscn::PackedScene::7814819706150595884::1743574567::0::1::::<><>::uid://b2lvsqo4m14er::::res://assets/Intro_Room/Table.png<>uid://dv5ufswoqaq5j::::res://assets/Intro_Room/Bench.png
-fairness_house.tscn::PackedScene::8096204204198514162::1743574567::0::1::::<><>::uid://bmdv77drfld7r::::res://assets/Fairness_Village/house with shadow.png
-fairness_podium.tscn::PackedScene::5907895160760692318::1743574567::0::1::::<><>::uid://c00w6tfsh7u3q::::res://assets/Fairness_Village/Town_Podium_2.png
-secret_bookshelf.tscn::PackedScene::3350681737936310667::1741741427::0::1::::<><>::uid://2aq6xh5oemob::::res://assets/Intro_Room/top shelf.PNG<>uid://kghh4m6i4j6q::::res://assets/Intro_Room/bottom shelf.PNG<>res://SecretBookshelfDoorArea.gd<>uid://cylx63fkud7d5::::res://Scene Folder/environment_exit_area.tscn
-table_top.tscn::PackedScene::4983404350497775469::1743574567::0::1::::<><>::uid://b2lvsqo4m14er::::res://assets/Intro_Room/Table.png<>uid://dv5ufswoqaq5j::::res://assets/Intro_Room/Bench.png
-::res://Scene Folder/Minigames/::1743558400
-::res://Scene Folder/Minigames/Cannonball_Game/::1739575966
-::res://Scene Folder/Minigames/Cannonball_Game/Background/::1739575966
-tile_map.tscn::PackedScene::4233666246272337093::1739575966::0::1::::<><>::uid://b38u8a4mqr0r3::::res://assets/Cannon_Game/cannonball_game_bkg.png
-::res://Scene Folder/Minigames/Cannonball_Game/Bag/::1741741430
-bag1.gd::GDScript::-1::1739575966::0::1::::<>StaticBody2D<>::
-Bag1.tscn::PackedScene::75186779359140241::1741741430::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/bag1.gd<>uid://bwi12w4x6ahy3::::res://assets/Cannon_Game/flying bag spritesheet.png
-Bag2.tscn::PackedScene::6377697098252512368::1741741430::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://cgvw1fpn0li0r::::res://assets/Cannon_Game/bags/Bag2.PNG
-Bag3.tscn::PackedScene::413957059423585468::1739575966::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://jfyh8e8qwwpw::::res://assets/Cannon_Game/bags/Bag3.PNG
-Bag4.tscn::PackedScene::4616496271638652416::1741741430::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://bp5xu33omo7wo::::res://assets/Cannon_Game/bags/Bag4.PNG
-Bag5.tscn::PackedScene::8822897665185269267::1739575966::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://qapi487lx3j6::::res://assets/Cannon_Game/bags/Bag5.PNG
-Bag6.tscn::PackedScene::789983486622316115::1741741430::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd<>uid://c8d06m7lgrftv::::res://assets/Cannon_Game/bags/Bag6.PNG
-Bag6_2.gd::GDScript::-1::1739575966::0::1::::<>StaticBody2D<>::
-::res://Scene Folder/Minigames/Cannonball_Game/BagPoof/::1741741430
-bag_poof.gd::GDScript::-1::1739575966::0::1::::<>Sprite2D<>::
-bag_poof.tscn::PackedScene::7528792900778674594::1741741430::0::1::::<><>::uid://driya7hway11j::::res://assets/Cannon_Game/bag_poof/poof_spritesheet.png<>res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.gd
-::res://Scene Folder/Minigames/Cannonball_Game/Cannon/::1743557780
-cannon.gd::GDScript::-1::1739575966::0::1::::<>Node2D<>::
-Cannon.tscn::PackedScene::9109898853211186624::1743557780::0::1::::<><>::uid://dowfc81kafhnk::::res://assets/Cannon_Game/cannon body.png<>uid://b1lsbaaj37mn3::::res://assets/Cannon_Game/trajectory dot.png<>res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader<>uid://qmjfamltg3oh::::res://assets/Cannon_Game/cannnon wheel.png<>uid://b1k24nnqgwa42::::res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn
-projection.gdshader::Shader::-1::1739575966::0::1::::<><>::
-::res://Scene Folder/Minigames/Cannonball_Game/Cannonball/::1741741428
-Cannonball.gd::GDScript::-1::1739575966::0::1::::<>RigidBody2D<>::
-Cannonball.tscn::PackedScene::168879098445437694::1741741428::0::1::::<><>::uid://ckhae4btifobd::::res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png<>res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
-CannonballKinematics.gd::GDScript::-1::1739575966::0::1::::<>CharacterBody2D<>::
-::res://Scene Folder/Minigames/Cannonball_Game/GameManager/::1744169826
-Cannonball_Game.gd::GDScript::-1::1741737973::0::1::::<>Node2D<>::
-Cannonball_Game.tscn::PackedScene::1128271819636443245::1743557780::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd<>uid://d215x53gvybky::::res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn<>uid://cd21lswhh1b46::::res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PowerGauge.tscn<>uid://b1k24nnqgwa42::::res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn<>uid://driya7hway11j::::res://assets/Cannon_Game/bag_poof/poof_spritesheet.png<>uid://cfveiu5idd6ok::::res://assets/Cannon_Game/Platform2.PNG
-collidable.gd::GDScript::-1::1739575966::0::1::::<>Area2D<>::
-trajection.gdshader::Shader::-1::1744169826::0::1::::<><>::
-utilities.gd::GDScript::-1::1739575966::0::1::::<>Control<>::
-::res://Scene Folder/Minigames/Cannonball_Game/Powerguage/::1741741430
-PinkCounter.gd::GDScript::-1::1739575966::0::1::::<>Sprite2D<>::
-PowerGauge.gdshader::Shader::-1::1739575966::0::1::::<><>::
-PowerGauge.tscn::PackedScene::5040745362939221277::1741741430::0::1::::<><>::uid://bnyxacdxuuslh::::res://assets/Cannon_Game/orb_counter/purple_counter.png<>uid://bqwwd6ymmd3vt::::res://assets/Cannon_Game/power_gauge/unfilled_gauge.png<>res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PinkCounter.gd<>uid://2h6tqsybxfa6::::res://assets/ui_assets/fonts/Quattrocento-Regular.ttf<>res://Scene Folder/Minigames/Cannonball_Game/Powerguage/power_gauge.gd<>uid://duawkrfo2d6tt::::res://assets/Cannon_Game/power_gauge/filled_gauge.png<>uid://bqc64n7kj3qia::::res://assets/ui_assets/fonts/Quattrocento-Bold.ttf
-power_gauge.gd::GDScript::-1::1739575966::0::1::::<>TextureProgressBar<>::
-::res://Scene Folder/Minigames/Fairness_Minigame_1/::1739575966
-::res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/::1744169315
-fairness_minigame_1.tscn::PackedScene::6218464060554620501::1744169315::0::1::::<><>::uid://cqf3f1xk2qp07::::res://Scene Folder/Environment/LibraryProps/fairness_podium.tscn<>uid://iqykg7760ug7::::res://assets/Fairness_Village/EnvironmentSpreadSheetFinal.png<>uid://blaeuafsqnao0::::res://assets/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>res://Scene Folder/Environment/ConstructedTileMap.gd<>res://Scene Folder/Environment/AStar2DVisualizer.gd<>res://Scene Folder/Environment/Cauldron_Fairness_Area.gd<>uid://d38ycv5t2q0ih::::res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn<>uid://c5eykjcfkvpa2::::res://assets/Fairness_Village/VillageCauldron.PNG
-TooltipUI.gd::GDScript::-1::1741655657::0::1::::<>TextureRect<>::
-ui_fairness_minigame_1.gd::GDScript::-1::1741738356::0::1::::<>CanvasLayer<>::
-ui_fairness_minigame_1.tscn::PackedScene::9194136068476885131::1741741429::0::1::::<><>::res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.gd<>uid://c2qxjvfoxkxpt::::res://assets/ui_assets/blank.png<>uid://bvajh5tliyl4h::::res://assets/Fairness_Village/Shapes/shape_2.png<>uid://c4406eoe70ptv::::res://assets/Fairness_Village/Shapes/shape_6.png<>uid://dhx0egkoem8ij::::res://assets/Fairness_Village/Shapes/shape_4.png<>uid://0qt8mysmbi6n::::res://assets/Fairness_Village/Shapes/shape holders.png<>uid://b0xrb12vr1kdv::::res://assets/Fairness_Village/Shapes/shape_5.png<>uid://b8lllx8uob7gw::::res://assets/Fairness_Village/Help Button_Active.png<>uid://cfde7qfhiv5e2::::res://assets/Fairness_Village/Shapes/shape_3.png<>uid://dusg5l0kgbhn8::::res://assets/Fairness_Village/Timer.png<>res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/TooltipUI.gd<>uid://dveihhhr2tnys::::res://assets/Fairness_Village/Shapes/shape_1.png<>uid://da2gykps4cwn8::::res://assets/Fairness_Village/timerbar.png<>res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader<>uid://c322tj52eg8ox::::res://assets/ui_assets/Instruction Box_Blank.png<>uid://cfxsreqhje1s7::::res://assets/ui_assets/Spacebar_Instruction Button.png
-::res://Scene Folder/Minigames/Fairness_Minigame_1/Villagers/::1739575966
-Villager_NPC.tscn::PackedScene::363156235731092812::1739575966::0::1::::<><>::
-::res://Scene Folder/Minigames/Fairness_Minigame_2/::1741741430
-RockWeight.gd::GDScript::-1::1739581966::0::1::::<>Sprite2D<>::
-RockWeight.tscn::PackedScene::6331084365821605202::1741741430::0::1::::<><>::uid://gq8d1nh6unni::::res://assets/Cauldron_Room/Orbs Assets/orb 3.PNG<>res://Scene Folder/Minigames/Fairness_Minigame_2/RockWeight.gd
-::res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/::1741741463
-Control_Fairness_Minigame_2.tscn::PackedScene::176851417897015112::1741741429::0::1::::<><>::res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Scale.gd<>uid://4xdkmq6g5k7n::::res://assets/Fairness_Scale_Game/2d table.png<>uid://de0wk7swj03oo::::res://assets/Fairness_Scale_Game/stand.png<>uid://b248j6475v3c8::::res://assets/Fairness_Scale_Game/top part.png<>uid://dnke02w5ef4rj::::res://assets/Fairness_Scale_Game/left scale.png<>uid://bgwwsgq3lyrw4::::res://assets/Mixing_Game/empty_bag.png<>uid://dl510nt7j3vra::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn<>uid://bo5canpxj37k6::::res://assets/Fairness_Scale_Game/right scale.png<>uid://dqts64q2gs8nx::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn<>uid://yhfwj6kic0d1::::res://assets/Fairness_Scale_Game/weight_5.png<>uid://cm5sxmnxevjhq::::res://assets/Fairness_Scale_Game/weight_10.png<>uid://d033clm5sfmkg::::res://assets/Fairness_Scale_Game/weight_15.png<>uid://b52mcmuluwbw0::::res://assets/Fairness_Scale_Game/weight_20.png<>uid://ck77ho1jxqfh4::::res://assets/Fairness_Scale_Game/weight_25.png<>uid://dwlp18cogkvgt::::res://assets/Fairness_Scale_Game/weight_50.png
-FairnessMinigame2Logic.gd::GDScript::-1::1741741425::0::1::::<>Node2D<>::
-fairness_minigame_2.tscn::PackedScene::5226063893846805308::1741741463::0::1::::<><>::uid://crwym4shqdj1::::res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/Control_Fairness_Minigame_2.tscn<>res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/FairnessMinigame2Logic.gd
-Scale.gd::GDScript::-1::1741655657::0::1::::<>MarginContainer<>::
-::res://Scene Folder/Minigames/Mixing_Game/::1741834712
-orb.tscn::PackedScene::3056122593181213641::1739575966::0::1::::<><>::uid://dc3awslq62bux::::res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG
-::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/::1744169826
-DragAndDrop.tscn::PackedScene::8766423521239209276::1744167393::0::1::::<><>::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader<>uid://e8y24jfjuqws::::res://assets/Mixing_Game/Orb Placement UI.png<>uid://bgwwsgq3lyrw4::::res://assets/Mixing_Game/empty_bag.png<>uid://cnli6oka52tgt::::res://assets/Mixing_Game/Button_Inactive.png<>uid://bsk7megi46n57::::res://assets/Mixing_Game/smoke assets/redviolet.png<>res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/mix_button.gd<>uid://dl510nt7j3vra::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn<>uid://dqts64q2gs8nx::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn<>uid://cv5djbk75mub8::::res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG<>uid://dymegq2gsesuu::::res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG<>uid://ug8afxm6hldc::::res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG<>uid://dc3awslq62bux::::res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG<>uid://uydmdruacy60::::res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG
-draggable.gd::GDScript::-1::1739579565::0::1::::<>Sprite2D<>::
-draggable.tscn::PackedScene::8322656541225350565::1741741430::0::1::::<><>::uid://gq8d1nh6unni::::res://assets/Cauldron_Room/Orbs Assets/orb 3.PNG<>res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.gd
-DropSpot.tscn::PackedScene::7994894664000924870::1741834713::0::1::::<><>::
-gui_blur.gdshader::Shader::-1::1744169826::0::1::::<><>::
-mix_button.gd::GDScript::-1::1739575966::0::1::::<>TextureRect<>::
-::res://Scene Folder/Minigames/Mixing_Game/GameManager/::1744167393
-mixing_game.gd::GDScript::-1::1741742142::0::1::::<>Node2D<>::
-Mixing_Game.tscn::PackedScene::7369704589017307039::1744167393::0::1::::<><>::res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd<>uid://d3ts7tyirdj4b::::res://assets/Mixing_Game/Podium.png<>uid://fq046hrx6lal::::res://assets/Mixing_Game/mixing_game_bkg.PNG<>uid://dw5rykc2ps4g3::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn<>uid://8vw07d50xiwm::::res://assets/Mixing_Game/cauldron_mixing_spritesheet.png<>uid://bjsn5l36wjgx2::::res://Scene Folder/Minigames/Mixing_Game/orb.tscn
-::res://Scene Folder/Minigames/Transparency_Pillar/::1744167393
-Cargo_Game.tscn::PackedScene::8571392594074240008::1744167393::0::1::::<><>::res://Scripts/Minigames/Cargo_Game.gd<>uid://4c7krm7ftp2w::::res://assets/Cargo_Game/grid_temp.png<>uid://dveihhhr2tnys::::res://assets/Fairness_Village/Shapes/shape_1.png<>uid://bvajh5tliyl4h::::res://assets/Fairness_Village/Shapes/shape_2.png<>uid://cfde7qfhiv5e2::::res://assets/Fairness_Village/Shapes/shape_3.png<>uid://dhx0egkoem8ij::::res://assets/Fairness_Village/Shapes/shape_4.png<>uid://b0xrb12vr1kdv::::res://assets/Fairness_Village/Shapes/shape_5.png<>uid://c4406eoe70ptv::::res://assets/Fairness_Village/Shapes/shape_6.png
-::res://Scripts/::1743574567
-3choice_dialogue.gd::GDScript::-1::1743574567::0::1::::<>MarginContainer<>::
-cauldron_area.gd::GDScript::-1::1741669071::0::1::::<>Area2D<>::
-dialogue.gd::GDScript::-1::1743574567::0::1::::<>MarginContainer<>::
-fox_area.gd::GDScript::-1::1739575966::0::1::::<>Area2D<>::
-main_character.gd::GDScript::-1::1743574567::0::1::::<>CharacterController<>::
-::res://Scripts/Cutscene/::1741730502
-Action.gd::GDScript::-1::1741730502::0::1::::Action<>Node<>::
-CutsceneManager.gd::GDScript::-1::1741655657::0::1::::CutsceneManager<>Node<>::
-GroupAction.gd::GDScript::-1::1739575966::0::1::::GroupAction<>Action<>::
-::res://Scripts/Dialogues/::1739575966
-::res://Scripts/Dialogues/Cannon/::1739575966
-UnhappyCannon.json::JSON::-1::1739575966::0::1::::<><>::
-::res://Scripts/Dialogues/Cauldron/::1739575966
-FoxBlurb.json::JSON::-1::1739575966::0::1::::<><>::
-FoxIntro.json::JSON::-1::1739575966::0::1::::<><>::
-::res://Scripts/Dialogues/Fairness/::1744169474
-FoxFairness1Segue.json::JSON::-1::1744169353::0::1::::<><>::
-FoxLibraryExit.json::JSON::-1::1739575966::0::1::::<><>::
-SickVillagerComplaint.json::JSON::-1::1739575966::0::1::::<><>::
-::res://Scripts/Minigames/::1743830109
-Cargo_Game.gd::GDScript::-1::1743830109::0::1::::<>Control<>::
-::res://Scripts/Monologues/::1744169843
-badmix.json::JSON::-1::1741655657::0::1::::<><>::
-FoxLibraryExit.json::JSON::-1::1744166615::0::1::::<><>::
-goodmix1.json::JSON::-1::1739575966::0::1::::<><>::
-goodmix2.json::JSON::-1::1739575966::0::1::::<><>::
-goodmix3.json::JSON::-1::1739575966::0::1::::<><>::
-MixingIntro.json::JSON::-1::1739575966::0::1::::<><>::
-MixingSegue.json::JSON::-1::1739575966::0::1::::<><>::
-UnhappyCannon.json::JSON::-1::1739575966::0::1::::<><>::
-::res://Scripts/Monologues/Cauldron/::1739575966
-CauldronBlurb.json::JSON::-1::1739575966::0::1::::<><>::
-OrbHypothesis.json::JSON::-1::1739575966::0::1::::<><>::
-::res://Scripts/Monologues/Fairness/::1744169843
-FairnessSegue.json::JSON::-1::1739575966::0::1::::<><>::
-FoxFairness1Completion.json::JSON::-1::1744169382::0::1::::<><>::
-FoxFairness2Completion.json::JSON::-1::1744169362::0::1::::<><>::
-FoxFairness2Failure.json::JSON::-1::1744169376::0::1::::<><>::
-FoxVillagerResponse.json::JSON::-1::1744169701::0::1::::<><>::
-VillagerWarning.json::JSON::-1::1744169604::0::1::::<><>::
-::res://Scripts/Monologues/Intro/::1741730633
-Blurbs.cfg::TextFile::-1::1741655657::0::1::::<><>::
-BookshelfAmbient.json::JSON::-1::1741655657::0::1::::<><>::
-IntroDialogues.cfg::TextFile::-1::1741728407::0::1::::<><>::
-MalvorenEntrance.json::JSON::-1::1741728407::0::1::::<><>::
-MalvorenSpeech.json::JSON::-1::1739575966::0::1::::<><>::
-PlayerApproachesGlow.json::JSON::-1::1741730633::0::1::::<><>::
-PlayerMonologue.json::JSON::-1::1741728407::0::1::::<><>::
-PlayerNoticesGlow.json::JSON::-1::1741728407::0::1::::<><>::
-PlayerThought.json::JSON::-1::1739575966::0::1::::<><>::
-ThornewoodLeadsStudents.json::JSON::-1::1741728407::0::1::::<><>::
-ThornewoodSpeech.json::JSON::-1::1741728407::0::1::::<><>::
-::res://Scripts/Monologues/Mixing/::1739575966
-MixingIntro.json::JSON::-1::1739575966::0::1::::<><>::
-=======
-::res://::1744153577
+::res://::1744311465
 EnvironmentExitArea.gd::GDScript::-1::1741754309::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::3648582972397847862::1741219100::1741219100::1::::<><>::
 SaveGame.gd::GDScript::-1::1741754309::0::1::::SaveGame<>Resource<>::
@@ -519,10 +7,10 @@ SecretBookshelfDoorArea.gd::GDScript::-1::1741630576::0::1::::<>Area2D<>::
 SickVillager.gd::GDScript::-1::1741889602::0::1::::SickVillager<>CharacterController<>::
 SoloAction.gd::GDScript::-1::1741219100::0::1::::<>Node<>::
 UniqueAction.gd::GDScript::-1::1741630576::0::1::::UniqueAction<>Action<>::
-::res://assets/::1744044782
+::res://assets/::1744311465
 animation_frameworks_blue_villager.res::AnimationLibrary::1555996616260421190::1741882925::0::1::::<><>::
 animation_frameworks_green_villager.res::AnimationLibrary::3329465409297773201::1741889602::0::1::::<><>::
-animation_frameworks_hero_player.res::AnimationLibrary::7354687486437536160::1744043696::0::1::::<><>::
+animation_frameworks_hero_player.res::AnimationLibrary::7354687486437536160::1744216962::0::1::::<><>::
 animation_frameworks_orange_villager.res::AnimationLibrary::3426763214381844553::1741882925::0::1::::<><>::
 animation_frameworks_peach_villager.res::AnimationLibrary::3749138007008459285::1741882925::0::1::::<><>::
 ::res://assets/Cannon_Game/::1741219369
@@ -767,9 +255,9 @@ yellowred.png::CompressedTexture2D::2301782048711310499::1741219100::1741219100:
 ::res://assets/Mixing_Game/stand assets/::1741219364
 ::res://assets/sound/::1741219359
 bkg_music.ogg::AudioStreamOggVorbis::4344823377440077027::1741219100::1741219100::1::::<><>::
-::res://assets/Tilesets/::1744043696
-Interior_Tiles.tres::TileSet::6753504080096748866::1744043696::0::1::::<><>::uid://eeg78fn8y1aq::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png<>uid://bdyx8endh4e8r::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png<>uid://bg0l248v0ag2b::::res://assets/Cauldron_Room/Misc Assets/tutorial_spritesheet.png<>uid://ddrn7xlbtcd5y::::res://assets/Cauldron_Room/Conveyor belt Assets/Conveyer legs.png<>uid://e2nunx41ng6a::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork 1.png<>uid://blaeuafsqnao0::::res://assets/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png<>uid://dk6ncry7fgb64::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork.png<>uid://iapwdf0m3w66::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyor_belt_spritesheet.png<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>uid://cauw3ec0j282c::::res://assets/Cauldron_Room/Exit Assets/entrance_carpet.png
-::res://assets/ui_assets/::1741889611
+::res://assets/Tilesets/::1744226491
+Interior_Tiles.tres::TileSet::6753504080096748866::1744226491::0::1::::<><>::uid://eeg78fn8y1aq::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png<>uid://bdyx8endh4e8r::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png<>uid://bg0l248v0ag2b::::res://assets/Cauldron_Room/Misc Assets/tutorial_spritesheet.png<>uid://ddrn7xlbtcd5y::::res://assets/Cauldron_Room/Conveyor belt Assets/Conveyer legs.png<>uid://e2nunx41ng6a::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork 1.png<>uid://blaeuafsqnao0::::res://assets/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png<>uid://dk6ncry7fgb64::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork.png<>uid://iapwdf0m3w66::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyor_belt_spritesheet.png<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>uid://cauw3ec0j282c::::res://assets/Cauldron_Room/Exit Assets/entrance_carpet.png
+::res://assets/ui_assets/::1744311465
 blank.png::CompressedTexture2D::6702383864038432557::1741219100::1741219100::1::::<><>::
 Dialogue Arrow_Active_Light.png::CompressedTexture2D::197025119159215438::1741889602::1741889602::1::::<><>::
 Dialogue Box_Long_Active_Light (1).png::CompressedTexture2D::7447363224899305837::1741889602::1741889602::1::::<><>::
@@ -792,29 +280,33 @@ Selection Box.png::CompressedTexture2D::6621655167610882264::1741219100::1741219
 Spacebar.png::CompressedTexture2D::6505785503946862409::1741754309::1741754309::1::::<><>::
 Spacebar_Instruction Button.png::CompressedTexture2D::5172389773426452604::1741219100::1741219100::1::::<><>::
 Up Arrow.png::CompressedTexture2D::7471105100489761875::1741754309::1741754309::1::::<><>::
+V1Dialogue Box_Long_Light.png::CompressedTexture2D::1510895085972598833::315558000::1744311470::1::::<><>::
 ::res://assets/ui_assets/fonts/::1741219364
 Quattrocento-Bold.ttf::FontFile::3515505684913534848::1741219100::1741219100::1::::<><>::
 Quattrocento-Regular.ttf::FontFile::1911466448638024315::1741219100::1741219100::1::::<><>::
-::res://assets/ui_assets/portraits/::1741219364
+::res://assets/ui_assets/portraits/::1744308526
 Cauldron.png::CompressedTexture2D::5505114885120407269::1741219100::1741219100::1::::<><>::
-Fox.PNG::CompressedTexture2D::1078023606052639374::1741219100::1741219100::1::::<><>::
-Player.PNG::CompressedTexture2D::275207732697039089::1741219100::1741219100::1::::<><>::
-::res://Scene Folder/::1744065316
+Fox.PNG::CompressedTexture2D::1078023606052639374::315558000::1744306865::1::::<><>::
+Player.PNG::CompressedTexture2D::275207732697039089::315558000::1744306865::1::::<><>::
+Principal.png::CompressedTexture2D::-1::315558000::1744306865::1::::<><>::
+Professor Thornewood.PNG::CompressedTexture2D::1314168956005160105::315558000::1744306908::1::::<><>::
+Villager.PNG::CompressedTexture2D::3840440125906772560::315558000::1744306865::1::::<><>::
+::res://Scene Folder/::1744311087
 environment_exit_area.tscn::PackedScene::6481535099297379420::1741632418::0::1::::<><>::res://EnvironmentExitArea.gd
 fox.gd::GDScript::-1::1741630576::0::1::::<>CharacterBody2D<>::
 fox.tscn::PackedScene::1859519243384973732::1744044774::0::1::::<><>::uid://bndss7qu042es::::res://assets/Characters/Fox/FoxFinalSpreadSheet.png<>res://Scripts/fox_area.gd
 fox_move.gd::GDScript::-1::1741219100::0::1::::<>CharacterBody2D<>::
 Instruction Box_Blank.png::CompressedTexture2D::458581522552643946::1741219100::1741219100::1::::<><>::
 instructions.gd::GDScript::-1::1741219100::0::1::::<>MarginContainer<>::
-main_character.tscn::PackedScene::5817375992330108292::1744043864::0::1::::<><>::res://Scripts/main_character.gd<>uid://c3162l8l012kd::::res://assets/Characters/Player/MCFinalSpreadSheet.png<>uid://dc1wvmnnh2l7m::::res://assets/animation_frameworks_hero_player.res
+main_character.tscn::PackedScene::5817375992330108292::1744215232::0::1::::<><>::res://Scripts/main_character.gd<>uid://c3162l8l012kd::::res://assets/Characters/Player/MCFinalSpreadSheet.png<>uid://dc1wvmnnh2l7m::::res://assets/animation_frameworks_hero_player.res
 PlayerState.gd::GDScript::-1::1741754309::0::1::::<>Node2D<>::
 PlayerState.tscn::PackedScene::853462858186353456::1741754309::0::1::::<><>::res://Scene Folder/PlayerState.gd
 testing_scene.tscn::PackedScene::6905889153291700995::1741219100::0::1::::<><>::uid://c3hphwxbvrqnq::::res://assets/Tilesets/Interior_Tiles.tres<>uid://wb0447tmle87::::res://Scene Folder/Character Scenes/sick_villager.tscn<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn
 UI.gd::GDScript::-1::1741754309::0::1::::<>CanvasLayer<>::
-UI.gdshader::Shader::-1::1744065316::0::1::::<><>::
-UI.tscn::PackedScene::5157734322651910848::1741889602::0::1::::<><>::res://Scene Folder/UI.gd<>res://Scripts/dialogue.gd<>uid://br8nvmsg2wo75::::res://icon.svg<>uid://b0qeahoitxahb::::res://assets/ui_assets/Dialogue Box_Short_Disabled_Light.png<>res://Scripts/3choice_dialogue.gd<>uid://c2o8far2sc0u::::res://assets/ui_assets/Dialogue Arrow_Active_Light.png<>uid://d6kvpuxma1dd::::res://assets/ui_assets/portraits/Player.PNG<>uid://c1ltxtksg64vc::::res://assets/ui_assets/Selection Box.png<>res://Scene Folder/instructions.gd<>uid://deds8p1uj33pp::::res://assets/ui_assets/Dialogue Box_Long_Active_Light (1).png<>uid://bqc64n7kj3qia::::res://assets/ui_assets/fonts/Quattrocento-Bold.ttf<>uid://c322tj52eg8ox::::res://assets/ui_assets/Instruction Box_Blank.png<>uid://depcak66xf1yd::::res://assets/ui_assets/Up Arrow.png<>uid://2h6tqsybxfa6::::res://assets/ui_assets/fonts/Quattrocento-Regular.ttf<>uid://p418ca7vm0ql::::res://assets/ui_assets/Down Arrow.png<>uid://cyxplpjlubiq8::::res://assets/ui_assets/Spacebar.png
-::res://Scene Folder/Character Scenes/::1741889611
-CharacterController.gd::GDScript::-1::1741889602::0::1::::CharacterController<>CharacterBody2D<>::
+UI.gdshader::Shader::-1::1744311087::0::1::::<><>::
+UI.tscn::PackedScene::5157734322651910848::1744311087::0::1::::<><>::res://Scene Folder/UI.gd<>res://Scripts/dialogue.gd<>uid://br8nvmsg2wo75::::res://icon.svg<>uid://b0qeahoitxahb::::res://assets/ui_assets/Dialogue Box_Short_Disabled_Light.png<>res://Scripts/3choice_dialogue.gd<>uid://c2o8far2sc0u::::res://assets/ui_assets/Dialogue Arrow_Active_Light.png<>uid://d6kvpuxma1dd::::res://assets/ui_assets/portraits/Player.PNG<>uid://c1ltxtksg64vc::::res://assets/ui_assets/Selection Box.png<>res://Scene Folder/instructions.gd<>uid://deds8p1uj33pp::::res://assets/ui_assets/Dialogue Box_Long_Active_Light (1).png<>uid://bqc64n7kj3qia::::res://assets/ui_assets/fonts/Quattrocento-Bold.ttf<>uid://c322tj52eg8ox::::res://assets/ui_assets/Instruction Box_Blank.png<>uid://depcak66xf1yd::::res://assets/ui_assets/Up Arrow.png<>uid://2h6tqsybxfa6::::res://assets/ui_assets/fonts/Quattrocento-Regular.ttf<>uid://p418ca7vm0ql::::res://assets/ui_assets/Down Arrow.png<>uid://cyxplpjlubiq8::::res://assets/ui_assets/Spacebar.png
+::res://Scene Folder/Character Scenes/::1744215247
+CharacterController.gd::GDScript::-1::1744215232::0::1::::CharacterController<>CharacterBody2D<>::
 Malvoren.gd::GDScript::-1::1741630576::0::1::::<>CharacterController<>::
 principal_villain.tscn::PackedScene::7650268729507512827::1741760649::0::1::::<><>::res://Scene Folder/Character Scenes/Malvoren.gd<>uid://c0hmcci4r5byh::::res://assets/Characters/Principal/Principal.PNG
 professor_thornewood.tscn::PackedScene::7207188304094127564::1741760356::0::1::::<><>::uid://ckd8y4yaxtlia::::res://assets/Characters/Professor/Professor.PNG
@@ -826,20 +318,20 @@ student_npc_2.tscn::PackedScene::4401199108487358685::1741219100::0::1::::<><>::
 student_npc_3.tscn::PackedScene::2174623219162450089::1741219100::0::1::::<><>::uid://bdk132k5nncc6::::res://assets/Intro_Room/student3.PNG
 student_npc_4.tscn::PackedScene::6666071929087273171::1741632418::0::1::::<><>::uid://cdwmaenvgoxvi::::res://assets/Intro_Room/student4.PNG
 student_npc_5.tscn::PackedScene::1339641276188323770::1741219100::0::1::::<><>::uid://xq7jqxfj4txk::::res://assets/Intro_Room/student5.PNG
-::res://Scene Folder/Environment/::1744043864
+::res://Scene Folder/Environment/::1744311087
 AStar2DVisualizer.gd::GDScript::-1::1741219100::0::1::::AStar2DVisualizer<>Node2D<>::
 AudioStreamPlayer.gd::GDScript::-1::1741219100::0::1::::<>AudioStreamPlayer<>::
 candle_light.gd::GDScript::-1::1741219100::0::1::::<>PointLight2D<>::
 Cauldron_Fairness_Area.gd::GDScript::-1::1741219100::0::1::::<>Area2D<>::
 Cauldron_Fairness_Village.gd::GDScript::-1::1741219100::0::1::::<>StaticBody2D<>::
-Cauldron_Room.gd::GDScript::-1::1744043696::0::1::::Cauldron_Room<>Node2D<>::
-Cauldron_Room.tscn::PackedScene::1495173672702862107::1744043864::0::1::::<><>::res://Scene Folder/Environment/Cauldron_Room.gd<>uid://c3hphwxbvrqnq::::res://assets/Tilesets/Interior_Tiles.tres<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>res://Scene Folder/fox.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>uid://cfqpepeud7y6s::::res://Scene Folder/UI.tscn<>uid://ccfd0hhfjvrlj::::res://assets/Cauldron_Room/Misc Assets/candlelight.PNG<>res://Scene Folder/Environment/candle_light.gd<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/conveyor.gd<>uid://cylx63fkud7d5::::res://Scene Folder/environment_exit_area.tscn<>res://Scripts/cauldron_area.gd<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://cosv56386e4bn::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn<>uid://v3fe3rbixa55::::res://assets/Cauldron_Room/Cauldron Assets/Cauldron SS.png
+Cauldron_Room.gd::GDScript::-1::1744226491::0::1::::Cauldron_Room<>Node2D<>::
+Cauldron_Room.tscn::PackedScene::1495173672702862107::1744311087::0::1::::<><>::res://Scene Folder/Environment/Cauldron_Room.gd<>uid://c3hphwxbvrqnq::::res://assets/Tilesets/Interior_Tiles.tres<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>res://Scene Folder/fox.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>uid://cfqpepeud7y6s::::res://Scene Folder/UI.tscn<>uid://ccfd0hhfjvrlj::::res://assets/Cauldron_Room/Misc Assets/candlelight.PNG<>res://Scene Folder/Environment/candle_light.gd<>res://Scene Folder/Environment/conveyor_belt_cauldron_room/conveyor.gd<>uid://cylx63fkud7d5::::res://Scene Folder/environment_exit_area.tscn<>res://Scripts/cauldron_area.gd<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://cosv56386e4bn::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/main.tscn<>uid://v3fe3rbixa55::::res://assets/Cauldron_Room/Cauldron Assets/Cauldron SS.png
 ConstructedTileMap.gd::GDScript::-1::1741219100::0::1::::ConstructedTileMap<>TileMap<>::
 fairness_cauldron_area.gd::GDScript::-1::1741630576::0::1::::<>Area2D<>::
 fairness_village.gd::GDScript::-1::1741760331::0::1::::<>Node2D<>::
-fairness_village.tscn::PackedScene::3154072577530658854::1744043864::0::1::::<><>::uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>res://Scene Folder/Environment/fairness_village.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/fox.gd<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://iqykg7760ug7::::res://assets/Fairness_Village/EnvironmentSpreadSheetFinal.png<>uid://drq1vgo2ie7ic::::res://Scene Folder/Environment/tree.tscn<>uid://c5eykjcfkvpa2::::res://assets/Fairness_Village/VillageCauldron.PNG<>uid://dnl4khh4eunli::::res://Scene Folder/Environment/LibraryProps/fairness_house.tscn<>res://EnvironmentExitArea.gd<>res://Scene Folder/Environment/fairness_cauldron_area.gd<>uid://cqf3f1xk2qp07::::res://Scene Folder/Environment/LibraryProps/fairness_podium.tscn
+fairness_village.tscn::PackedScene::3154072577530658854::1744311087::0::1::::<><>::uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>res://Scene Folder/Environment/fairness_village.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/fox.gd<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://iqykg7760ug7::::res://assets/Fairness_Village/EnvironmentSpreadSheetFinal.png<>uid://drq1vgo2ie7ic::::res://Scene Folder/Environment/tree.tscn<>uid://c5eykjcfkvpa2::::res://assets/Fairness_Village/VillageCauldron.PNG<>uid://dnl4khh4eunli::::res://Scene Folder/Environment/LibraryProps/fairness_house.tscn<>res://EnvironmentExitArea.gd<>res://Scene Folder/Environment/fairness_cauldron_area.gd<>uid://cqf3f1xk2qp07::::res://Scene Folder/Environment/LibraryProps/fairness_podium.tscn
 IntroRoom.gd::GDScript::-1::1741754309::0::1::::<>Node2D<>::
-Intro_Room.tscn::PackedScene::4391308453747214610::1744043864::0::1::::<><>::uid://eeg78fn8y1aq::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png<>res://Scene Folder/Environment/IntroRoom.gd<>uid://bdyx8endh4e8r::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png<>uid://bg0l248v0ag2b::::res://assets/Cauldron_Room/Misc Assets/tutorial_spritesheet.png<>uid://b2derahe20hjs::::res://assets/Intro_Room/Boarders 1.png<>uid://dv1e32o1bdvtd::::res://assets/Intro_Room/library_wall_floor.png<>uid://ddrn7xlbtcd5y::::res://assets/Cauldron_Room/Conveyor belt Assets/Conveyer legs.png<>uid://e2nunx41ng6a::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork 1.png<>uid://blaeuafsqnao0::::res://assets/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png<>uid://dk6ncry7fgb64::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork.png<>uid://bhmxcp2o50hfq::::res://assets/Intro_Room/bottom wall 1.png<>uid://p4xwd8o34jyw::::res://assets/Intro_Room/new floor 1.png<>uid://iapwdf0m3w66::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyor_belt_spritesheet.png<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>uid://cjm6fc7tjr8mi::::res://assets/Intro_Room/border_corners.png<>uid://cauw3ec0j282c::::res://assets/Cauldron_Room/Exit Assets/entrance_carpet.png<>uid://d0jfdnb7f1soi::::res://assets/Intro_Room/BookSheet 1.png<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://bl5dvy0nyd8yx::::res://Scene Folder/Character Scenes/student_npc1.tscn<>uid://dg832qlytv3k6::::res://Scene Folder/Character Scenes/principal_villain.tscn<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://b3x8du405q3fd::::res://Scene Folder/Character Scenes/student_npc_2.tscn<>uid://bn0did6g2b5vr::::res://Scene Folder/Environment/LibraryProps/secret_bookshelf.tscn<>uid://58nyyclu775n::::res://Scene Folder/Character Scenes/student_npc_3.tscn<>uid://cqvrvrwoiyist::::res://assets/Intro_Room/CandleSheet.png<>uid://c18dh30jhlcqd::::res://Scene Folder/Character Scenes/student_npc_4.tscn<>uid://tc6xwxkrs2qo::::res://Scene Folder/Character Scenes/student_npc_5.tscn<>uid://k8modbb416u8::::res://assets/Intro_Room/skylight.png<>uid://kfgtao24fa7v::::res://assets/Intro_Room/bookshelf.tscn<>uid://daxhlrf5d2t45::::res://Scene Folder/Character Scenes/professor_thornewood.tscn<>res://EnvironmentExitArea.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/fox.gd<>uid://cc887apnq476h::::res://Scene Folder/Environment/LibraryProps/table_top.tscn
+Intro_Room.tscn::PackedScene::4391308453747214610::1744311087::0::1::::<><>::uid://eeg78fn8y1aq::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png<>res://Scene Folder/Environment/IntroRoom.gd<>uid://bdyx8endh4e8r::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png<>uid://bg0l248v0ag2b::::res://assets/Cauldron_Room/Misc Assets/tutorial_spritesheet.png<>uid://b2derahe20hjs::::res://assets/Intro_Room/Boarders 1.png<>uid://dv1e32o1bdvtd::::res://assets/Intro_Room/library_wall_floor.png<>uid://ddrn7xlbtcd5y::::res://assets/Cauldron_Room/Conveyor belt Assets/Conveyer legs.png<>uid://e2nunx41ng6a::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork 1.png<>uid://blaeuafsqnao0::::res://assets/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png<>uid://dk6ncry7fgb64::::res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork.png<>uid://bhmxcp2o50hfq::::res://assets/Intro_Room/bottom wall 1.png<>uid://p4xwd8o34jyw::::res://assets/Intro_Room/new floor 1.png<>uid://iapwdf0m3w66::::res://assets/Cauldron_Room/Conveyor belt Assets/conveyor_belt_spritesheet.png<>uid://c3ua1ar51grfb::::res://assets/Cauldron_Room/Cauldron Assets/Podium.png<>uid://cjm6fc7tjr8mi::::res://assets/Intro_Room/border_corners.png<>uid://cauw3ec0j282c::::res://assets/Cauldron_Room/Exit Assets/entrance_carpet.png<>uid://d0jfdnb7f1soi::::res://assets/Intro_Room/BookSheet 1.png<>uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>uid://bl5dvy0nyd8yx::::res://Scene Folder/Character Scenes/student_npc1.tscn<>uid://dg832qlytv3k6::::res://Scene Folder/Character Scenes/principal_villain.tscn<>res://Scene Folder/Environment/ConstructedTileMap.gd<>uid://b3x8du405q3fd::::res://Scene Folder/Character Scenes/student_npc_2.tscn<>uid://bn0did6g2b5vr::::res://Scene Folder/Environment/LibraryProps/secret_bookshelf.tscn<>uid://58nyyclu775n::::res://Scene Folder/Character Scenes/student_npc_3.tscn<>uid://cqvrvrwoiyist::::res://assets/Intro_Room/CandleSheet.png<>uid://c18dh30jhlcqd::::res://Scene Folder/Character Scenes/student_npc_4.tscn<>uid://tc6xwxkrs2qo::::res://Scene Folder/Character Scenes/student_npc_5.tscn<>uid://k8modbb416u8::::res://assets/Intro_Room/skylight.png<>uid://kfgtao24fa7v::::res://assets/Intro_Room/bookshelf.tscn<>uid://daxhlrf5d2t45::::res://Scene Folder/Character Scenes/professor_thornewood.tscn<>res://EnvironmentExitArea.gd<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/fox.gd<>uid://cc887apnq476h::::res://Scene Folder/Environment/LibraryProps/table_top.tscn
 school_courtyard.gd::GDScript::-1::1741754309::0::1::::<>Node2D<>::
 school_courtyard.tscn::PackedScene::7361590703011096692::1744043864::0::1::::<><>::uid://co48lktbon2ou::::res://Scene Folder/main_character.tscn<>res://Scene Folder/Environment/school_courtyard.gd<>uid://pqtd87lsm22e::::res://assets/Library_Courtyard/final_schoolcourtyard.png<>uid://c3hphwxbvrqnq::::res://assets/Tilesets/Interior_Tiles.tres<>uid://1q1al4h8xolo::::res://Scene Folder/fox.tscn<>res://Scene Folder/Environment/ConstructedTileMap.gd<>res://Scene Folder/fox.gd<>res://EnvironmentExitArea.gd
 SpeakerVillager.gd::GDScript::-1::1741889602::0::1::::<>Sprite2D<>::
@@ -851,7 +343,7 @@ ConveyorIcon.gd::GDScript::-1::1741219100::0::1::::<>Area2D<>::
 conveyor_icon.tscn::PackedScene::4500718582291409818::1741219100::0::1::::<><>::res://Scene Folder/Environment/conveyor_belt_cauldron_room/ConveyorIcon.gd<>uid://cnxmkieinng6s::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/conveyors_1.png<>res://adjacent_conveyors.tscn
 Label.gd::GDScript::-1::1741219100::0::1::::<>Label<>::
 main.tscn::PackedScene::5793974281576338387::1741632418::0::1::::<><>::uid://br4gu02oyltp0::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt(toptoright).tscn<>uid://2sdi7rhr14fh::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/generator.tscn<>uid://d3r5ri72l82h6::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/trash.tscn<>uid://cfwfejmwtkwmg::::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/belt.tscn
-::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/::1741759562
+::res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/::1744153578
 box.png::CompressedTexture2D::3386752611382052900::1741219100::1741219100::1::::<><>::
 conveyors_1.png::CompressedTexture2D::5733523911623638016::1741219100::1741219100::1::::<><>::
 icon.svg::CompressedTexture2D::2062041730011701816::1741219100::1744153578::1::::<><>::
@@ -925,11 +417,11 @@ projection.gdshader::Shader::-1::1741219100::0::1::::<><>::
 Cannonball.gd::GDScript::-1::1741219100::0::1::::<>RigidBody2D<>::
 Cannonball.tscn::PackedScene::168879098445437694::1741219100::0::1::::<><>::uid://ckhae4btifobd::::res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png<>res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd
 CannonballKinematics.gd::GDScript::-1::1741219100::0::1::::<>CharacterBody2D<>::
-::res://Scene Folder/Minigames/Cannonball_Game/GameManager/::1744065316
+::res://Scene Folder/Minigames/Cannonball_Game/GameManager/::1744311087
 Cannonball_Game.gd::GDScript::-1::1741754309::0::1::::<>Node2D<>::
-Cannonball_Game.tscn::PackedScene::1128271819636443245::1741893761::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd<>uid://d215x53gvybky::::res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn<>uid://cd21lswhh1b46::::res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PowerGauge.tscn<>uid://b1k24nnqgwa42::::res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn<>uid://driya7hway11j::::res://assets/Cannon_Game/bag_poof/poof_spritesheet.png<>uid://cfveiu5idd6ok::::res://assets/Cannon_Game/Platform2.PNG
+Cannonball_Game.tscn::PackedScene::1128271819636443245::1744310935::0::1::::<><>::res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd<>uid://d215x53gvybky::::res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn<>uid://cd21lswhh1b46::::res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PowerGauge.tscn<>uid://b1k24nnqgwa42::::res://Scene Folder/Minigames/Cannonball_Game/Background/tile_map.tscn<>uid://driya7hway11j::::res://assets/Cannon_Game/bag_poof/poof_spritesheet.png<>uid://cfveiu5idd6ok::::res://assets/Cannon_Game/Platform2.PNG
 collidable.gd::GDScript::-1::1741219100::0::1::::<>Area2D<>::
-trajection.gdshader::Shader::-1::1744065316::0::1::::<><>::
+trajection.gdshader::Shader::-1::1744311087::0::1::::<><>::
 utilities.gd::GDScript::-1::1741219100::0::1::::<>Control<>::
 ::res://Scene Folder/Minigames/Cannonball_Game/Powerguage/::1741754309
 PinkCounter.gd::GDScript::-1::1741219100::0::1::::<>Sprite2D<>::
@@ -954,41 +446,44 @@ fairness_minigame_2.tscn::PackedScene::5226063893846805308::1741892706::0::1::::
 Scale.gd::GDScript::-1::1741641891::0::1::::<>MarginContainer<>::
 ::res://Scene Folder/Minigames/Mixing_Game/::1741829604
 orb.tscn::PackedScene::3056122593181213641::1741829604::0::1::::<><>::uid://dc3awslq62bux::::res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG
-::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/::1744065316
-DragAndDrop.tscn::PackedScene::8766423521239209276::1741829604::0::1::::<><>::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader<>uid://e8y24jfjuqws::::res://assets/Mixing_Game/Orb Placement UI.png<>uid://bgwwsgq3lyrw4::::res://assets/Mixing_Game/empty_bag.png<>uid://cnli6oka52tgt::::res://assets/Mixing_Game/Button_Inactive.png<>uid://bsk7megi46n57::::res://assets/Mixing_Game/smoke assets/redviolet.png<>res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/mix_button.gd<>uid://dl510nt7j3vra::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn<>uid://dqts64q2gs8nx::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn<>uid://cv5djbk75mub8::::res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG<>uid://dymegq2gsesuu::::res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG<>uid://ug8afxm6hldc::::res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG<>uid://dc3awslq62bux::::res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG<>uid://uydmdruacy60::::res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG
+::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/::1744311087
+DragAndDrop.tscn::PackedScene::8766423521239209276::1744311087::0::1::::<><>::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader<>uid://e8y24jfjuqws::::res://assets/Mixing_Game/Orb Placement UI.png<>uid://bgwwsgq3lyrw4::::res://assets/Mixing_Game/empty_bag.png<>uid://cnli6oka52tgt::::res://assets/Mixing_Game/Button_Inactive.png<>uid://bsk7megi46n57::::res://assets/Mixing_Game/smoke assets/redviolet.png<>res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/mix_button.gd<>uid://dl510nt7j3vra::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn<>uid://dqts64q2gs8nx::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn<>uid://cv5djbk75mub8::::res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG<>uid://dymegq2gsesuu::::res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG<>uid://ug8afxm6hldc::::res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG<>uid://dc3awslq62bux::::res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG<>uid://uydmdruacy60::::res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG
 draggable.gd::GDScript::-1::1741219100::0::1::::<>Sprite2D<>::
 draggable.tscn::PackedScene::8322656541225350565::1741219100::0::1::::<><>::uid://gq8d1nh6unni::::res://assets/Cauldron_Room/Orbs Assets/orb 3.PNG<>res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.gd
 DropSpot.tscn::PackedScene::7994894664000924870::1741829604::0::1::::<><>::
-gui_blur.gdshader::Shader::-1::1744065316::0::1::::<><>::
+gui_blur.gdshader::Shader::-1::1744311087::0::1::::<><>::
 mix_button.gd::GDScript::-1::1741219100::0::1::::<>TextureRect<>::
-::res://Scene Folder/Minigames/Mixing_Game/GameManager/::1744043864
+::res://Scene Folder/Minigames/Mixing_Game/GameManager/::1744311087
 mixing_game.gd::GDScript::-1::1741754309::0::1::::<>Node2D<>::
-Mixing_Game.tscn::PackedScene::7369704589017307039::1744043864::0::1::::<><>::res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd<>uid://d3ts7tyirdj4b::::res://assets/Mixing_Game/Podium.png<>uid://fq046hrx6lal::::res://assets/Mixing_Game/mixing_game_bkg.PNG<>uid://dw5rykc2ps4g3::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn<>uid://8vw07d50xiwm::::res://assets/Mixing_Game/cauldron_mixing_spritesheet.png<>uid://bjsn5l36wjgx2::::res://Scene Folder/Minigames/Mixing_Game/orb.tscn
+Mixing_Game.tscn::PackedScene::7369704589017307039::1744311087::0::1::::<><>::res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd<>uid://d3ts7tyirdj4b::::res://assets/Mixing_Game/Podium.png<>uid://fq046hrx6lal::::res://assets/Mixing_Game/mixing_game_bkg.PNG<>uid://dw5rykc2ps4g3::::res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn<>uid://8vw07d50xiwm::::res://assets/Mixing_Game/cauldron_mixing_spritesheet.png<>uid://bjsn5l36wjgx2::::res://Scene Folder/Minigames/Mixing_Game/orb.tscn
 ::res://Scene Folder/Minigames/Mixing_Game/MixingScenes/::1741829224
-::res://Scene Folder/Minigames/Transparency_Pillar/::1744044782
-Cargo_Game.tscn::PackedScene::8571392594074240008::1744044774::0::1::::<><>::res://Scripts/Minigames/Cargo_Game.gd<>uid://4c7krm7ftp2w::::res://assets/Cargo_Game/grid_temp.png<>uid://dveihhhr2tnys::::res://assets/Fairness_Village/Shapes/shape_1.png<>uid://bvajh5tliyl4h::::res://assets/Fairness_Village/Shapes/shape_2.png<>uid://cfde7qfhiv5e2::::res://assets/Fairness_Village/Shapes/shape_3.png<>uid://dhx0egkoem8ij::::res://assets/Fairness_Village/Shapes/shape_4.png<>uid://b0xrb12vr1kdv::::res://assets/Fairness_Village/Shapes/shape_5.png<>uid://c4406eoe70ptv::::res://assets/Fairness_Village/Shapes/shape_6.png
-::res://Scripts/::1744044782
+::res://Scene Folder/Minigames/Transparency_Pillar/::1744311087
+Cargo_Game.tscn::PackedScene::8571392594074240008::1744311087::0::1::::<><>::res://Scripts/Minigames/Cargo_Game.gd<>uid://4c7krm7ftp2w::::res://assets/Cargo_Game/grid_temp.png<>uid://dveihhhr2tnys::::res://assets/Fairness_Village/Shapes/shape_1.png<>uid://bvajh5tliyl4h::::res://assets/Fairness_Village/Shapes/shape_2.png<>uid://cfde7qfhiv5e2::::res://assets/Fairness_Village/Shapes/shape_3.png<>uid://dhx0egkoem8ij::::res://assets/Fairness_Village/Shapes/shape_4.png<>uid://b0xrb12vr1kdv::::res://assets/Fairness_Village/Shapes/shape_5.png<>uid://c4406eoe70ptv::::res://assets/Fairness_Village/Shapes/shape_6.png
+::res://Scripts/::1744215252
 3choice_dialogue.gd::GDScript::-1::1741889602::0::1::::<>MarginContainer<>::
 cauldron_area.gd::GDScript::-1::1741754309::0::1::::<>Area2D<>::
 dialogue.gd::GDScript::-1::1741889602::0::1::::<>MarginContainer<>::
 fox_area.gd::GDScript::-1::1741219100::0::1::::<>Area2D<>::
 main_character.gd::GDScript::-1::1741889602::0::1::::<>CharacterController<>::
-::res://Scripts/Cutscene/::1741754332
-Action.gd::GDScript::-1::1741754309::0::1::::Action<>Node<>::
+::res://Scripts/Cutscene/::1744215247
+Action.gd::GDScript::-1::1744215232::0::1::::Action<>Node<>::
 CutsceneManager.gd::GDScript::-1::1741630576::0::1::::CutsceneManager<>Node<>::
 GroupAction.gd::GDScript::-1::1741219100::0::1::::GroupAction<>Action<>::
-::res://Scripts/Dialogues/::1741219369
+::res://Scripts/Dialogues/::1744215252
 ::res://Scripts/Dialogues/Cannon/::1741219369
 UnhappyCannon.json::JSON::-1::1741219100::0::1::::<><>::
 ::res://Scripts/Dialogues/Cauldron/::1741219369
 FoxBlurb.json::JSON::-1::1741219100::0::1::::<><>::
 FoxIntro.json::JSON::-1::1741219100::0::1::::<><>::
-::res://Scripts/Dialogues/Fairness/::1741219369
+::res://Scripts/Dialogues/Fairness/::1744215252
+FoxFairness1Segue.json::JSON::-1::1744215232::0::1::::<><>::
 FoxLibraryExit.json::JSON::-1::1741219100::0::1::::<><>::
-SickVillagerComplaint.json::JSON::-1::1741219100::0::1::::<><>::
-::res://Scripts/Minigames/::1744044782
-Cargo_Game.gd::GDScript::-1::1744044774::0::1::::<>Control<>::
-::res://Scripts/Monologues/::1741754332
+::res://Scripts/Dialogues/Transparency/::1744215245
+CaptainMeet1.json::JSON::-1::1744215232::0::1::::<><>::
+CaptainMeet3.json::JSON::-1::1744215232::0::1::::<><>::
+::res://Scripts/Minigames/::1744215247
+Cargo_Game.gd::GDScript::-1::1744215232::0::1::::<>Control<>::
+::res://Scripts/Monologues/::1744215252
 badmix.json::JSON::-1::1741630576::0::1::::<><>::
 goodmix1.json::JSON::-1::1741219100::0::1::::<><>::
 goodmix2.json::JSON::-1::1741219100::0::1::::<><>::
@@ -996,11 +491,17 @@ goodmix3.json::JSON::-1::1741219100::0::1::::<><>::
 MixingIntro.json::JSON::-1::1741219100::0::1::::<><>::
 MixingSegue.json::JSON::-1::1741219100::0::1::::<><>::
 UnhappyCannon.json::JSON::-1::1741219100::0::1::::<><>::
-::res://Scripts/Monologues/Cauldron/::1741219375
+::res://Scripts/Monologues/Cauldron/::1744215247
 CauldronBlurb.json::JSON::-1::1741219100::0::1::::<><>::
+FoxLibraryExit.json::JSON::-1::1744215232::0::1::::<><>::
 OrbHypothesis.json::JSON::-1::1741219100::0::1::::<><>::
-::res://Scripts/Monologues/Fairness/::1741219375
+::res://Scripts/Monologues/Fairness/::1744215247
 FairnessSegue.json::JSON::-1::1741219100::0::1::::<><>::
+FoxFairness1Completion.json::JSON::-1::1744215232::0::1::::<><>::
+FoxFairness2Completion.json::JSON::-1::1744215232::0::1::::<><>::
+FoxFairness2Failure.json::JSON::-1::1744215232::0::1::::<><>::
+FoxVillagerResponse.json::JSON::-1::1744215232::0::1::::<><>::
+VillagerWarning.json::JSON::-1::1744215232::0::1::::<><>::
 ::res://Scripts/Monologues/Intro/::1741754332
 Blurbs.cfg::TextFile::-1::1741630576::0::1::::<><>::
 BookshelfAmbient.json::JSON::-1::1741630576::0::1::::<><>::
@@ -1015,4 +516,5 @@ ThornewoodLeadsStudents.json::JSON::-1::1741754309::0::1::::<><>::
 ThornewoodSpeech.json::JSON::-1::1741754309::0::1::::<><>::
 ::res://Scripts/Monologues/Mixing/::1741219375
 MixingIntro.json::JSON::-1::1741219100::0::1::::<><>::
->>>>>>> Stashed changes
+::res://Scripts/Monologues/Transparency/::1744215252
+CaptainMeet2.json::JSON::-1::1744215232::0::1::::<><>::

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d6kvpuxma1dd" path="res://assets/ui_assets/portraits/Player.PNG" id="4_faomy"]
 [ext_resource type="Texture2D" uid="uid://c1ltxtksg64vc" path="res://assets/ui_assets/Selection Box.png" id="7_wdcv8"]
 [ext_resource type="Script" path="res://Scene Folder/instructions.gd" id="9_n6h7w"]
-[ext_resource type="Texture2D" uid="uid://deds8p1uj33pp" path="res://assets/ui_assets/Dialogue Box_Long_Active_Light (1).png" id="11_hc81s"]
+[ext_resource type="Texture2D" uid="uid://vr5hr322gvtx" path="res://assets/ui_assets/V1Dialogue Box_Long_Light.png" id="11_kuyik"]
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
 [ext_resource type="Texture2D" uid="uid://c322tj52eg8ox" path="res://assets/ui_assets/Instruction Box_Blank.png" id="13_8b21l"]
 [ext_resource type="Texture2D" uid="uid://depcak66xf1yd" path="res://assets/ui_assets/Up Arrow.png" id="14_jvl43"]
@@ -679,14 +679,15 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -64.0
-offset_right = 1044.0
-offset_bottom = 67.0
+offset_left = -5.0
+offset_top = -76.0
+offset_right = 1063.0
+offset_bottom = 70.0
 grow_vertical = 2
 scale = Vector2(0.988986, 1.00495)
 size_flags_vertical = 8
 mouse_filter = 2
-texture = ExtResource("11_hc81s")
+texture = ExtResource("11_kuyik")
 expand_mode = 2
 
 [node name="ArrowContainer" type="MarginContainer" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
