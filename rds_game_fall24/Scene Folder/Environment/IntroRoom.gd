@@ -46,7 +46,7 @@ func _ready():
 			add_child(cm)
 			
 			# OPEN SCENE
-			UI.start_scene_change(false, false, "")
+			UI.start_scene_change(false, true, "")
 			
 			cm.parallel_action()
 			
@@ -67,7 +67,7 @@ func _ready():
 			cm.set_actions(actions)
 			cm.series_action()
 			
-			cm.wait(1.)
+			cm.wait(1.000)
 			
 			await cm.wait_complete
 			
