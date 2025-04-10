@@ -1,3 +1,5 @@
+RichTextLabel
+TextureButton
 Line2D
 Path2D
 Control
@@ -10,5 +12,3 @@ VBoxContainer
 MarginContainer
 CanvasLayer
 PointLight2D
-CollisionShape2D
-Area2D

@@ -27,6 +27,7 @@ offset_left = 11.3449
 offset_top = -3.78165
 offset_right = 93.3449
 offset_bottom = 52.2183
+size_flags_horizontal = 8
 theme_override_colors/default_color = Color(1, 0.760784, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8

@@ -1,14 +1,16 @@
-res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
+res://Scene Folder/Environment/fairness_village.tscn
 res://Scene Folder/Environment/Cauldron_Room.gd
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
-res://assets/animation_frameworks_hero_player.res
-res://assets/Tilesets/Interior_Tiles.tres
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
+res://assets/animation_frameworks_hero_player.res
+res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Transparency_Pillar/Cargo_Game.tscn
-res://Scene Folder/Environment/fairness_village.tscn
+res://assets/Tilesets/Interior_Tiles.tres
 res://Scene Folder/Environment/Intro_Room.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/UI.tscn
-res://Scene Folder/PlayerState.tscn
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/mix_button.gd
+res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PowerGauge.tscn
