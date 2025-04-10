@@ -1,28 +1,15 @@
-<<<<<<< Updated upstream
 res://Scene Folder/Minigames/Transparency_Pillar/Cargo_Game.tscn
-=======
-res://Scene Folder/Environment/fairness_village.tscn
->>>>>>> Stashed changes
 res://Scene Folder/Environment/Cauldron_Room.gd
-res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
-res://Scene Folder/UI.gdshader
-res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-<<<<<<< Updated upstream
-res://Scene Folder/Environment/fairness_village.tscn
+res://Scripts/Minigames/Cargo_Game.gd
+res://Scene Folder/Environment/Intro_Room.tscn
 res://assets/animation_frameworks_hero_player.res
-res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
-res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
-res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
+res://Scene Folder/PlayerState.gd
+res://Scene Folder/PlayerState.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://assets/Tilesets/Interior_Tiles.tres
-res://Scene Folder/Environment/Intro_Room.tscn
-res://Scene Folder/main_character.tscn
-res://Scene Folder/Character Scenes/CharacterController.gd
-res://Scripts/Cutscene/Action.gd
-res://Scene Folder/PlayerState.gd
-=======
-res://assets/animation_frameworks_hero_player.res
-res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
-res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
-res://Scene Folder/Minigames/Transparency_Pillar/Cargo_Game.tscn
->>>>>>> Stashed changes
+res://Scene Folder/Environment/IntroRoom.gd
+res://resources/gradients/finished_cargo_line_gradient.tres
+res://resources/gradients/started_cargo_line_gradient.tres
+res://resources/gradients/trailing_cargo_line_gradient.tres
+res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
+res://Scene Folder/Minigames/Cannonball_Game/Cannon/Cannon.tscn
