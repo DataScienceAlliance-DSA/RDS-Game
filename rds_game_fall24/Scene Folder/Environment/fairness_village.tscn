@@ -707,6 +707,7 @@ size = Vector2(51, 1096)
 
 [node name="Fairness_Village" type="Node2D"]
 script = ExtResource("1_x0gev")
+default_spawn = Vector2(-184, -280)
 
 [node name="Fox" parent="." instance=ExtResource("2_1u6gi")]
 z_index = 2

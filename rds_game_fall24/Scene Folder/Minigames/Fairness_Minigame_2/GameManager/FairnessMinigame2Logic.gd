@@ -145,6 +145,8 @@ func win_game():
 		current_weights.erase(weight)
 		weight.queue_free()
 	
+	PS.village_state = 3
+	UI.start_scene_change(true, true, "res://Scene Folder/Environment/fairness_village.tscn")
 	_on_game_timer_timeout()
 
 func _on_game_timer_timeout():

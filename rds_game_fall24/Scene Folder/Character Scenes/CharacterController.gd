@@ -56,16 +56,17 @@ func set_autonomous(autonomous):
 	self.autonomous = autonomous
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
-	var diff = target_pos - start_pos
-	print(diff)
-	var theta = atan2(diff.y, diff.x)
-	print(theta)
-	set_directional_anim(theta, true)
 	target_pos *= 64.
 	target_pos = Vector2(target_pos.x + 32., target_pos.y + 32.)
 	t /= ((target_pos - start_pos).length());
 	if (t >= 1.):
 		hopping = false
+	
+	var diff = target_pos - start_pos
+	var theta = atan2(diff.y, diff.x)
+	print(theta)
+	set_directional_anim(theta, true)
+	
 	self.position = start_pos.lerp(target_pos, t)
 
 func occupyAStarCell(vGlobalPosition:Vector2)->void:
