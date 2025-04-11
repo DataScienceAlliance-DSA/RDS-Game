@@ -1,4 +1,11 @@
+<<<<<<< Updated upstream
 TextureButton
+=======
+CharacterBody2D
+AnimationPlayer
+AnimationTree
+Sprite2D
+>>>>>>> Stashed changes
 Panel
 RichTextLabel
 Control
@@ -10,5 +17,8 @@ TextureRect
 GridContainer
 VBoxContainer
 MarginContainer
+<<<<<<< Updated upstream
 CanvasLayer
 PointLight2D
+=======
+>>>>>>> Stashed changes
