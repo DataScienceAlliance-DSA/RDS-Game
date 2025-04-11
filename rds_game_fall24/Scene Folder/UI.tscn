@@ -1,21 +1,32 @@
-[gd_scene load_steps=23 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=33 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scene Folder/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
 [ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://icon.svg" id="1_q8u87"]
-[ext_resource type="Texture2D" uid="uid://b0qeahoitxahb" path="res://assets/ui_assets/Dialogue Box_Short_Disabled_Light.png" id="3_cg541"]
+[ext_resource type="Texture2D" uid="uid://b5ednfhfm8au0" path="res://assets/ui_assets/Light_Short_Dialogue.png" id="3_k87fs"]
 [ext_resource type="Script" path="res://Scripts/3choice_dialogue.gd" id="3_rj2pq"]
 [ext_resource type="Texture2D" uid="uid://c2o8far2sc0u" path="res://assets/ui_assets/Dialogue Arrow_Active_Light.png" id="4_0lg18"]
 [ext_resource type="Texture2D" uid="uid://d6kvpuxma1dd" path="res://assets/ui_assets/portraits/Player.PNG" id="4_faomy"]
-[ext_resource type="Texture2D" uid="uid://c1ltxtksg64vc" path="res://assets/ui_assets/Selection Box.png" id="7_wdcv8"]
 [ext_resource type="Script" path="res://Scene Folder/instructions.gd" id="9_n6h7w"]
-[ext_resource type="Texture2D" uid="uid://vr5hr322gvtx" path="res://assets/ui_assets/V1Dialogue Box_Long_Light.png" id="11_kuyik"]
+[ext_resource type="Texture2D" uid="uid://ds8d7hxthwbxp" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Active.png" id="10_2g7ig"]
+[ext_resource type="Texture2D" uid="uid://ckmgth8tt6dg3" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Pressed.png" id="11_glrh1"]
+[ext_resource type="Texture2D" uid="uid://bme4p8mckxegf" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Hover.png" id="12_finca"]
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
 [ext_resource type="Texture2D" uid="uid://c322tj52eg8ox" path="res://assets/ui_assets/Instruction Box_Blank.png" id="13_8b21l"]
+[ext_resource type="Texture2D" uid="uid://ci0havxrkeguw" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Visted.png" id="13_uwh05"]
 [ext_resource type="Texture2D" uid="uid://depcak66xf1yd" path="res://assets/ui_assets/Up Arrow.png" id="14_jvl43"]
 [ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
+[ext_resource type="Texture2D" uid="uid://bcwaxymjtlorf" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Active.png" id="14_sddsj"]
 [ext_resource type="Texture2D" uid="uid://p418ca7vm0ql" path="res://assets/ui_assets/Down Arrow.png" id="15_c2gf0"]
+[ext_resource type="Texture2D" uid="uid://ce8ih4fkowtko" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Pressed.png" id="15_sqvjo"]
+[ext_resource type="Texture2D" uid="uid://dg1eky31u2ghm" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Hover.png" id="16_3yibk"]
 [ext_resource type="Texture2D" uid="uid://cyxplpjlubiq8" path="res://assets/ui_assets/Spacebar.png" id="16_44x15"]
+[ext_resource type="Texture2D" uid="uid://r68o4hiey6ew" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Visted.png" id="17_tfw6t"]
+[ext_resource type="Texture2D" uid="uid://bygnom1g3evsk" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Active.png" id="18_2ulfr"]
+[ext_resource type="Texture2D" uid="uid://c6u4wdoosptab" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Pressed.png" id="19_5gvgm"]
+[ext_resource type="Texture2D" uid="uid://wxhymweehla0" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Hover.png" id="20_euilg"]
+[ext_resource type="Texture2D" uid="uid://b2qgnc42fi0ba" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Visted.png" id="21_cei1u"]
+[ext_resource type="Texture2D" uid="uid://368psvt1tbm2" path="res://assets/ui_assets/Light_Long_Dialogue.png" id="22_84ua4"]
 
 [sub_resource type="Gradient" id="Gradient_ci8dm"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -36,9 +47,6 @@ fill_to = Vector2(0.5, 0)
 gradient = SubResource("Gradient_6hbbo")
 fill_from = Vector2(0.508547, 1)
 fill_to = Vector2(0.5, 0)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n5iv0"]
-load_path = "res://.godot/imported/Frame 28.png-2bb6940214838b5583ea315b9e582350.ctex"
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_gxgmr")
@@ -112,11 +120,13 @@ texture = SubResource("GradientTexture2D_en6ay")
 
 [node name="TextureRect" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
 layout_mode = 0
-offset_right = 1431.0
-offset_bottom = 404.0
+offset_left = -1.60001
+offset_top = -3.0
+offset_right = 5738.4
+offset_bottom = 1717.0
 scale = Vector2(0.08, 0.08)
 mouse_filter = 2
-texture = ExtResource("3_cg541")
+texture = ExtResource("3_k87fs")
 
 [node name="ArrowContainer" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect"]
 layout_mode = 1
@@ -265,14 +275,15 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -1528.0
+offset_top = -3.2
 offset_right = 4442.0
-offset_bottom = 1716.0
+offset_bottom = 1712.8
 grow_horizontal = 0
 scale = Vector2(-0.08, 0.08)
 pivot_offset = Vector2(1423, 0)
 size_flags_vertical = 8
 mouse_filter = 2
-texture = ExtResource("3_cg541")
+texture = ExtResource("3_k87fs")
 
 [node name="ArrowContainer" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
 layout_mode = 1
@@ -383,17 +394,18 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_right = 4.0
+offset_left = -158.0
+offset_right = 159.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 mouse_filter = 2
 script = ExtResource("3_rj2pq")
 
 [node name="ChoiceContainer" type="VBoxContainer" parent="Monologue"]
 custom_minimum_size = Vector2(1366, 544)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 size_flags_vertical = 0
 mouse_filter = 2
 
@@ -401,235 +413,59 @@ mouse_filter = 2
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
+alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 195
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 100
 
-[node name="ChoiceBounds1" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="ChoiceTexture1" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer"]
+texture_filter = 1
 layout_mode = 2
-mouse_filter = 2
-texture = SubResource("CompressedTexture2D_n5iv0")
-expand_mode = 3
-
-[node name="ScaleControl" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1"]
-layout_direction = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -168.288
-offset_top = -204.0
-offset_right = 175.712
-offset_bottom = 213.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.8, 0.8)
-pivot_offset = Vector2(172, 208)
-mouse_filter = 2
-
-[node name="ChoiceTexture1" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl"]
-layout_direction = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -176.448
-offset_top = -208.5
-offset_right = 176.448
-offset_bottom = 208.5
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("7_wdcv8")
-expand_mode = 3
-
-[node name="MonologueText" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1"]
-clip_contents = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.5
-anchor_right = 0.8
-anchor_bottom = 0.5
-offset_left = -0.499992
-offset_top = -70.0001
-offset_right = 0.500031
-offset_bottom = 70.0001
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("14_mugcx")
-theme_override_fonts/bold_font = ExtResource("12_sp71b")
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 35
-bbcode_enabled = true
-text = "[center][color=black][b]This is the first choice a player can choose to make."
-fit_content = true
-scroll_active = false
+texture_normal = ExtResource("10_2g7ig")
+texture_pressed = ExtResource("11_glrh1")
+texture_hover = ExtResource("12_finca")
+texture_disabled = ExtResource("13_uwh05")
 
 [node name="MarginContainer2" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 75
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 75
 theme_override_constants/margin_bottom = 100
 
-[node name="ChoiceBounds2" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="ChoiceTexture2" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2"]
+texture_filter = 1
 layout_mode = 2
-mouse_filter = 2
-texture = SubResource("CompressedTexture2D_n5iv0")
-expand_mode = 3
-
-[node name="ScaleControl" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -168.288
-offset_top = -204.0
-offset_right = 175.712
-offset_bottom = 213.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.8, 0.8)
-pivot_offset = Vector2(172, 208)
-mouse_filter = 2
-
-[node name="ChoiceTexture2" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl"]
-layout_direction = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -168.288
-offset_top = -204.0
-offset_right = 175.712
-offset_bottom = 213.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("7_wdcv8")
-expand_mode = 3
-
-[node name="MonologueText" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2"]
-clip_contents = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.5
-anchor_right = 0.8
-anchor_bottom = 0.5
-offset_left = -0.5
-offset_top = -70.0001
-offset_right = 0.5
-offset_bottom = 70.0001
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("14_mugcx")
-theme_override_fonts/bold_font = ExtResource("12_sp71b")
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 35
-bbcode_enabled = true
-text = "[center][color=black][b]This is the first choice a player can choose to make."
-fit_content = true
-scroll_active = false
+texture_normal = ExtResource("14_sddsj")
+texture_pressed = ExtResource("15_sqvjo")
+texture_hover = ExtResource("16_3yibk")
+texture_disabled = ExtResource("17_tfw6t")
 
 [node name="MarginContainer3" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 195
 theme_override_constants/margin_bottom = 100
 
-[node name="ChoiceBounds3" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="ChoiceTexture3" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3"]
+texture_filter = 1
 layout_mode = 2
-mouse_filter = 2
-texture = SubResource("CompressedTexture2D_n5iv0")
-expand_mode = 3
-
-[node name="ScaleControl" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -168.288
-offset_top = -204.0
-offset_right = 175.712
-offset_bottom = 213.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.8, 0.8)
-pivot_offset = Vector2(172, 208)
-mouse_filter = 2
-
-[node name="ChoiceTexture3" type="TextureRect" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl"]
-layout_direction = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -168.288
-offset_top = -204.0
-offset_right = 175.712
-offset_bottom = 213.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("7_wdcv8")
-expand_mode = 3
-
-[node name="MonologueText" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3"]
-clip_contents = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.5
-anchor_right = 0.8
-anchor_bottom = 0.5
-offset_left = -0.5
-offset_top = -70.0001
-offset_right = 0.5
-offset_bottom = 70.0001
-grow_horizontal = 2
-grow_vertical = 2
 size_flags_horizontal = 0
-size_flags_vertical = 0
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("14_mugcx")
-theme_override_fonts/bold_font = ExtResource("12_sp71b")
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 35
-bbcode_enabled = true
-text = "[center][color=black][b]This is the first choice a player can choose to make."
-fit_content = true
-scroll_active = false
+texture_normal = ExtResource("18_2ulfr")
+texture_pressed = ExtResource("19_5gvgm")
+texture_hover = ExtResource("20_euilg")
+texture_disabled = ExtResource("21_cei1u")
 
 [node name="TextContainer" type="MarginContainer" parent="Monologue"]
 custom_minimum_size = Vector2(1366, 223)
@@ -676,6 +512,7 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_en6ay")
 
 [node name="TextBanner" type="TextureRect" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -688,7 +525,7 @@ grow_vertical = 2
 scale = Vector2(0.988986, 1.00495)
 size_flags_vertical = 8
 mouse_filter = 2
-texture = ExtResource("11_kuyik")
+texture = ExtResource("22_84ua4")
 expand_mode = 2
 
 [node name="ArrowContainer" type="MarginContainer" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
@@ -969,9 +806,9 @@ bbcode_enabled = true
 text = "[center][b]Skipping..."
 fit_content = true
 
-[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_entered"]
-[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1" to="Monologue" method="_on_choice_bounds_1_mouse_exited"]
-[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2" to="Monologue" method="_on_choice_bounds_2_mouse_entered"]
-[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2" to="Monologue" method="_on_choice_bounds_2_mouse_exited"]
-[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3" to="Monologue" method="_on_choice_bounds_3_mouse_entered"]
-[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3" to="Monologue" method="_on_choice_bounds_3_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_exited"]
