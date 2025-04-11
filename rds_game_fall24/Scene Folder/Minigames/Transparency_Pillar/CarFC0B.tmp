@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://duebt314dsyf5"]
+[gd_scene load_steps=6 format=3 uid="uid://duebt314dsyf5"]
 
 [ext_resource type="Script" path="res://Scripts/Minigames/Cargo_Game.gd" id="1_3ljot"]
 [ext_resource type="Texture2D" uid="uid://4c7krm7ftp2w" path="res://assets/Cargo_Game/grid_temp.png" id="1_mohk4"]
 [ext_resource type="Texture2D" uid="uid://dveihhhr2tnys" path="res://assets/Fairness_Village/Shapes/shape_1.png" id="2_r1i83"]
-[ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="4_v6q7a"]
 
 [sub_resource type="Gradient" id="Gradient_a745t"]
 offsets = PackedFloat32Array(0)
@@ -20,7 +19,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3ljot")
-timer_start = 60.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -1109,35 +1107,6 @@ stretch_mode = 6
 [node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Panel" type="Panel" parent="MarginContainer"]
-custom_minimum_size = Vector2(256, 128)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-
-[node name="Timer" type="RichTextLabel" parent="MarginContainer/Panel"]
-z_index = 1
-custom_minimum_size = Vector2(256, 128)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -64.0
-offset_right = 128.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme_override_fonts/normal_font = ExtResource("4_v6q7a")
-theme_override_font_sizes/normal_font_size = 50
-bbcode_enabled = true
-text = "[center][color=black]10:50"
-fit_content = true
 
 [node name="Backdrop" type="TextureRect" parent="."]
 layout_mode = 1

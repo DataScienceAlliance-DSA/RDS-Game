@@ -1,9 +1,10 @@
+Panel
+RichTextLabel
+Control
 Line2D
 Path2D
-Control
 PanelContainer
 HBoxContainer
-Panel
 TextureRect
 GridContainer
 VBoxContainer
@@ -11,4 +12,3 @@ MarginContainer
 CanvasLayer
 PointLight2D
 CollisionShape2D
-Area2D
