@@ -9,20 +9,20 @@ var interacted_area
 signal monologue_complete
 
 # properties for player character's dialogue box
-@onready var choice1_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1") as Control)
-@onready var choice1_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1") as TextureRect)
-@onready var choice1_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1/MonologueText") as RichTextLabel)
-@onready var choice1_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl") as Control)
+@onready var choice1_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer") as Control)
+@onready var choice1_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceTexture1") as TextureButton)
+#@onready var choice1_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1/MonologueText") as RichTextLabel)
+@onready var choice1_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ScaleControl") as Control)
 
-@onready var choice2_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2") as Control)
-@onready var choice2_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2") as TextureRect)
-@onready var choice2_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2/MonologueText") as RichTextLabel)
-@onready var choice2_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl") as Control)
+@onready var choice2_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2") as Control)
+@onready var choice2_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceTexture2") as TextureButton)
+#@onready var choice2_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2/MonologueText") as RichTextLabel)
+@onready var choice2_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ScaleControl") as Control)
 
-@onready var choice3_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3") as Control)
-@onready var choice3_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3") as TextureRect)
-@onready var choice3_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3/MonologueText") as RichTextLabel)
-@onready var choice3_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl") as Control)
+@onready var choice3_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3") as Control)
+@onready var choice3_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceTexture3") as TextureButton)
+#@onready var choice3_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3/MonologueText") as RichTextLabel)
+@onready var choice3_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ScaleControl") as Control)
 
 # booleans, if given choice is currently hovered by mouse
 var choice1_hovered
@@ -59,9 +59,9 @@ func _ready():
 
 func open_3choice_dialogue(json_path, area):
 	# make choice priming active when dialogue opened
-	choice1_bounds.mouse_filter = 1
-	choice2_bounds.mouse_filter = 1
-	choice3_bounds.mouse_filter = 1
+	#choice1_bounds.mouse_filter = 1
+	#choice2_bounds.mouse_filter = 1
+	#choice3_bounds.mouse_filter = 1
 
 	# after disabling player & enabling interactable, enable dialogue
 	self.visible = true
@@ -148,17 +148,17 @@ func process_next_text():
 		if (dialogue_dict[current_dialogue_id].has("choices")):
 			choosing = true
 			
-			choice1_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][0]["text"]["en"]
-			choice2_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][1]["text"]["en"]
-			choice3_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][2]["text"]["en"]
+			#choice1_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][0]["text"]["en"]
+			#choice2_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][1]["text"]["en"]
+			#choice3_text.text = "[center][color=black][b]" + dialogue_dict[current_dialogue_id]["choices"][2]["text"]["en"]
 			
 			choice1_next = dialogue_dict[current_dialogue_id]["choices"][0]["next"]
 			choice2_next = dialogue_dict[current_dialogue_id]["choices"][1]["next"]
 			choice3_next = dialogue_dict[current_dialogue_id]["choices"][2]["next"]
 			
-			choice1_box.position = Vector2(0, 550)
-			choice2_box.position = Vector2(0, 550)
-			choice3_box.position = Vector2(0, 550)
+			#choice1_box.position = Vector2(0, 550)
+			#choice2_box.position = Vector2(0, 550)
+			#choice3_box.position = Vector2(0, 550)
 			
 			choice1_box.visible = true
 			choice2_box.visible = true
@@ -183,32 +183,32 @@ func close_3choice_dialogue():
 	if interacted_area:
 		interacted_area.end_interaction()
 
-func _on_choice_bounds_3_mouse_entered():
+func _on_choice_texture_3_mouse_entered():
 	choice3_hovered = true
-	choice3_scale.scale = Vector2(0.7, 0.7)
 	potential_next_choice = choice3_next
 
-func _on_choice_bounds_3_mouse_exited():
+
+func _on_choice_texture_3_mouse_exited():
 	choice3_hovered = false
-	choice3_scale.scale = Vector2(0.8, 0.8)
 	potential_next_choice = ""
 
-func _on_choice_bounds_2_mouse_entered():
+
+func _on_choice_texture_2_mouse_entered():
 	choice2_hovered = true
-	choice2_scale.scale = Vector2(0.7, 0.7)
 	potential_next_choice = choice2_next
 
-func _on_choice_bounds_2_mouse_exited():
+
+func _on_choice_texture_2_mouse_exited():
 	choice2_hovered = false
-	choice2_scale.scale = Vector2(0.8, 0.8)
 	potential_next_choice = ""
 
-func _on_choice_bounds_1_mouse_entered():
+
+func _on_choice_texture_1_mouse_entered():
 	choice1_hovered = true
-	choice1_scale.scale = Vector2(0.7, 0.7)
 	potential_next_choice = choice1_next
 
-func _on_choice_bounds_1_mouse_exited():
+
+func _on_choice_texture_1_mouse_exited():
 	choice1_hovered = false
-	choice1_scale.scale = Vector2(0.8, 0.8)
 	potential_next_choice = ""
+

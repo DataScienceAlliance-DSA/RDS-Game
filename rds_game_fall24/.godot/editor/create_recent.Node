@@ -1,3 +1,4 @@
+TextureButton
 Panel
 RichTextLabel
 Control
@@ -11,4 +12,3 @@ VBoxContainer
 MarginContainer
 CanvasLayer
 PointLight2D
-CollisionShape2D
