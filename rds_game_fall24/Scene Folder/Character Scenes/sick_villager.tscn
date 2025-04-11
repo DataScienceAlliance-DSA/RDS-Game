@@ -21,9 +21,6 @@ size = Vector2(81.3333, 20)
 y_sort_enabled = true
 scale = Vector2(0.9, 0.9)
 script = ExtResource("1_uf7cp")
-start_autonomous = null
-speed = null
-target_pos = null
 
 [node name="villager_sprites" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -35,7 +32,7 @@ texture = ExtResource("2_iqbff")
 offset = Vector2(0, -210)
 hframes = 10
 vframes = 20
-frame = 164
+frame = 56
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/GreenVillager"]
 libraries = {
@@ -49,7 +46,7 @@ texture = ExtResource("3_f414n")
 offset = Vector2(0, -240)
 hframes = 10
 vframes = 20
-frame = 44
+frame = 30
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/OrangeVillager"]
 libraries = {
@@ -63,7 +60,7 @@ texture = ExtResource("4_opsvk")
 offset = Vector2(0, -260)
 hframes = 10
 vframes = 20
-frame = 44
+frame = 56
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/PeachVillager"]
 libraries = {

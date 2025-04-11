@@ -15,7 +15,7 @@ extends CanvasLayer
 @onready var root_scene = get_node("..")
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
 @onready var villagers : Array[SickVillager] = [] # array of all on-screen villagers
-@onready var max_villagers : int = 10 # total # of villagers that can be on screen at a time
+@onready var max_villagers : int = 1 # total # of villagers that can be on screen at a time
 @onready var villager_scene = load("res://Scene Folder/Character Scenes/sick_villager.tscn")
 
 var game_running : bool # runs npc generation in process if true
