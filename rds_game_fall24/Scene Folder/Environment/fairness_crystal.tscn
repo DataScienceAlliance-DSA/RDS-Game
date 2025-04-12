@@ -25,9 +25,9 @@ _data = {
 }
 
 [node name="crystal" type="Sprite2D"]
+visible = false
 texture = ExtResource("1_jrmn4")
 hframes = 6
-frame = 4
 
 [node name="Sprite2D" type="AnimationPlayer" parent="."]
 libraries = {
