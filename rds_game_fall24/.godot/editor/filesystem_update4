@@ -1,3 +1,4 @@
+res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scene Folder/Environment/Cauldron_Room.gd
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://assets/animation_frameworks_hero_player.res
@@ -8,13 +9,9 @@ res://assets/animation_frameworks_peach_villager.res
 res://assets/animation_frameworks_blue_villager.res
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/Environment/fairness_crystal.tscn
-res://Scene Folder/Environment/fairness_village.tscn
-res://Scene Folder/Environment/fairness_crystal.gd
-res://Scene Folder/Environment/fairness_village.gd
-res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn
 res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DragAndDrop.tscn
 res://Scene Folder/Minigames/Transparency_Pillar/Cargo_Game.tscn
+res://Scene Folder/Environment/fairness_village.tscn
 res://Scene Folder/Environment/Intro_Room.tscn
 res://Scene Folder/Environment/Cauldron_Room.tscn
 res://Scene Folder/UI.tscn
@@ -22,5 +19,5 @@ res://Scene Folder/PlayerState.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn
 res://Scene Folder/Character Scenes/sick_villager.tscn
 res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/ui_fairness_minigame_1.tscn
-res://Scripts/main_character.gd
-res://Scene Folder/Environment/IntroRoom.gd
+res://Scene Folder/Environment/fairness_crystal.tscn
+res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn
