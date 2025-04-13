@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=39 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scene Folder/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://b2qgnc42fi0ba" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Visted.png" id="21_cei1u"]
 [ext_resource type="Texture2D" uid="uid://368psvt1tbm2" path="res://assets/ui_assets/Light_Long_Dialogue.png" id="22_84ua4"]
 [ext_resource type="Texture2D" uid="uid://tliuryc0xeqr" path="res://assets/ui_assets/Name_Menu.png" id="28_3sout"]
+[ext_resource type="Script" path="res://Scene Folder/PlayerNameInput.gd" id="28_bndvi"]
 [ext_resource type="Texture2D" uid="uid://buownsnidnok4" path="res://assets/ui_assets/button_states/Mix Button/Normal.png" id="29_hke57"]
 [ext_resource type="Texture2D" uid="uid://cercn5dplsnfv" path="res://assets/ui_assets/button_states/Mix Button/Disables.png" id="30_gxcxm"]
 [ext_resource type="Texture2D" uid="uid://d1coaggnvi3gi" path="res://assets/ui_assets/button_states/Mix Button/Hover.png" id="31_u3tru"]
@@ -71,6 +72,7 @@ texture = SubResource("GradientTexture2D_em4cu")
 expand_mode = 1
 
 [node name="Dialogue" type="MarginContainer" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -197,7 +199,6 @@ theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 0
 theme_override_font_sizes/bold_font_size = 23
 bbcode_enabled = true
-text = "[color=black][b]Player"
 fit_content = true
 scroll_active = false
 
@@ -592,7 +593,6 @@ theme_override_fonts/bold_font = ExtResource("12_sp71b")
 theme_override_font_sizes/normal_font_size = 0
 theme_override_font_sizes/bold_font_size = 23
 bbcode_enabled = true
-text = "[color=black][b]Fox"
 fit_content = true
 scroll_active = false
 
@@ -811,6 +811,7 @@ text = "[center][b]Skipping..."
 fit_content = true
 
 [node name="PlayerNameInput" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -818,6 +819,7 @@ anchor_bottom = 1.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("28_bndvi")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerNameInput"]
 layout_mode = 1
@@ -849,7 +851,7 @@ offset_right = 120.5
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="TextureButton" type="TextureButton" parent="PlayerNameInput/VBoxContainer"]
+[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 texture_normal = ExtResource("29_hke57")

@@ -34,6 +34,9 @@ var interactable
 # UI placement variables
 var target_position
 
+# Setting Global Player Name for Dialogue
+@onready var player_name_label = $PlayerContainer/PositionControl/ScaleControl/Namecont/DialogueText
+
 func _ready():
 	self.set_process(false)
 	self.connect("dialogue_complete", get_dialogue_finished)
@@ -86,6 +89,11 @@ func _process(_delta):
 		target_arrow.add_theme_constant_override("margin_bottom", (25 * cos(5 * next_char_timer) + 125) / 2)
 		if (Input.is_action_just_pressed("interaction")):
 			process_next_text()
+
+# Function for updating the Player's name
+func update_player_name_label():
+	var name = GlobalPlayerName.global_player_name
+	player_name_label.parse_bbcode("[left][color=black][b]" + name + "[/b][/color][/left]")
 
 func parse_dialogue(json_path):
 	# .json parseing magic via dictionary

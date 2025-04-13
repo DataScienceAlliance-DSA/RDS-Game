@@ -54,6 +54,9 @@ signal closed_signal
 @onready var response_text = (get_node("TextContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
 @onready var response_arrow = (get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer") as MarginContainer)
 
+# Setting Global Player Name for Monologue
+@onready var player_name_label = $TextContainer/PositionControl/ScaleControl/Namecont/DialogueText
+
 func _ready():
 	self.set_process(false)
 
@@ -110,6 +113,11 @@ func _process(_delta):
 	elif (choosing) and (Input.is_action_just_pressed("left_click")) and (potential_next_choice != ""):
 		current_dialogue_id = potential_next_choice
 		process_next_text()
+
+# Function for updating the Player's name
+func update_player_name_label():
+	var name = GlobalPlayerName.global_player_name
+	player_name_label.parse_bbcode("[left][color=black][b]" + name + "[/b][/color][/left]")
 
 func parse_dialogue(json_path):
 	# .json parseing magic a la GDscript manual

@@ -5,6 +5,7 @@ extends Node2D
 
 @onready var player = get_node("Player")
 @onready var dialogue_ui = UI.get_node("Dialogue")
+@onready var player_name_input = UI.get_node("PlayerNameInput")
 
 @export var default_spawn : Vector2
 
@@ -45,3 +46,11 @@ func _ready():
 			player.autonomous = false
 			get_tree().get_nodes_in_group("Fox")[0].following_player = true
 			UI.start_scene_change(false, false, "")
+			
+			# Show the player name input screen
+			player_name_input.visible = true
+			#player_name_input.get_node("PlayerName").grab_focus()
+			
+			# Waiting for player to finish their name
+			await player_name_input.confirmed
+			
