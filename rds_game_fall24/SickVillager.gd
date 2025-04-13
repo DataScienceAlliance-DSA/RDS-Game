@@ -15,15 +15,14 @@ extends CharacterController
 @onready var area2d: Area2D = $Area2D
 var shape_index
 
-
 ### Exists in CharacterController Parent class
-#var move_target : Vector2
-#var move_start : Vector2
-#@onready var hopping : bool = false
-#@onready var hop_interpolation : float = 0.
+# var move_target : Vector2
+# var move_start : Vector2
+# @onready var hopping : bool = false
+# @onready var hop_interpolation : float = 0.
 
-#@export var speed : float = 100. # 100 is default speed
-#@export var target_pos : Vector2
+# @export var speed : float = 100. # 100 is default speed
+# @export var target_pos : Vector2
 
 var start # total start position of a villager's journey
 var target_pos_arr # array of all points a villager must walk to
@@ -160,6 +159,7 @@ func refuse_shape():
 func pause():
 	anim_player.pause()
 	super()
+
 # RESUMES
 func resume():
 	anim_player.play()

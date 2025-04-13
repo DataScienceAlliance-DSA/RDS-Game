@@ -73,6 +73,9 @@ func updateAnimation():
 		# Plays walking animation for current direction
 		animations.play("animation_frameworks_hero_player/walk" + direction)
 
+func reset_camera():
+	self.get_node("Camera2D").global_position = self.global_position
+
 func _process(_delta):
 	if (autonomous):
 		super(_delta)

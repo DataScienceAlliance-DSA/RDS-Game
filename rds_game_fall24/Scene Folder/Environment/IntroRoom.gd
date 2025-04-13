@@ -137,7 +137,6 @@ func _ready():
 			
 			await cm.actions_complete
 			
-
 			actionCam = Action.new(player_cam, "LerpMove", Vector2(0, -100), 200)
 			actions = [actionCam]
 			for action in actions:
