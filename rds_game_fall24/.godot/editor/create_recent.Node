@@ -1,10 +1,10 @@
+PanelContainer
+Control
 TextureButton
 Panel
 RichTextLabel
-Control
 Line2D
 Path2D
-PanelContainer
 HBoxContainer
 TextureRect
 GridContainer
