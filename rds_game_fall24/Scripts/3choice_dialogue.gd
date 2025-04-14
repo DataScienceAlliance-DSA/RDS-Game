@@ -10,19 +10,19 @@ signal monologue_complete
 
 # properties for player character's dialogue box
 @onready var choice1_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer") as Control)
-@onready var choice1_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceTexture1") as TextureButton)
+@onready var choice1_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1") as TextureButton)
 #@onready var choice1_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ChoiceBounds1/ScaleControl/ChoiceTexture1/MonologueText") as RichTextLabel)
-@onready var choice1_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/ScaleControl") as Control)
+@onready var choice1_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer/Control") as Control)
 
 @onready var choice2_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2") as Control)
-@onready var choice2_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceTexture2") as TextureButton)
+@onready var choice2_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2") as TextureButton)
 #@onready var choice2_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceBounds2/ScaleControl/ChoiceTexture2/MonologueText") as RichTextLabel)
-@onready var choice2_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/ScaleControl") as Control)
+@onready var choice2_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer2/Control") as Control)
 
 @onready var choice3_bounds = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3") as Control)
-@onready var choice3_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceTexture3") as TextureButton)
+@onready var choice3_box = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3") as TextureButton)
 #@onready var choice3_text = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceBounds3/ScaleControl/ChoiceTexture3/MonologueText") as RichTextLabel)
-@onready var choice3_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/ScaleControl") as Control)
+@onready var choice3_scale = (get_node("ChoiceContainer/HBoxContainer/MarginContainer3/Control") as Control)
 
 # booleans, if given choice is currently hovered by mouse
 var choice1_hovered
@@ -84,9 +84,9 @@ func open_3choice_dialogue(json_path, area):
 func _process(_delta):
 	# move dialogue boxes into position post-open_dialogue
 	self.position = self.position.lerp(target_position, _delta * 10)
-	choice1_box.position = 	choice1_box.position.lerp(Vector2(0, 0), _delta * 10)
-	choice2_box.position = 	choice1_box.position.lerp(Vector2(0, 0), _delta * 10)
-	choice3_box.position = 	choice1_box.position.lerp(Vector2(0, 0), _delta * 10)
+	choice1_box.position = 	choice1_box.position.lerp(Vector2(-172.5, -168), _delta * 10)
+	choice2_box.position = 	choice1_box.position.lerp(Vector2(-172.5, -168), _delta * 10)
+	choice3_box.position = 	choice1_box.position.lerp(Vector2(-172.5, -168), _delta * 10)
 	
 	if not interactable: return
 	
@@ -113,11 +113,6 @@ func _process(_delta):
 	elif (choosing) and (Input.is_action_just_pressed("left_click")) and (potential_next_choice != ""):
 		current_dialogue_id = potential_next_choice
 		process_next_text()
-
-# Function for updating the Player's name
-func update_player_name_label():
-	var name = GlobalPlayerName.global_player_name
-	player_name_label.parse_bbcode("[left][color=black][b]" + name + "[/b][/color][/left]")
 
 func parse_dialogue(json_path):
 	# .json parseing magic a la GDscript manual
@@ -150,7 +145,8 @@ func process_next_text():
 		character_text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
 		response_avatar.texture = load("res://assets/ui_assets/portraits/"+character_name+".PNG")
-		response_name.text = "[left][color=black][b]"+character_name+"[/b]"
+		if (character_name != "Player"): response_name.text = "[left][color=black][b]"+character_name+"[/b]"
+		else: response_name.text = "[left][color=black][b]"+GlobalPlayerName.global_player_name+"[/b]"
 		response_text.text = "[left][color=black]"+character_text
 		
 		if (dialogue_dict[current_dialogue_id].has("choices")):
@@ -164,9 +160,9 @@ func process_next_text():
 			choice2_next = dialogue_dict[current_dialogue_id]["choices"][1]["next"]
 			choice3_next = dialogue_dict[current_dialogue_id]["choices"][2]["next"]
 			
-			#choice1_box.position = Vector2(0, 550)
-			#choice2_box.position = Vector2(0, 550)
-			#choice3_box.position = Vector2(0, 550)
+			choice1_box.position = Vector2(0, 550)
+			choice2_box.position = Vector2(0, 550)
+			choice3_box.position = Vector2(0, 550)
 			
 			choice1_box.visible = true
 			choice2_box.visible = true

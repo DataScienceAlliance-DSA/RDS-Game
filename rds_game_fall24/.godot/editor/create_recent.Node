@@ -1,9 +1,9 @@
+Control
 LineEdit
 TextureButton
 VBoxContainer
 HBoxContainer
 TextureRect
-Control
 PanelContainer
 Panel
 RichTextLabel
@@ -12,4 +12,3 @@ Path2D
 GridContainer
 MarginContainer
 CanvasLayer
-PointLight2D

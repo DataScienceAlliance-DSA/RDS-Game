@@ -144,11 +144,14 @@ func end_game(complete):
 	
 	# clear active drag
 	grid_dict[active_shape] = []
-	for line in line_dict[active_shape]:
-		line.queue_free()
-	line_dict[active_shape] = []
+	if line_dict and active_shape:
+		if line_dict.has(active_shape):
+			for line in line_dict[active_shape]:
+				line.queue_free()
+			line_dict[active_shape] = []
 	active_shape = null
-	dragging_line.queue_free()
+	if dragging_line and is_instance_valid(dragging_line):
+		dragging_line.queue_free()
 	
 	if complete:
 		print("GAME BEAT")
@@ -349,14 +352,16 @@ func _process(_delta):
 					finish_stretch_line_visual(line_dict[active_shape][1], grid_dict[active_shape].size() + 1)
 					complete_dict[active_shape] = true
 					active_shape = null
-					dragging_line.queue_free()
+					if dragging_line and is_instance_valid(dragging_line):
+						dragging_line.queue_free()
 					return
 		grid_dict[active_shape] = []
 		for line in line_dict[active_shape]:
 			line.queue_free()
 		line_dict[active_shape] = []
 		active_shape = null
-		dragging_line.queue_free()
+		if dragging_line and is_instance_valid(dragging_line):
+			dragging_line.queue_free()
 
 func instantiate_cargo_line(line_type):
 	var line = Line2D.new()

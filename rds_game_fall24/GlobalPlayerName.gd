@@ -1,3 +1,3 @@
 extends Node2D
 
-var global_player_name: String = ""
+var global_player_name: String = "Hero"

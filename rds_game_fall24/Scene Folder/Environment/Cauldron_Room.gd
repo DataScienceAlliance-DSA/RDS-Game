@@ -38,13 +38,11 @@ func _ready():
 			# RE ENABLE THE PLAYER
 			player.autonomous = false
 		1:
+			player.autonomous = true
+			
 			if PS.spawning_at != Vector2(0.,0.): player.global_position = PS.spawning_at
 			else: player.global_position = default_spawn
 			
-			get_node("Cauldron/CauldronArea").interactions = 2
-			
-			player.autonomous = false
-			get_tree().get_nodes_in_group("Fox")[0].following_player = true
 			UI.start_scene_change(false, false, "")
 			
 			# Show the player name input screen
@@ -53,4 +51,12 @@ func _ready():
 			
 			# Waiting for player to finish their name
 			await player_name_input.confirmed
+			
+			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxIntro.json", null)
+			await dialogue_ui.dialogue_complete
+			
+			get_node("Cauldron/CauldronArea").interactions = 2
+			
+			player.autonomous = false
+			get_tree().get_nodes_in_group("Fox")[0].following_player = true
 			

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0b5pntcik1eq"]
 
-[ext_resource type="Texture2D" uid="uid://bcdeh515p2jdn" path="res://assets/Fairness_Village/crystal animation frames.png" id="1_jrmn4"]
+[ext_resource type="Texture2D" path="res://assets/Fairness_Village/crystal animation frames.png" id="1_jrmn4"]
 
 [sub_resource type="Animation" id="Animation_y338p"]
 resource_name = "spin"

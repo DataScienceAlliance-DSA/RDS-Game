@@ -90,11 +90,6 @@ func _process(_delta):
 		if (Input.is_action_just_pressed("interaction")):
 			process_next_text()
 
-# Function for updating the Player's name
-func update_player_name_label():
-	var name = GlobalPlayerName.global_player_name
-	player_name_label.parse_bbcode("[left][color=black][b]" + name + "[/b][/color][/left]")
-
 func parse_dialogue(json_path):
 	# .json parseing magic via dictionary
 	if FileAccess.file_exists(json_path):
@@ -133,7 +128,9 @@ func process_next_text():
 			player_color.modulate.v = 0.5
 		# else, edit left text box of UI
 		else:
-			player_name.text = "[color=black][b]"+card_name+"[/b][/color]"
+			print(card_name)
+			if (card_name == "Player"): player_name.text = "[color=black][b]"+GlobalPlayerName.global_player_name+"[/b][/color]"
+			else: player_name.text = "[color=black][b]"+card_name+"[/b][/color]"
 			player_scale.scale = Vector2(1.4, 1.4)
 			player_color.modulate.v = 1
 			player_avatar.texture = load("res://assets/ui_assets/portraits/"+card_name+".PNG")

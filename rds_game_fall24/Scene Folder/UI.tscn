@@ -399,8 +399,6 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -158.0
-offset_right = 159.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -424,14 +422,33 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
-theme_override_constants/margin_left = 195
+theme_override_constants/margin_left = 150
 theme_override_constants/margin_top = 150
-theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 100
 
-[node name="ChoiceTexture1" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer"]
-texture_filter = 1
+[node name="Control" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ChoiceTexture1" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -168.0
+offset_right = 172.5
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(172, 168)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource("10_2g7ig")
 texture_pressed = ExtResource("11_glrh1")
 texture_hover = ExtResource("12_finca")
@@ -446,9 +463,27 @@ theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 75
 theme_override_constants/margin_bottom = 100
 
-[node name="ChoiceTexture2" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2"]
-texture_filter = 1
+[node name="Control" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ChoiceTexture2" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -168.5
+offset_right = 172.5
+offset_bottom = 168.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(172, 168)
 texture_normal = ExtResource("14_sddsj")
 texture_pressed = ExtResource("15_sqvjo")
 texture_hover = ExtResource("16_3yibk")
@@ -458,14 +493,31 @@ texture_disabled = ExtResource("17_tfw6t")
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
-theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 150
-theme_override_constants/margin_right = 195
+theme_override_constants/margin_right = 150
 theme_override_constants/margin_bottom = 100
 
-[node name="ChoiceTexture3" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3"]
-texture_filter = 1
+[node name="Control" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ChoiceTexture3" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -168.0
+offset_right = 172.5
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(172, 168)
 size_flags_horizontal = 0
 texture_normal = ExtResource("18_2ulfr")
 texture_pressed = ExtResource("19_5gvgm")
@@ -870,9 +922,9 @@ alignment = 1
 max_length = 8
 selecting_enabled = false
 
-[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_entered"]
-[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_exited"]
-[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_entered"]
-[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_exited"]
-[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_entered"]
-[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_exited"]

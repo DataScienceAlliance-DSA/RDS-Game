@@ -11,7 +11,7 @@ extends CanvasLayer
 @onready var scene_change_switching = false
 var screen_fade_closing
 
-var next_scene : String 			# string to next scene
+var next_scene : String # string to next scene
 
 @onready var scene_hide_max = 1.0	# time it takes for screen to hide before scene_changes
 
