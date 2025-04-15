@@ -1,3 +1,6 @@
+CollisionShape2D
+Area2D
+Sprite2D
 Control
 LineEdit
 TextureButton
@@ -9,6 +12,3 @@ Panel
 RichTextLabel
 Line2D
 Path2D
-GridContainer
-MarginContainer
-CanvasLayer
