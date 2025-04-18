@@ -1,18 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqtrkfn7c7gyw"]
+[gd_scene load_steps=3 format=3 uid="uid://cqtrkfn7c7gyw"]
 
-[ext_resource type="Script" path="res://Scene Folder/Environment/whirlpool.gd" id="1_4671d"]
 [ext_resource type="Texture2D" uid="uid://b3bg2ayetu4iq" path="res://assets/Transparency Pillar/Transparency Game 2/Whirlpool(test).png" id="1_joju3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_my81h"]
-radius = 303.659
+radius = 226.803
 
 [node name="Whirlpool" type="Area2D"]
-script = ExtResource("1_4671d")
+scale = Vector2(0.308669, 0.308669)
 
 [node name="Whirlpool_sprite" type="Sprite2D" parent="."]
-position = Vector2(661, 386)
 texture = ExtResource("1_joju3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(661, 386)
 shape = SubResource("CircleShape2D_my81h")
