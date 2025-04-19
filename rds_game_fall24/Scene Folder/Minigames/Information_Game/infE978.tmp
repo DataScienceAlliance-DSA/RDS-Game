@@ -203,7 +203,6 @@ position = Vector2(768, 576)
 script = ExtResource("5_ii2d0")
 open_ui_max = 0.5
 open_single_max = 1.0
-close_single_max = 1.0
 
 [node name="Panel" type="Panel" parent="InformationPanel"]
 material = SubResource("ShaderMaterial_4f3ul")

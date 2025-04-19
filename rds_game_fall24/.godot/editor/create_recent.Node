@@ -1,8 +1,9 @@
+Button
+TextureRect
+Control
 Panel
 ColorRect
-TextureRect
 MarginContainer
-Control
 CanvasLayer
 ConstructedTileMap
 LineEdit
