@@ -14,6 +14,7 @@ extends Node2D
 var scale_time := 0.0
 var pulling_whirlpool: Area2D = null
 var is_pulling_player = false
+var total_spin := 0.0
 
 func _ready():
 	for wp in whirlpools:
@@ -25,7 +26,9 @@ func _on_whirlpool_body_entered(body, wp):
 		player.pause()
 		player.hopping = false
 		pulling_whirlpool = wp
-		
+		total_spin = 0.0
+
+
 func _process(delta):
 	scale_time += delta
 	for wp in whirlpools:
@@ -38,10 +41,19 @@ func _process(delta):
 	
 	# Pull player if in a vortex
 	if pulling_whirlpool:
-		var direction = player.global_position.direction_to(pulling_whirlpool.global_position)
-		player.global_position += direction * pull_speed * delta
+		var center = pulling_whirlpool.global_position
+		var offset = player.global_position - center
+		
+		# How much to spin this frame
+		var spin_this_frame = spin_speed * delta
+		total_spin += spin_this_frame
+		
+		# Spiral movement
+		var rotated = offset.rotated(spin_speed * delta)
+		var inward = -offset.normalized() * pull_speed * delta
+		player.global_position = center + rotated + inward
 
-		if player.global_position.distance_to(pulling_whirlpool.global_position) < 20:
+		if player.global_position.distance_to(center) < 20:
 			player.global_position = teleport_point
 			player.resume()
 			pulling_whirlpool = null
