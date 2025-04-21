@@ -1,0 +1,327 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2gafmgevy6h1"]
+
+[ext_resource type="Texture2D" uid="uid://b1o02itssb2xm" path="res://assets/Fairness_Village/EnvironmentSpread.png" id="1_38d0e"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Information_Game/information_game.gd" id="1_nsc8d"]
+[ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scene Folder/main_character.tscn" id="3_4mp1m"]
+[ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="3_70223"]
+[ext_resource type="Shader" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader" id="4_44a5c"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Information_Game/information_panel.gd" id="5_ii2d0"]
+[ext_resource type="Texture2D" uid="uid://cv4vrhncgoynw" path="res://assets/Information_Game/OfferLetter.png" id="7_i0io5"]
+[ext_resource type="Texture2D" uid="uid://cipvrjpg7jmla" path="res://assets/Information_Game/PrivateText.png" id="8_cjggq"]
+[ext_resource type="Texture2D" uid="uid://cqku0pjkomnym" path="res://assets/Information_Game/DeliveryReceipt.png" id="9_s6qm4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdywh"]
+texture = ExtResource("1_38d0e")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+7:5/animation_columns = 40
+7:5/animation_separation = Vector2i(40, 0)
+7:5/0 = 0
+8:5/animation_columns = 40
+8:5/animation_separation = Vector2i(40, 0)
+8:5/0 = 0
+12:5/animation_columns = 40
+12:5/animation_separation = Vector2i(40, 0)
+12:5/0 = 0
+13:5/animation_columns = 40
+13:5/animation_separation = Vector2i(40, 0)
+13:5/0 = 0
+14:5/animation_columns = 40
+14:5/animation_separation = Vector2i(40, 0)
+14:5/0 = 0
+15:5/animation_columns = 40
+15:5/animation_separation = Vector2i(40, 0)
+15:5/0 = 0
+16:5/animation_columns = 40
+16:5/animation_separation = Vector2i(40, 0)
+16:5/0 = 0
+26:5/animation_columns = 40
+26:5/animation_separation = Vector2i(40, 0)
+26:5/0 = 0
+27:5/animation_columns = 40
+27:5/animation_separation = Vector2i(40, 0)
+27:5/0 = 0
+28:5/animation_columns = 40
+28:5/animation_separation = Vector2i(40, 0)
+28:5/0 = 0
+29:5/animation_columns = 40
+29:5/animation_separation = Vector2i(40, 0)
+29:5/0 = 0
+30:5/animation_columns = 40
+30:5/animation_separation = Vector2i(40, 0)
+30:5/0 = 0
+31:5/animation_columns = 40
+31:5/animation_separation = Vector2i(40, 0)
+31:5/0 = 0
+32:5/animation_columns = 40
+32:5/animation_separation = Vector2i(40, 0)
+32:5/0 = 0
+33:5/animation_columns = 40
+33:5/animation_separation = Vector2i(40, 0)
+33:5/0 = 0
+34:5/animation_columns = 40
+34:5/animation_separation = Vector2i(40, 0)
+34:5/0 = 0
+35:5/animation_columns = 40
+35:5/animation_separation = Vector2i(40, 0)
+35:5/0 = 0
+36:5/animation_columns = 40
+36:5/animation_separation = Vector2i(40, 0)
+36:5/0 = 0
+37:5/animation_columns = 40
+37:5/animation_separation = Vector2i(40, 0)
+37:5/0 = 0
+38:5/animation_columns = 40
+38:5/animation_separation = Vector2i(40, 0)
+38:5/0 = 0
+39:5/animation_columns = 40
+39:5/animation_separation = Vector2i(40, 0)
+39:5/0 = 0
+0:5/animation_columns = 40
+0:5/animation_separation = Vector2i(40, 0)
+0:5/0 = 0
+1:5/animation_columns = 40
+1:5/animation_separation = Vector2i(40, 0)
+1:5/0 = 0
+2:5/animation_columns = 40
+2:5/animation_separation = Vector2i(40, 0)
+2:5/0 = 0
+3:5/animation_columns = 40
+3:5/animation_separation = Vector2i(40, 0)
+3:5/0 = 0
+4:5/animation_columns = 40
+4:5/animation_separation = Vector2i(40, 0)
+4:5/0 = 0
+5:5/animation_columns = 40
+5:5/animation_separation = Vector2i(40, 0)
+5:5/0 = 0
+6:5/animation_columns = 40
+6:5/animation_separation = Vector2i(40, 0)
+6:5/0 = 0
+9:5/animation_columns = 40
+9:5/animation_separation = Vector2i(40, 0)
+9:5/0 = 0
+10:5/animation_columns = 40
+10:5/animation_separation = Vector2i(40, 0)
+10:5/0 = 0
+11:5/animation_columns = 40
+11:5/animation_separation = Vector2i(40, 0)
+11:5/0 = 0
+17:5/animation_columns = 40
+17:5/animation_separation = Vector2i(40, 0)
+17:5/0 = 0
+18:5/animation_columns = 40
+18:5/animation_separation = Vector2i(40, 0)
+18:5/0 = 0
+19:5/animation_columns = 40
+19:5/animation_separation = Vector2i(40, 0)
+19:5/0 = 0
+20:5/animation_columns = 40
+20:5/animation_separation = Vector2i(40, 0)
+20:5/0 = 0
+21:5/animation_columns = 40
+21:5/animation_separation = Vector2i(40, 0)
+21:5/0 = 0
+22:5/animation_columns = 40
+22:5/animation_separation = Vector2i(40, 0)
+22:5/0 = 0
+23:5/animation_columns = 40
+23:5/animation_separation = Vector2i(40, 0)
+23:5/0 = 0
+24:5/animation_columns = 40
+24:5/animation_separation = Vector2i(40, 0)
+24:5/0 = 0
+25:5/animation_columns = 40
+25:5/animation_separation = Vector2i(40, 0)
+25:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_86bth"]
+tile_size = Vector2i(64, 64)
+sources/2 = SubResource("TileSetAtlasSource_pdywh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4f3ul"]
+shader = ExtResource("4_44a5c")
+shader_parameter/lod = 0.0
+shader_parameter/dim = null
+
+[node name="InformationGame" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_nsc8d")
+
+[node name="ConstructedTileMap" type="TileMap" parent="." groups=["Map"]]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_86bth")
+rendering_quadrant_size = 64
+format = 2
+layer_0/name = "Grass"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(0, 2, 4, 65536, 2, 4, 131072, 2, 4, 196608, 2, 4, 262144, 2, 4, 327680, 2, 4, 393216, 2, 4, 458752, 2, 4, 524288, 2, 4, 589824, 2, 4, 655360, 2, 4, 720896, 2, 4, 786432, 2, 4, 851968, 2, 4, 917504, 2, 4, 1, 2, 4, 65537, 2, 4, 131073, 2, 4, 196609, 2, 4, 262145, 2, 4, 327681, 2, 4, 393217, 2, 4, 458753, 2, 4, 524289, 2, 4, 589825, 2, 4, 655361, 2, 4, 720897, 2, 4, 786433, 2, 4, 851969, 2, 4, 917505, 2, 4, 2, 2, 4, 65538, 2, 4, 131074, 2, 4, 196610, 2, 4, 262146, 2, 4, 327682, 2, 4, 393218, 2, 4, 458754, 2, 4, 524290, 2, 4, 589826, 2, 4, 655362, 2, 4, 720898, 2, 4, 786434, 2, 4, 851970, 2, 4, 917506, 2, 4, 3, 2, 4, 65539, 2, 4, 131075, 2, 4, 196611, 2, 4, 262147, 2, 4, 327683, 2, 4, 393219, 2, 4, 458755, 2, 4, 524291, 2, 4, 589827, 2, 4, 655363, 2, 4, 720899, 2, 4, 786435, 2, 4, 851971, 2, 4, 917507, 2, 4, 4, 2, 4, 65540, 2, 4, 131076, 2, 4, 196612, 2, 4, 262148, 2, 4, 327684, 2, 4, 393220, 2, 4, 458756, 2, 4, 524292, 2, 4, 589828, 2, 4, 655364, 2, 4, 720900, 2, 4, 786436, 2, 4, 851972, 2, 4, 917508, 2, 4, 5, 2, 4, 65541, 2, 4, 131077, 2, 4, 196613, 2, 4, 262149, 2, 4, 327685, 2, 4, 393221, 2, 4, 458757, 2, 4, 524293, 2, 4, 589829, 2, 4, 655365, 2, 4, 720901, 2, 4, 786437, 2, 4, 851973, 2, 4, 917509, 2, 4, 6, 2, 4, 65542, 2, 4, 131078, 2, 4, 196614, 2, 4, 262150, 2, 4, 327686, 2, 4, 393222, 2, 4, 458758, 2, 4, 524294, 2, 4, 589830, 2, 4, 655366, 2, 4, 720902, 2, 4, 786438, 2, 4, 851974, 2, 4, 917510, 2, 4, 7, 2, 4, 65543, 2, 4, 131079, 2, 4, 196615, 2, 4, 262151, 2, 4, 327687, 2, 4, 393223, 2, 4, 458759, 2, 4, 524295, 2, 4, 589831, 2, 4, 655367, 2, 4, 720903, 2, 4, 786439, 2, 4, 851975, 2, 4, 917511, 2, 4, 8, 2, 4, 65544, 2, 4, 131080, 2, 4, 196616, 2, 4, 262152, 2, 4, 327688, 2, 4, 393224, 2, 4, 458760, 2, 4, 524296, 2, 4, 589832, 2, 4, 655368, 2, 4, 720904, 2, 4, 786440, 2, 4, 851976, 2, 4, 917512, 2, 4, 9, 2, 4, 65545, 2, 4, 131081, 2, 4, 196617, 2, 4, 262153, 2, 4, 327689, 2, 4, 393225, 2, 4, 458761, 2, 4, 524297, 2, 4, 589833, 2, 4, 655369, 2, 4, 720905, 2, 4, 786441, 2, 4, 851977, 2, 4, 917513, 2, 4, 10, 2, 4, 65546, 2, 4, 131082, 2, 4, 196618, 2, 4, 262154, 2, 4, 327690, 2, 4, 393226, 2, 4, 458762, 2, 4, 524298, 2, 4, 589834, 2, 4, 655370, 2, 4, 720906, 2, 4, 786442, 2, 4, 851978, 2, 4, 917514, 2, 4, 11, 2, 4, 65547, 2, 4, 131083, 2, 4, 196619, 2, 4, 262155, 2, 4, 327691, 2, 4, 393227, 2, 4, 458763, 2, 4, 524299, 2, 4, 589835, 2, 4, 655371, 2, 4, 720907, 2, 4, 786443, 2, 4, 851979, 2, 4, 917515, 2, 4, 12, 2, 4, 65548, 2, 4, 131084, 2, 4, 196620, 2, 4, 262156, 2, 4, 327692, 2, 4, 393228, 2, 4, 458764, 2, 4, 524300, 2, 4, 589836, 2, 4, 655372, 2, 4, 720908, 2, 4, 786444, 2, 4, 851980, 2, 4, 917516, 2, 4, 13, 2, 4, 65549, 2, 4, 131085, 2, 4, 196621, 2, 4, 262157, 2, 4, 327693, 2, 4, 393229, 2, 4, 458765, 2, 4, 524301, 2, 4, 589837, 2, 4, 655373, 2, 4, 720909, 2, 4, 786445, 2, 4, 851981, 2, 4, 917517, 2, 4, 14, 2, 4, 65550, 2, 4, 131086, 2, 4, 196622, 2, 4, 262158, 2, 4, 327694, 2, 4, 393230, 2, 4, 458766, 2, 4, 524302, 2, 4, 589838, 2, 4, 655374, 2, 4, 720910, 2, 4, 786446, 2, 4, 851982, 2, 4, 917518, 2, 4, 15, 2, 4, 65551, 2, 4, 131087, 2, 4, 196623, 2, 4, 262159, 2, 4, 327695, 2, 4, 393231, 2, 4, 458767, 2, 4, 524303, 2, 4, 589839, 2, 4, 655375, 2, 4, 720911, 2, 4, 786447, 2, 4, 851983, 2, 4, 917519, 2, 4, 16, 2, 4, 65552, 2, 4, 131088, 2, 4, 196624, 2, 4, 262160, 2, 4, 327696, 2, 4, 393232, 2, 4, 458768, 2, 4, 524304, 2, 4, 589840, 2, 4, 655376, 2, 4, 720912, 2, 4, 786448, 2, 4, 851984, 2, 4, 917520, 2, 4, 17, 2, 4, 65553, 2, 4, 131089, 2, 4, 196625, 2, 4, 262161, 2, 4, 327697, 2, 4, 393233, 2, 4, 458769, 2, 4, 524305, 2, 4, 589841, 2, 4, 655377, 2, 4, 720913, 2, 4, 786449, 2, 4, 851985, 2, 4, 917521, 2, 4, 18, 2, 4, 65554, 2, 4, 131090, 2, 4, 196626, 2, 4, 262162, 2, 4, 327698, 2, 4, 393234, 2, 4, 458770, 2, 4, 524306, 2, 4, 589842, 2, 4, 655378, 2, 4, 720914, 2, 4, 786450, 2, 4, 851986, 2, 4, 917522, 2, 4, 19, 2, 4, 65555, 2, 4, 131091, 2, 4, 196627, 2, 4, 262163, 2, 4, 327699, 2, 4, 393235, 2, 4, 458771, 2, 4, 524307, 2, 4, 589843, 2, 4, 655379, 2, 4, 720915, 2, 4, 786451, 2, 4, 851987, 2, 4, 917523, 2, 4, 20, 2, 4, 65556, 2, 4, 131092, 2, 4, 196628, 2, 4, 262164, 2, 4, 327700, 2, 4, 393236, 2, 4, 458772, 2, 4, 524308, 2, 4, 589844, 2, 4, 655380, 2, 4, 720916, 2, 4, 786452, 2, 4, 851988, 2, 4, 917524, 2, 4, 21, 2, 4, 65557, 2, 4, 131093, 2, 4, 196629, 2, 4, 262165, 2, 4, 327701, 2, 4, 393237, 2, 4, 458773, 2, 4, 524309, 2, 4, 589845, 2, 4, 655381, 2, 4, 720917, 2, 4, 786453, 2, 4, 851989, 2, 4, 917525, 2, 4, 22, 2, 4, 65558, 2, 4, 131094, 2, 4, 196630, 2, 4, 262166, 2, 4, 327702, 2, 4, 393238, 2, 4, 458774, 2, 4, 524310, 2, 4, 589846, 2, 4, 655382, 2, 4, 720918, 2, 4, 786454, 2, 4, 851990, 2, 4, 917526, 2, 4, 23, 2, 4, 65559, 2, 4, 131095, 2, 4, 196631, 2, 4, 262167, 2, 4, 327703, 2, 4, 393239, 2, 4, 458775, 2, 4, 524311, 2, 4, 589847, 2, 4, 655383, 2, 4, 720919, 2, 4, 786455, 2, 4, 851991, 2, 4, 917527, 2, 4, 983040, 2, 4, 983041, 2, 4, 983042, 2, 4, 983043, 2, 4, 983044, 2, 4, 983045, 2, 4, 983046, 2, 4, 983047, 2, 4, 983048, 2, 4, 983049, 2, 4, 983050, 2, 4, 983051, 2, 4, 983052, 2, 4, 983053, 2, 4, 983054, 2, 4, 983055, 2, 4, 983056, 2, 4, 983057, 2, 4, 983058, 2, 4, 983059, 2, 4, 983060, 2, 4, 983061, 2, 4, 983062, 2, 4, 983063, 2, 4)
+script = ExtResource("3_70223")
+
+[node name="Main Character" parent="." groups=["Player"] instance=ExtResource("3_4mp1m")]
+position = Vector2(768, 576)
+
+[node name="InformationPanel" type="CanvasLayer" parent="."]
+script = ExtResource("5_ii2d0")
+open_ui_max = 0.5
+open_single_max = 1.0
+close_single_max = 1.0
+
+[node name="Panel" type="Panel" parent="InformationPanel"]
+material = SubResource("ShaderMaterial_4f3ul")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SingleElement" type="Control" parent="InformationPanel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(683, 384)
+
+[node name="OfferLetter" type="TextureRect" parent="InformationPanel/Panel/SingleElement"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_i0io5")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="Button" type="Button" parent="InformationPanel/Panel/SingleElement/OfferLetter"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 433.0
+offset_right = 506.0
+offset_bottom = 453.0
+toggle_mode = true
+
+[node name="Button2" type="Button" parent="InformationPanel/Panel/SingleElement/OfferLetter"]
+offset_left = 804.0
+offset_top = 471.0
+offset_right = 987.0
+offset_bottom = 490.0
+
+[node name="Button3" type="Button" parent="InformationPanel/Panel/SingleElement/OfferLetter"]
+offset_left = 524.0
+offset_top = 613.0
+offset_right = 703.0
+offset_bottom = 634.0
+
+[node name="Button4" type="Button" parent="InformationPanel/Panel/SingleElement/OfferLetter"]
+offset_left = 378.0
+offset_top = 757.742
+offset_right = 497.0
+offset_bottom = 774.742
+toggle_mode = true
+
+[node name="Button5" type="Button" parent="InformationPanel/Panel/SingleElement/OfferLetter"]
+offset_left = 378.0
+offset_top = 777.0
+offset_right = 534.0
+offset_bottom = 794.0
+toggle_mode = true
+
+[node name="PrivateText" type="TextureRect" parent="InformationPanel/Panel/SingleElement"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_cjggq")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="Button" type="Button" parent="InformationPanel/Panel/SingleElement/PrivateText"]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 475.0
+offset_right = 768.0
+offset_bottom = 506.0
+
+[node name="Button2" type="Button" parent="InformationPanel/Panel/SingleElement/PrivateText"]
+offset_left = 430.0
+offset_top = 778.0
+offset_right = 798.0
+offset_bottom = 817.0
+toggle_mode = true
+
+[node name="DeliveryReceipt" type="TextureRect" parent="InformationPanel/Panel/SingleElement"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_s6qm4")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="Button" type="Button" parent="InformationPanel/Panel/SingleElement/DeliveryReceipt"]
+offset_left = 423.0
+offset_top = 648.0
+offset_right = 586.0
+offset_bottom = 677.0
+toggle_mode = true
+
+[node name="Button2" type="Button" parent="InformationPanel/Panel/SingleElement/DeliveryReceipt"]
+offset_left = 423.0
+offset_top = 719.0
+offset_right = 701.0
+offset_bottom = 744.0
+toggle_mode = true
+
+[node name="Button3" type="Button" parent="InformationPanel/Panel/SingleElement/DeliveryReceipt"]
+offset_left = 763.0
+offset_top = 815.0
+offset_right = 852.0
+offset_bottom = 839.0
