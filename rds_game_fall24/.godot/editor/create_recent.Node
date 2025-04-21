@@ -1,3 +1,8 @@
+Node2D
+Marker2D
+CollisionShape2D
+Sprite2D
+Area2D
 Button
 TextureRect
 Control
@@ -7,9 +12,3 @@ MarginContainer
 CanvasLayer
 ConstructedTileMap
 LineEdit
-TextureButton
-VBoxContainer
-HBoxContainer
-PanelContainer
-RichTextLabel
-Line2D
