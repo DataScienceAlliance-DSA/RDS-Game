@@ -29,8 +29,13 @@ signal stage_condition_passed
 ## PII PHASE
 @onready var pii_present = 0 # total # of pii present in document
 @onready var pii_found = 0 # total # of pii correctly selected
+## MEMORY PHASE
+@onready var tiles_present = 0
+@onready var tiles_found = 0
 
 func _process(delta):
+	print(str(tiles_found) + " / " + str(tiles_present))
+	
 	## VISUAL PROCESSES:
 	# opening panel blur
 	if (open_ui_time < open_ui_max):
@@ -65,11 +70,15 @@ func stage_condition_check():
 	if game_stage >= 1 and game_stage <= 3: 
 		if pii_found == pii_present:
 			stage_condition_passed.emit()
+	else:
+		if tiles_found == tiles_present:
+			stage_condition_passed.emit()
 
 func next_stage():
 	if active_element: active_element.visible = false
 	
 	pii_found = 0
+	tiles_found = 0
 	game_stage = game_stage + 1
 	
 	match(game_stage):
@@ -79,8 +88,14 @@ func next_stage():
 			pii_present = 1
 		3:
 			pii_present = 2
+		4:
+			tiles_present = 12
+		5:
+			tiles_present = 11
+		6:
+			tiles_present = 13
 	
-	if game_stage >= 1 and game_stage <= 3: open_page_element()
+	open_page_element()
 
 func open_ui():
 	open_ui_time = 0.
@@ -94,9 +109,19 @@ func open_page_element():
 			active_element = $Panel/SingleElement/PrivateText
 		3:
 			active_element = $Panel/SingleElement/DeliveryReceipt
+		4:
+			active_element = $Panel/SingleElement/Memory1
+		5:
+			active_element = $Panel/SingleElement/Memory2
+		6:
+			active_element = $Panel/SingleElement/Memory3
 	
-	for button in active_element.get_children():
-		button.pressed.connect(Callable(assess_button).bind(button))
+	if game_stage < 4:
+		for button in active_element.get_children():
+			button.pressed.connect(Callable(assess_button).bind(button))
+	else:
+		for button in active_element.get_child(0).get_children():
+			button.pressed.connect(Callable(mark_button).bind(button))
 	
 	open_single_time = 0.
 	active_element.visible = true
@@ -104,6 +129,7 @@ func open_page_element():
 func close_page_element():
 	close_single_time = 0.
 
+# button action for the PII stages
 func assess_button(button):
 	## TOGGLEABLE BUTTON indicates CORRECT CLICK ZONE
 	if button.toggle_mode:
@@ -111,6 +137,16 @@ func assess_button(button):
 		button.disabled = true
 		button.modulate = Color(0.,1.,0.,1.)
 		pii_found = pii_found + 1
+	else:
+		print("WRONG")
+
+func mark_button(button):
+	## TOGGLEABLE BUTTON indicates CORRECT CLICK ZONE
+	if button.toggle_mode:
+		print("GOOD")
+		button.disabled = true
+		button.modulate = Color(0.,1.,0.,1.)
+		tiles_found = tiles_found + 1
 	else:
 		print("WRONG")
 

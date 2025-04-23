@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2gafmgevy6h1"]
+[gd_scene load_steps=16 format=3 uid="uid://c2gafmgevy6h1"]
 
 [ext_resource type="Texture2D" uid="uid://b1o02itssb2xm" path="res://assets/Fairness_Village/EnvironmentSpread.png" id="1_38d0e"]
 [ext_resource type="Script" path="res://Scene Folder/Minigames/Information_Game/information_game.gd" id="1_nsc8d"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cipvrjpg7jmla" path="res://assets/Information_Game/PrivateText.png" id="8_cjggq"]
 [ext_resource type="Texture2D" uid="uid://cqku0pjkomnym" path="res://assets/Information_Game/DeliveryReceipt.png" id="9_s6qm4"]
 [ext_resource type="Texture2D" uid="uid://ddjxi4t4mntnb" path="res://assets/Information_Game/MemoryGrid.png" id="10_cbnjq"]
+[ext_resource type="Texture2D" uid="uid://dbb2o4l6lo1mo" path="res://assets/Information_Game/decrypted_text_banner.png" id="11_mblu5"]
+[ext_resource type="Texture2D" uid="uid://hdy72esvxb6" path="res://assets/Information_Game/encryped_text_banner.png" id="12_5vyt4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdywh"]
 texture = ExtResource("1_38d0e")
@@ -337,6 +339,7 @@ offset_right = 852.0
 offset_bottom = 839.0
 
 [node name="Memory1" type="TextureRect" parent="InformationPanel/Panel/SingleElement"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -366,10 +369,9 @@ theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 8
 columns = 5
 
-[node name="Button" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
+[node name="Button1" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button2" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
@@ -379,17 +381,14 @@ toggle_mode = true
 [node name="Button3" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button4" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button5" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button6" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
@@ -409,17 +408,14 @@ toggle_mode = true
 [node name="Button9" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button10" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button11" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button12" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
@@ -429,7 +425,6 @@ toggle_mode = true
 [node name="Button13" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button14" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
@@ -444,7 +439,6 @@ toggle_mode = true
 [node name="Button16" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button17" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
@@ -454,7 +448,6 @@ toggle_mode = true
 [node name="Button18" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button19" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
@@ -464,17 +457,14 @@ toggle_mode = true
 [node name="Button20" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button21" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button22" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-toggle_mode = true
 
 [node name="Button23" type="Button" parent="InformationPanel/Panel/SingleElement/Memory1/GridContainer"]
 custom_minimum_size = Vector2(120, 120)
@@ -490,3 +480,310 @@ toggle_mode = true
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 toggle_mode = true
+
+[node name="Memory2" type="TextureRect" parent="InformationPanel/Panel/SingleElement"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(683, 700)
+texture = ExtResource("10_cbnjq")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="InformationPanel/Panel/SingleElement/Memory2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 8
+columns = 5
+
+[node name="Button1" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button4" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button8" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button11" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button12" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button13" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button14" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button15" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button16" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button17" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button18" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button19" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button20" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button21" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button22" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button23" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button24" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button25" type="Button" parent="InformationPanel/Panel/SingleElement/Memory2/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Memory3" type="TextureRect" parent="InformationPanel/Panel/SingleElement"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(683, 700)
+texture = ExtResource("10_cbnjq")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="InformationPanel/Panel/SingleElement/Memory3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 8
+columns = 5
+
+[node name="Button1" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button3" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button5" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button8" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button11" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button12" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button13" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button14" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button15" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button16" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button17" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button18" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button19" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button20" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button21" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button22" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Button23" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button24" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+toggle_mode = true
+
+[node name="Button25" type="Button" parent="InformationPanel/Panel/SingleElement/Memory3/GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InformationPanel/Panel/SingleElement"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(1506, 751)
+theme_override_constants/separation = -250
+
+[node name="TextureRect" type="TextureRect" parent="InformationPanel/Panel/SingleElement/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("11_mblu5")
+
+[node name="TextureRect2" type="TextureRect" parent="InformationPanel/Panel/SingleElement/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_5vyt4")

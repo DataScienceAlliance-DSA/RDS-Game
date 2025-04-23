@@ -1,6 +1,13 @@
 res://Scene Folder/Minigames/Information_Game/information_game.tscn
 res://Scene Folder/Environment/Cauldron_Room.gd
 res://assets/animation_frameworks_hero_player.res
+res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
 res://Scene Folder/UI.gdshader
 res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader
-res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader
+res://Scene Folder/Minigames/Information_Game/information_game.gd
+res://Scene Folder/Minigames/Information_Game/information_panel.gd
+res://Scene Folder/Environment/fairness_village.tscn
+res://Scene Folder/UI.tscn
+res://Scene Folder/main_character.tscn
+res://Scene Folder/Environment/whirlpool.tscn
+res://Scene Folder/Environment/riptide.tscn
