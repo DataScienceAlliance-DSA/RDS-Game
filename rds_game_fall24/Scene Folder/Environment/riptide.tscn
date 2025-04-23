@@ -18,4 +18,4 @@ shape = SubResource("RectangleShape2D_fgnri")
 position = Vector2(-64, 0)
 
 [node name="EndPoint" type="Marker2D" parent="."]
-position = Vector2(64, 0)
+position = Vector2(98, 0)
