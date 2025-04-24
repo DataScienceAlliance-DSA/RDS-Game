@@ -8,15 +8,15 @@ extends Node2D
 @export var scale_base: float = 0.5
 @export var scale_amplitude: float = 0.1
 @export var scale_speed: float = 1.0
-@export var pull_speed: float = 200.0
-@export var riptide_speed: float = 250.0
+@export var pull_speed: float = 400.0
+@export var riptide_speed: float = 750.0
 @export var teleport_point: Vector2
 
 var group_to_direction := {
 	"riptide_right": Vector2.RIGHT,
-	"riptide_left" : Vector2.LEFT,
+	"riptide_left": Vector2.LEFT,
 	"riptide_up": Vector2.UP,
-	"riptide_down": Vector2.DOWN
+	"riptide_down": Vector2.DOWN,
 }
 
 var scale_time := 0.0
@@ -24,16 +24,15 @@ var pulling_whirlpool: Area2D = null
 var total_spin := 0.0
 
 var active_riptide: Area2D = null
-var riptide_end_point: Vector2
 var is_in_riptide := false
+var riptide_path: Array[Vector2] = []
+var riptide_path_index := 0
 
 func _ready():
 	for wp in whirlpools:
 		wp.connect("body_entered", Callable(self, "_on_whirlpool_body_entered").bind(wp))
 	for rt in riptides:
 		rt.connect("body_entered", Callable(self, "_on_riptide_body_entered").bind(rt))
-		print("Connected to riptide:", rt.name)
-	print("Found", riptides.size(), "riptides")
 
 func _on_whirlpool_body_entered(body, wp):
 	if body == player and pulling_whirlpool == null:
@@ -46,57 +45,27 @@ func _get_riptide_direction_group(rt: Area2D) -> String:
 	for group_name in group_to_direction.keys():
 		if rt.is_in_group(group_name):
 			return group_name
-	
-	# Optional: debug output if none found
-	print("Warning: Riptide", rt.name, "is not in any direction group.")
 	return ""
-	
-func _get_farthest_endpoint_in_group(origin_riptide: Area2D, group_name: String, from_pos: Vector2, flow_dir: Vector2) -> Vector2:
-	var candidates := get_tree().get_nodes_in_group(group_name)
-	var best_point = from_pos
-	var max_alignment = -INF
-
-	for rt in candidates:
-		if rt == origin_riptide:
-			continue
-		if not rt.has_node("EndPoint"):
-			continue
-
-		var endpoint = rt.get_node("EndPoint").global_position
-		var to_end = endpoint - from_pos
-		var alignment = flow_dir.dot(to_end)
-
-		if alignment > max_alignment:
-			max_alignment = alignment
-			best_point = endpoint
-
-	# Always consider the current tile's EndPoint too
-	if origin_riptide.has_node("EndPoint"):
-		var self_end = origin_riptide.get_node("EndPoint").global_position
-		var self_alignment = flow_dir.dot(self_end - from_pos)
-		if self_alignment > max_alignment:
-			best_point = self_end
-
-	return best_point
 
 func _on_riptide_body_entered(body, rt):
 	if body != player or is_in_riptide:
 		return
-
+	# var group_name = _get_riptide_direction_group(rt)
+	# if group_name == "":
+	# 	push_warning("Riptide has no direction group.")
+	# 	return
+	# var flow: Vector2 = group_to_direction[group_name].normalized()
+	# var to_player = (player.global_position - rt.global_position).normalized()
+	# if flow.dot(to_player) > 0:
+	# 	print("⛔ Blocked reverse riptide entry")
+	# 	return
 	player.pause()
 	player.hopping = false
 	active_riptide = rt
 	is_in_riptide = true
+	riptide_path = rt.get_endpoint_chain()
+	riptide_path_index = 0
 
-	var group_name := _get_riptide_direction_group(rt)
-	if group_name == "":
-		push_warning("Riptide not assigned to a direction group!")
-		is_in_riptide = false
-		return
-
-	var flow_dir = group_to_direction[group_name]
-	riptide_end_point = _get_farthest_endpoint_in_group(rt, group_name, player.global_position, flow_dir)
-	
 func _process(delta):
 	scale_time += delta
 	for wp in whirlpools:
@@ -106,24 +75,25 @@ func _process(delta):
 
 	if pulling_whirlpool:
 		var center = pulling_whirlpool.global_position
-		var offset = player.global_position - center
-		var spin_this_frame = spin_speed * delta
-		total_spin += spin_this_frame
-		var rotated = offset.rotated(spin_this_frame)
-		var inward = -offset.normalized() * pull_speed * delta
-		player.global_position = center + rotated + inward
+		var direction = (center - player.global_position).normalized()
+		player.global_position += direction * pull_speed * delta
 
-		if player.global_position.distance_to(center) < 20 and total_spin >= TAU:
+		if player.global_position.distance_to(center) < 20:
 			player.global_position = teleport_point
 			player.resume()
 			pulling_whirlpool = null
 
-	if is_in_riptide and active_riptide:
-		var direction = player.global_position.direction_to(riptide_end_point)
+	if is_in_riptide and riptide_path_index < riptide_path.size():
+		var target = riptide_path[riptide_path_index]
+		var direction = player.global_position.direction_to(target)
 		player.global_position += direction * riptide_speed * delta
 
-		if player.global_position.distance_to(riptide_end_point) < 5:
-			player.global_position = riptide_end_point
-			player.resume()
-			is_in_riptide = false
-			active_riptide = null
+		if player.global_position.distance_to(target) < 5:
+			player.global_position = target
+			riptide_path_index += 1
+
+			if riptide_path_index >= riptide_path.size():
+				player.resume()
+				is_in_riptide = false
+				active_riptide = null
+				riptide_path.clear()
