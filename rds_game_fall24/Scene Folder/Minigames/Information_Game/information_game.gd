@@ -25,6 +25,24 @@ func _ready():
 	await panel.stage_condition_passed
 	panel.close_page_element()
 	await panel.single_element_closed
+	
+	panel.next_stage()
+	await panel.single_element_opened
+	await panel.stage_condition_passed
+	panel.close_page_element()
+	await panel.single_element_closed
+	
+	panel.next_stage()
+	await panel.single_element_opened
+	await panel.stage_condition_passed
+	panel.close_page_element()
+	await panel.single_element_closed
+	
+	panel.next_stage()
+	await panel.single_element_opened
+	await panel.stage_condition_passed
+	panel.close_page_element()
+	await panel.single_element_closed
 
 func _process(delta):
 	panel.stage_condition_check()
