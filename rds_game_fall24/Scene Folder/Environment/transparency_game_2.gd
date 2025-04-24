@@ -8,9 +8,11 @@ extends Node2D
 @export var scale_base: float = 0.5
 @export var scale_amplitude: float = 0.1
 @export var scale_speed: float = 1.0
-@export var pull_speed: float = 400.0
+@export var pull_speed: float = 200.0
 @export var riptide_speed: float = 750.0
-@export var teleport_point: Vector2
+
+@export var checkpoint_1_path: NodePath
+@onready var checkpoint_1 = $Checkpoints/Checkpoint_1
 
 var group_to_direction := {
 	"riptide_right": Vector2.RIGHT,
@@ -79,7 +81,7 @@ func _process(delta):
 		player.global_position += direction * pull_speed * delta
 
 		if player.global_position.distance_to(center) < 20:
-			player.global_position = teleport_point
+			player.global_position = checkpoint_1.global_position
 			player.resume()
 			pulling_whirlpool = null
 
