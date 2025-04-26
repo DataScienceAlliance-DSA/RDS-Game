@@ -21,12 +21,12 @@ var neighbor_areas
 
 func _ready():
 	set_process(false)
-
+	
 	if get_tree().current_scene.is_in_group("minigame"):
 		is_minigame_scene = true
-
+	
 	self.get_node("Camera2D").zoom = Vector2(cam_zoom, cam_zoom)
-
+	
 	if map:
 		var map_limits = map.get_used_rect()
 		var map_cellsize = map.rendering_quadrant_size
@@ -35,7 +35,7 @@ func _ready():
 		camera.limit_right = map_limits.end.x * map_cellsize
 		camera.limit_top = map_limits.position.y * map_cellsize
 		camera.limit_bottom = map_limits.end.y * map_cellsize
-
+	
 	movement_stack = []
 	set_process(true)
 
@@ -51,39 +51,39 @@ func _process(_delta):
 	if autonomous:
 		super(_delta)
 		return
-
+	
 	if first_frame_processing:
 		first_frame_processing = false
 		return
-
+	
 	# Input detection using movement stack
 	if Input.is_action_just_pressed("right"):
 		movement_stack.push_front(get_movement_vector("right"))
 	elif Input.is_action_just_released("right"):
 		_remove_movement_direction("right")
-
+	
 	if Input.is_action_just_pressed("left"):
 		movement_stack.push_front(get_movement_vector("left"))
 	elif Input.is_action_just_released("left"):
 		_remove_movement_direction("left")
-
+	
 	if Input.is_action_just_pressed("up"):
 		movement_stack.push_front(get_movement_vector("up"))
 	elif Input.is_action_just_released("up"):
 		_remove_movement_direction("up")
-
+	
 	if Input.is_action_just_pressed("down"):
 		movement_stack.push_front(get_movement_vector("down"))
 	elif Input.is_action_just_released("down"):
 		_remove_movement_direction("down")
-
+	
 	# Move and animate
 	velocity = movement_stack.front() if movement_stack.size() > 0 else Vector2.ZERO
 	move_and_slide()
 	updateAnimation()
-
+	
 	emit_signal("movement_updated", movement_stack)
-
+	
 	update_cast()
 	if player_cast.get_collider() and Input.is_action_just_pressed("interaction"):
 		confirmed_interaction()
@@ -108,9 +108,9 @@ func updateAnimation():
 func update_cast():
 	if movement_stack.size() == 0:
 		return
-
+	
 	var move = movement_stack.front()
-
+	
 	if move.x > 0:
 		player_cast.target_position = Vector2(160, 0)
 		player_cast.position = Vector2(-30, 0)

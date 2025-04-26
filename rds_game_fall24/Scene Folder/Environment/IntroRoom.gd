@@ -48,7 +48,6 @@ func _ready():
 			# OPEN SCENE
 			UI.start_scene_change(false, true, "")
 			
-			cm.parallel_action()
 			
 			cm.wait(1.0)
 			cm.call_monologue("res://Scripts/Monologues/Intro/PlayerMonologue.json")

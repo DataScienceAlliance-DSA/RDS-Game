@@ -1,3 +1,7 @@
+TileMap
+VBoxContainer
+RichTextLabel
+Button
 Node2D
 Marker2D
 StaticBody2D
@@ -5,10 +9,7 @@ CollisionShape2D
 GridContainer
 Sprite2D
 Area2D
-Button
 TextureRect
 Control
 Panel
 ColorRect
-MarginContainer
-CanvasLayer

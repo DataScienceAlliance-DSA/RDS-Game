@@ -49,6 +49,7 @@ func _process(delta):
 			pass
 	else:
 		hop_interpolation += (delta * speed)
+		
 		moveTo(move_start, move_target, hop_interpolation)
 
 func set_autonomous(autonomous):
@@ -58,15 +59,17 @@ func set_autonomous(autonomous):
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 	target_pos *= 64.
 	target_pos = Vector2(target_pos.x + 32., target_pos.y + 32.)
+	
 	t /= ((target_pos - start_pos).length());
 	if (t >= 1.):
 		hopping = false
 	
 	var diff = target_pos - start_pos
 	var theta = atan2(diff.y, diff.x)
-	print(theta)
+	
 	set_directional_anim(theta, true)
 	
+	print(target_pos)
 	self.position = start_pos.lerp(target_pos, t)
 
 func occupyAStarCell(vGlobalPosition:Vector2)->void:
