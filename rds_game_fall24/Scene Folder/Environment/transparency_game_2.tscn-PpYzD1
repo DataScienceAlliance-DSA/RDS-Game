@@ -3867,85 +3867,73 @@ position = Vector2(128, 128)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(1728, 2304)
-scale = Vector2(-0.625275, -0.624905)
+scale = Vector2(-1.24289, -1.24289)
+
+[node name="Whirlpool11" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1920, 832)
+
+[node name="Whirlpool12" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(2304, 1024)
 
 [node name="Whirlpool14" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(2012, 1640)
-scale = Vector2(0.332003, 0.332003)
+position = Vector2(1984, 1665)
+scale = Vector2(0.155191, 0.155191)
 
 [node name="Whirlpool13" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(2752, 832)
-scale = Vector2(0.549889, 0.549889)
-
-[node name="Whirlpool15" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2368, 1024)
-scale = Vector2(0.549889, 0.549889)
-
-[node name="Whirlpool16" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1984, 832)
-scale = Vector2(0.549889, 0.549889)
+position = Vector2(2688, 832)
 
 [node name="Whirlpool3" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(980, 2046)
-scale = Vector2(0.606475, 0.606475)
+position = Vector2(960, 2112)
 
 [node name="Whirlpool7" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(162, 1883)
-scale = Vector2(0.447508, 0.447508)
+position = Vector2(128, 1890)
 
 [node name="Whirlpool8" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(960, 1280)
-scale = Vector2(0.427393, 0.427393)
+position = Vector2(958, 1290)
 
 [node name="Whirlpool9" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(542, 1088)
-scale = Vector2(0.571122, 0.571122)
 
 [node name="Whirlpool10" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(620, 225)
-scale = Vector2(0.713371, 0.713371)
+position = Vector2(640, 256)
 
 [node name="Whirlpool2" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(3641, 2122)
-scale = Vector2(0.622793, 0.622793)
-
-[node name="Whirlpool6" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4062, 2124)
-scale = Vector2(0.622793, 0.622793)
+position = Vector2(3712, 2176)
 
 [node name="Whirlpool5" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(3230, 1153)
-scale = Vector2(0.646791, 0.646791)
+position = Vector2(3231, 1153)
+
+[node name="Whirlpool6" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4032, 2176)
 
 [node name="Whirlpool4" parent="Whirlpools" groups=["whirlpools"] instance=ExtResource("4_4ij4c")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(4767, 2177)
-scale = Vector2(0.475464, 0.475464)
+position = Vector2(4800, 2176)
 
 [node name="Riptides_right" type="Node2D" parent="."]
 position = Vector2(128, 128)
@@ -4414,6 +4402,12 @@ y_sort_enabled = true
 position = Vector2(1152, 832)
 rotation = 3.14159
 
+[node name="Riptide14" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1792, 1472)
+rotation = 3.14159
+
 [node name="Riptide15" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
 z_index = 1
 y_sort_enabled = true
@@ -4864,38 +4858,6 @@ scale = Vector2(0.455121, 0.455121)
 position = Vector2(1890, 1565)
 scale = Vector2(0.455121, 0.455121)
 
-[node name="Sea_Rock276" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1890, 1501)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock277" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1890, 1439)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock275" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1890, 1373)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock274" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1697, 1565)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock256" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1890, 1628)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock271" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1890, 1691)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock272" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1890, 1756)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock273" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(2144, 1756)
-scale = Vector2(0.455121, 0.455121)
-
 [node name="Sea_Rock244" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
 position = Vector2(2144, 2269)
 scale = Vector2(0.455121, 0.455121)
@@ -4936,10 +4898,6 @@ scale = Vector2(0.455121, 0.455121)
 position = Vector2(668, 1436)
 scale = Vector2(0.455121, 0.455121)
 
-[node name="Sea_Rock131" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(866, 1437)
-scale = Vector2(0.455121, 0.455121)
-
 [node name="Sea_Rock130" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
 position = Vector2(415, 1244)
 scale = Vector2(0.455121, 0.455121)
@@ -4958,10 +4916,6 @@ scale = Vector2(0.455121, 0.455121)
 
 [node name="Sea_Rock100" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
 position = Vector2(1123, 1308)
-scale = Vector2(0.455121, 0.455121)
-
-[node name="Sea_Rock116" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
-position = Vector2(1312, 1438)
 scale = Vector2(0.455121, 0.455121)
 
 [node name="Sea_Rock107" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
