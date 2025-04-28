@@ -20,7 +20,6 @@ anim_lib_name = "animation_frameworks_hero_player"
 shape = SubResource("RectangleShape2D_cpqrn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.75, 0.75)
 position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

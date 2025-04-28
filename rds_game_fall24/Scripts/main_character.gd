@@ -5,6 +5,8 @@ var is_minigame_scene = false
 var shape_index
 
 @export var cam_zoom: float = 1.0
+@export var cam_speed: float = 3.0
+
 @onready var follower = get_parent().get_node("Follower")
 @onready var player_cast = self.get_node("PlayerCast") as RayCast2D
 @onready var animations = $AnimationPlayer
@@ -48,6 +50,9 @@ func get_movement_vector(direction: String) -> Vector2:
 		_: return Vector2.ZERO
 
 func _process(_delta):
+	print("HERE")
+	self.get_node("Camera2D").zoom = self.get_node("Camera2D").zoom.lerp(Vector2(cam_zoom, cam_zoom), _delta * cam_speed)
+	
 	if autonomous:
 		super(_delta)
 		return
