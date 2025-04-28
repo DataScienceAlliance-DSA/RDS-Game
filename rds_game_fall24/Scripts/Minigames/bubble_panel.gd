@@ -83,6 +83,11 @@ func _process(delta):
 		single_ctrl.scale.y = interp(1., 0., t, 'easeInExpo')
 		var c = interp(1., .2, t, 'easeInExpo')
 		single_ctrl.modulate = Color(c,c,c,1.)
+	
+	if active_element and Input.is_action_just_pressed("menu"):
+		close_page_element()
+		close_ui()
+		active_element = null
 
 func open_ui():
 	open_ui_time = 0.
@@ -95,11 +100,14 @@ func close_ui():
 func open_page_element(element):
 	active_element = element
 	
-	for button in active_element.get_children():
-		button.pressed.connect(Callable(mark_button).bind(button))
 	
 	open_single_time = 0.
 	active_element.visible = true
+	
+	return
+	
+	for button in active_element.get_children():
+		button.pressed.connect(Callable(mark_button).bind(button))
 
 func close_page_element():
 	close_single_time = 0.

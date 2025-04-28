@@ -1,7 +1,7 @@
-extends CharacterController
+extends Sprite2D
 
 @onready var popped = false
-@export var connected_panel_element : TextureRect
+@export var connected_panel_element : Control
 
 var root
 

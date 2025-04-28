@@ -31,7 +31,7 @@ signal ui_closed
 signal stage_condition_passed
 
 # GAME LOGIC
-@onready var game_stage = 10
+@onready var game_stage = 0
 ## PII PHASE
 @onready var pii_present = 0 # total # of pii present in document
 @onready var pii_found = 0 # total # of pii correctly selected
