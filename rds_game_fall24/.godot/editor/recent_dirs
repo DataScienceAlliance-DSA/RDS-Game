@@ -1,3 +1,5 @@
+res://Scene Folder/Minigames/BubbleGame
+res://Scripts/Minigames
 res://Scene Folder/Environment
 res://Scripts/Cutscene
 res://resources/gradients
@@ -18,5 +20,3 @@ res://Scene Folder/Minigames/Cannonball_Game/Powerguage
 res://assets/Mixing_Game/stand assets
 res://assets/Cannon_Game
 res://Scene Folder/Minigames/Cannonball_Game/BagPoof
-res://Scene Folder/Minigames/Cannonball_Game/Bag
-res://Scene Folder/Minigames/Cannonball_Game/GameManager

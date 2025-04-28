@@ -10,9 +10,12 @@ res://Scene Folder/UI.tscn
 res://Scene Folder/main_character.tscn
 res://Scene Folder/Environment/whirlpool.tscn
 res://Scene Folder/Environment/riptide.tscn
-res://Scene Folder/Minigames/Information_Game/information_game.gd
-res://Scripts/main_character.gd
 res://Scene Folder/Environment/Intro_Room.tscn
-res://Scene Folder/Character Scenes/CharacterController.gd
-res://Scene Folder/Environment/IntroRoom.gd
 res://Scene Folder/Environment/transparency_sea_tile_map.tscn
+res://Scene Folder/Minigames/Information_Game/information_game.gd
+res://assets/Tilesets/Interior_Tiles.tres
+res://Scripts/Minigames/bubble_game.gd
+res://Scene Folder/Minigames/BubbleGame/bubble_game.tscn
+res://Scene Folder/Minigames/BubbleGame/Bubble.gd
+res://Scene Folder/Minigames/BubbleGame/bubble.tscn
+res://Scripts/Minigames/bubble_panel.gd

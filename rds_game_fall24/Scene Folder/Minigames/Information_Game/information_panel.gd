@@ -10,22 +10,28 @@ var active_element
 @export var open_ui_max : float
 @export var open_single_max : float
 @export var close_single_max : float
+@export var close_ui_max : float
 
 # ACTIVE VISUAL TIMES
 @onready var open_ui_time = open_ui_max
 @onready var open_single_time = open_single_max
 @onready var close_single_time = close_single_max
+@onready var close_ui_time = close_ui_max
+
+@onready var memory_game_starting = false
+@onready var memory_timer = 0.
 
 # VISUAL COMPLETION SIGNALS
 signal ui_opened
 signal single_element_opened
 signal single_element_closed
+signal ui_closed
 
 # GAME LOGIC SIGNALS
 signal stage_condition_passed
 
 # GAME LOGIC
-@onready var game_stage = 0
+@onready var game_stage = 10
 ## PII PHASE
 @onready var pii_present = 0 # total # of pii present in document
 @onready var pii_found = 0 # total # of pii correctly selected
@@ -48,6 +54,15 @@ func _process(delta):
 		
 		panel_sm.set_shader_parameter('lod', interp(0., 1.5, t, 'linear'))
 		panel_sm.set_shader_parameter('dim', interp(0., .15, t, 'linear'))
+	if (close_ui_time < close_ui_max):
+		close_ui_time = close_ui_time + delta
+		if close_ui_time > close_ui_max: 
+			ui_closed.emit()
+			panel.visible = false
+		var t = close_ui_time / close_ui_max
+		
+		panel_sm.set_shader_parameter('lod', interp(1.5, 0., t, 'linear'))
+		panel_sm.set_shader_parameter('dim', interp(.15, 0., t, 'linear'))
 	# opening a single element in panel
 	if (open_single_time < open_single_max):
 		open_single_time = open_single_time + delta
@@ -68,6 +83,39 @@ func _process(delta):
 		single_ctrl.scale.y = interp(1., 0., t, 'easeInExpo')
 		var c = interp(1., .2, t, 'easeInExpo')
 		single_ctrl.modulate = Color(c,c,c,1.)
+	
+	if game_stage >= 7 and game_stage <= 9:
+		memory_timer = memory_timer + delta
+		if memory_timer < 5.:
+			for button in active_element.get_child(0).get_children():
+				button.disabled = true
+				if button.toggle_mode:
+					var sb = button.get_theme_stylebox("disabled").duplicate()
+					var ca = interp(.466, .6, memory_timer / 5., 'easeInExpo')
+					var cb = interp(.592, .6, memory_timer / 5., 'easeInExpo')
+					var cd = interp(.882, .6, memory_timer / 5., 'easeInExpo')
+					sb.bg_color = Color(ca, cb, cd, 1.)
+					button.add_theme_stylebox_override("disabled", sb)
+				else:
+					var sb = button.get_theme_stylebox("disabled").duplicate()
+					sb.bg_color = Color(.6, .6, .6, 1.)
+					button.add_theme_stylebox_override("disabled", sb)
+		elif memory_game_starting:
+			memory_game_starting = false
+			for button in active_element.get_child(0).get_children():
+				button.disabled = false
+				var sbd = button.get_theme_stylebox("disabled").duplicate()
+				sbd.bg_color = Color(.466, .592, .882, 1.)
+				var sbh = button.get_theme_stylebox("hover").duplicate()
+				sbh.bg_color = Color(.847, .847, .847, 1.)
+				var sbn = button.get_theme_stylebox("normal").duplicate()
+				sbn.bg_color = Color(.6, .6, .6, 1.)
+				var sbp = button.get_theme_stylebox("pressed").duplicate()
+				sbp.bg_color = Color(.309, .309, .309, 1.)
+				button.add_theme_stylebox_override("disabled", sbd)
+				button.add_theme_stylebox_override("hover", sbh)
+				button.add_theme_stylebox_override("normal", sbn)
+				button.add_theme_stylebox_override("pressed", sbp)
 
 func _input(event):
 	## TEXT LOGIC PROCESS FOR TEXTBOXES IN ENCRYPTION PHASE:
@@ -171,6 +219,10 @@ func open_ui():
 	open_ui_time = 0.
 	panel.visible = true
 
+func close_ui():
+	close_ui_time = 0.
+	panel.visible = true
+
 func open_page_element():
 	match(game_stage):
 		1:
@@ -200,6 +252,8 @@ func open_page_element():
 			if button.name == "Hero": button.name = encode_custom_cipher(GlobalPlayerName.global_player_name) # button names are used as the correct decryption answer
 			button.pressed.connect(Callable(select_button).bind(button))
 	elif game_stage >= 7 and game_stage <= 9:
+		memory_timer = 0.
+		memory_game_starting = true
 		for button in active_element.get_child(0).get_children():
 			button.pressed.connect(Callable(mark_button).bind(button))
 	
@@ -219,9 +273,8 @@ func assess_button(button):
 
 func mark_button(button):
 	## TOGGLEABLE BUTTON indicates CORRECT CLICK ZONE
-	if button.toggle_mode:
+	if button.toggle_mode and !button.disabled:
 		button.disabled = true
-		button.modulate = Color(0.,1.,0.,1.)
 		tiles_found = tiles_found + 1
 
 func select_button(button):
@@ -255,7 +308,6 @@ func encode_custom_cipher(text: String) -> String:
 			result += c
 	
 	return result
-
 
 func interp(start, finish, delta, easing):
 	match(easing):
