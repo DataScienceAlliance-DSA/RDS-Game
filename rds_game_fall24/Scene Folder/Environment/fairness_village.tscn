@@ -740,6 +740,7 @@ script = ExtResource("4_2e08x")
 z_index = 2
 position = Vector2(-184, -280)
 cam_zoom = 0.75
+speed = 250.0
 
 [node name="Houses" type="CanvasGroup" parent="."]
 position = Vector2(-40, -192)
