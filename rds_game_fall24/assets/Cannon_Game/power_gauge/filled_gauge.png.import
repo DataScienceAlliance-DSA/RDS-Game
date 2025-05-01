@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duawkrfo2d6tt"
-path="res://.godot/imported/filled_gauge.png-b2bf6df7007c6f10ef1efa4ed39249d2.ctex"
+path="res://.godot/imported/filled_gauge.png-19e7b53b7904b1547e3fe4357baaf7ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/power_gauge/filled_gauge.png"
-dest_files=["res://.godot/imported/filled_gauge.png-b2bf6df7007c6f10ef1efa4ed39249d2.ctex"]
+source_file="res://Assets/Cannon_Game/power_gauge/filled_gauge.png"
+dest_files=["res://.godot/imported/filled_gauge.png-19e7b53b7904b1547e3fe4357baaf7ed.ctex"]
 
 [params]
 

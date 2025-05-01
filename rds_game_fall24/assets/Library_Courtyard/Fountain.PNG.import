@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csl6cmetaqvde"
-path="res://.godot/imported/Fountain.PNG-26aff9cc6b7943fb28bcebc6291756f2.ctex"
+path="res://.godot/imported/Fountain.PNG-4bf147630014e6c821bf2803511d7b00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Library_Courtyard/Fountain.PNG"
-dest_files=["res://.godot/imported/Fountain.PNG-26aff9cc6b7943fb28bcebc6291756f2.ctex"]
+source_file="res://Assets/Library_Courtyard/Fountain.PNG"
+dest_files=["res://.godot/imported/Fountain.PNG-4bf147630014e6c821bf2803511d7b00.ctex"]
 
 [params]
 

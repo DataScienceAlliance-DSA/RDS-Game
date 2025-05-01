@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j6a4i3pj5iue"
-path="res://.godot/imported/TransparencyStudent.PNG-6140eca2c65bcd2b417dba2156254984.ctex"
+path="res://.godot/imported/TransparencyStudent.PNG-32798522b339ec7771dac7bc274864b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Students/TransparencyStudent.PNG"
-dest_files=["res://.godot/imported/TransparencyStudent.PNG-6140eca2c65bcd2b417dba2156254984.ctex"]
+source_file="res://Assets/Characters/Students/TransparencyStudent.PNG"
+dest_files=["res://.godot/imported/TransparencyStudent.PNG-32798522b339ec7771dac7bc274864b9.ctex"]
 
 [params]
 

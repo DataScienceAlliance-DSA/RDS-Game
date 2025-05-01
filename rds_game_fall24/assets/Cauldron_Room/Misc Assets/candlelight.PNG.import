@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccfd0hhfjvrlj"
-path="res://.godot/imported/candlelight.PNG-b57c351af0a8bd554b4be8706397dc14.ctex"
+path="res://.godot/imported/candlelight.PNG-68ac822c0af3c261a40f20681d20c759.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Misc Assets/candlelight.PNG"
-dest_files=["res://.godot/imported/candlelight.PNG-b57c351af0a8bd554b4be8706397dc14.ctex"]
+source_file="res://Assets/Cauldron_Room/Misc Assets/candlelight.PNG"
+dest_files=["res://.godot/imported/candlelight.PNG-68ac822c0af3c261a40f20681d20c759.ctex"]
 
 [params]
 

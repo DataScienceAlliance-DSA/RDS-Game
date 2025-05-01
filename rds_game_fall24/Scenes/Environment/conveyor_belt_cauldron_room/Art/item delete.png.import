@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg2lae4h8h8qi"
-path="res://.godot/imported/item delete.png-42d16f3b78255eebfb3793a673ff5b37.ctex"
+path="res://.godot/imported/item delete.png-8d9101ce9f5a634d39358cf2f5789bf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/item delete.png"
-dest_files=["res://.godot/imported/item delete.png-42d16f3b78255eebfb3793a673ff5b37.ctex"]
+source_file="res://Scenes/Environment/conveyor_belt_cauldron_room/Art/item delete.png"
+dest_files=["res://.godot/imported/item delete.png-8d9101ce9f5a634d39358cf2f5789bf2.ctex"]
 
 [params]
 

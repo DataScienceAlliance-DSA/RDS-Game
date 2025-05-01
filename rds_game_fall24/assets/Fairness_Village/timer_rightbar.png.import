@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dawxkfykv3sop"
-path="res://.godot/imported/timer_rightbar.png-9be20f312a2d784e9a5b69867e9bf822.ctex"
+path="res://.godot/imported/timer_rightbar.png-59451bfd8a8a55ebf0c09c9d796e9839.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Village/timer_rightbar.png"
-dest_files=["res://.godot/imported/timer_rightbar.png-9be20f312a2d784e9a5b69867e9bf822.ctex"]
+source_file="res://Assets/Fairness_Village/timer_rightbar.png"
+dest_files=["res://.godot/imported/timer_rightbar.png-59451bfd8a8a55ebf0c09c9d796e9839.ctex"]
 
 [params]
 

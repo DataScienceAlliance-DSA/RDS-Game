@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://72aaqiepvjdb"
-path="res://.godot/imported/yellowred.png-c7ee207503a4ac8a29b43a43497a5a93.ctex"
+path="res://.godot/imported/yellowred.png-71a6b0b356ad3902faab70869b7625f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mixing_Game/smoke assets/yellowred.png"
-dest_files=["res://.godot/imported/yellowred.png-c7ee207503a4ac8a29b43a43497a5a93.ctex"]
+source_file="res://Assets/Mixing_Game/smoke assets/yellowred.png"
+dest_files=["res://.godot/imported/yellowred.png-71a6b0b356ad3902faab70869b7625f3.ctex"]
 
 [params]
 

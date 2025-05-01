@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de0wk7swj03oo"
-path="res://.godot/imported/stand.png-280b8daab62a9228047d519ae30907fc.ctex"
+path="res://.godot/imported/stand.png-99989ca8011beb3adead27eed38e84b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Scale_Game/stand.png"
-dest_files=["res://.godot/imported/stand.png-280b8daab62a9228047d519ae30907fc.ctex"]
+source_file="res://Assets/Fairness_Scale_Game/stand.png"
+dest_files=["res://.godot/imported/stand.png-99989ca8011beb3adead27eed38e84b1.ctex"]
 
 [params]
 

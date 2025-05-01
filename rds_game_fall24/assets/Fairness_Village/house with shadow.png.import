@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmdv77drfld7r"
-path="res://.godot/imported/house with shadow.png-349fb18708a3b7bb87d1afbbdd1fa9eb.ctex"
+path="res://.godot/imported/house with shadow.png-690b19b738fe6b197c350239582a1953.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Village/house with shadow.png"
-dest_files=["res://.godot/imported/house with shadow.png-349fb18708a3b7bb87d1afbbdd1fa9eb.ctex"]
+source_file="res://Assets/Fairness_Village/house with shadow.png"
+dest_files=["res://.godot/imported/house with shadow.png-690b19b738fe6b197c350239582a1953.ctex"]
 
 [params]
 

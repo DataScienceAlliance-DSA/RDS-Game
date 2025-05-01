@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgio36msj5ayd"
-path="res://.godot/imported/FoxIdleSheet.png-b3b12716fe97b4a923bd04d49c214ffb.ctex"
+path="res://.godot/imported/FoxIdleSheet.png-2847f908ad8f58b0ce5fa0e98222919b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Fox Assets/FoxIdleSheet.png"
-dest_files=["res://.godot/imported/FoxIdleSheet.png-b3b12716fe97b4a923bd04d49c214ffb.ctex"]
+source_file="res://Assets/Cauldron_Room/Fox Assets/FoxIdleSheet.png"
+dest_files=["res://.godot/imported/FoxIdleSheet.png-2847f908ad8f58b0ce5fa0e98222919b.ctex"]
 
 [params]
 

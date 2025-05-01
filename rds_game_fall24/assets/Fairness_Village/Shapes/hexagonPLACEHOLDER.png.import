@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dea7yikuureuw"
-path="res://.godot/imported/hexagonPLACEHOLDER.png-15bfa4686875d8bc74e6644334aafd20.ctex"
+path="res://.godot/imported/hexagonPLACEHOLDER.png-dcbaa578e501a71c3d39bc29a810a8b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Village/Shapes/hexagonPLACEHOLDER.png"
-dest_files=["res://.godot/imported/hexagonPLACEHOLDER.png-15bfa4686875d8bc74e6644334aafd20.ctex"]
+source_file="res://Assets/Fairness_Village/Shapes/hexagonPLACEHOLDER.png"
+dest_files=["res://.godot/imported/hexagonPLACEHOLDER.png-dcbaa578e501a71c3d39bc29a810a8b1.ctex"]
 
 [params]
 

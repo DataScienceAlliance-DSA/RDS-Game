@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t6mdc4qbou2r"
-path="res://.godot/imported/splitter_all_sheet.png-86c5615e582331f02ba4749bccae7b3e.ctex"
+path="res://.godot/imported/splitter_all_sheet.png-d63648577a5f0aaff315f99edc23cfd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/splitter_all_sheet.png"
-dest_files=["res://.godot/imported/splitter_all_sheet.png-86c5615e582331f02ba4749bccae7b3e.ctex"]
+source_file="res://Scenes/Environment/conveyor_belt_cauldron_room/Art/splitter_all_sheet.png"
+dest_files=["res://.godot/imported/splitter_all_sheet.png-d63648577a5f0aaff315f99edc23cfd9.ctex"]
 
 [params]
 

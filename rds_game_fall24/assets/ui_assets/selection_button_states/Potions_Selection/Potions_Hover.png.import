@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg1eky31u2ghm"
-path="res://.godot/imported/Potions_Hover.png-fb7737b1f7121c7d9cfd6df89e8b6001.ctex"
+path="res://.godot/imported/Potions_Hover.png-a893d993b6495f335926b354f78b57ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Hover.png"
-dest_files=["res://.godot/imported/Potions_Hover.png-fb7737b1f7121c7d9cfd6df89e8b6001.ctex"]
+source_file="res://Assets/ui_assets/selection_button_states/Potions_Selection/Potions_Hover.png"
+dest_files=["res://.godot/imported/Potions_Hover.png-a893d993b6495f335926b354f78b57ee.ctex"]
 
 [params]
 

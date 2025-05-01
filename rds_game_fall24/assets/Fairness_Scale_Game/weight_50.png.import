@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwlp18cogkvgt"
-path="res://.godot/imported/weight_50.png-15fac779309391e8bf0c3789707c4e87.ctex"
+path="res://.godot/imported/weight_50.png-fee432c70a91a9733dda547bc9a2bdb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Scale_Game/weight_50.png"
-dest_files=["res://.godot/imported/weight_50.png-15fac779309391e8bf0c3789707c4e87.ctex"]
+source_file="res://Assets/Fairness_Scale_Game/weight_50.png"
+dest_files=["res://.godot/imported/weight_50.png-fee432c70a91a9733dda547bc9a2bdb2.ctex"]
 
 [params]
 

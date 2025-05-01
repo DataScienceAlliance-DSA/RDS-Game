@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh7hnrxooutpk"
-path="res://.godot/imported/tealyellow.png-07995e401e52b7cca247d6728370b5b3.ctex"
+path="res://.godot/imported/tealyellow.png-5d1d6a48a68be7585d0c37c7e12c31f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mixing_Game/smoke assets/tealyellow.png"
-dest_files=["res://.godot/imported/tealyellow.png-07995e401e52b7cca247d6728370b5b3.ctex"]
+source_file="res://Assets/Mixing_Game/smoke assets/tealyellow.png"
+dest_files=["res://.godot/imported/tealyellow.png-5d1d6a48a68be7585d0c37c7e12c31f4.ctex"]
 
 [params]
 

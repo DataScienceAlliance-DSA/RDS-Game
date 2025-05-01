@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj67vau0oerx1"
-path="res://.godot/imported/poof4.png-d2b589c8c8f8e59b45896576e349f20e.ctex"
+path="res://.godot/imported/poof4.png-c8558a59aadd4d67d01cb2bbf9387190.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/bag_poof/poof4.png"
-dest_files=["res://.godot/imported/poof4.png-d2b589c8c8f8e59b45896576e349f20e.ctex"]
+source_file="res://Assets/Cannon_Game/bag_poof/poof4.png"
+dest_files=["res://.godot/imported/poof4.png-c8558a59aadd4d67d01cb2bbf9387190.ctex"]
 
 [params]
 

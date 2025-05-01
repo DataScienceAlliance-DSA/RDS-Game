@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbb2o4l6lo1mo"
-path="res://.godot/imported/decrypted_text_banner.png-5ead649de330eefb788df3f9cc38b81a.ctex"
+path="res://.godot/imported/decrypted_text_banner.png-17333024f34727b62bc2ac6dbd4e5461.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Information_Game/decrypted_text_banner.png"
-dest_files=["res://.godot/imported/decrypted_text_banner.png-5ead649de330eefb788df3f9cc38b81a.ctex"]
+source_file="res://Assets/Information_Game/decrypted_text_banner.png"
+dest_files=["res://.godot/imported/decrypted_text_banner.png-17333024f34727b62bc2ac6dbd4e5461.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buosn2j3agyok"
-path="res://.godot/imported/Blue orb no figure.png-3679d37ec8ba4006660a1302417516a6.ctex"
+path="res://.godot/imported/Blue orb no figure.png-e904a596029ac17ccfa4344017d662d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mixing_Game/orbs png/Blue orb no figure.png"
-dest_files=["res://.godot/imported/Blue orb no figure.png-3679d37ec8ba4006660a1302417516a6.ctex"]
+source_file="res://Assets/Mixing_Game/orbs png/Blue orb no figure.png"
+dest_files=["res://.godot/imported/Blue orb no figure.png-e904a596029ac17ccfa4344017d662d7.ctex"]
 
 [params]
 

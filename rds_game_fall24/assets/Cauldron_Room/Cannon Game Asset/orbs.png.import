@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqte4koq86yl1"
-path="res://.godot/imported/orbs.png-bd3372f45ce559aa2a8b1a3f11613c00.ctex"
+path="res://.godot/imported/orbs.png-4a4769e5913ec094bd2fc640a13239b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Cannon Game Asset/orbs.png"
-dest_files=["res://.godot/imported/orbs.png-bd3372f45ce559aa2a8b1a3f11613c00.ctex"]
+source_file="res://Assets/Cauldron_Room/Cannon Game Asset/orbs.png"
+dest_files=["res://.godot/imported/orbs.png-4a4769e5913ec094bd2fc640a13239b0.ctex"]
 
 [params]
 

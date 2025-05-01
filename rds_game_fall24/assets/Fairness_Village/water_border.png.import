@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk2kg46fs2xi7"
-path="res://.godot/imported/water_border.png-5ddfef8db894ec2bb27b226657925384.ctex"
+path="res://.godot/imported/water_border.png-7a8ff0581673f7078d42a64e97e06928.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Village/water_border.png"
-dest_files=["res://.godot/imported/water_border.png-5ddfef8db894ec2bb27b226657925384.ctex"]
+source_file="res://Assets/Fairness_Village/water_border.png"
+dest_files=["res://.godot/imported/water_border.png-7a8ff0581673f7078d42a64e97e06928.ctex"]
 
 [params]
 

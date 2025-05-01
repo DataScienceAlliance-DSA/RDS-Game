@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mgusywe18567"
-path="res://.godot/imported/cyan_counter.png-dd648a93a69ae148a7f2cf3790e6dde6.ctex"
+path="res://.godot/imported/cyan_counter.png-4919599190549eb9560c5255819f9ae9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Orbs Assets/orbs_counter/cyan_counter.png"
-dest_files=["res://.godot/imported/cyan_counter.png-dd648a93a69ae148a7f2cf3790e6dde6.ctex"]
+source_file="res://Assets/Cauldron_Room/Orbs Assets/orbs_counter/cyan_counter.png"
+dest_files=["res://.godot/imported/cyan_counter.png-4919599190549eb9560c5255819f9ae9.ctex"]
 
 [params]
 

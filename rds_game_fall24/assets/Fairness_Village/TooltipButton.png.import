@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c35algxs2y7kg"
-path.s3tc="res://.godot/imported/TooltipButton.png-9e0969be262057aace517a4b4e3d8829.s3tc.ctex"
+path.s3tc="res://.godot/imported/TooltipButton.png-4f149c24acf0ed37118d86dced77a059.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Fairness_Village/TooltipButton.png"
-dest_files=["res://.godot/imported/TooltipButton.png-9e0969be262057aace517a4b4e3d8829.s3tc.ctex"]
+source_file="res://Assets/Fairness_Village/TooltipButton.png"
+dest_files=["res://.godot/imported/TooltipButton.png-4f149c24acf0ed37118d86dced77a059.s3tc.ctex"]
 
 [params]
 

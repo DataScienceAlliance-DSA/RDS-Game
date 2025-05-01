@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd3o4gyn2eamm"
-path="res://.godot/imported/new book shelf cauldron room.png-6ef2449e1fa5faf0dd1d4ad7dc52005b.ctex"
+path="res://.godot/imported/new book shelf cauldron room.png-17c509f648d25b34e6e25aabe0cd7788.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Bookshelf assets/new book shelf cauldron room.png"
-dest_files=["res://.godot/imported/new book shelf cauldron room.png-6ef2449e1fa5faf0dd1d4ad7dc52005b.ctex"]
+source_file="res://Assets/Cauldron_Room/Bookshelf assets/new book shelf cauldron room.png"
+dest_files=["res://.godot/imported/new book shelf cauldron room.png-17c509f648d25b34e6e25aabe0cd7788.ctex"]
 
 [params]
 

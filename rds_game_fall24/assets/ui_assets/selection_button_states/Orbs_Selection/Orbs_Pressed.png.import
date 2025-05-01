@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckmgth8tt6dg3"
-path="res://.godot/imported/Orbs_Pressed.png-d2d2cb514825dbd4841b0878b998ba0e.ctex"
+path="res://.godot/imported/Orbs_Pressed.png-2d666de251def8a687b62c6af8640554.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Pressed.png"
-dest_files=["res://.godot/imported/Orbs_Pressed.png-d2d2cb514825dbd4841b0878b998ba0e.ctex"]
+source_file="res://Assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Pressed.png"
+dest_files=["res://.godot/imported/Orbs_Pressed.png-2d666de251def8a687b62c6af8640554.ctex"]
 
 [params]
 

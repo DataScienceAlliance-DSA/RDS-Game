@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7pnu2iar8wdc"
-path="res://.godot/imported/Group 101.png-76a2263936b2c283b0f0faa39a117068.ctex"
+path="res://.godot/imported/Group 101.png-dfe21dee51cf5a5858c22feca2961950.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Scale_Game/Group 101.png"
-dest_files=["res://.godot/imported/Group 101.png-76a2263936b2c283b0f0faa39a117068.ctex"]
+source_file="res://Assets/Fairness_Scale_Game/Group 101.png"
+dest_files=["res://.godot/imported/Group 101.png-dfe21dee51cf5a5858c22feca2961950.ctex"]
 
 [params]
 

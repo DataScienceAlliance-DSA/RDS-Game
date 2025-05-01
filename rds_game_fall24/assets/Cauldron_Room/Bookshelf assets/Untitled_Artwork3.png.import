@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eeg78fn8y1aq"
-path="res://.godot/imported/Untitled_Artwork3.png-4749b8e7a0cc89c8f3ccce07ab3a3cb7.ctex"
+path="res://.godot/imported/Untitled_Artwork3.png-824be59b7c997938e62c2abdf70072bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png"
-dest_files=["res://.godot/imported/Untitled_Artwork3.png-4749b8e7a0cc89c8f3ccce07ab3a3cb7.ctex"]
+source_file="res://Assets/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png"
+dest_files=["res://.godot/imported/Untitled_Artwork3.png-824be59b7c997938e62c2abdf70072bf.ctex"]
 
 [params]
 

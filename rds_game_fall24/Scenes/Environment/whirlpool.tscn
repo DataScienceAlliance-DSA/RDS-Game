@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqtrkfn7c7gyw"]
 
-[ext_resource type="Texture2D" uid="uid://b3bg2ayetu4iq" path="res://assets/Transparency Pillar/Transparency Game 2/Whirlpool(test).png" id="1_joju3"]
+[ext_resource type="Texture2D" uid="uid://b3bg2ayetu4iq" path="res://Assets/Transparency/TransparencyMinigame2/Whirlpool(test).png" id="1_joju3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_my81h"]
 radius = 226.803

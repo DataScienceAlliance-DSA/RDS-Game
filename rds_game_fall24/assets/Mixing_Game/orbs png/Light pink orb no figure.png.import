@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dswywb0v2yhd"
-path="res://.godot/imported/Light pink orb no figure.png-84929e756c13232dc54c606bd60ee516.ctex"
+path="res://.godot/imported/Light pink orb no figure.png-59abf223e12e4d28d37852b83bb4dd39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mixing_Game/orbs png/Light pink orb no figure.png"
-dest_files=["res://.godot/imported/Light pink orb no figure.png-84929e756c13232dc54c606bd60ee516.ctex"]
+source_file="res://Assets/Mixing_Game/orbs png/Light pink orb no figure.png"
+dest_files=["res://.godot/imported/Light pink orb no figure.png-59abf223e12e4d28d37852b83bb4dd39.ctex"]
 
 [params]
 

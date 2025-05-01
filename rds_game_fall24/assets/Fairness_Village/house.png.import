@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjpjy3hb44opj"
-path="res://.godot/imported/house.png-eb1ed5c1107524cfedf2284f2cf17b12.ctex"
+path="res://.godot/imported/house.png-28065952bbdd2c21b3bbe9788f74b843.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Village/house.png"
-dest_files=["res://.godot/imported/house.png-eb1ed5c1107524cfedf2284f2cf17b12.ctex"]
+source_file="res://Assets/Fairness_Village/house.png"
+dest_files=["res://.godot/imported/house.png-28065952bbdd2c21b3bbe9788f74b843.ctex"]
 
 [params]
 

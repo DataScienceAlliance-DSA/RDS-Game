@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buylqt4v1uu77"
-path="res://.godot/imported/Villager.PNG-882591972856065c589c87782fc425ee.ctex"
+path="res://.godot/imported/Villager.PNG-9d432796a4d98176905c40b5a481b8b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_assets/portraits/Villager.PNG"
-dest_files=["res://.godot/imported/Villager.PNG-882591972856065c589c87782fc425ee.ctex"]
+source_file="res://Assets/ui_assets/portraits/Villager.PNG"
+dest_files=["res://.godot/imported/Villager.PNG-9d432796a4d98176905c40b5a481b8b3.ctex"]
 
 [params]
 

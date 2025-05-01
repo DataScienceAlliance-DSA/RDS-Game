@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfftw6eb8s4fm"
-path="res://.godot/imported/lightblue_counter.png-757ef85f36fcdc2845b1fbebe790272c.ctex"
+path="res://.godot/imported/lightblue_counter.png-5b49d258a55d560a725d8a3a90328419.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/orb_counter/lightblue_counter.png"
-dest_files=["res://.godot/imported/lightblue_counter.png-757ef85f36fcdc2845b1fbebe790272c.ctex"]
+source_file="res://Assets/Cannon_Game/orb_counter/lightblue_counter.png"
+dest_files=["res://.godot/imported/lightblue_counter.png-5b49d258a55d560a725d8a3a90328419.ctex"]
 
 [params]
 

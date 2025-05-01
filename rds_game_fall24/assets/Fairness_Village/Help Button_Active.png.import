@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8lllx8uob7gw"
-path="res://.godot/imported/Help Button_Active.png-2050b5c5c4fde40c2f98835bbbb61496.ctex"
+path="res://.godot/imported/Help Button_Active.png-15bacbe3b2f64d2a6f5736da7946f032.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fairness_Village/Help Button_Active.png"
-dest_files=["res://.godot/imported/Help Button_Active.png-2050b5c5c4fde40c2f98835bbbb61496.ctex"]
+source_file="res://Assets/Fairness_Village/Help Button_Active.png"
+dest_files=["res://.godot/imported/Help Button_Active.png-15bacbe3b2f64d2a6f5736da7946f032.ctex"]
 
 [params]
 

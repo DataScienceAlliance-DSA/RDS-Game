@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyr83livnkl0y"
-path="res://.godot/imported/violetteal.png-695390d046c0b45dc78119c991d916b6.ctex"
+path="res://.godot/imported/violetteal.png-70a32ad650b8715eaa19c17366f7ef40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mixing_Game/smoke assets/violetteal.png"
-dest_files=["res://.godot/imported/violetteal.png-695390d046c0b45dc78119c991d916b6.ctex"]
+source_file="res://Assets/Mixing_Game/smoke assets/violetteal.png"
+dest_files=["res://.godot/imported/violetteal.png-70a32ad650b8715eaa19c17366f7ef40.ctex"]
 
 [params]
 

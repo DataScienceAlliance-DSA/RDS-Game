@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7o3d6wrkyjwr"
-path="res://.godot/imported/BlueVillagerSpreadsheet.png-e9f247af4dea2371f7709c2f76a3cacc.ctex"
+path="res://.godot/imported/BlueVillagerSpreadsheet.png-d1c0de1761aeabd33a05bc3b7d24da7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Villagers/BlueVillagerSpreadsheet.png"
-dest_files=["res://.godot/imported/BlueVillagerSpreadsheet.png-e9f247af4dea2371f7709c2f76a3cacc.ctex"]
+source_file="res://Assets/Characters/Villagers/BlueVillagerSpreadsheet.png"
+dest_files=["res://.godot/imported/BlueVillagerSpreadsheet.png-d1c0de1761aeabd33a05bc3b7d24da7a.ctex"]
 
 [params]
 

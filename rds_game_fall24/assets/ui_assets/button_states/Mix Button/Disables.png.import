@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cercn5dplsnfv"
-path="res://.godot/imported/Disables.png-c433100a9f0a31e21e3ccf2606f7fa92.ctex"
+path="res://.godot/imported/Disables.png-b263edc2b7ea60a24db00dfeaf3a86c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_assets/button_states/Mix Button/Disables.png"
-dest_files=["res://.godot/imported/Disables.png-c433100a9f0a31e21e3ccf2606f7fa92.ctex"]
+source_file="res://Assets/ui_assets/button_states/Mix Button/Disables.png"
+dest_files=["res://.godot/imported/Disables.png-b263edc2b7ea60a24db00dfeaf3a86c5.ctex"]
 
 [params]
 

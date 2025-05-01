@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://62wvn80e4qvj"
-path="res://.godot/imported/bag.png-d7c98481d255d768200e5d92ed0846aa.ctex"
+path="res://.godot/imported/bag.png-013b9542c7ec43e5268bdaea46e7f971.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cauldron_Room/Cannon Game Asset/bag.png"
-dest_files=["res://.godot/imported/bag.png-d7c98481d255d768200e5d92ed0846aa.ctex"]
+source_file="res://Assets/Cauldron_Room/Cannon Game Asset/bag.png"
+dest_files=["res://.godot/imported/bag.png-013b9542c7ec43e5268bdaea46e7f971.ctex"]
 
 [params]
 

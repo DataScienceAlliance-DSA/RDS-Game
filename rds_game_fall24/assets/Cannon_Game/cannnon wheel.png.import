@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qmjfamltg3oh"
-path="res://.godot/imported/cannnon wheel.png-a8756d6b6cdaee082073eaa1d07a7e4e.ctex"
+path="res://.godot/imported/cannnon wheel.png-a3c57049c587d7e27e36d2f72aebcdaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cannon_Game/cannnon wheel.png"
-dest_files=["res://.godot/imported/cannnon wheel.png-a8756d6b6cdaee082073eaa1d07a7e4e.ctex"]
+source_file="res://Assets/Cannon_Game/cannnon wheel.png"
+dest_files=["res://.godot/imported/cannnon wheel.png-a3c57049c587d7e27e36d2f72aebcdaf.ctex"]
 
 [params]
 
