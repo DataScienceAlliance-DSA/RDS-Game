@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp5xu33omo7wo"
-path="res://.godot/imported/Bag4.PNG-16c1e0d76c01255e43516f660a03191a.ctex"
+path="res://.godot/imported/Bag4.PNG-7b451608150206c65dced52efdc50beb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cannon_Game/bags/Bag4.PNG"
-dest_files=["res://.godot/imported/Bag4.PNG-16c1e0d76c01255e43516f660a03191a.ctex"]
+source_file="res://assets/Cannon_Game/bags/Bag4.PNG"
+dest_files=["res://.godot/imported/Bag4.PNG-7b451608150206c65dced52efdc50beb.ctex"]
 
 [params]
 

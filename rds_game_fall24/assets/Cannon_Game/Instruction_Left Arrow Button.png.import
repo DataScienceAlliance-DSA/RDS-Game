@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cydbt015clspk"
-path="res://.godot/imported/Instruction_Left Arrow Button.png-e4ee26778215e5bb852e9fe56ee45ec4.ctex"
+path="res://.godot/imported/Instruction_Left Arrow Button.png-e002bee2d63614afb75672491c7c527b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cannon_Game/Instruction_Left Arrow Button.png"
-dest_files=["res://.godot/imported/Instruction_Left Arrow Button.png-e4ee26778215e5bb852e9fe56ee45ec4.ctex"]
+source_file="res://assets/Cannon_Game/Instruction_Left Arrow Button.png"
+dest_files=["res://.godot/imported/Instruction_Left Arrow Button.png-e002bee2d63614afb75672491c7c527b.ctex"]
 
 [params]
 

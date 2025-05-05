@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqvrvrwoiyist"
-path="res://.godot/imported/CandleSheet.png-fe3634a932ed1c10b28dbfbd88856e50.ctex"
+path="res://.godot/imported/CandleSheet.png-7d4818c81be6886ac1b2f21c94c749d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Intro_Room/CandleSheet.png"
-dest_files=["res://.godot/imported/CandleSheet.png-fe3634a932ed1c10b28dbfbd88856e50.ctex"]
+source_file="res://assets/Intro_Room/CandleSheet.png"
+dest_files=["res://.godot/imported/CandleSheet.png-7d4818c81be6886ac1b2f21c94c749d3.ctex"]
 
 [params]
 

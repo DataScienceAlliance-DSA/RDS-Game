@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx4w0ur5pkhpy"
-path="res://.godot/imported/Town_Podium.png-c1537cb2514bc591f066d5cd947037c2.ctex"
+path="res://.godot/imported/Town_Podium.png-171c671a76c109a54dd565b0e4c22d1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fairness_Village/Town_Podium.png"
-dest_files=["res://.godot/imported/Town_Podium.png-c1537cb2514bc591f066d5cd947037c2.ctex"]
+source_file="res://assets/Fairness_Village/Town_Podium.png"
+dest_files=["res://.godot/imported/Town_Podium.png-171c671a76c109a54dd565b0e4c22d1a.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfxsreqhje1s7"
-path="res://.godot/imported/Spacebar_Instruction Button.png-c22cff3881991738fc1044b2b260faab.ctex"
+path="res://.godot/imported/Spacebar_Instruction Button.png-031710cf7f24959d3bf19979c9fbca9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui_assets/Spacebar_Instruction Button.png"
-dest_files=["res://.godot/imported/Spacebar_Instruction Button.png-c22cff3881991738fc1044b2b260faab.ctex"]
+source_file="res://assets/ui_assets/Spacebar_Instruction Button.png"
+dest_files=["res://.godot/imported/Spacebar_Instruction Button.png-031710cf7f24959d3bf19979c9fbca9b.ctex"]
 
 [params]
 

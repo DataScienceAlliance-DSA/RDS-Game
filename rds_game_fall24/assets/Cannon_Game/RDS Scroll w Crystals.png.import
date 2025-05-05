@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjksyahuaxlo8"
-path="res://.godot/imported/RDS Scroll w Crystals.png-5cb44cfcc7ad98b1cf61139d3df48d96.ctex"
+path="res://.godot/imported/RDS Scroll w Crystals.png-9926bbd058d4a329441f201e5224f3a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cannon_Game/RDS Scroll w Crystals.png"
-dest_files=["res://.godot/imported/RDS Scroll w Crystals.png-5cb44cfcc7ad98b1cf61139d3df48d96.ctex"]
+source_file="res://assets/Cannon_Game/RDS Scroll w Crystals.png"
+dest_files=["res://.godot/imported/RDS Scroll w Crystals.png-9926bbd058d4a329441f201e5224f3a3.ctex"]
 
 [params]
 

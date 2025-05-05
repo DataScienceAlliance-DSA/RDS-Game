@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cu7kckdrjhlop"]
 
-[ext_resource type="Texture2D" uid="uid://clusa7njsd82w" path="res://Assets/Transparency/TransparencyMinigame2/riptide(test).PNG" id="1_1mnqd"]
-[ext_resource type="Script" path="res://Scenes/Environment/riptide.gd" id="1_fvrwp"]
+[ext_resource type="Texture2D" uid="uid://clusa7njsd82w" path="res://assets/Transparency Pillar/Transparency Game 2/riptide(test).PNG" id="1_1mnqd"]
+[ext_resource type="Script" path="res://Scene Folder/Environment/riptide.gd" id="1_fvrwp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgnri"]
 size = Vector2(128, 128)

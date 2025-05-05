@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4m4r5c5pfo6k"
-path="res://.godot/imported/icon.svg-c8ccb29257b8dcd5ecc8bb06c14d26a0.ctex"
+path="res://.godot/imported/icon.svg-e415bfa3e65f4b61292fb508a98af9d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Environment/conveyor_belt_cauldron_room/Art/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-c8ccb29257b8dcd5ecc8bb06c14d26a0.ctex"]
+source_file="res://Scene Folder/Environment/conveyor_belt_cauldron_room/Art/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-e415bfa3e65f4b61292fb508a98af9d6.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4bso4i8bbnvs"
-path="res://.godot/imported/Sea_Rock.PNG-686b746fa4c178c8741cba421c30018d.ctex"
+path="res://.godot/imported/Sea_Rock.PNG-3b9ede477a8f4569b4f836523b966cd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Transparency/TransparencyMinigame2/Sea_Rock.PNG"
-dest_files=["res://.godot/imported/Sea_Rock.PNG-686b746fa4c178c8741cba421c30018d.ctex"]
+source_file="res://assets/Transparency Pillar/Transparency Game 2/Sea_Rock.PNG"
+dest_files=["res://.godot/imported/Sea_Rock.PNG-3b9ede477a8f4569b4f836523b966cd1.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckhae4btifobd"
-path="res://.godot/imported/OrbsWandsPotions.png-4c9fea8ade18207be9cec45956d85ef6.ctex"
+path="res://.godot/imported/OrbsWandsPotions.png-0f798e0ba43d5897c5417c05691391fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png"
-dest_files=["res://.godot/imported/OrbsWandsPotions.png-4c9fea8ade18207be9cec45956d85ef6.ctex"]
+source_file="res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png"
+dest_files=["res://.godot/imported/OrbsWandsPotions.png-0f798e0ba43d5897c5417c05691391fa.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fo5qgy74gui"
-path="res://.godot/imported/monologue_text_box.png-04483465e517f096af6e2a81b9038719.ctex"
+path="res://.godot/imported/monologue_text_box.png-4cae6d018857cef74825d7c9cb273e23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui_assets/monologue_text_box.png"
-dest_files=["res://.godot/imported/monologue_text_box.png-04483465e517f096af6e2a81b9038719.ctex"]
+source_file="res://assets/ui_assets/monologue_text_box.png"
+dest_files=["res://.godot/imported/monologue_text_box.png-4cae6d018857cef74825d7c9cb273e23.ctex"]
 
 [params]
 

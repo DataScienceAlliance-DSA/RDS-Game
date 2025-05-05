@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnke02w5ef4rj"
-path="res://.godot/imported/left scale.png-295e47f66a8e3c0358ca1010548e8b10.ctex"
+path="res://.godot/imported/left scale.png-bc681b9ac60ed4676ad44c4a3c9eee6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fairness_Scale_Game/left scale.png"
-dest_files=["res://.godot/imported/left scale.png-295e47f66a8e3c0358ca1010548e8b10.ctex"]
+source_file="res://assets/Fairness_Scale_Game/left scale.png"
+dest_files=["res://.godot/imported/left scale.png-bc681b9ac60ed4676ad44c4a3c9eee6f.ctex"]
 
 [params]
 

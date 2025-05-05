@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1vjngh0pynhr"
-path="res://.godot/imported/Conveyor top.png-5d937569982c5e3200a2697e7dd18a9f.ctex"
+path="res://.godot/imported/Conveyor top.png-6f6ff805b43150be0929cfd5581e7549.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cauldron_Room/Conveyor top.png"
-dest_files=["res://.godot/imported/Conveyor top.png-5d937569982c5e3200a2697e7dd18a9f.ctex"]
+source_file="res://assets/Cauldron_Room/Conveyor top.png"
+dest_files=["res://.godot/imported/Conveyor top.png-6f6ff805b43150be0929cfd5581e7549.ctex"]
 
 [params]
 

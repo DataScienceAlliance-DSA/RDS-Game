@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4406eoe70ptv"
-path="res://.godot/imported/shape_6.png-abd3d45cfe2e845f3e493696bf3c8a52.ctex"
+path="res://.godot/imported/shape_6.png-b0feeabcd68a9ce52c4402e25f913221.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fairness_Village/Shapes/shape_6.png"
-dest_files=["res://.godot/imported/shape_6.png-abd3d45cfe2e845f3e493696bf3c8a52.ctex"]
+source_file="res://assets/Fairness_Village/Shapes/shape_6.png"
+dest_files=["res://.godot/imported/shape_6.png-b0feeabcd68a9ce52c4402e25f913221.ctex"]
 
 [params]
 

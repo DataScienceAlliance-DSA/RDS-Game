@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1lsbaaj37mn3"
-path="res://.godot/imported/trajectory dot.png-49d191666274e18b131f6dff5c141699.ctex"
+path="res://.godot/imported/trajectory dot.png-70e514c3662994d22b2dd507e9ce1cbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cannon_Game/trajectory dot.png"
-dest_files=["res://.godot/imported/trajectory dot.png-49d191666274e18b131f6dff5c141699.ctex"]
+source_file="res://assets/Cannon_Game/trajectory dot.png"
+dest_files=["res://.godot/imported/trajectory dot.png-70e514c3662994d22b2dd507e9ce1cbe.ctex"]
 
 [params]
 

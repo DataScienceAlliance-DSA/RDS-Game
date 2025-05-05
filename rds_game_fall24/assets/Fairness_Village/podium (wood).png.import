@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx2g2q0fnhrl2"
-path="res://.godot/imported/podium (wood).png-5d1684c81761b91f0eb4caaa28773e5d.ctex"
+path="res://.godot/imported/podium (wood).png-584aae7ff9a8b516c2bbd794a4eef2b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fairness_Village/podium (wood).png"
-dest_files=["res://.godot/imported/podium (wood).png-5d1684c81761b91f0eb4caaa28773e5d.ctex"]
+source_file="res://assets/Fairness_Village/podium (wood).png"
+dest_files=["res://.godot/imported/podium (wood).png-584aae7ff9a8b516c2bbd794a4eef2b9.ctex"]
 
 [params]
 

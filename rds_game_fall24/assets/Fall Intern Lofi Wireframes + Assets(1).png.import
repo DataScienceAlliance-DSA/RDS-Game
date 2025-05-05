@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ivc5fk7pncok"
-path="res://.godot/imported/Fall Intern Lofi Wireframes + Assets(1).png-f120c3f698552cd7aa90bfbb025bf86a.ctex"
+path="res://.godot/imported/Fall Intern Lofi Wireframes + Assets(1).png-bd57fd8a351ac499597603afada5c66c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fall Intern Lofi Wireframes + Assets(1).png"
-dest_files=["res://.godot/imported/Fall Intern Lofi Wireframes + Assets(1).png-f120c3f698552cd7aa90bfbb025bf86a.ctex"]
+source_file="res://assets/Fall Intern Lofi Wireframes + Assets(1).png"
+dest_files=["res://.godot/imported/Fall Intern Lofi Wireframes + Assets(1).png-bd57fd8a351ac499597603afada5c66c.ctex"]
 
 [params]
 

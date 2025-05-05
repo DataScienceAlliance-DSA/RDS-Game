@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3fyswbmjb1ju"
-path="res://.godot/imported/TreeAnimation.png-94e5659b39935af093c6aaa43e103d7c.ctex"
+path="res://.godot/imported/TreeAnimation.png-1b841a5ef0adf78e9d69c4efd7100e1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fairness_Village/TreeAnimation.png"
-dest_files=["res://.godot/imported/TreeAnimation.png-94e5659b39935af093c6aaa43e103d7c.ctex"]
+source_file="res://assets/Fairness_Village/TreeAnimation.png"
+dest_files=["res://.godot/imported/TreeAnimation.png-1b841a5ef0adf78e9d69c4efd7100e1c.ctex"]
 
 [params]
 

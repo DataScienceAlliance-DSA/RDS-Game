@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kghh4m6i4j6q"
-path="res://.godot/imported/bottom shelf.PNG-64a7dffc7a91a2f59e1275629856e435.ctex"
+path="res://.godot/imported/bottom shelf.PNG-e271e58aa4bb60c5b877ee4407d53f7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Intro_Room/bottom shelf.PNG"
-dest_files=["res://.godot/imported/bottom shelf.PNG-64a7dffc7a91a2f59e1275629856e435.ctex"]
+source_file="res://assets/Intro_Room/bottom shelf.PNG"
+dest_files=["res://.godot/imported/bottom shelf.PNG-e271e58aa4bb60c5b877ee4407d53f7b.ctex"]
 
 [params]
 

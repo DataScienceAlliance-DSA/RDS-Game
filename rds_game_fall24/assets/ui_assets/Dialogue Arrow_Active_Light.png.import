@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2o8far2sc0u"
-path="res://.godot/imported/Dialogue Arrow_Active_Light.png-f986177eedf34200c219e685c42fa935.ctex"
+path="res://.godot/imported/Dialogue Arrow_Active_Light.png-b0abb05fc6cf3f91282c174e04a6c1d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui_assets/Dialogue Arrow_Active_Light.png"
-dest_files=["res://.godot/imported/Dialogue Arrow_Active_Light.png-f986177eedf34200c219e685c42fa935.ctex"]
+source_file="res://assets/ui_assets/Dialogue Arrow_Active_Light.png"
+dest_files=["res://.godot/imported/Dialogue Arrow_Active_Light.png-b0abb05fc6cf3f91282c174e04a6c1d6.ctex"]
 
 [params]
 

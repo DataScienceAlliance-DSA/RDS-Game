@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2der4rcow3dl"
-path="res://.godot/imported/greenred.png-8065ade81a27e7aa60d969b93638ffc0.ctex"
+path="res://.godot/imported/greenred.png-112798e824517b20bc84925c10338bb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mixing_Game/smoke assets/greenred.png"
-dest_files=["res://.godot/imported/greenred.png-8065ade81a27e7aa60d969b93638ffc0.ctex"]
+source_file="res://assets/Mixing_Game/smoke assets/greenred.png"
+dest_files=["res://.godot/imported/greenred.png-112798e824517b20bc84925c10338bb6.ctex"]
 
 [params]
 

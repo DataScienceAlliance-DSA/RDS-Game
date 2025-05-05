@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k8modbb416u8"
-path="res://.godot/imported/skylight.png-6868025dc9ad11870c2d0a17a2460ba0.ctex"
+path="res://.godot/imported/skylight.png-6ed2b387e9aae880e9a82f87d3bef2a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Intro_Room/skylight.png"
-dest_files=["res://.godot/imported/skylight.png-6868025dc9ad11870c2d0a17a2460ba0.ctex"]
+source_file="res://assets/Intro_Room/skylight.png"
+dest_files=["res://.godot/imported/skylight.png-6ed2b387e9aae880e9a82f87d3bef2a4.ctex"]
 
 [params]
 

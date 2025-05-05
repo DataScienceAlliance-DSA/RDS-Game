@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb3hqjahogcq3"
-path="res://.godot/imported/SwayingFlowerSpread.png-867840014c0b9f6d060030c699b3a43c.ctex"
+path="res://.godot/imported/SwayingFlowerSpread.png-42050ff361c76d3469dbdfd17fda6078.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fairness_Village/SwayingFlowerSpread.png"
-dest_files=["res://.godot/imported/SwayingFlowerSpread.png-867840014c0b9f6d060030c699b3a43c.ctex"]
+source_file="res://assets/Fairness_Village/SwayingFlowerSpread.png"
+dest_files=["res://.godot/imported/SwayingFlowerSpread.png-42050ff361c76d3469dbdfd17fda6078.ctex"]
 
 [params]
 

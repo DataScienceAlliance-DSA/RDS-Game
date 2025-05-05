@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1o02itssb2xm"
-path="res://.godot/imported/EnvironmentSpread.png-ae2e294ed2dbae9372c88d6460099127.ctex"
+path="res://.godot/imported/EnvironmentSpread.png-077e7c3dd4406e1ed9624569341fbf7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fairness_Village/EnvironmentSpread.png"
-dest_files=["res://.godot/imported/EnvironmentSpread.png-ae2e294ed2dbae9372c88d6460099127.ctex"]
+source_file="res://assets/Fairness_Village/EnvironmentSpread.png"
+dest_files=["res://.godot/imported/EnvironmentSpread.png-077e7c3dd4406e1ed9624569341fbf7f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dre16lbm54kh2"
-path="res://.godot/imported/island_mock.png-cb74c586b5cc417dc78ad365cae9bdb0.ctex"
+path="res://.godot/imported/island_mock.png-8e2d6b934880fb8199440e110b44595d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Transparency/TransparencyMinigame2/island_mock.png"
-dest_files=["res://.godot/imported/island_mock.png-cb74c586b5cc417dc78ad365cae9bdb0.ctex"]
+source_file="res://assets/Transparency Pillar/Transparency Game 2/island_mock.png"
+dest_files=["res://.godot/imported/island_mock.png-8e2d6b934880fb8199440e110b44595d.ctex"]
 
 [params]
 

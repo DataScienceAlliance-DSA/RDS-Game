@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3ts7tyirdj4b"
-path="res://.godot/imported/Podium.png-452da464e18e576515fb5211f2e076f5.ctex"
+path="res://.godot/imported/Podium.png-8ca26ffe7826a975dac44ca983957e7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mixing_Game/Podium.png"
-dest_files=["res://.godot/imported/Podium.png-452da464e18e576515fb5211f2e076f5.ctex"]
+source_file="res://assets/Mixing_Game/Podium.png"
+dest_files=["res://.godot/imported/Podium.png-8ca26ffe7826a975dac44ca983957e7e.ctex"]
 
 [params]
 

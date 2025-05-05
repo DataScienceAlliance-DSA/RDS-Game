@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csjx177krhdpr"
-path="res://.godot/imported/Instruction_Spacebar.png-1806295f7e0734929f9f3c617b716d9b.ctex"
+path="res://.godot/imported/Instruction_Spacebar.png-cf9d556e948b01f21d6d9a3f08fd3b8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cannon_Game/Instruction_Spacebar.png"
-dest_files=["res://.godot/imported/Instruction_Spacebar.png-1806295f7e0734929f9f3c617b716d9b.ctex"]
+source_file="res://assets/Cannon_Game/Instruction_Spacebar.png"
+dest_files=["res://.godot/imported/Instruction_Spacebar.png-cf9d556e948b01f21d6d9a3f08fd3b8c.ctex"]
 
 [params]
 

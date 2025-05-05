@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy7838lrupsyh"
-path="res://.godot/imported/OfficialSpread2.png-b1e19cce90c77d3dc944449f8b4b656b.ctex"
+path="res://.godot/imported/OfficialSpread2.png-33a63818c43d688f7124a2aeccbce078.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cauldron_Room/Fox Assets/OfficialSpread2.png"
-dest_files=["res://.godot/imported/OfficialSpread2.png-b1e19cce90c77d3dc944449f8b4b656b.ctex"]
+source_file="res://assets/Cauldron_Room/Fox Assets/OfficialSpread2.png"
+dest_files=["res://.godot/imported/OfficialSpread2.png-33a63818c43d688f7124a2aeccbce078.ctex"]
 
 [params]
 

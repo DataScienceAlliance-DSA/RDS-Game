@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deds8p1uj33pp"
-path="res://.godot/imported/Dialogue Box_Long_Active_Light (1).png-3324cd4d24ac327dc8216954db6653e4.ctex"
+path="res://.godot/imported/Dialogue Box_Long_Active_Light (1).png-fe4da4f34fadc51e004b9ded18e42f2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui_assets/Dialogue Box_Long_Active_Light (1).png"
-dest_files=["res://.godot/imported/Dialogue Box_Long_Active_Light (1).png-3324cd4d24ac327dc8216954db6653e4.ctex"]
+source_file="res://assets/ui_assets/Dialogue Box_Long_Active_Light (1).png"
+dest_files=["res://.godot/imported/Dialogue Box_Long_Active_Light (1).png-fe4da4f34fadc51e004b9ded18e42f2b.ctex"]
 
 [params]
 

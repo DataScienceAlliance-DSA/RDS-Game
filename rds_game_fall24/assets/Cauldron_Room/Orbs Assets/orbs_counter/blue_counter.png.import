@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4brvu5y00chs"
-path="res://.godot/imported/blue_counter.png-07d599cb2012458788da2433ee14b811.ctex"
+path="res://.godot/imported/blue_counter.png-326d9a8454a559ca69da20a68a7bcff1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cauldron_Room/Orbs Assets/orbs_counter/blue_counter.png"
-dest_files=["res://.godot/imported/blue_counter.png-07d599cb2012458788da2433ee14b811.ctex"]
+source_file="res://assets/Cauldron_Room/Orbs Assets/orbs_counter/blue_counter.png"
+dest_files=["res://.godot/imported/blue_counter.png-326d9a8454a559ca69da20a68a7bcff1.ctex"]
 
 [params]
 

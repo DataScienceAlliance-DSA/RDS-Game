@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfveiu5idd6ok"
-path="res://.godot/imported/Platform2.PNG-cc39f3914364a5720c60769daaee6e9a.ctex"
+path="res://.godot/imported/Platform2.PNG-8c14289115f402044dfe03bfa77d0aa2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cannon_Game/Platform2.PNG"
-dest_files=["res://.godot/imported/Platform2.PNG-cc39f3914364a5720c60769daaee6e9a.ctex"]
+source_file="res://assets/Cannon_Game/Platform2.PNG"
+dest_files=["res://.godot/imported/Platform2.PNG-8c14289115f402044dfe03bfa77d0aa2.ctex"]
 
 [params]
 

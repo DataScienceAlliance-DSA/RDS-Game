@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci77wuxkbdcmb"
-path="res://.godot/imported/Orb Placement_Brewing Game.png-498d9c089c6fed49dfbf95df64aa44ad.ctex"
+path="res://.godot/imported/Orb Placement_Brewing Game.png-720515d87bf3422a63d35cbdbe20bdb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui_assets/Orb Placement_Brewing Game.png"
-dest_files=["res://.godot/imported/Orb Placement_Brewing Game.png-498d9c089c6fed49dfbf95df64aa44ad.ctex"]
+source_file="res://assets/ui_assets/Orb Placement_Brewing Game.png"
+dest_files=["res://.godot/imported/Orb Placement_Brewing Game.png-720515d87bf3422a63d35cbdbe20bdb1.ctex"]
 
 [params]
 

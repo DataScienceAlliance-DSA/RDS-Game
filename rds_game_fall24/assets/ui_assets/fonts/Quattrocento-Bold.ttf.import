@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bqc64n7kj3qia"
-path="res://.godot/imported/Quattrocento-Bold.ttf-36cb75c4e2fe3c5bbdc3c727c9c46185.fontdata"
+path="res://.godot/imported/Quattrocento-Bold.ttf-ef186586a8e456911039029e9877d88e.fontdata"
 
 [deps]
 
-source_file="res://Assets/ui_assets/fonts/Quattrocento-Bold.ttf"
-dest_files=["res://.godot/imported/Quattrocento-Bold.ttf-36cb75c4e2fe3c5bbdc3c727c9c46185.fontdata"]
+source_file="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf"
+dest_files=["res://.godot/imported/Quattrocento-Bold.ttf-ef186586a8e456911039029e9877d88e.fontdata"]
 
 [params]
 

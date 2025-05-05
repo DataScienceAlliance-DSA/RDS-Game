@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bme4p8mckxegf"
-path="res://.godot/imported/Orbs_Hover.png-7fad60800bb21e17029bccc8ad833ecb.ctex"
+path="res://.godot/imported/Orbs_Hover.png-24b3af62f20c3f0c5cd435c983260c40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Hover.png"
-dest_files=["res://.godot/imported/Orbs_Hover.png-7fad60800bb21e17029bccc8ad833ecb.ctex"]
+source_file="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Hover.png"
+dest_files=["res://.godot/imported/Orbs_Hover.png-24b3af62f20c3f0c5cd435c983260c40.ctex"]
 
 [params]
 

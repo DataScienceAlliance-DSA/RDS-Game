@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpisreeoemsge"
-path="res://.godot/imported/pink_counter.png-195c36d33e7025866dc13f69f20363ca.ctex"
+path="res://.godot/imported/pink_counter.png-a5d05a928a2d3f3be58577575a3c8eb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cannon_Game/orb_counter/pink_counter.png"
-dest_files=["res://.godot/imported/pink_counter.png-195c36d33e7025866dc13f69f20363ca.ctex"]
+source_file="res://assets/Cannon_Game/orb_counter/pink_counter.png"
+dest_files=["res://.godot/imported/pink_counter.png-a5d05a928a2d3f3be58577575a3c8eb5.ctex"]
 
 [params]
 
