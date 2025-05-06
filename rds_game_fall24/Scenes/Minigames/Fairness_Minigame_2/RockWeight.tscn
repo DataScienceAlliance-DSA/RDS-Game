@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwg3bf54dlmle"]
+
+[ext_resource type="Texture2D" uid="uid://gq8d1nh6unni" path="res://assets/Cauldron_Room/Orbs Assets/orb 3.PNG" id="1_bnjii"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Fairness_Minigame_2/RockWeight.gd" id="2_26lm3"]
+
+[node name="Sprite2D" type="Sprite2D"]
+self_modulate = Color(0.792157, 0.792157, 0.792157, 1)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_bnjii")
+script = ExtResource("2_26lm3")
+
+[node name="TextEdit" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -294.0
+offset_top = -290.0
+offset_right = -294.0
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 400
+bbcode_enabled = true
+text = "[center]5[/center]"

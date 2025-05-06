@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://drq1vgo2ie7ic"]
+
+[ext_resource type="Texture2D" uid="uid://ch1c2lr2t5m2i" path="res://assets/Fairness_Village/Tree.PNG" id="1_rokbc"]
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="TreeSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_rokbc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(2, -177, -42, -132, -55, -129, -62, -110, -86, -74, -109, -31, -128, 2, -133, 25, -112, 61, -68, 88, -77, 106, -48, 132, 41, 135, 68, 118, 75, 106, 57, 83, 106, 71, 136, 26, 112, -37, 80, -82, 41, -147)

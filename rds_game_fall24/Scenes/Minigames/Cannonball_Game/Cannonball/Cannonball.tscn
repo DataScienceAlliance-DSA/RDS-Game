@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn2ocw6e0h8y"]
+
+[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png" id="2_1qsp8"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.gd" id="2_l36d6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brnf3"]
+radius = 110.0
+
+[node name="Cannonball" type="RigidBody2D"]
+script = ExtResource("2_l36d6")
+
+[node name="dart" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_1qsp8")
+hframes = 6
+vframes = 2
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CircleShape2D_brnf3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

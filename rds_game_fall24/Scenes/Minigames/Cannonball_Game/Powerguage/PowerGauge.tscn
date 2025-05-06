@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cd21lswhh1b46"]
+
+[ext_resource type="Texture2D" uid="uid://bnyxacdxuuslh" path="res://assets/Cannon_Game/orb_counter/purple_counter.png" id="2_2a1ca"]
+[ext_resource type="Texture2D" uid="uid://bqwwd6ymmd3vt" path="res://assets/Cannon_Game/power_gauge/unfilled_gauge.png" id="3_6y40d"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Powerguage/PinkCounter.gd" id="3_vrws8"]
+[ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="3_xlhs8"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Powerguage/power_gauge.gd" id="3_ypa3w"]
+[ext_resource type="Texture2D" uid="uid://duawkrfo2d6tt" path="res://assets/Cannon_Game/power_gauge/filled_gauge.png" id="4_7j3sp"]
+[ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="4_7qc51"]
+
+[node name="PowerGauge" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+custom_minimum_size = Vector2(1366, 768)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PinkCounter" type="Sprite2D" parent="."]
+position = Vector2(109, 136)
+scale = Vector2(0.793305, 0.793305)
+texture = ExtResource("2_2a1ca")
+script = ExtResource("3_vrws8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PinkCounter"]
+offset_left = 11.3449
+offset_top = -3.78165
+offset_right = 93.3449
+offset_bottom = 52.2183
+size_flags_horizontal = 8
+theme_override_colors/default_color = Color(1, 0.760784, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("3_xlhs8")
+theme_override_fonts/bold_font = ExtResource("4_7qc51")
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[center][b]4"
+fit_content = true
+
+[node name="gaugebar" type="TextureRect" parent="."]
+offset_left = 11.0
+offset_top = 194.325
+offset_right = 168.0
+offset_bottom = 755.325
+scale = Vector2(0.874628, 0.874628)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_6y40d")
+
+[node name="power_gauge" type="TextureProgressBar" parent="gaugebar"]
+layout_mode = 0
+offset_right = 156.0
+offset_bottom = 560.0
+pivot_offset = Vector2(-292, 362)
+max_value = 80.0
+step = 0.0
+fill_mode = 3
+texture_progress = ExtResource("4_7j3sp")
+script = ExtResource("3_ypa3w")

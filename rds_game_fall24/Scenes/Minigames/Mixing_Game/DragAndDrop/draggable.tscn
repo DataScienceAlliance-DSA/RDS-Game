@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqts64q2gs8nx"]
+
+[ext_resource type="Texture2D" uid="uid://gq8d1nh6unni" path="res://assets/Cauldron_Room/Orbs Assets/orb 3.PNG" id="1_1r2te"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.gd" id="2_fg53y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nvv72"]
+radius = 133.015
+
+[node name="Draggable" type="Sprite2D"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_1r2te")
+script = ExtResource("2_fg53y")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_nvv72")

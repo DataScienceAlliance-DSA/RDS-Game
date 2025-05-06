@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://3i1uba4b2dbo"]
+
+[ext_resource type="Script" path="res://Scene Folder/Minigames/BubbleGame/Bubble.gd" id="1_6dix7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ufkf"]
+radius = 35.0
+
+[node name="Bubble" type="Sprite2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_6dix7")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.333, 1.333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_8ufkf")

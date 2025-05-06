@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl510nt7j3vra"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7751b"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bpu46"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ee1qp"]
+
+[sub_resource type="Gradient" id="Gradient_5aauy"]
+offsets = PackedFloat32Array(0, 0.297561, 0.380488, 1)
+colors = PackedColorArray(0.709804, 0.709804, 0.709804, 0.733333, 0.776471, 0.776471, 0.776471, 0.698039, 0.898039, 0.898039, 0.898039, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_shlaw"]
+gradient = SubResource("Gradient_5aauy")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.521368, 0.457265)
+
+[node name="DropSpot" type="Area2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+scale = Vector2(19.5215, 19.5215)
+mesh = SubResource("SphereMesh_7751b")
+texture = SubResource("CanvasTexture_bpu46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ee1qp")
+
+[node name="SlotTexture" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -22.0
+offset_right = 231.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.188, 0.188)
+texture = SubResource("GradientTexture2D_shlaw")

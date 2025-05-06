@@ -1,0 +1,149 @@
+[gd_scene load_steps=18 format=3 uid="uid://dw5rykc2ps4g3"]
+
+[ext_resource type="Shader" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader" id="1_k41k8"]
+[ext_resource type="Texture2D" uid="uid://e8y24jfjuqws" path="res://assets/Mixing_Game/Orb Placement UI.png" id="1_lji7o"]
+[ext_resource type="Texture2D" uid="uid://bgwwsgq3lyrw4" path="res://assets/Mixing_Game/empty_bag.png" id="2_fbe2l"]
+[ext_resource type="Texture2D" uid="uid://bsk7megi46n57" path="res://assets/Mixing_Game/smoke assets/redviolet.png" id="3_esetp"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/mix_button.gd" id="4_6d0ck"]
+[ext_resource type="PackedScene" uid="uid://dl510nt7j3vra" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn" id="4_clvvt"]
+[ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn" id="4_o6hdc"]
+[ext_resource type="Texture2D" uid="uid://cv5djbk75mub8" path="res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG" id="6_7l24o"]
+[ext_resource type="Texture2D" uid="uid://dymegq2gsesuu" path="res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG" id="7_v7e68"]
+[ext_resource type="Texture2D" uid="uid://ug8afxm6hldc" path="res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG" id="8_t5oxb"]
+[ext_resource type="Texture2D" uid="uid://dc3awslq62bux" path="res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG" id="9_my8so"]
+[ext_resource type="Texture2D" uid="uid://uydmdruacy60" path="res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG" id="10_t1ucu"]
+[ext_resource type="Texture2D" uid="uid://buownsnidnok4" path="res://assets/ui_assets/button_states/Mix Button/Normal.png" id="14_2twl3"]
+[ext_resource type="Texture2D" uid="uid://d23lr7r0mmrl5" path="res://assets/ui_assets/button_states/Mix Button/Pressed.png" id="15_2gugu"]
+[ext_resource type="Texture2D" uid="uid://d1coaggnvi3gi" path="res://assets/ui_assets/button_states/Mix Button/Hover.png" id="16_uetye"]
+[ext_resource type="Texture2D" uid="uid://cercn5dplsnfv" path="res://assets/ui_assets/button_states/Mix Button/Disables.png" id="17_q2b16"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ohrwf"]
+shader = ExtResource("1_k41k8")
+shader_parameter/lod = 1.5
+shader_parameter/dim = 0.15
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ohrwf")
+offset_right = 1366.0
+offset_bottom = 768.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.482353)
+
+[node name="OrbPlacement" type="MarginContainer" parent="."]
+offset_left = 731.0
+offset_top = 83.0
+offset_right = 2388.0
+offset_bottom = 2041.0
+scale = Vector2(0.3, 0.3)
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OrbPlacement"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="OrbPlacement/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_lji7o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OrbPlacement"]
+custom_minimum_size = Vector2(0, 975)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OrbPlacement/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="OrbPlacement/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_right = 0
+
+[node name="TextureRect" type="TextureRect" parent="OrbPlacement/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+texture = ExtResource("3_esetp")
+
+[node name="Bag" type="MarginContainer" parent="."]
+offset_right = 12175.0
+offset_bottom = 11865.0
+scale = Vector2(0.06, 0.06)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 0
+theme_override_constants/margin_left = 750
+theme_override_constants/margin_top = 1205
+
+[node name="BagContainer" type="HBoxContainer" parent="Bag" groups=["Bag"]]
+layout_mode = 2
+mouse_filter = 0
+
+[node name="TextureRect" type="TextureRect" parent="Bag/BagContainer"]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_fbe2l")
+
+[node name="green" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+top_level = true
+position = Vector2(277, 487)
+texture = ExtResource("6_7l24o")
+
+[node name="yellow" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+top_level = true
+position = Vector2(321, 410)
+texture = ExtResource("7_v7e68")
+
+[node name="red" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+top_level = true
+position = Vector2(364, 487)
+texture = ExtResource("8_t5oxb")
+
+[node name="teal" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+top_level = true
+position = Vector2(449, 487)
+
+[node name="violet" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+top_level = true
+position = Vector2(410, 410)
+texture = ExtResource("9_my8so")
+
+[node name="blue" parent="Bag/BagContainer" groups=["MixingOrbs"] instance=ExtResource("4_o6hdc")]
+top_level = true
+position = Vector2(364, 336)
+texture = ExtResource("10_t1ucu")
+
+[node name="DropSpotRight" parent="." groups=["DropSpotGroup"] instance=ExtResource("4_clvvt")]
+position = Vector2(1097, 242)
+scale = Vector2(5.08, 5.08)
+
+[node name="DropSpotLeft" parent="." groups=["DropSpotGroup"] instance=ExtResource("4_clvvt")]
+position = Vector2(871, 242)
+scale = Vector2(5.08, 5.08)
+
+[node name="Button" type="TextureButton" parent="."]
+offset_left = 916.0
+offset_top = 554.0
+offset_right = 1157.0
+offset_bottom = 634.0
+scale = Vector2(0.601937, 0.601937)
+size_flags_horizontal = 4
+texture_normal = ExtResource("14_2twl3")
+texture_pressed = ExtResource("15_2gugu")
+texture_hover = ExtResource("16_uetye")
+texture_disabled = ExtResource("17_q2b16")
+stretch_mode = 4
+script = ExtResource("4_6d0ck")
+
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]

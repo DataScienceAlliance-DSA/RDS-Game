@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://f5r2vag2dde7"]
+
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd" id="1_y5gap"]
+[ext_resource type="Texture2D" uid="uid://jfyh8e8qwwpw" path="res://assets/Cannon_Game/bags/Bag3.PNG" id="2_ng24o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uhxg"]
+radius = 5.0
+height = 46.0
+
+[node name="bag_" type="StaticBody2D"]
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("1_y5gap")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_ng24o")
+
+[node name="TriggerArea" type="Area2D" parent="." groups=["Bags"]]
+position = Vector2(0, -31)
+disable_mode = 1
+collision_layer = 0
+collision_mask = 255
+collision_priority = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_7uhxg")
+
+[node name="body" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-18, -22, 0, -22, 16, -22, 26, -7, 30, 9, 29, 17, 23, 26, 12, 31, 0, 32, -14, 30, -24, 25, -29, 17, -31, 8, -28, -4, -24, -12)
+
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]

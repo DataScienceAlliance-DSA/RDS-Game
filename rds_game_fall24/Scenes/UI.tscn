@@ -1,0 +1,930 @@
+[gd_scene load_steps=39 format=3 uid="uid://cfqpepeud7y6s"]
+
+[ext_resource type="Script" path="res://Scene Folder/UI.gd" id="1_gxgmr"]
+[ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ne7wx"]
+[ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://icon.svg" id="1_q8u87"]
+[ext_resource type="Texture2D" uid="uid://b5ednfhfm8au0" path="res://assets/ui_assets/Light_Short_Dialogue.png" id="3_k87fs"]
+[ext_resource type="Script" path="res://Scripts/3choice_dialogue.gd" id="3_rj2pq"]
+[ext_resource type="Texture2D" uid="uid://c2o8far2sc0u" path="res://assets/ui_assets/Dialogue Arrow_Active_Light.png" id="4_0lg18"]
+[ext_resource type="Texture2D" uid="uid://d6kvpuxma1dd" path="res://assets/ui_assets/portraits/Player.PNG" id="4_faomy"]
+[ext_resource type="Script" path="res://Scene Folder/instructions.gd" id="9_n6h7w"]
+[ext_resource type="Texture2D" uid="uid://ds8d7hxthwbxp" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Active.png" id="10_2g7ig"]
+[ext_resource type="Texture2D" uid="uid://ckmgth8tt6dg3" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Pressed.png" id="11_glrh1"]
+[ext_resource type="Texture2D" uid="uid://bme4p8mckxegf" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Hover.png" id="12_finca"]
+[ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://assets/ui_assets/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
+[ext_resource type="Texture2D" uid="uid://c322tj52eg8ox" path="res://assets/ui_assets/Instruction Box_Blank.png" id="13_8b21l"]
+[ext_resource type="Texture2D" uid="uid://ci0havxrkeguw" path="res://assets/ui_assets/selection_button_states/Orbs_Selection/Orbs_Visted.png" id="13_uwh05"]
+[ext_resource type="Texture2D" uid="uid://depcak66xf1yd" path="res://assets/ui_assets/Up Arrow.png" id="14_jvl43"]
+[ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://assets/ui_assets/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
+[ext_resource type="Texture2D" uid="uid://bcwaxymjtlorf" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Active.png" id="14_sddsj"]
+[ext_resource type="Texture2D" uid="uid://p418ca7vm0ql" path="res://assets/ui_assets/Down Arrow.png" id="15_c2gf0"]
+[ext_resource type="Texture2D" uid="uid://ce8ih4fkowtko" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Pressed.png" id="15_sqvjo"]
+[ext_resource type="Texture2D" uid="uid://dg1eky31u2ghm" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Hover.png" id="16_3yibk"]
+[ext_resource type="Texture2D" uid="uid://cyxplpjlubiq8" path="res://assets/ui_assets/Spacebar.png" id="16_44x15"]
+[ext_resource type="Texture2D" uid="uid://r68o4hiey6ew" path="res://assets/ui_assets/selection_button_states/Potions_Selection/Potions_Visted.png" id="17_tfw6t"]
+[ext_resource type="Texture2D" uid="uid://bygnom1g3evsk" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Active.png" id="18_2ulfr"]
+[ext_resource type="Texture2D" uid="uid://c6u4wdoosptab" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Pressed.png" id="19_5gvgm"]
+[ext_resource type="Texture2D" uid="uid://wxhymweehla0" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Hover.png" id="20_euilg"]
+[ext_resource type="Texture2D" uid="uid://b2qgnc42fi0ba" path="res://assets/ui_assets/selection_button_states/Wands_Selection/Wands_Visted.png" id="21_cei1u"]
+[ext_resource type="Texture2D" uid="uid://368psvt1tbm2" path="res://assets/ui_assets/Light_Long_Dialogue.png" id="22_84ua4"]
+[ext_resource type="Texture2D" uid="uid://tliuryc0xeqr" path="res://assets/ui_assets/Name_Menu.png" id="28_3sout"]
+[ext_resource type="Script" path="res://Scene Folder/PlayerNameInput.gd" id="28_bndvi"]
+[ext_resource type="Texture2D" uid="uid://buownsnidnok4" path="res://assets/ui_assets/button_states/Mix Button/Normal.png" id="29_hke57"]
+[ext_resource type="Texture2D" uid="uid://cercn5dplsnfv" path="res://assets/ui_assets/button_states/Mix Button/Disables.png" id="30_gxcxm"]
+[ext_resource type="Texture2D" uid="uid://d1coaggnvi3gi" path="res://assets/ui_assets/button_states/Mix Button/Hover.png" id="31_u3tru"]
+[ext_resource type="Texture2D" uid="uid://d23lr7r0mmrl5" path="res://assets/ui_assets/button_states/Mix Button/Pressed.png" id="32_jle5g"]
+
+[sub_resource type="Gradient" id="Gradient_ci8dm"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_em4cu"]
+gradient = SubResource("Gradient_ci8dm")
+fill_to = Vector2(0.482906, 1)
+
+[sub_resource type="Gradient" id="Gradient_6hbbo"]
+colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_en6ay"]
+gradient = SubResource("Gradient_6hbbo")
+fill_from = Vector2(0.508547, 1)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0170h"]
+gradient = SubResource("Gradient_6hbbo")
+fill_from = Vector2(0.508547, 1)
+fill_to = Vector2(0.5, 0)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_gxgmr")
+
+[node name="ScreenHide" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -683.0
+offset_right = 685.0
+offset_bottom = 696.0
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_em4cu")
+expand_mode = 1
+
+[node name="Dialogue" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+script = ExtResource("1_ne7wx")
+
+[node name="PlayerContainer" type="HBoxContainer" parent="Dialogue"]
+custom_minimum_size = Vector2(781, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="PositionControl" type="Control" parent="Dialogue/PlayerContainer"]
+modulate = Color(0.909804, 0.909804, 0.909804, 1)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="ScaleControl" type="Control" parent="Dialogue/PlayerContainer/PositionControl"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+scale = Vector2(1.25, 1.25)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="IconCenter" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 128.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 128)
+size_flags_vertical = 8
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_en6ay")
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
+layout_mode = 0
+offset_left = -1.60001
+offset_top = -3.0
+offset_right = 5738.4
+offset_bottom = 1717.0
+scale = Vector2(0.08, 0.08)
+mouse_filter = 2
+texture = ExtResource("3_k87fs")
+
+[node name="ArrowContainer" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.958628, 1)
+mouse_filter = 2
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="Arrow" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect/ArrowContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_0lg18")
+
+[node name="PlayerAvatar" type="TextureRect" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(64, 70)
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("4_faomy")
+expand_mode = 2
+
+[node name="Namecont" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -126.0
+offset_right = 450.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/margin_left = 135
+theme_override_constants/margin_top = 13
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/Namecont"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 23
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Textcont" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -123.0
+offset_right = 436.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/margin_left = 136
+theme_override_constants/margin_top = 44
+theme_override_constants/margin_bottom = 0
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/Textcont"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.141176, 0.133333, 0.345098, 1)
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[color=black]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+fit_content = true
+scroll_active = false
+
+[node name="CharacterContainer" type="HBoxContainer" parent="Dialogue"]
+custom_minimum_size = Vector2(521, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+alignment = 2
+
+[node name="PositionControl" type="Control" parent="Dialogue/CharacterContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="ScaleControl" type="Control" parent="Dialogue/CharacterContainer/PositionControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.25, 1.25)
+mouse_filter = 2
+
+[node name="IconCenter" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(128, 128)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_0170h")
+
+[node name="TextBanner" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1528.0
+offset_top = -3.2
+offset_right = 4442.0
+offset_bottom = 1712.8
+grow_horizontal = 0
+scale = Vector2(-0.08, 0.08)
+pivot_offset = Vector2(1423, 0)
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("3_k87fs")
+
+[node name="ArrowContainer" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.958628, 1)
+mouse_filter = 2
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="Arrow" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_0lg18")
+
+[node name="CharacterAvatar" type="TextureRect" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(64, 70)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("1_q8u87")
+expand_mode = 2
+
+[node name="Namecont" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -414.015
+offset_top = -125.0
+offset_bottom = -81.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 135
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/Namecont"]
+clip_contents = false
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 23
+bbcode_enabled = true
+text = "[right][color=black][b]Fox[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="Textcont" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -123.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/margin_top = 44
+theme_override_constants/margin_right = 125
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/Textcont"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[right][color=black]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+fit_content = true
+scroll_active = false
+
+[node name="Monologue" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+script = ExtResource("3_rj2pq")
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="Monologue"]
+custom_minimum_size = Vector2(1366, 544)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Monologue/ChoiceContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_bottom = 100
+
+[node name="Control" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ChoiceTexture1" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -168.0
+offset_right = 172.5
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(172, 168)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("10_2g7ig")
+texture_pressed = ExtResource("11_glrh1")
+texture_hover = ExtResource("12_finca")
+texture_disabled = ExtResource("13_uwh05")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 100
+
+[node name="Control" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ChoiceTexture2" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -168.5
+offset_right = 172.5
+offset_bottom = 168.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(172, 168)
+texture_normal = ExtResource("14_sddsj")
+texture_pressed = ExtResource("15_sqvjo")
+texture_hover = ExtResource("16_3yibk")
+texture_disabled = ExtResource("17_tfw6t")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 100
+
+[node name="Control" type="Control" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ChoiceTexture3" type="TextureButton" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -168.0
+offset_right = 172.5
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(172, 168)
+size_flags_horizontal = 0
+texture_normal = ExtResource("18_2ulfr")
+texture_pressed = ExtResource("19_5gvgm")
+texture_hover = ExtResource("20_euilg")
+texture_disabled = ExtResource("21_cei1u")
+
+[node name="TextContainer" type="MarginContainer" parent="Monologue"]
+custom_minimum_size = Vector2(1366, 223)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="PositionControl" type="Control" parent="Monologue/TextContainer"]
+modulate = Color(0.909804, 0.909804, 0.909804, 1)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="ScaleControl" type="Control" parent="Monologue/TextContainer/PositionControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="IconCenter" type="TextureRect" parent="Monologue/TextContainer/PositionControl/ScaleControl"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_right = 134.0
+offset_bottom = 128.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 128)
+size_flags_vertical = 8
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_en6ay")
+
+[node name="TextBanner" type="TextureRect" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -76.0
+offset_right = 1063.0
+offset_bottom = 70.0
+grow_vertical = 2
+scale = Vector2(0.988986, 1.00495)
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("22_84ua4")
+expand_mode = 2
+
+[node name="ArrowContainer" type="MarginContainer" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.8056
+offset_top = -41.0454
+offset_right = 265.194
+offset_bottom = 244.955
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.13, 0.13)
+theme_override_constants/margin_right = 90
+theme_override_constants/margin_bottom = 65
+
+[node name="Arrow" type="TextureRect" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer"]
+layout_mode = 2
+texture = ExtResource("4_0lg18")
+expand_mode = 2
+
+[node name="Avatar" type="TextureRect" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(64, 64)
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("1_q8u87")
+expand_mode = 2
+
+[node name="Namecont" type="MarginContainer" parent="Monologue/TextContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+offset_right = 1000.0
+offset_bottom = 126.0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+theme_override_constants/margin_left = 135
+theme_override_constants/margin_top = 13
+
+[node name="DialogueText" type="RichTextLabel" parent="Monologue/TextContainer/PositionControl/ScaleControl/Namecont"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 23
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Textcont" type="MarginContainer" parent="Monologue/TextContainer/PositionControl/ScaleControl"]
+layout_mode = 1
+offset_right = 981.0
+offset_bottom = 123.0
+pivot_offset = Vector2(0, 123)
+size_flags_vertical = 8
+theme_override_constants/margin_left = 135
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_bottom = 0
+
+[node name="DialogueText" type="RichTextLabel" parent="Monologue/TextContainer/PositionControl/ScaleControl/Textcont"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[color=black]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+fit_content = true
+scroll_active = false
+
+[node name="Instructions" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9_n6h7w")
+
+[node name="Control" type="Control" parent="Instructions"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Instructions/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -779.0
+offset_top = -920.0
+offset_right = 5218.0
+offset_bottom = 5912.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.08, 0.08)
+pivot_offset = Vector2(566, 696)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("13_8b21l")
+
+[node name="MarginContainer" type="MarginContainer" parent="Instructions/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 505
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Instructions/Control/TextureRect/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 445
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/bold_font = ExtResource("12_sp71b")
+theme_override_font_sizes/bold_font_size = 600
+bbcode_enabled = true
+text = "[center][b][color=white]INSTRUCTIONS"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 190
+theme_override_constants/margin_right = 90
+
+[node name="TextureRect" type="TextureRect" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("14_jvl43")
+expand_mode = 2
+
+[node name="Control" type="Control" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="TextureRect2" type="TextureRect" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("15_c2gf0")
+expand_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_left = 95
+theme_override_constants/margin_right = 90
+
+[node name="TextureRect" type="RichTextLabel" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(4026.88, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 575
+bbcode_enabled = true
+text = "[right][color=white]Movement"
+fit_content = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 190
+
+[node name="TextureRect" type="TextureRect" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("16_44x15")
+expand_mode = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_right = -180
+
+[node name="TextureRect" type="RichTextLabel" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3"]
+custom_minimum_size = Vector2(2350, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 550
+bbcode_enabled = true
+text = "[right][color=white]Shoot"
+fit_content = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 210
+theme_override_constants/margin_top = 815
+theme_override_constants/margin_right = 165
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Instructions/Control/TextureRect/MarginContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(200, 500)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 450
+bbcode_enabled = true
+text = "[center][color=white]Aim the cannon, hold the spacebar to increase power, and release to fire an orb into every bag!"
+fit_content = true
+
+[node name="DebugStuff" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="SkipCutsceneCTRL" type="Control" parent="DebugStuff"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="DebugStuff/SkipCutsceneCTRL"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+offset_right = 4.0
+grow_vertical = 0
+mouse_filter = 2
+max_value = 1.0
+fill_mode = 3
+show_percentage = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugStuff/SkipCutsceneCTRL/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DebugStuff/SkipCutsceneCTRL/ProgressBar/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][b]Skipping..."
+fit_content = true
+
+[node name="PlayerNameInput" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("28_bndvi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerNameInput"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -548.0
+offset_right = 548.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player NamePanel" type="TextureRect" parent="PlayerNameInput/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("28_3sout")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerNameInput"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.5
+offset_top = -80.0
+offset_right = 120.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("29_hke57")
+texture_pressed = ExtResource("30_gxcxm")
+texture_hover = ExtResource("31_u3tru")
+texture_disabled = ExtResource("32_jle5g")
+
+[node name="PlayerName" type="LineEdit" parent="PlayerNameInput"]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 377.0
+offset_right = 899.0
+offset_bottom = 425.0
+placeholder_text = "name"
+alignment = 1
+max_length = 8
+selecting_enabled = false
+
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_exited"]
+[connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_entered"]
+[connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_exited"]

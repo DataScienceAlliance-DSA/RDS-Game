@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu7kckdrjhlop"]
+
+[ext_resource type="Texture2D" uid="uid://clusa7njsd82w" path="res://assets/Transparency Pillar/Transparency Game 2/riptide(test).PNG" id="1_1mnqd"]
+[ext_resource type="Script" path="res://Scene Folder/Environment/riptide.gd" id="1_fvrwp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgnri"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt8ub"]
+size = Vector2(128, 128)
+
+[node name="Riptide" type="Area2D"]
+script = ExtResource("1_fvrwp")
+
+[node name="Riptide_Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1mnqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fgnri")
+
+[node name="EndPoint" type="Marker2D" parent="."]
+position = Vector2(64, 0)
+
+[node name="Blocker" type="StaticBody2D" parent="."]
+visible = false
+collision_layer = 2
+
+[node name="Collider" type="CollisionShape2D" parent="Blocker"]
+visible = false
+shape = SubResource("RectangleShape2D_bt8ub")

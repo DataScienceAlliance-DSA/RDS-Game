@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://qw4qvsvnuucb"]
+
+[ext_resource type="Texture2D" uid="uid://c4bso4i8bbnvs" path="res://assets/Transparency Pillar/Transparency Game 2/Sea_Rock.PNG" id="1_hxs2m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qm4mx"]
+radius = 64.0
+
+[node name="sea_rock" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hxs2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 10)
+shape = SubResource("CircleShape2D_qm4mx")

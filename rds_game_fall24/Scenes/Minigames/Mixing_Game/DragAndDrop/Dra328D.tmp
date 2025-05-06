@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw5rykc2ps4g3"]
+
+[ext_resource type="Texture2D" uid="uid://e8y24jfjuqws" path="res://assets/Mixing_Game/Orb Placement UI.png" id="1_lji7o"]
+[ext_resource type="Texture2D" uid="uid://bgwwsgq3lyrw4" path="res://assets/Mixing_Game/empty_bag.png" id="2_fbe2l"]
+[ext_resource type="Texture2D" uid="uid://cnli6oka52tgt" path="res://assets/Mixing_Game/Button_Inactive.png" id="2_x4ypn"]
+[ext_resource type="PackedScene" uid="uid://dl510nt7j3vra" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/DropSpot.tscn" id="4_clvvt"]
+[ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/draggable.tscn" id="4_o6hdc"]
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="Blur" type="ColorRect" parent="."]
+offset_right = 1366.0
+offset_bottom = 768.0
+color = Color(0, 0, 0, 0.484)
+
+[node name="OrbPlacement" type="MarginContainer" parent="."]
+offset_left = 731.0
+offset_top = 83.0
+offset_right = 2388.0
+offset_bottom = 2041.0
+scale = Vector2(0.3, 0.3)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OrbPlacement"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="OrbPlacement/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_lji7o")
+
+[node name="Button" type="MarginContainer" parent="."]
+offset_left = 901.0
+offset_top = 525.0
+offset_right = 961.0
+offset_bottom = 556.0
+scale = Vector2(2.88, 2.88)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Button/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_x4ypn")
+expand_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_top = 133.0
+offset_right = 10655.0
+offset_bottom = 10793.0
+scale = Vector2(0.06, 0.06)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fbe2l")
+
+[node name="DropSpotLeft" parent="." instance=ExtResource("4_clvvt")]
+position = Vector2(871, 242)
+scale = Vector2(5.08, 5.08)
+
+[node name="DropSpotRight" parent="." instance=ExtResource("4_clvvt")]
+position = Vector2(1097, 242)
+scale = Vector2(5.08, 5.08)
+
+[node name="Draggable6" parent="." instance=ExtResource("4_o6hdc")]
+position = Vector2(276, 471)
+
+[node name="Draggable5" parent="." instance=ExtResource("4_o6hdc")]
+position = Vector2(233, 545)
+
+[node name="Draggable4" parent="." instance=ExtResource("4_o6hdc")]
+position = Vector2(320, 548)
+
+[node name="Draggable3" parent="." instance=ExtResource("4_o6hdc")]
+position = Vector2(404, 548)
+
+[node name="Draggable2" parent="." instance=ExtResource("4_o6hdc")]
+position = Vector2(363, 471)
+
+[node name="Draggable" parent="." instance=ExtResource("4_o6hdc")]
+position = Vector2(320, 398)
