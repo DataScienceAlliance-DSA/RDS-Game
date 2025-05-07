@@ -18,6 +18,10 @@ config/icon="res://Assets/Debug/icon.svg"
 [autoload]
 
 UI="*res://Scenes/UI/UI.tscn"
+Enums="*res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/Enums.gd"
+Constants="*res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/Constants.gd"
+PS="*res://Scenes/Characters/Player/PlayerState.tscn"
+GlobalPlayerName="*res://Scripts/Components/Cutscene/global_player_name.tscn"
 
 [display]
 

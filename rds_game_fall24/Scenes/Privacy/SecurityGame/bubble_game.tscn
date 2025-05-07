@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://c2x7f1slrx0nq"]
 
-[ext_resource type="Script" path="res://Scripts/Minigames/bubble_game.gd" id="1_nowca"]
-[ext_resource type="Script" path="res://Scripts/Minigames/bubble_panel.gd" id="2_475oy"]
+[ext_resource type="Script" path="res://Scripts/Privacy/SecurityGame/bubble_game.gd" id="1_nowca"]
+[ext_resource type="Script" path="res://Scripts/Privacy/SecurityGame/bubble_panel.gd" id="2_475oy"]
 [ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Interior_Tiles.tres" id="2_u11ol"]
 [ext_resource type="Texture2D" uid="uid://evck6vjp6x11" path="res://Assets/3_Privacy/Bubble_Game/blue_bubble.png" id="3_4ccui"]
 [ext_resource type="Texture2D" uid="uid://cnrx1mgr3ia4t" path="res://Assets/3_Privacy/Bubble_Game/Bubble.png" id="3_k5ev0"]
