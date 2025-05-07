@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b38u8a4mqr0r3"
-path="res://.godot/imported/cannonball_game_bkg.png-5e27c777d7b8a1f4a903c7e32953a143.ctex"
+path="res://.godot/imported/cannonball_game_bkg.png-538c08f8f5429aee34fd83a3561093e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cannon_Game/cannonball_game_bkg.png"
-dest_files=["res://.godot/imported/cannonball_game_bkg.png-5e27c777d7b8a1f4a903c7e32953a143.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame1/cannonball_game_bkg.png"
+dest_files=["res://.godot/imported/cannonball_game_bkg.png-538c08f8f5429aee34fd83a3561093e4.ctex"]
 
 [params]
 

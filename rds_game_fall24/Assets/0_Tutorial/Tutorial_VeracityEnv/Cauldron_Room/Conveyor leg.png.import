@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8vdqp8h4mrwd"
-path="res://.godot/imported/Conveyor leg.png-9e8d31a0461da20d728daccc349d7ca9.ctex"
+path="res://.godot/imported/Conveyor leg.png-c1e7026f21ac46359c3df9d48044dbdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cauldron_Room/Conveyor leg.png"
-dest_files=["res://.godot/imported/Conveyor leg.png-9e8d31a0461da20d728daccc349d7ca9.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Conveyor leg.png"
+dest_files=["res://.godot/imported/Conveyor leg.png-c1e7026f21ac46359c3df9d48044dbdd.ctex"]
 
 [params]
 

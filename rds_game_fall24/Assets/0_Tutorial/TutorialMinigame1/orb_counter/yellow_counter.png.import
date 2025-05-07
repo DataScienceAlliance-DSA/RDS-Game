@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vshte4m0m783"
-path="res://.godot/imported/yellow_counter.png-6a5d73d6c4cf602531c3cf82b68beff1.ctex"
+path="res://.godot/imported/yellow_counter.png-835d2c66bc633afd2f83f1c96ed0d2f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cannon_Game/orb_counter/yellow_counter.png"
-dest_files=["res://.godot/imported/yellow_counter.png-6a5d73d6c4cf602531c3cf82b68beff1.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame1/orb_counter/yellow_counter.png"
+dest_files=["res://.godot/imported/yellow_counter.png-835d2c66bc633afd2f83f1c96ed0d2f3.ctex"]
 
 [params]
 

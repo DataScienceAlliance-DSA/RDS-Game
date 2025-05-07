@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e8y24jfjuqws"
-path="res://.godot/imported/Orb Placement UI.png-6d206ea1bf84a6f5f00e1962a7a7c873.ctex"
+path="res://.godot/imported/Orb Placement UI.png-dd5837b0246d41d72e7aa7f653312fca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Mixing_Game/Orb Placement UI.png"
-dest_files=["res://.godot/imported/Orb Placement UI.png-6d206ea1bf84a6f5f00e1962a7a7c873.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame2/Orb Placement UI.png"
+dest_files=["res://.godot/imported/Orb Placement UI.png-dd5837b0246d41d72e7aa7f653312fca.ctex"]
 
 [params]
 

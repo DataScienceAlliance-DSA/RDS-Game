@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuyrdw52cwvqj"
-path="res://.godot/imported/courtyard_scene.png-3f27bac939d3b3dee2d1134a6e4170f4.ctex"
+path="res://.godot/imported/courtyard_scene.png-32c9b277138cb7fea8ac3bd15a98f980.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Library_Courtyard/courtyard_scene.png"
-dest_files=["res://.godot/imported/courtyard_scene.png-3f27bac939d3b3dee2d1134a6e4170f4.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Library_Courtyard/courtyard_scene.png"
+dest_files=["res://.godot/imported/courtyard_scene.png-32c9b277138cb7fea8ac3bd15a98f980.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5t12q340r62d"
-path="res://.godot/imported/Cauldron.PNG-97f69d914f94c1c836a517453ed72410.ctex"
+path="res://.godot/imported/Cauldron.PNG-4a113192b3d53abbc8270912d6b7c5d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Intro_Room/Cauldron.PNG"
-dest_files=["res://.godot/imported/Cauldron.PNG-97f69d914f94c1c836a517453ed72410.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/Cauldron.PNG"
+dest_files=["res://.godot/imported/Cauldron.PNG-4a113192b3d53abbc8270912d6b7c5d0.ctex"]
 
 [params]
 

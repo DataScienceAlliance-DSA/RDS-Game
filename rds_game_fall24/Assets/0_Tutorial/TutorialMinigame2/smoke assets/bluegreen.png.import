@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbin0r06e4mm0"
-path="res://.godot/imported/bluegreen.png-fe961b508b5af6c1b70498f2ed2ae8a2.ctex"
+path="res://.godot/imported/bluegreen.png-9c1e6cc27dfccf221bad9b22a8bec0a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Mixing_Game/smoke assets/bluegreen.png"
-dest_files=["res://.godot/imported/bluegreen.png-fe961b508b5af6c1b70498f2ed2ae8a2.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame2/smoke assets/bluegreen.png"
+dest_files=["res://.godot/imported/bluegreen.png-9c1e6cc27dfccf221bad9b22a8bec0a1.ctex"]
 
 [params]
 

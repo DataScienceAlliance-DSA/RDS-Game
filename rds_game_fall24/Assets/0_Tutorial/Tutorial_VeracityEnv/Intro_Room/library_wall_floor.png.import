@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv1e32o1bdvtd"
-path="res://.godot/imported/library_wall_floor.png-baa8078884b2c3f65c18061a69b6b4f2.ctex"
+path="res://.godot/imported/library_wall_floor.png-662e2aa824572baf95d77bc5335c7adf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Intro_Room/library_wall_floor.png"
-dest_files=["res://.godot/imported/library_wall_floor.png-baa8078884b2c3f65c18061a69b6b4f2.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/library_wall_floor.png"
+dest_files=["res://.godot/imported/library_wall_floor.png-662e2aa824572baf95d77bc5335c7adf.ctex"]
 
 [params]
 

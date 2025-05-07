@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bf630pjeiu443"
-path="res://.godot/imported/pink_counter.png-a577d2a4203fa3c39d4b4b933d808640.ctex"
+path="res://.godot/imported/pink_counter.png-5a42a51cfc5f0d29f81ef9f0b59c85ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cauldron_Room/Orbs Assets/orbs_counter/pink_counter.png"
-dest_files=["res://.godot/imported/pink_counter.png-a577d2a4203fa3c39d4b4b933d808640.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orbs_counter/pink_counter.png"
+dest_files=["res://.godot/imported/pink_counter.png-5a42a51cfc5f0d29f81ef9f0b59c85ad.ctex"]
 
 [params]
 

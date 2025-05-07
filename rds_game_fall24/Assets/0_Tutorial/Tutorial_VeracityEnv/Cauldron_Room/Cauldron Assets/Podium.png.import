@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3ua1ar51grfb"
-path="res://.godot/imported/Podium.png-3db9d9a6ce9dd1b18b32cd14a3c6ede2.ctex"
+path="res://.godot/imported/Podium.png-268c68b485b2fefa9292efef7b93ff15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cauldron_Room/Cauldron Assets/Podium.png"
-dest_files=["res://.godot/imported/Podium.png-3db9d9a6ce9dd1b18b32cd14a3c6ede2.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Cauldron Assets/Podium.png"
+dest_files=["res://.godot/imported/Podium.png-268c68b485b2fefa9292efef7b93ff15.ctex"]
 
 [params]
 

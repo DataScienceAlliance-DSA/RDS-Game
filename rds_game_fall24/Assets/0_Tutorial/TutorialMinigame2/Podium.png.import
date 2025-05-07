@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3ts7tyirdj4b"
-path="res://.godot/imported/Podium.png-32547aee32861cc85b8182637fe039f0.ctex"
+path="res://.godot/imported/Podium.png-bc1af8293f7210ee08fdf916b7fb6578.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Mixing_Game/Podium.png"
-dest_files=["res://.godot/imported/Podium.png-32547aee32861cc85b8182637fe039f0.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame2/Podium.png"
+dest_files=["res://.godot/imported/Podium.png-bc1af8293f7210ee08fdf916b7fb6578.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0jfdnb7f1soi"
-path="res://.godot/imported/BookSheet 1.png-98b6ad71b00386d0b5338f63afac9686.ctex"
+path="res://.godot/imported/BookSheet 1.png-24cc017a5543422e31434d460793700d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Intro_Room/BookSheet 1.png"
-dest_files=["res://.godot/imported/BookSheet 1.png-98b6ad71b00386d0b5338f63afac9686.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/BookSheet 1.png"
+dest_files=["res://.godot/imported/BookSheet 1.png-24cc017a5543422e31434d460793700d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwi12w4x6ahy3"
-path="res://.godot/imported/flying bag spritesheet.png-33637d2ae41fc74b1d50f16d239254a5.ctex"
+path="res://.godot/imported/flying bag spritesheet.png-db37e1ad53963afee6c24881c55118d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cannon_Game/flying bag spritesheet.png"
-dest_files=["res://.godot/imported/flying bag spritesheet.png-33637d2ae41fc74b1d50f16d239254a5.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame1/flying bag spritesheet.png"
+dest_files=["res://.godot/imported/flying bag spritesheet.png-db37e1ad53963afee6c24881c55118d9.ctex"]
 
 [params]
 

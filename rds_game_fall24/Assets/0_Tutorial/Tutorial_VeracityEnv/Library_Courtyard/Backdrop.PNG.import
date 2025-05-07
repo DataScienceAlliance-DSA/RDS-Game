@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hsqbseh8vp2u"
-path="res://.godot/imported/Backdrop.PNG-3b8115da2721b88a9b18767264af45be.ctex"
+path="res://.godot/imported/Backdrop.PNG-9276afbebd23cfbdebe207622c278f64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Library_Courtyard/Backdrop.PNG"
-dest_files=["res://.godot/imported/Backdrop.PNG-3b8115da2721b88a9b18767264af45be.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Library_Courtyard/Backdrop.PNG"
+dest_files=["res://.godot/imported/Backdrop.PNG-9276afbebd23cfbdebe207622c278f64.ctex"]
 
 [params]
 

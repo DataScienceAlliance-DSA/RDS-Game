@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4e4c7ovb1lrw"
-path="res://.godot/imported/potions.png-5240c58708b76f2baef1daf03cc4e695.ctex"
+path="res://.godot/imported/potions.png-6e5edfbbad9b70b5a1ef3a03cdc4e00c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cauldron_Room/Potions Assets/potions.png"
-dest_files=["res://.godot/imported/potions.png-5240c58708b76f2baef1daf03cc4e695.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Potions Assets/potions.png"
+dest_files=["res://.godot/imported/potions.png-6e5edfbbad9b70b5a1ef3a03cdc4e00c.ctex"]
 
 [params]
 

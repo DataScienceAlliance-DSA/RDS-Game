@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fq046hrx6lal"
-path="res://.godot/imported/mixing_game_bkg.PNG-9ed4447c47d88bbc2888df946c94525e.ctex"
+path="res://.godot/imported/mixing_game_bkg.PNG-b51572b4832d9a156a0462de3595f45a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Mixing_Game/mixing_game_bkg.PNG"
-dest_files=["res://.godot/imported/mixing_game_bkg.PNG-9ed4447c47d88bbc2888df946c94525e.ctex"]
+source_file="res://Assets/0_Tutorial/TutorialMinigame2/mixing_game_bkg.PNG"
+dest_files=["res://.godot/imported/mixing_game_bkg.PNG-b51572b4832d9a156a0462de3595f45a.ctex"]
 
 [params]
 

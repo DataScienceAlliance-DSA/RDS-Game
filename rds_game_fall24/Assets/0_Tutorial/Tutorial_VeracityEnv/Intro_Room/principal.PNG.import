@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cira5wskvvr1g"
-path="res://.godot/imported/principal.PNG-ae8e382729d03b8b8e43c663d9886780.ctex"
+path="res://.godot/imported/principal.PNG-803519bfa28953c3861cb3c0fa739137.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Intro_Room/principal.PNG"
-dest_files=["res://.godot/imported/principal.PNG-ae8e382729d03b8b8e43c663d9886780.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/principal.PNG"
+dest_files=["res://.godot/imported/principal.PNG-803519bfa28953c3861cb3c0fa739137.ctex"]
 
 [params]
 

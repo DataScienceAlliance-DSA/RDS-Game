@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdyx8endh4e8r"
-path="res://.godot/imported/conveyorbelt_corner_spritesheet.png-bff84ae041a3b0331275f09a967e5e9c.ctex"
+path="res://.godot/imported/conveyorbelt_corner_spritesheet.png-22646560ec53c37b10baa5754293377f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png"
-dest_files=["res://.godot/imported/conveyorbelt_corner_spritesheet.png-bff84ae041a3b0331275f09a967e5e9c.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png"
+dest_files=["res://.godot/imported/conveyorbelt_corner_spritesheet.png-22646560ec53c37b10baa5754293377f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2derahe20hjs"
-path="res://.godot/imported/Boarders 1.png-6c4a810b8651b6b0b9e93730c605a9c1.ctex"
+path="res://.godot/imported/Boarders 1.png-1b12777f11d0ee156686a98936a60d75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Intro_Room/Boarders 1.png"
-dest_files=["res://.godot/imported/Boarders 1.png-6c4a810b8651b6b0b9e93730c605a9c1.ctex"]
+source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/Boarders 1.png"
+dest_files=["res://.godot/imported/Boarders 1.png-1b12777f11d0ee156686a98936a60d75.ctex"]
 
 [params]
 
