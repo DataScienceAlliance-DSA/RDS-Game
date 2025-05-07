@@ -16,12 +16,12 @@ var line_dict : Dictionary
 var complete_dict : Dictionary
 
 enum line_types {TRAIL_LINE, HEAD_LINE, STRETCH_LINE, DOT_LINE}
-@onready var finished_line_grad : Gradient = load("res://resources/gradients/finished_cargo_line_gradient.tres")
-@onready var started_line_grad : Gradient = load("res://resources/gradients/started_cargo_line_gradient.tres")
-@onready var trailing_line_grad : Gradient = load("res://resources/gradients/trailing_cargo_line_gradient.tres")
+@onready var finished_line_grad : Gradient = load("res://Resources/Gradients/finished_cargo_line_gradient.tres")
+@onready var started_line_grad : Gradient = load("res://Resources/Gradients/started_cargo_line_gradient.tres")
+@onready var trailing_line_grad : Gradient = load("res://Resources/Gradients/trailing_cargo_line_gradient.tres")
 
-@onready var trajection_shader = load("res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader")
-@onready var trajectory_dot = load("res://assets/Cannon_Game/trajectory dot.png")
+@onready var trajection_shader = load("res://Resources/Shaders/trajection.gdshader")
+@onready var trajectory_dot = load("res://Assets/0_Tutorial/TutorialMinigame1/trajectory dot.png")
 
 ## GAME LOGIC
 var game_running
@@ -39,12 +39,12 @@ signal stage_visuals_cleared # emitted when stage's visuals are cleared to usher
 @onready var timer = $MarginContainer/Panel/Timer
 
 func _ready():
-	shape_textures = [load("res://assets/Fairness_Village/Shapes/shape_1.png"),
-						load("res://assets/Fairness_Village/Shapes/shape_2.png"),
-						load("res://assets/Fairness_Village/Shapes/shape_3.png"),
-						load("res://assets/Fairness_Village/Shapes/shape_4.png"),
-						load("res://assets/Fairness_Village/Shapes/shape_5.png"),
-						load("res://assets/Fairness_Village/Shapes/shape_6.png")]
+	shape_textures = [load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_1.png"),
+						load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_2.png"),
+						load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_3.png"),
+						load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_4.png"),
+						load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_5.png"),
+						load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_6.png")]
 	line_set = false
 	
 	for cell in grid:

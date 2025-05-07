@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd0rsh0m1pyvt"
-path="res://.godot/imported/bubble cauldron w shadow.png-8504a89a98a015ca373e4b5047423b43.ctex"
+uid="uid://vr5hr322gvtx"
+path="res://.godot/imported/V1Dialogue Box_Long_Light.png-c122bf8a71d5d2db223c724a88053d08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1_Fairness/FairnessMinigame1/bubble cauldron w shadow.png"
-dest_files=["res://.godot/imported/bubble cauldron w shadow.png-8504a89a98a015ca373e4b5047423b43.ctex"]
+source_file="res://Assets/UI/V1Dialogue Box_Long_Light.png"
+dest_files=["res://.godot/imported/V1Dialogue Box_Long_Light.png-c122bf8a71d5d2db223c724a88053d08.ctex"]
 
 [params]
 

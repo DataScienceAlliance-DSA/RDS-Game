@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmmfgoetaa4wa"]
+
+[ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_13re7"]
+[ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="2_6qtga"]
+
+[node name="VeracityMinigame2" type="Node2D"]
+
+[node name="ConstructedTileMap" type="TileMap" parent="."]
+format = 2
+script = ExtResource("1_13re7")
+
+[node name="Main Character" parent="." instance=ExtResource("2_6qtga")]

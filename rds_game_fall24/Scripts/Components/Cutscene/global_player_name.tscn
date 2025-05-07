@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://242cw4bpmlgd"]
+
+[ext_resource type="Script" path="res://Scripts/Components/Autoloads/GlobalPlayerName.gd" id="1_o16l1"]
+
+[node name="GlobalPlayerName" type="Node2D"]
+script = ExtResource("1_o16l1")

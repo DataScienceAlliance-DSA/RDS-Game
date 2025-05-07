@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://v52v8p8xkuf5"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/SickVillager.gd" id="1_uf7cp"]
+[ext_resource type="Texture2D" uid="uid://c7o3d6wrkyjwr" path="res://Assets/Characters/Villagers/BlueVillagerSpreadsheet.png" id="2_b30wp"]
+[ext_resource type="Texture2D" uid="uid://dafdjhqy64erc" path="res://Assets/Characters/Villagers/GreenVillagerSpread2.png" id="2_iqbff"]
+[ext_resource type="Script" path="res://Scene Folder/Character Scenes/SickVillager_Area.gd" id="3_4tdjf"]
+[ext_resource type="Texture2D" uid="uid://hacq6a2culte" path="res://Assets/Characters/Villagers/OrangeSpread.png" id="3_f414n"]
+[ext_resource type="AnimationLibrary" uid="uid://bno22rbbtr61j" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_green_villager.res" id="3_jvogl"]
+[ext_resource type="Texture2D" uid="uid://dqhp5ge3cu77i" path="res://Assets/Characters/Villagers/PeachVillagerSpreadSheet.png" id="4_opsvk"]
+[ext_resource type="AnimationLibrary" uid="uid://bo27j3v5s5k5v" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_orange_villager.res" id="5_pcqjf"]
+[ext_resource type="AnimationLibrary" uid="uid://btod0xbfayfkn" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_peach_villager.res" id="7_o7ne5"]
+[ext_resource type="AnimationLibrary" uid="uid://wf0bixyyngpi" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_blue_villager.res" id="9_tp834"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkidu"]
+size = Vector2(85.3333, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtyg"]
+size = Vector2(81.3333, 20)
+
+[node name="SickVillager" type="CharacterBody2D"]
+y_sort_enabled = true
+scale = Vector2(0.9, 0.9)
+script = ExtResource("1_uf7cp")
+
+[node name="villager_sprites" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="GreenVillager" type="Sprite2D" parent="villager_sprites"]
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_iqbff")
+offset = Vector2(0, -210)
+hframes = 10
+vframes = 20
+frame = 56
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/GreenVillager"]
+libraries = {
+"animation_frameworks": ExtResource("3_jvogl")
+}
+
+[node name="OrangeVillager" type="Sprite2D" parent="villager_sprites"]
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("3_f414n")
+offset = Vector2(0, -240)
+hframes = 10
+vframes = 20
+frame = 30
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/OrangeVillager"]
+libraries = {
+"animation_frameworks_orange_villager": ExtResource("5_pcqjf")
+}
+
+[node name="PeachVillager" type="Sprite2D" parent="villager_sprites"]
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("4_opsvk")
+offset = Vector2(0, -260)
+hframes = 10
+vframes = 20
+frame = 56
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/PeachVillager"]
+libraries = {
+"animation_frameworks_peach_villager": ExtResource("7_o7ne5")
+}
+
+[node name="BlueVillager" type="Sprite2D" parent="villager_sprites"]
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_b30wp")
+offset = Vector2(0, -250)
+hframes = 10
+vframes = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/BlueVillager"]
+root_node = NodePath("../../..")
+libraries = {
+"animation_frameworks_blue_villager": ExtResource("9_tp834")
+}
+
+[node name="ShapeSprite" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -175)
+scale = Vector2(0.05, 0.05)
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+script = ExtResource("3_4tdjf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+y_sort_enabled = true
+position = Vector2(-1.27157e-06, -64)
+shape = SubResource("RectangleShape2D_jkidu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0.666668, -9.33333)
+shape = SubResource("RectangleShape2D_1qtyg")

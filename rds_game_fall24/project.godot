@@ -13,15 +13,11 @@ config_version=5
 config/name="RDS_Game_Fall24"
 run/main_scene="res://Scene Folder/Environment/Intro_Room.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Debug/icon.svg"
 
 [autoload]
 
-UI="*res://Scene Folder/UI.tscn"
-Enums="*res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/Enums.gd"
-Constants="*res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/Constants.gd"
-PS="*res://Scene Folder/PlayerState.tscn"
-GlobalPlayerName="*res://Scripts/Cutscene/global_player_name.tscn"
+UI="*res://Scenes/UI/UI.tscn"
 
 [display]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd0rsh0m1pyvt"
-path="res://.godot/imported/bubble cauldron w shadow.png-8504a89a98a015ca373e4b5047423b43.ctex"
+uid="uid://bcwaxymjtlorf"
+path="res://.godot/imported/Potions_Active.png-2c9fe47fb19b1913b6c63a489585979d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1_Fairness/FairnessMinigame1/bubble cauldron w shadow.png"
-dest_files=["res://.godot/imported/bubble cauldron w shadow.png-8504a89a98a015ca373e4b5047423b43.ctex"]
+source_file="res://Assets/UI/selection_button_states/Potions_Selection/Potions_Active.png"
+dest_files=["res://.godot/imported/Potions_Active.png-2c9fe47fb19b1913b6c63a489585979d.ctex"]
 
 [params]
 
