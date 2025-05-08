@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfpc1telihyoo"
-path="res://.godot/imported/green_bubble.png-a6dc23525e23294652e94e45d5516f54.ctex"
+path="res://.godot/imported/green_bubble.png-37a53ea75efce25255cdbdbdf5cf531b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Privacy/Bubble_Game/green_bubble.png"
-dest_files=["res://.godot/imported/green_bubble.png-a6dc23525e23294652e94e45d5516f54.ctex"]
+source_file="res://Assets/3_Privacy/PrivacyMinigame2/green_bubble.png"
+dest_files=["res://.godot/imported/green_bubble.png-37a53ea75efce25255cdbdbdf5cf531b.ctex"]
 
 [params]
 

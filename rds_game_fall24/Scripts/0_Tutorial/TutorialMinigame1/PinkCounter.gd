@@ -1,12 +1,12 @@
 extends Sprite2D
 
 var counter_textures = [
-	preload("res://assets/Cannon_Game/orb_counter/purple_counter.png"),
-	preload("res://assets/Cannon_Game/orb_counter/pink_counter.png"),
-	preload("res://assets/Cannon_Game/orb_counter/lightblue_counter.png"),
-	preload("res://assets/Cannon_Game/orb_counter/blue_counter.png"),
-	preload("res://assets/Cannon_Game/orb_counter/green_counter.png"),
-	preload("res://assets/Cannon_Game/orb_counter/yellow_counter.png")
+	preload("res://Assets/0_Tutorial/TutorialMinigame1/orb_counter/blue_counter.png"),
+	preload("res://Assets/0_Tutorial/TutorialMinigame1/orb_counter/green_counter.png"),
+	preload("res://Assets/0_Tutorial/TutorialMinigame1/orb_counter/lightblue_counter.png"),
+	preload("res://Assets/0_Tutorial/TutorialMinigame1/orb_counter/pink_counter.png"),
+	preload("res://Assets/0_Tutorial/TutorialMinigame1/orb_counter/purple_counter.png"),
+	preload("res://Assets/0_Tutorial/TutorialMinigame1/orb_counter/yellow_counter.png")
 ]
 
 var states = 0

@@ -4,16 +4,16 @@ signal stop_moving
 
 var current_bag: Node = null
 var current_bag_index = 0  # Start with bag 6 (index 0 in the array)
-var bag_poof_animation = preload("res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn")
+var bag_poof_animation = preload("res://Scenes/UniversalComponents/bag_poof.tscn")
 
 # Declare an array to store your bag scenes
 var bag_scenes = [
-	preload("res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6.tscn"),
-	preload("res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag5.tscn"),
-	preload("res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag4.tscn"),
-	preload("res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag3.tscn"),
-	preload("res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag2.tscn"),
-	preload("res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag1.tscn")
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag1.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag2.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag3.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag4.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag5.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag6.tscn")
 ]
 
 # Velocity settings for bags 4, 3, and 2
@@ -47,7 +47,7 @@ var platform_3
 var platform_3_collision
 
 # Referencing cannonball scene
-var cannonball_scene = preload("res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn")
+var cannonball_scene = preload("res://Scenes/0_Tutorial/TutorialMinigame1/Cannonball.tscn")
 @onready var bag_load_phase : int = 1
 @onready var bag_load_timer : float = 0.5
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ssfhv8v0u0mn"
-path="res://.godot/imported/trianglePLACEHOLDER.png-fcf28f5fa3ffd649c2d235f46bfae7f5.ctex"
+uid="uid://dqhp5ge3cu77i"
+path="res://.godot/imported/PeachVillagerSpreadSheet.png-3f2905485be0b3fb99734956af56dbcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1_Fairness/FairnessEnv/Shapes/trianglePLACEHOLDER.png"
-dest_files=["res://.godot/imported/trianglePLACEHOLDER.png-fcf28f5fa3ffd649c2d235f46bfae7f5.ctex"]
+source_file="res://Assets/Characters/Students/PeachVillagerSpreadSheet.png"
+dest_files=["res://.godot/imported/PeachVillagerSpreadSheet.png-3f2905485be0b3fb99734956af56dbcd.ctex"]
 
 [params]
 

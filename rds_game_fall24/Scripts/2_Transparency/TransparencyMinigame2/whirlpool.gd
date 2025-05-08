@@ -21,7 +21,7 @@ func _process(delta):
 		if global_position.distance_to(target_body.global_position) < 20:
 			# Teleport when close enough
 			target_body.global_position = teleport_point
-			if target_body.has method("set_autonomous"):
+			if target_body.has_method("set_autonomous"):
 				target_body.set_autonomous(true)
 			is_pulling = false
 			

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0dhj8mreu86n"
-path="res://.godot/imported/crossPLACEHOLDER.png-070526b86bc9279ccae8ee4508eadc99.ctex"
+uid="uid://dafdjhqy64erc"
+path="res://.godot/imported/GreenVillagerSpread2.png-050d8dacdc34292d3584c3b8056989bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1_Fairness/FairnessEnv/Shapes/crossPLACEHOLDER.png"
-dest_files=["res://.godot/imported/crossPLACEHOLDER.png-070526b86bc9279ccae8ee4508eadc99.ctex"]
+source_file="res://Assets/Characters/Students/GreenVillagerSpread2.png"
+dest_files=["res://.godot/imported/GreenVillagerSpread2.png-050d8dacdc34292d3584c3b8056989bb.ctex"]
 
 [params]
 

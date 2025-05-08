@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqku0pjkomnym"
-path="res://.godot/imported/DeliveryReceipt.png-fbdd919c7ca5eb1bea7fe7abf23f03dc.ctex"
+path="res://.godot/imported/DeliveryReceipt.png-143227e9265108b95f47da5b75376329.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Privacy/Information_Game/DeliveryReceipt.png"
-dest_files=["res://.godot/imported/DeliveryReceipt.png-fbdd919c7ca5eb1bea7fe7abf23f03dc.ctex"]
+source_file="res://Assets/3_Privacy/PrivacyMinigame1/DeliveryReceipt.png"
+dest_files=["res://.godot/imported/DeliveryReceipt.png-143227e9265108b95f47da5b75376329.ctex"]
 
 [params]
 

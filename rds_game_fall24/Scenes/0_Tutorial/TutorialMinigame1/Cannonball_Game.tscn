@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://qcsqbwsppj2l"]
 
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.gd" id="1_nb67d"]
-[ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scenes/Tutorial/CannonGame/Cannon.tscn" id="1_rfhu6"]
-[ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://Scenes/Tutorial/CannonGame/PowerGauge.tscn" id="2_5q4oa"]
-[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scenes/Tutorial/CannonGame/tile_map.tscn" id="3_kaw3j"]
+[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialMinigame1/Cannonball_Game.gd" id="1_nb67d"]
+[ext_resource type="PackedScene" uid="uid://d215x53gvybky" path="res://Scenes/0_Tutorial/TutorialMinigame1/Cannon.tscn" id="1_rfhu6"]
+[ext_resource type="PackedScene" uid="uid://cd21lswhh1b46" path="res://Scenes/0_Tutorial/TutorialMinigame1/PowerGauge.tscn" id="2_5q4oa"]
+[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scenes/0_Tutorial/TutorialMinigame1/tile_map.tscn" id="3_kaw3j"]
 [ext_resource type="Texture2D" uid="uid://driya7hway11j" path="res://Assets/0_Tutorial/TutorialMinigame1/bag_poof/poof_spritesheet.png" id="6_1k8v2"]
 [ext_resource type="Texture2D" uid="uid://cfveiu5idd6ok" path="res://Assets/0_Tutorial/TutorialMinigame1/Platform2.PNG" id="11_qwkcx"]
 
