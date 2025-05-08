@@ -48,13 +48,14 @@ func _ready():
 			# OPEN SCENE
 			UI.start_scene_change(false, true, "")
 			
+			cm.parallel_action()
 			
 			cm.wait(1.0)
-			cm.call_monologue("res://Scripts/Monologues/Intro/PlayerMonologue.json")
+			cm.call_monologue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/PlayerMonologue.json")
 			
 			await cm.actions_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/Intro/ThornewoodSpeech.json")
+			cm.call_monologue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/ThornewoodSpeech.json")
 			
 			await cm.lines_complete
 			

@@ -100,7 +100,8 @@ func fade(close):
 	scene_hide_timer = 0.0
 
 func enter_next_scene():
-	get_tree().change_scene_to_file(next_scene)
+	if (next_scene):
+		get_tree().change_scene_to_file(next_scene)
 
 func set_active_cm(active_cutscene_manager):
 	self.active_cutscene_manager = active_cutscene_manager
