@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3x8du405q3fd"]
 
-[ext_resource type="Texture2D" uid="uid://ceiuaq4axk68q" path="res://assets/Intro_Room/student2.PNG" id="1_vgquf"]
+[ext_resource type="Texture2D" uid="uid://j6a4i3pj5iue" path="res://Assets/Characters/Students/student2.PNG" id="1_vgquf"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1mhhl"]
 light_mode = 1
@@ -14,7 +14,7 @@ size = Vector2(60, 22)
 y_sort_enabled = true
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_1mhhl")
-scale = Vector2(0.225, 0.225)
+scale = Vector2(0.13, 0.13)
 texture = ExtResource("1_vgquf")
 offset = Vector2(0, -270)
 

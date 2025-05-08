@@ -1,7 +1,7 @@
 [gd_scene load_steps=56 format=3 uid="uid://b3tghdg8hnxfu"]
 
 [ext_resource type="Texture2D" uid="uid://eeg78fn8y1aq" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Bookshelf assets/Untitled_Artwork3.png" id="1_dq7mw"]
-[ext_resource type="Script" path="res://Scripts/Tutorial/TutorialEnv/IntroRoom.gd" id="1_t4dbg"]
+[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/IntroRoom.gd" id="1_t4dbg"]
 [ext_resource type="Texture2D" uid="uid://bdyx8endh4e8r" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Conveyor belt Assets/conveyorbelt_corner_spritesheet.png" id="2_du5m0"]
 [ext_resource type="Texture2D" uid="uid://bg0l248v0ag2b" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Misc Assets/tutorial_spritesheet.png" id="3_i5nq7"]
 [ext_resource type="Texture2D" uid="uid://b2derahe20hjs" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/Boarders 1.png" id="4_gtpda"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dg832qlytv3k6" path="res://Scenes/Characters/principal_villain.tscn" id="12_k4bkc"]
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="12_urt7d"]
 [ext_resource type="PackedScene" uid="uid://b3x8du405q3fd" path="res://Scenes/Characters/student_npc_2.tscn" id="14_vgbx4"]
-[ext_resource type="PackedScene" uid="uid://bn0did6g2b5vr" path="res://Scenes/Tutorial/TutorialEnv/secret_bookshelf.tscn" id="15_60rat"]
+[ext_resource type="PackedScene" uid="uid://bn0did6g2b5vr" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/secret_bookshelf.tscn" id="15_60rat"]
 [ext_resource type="PackedScene" uid="uid://58nyyclu775n" path="res://Scenes/Characters/student_npc_3.tscn" id="15_ujceq"]
 [ext_resource type="Texture2D" uid="uid://cqvrvrwoiyist" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/CandleSheet.png" id="16_4s06x"]
 [ext_resource type="PackedScene" uid="uid://c18dh30jhlcqd" path="res://Scenes/Characters/student_npc_4.tscn" id="16_gvvgg"]
@@ -33,7 +33,7 @@
 [ext_resource type="Script" path="res://Scripts/Components/Areas/EnvironmentExitArea.gd" id="25_kbg87"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="26_bf4gd"]
 [ext_resource type="Script" path="res://Scripts/Characters/Fox/fox.gd" id="27_kvvj0"]
-[ext_resource type="PackedScene" uid="uid://cc887apnq476h" path="res://Scenes/Tutorial/TutorialEnv/table_top.tscn" id="32_mvhdv"]
+[ext_resource type="PackedScene" uid="uid://cc887apnq476h" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/table_top.tscn" id="32_mvhdv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvrq3"]
 texture = ExtResource("1_dq7mw")

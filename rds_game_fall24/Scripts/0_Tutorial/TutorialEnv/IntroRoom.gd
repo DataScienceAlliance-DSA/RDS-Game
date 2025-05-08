@@ -70,7 +70,7 @@ func _ready():
 			
 			await cm.wait_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/Intro/MalvorenEntrance.json")
+			cm.call_monologue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/MalvorenEntrance.json")
 			
 			await cm.lines_complete
 			
@@ -101,10 +101,10 @@ func _ready():
 			
 			await cm.actions_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/Intro/PlayerNoticesGlow.json")
+			cm.call_monologue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/PlayerNoticesGlow.json")
 			await cm.lines_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/Intro/ThornewoodLeadsStudents.json")
+			cm.call_monologue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/ThornewoodLeadsStudents.json")
 			await cm.lines_complete
 			
 			actionA = Action.new(actorA, "LerpMove", actorA.position - Vector2(1500,0), 200)
@@ -145,7 +145,7 @@ func _ready():
 			cm.series_action()
 			await cm.actions_complete
 			
-			cm.call_monologue("res://Scripts/Monologues/Intro/PlayerApproachesGlow.json")
+			cm.call_monologue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/PlayerApproachesGlow.json")
 			await cm.lines_complete
 			
 			actionCam = Action.new(player_cam, "LerpMove", player.position / 1000., 200)

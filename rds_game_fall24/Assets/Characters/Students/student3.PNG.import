@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b88lo38efva65"
-path="res://.godot/imported/VeracityStudent1.PNG-412e60267e2d23d733202c7e583db01a.ctex"
+path="res://.godot/imported/student3.PNG-466b882363d77a4a0bcd168aacb8a5f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Students/VeracityStudent1.PNG"
-dest_files=["res://.godot/imported/VeracityStudent1.PNG-412e60267e2d23d733202c7e583db01a.ctex"]
+source_file="res://Assets/Characters/Students/student3.PNG"
+dest_files=["res://.godot/imported/student3.PNG-466b882363d77a4a0bcd168aacb8a5f9.ctex"]
 
 [params]
 

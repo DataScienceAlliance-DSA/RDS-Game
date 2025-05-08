@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j6a4i3pj5iue"
-path="res://.godot/imported/TransparencyStudent.PNG-32798522b339ec7771dac7bc274864b9.ctex"
+uid="uid://e52qbll0ldb4"
+path="res://.godot/imported/student4.PNG-21d13ccb9bbc3c96c3921c79d944ccd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Students/TransparencyStudent.PNG"
-dest_files=["res://.godot/imported/TransparencyStudent.PNG-32798522b339ec7771dac7bc274864b9.ctex"]
+source_file="res://Assets/Characters/Students/student4.PNG"
+dest_files=["res://.godot/imported/student4.PNG-21d13ccb9bbc3c96c3921c79d944ccd6.ctex"]
 
 [params]
 
