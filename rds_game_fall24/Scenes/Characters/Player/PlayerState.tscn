@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://mfon5k5vmwom"]
 
-[ext_resource type="Script" path="res://Scene Folder/PlayerState.gd" id="1_1k7p1"]
+[ext_resource type="Script" path="res://Scripts/Components/Autoloads/PlayerState.gd" id="1_1k7p1"]
 
 [node name="PlayerState" type="Node2D"]
 script = ExtResource("1_1k7p1")
-cauldron_state = 0

@@ -122,7 +122,7 @@ func process_next_text():
 			opposing_name.text = "[right][color=black][b]"+card_name+"[/b][/color]"
 			opposing_scale.scale = Vector2(1.4, 1.4)
 			opposing_color.modulate.v = 1
-			opposing_avatar.texture = load("res://assets/ui_assets/portraits/"+card_name+".PNG")
+			opposing_avatar.texture = load("res://Assets/UI/portraits/"+card_name+".PNG")
 			
 			player_scale.scale = Vector2(1.25, 1.25)
 			player_color.modulate.v = 0.5
@@ -133,7 +133,7 @@ func process_next_text():
 			else: player_name.text = "[color=black][b]"+card_name+"[/b][/color]"
 			player_scale.scale = Vector2(1.4, 1.4)
 			player_color.modulate.v = 1
-			player_avatar.texture = load("res://assets/ui_assets/portraits/"+card_name+".PNG")
+			player_avatar.texture = load("res://Assets/UI/portraits/"+card_name+".PNG")
 			
 			opposing_scale.scale = Vector2(1.25, 1.25)
 			opposing_color.modulate.v = 0.5
