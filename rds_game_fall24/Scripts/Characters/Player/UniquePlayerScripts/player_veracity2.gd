@@ -53,7 +53,8 @@ func get_movement_vector(direction: String) -> Vector2:
 
 func _process(_delta):
 	print("HERE")
-	self.get_node("Camera2D").zoom = self.get_node("Camera2D").zoom.lerp(Vector2(cam_zoom, cam_zoom), _delta * cam_speed)
+	var camera = self.get_node("Camera2D")
+	camera.zoom = self.get_node("Camera2D").zoom.lerp(Vector2(cam_zoom, cam_zoom), _delta * cam_speed)
 	
 	if autonomous:
 		if !in_cutscene:
@@ -75,18 +76,9 @@ func _process(_delta):
 	elif Input.is_action_just_released("left"):
 		_remove_movement_direction("left")
 	
-	if Input.is_action_just_pressed("up"):
-		movement_stack.push_front(get_movement_vector("up"))
-	elif Input.is_action_just_released("up"):
-		_remove_movement_direction("up")
-	
-	if Input.is_action_just_pressed("down"):
-		movement_stack.push_front(get_movement_vector("down"))
-	elif Input.is_action_just_released("down"):
-		_remove_movement_direction("down")
-	
 	# Move and animate
 	velocity = movement_stack.front() if movement_stack.size() > 0 else Vector2.ZERO
+	velocity += Vector2(0, -speed)
 	move_and_slide()
 	updateAnimation()
 	

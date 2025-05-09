@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bndss7qu042es" path="res://Assets/Characters/Fox/FoxFinalSpreadSheet.png" id="1_ukv1w"]
 [ext_resource type="Script" path="res://Scripts/Characters/Fox/fox_area.gd" id="2_lp4ex"]
 
-
 [sub_resource type="Animation" id="Animation_ngfvs"]
 length = 0.001
 tracks/0/type = "value"
@@ -194,7 +193,8 @@ offset = Vector2(0, -128)
 hframes = 10
 vframes = 32
 
-[node name="FoxAnim" type="AnimationPlayer" parent="FoxSprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../FoxSprite")
 libraries = {
 "": SubResource("AnimationLibrary_ewee1")
 }

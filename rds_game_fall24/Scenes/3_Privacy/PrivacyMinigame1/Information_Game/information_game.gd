@@ -5,7 +5,7 @@ var cm : CutsceneManager
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
 @onready var panel = $InformationPanel
 
-@onready var sea_tile_map = load("res://Scene Folder/Environment/transparency_sea_tile_map.tscn")
+@onready var sea_tile_map = load("res://Scenes/2_Transparency/TransparencyMinigame2/transparency_sea_tile_map.tscn")
 @onready var siren_sea = $SirenTileMap
 
 var sea_cutscene : bool
@@ -41,7 +41,7 @@ func _ready():
 	cm.series_action()
 	await cm.actions_complete
 	
-	cm.call_dialogue("res://Scripts/Dialogues/Information/SirenIntro1.json")
+	cm.call_dialogue("res://Resources/Texts/Dialogues/3_Privacy/PrivacyMinigame1/SirenIntro1.json")
 	await cm.lines_complete
 	
 	saved_current_sea_position = current_sea.position

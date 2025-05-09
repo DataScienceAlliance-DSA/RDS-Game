@@ -31,6 +31,7 @@ func set_actions(actions):
 
 func series_action():
 	cutscene_active = true
+	player.in_cutscene = true
 	for action in actions:
 		action.cue()
 		if !skipping_cutscene: await action.action_completed
@@ -40,6 +41,7 @@ func series_action():
 
 func parallel_action():
 	cutscene_active = true
+	player.in_cutscene = true
 	for action in actions:
 		action.cue()
 	
@@ -47,6 +49,10 @@ func parallel_action():
 	await self.parallel_completed
 	
 	actions_complete.emit()
+
+func halt():
+	for action in actions:
+		action.halt()
 
 func _process(delta):
 	if (parallel_completion_holdout):
@@ -94,6 +100,7 @@ func call_dialogue(script):
 
 # clear all actions, free their nodes
 func cut():
+	player.in_cutscene = false
 	cutscene_active = false
 	for action in actions:
 		action.queue_free()

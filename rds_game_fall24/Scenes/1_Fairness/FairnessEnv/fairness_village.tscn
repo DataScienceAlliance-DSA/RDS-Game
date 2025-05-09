@@ -1,19 +1,20 @@
 [gd_scene load_steps=19 format=3 uid="uid://bk64d5ny17vdm"]
 
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="1_p4jvy"]
-[ext_resource type="Script" path="res://Scene Folder/Environment/fairness_village.gd" id="1_x0gev"]
+[ext_resource type="Script" path="res://Scripts/1_Fairness/FairnessEnv/fairness_village.gd" id="1_x0gev"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="2_1u6gi"]
-[ext_resource type="Script" path="res://Scene Folder/fox.gd" id="3_2josw"]
+[ext_resource type="Script" path="res://Scripts/Characters/Fox/fox.gd" id="3_2josw"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="4_2e08x"]
 [ext_resource type="Texture2D" uid="uid://iqykg7760ug7" path="res://Assets/1_Fairness/FairnessEnv/EnvironmentSpreadSheetFinal.png" id="4_yipns"]
-[ext_resource type="PackedScene" uid="uid://drq1vgo2ie7ic" path="res://Scenes/Fairness/FairnessEnv/tree.tscn" id="6_ljd2i"]
+[ext_resource type="PackedScene" uid="uid://drq1vgo2ie7ic" path="res://Scenes/1_Fairness/FairnessEnv/tree.tscn" id="6_ljd2i"]
 [ext_resource type="Texture2D" uid="uid://c5eykjcfkvpa2" path="res://Assets/1_Fairness/FairnessEnv/VillageCauldron.PNG" id="7_kmh2l"]
-[ext_resource type="PackedScene" uid="uid://dnl4khh4eunli" path="res://Scenes/Tutorial/TutorialEnv/fairness_house.tscn" id="8_4ls51"]
+[ext_resource type="PackedScene" uid="uid://dnl4khh4eunli" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/fairness_house.tscn" id="8_4ls51"]
 [ext_resource type="Script" path="res://Scripts/Components/Areas/EnvironmentExitArea.gd" id="9_8sig2"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/fairness_cauldron_area.gd" id="9_jppmd"]
-[ext_resource type="PackedScene" uid="uid://cqf3f1xk2qp07" path="res://Scenes/Tutorial/TutorialEnv/fairness_podium.tscn" id="9_mq5hf"]
-[ext_resource type="PackedScene" uid="uid://c0b5pntcik1eq" path="res://Scenes/Components/fairness_crystal.tscn" id="10_oltpy"]
+[ext_resource type="PackedScene" uid="uid://cqf3f1xk2qp07" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/fairness_podium.tscn" id="9_mq5hf"]
+[ext_resource type="PackedScene" uid="uid://c0b5pntcik1eq" path="res://Scenes/1_Fairness/FairnessEnv/fairness_crystal.tscn" id="10_oltpy"]
 [ext_resource type="Script" path="res://Scene Folder/Environment/fairness_crystal.gd" id="12_5pw7u"]
+
 
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t1i6"]

@@ -1,12 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmmfgoetaa4wa"]
+[gd_scene load_steps=8 format=3 uid="uid://bmmfgoetaa4wa"]
 
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_13re7"]
+[ext_resource type="Script" path="res://Scenes/4_Veracity/VeracityMinigame2/VeracityMinigame2.gd" id="1_byqg4"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="2_6qtga"]
+[ext_resource type="PackedScene" uid="uid://1dcaq8j85q60" path="res://Scenes/4_Veracity/VeracityMinigame2/hall_repeat.tscn" id="4_v3na7"]
+[ext_resource type="Script" path="res://Scripts/Characters/Player/UniquePlayerScripts/player_veracity2.gd" id="5_is1d0"]
+[ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="6_l7bk2"]
+[ext_resource type="Script" path="res://Scripts/Characters/CharacterController.gd" id="7_dcf1y"]
 
 [node name="VeracityMinigame2" type="Node2D"]
+script = ExtResource("1_byqg4")
 
-[node name="ConstructedTileMap" type="TileMap" parent="."]
-format = 2
+[node name="ConstructedTileMap" parent="." groups=["Map"] instance=ExtResource("4_v3na7")]
+layer_0/tile_data = PackedInt32Array(2293760, 0, 5, 2293761, 0, 5, 2293762, 0, 5, 2293763, 0, 5, 2293764, 0, 5, 2293765, 0, 5, 2293766, 0, 5, 2293767, 0, 5, 2293768, 0, 5, 2293769, 196608, 1, 2293770, 262144, 1, 2293771, 262144, 1, 2293772, 262144, 1, 2293773, 262144, 1, 2293774, 262144, 1, 2293775, 327680, 1, 2293776, 0, 5, 2293777, 0, 5, 2293778, 0, 5, 2293779, 0, 5, 2293780, 0, 5, 2293781, 0, 5, 2293782, 0, 5, 2293783, 0, 5, 2293784, 0, 5)
 script = ExtResource("1_13re7")
 
-[node name="Main Character" parent="." instance=ExtResource("2_6qtga")]
+[node name="HallRepeat" parent="." groups=["FirstMap"] instance=ExtResource("4_v3na7")]
+
+[node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_6qtga")]
+position = Vector2(798, -64)
+script = ExtResource("5_is1d0")
+anim_lib_name = ""
+
+[node name="Fox" parent="." instance=ExtResource("6_l7bk2")]
+position = Vector2(64, 128)
+script = ExtResource("7_dcf1y")

@@ -28,7 +28,7 @@ func _process(delta):
 	# set the pattern
 	var start_pos = self.position
 	
-	if (!hopping):
+	if (!hopping and autonomous):
 		var path = map.getAStarPath(start_pos, target_pos)
 		
 		if path.size() > 2:
@@ -89,6 +89,8 @@ func set_directional_anim(theta, moving):
 	theta = fmod(theta, TAU)
 	if theta < 0.:
 		theta += TAU
+	
+	anim_player.speed_scale = speed / 100.
 	
 	var next_anim = str(anim_lib_name) + "/"
 	if ((theta <= PI / 4) and (theta >= 0)) or ((theta >= 7 * PI / 4) and (theta <= 2 * PI)):
