@@ -2,7 +2,7 @@ extends Node2D
 
 var cm : CutsceneManager # cutscene manager for this 
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
-@onready var cam = player.get_node("Camera2D")
+@onready var game_cam = get_node("Camera2D")
 
 var new_map
 var old_map
@@ -12,8 +12,10 @@ var trigger_map_spawn
 var trigger_map_delete
 
 func _ready():
-	cam.limit_top = -99999
-	cam.limit_bottom = 0
+	game_cam.reparent(self)
+	
+	game_cam.limit_top = -99999
+	game_cam.limit_bottom = 0
 	
 	# intro_cutscene()
 	player.autonomous = false
@@ -40,7 +42,11 @@ func _process(delta):
 		trigger_map_delete = true
 		trigger_map_spawn = false
 	
-	cam.global_position -= Vector2(0, delta)
+	game_cam.global_position -= Vector2(0, delta * 200.)
+	if (player.global_position.y > game_cam.global_position.y):
+		player.speed = 250.
+	else:
+		player.speed = 200.
 
 func intro_cutscene():
 	var fox = get_node("Fox")

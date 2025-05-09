@@ -43,7 +43,6 @@ func _process(delta):
 			move_start = self.position
 			hop_interpolation = 0.
 			hopping = true
-			# print("goob")
 		elif (self.name != "Player"):
 			autonomous = false
 			pass
@@ -53,7 +52,6 @@ func _process(delta):
 		moveTo(move_start, move_target, hop_interpolation)
 
 func set_autonomous(autonomous):
-	print("CALLME")
 	self.autonomous = autonomous
 
 func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
@@ -69,7 +67,6 @@ func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 	
 	set_directional_anim(theta, true)
 	
-	print(target_pos)
 	self.position = start_pos.lerp(target_pos, t)
 
 func occupyAStarCell(vGlobalPosition:Vector2)->void:
@@ -101,7 +98,6 @@ func set_directional_anim(theta, moving):
 		next_anim += "walkLeft" if moving else "idleLeft"
 	if (theta >= 5 * PI / 4) and (theta <= 7 * PI / 4):
 		next_anim += "walkUp" if moving else "idleUp"
-		# print(theta)
 	
 	if anim_player.current_animation != next_anim:
 		anim_player.play(next_anim)

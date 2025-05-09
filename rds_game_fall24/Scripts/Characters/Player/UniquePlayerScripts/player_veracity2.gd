@@ -6,8 +6,8 @@ var shape_index
 
 @export var cam_zoom: float = 1.0
 @export var cam_speed: float = 3.0
+@onready var camera = get_node("Camera2D")
 
-@onready var follower = get_parent().get_node("Follower")
 @onready var player_cast = self.get_node("PlayerCast") as RayCast2D
 @onready var animations = $AnimationPlayer
 
@@ -29,12 +29,12 @@ func _ready():
 	if get_tree().current_scene.is_in_group("minigame"):
 		is_minigame_scene = true
 	
-	self.get_node("Camera2D").zoom = Vector2(cam_zoom, cam_zoom)
+	camera.zoom = Vector2(cam_zoom, cam_zoom)
 	
 	if map:
 		var map_limits = map.get_used_rect()
 		var map_cellsize = map.rendering_quadrant_size
-		var camera = get_node("Camera2D")
+
 		camera.limit_left = map_limits.position.x * map_cellsize
 		camera.limit_right = map_limits.end.x * map_cellsize
 		camera.limit_top = map_limits.position.y * map_cellsize
@@ -52,9 +52,7 @@ func get_movement_vector(direction: String) -> Vector2:
 		_: return Vector2.ZERO
 
 func _process(_delta):
-	print("HERE")
-	var camera = self.get_node("Camera2D")
-	camera.zoom = self.get_node("Camera2D").zoom.lerp(Vector2(cam_zoom, cam_zoom), _delta * cam_speed)
+	camera.zoom = camera.zoom.lerp(Vector2(cam_zoom, cam_zoom), _delta * cam_speed)
 	
 	if autonomous:
 		if !in_cutscene:
@@ -81,6 +79,8 @@ func _process(_delta):
 	velocity += Vector2(0, -speed)
 	move_and_slide()
 	updateAnimation()
+	
+	print(movement_stack)
 	
 	emit_signal("movement_updated", movement_stack)
 	

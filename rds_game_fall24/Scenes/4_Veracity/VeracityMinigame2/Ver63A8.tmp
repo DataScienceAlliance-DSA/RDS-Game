@@ -11,9 +11,6 @@
 [node name="VeracityMinigame2" type="Node2D"]
 script = ExtResource("1_byqg4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(798, -384)
-
 [node name="ConstructedTileMap" parent="." groups=["Map"] instance=ExtResource("4_v3na7")]
 layer_0/tile_data = PackedInt32Array(2293760, 0, 5, 2293761, 0, 5, 2293762, 0, 5, 2293763, 0, 5, 2293764, 0, 5, 2293765, 0, 5, 2293766, 0, 5, 2293767, 0, 5, 2293768, 0, 5, 2293769, 196608, 1, 2293770, 262144, 1, 2293771, 262144, 1, 2293772, 262144, 1, 2293773, 262144, 1, 2293774, 262144, 1, 2293775, 327680, 1, 2293776, 0, 5, 2293777, 0, 5, 2293778, 0, 5, 2293779, 0, 5, 2293780, 0, 5, 2293781, 0, 5, 2293782, 0, 5, 2293783, 0, 5, 2293784, 0, 5)
 script = ExtResource("1_13re7")
@@ -21,7 +18,7 @@ script = ExtResource("1_13re7")
 [node name="HallRepeat" parent="." groups=["FirstMap"] instance=ExtResource("4_v3na7")]
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_6qtga")]
-position = Vector2(798, -384)
+position = Vector2(798, -64)
 script = ExtResource("5_is1d0")
 anim_lib_name = ""
 
