@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bmmfgoetaa4wa"]
+[gd_scene load_steps=19 format=3 uid="uid://bmmfgoetaa4wa"]
 
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_13re7"]
 [ext_resource type="Script" path="res://Scenes/4_Veracity/VeracityMinigame2/VeracityMinigame2.gd" id="1_byqg4"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" path="res://Scripts/Characters/Player/UniquePlayerScripts/player_veracity2.gd" id="5_is1d0"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="6_l7bk2"]
 [ext_resource type="Script" path="res://Scripts/Characters/CharacterController.gd" id="7_dcf1y"]
+[ext_resource type="Script" path="res://Scripts/4_Veracity/VeracityMinigame2/hallway_monster.gd" id="8_x0vuq"]
+[ext_resource type="Texture2D" uid="uid://bjbqo3beuyomd" path="res://Assets/4_Veracity/VeracityMinigame2/monster_sprite_TEMP.png" id="9_6aohe"]
+[ext_resource type="Texture2D" uid="uid://cg5e6po164luc" path="res://Assets/4_Veracity/VeracityMinigame2/hit_effect_TEMP.png" id="10_r2doi"]
+[ext_resource type="Texture2D" uid="uid://x8ip0pg2ijrj" path="res://Assets/4_Veracity/VeracityMinigame2/laser_particle.png" id="11_dbb8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sned6"]
 size = Vector2(1472, 42)
@@ -18,6 +22,31 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.6, 0, 0, 0, 0)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_05y7m"]
 gradient = SubResource("Gradient_4pai5")
 fill_from = Vector2(1, 1)
+
+[sub_resource type="Curve" id="Curve_ugkr2"]
+_data = [Vector2(0, 0.464706), 0.0, 0.0, 0, 0, Vector2(0.250689, 0.263102), 0.0, 0.0, 0, 0, Vector2(0.512397, 0.228342), -0.517647, -0.517647, 0, 0, Vector2(0.988981, 0.186631), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_h6ihq"]
+curve = SubResource("Curve_ugkr2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ngsoy"]
+particle_flag_disable_z = true
+gravity = Vector3(0, -98, 0)
+linear_accel_min = -100.0
+linear_accel_max = 100.0
+radial_accel_min = -100.0
+radial_accel_max = 100.0
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_h6ihq")
+turbulence_enabled = true
+turbulence_initial_displacement_min = -100.0
+turbulence_initial_displacement_max = 100.0
+
+[sub_resource type="Environment" id="Environment_5pg3n"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 0
 
 [node name="VeracityMinigame2" type="Node2D"]
 script = ExtResource("1_byqg4")
@@ -51,5 +80,48 @@ texture = SubResource("GradientTexture2D_05y7m")
 [node name="Fox" parent="." instance=ExtResource("6_l7bk2")]
 position = Vector2(64, 128)
 script = ExtResource("7_dcf1y")
+
+[node name="Monster" type="CharacterBody2D" parent="."]
+position = Vector2(798, -64)
+script = ExtResource("8_x0vuq")
+spell_cooldown_max = 10.0
+spell_windup_max = 3.0
+spell_casting_max = 1.0
+speed = 200.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Monster"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_6aohe")
+
+[node name="LightWindupIndicator" type="Sprite2D" parent="Monster"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(2, -32)
+texture = ExtResource("10_r2doi")
+
+[node name="PointLight2D" type="PointLight2D" parent="Monster/LightWindupIndicator"]
+position = Vector2(-2, 0)
+color = Color(1, 0, 0.501961, 1)
+energy = 16.0
+texture = ExtResource("10_r2doi")
+
+[node name="RayCast2D" type="RayCast2D" parent="Monster"]
+
+[node name="Line2D" type="Line2D" parent="Monster/RayCast2D"]
+position = Vector2(-2, -99)
+points = PackedVector2Array(0, 0, 0, -700)
+default_color = Color(1, 0.254902, 0, 1)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Monster/RayCast2D"]
+modulate = Color(1, 1, 0.458824, 1)
+position = Vector2(-2, -99)
+amount = 80
+process_material = SubResource("ParticleProcessMaterial_ngsoy")
+texture = ExtResource("11_dbb8t")
+lifetime = 2.0
+randomness = 1.0
+trail_lifetime = 1.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Monster/RayCast2D"]
+environment = SubResource("Environment_5pg3n")
 
 [connection signal="body_entered" from="Camera2D/Area2D" to="." method="_on_failure_area_entered"]
