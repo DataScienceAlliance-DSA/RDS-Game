@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmmfgoetaa4wa"]
+[gd_scene load_steps=11 format=3 uid="uid://bmmfgoetaa4wa"]
 
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_13re7"]
 [ext_resource type="Script" path="res://Scenes/4_Veracity/VeracityMinigame2/VeracityMinigame2.gd" id="1_byqg4"]
@@ -8,11 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="6_l7bk2"]
 [ext_resource type="Script" path="res://Scripts/Characters/CharacterController.gd" id="7_dcf1y"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sned6"]
+size = Vector2(1472, 42)
+
+[sub_resource type="Gradient" id="Gradient_4pai5"]
+offsets = PackedFloat32Array(0, 0.346774, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.6, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_05y7m"]
+gradient = SubResource("Gradient_4pai5")
+fill_from = Vector2(1, 1)
+
 [node name="VeracityMinigame2" type="Node2D"]
 script = ExtResource("1_byqg4")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(798, -384)
 
 [node name="ConstructedTileMap" parent="." groups=["Map"] instance=ExtResource("4_v3na7")]
 layer_0/tile_data = PackedInt32Array(2293760, 0, 5, 2293761, 0, 5, 2293762, 0, 5, 2293763, 0, 5, 2293764, 0, 5, 2293765, 0, 5, 2293766, 0, 5, 2293767, 0, 5, 2293768, 0, 5, 2293769, 196608, 1, 2293770, 262144, 1, 2293771, 262144, 1, 2293772, 262144, 1, 2293773, 262144, 1, 2293774, 262144, 1, 2293775, 327680, 1, 2293776, 0, 5, 2293777, 0, 5, 2293778, 0, 5, 2293779, 0, 5, 2293780, 0, 5, 2293781, 0, 5, 2293782, 0, 5, 2293783, 0, 5, 2293784, 0, 5)
@@ -21,10 +29,27 @@ script = ExtResource("1_13re7")
 [node name="HallRepeat" parent="." groups=["FirstMap"] instance=ExtResource("4_v3na7")]
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_6qtga")]
-position = Vector2(798, -384)
+position = Vector2(798, -64)
 script = ExtResource("5_is1d0")
 anim_lib_name = ""
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(798, -384)
+
+[node name="Area2D" type="Area2D" parent="Camera2D"]
+position = Vector2(0, 384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
+position = Vector2(2, -11)
+shape = SubResource("RectangleShape2D_sned6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Area2D"]
+position = Vector2(2, -48)
+scale = Vector2(23, 1.5)
+texture = SubResource("GradientTexture2D_05y7m")
 
 [node name="Fox" parent="." instance=ExtResource("6_l7bk2")]
 position = Vector2(64, 128)
 script = ExtResource("7_dcf1y")
+
+[connection signal="body_entered" from="Camera2D/Area2D" to="." method="_on_failure_area_entered"]

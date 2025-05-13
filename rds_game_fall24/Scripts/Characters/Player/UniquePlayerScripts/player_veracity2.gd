@@ -80,18 +80,19 @@ func _process(_delta):
 	move_and_slide()
 	updateAnimation()
 	
-	print(movement_stack)
-	
 	emit_signal("movement_updated", movement_stack)
 	
 	update_cast()
 	if player_cast.get_collider() and Input.is_action_just_pressed("interaction"):
 		confirmed_interaction()
 
-func _remove_movement_direction(direction: String):
-	var vector = get_movement_vector(direction)
-	if movement_stack.has(vector):
-		movement_stack.pop_at(movement_stack.find(vector))
+func _remove_movement_direction(direction: String) -> void:
+	var target_x := get_movement_vector(direction).x
+	for i in range(movement_stack.size()):
+		var current_x := movement_stack[i].x
+		if target_x != 0.0 and sign(current_x) == sign(target_x):
+			movement_stack.remove_at(i)
+			break
 
 func updateAnimation():
 	if velocity.length() == 0:

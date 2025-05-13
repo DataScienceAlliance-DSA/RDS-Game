@@ -3,6 +3,10 @@ extends Node2D
 var cm : CutsceneManager # cutscene manager for this 
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
 @onready var game_cam = get_node("Camera2D")
+@onready var game_cam_velocity = Vector2(0, -200)
+
+@onready var game_running = true
+@onready var game_won = false
 
 var new_map
 var old_map
@@ -42,11 +46,22 @@ func _process(delta):
 		trigger_map_delete = true
 		trigger_map_spawn = false
 	
-	game_cam.global_position -= Vector2(0, delta * 200.)
-	if (player.global_position.y > game_cam.global_position.y):
-		player.speed = 250.
+	if (game_running):
+		player.camera.enabled = false
+		game_cam.global_position -= Vector2(0, delta * 200.)
+		if (player.global_position.y > game_cam.global_position.y):
+			player.speed = 250.
+		else:
+			player.speed = 200.
 	else:
-		player.speed = 200.
+		if (game_won):
+			pass
+		else:
+			player.speed = 0.
+			if (game_cam_velocity.y < 0.):
+				game_cam.global_position += game_cam_velocity * delta
+				game_cam_velocity.y += 100. * delta
+				print(game_cam.global_position.y)
 
 func intro_cutscene():
 	var fox = get_node("Fox")
@@ -72,3 +87,10 @@ func intro_cutscene():
 	
 	cm.call_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialMinigame1/UnhappyCannon.json")
 	await cm.lines_complete
+
+func _on_failure_area_entered(body):
+	print(body.name)
+	if body == player:
+		print("wuh")
+		game_running = false
+		game_won = false
