@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bmmfgoetaa4wa"]
+[gd_scene load_steps=21 format=3 uid="uid://bmmfgoetaa4wa"]
 
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_13re7"]
 [ext_resource type="Script" path="res://Scenes/4_Veracity/VeracityMinigame2/VeracityMinigame2.gd" id="1_byqg4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1dcaq8j85q60" path="res://Scenes/4_Veracity/VeracityMinigame2/hall_repeat.tscn" id="4_v3na7"]
 [ext_resource type="Script" path="res://Scripts/Characters/Player/UniquePlayerScripts/player_veracity2.gd" id="5_is1d0"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="6_l7bk2"]
+[ext_resource type="Texture2D" uid="uid://cihxhdeo1cr2f" path="res://Assets/4_Veracity/VeracityMinigame2/confusion_symbol.png" id="6_w6ys1"]
 [ext_resource type="Script" path="res://Scripts/Characters/CharacterController.gd" id="7_dcf1y"]
 [ext_resource type="Script" path="res://Scripts/4_Veracity/VeracityMinigame2/hallway_monster.gd" id="8_x0vuq"]
 [ext_resource type="Texture2D" uid="uid://bjbqo3beuyomd" path="res://Assets/4_Veracity/VeracityMinigame2/monster_sprite_TEMP.png" id="9_6aohe"]
@@ -24,7 +25,7 @@ gradient = SubResource("Gradient_4pai5")
 fill_from = Vector2(1, 1)
 
 [sub_resource type="Curve" id="Curve_ugkr2"]
-_data = [Vector2(0, 0.464706), 0.0, 0.0, 0, 0, Vector2(0.250689, 0.263102), 0.0, 0.0, 0, 0, Vector2(0.512397, 0.228342), -0.517647, -0.517647, 0, 0, Vector2(0.988981, 0.186631), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.5093), 0.0, 0.0, 0, 0, Vector2(0.250689, 0.263102), 0.0, 0.0, 0, 0, Vector2(0.512397, 0.228342), -0.517647, -0.517647, 0, 0, Vector2(0.988981, 0.186631), 0.0, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="CurveTexture" id="CurveTexture_h6ihq"]
@@ -32,21 +33,22 @@ curve = SubResource("Curve_ugkr2")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ngsoy"]
 particle_flag_disable_z = true
-gravity = Vector3(0, -98, 0)
-linear_accel_min = -100.0
-linear_accel_max = 100.0
-radial_accel_min = -100.0
-radial_accel_max = 100.0
-scale_min = 0.0
+gravity = Vector3(0, -900, 0)
+linear_accel_min = -900.0
+linear_accel_max = 900.0
+radial_accel_min = -900.0
+radial_accel_max = 900.0
 scale_curve = SubResource("CurveTexture_h6ihq")
 turbulence_enabled = true
 turbulence_initial_displacement_min = -100.0
 turbulence_initial_displacement_max = 100.0
 
-[sub_resource type="Environment" id="Environment_5pg3n"]
-background_mode = 3
-glow_enabled = true
-glow_blend_mode = 0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awgoq"]
+size = Vector2(0, 2000)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wmem6"]
+radius = 39.49
+height = 161.87
 
 [node name="VeracityMinigame2" type="Node2D"]
 script = ExtResource("1_byqg4")
@@ -60,7 +62,17 @@ script = ExtResource("1_13re7")
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_6qtga")]
 position = Vector2(798, -64)
 script = ExtResource("5_is1d0")
+confused_max = 3.0
 anim_lib_name = ""
+
+[node name="ConfusionIndicator" type="Sprite2D" parent="Main Character"]
+visible = false
+z_index = 1
+position = Vector2(34, -96)
+rotation = -6.28319
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_w6ys1")
+offset = Vector2(8.6, 14.81)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(798, -384)
@@ -99,21 +111,23 @@ position = Vector2(2, -32)
 texture = ExtResource("10_r2doi")
 
 [node name="PointLight2D" type="PointLight2D" parent="Monster/LightWindupIndicator"]
-position = Vector2(-2, 0)
-color = Color(1, 0, 0.501961, 1)
-energy = 16.0
+position = Vector2(-4, 0)
+color = Color(0.905882, 0, 0.756863, 1)
+energy = 0.0
 texture = ExtResource("10_r2doi")
 
-[node name="RayCast2D" type="RayCast2D" parent="Monster"]
+[node name="Area2DRay" type="Area2D" parent="Monster"]
 
-[node name="Line2D" type="Line2D" parent="Monster/RayCast2D"]
+[node name="Line2D" type="Line2D" parent="Monster/Area2DRay"]
 position = Vector2(-2, -99)
 points = PackedVector2Array(0, 0, 0, -700)
-default_color = Color(1, 0.254902, 0, 1)
+width = 0.0
+default_color = Color(1, 0.207843, 0.27451, 1)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Monster/RayCast2D"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Monster/Area2DRay"]
 modulate = Color(1, 1, 0.458824, 1)
 position = Vector2(-2, -99)
+emitting = false
 amount = 80
 process_material = SubResource("ParticleProcessMaterial_ngsoy")
 texture = ExtResource("11_dbb8t")
@@ -121,7 +135,35 @@ lifetime = 2.0
 randomness = 1.0
 trail_lifetime = 1.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Monster/RayCast2D"]
-environment = SubResource("Environment_5pg3n")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster/Area2DRay"]
+shape = SubResource("RectangleShape2D_awgoq")
+
+[node name="Area2D" type="Area2D" parent="Monster"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster/Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wmem6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/MarginContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 0
+fill_mode = 3
+show_percentage = false
 
 [connection signal="body_entered" from="Camera2D/Area2D" to="." method="_on_failure_area_entered"]

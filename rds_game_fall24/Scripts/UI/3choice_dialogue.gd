@@ -144,7 +144,8 @@ func process_next_text():
 		var character_name = dialogue_dict[current_dialogue_id]["name"]
 		character_text = dialogue_dict[current_dialogue_id]["text"]["en"]
 		
-		response_avatar.texture = load("res://Assets/UI/portraits/"+character_name+".PNG")
+		if character_name: 
+			response_avatar.texture = load("res://Assets/UI/portraits/"+character_name+".PNG")
 		if (character_name != "Player"): response_name.text = "[left][color=black][b]"+character_name+"[/b]"
 		else: response_name.text = "[left][color=black][b]"+GlobalPlayerName.global_player_name+"[/b]"
 		response_text.text = "[left][color=black]"+character_text

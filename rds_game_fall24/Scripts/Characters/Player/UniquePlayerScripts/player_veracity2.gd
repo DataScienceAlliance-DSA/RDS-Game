@@ -23,6 +23,14 @@ signal movement_updated(movement_stack)
 var closest_area_index
 var neighbor_areas
 
+@onready var confused = false # slows player if confused
+@onready var confused_timer = 0.
+@export var confused_max : float
+@onready var confused_indicator = get_node("ConfusionIndicator")
+
+@onready var game_permits_player = true
+@onready var game = get_node("..")
+
 func _ready():
 	set_process(false)
 	
@@ -75,16 +83,38 @@ func _process(_delta):
 		_remove_movement_direction("left")
 	
 	# Move and animate
-	velocity = movement_stack.front() if movement_stack.size() > 0 else Vector2.ZERO
-	velocity += Vector2(0, -speed)
+	if !game.game_won:
+		velocity = movement_stack.front() if movement_stack.size() > 0 else Vector2.ZERO
+	else:
+		velocity = Vector2.ZERO
+	velocity += Vector2(0, -speed if !confused else -speed / 2)
 	move_and_slide()
 	updateAnimation()
+	
+	if game.game_won:
+		position = position.lerp(Vector2(798, position.y), _delta)
+	
+	if confused:
+		confused_indicator.visible = true
+		confused_indicator.rotation += _delta * 5.
+		if confused_timer < confused_max:
+			confused_timer += _delta
+		else:
+			confused = false
+	else:
+		confused_indicator.visible = false
+		confused_indicator.rotation = 0.
 	
 	emit_signal("movement_updated", movement_stack)
 	
 	update_cast()
 	if player_cast.get_collider() and Input.is_action_just_pressed("interaction"):
 		confirmed_interaction()
+
+func _on_finish_area_body_entered(body):
+	if body == self:
+		game.game_won = true
+		game.game_running = false
 
 func _remove_movement_direction(direction: String) -> void:
 	var target_x := get_movement_vector(direction).x
@@ -99,8 +129,8 @@ func updateAnimation():
 		animations.play("animation_frameworks_hero_player/idle" + last_direction)
 	else:
 		var direction = "Down"
-		if velocity.x < 0: direction = "Left"
-		elif velocity.x > 0: direction = "Right"
+		if velocity.x < 0: direction = "Up"
+		elif velocity.x > 0: direction = "Up"
 		elif velocity.y < 0: direction = "Up"
 
 		last_direction = direction

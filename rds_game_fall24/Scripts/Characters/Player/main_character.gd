@@ -53,7 +53,6 @@ func get_movement_vector(direction: String) -> Vector2:
 		_: return Vector2.ZERO
 
 func _process(_delta):
-	print("HERE")
 	self.get_node("Camera2D").zoom = self.get_node("Camera2D").zoom.lerp(Vector2(cam_zoom, cam_zoom), _delta * cam_speed)
 	
 	if autonomous:
