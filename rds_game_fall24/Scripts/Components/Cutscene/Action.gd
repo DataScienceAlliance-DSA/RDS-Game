@@ -97,7 +97,10 @@ func set_directional_anim(theta, moving):
 		# print(theta)
 	
 	if anim_player.current_animation != next_anim:
-		anim_player.play(str(actor.anim_lib_name) + ("/" if actor.anim_lib_name != "" else "") + str(next_anim))
+		if actor is CharacterController:
+			anim_player.play(str(actor.anim_lib_name) + ("/" if actor.anim_lib_name != "" else "") + str(next_anim))
+		else:
+			anim_player.play(next_anim)
 		# print("hello")
 		# print(anim_player.get_queue())
 

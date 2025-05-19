@@ -23,6 +23,7 @@ func _ready():
 				add_child(action)
 			
 			var cm = CutsceneManager.new(actions)
+			add_child(cm)
 			
 			UI.start_scene_change(false, false, "")
 			cm.series_action()
@@ -32,7 +33,7 @@ func _ready():
 			cm.cut()
 			
 			# required dialogue
-			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxIntro.json", null)
+			dialogue_ui.open_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialEnv/FoxIntro.json", null)
 			await dialogue_ui.dialogue_complete
 			
 			# RE ENABLE THE PLAYER
@@ -52,7 +53,7 @@ func _ready():
 			# Waiting for player to finish their name
 			await player_name_input.confirmed
 			
-			dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxIntro.json", null)
+			dialogue_ui.open_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialEnv/FoxIntro.json", null)
 			await dialogue_ui.dialogue_complete
 			
 			get_node("Cauldron/CauldronArea").interactions = 2

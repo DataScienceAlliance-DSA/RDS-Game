@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var item_scene = preload("res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/ConveyorItem.tscn")
+@onready var item_scene = preload("res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/ConveyorItem.tscn")
 @onready var cauldron_animator = get_node("../Cauldron/AnimationPlayer")
 
 func reset_cutscene():
