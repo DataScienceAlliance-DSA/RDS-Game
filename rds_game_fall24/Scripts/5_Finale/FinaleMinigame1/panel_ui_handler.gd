@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Control
 
 var dialogue_dict = {}		# current dialogue dictionary
 var current_dialogue_id		# current dialogue id
@@ -9,21 +9,17 @@ signal dialogue_complete()
 var card_name
 var card_text
 
-# properties for player character's dialogue box
-@onready var player_color = (get_node("PlayerContainer/PositionControl") as CanvasItem)
-@onready var player_scale = (get_node("PlayerContainer/PositionControl/ScaleControl") as Control)
-@onready var player_avatar = (get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/PlayerAvatar") as TextureRect)
-@onready var player_name = (get_node("PlayerContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
-@onready var player_text = (get_node("PlayerContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
-@onready var player_arrow = (get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect/ArrowContainer") as MarginContainer)
+var current_dialogue_ended
 
-# properties for opposing character's dialogue box
-@onready var opposing_color = (get_node("CharacterContainer/PositionControl") as CanvasItem)
-@onready var opposing_scale = (get_node("CharacterContainer/PositionControl/ScaleControl") as Control)
-@onready var opposing_avatar = (get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/CharacterAvatar") as TextureRect)
-@onready var opposing_name = (get_node("CharacterContainer/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
-@onready var opposing_text = (get_node("CharacterContainer/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
-@onready var opposing_arrow = (get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer") as MarginContainer)
+# properties for player character's dialogue box
+@onready var player_color = (get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel/PositionControl") as CanvasItem)
+@onready var player_scale = (get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel/PositionControl/ScaleControl") as Control)
+@onready var player_avatar = (get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel/PositionControl/ScaleControl/IconCenter/PlayerAvatar") as TextureRect)
+@onready var player_name = (get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel/PositionControl/ScaleControl/Namecont/DialogueText") as RichTextLabel)
+@onready var player_text = (get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel/PositionControl/ScaleControl/Textcont/DialogueText") as RichTextLabel)
+@onready var player_arrow = (get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel/PositionControl/ScaleControl/IconCenter/TextureRect/ArrowContainer") as MarginContainer)
+
+@onready var memory_image = get_node("MarginContainer/VBoxContainer/Panel/Memory")
 
 # variables for timing and speed of a line of dialogue moving
 var next_char_timer : float	# time passed since last character added to string
@@ -41,6 +37,13 @@ func _ready():
 	self.set_process(false)
 	self.connect("dialogue_complete", get_dialogue_finished)
 
+func load_image(path):
+	if path != "": 
+		memory_image.visible = true
+		memory_image.texture = load(path)
+	else: memory_image.visible = false
+
+
 func open_dialogue(json_path, area):
 	# after disabling player & enabling interactable, enable dialogue
 	self.visible = true
@@ -51,7 +54,6 @@ func open_dialogue(json_path, area):
 	
 	# reset player and opposing character text to "..." before dialogue starts
 	player_text.text = "[left][color=black]. . ."
-	opposing_text.text = "[right][color=black]. . ."
 	
 	# parse dialogue and process first line
 	dialogue_dict = parse_dialogue(json_path)
@@ -70,8 +72,8 @@ func _process(_delta):
 	
 	if not interactable: return
 	
-	var target_text = opposing_text if card_name != "Player" else player_text
-	var target_arrow = opposing_arrow if card_name != "Player" else player_arrow
+	var target_text = player_text
+	var target_arrow = player_arrow
 	# timer system for dialogue string to write itself on UI
 	if (next_char_timer >= next_char_wait) and (char_index <= card_text.length()):
 		next_char_timer = 0.0
@@ -85,13 +87,18 @@ func _process(_delta):
 		if (Input.is_action_just_pressed("interaction")):
 			char_index = card_text.length()
 	else:
-		target_arrow.visible = true
+		if (current_dialogue_ended):
+			target_arrow.visible = false
+		else:
+			target_arrow.visible = true
 		target_arrow.add_theme_constant_override("margin_bottom", (25 * cos(5 * next_char_timer) + 125) / 2)
-		if (Input.is_action_just_pressed("interaction")):
+		if (Input.is_action_just_pressed("interaction")) and !current_dialogue_ended:
 			process_next_text()
 
 func parse_dialogue(json_path):
 	# .json parseing magic via dictionary
+	current_dialogue_ended = false
+	
 	if FileAccess.file_exists(json_path):
 		var data_file = FileAccess.open(json_path, FileAccess.READ)
 		var parsed_result = JSON.parse_string(data_file.get_as_text())
@@ -107,7 +114,7 @@ func process_next_text():
 	current_dialogue_id = dialogue_dict[current_dialogue_id]["next"]
 	
 	if current_dialogue_id == "end":	# "next": "end" is end-dialogue keyword in json
-		close_dialogue()
+		current_dialogue_ended = true
 	else:
 		# get/set character name and text accordingly from dictionary
 		card_name = dialogue_dict[current_dialogue_id]["name"]
@@ -116,27 +123,14 @@ func process_next_text():
 		next_char_timer = 0.0
 		
 		player_arrow.visible = false
-		opposing_arrow.visible = false
-		# if dialogue entry name is not Player, edit right text box of UI
-		if (dialogue_dict[current_dialogue_id]["name"] != "Player"):
-			opposing_name.text = "[right][color=black][b]"+card_name+"[/b][/color]"
-			opposing_scale.scale = Vector2(1.4, 1.4)
-			opposing_color.modulate.v = 1
-			opposing_avatar.texture = load("res://Assets/UI/portraits/"+card_name+".PNG")
-			
-			player_scale.scale = Vector2(1.25, 1.25)
-			player_color.modulate.v = 0.5
-		# else, edit left text box of UI
-		else:
-			print(card_name)
-			if (card_name == "Player"): player_name.text = "[color=black][b]"+GlobalPlayerName.global_player_name+"[/b][/color]"
-			else: player_name.text = "[color=black][b]"+card_name+"[/b][/color]"
-			player_scale.scale = Vector2(1.4, 1.4)
-			player_color.modulate.v = 1
-			player_avatar.texture = load("res://Assets/UI/portraits/"+card_name+".PNG")
-			
-			opposing_scale.scale = Vector2(1.25, 1.25)
-			opposing_color.modulate.v = 0.5
+		
+		if (card_name == "Player"): player_name.text = "[color=black][b]"+GlobalPlayerName.global_player_name+"[/b][/color]"
+		else: player_name.text = "[color=black][b]"+card_name+"[/b][/color]"
+		player_color.modulate.v = 1
+		player_avatar.texture = load("res://Assets/UI/portraits/"+card_name+".PNG")
+		
+		if dialogue_dict[current_dialogue_id]["next"] == "end":
+			current_dialogue_ended = true
 
 func close_dialogue():
 	# disable dialogue & interactable, enable player
