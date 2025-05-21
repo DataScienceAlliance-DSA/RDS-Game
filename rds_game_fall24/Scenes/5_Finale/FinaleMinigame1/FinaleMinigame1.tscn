@@ -1,14 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://brbvje62otapx"]
+[gd_scene load_steps=20 format=3 uid="uid://brbvje62otapx"]
 
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_7g5v0"]
 [ext_resource type="Texture2D" uid="uid://blaeuafsqnao0" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png" id="1_l6flh"]
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame1/FinaleMinigame1.gd" id="1_vu4ba"]
-[ext_resource type="PackedScene" uid="uid://liqb24n40j00" path="res://Scenes/5_Finale/FinaleMinigame1/minigame_panel.tscn" id="2_ii12c"]
+[ext_resource type="PackedScene" uid="uid://b4pbj5lhqo383" path="res://Scenes/5_Finale/FinaleMinigame1/minigame_panel.tscn" id="2_ii12c"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="2_tuqcr"]
 [ext_resource type="PackedScene" uid="uid://c0b5pntcik1eq" path="res://Scenes/1_Fairness/FairnessEnv/fairness_crystal.tscn" id="4_qftsv"]
 [ext_resource type="Script" path="res://Scripts/Components/fairness_crystal.gd" id="5_8elv8"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="6_tjqeb"]
 [ext_resource type="PackedScene" uid="uid://dg832qlytv3k6" path="res://Scenes/Characters/principal_villain.tscn" id="8_stkhg"]
+[ext_resource type="Texture2D" uid="uid://b3sv5cuxqkss7" path="res://Assets/5_Finale/power_aura.png" id="10_1465w"]
+[ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame1/Aura.gd" id="11_l14mh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uiw2i"]
 texture = ExtResource("1_l6flh")
@@ -153,9 +155,6 @@ gradient = SubResource("Gradient_l5p83")
 y_sort_enabled = true
 script = ExtResource("1_vu4ba")
 
-[node name="MinigamePanel" parent="." instance=ExtResource("2_ii12c")]
-layer = 0
-
 [node name="ConstructedTileMap" type="TileMap" parent="." groups=["Map"]]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_cbx7w")
@@ -176,7 +175,7 @@ rotation = 3.14159
 scale = Vector2(4, -4)
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_tuqcr")]
-position = Vector2(800, 1728)
+position = Vector2(672, 1120)
 
 [node name="Columns" type="CanvasGroup" parent="."]
 y_sort_enabled = true
@@ -234,9 +233,35 @@ rotation = -1.57079
 scale = Vector2(3.99678, 3)
 texture = SubResource("GradientTexture2D_0lo1i")
 
-[node name="principal_villain" parent="." instance=ExtResource("8_stkhg")]
-visible = false
-position = Vector2(960, 928)
-
 [node name="GameCamera" type="Camera2D" parent="."]
 position = Vector2(795.825, 391)
+
+[node name="MinigamePanel" parent="." instance=ExtResource("2_ii12c")]
+layer = 0
+
+[node name="PlayerAura" type="CharacterBody2D" parent="."]
+position = Vector2(677, 1080)
+script = ExtResource("11_l14mh")
+
+[node name="AuraSprite" type="Sprite2D" parent="PlayerAura"]
+visible = false
+texture = ExtResource("10_1465w")
+
+[node name="AuraLight" type="PointLight2D" parent="PlayerAura/AuraSprite"]
+energy = 0.0
+texture = ExtResource("10_1465w")
+
+[node name="MalvorenAura" type="CharacterBody2D" parent="."]
+position = Vector2(929, 1082)
+script = ExtResource("11_l14mh")
+
+[node name="AuraSprite" type="Sprite2D" parent="MalvorenAura"]
+visible = false
+texture = ExtResource("10_1465w")
+
+[node name="AuraLight" type="PointLight2D" parent="MalvorenAura/AuraSprite"]
+energy = 0.0
+texture = ExtResource("10_1465w")
+
+[node name="principal_villain" parent="." instance=ExtResource("8_stkhg")]
+position = Vector2(928, 1088)

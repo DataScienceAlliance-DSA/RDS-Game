@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg832qlytv3k6"]
+[gd_scene load_steps=6 format=3 uid="uid://dg832qlytv3k6"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Principal/Malvoren.gd" id="1_dv1va"]
 [ext_resource type="Texture2D" uid="uid://c0hmcci4r5byh" path="res://Assets/Characters/Principal/Principal.PNG" id="2_ikdob"]
+[ext_resource type="Texture2D" uid="uid://b3sv5cuxqkss7" path="res://Assets/5_Finale/power_aura.png" id="2_j31pj"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tpe3k"]
 light_mode = 1
@@ -11,6 +12,14 @@ size = Vector2(67, 22)
 
 [node name="principal_villain" type="CharacterBody2D"]
 script = ExtResource("1_dv1va")
+
+[node name="AuraSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_j31pj")
+
+[node name="AuraLight" type="PointLight2D" parent="AuraSprite"]
+energy = 0.0
+texture = ExtResource("2_j31pj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
