@@ -154,6 +154,7 @@ y_sort_enabled = true
 script = ExtResource("1_vu4ba")
 
 [node name="MinigamePanel" parent="." instance=ExtResource("2_ii12c")]
+layer = 0
 
 [node name="ConstructedTileMap" type="TileMap" parent="." groups=["Map"]]
 y_sort_enabled = true

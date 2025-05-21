@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://liqb24n40j00"]
+[gd_scene load_steps=21 format=3 uid="uid://liqb24n40j00"]
 
 [ext_resource type="Texture2D" uid="uid://b5ednfhfm8au0" path="res://Assets/UI/Light_Short_Dialogue.png" id="1_6ku6c"]
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame1/panel_ui_handler.gd" id="1_t8a0l"]
@@ -28,6 +28,14 @@ bg_color = Color(1, 1, 1, 0.294118)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sa37q"]
 bg_color = Color(0, 0, 0, 0.294118)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iu4i4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujoj1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w77ek"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8yo0w"]
+
 [node name="MinigamePanel" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
@@ -52,7 +60,7 @@ mouse_filter = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_bottom = 40
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
 layout_mode = 2
@@ -271,6 +279,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(324, 77)
 mouse_filter = 2
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
@@ -301,9 +310,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mgm83")
 theme_override_styles/hover = SubResource("StyleBoxFlat_83cms")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sa37q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iu4i4")
 
 [node name="Control2" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer"]
 layout_mode = 2
@@ -331,6 +342,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mgm83")
 theme_override_styles/hover = SubResource("StyleBoxFlat_83cms")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sa37q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ujoj1")
 
 [node name="Control3" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer"]
 layout_mode = 2
@@ -360,6 +372,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mgm83")
 theme_override_styles/hover = SubResource("StyleBoxFlat_83cms")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sa37q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w77ek")
 
 [node name="Control4" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer"]
 layout_mode = 2
@@ -389,3 +402,4 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mgm83")
 theme_override_styles/hover = SubResource("StyleBoxFlat_83cms")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sa37q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8yo0w")

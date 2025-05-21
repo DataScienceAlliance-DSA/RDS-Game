@@ -12,7 +12,11 @@ var cm : CutsceneManager # cutscene manager for this
 @onready var retrying = false
 
 func _ready():
-	if (true): ## INTRO CUTSCENE, SET TRUE TO FALSE TO SKIP FOR DEBUGGING MINIGAME
+	var actions : Array[Action] = []
+	cm = CutsceneManager.new(actions)
+	add_child(cm)
+	
+	if (false): ## INTRO CUTSCENE, SET TRUE TO FALSE TO SKIP FOR DEBUGGING MINIGAME
 		UI.start_scene_change(false, false, "")
 		
 		player.autonomous = true
@@ -20,15 +24,13 @@ func _ready():
 		var actionA = Action.new(player, "LerpMove", Vector2(800, 1152), 200)
 		var actionB = Action.new(fox, "LerpMove", Vector2(672, 1152), 200)
 		# var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
-		var actions : Array[Action] = [actionA, actionB]
+		actions = [actionA, actionB]
 		for action in actions:
 			add_child(action)
-		
-		cm = CutsceneManager.new(actions)
-		add_child(cm)
-		
+		cm.set_actions(actions)
 		cm.parallel_action()
 		await cm.actions_complete
+		
 		var actionC = Action.new(player, "LerpMove", Vector2(784, 1152), 200)
 		actions = [actionC]
 		for action in actions:
@@ -107,7 +109,10 @@ func _ready():
 		cm.parallel_action()
 		await cm.actions_complete
 	
-	panel.open_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json", null)
+	cm.call_monologue("res://Resources/Texts/Monologues/5_Finale/FinaleMinigame1/Malvoren01.json")
+	await cm.lines_complete
+	
+	panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxFairness1.json", null)
 	
 	var spell_container = panel.get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer") as Node
 	for spell in spell_container.get_children():
@@ -116,7 +121,14 @@ func _ready():
 	
 	return
 
+func _process(_delta):
+	for button in panel.buttons:
+		if !panel.current_dialogue_ended: button.disabled = true
+		else: button.disabled = false
+
 func register_button_press(button):
+	if !panel.current_dialogue_ended: return
+	
 	if !retrying:
 		match(game_stage):
 			0:	## fairness
@@ -146,29 +158,41 @@ func register_button_press(button):
 					close_retry()
 					game_stage = game_stage + 1
 				else:
-					panel.open_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json", null)
+					panel.current_dialogue_ended = false
+					cm.call_monologue("res://Resources/Texts/Monologues/5_Finale/FinaleMinigame1/FoxRetry.json")
+					await cm.lines_complete
+					panel.current_dialogue_ended = true
 			1:	## transparency
 				if button.name == "transparency":
 					close_retry()
 					game_stage = game_stage + 1
 				else:
-					panel.open_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json", null)
+					panel.current_dialogue_ended = false
+					cm.call_monologue("res://Resources/Texts/Monologues/5_Finale/FinaleMinigame1/FoxRetry.json")
+					await cm.lines_complete
+					panel.current_dialogue_ended = true
 			2:	## privacy
 				if button.name == "privacy":
 					close_retry()
 					game_stage = game_stage + 1
 				else:
-					panel.open_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json", null)
+					panel.current_dialogue_ended = false
+					cm.call_monologue("res://Resources/Texts/Monologues/5_Finale/FinaleMinigame1/FoxRetry.json")
+					await cm.lines_complete
+					panel.current_dialogue_ended = true
 			3:	## veracity
 				if button.name == "veracity":
 					close_retry()
 					game_stage = game_stage + 1
 				else:
-					panel.open_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json", null)
+					panel.current_dialogue_ended = false
+					cm.call_monologue("res://Resources/Texts/Monologues/5_Finale/FinaleMinigame1/FoxRetry.json")
+					await cm.lines_complete
+					panel.current_dialogue_ended = true
 
 func call_retry(stage):
 	retrying = true
-	panel.open_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json", null)
+	panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxIncorrect.json", null)
 	match(stage):
 		0:
 			panel.load_image("res://Assets/5_Finale/fairness_scene.png")
@@ -182,6 +206,3 @@ func call_retry(stage):
 func close_retry():
 	retrying = false
 	panel.load_image("")
-
-func _process(delta):
-	pass

@@ -104,7 +104,11 @@ func parse_dialogue(json_path):
 func process_next_text():
 	# get/set current dialogue_id from dictionary
 	char_index = 1
-	current_dialogue_id = dialogue_dict[current_dialogue_id]["next"]
+	
+	if "next" in dialogue_dict[current_dialogue_id]:
+		current_dialogue_id = dialogue_dict[current_dialogue_id]["next"]
+	else:
+		close_dialogue()
 	
 	if current_dialogue_id == "end":	# "next": "end" is end-dialogue keyword in json
 		close_dialogue()

@@ -534,7 +534,6 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 
 [node name="PositionControl" type="Control" parent="Monologue/TextContainer"]
-modulate = Color(0.909804, 0.909804, 0.909804, 1)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
