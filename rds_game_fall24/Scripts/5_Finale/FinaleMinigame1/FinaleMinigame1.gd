@@ -15,6 +15,8 @@ var cm : CutsceneManager # cutscene manager for this
 @onready var retrying = false
 
 func _ready():
+	UI.set_ui_color_mode("light")
+	
 	var actions : Array[Action] = []
 	cm = CutsceneManager.new(actions)
 	add_child(cm)
@@ -128,6 +130,8 @@ func _ready():
 	
 	# player begins spell selection game
 	panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxFairness1.json", null)
+	
+	UI.set_ui_color_mode("dark")
 	
 	var spell_container = panel.get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer") as Node
 	for spell in spell_container.get_children():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b4pbj5lhqo383"]
+[gd_scene load_steps=21 format=3 uid="uid://liqb24n40j00"]
 
 [ext_resource type="Texture2D" uid="uid://b5ednfhfm8au0" path="res://Assets/UI/Light_Short_Dialogue.png" id="1_6ku6c"]
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame1/panel_ui_handler.gd" id="1_t8a0l"]

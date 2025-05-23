@@ -37,6 +37,8 @@ var target_position
 # Setting Global Player Name for Dialogue
 @onready var player_name_label = $PlayerContainer/PositionControl/ScaleControl/Namecont/DialogueText
 
+@onready var text_color = "black"
+
 func _ready():
 	self.set_process(false)
 	self.connect("dialogue_complete", get_dialogue_finished)
@@ -50,8 +52,8 @@ func open_dialogue(json_path, area):
 	interacted_area = area
 	
 	# reset player and opposing character text to "..." before dialogue starts
-	player_text.text = "[left][color=black]. . ."
-	opposing_text.text = "[right][color=black]. . ."
+	player_text.text = "[left][color="+text_color+"]. . ."
+	opposing_text.text = "[right][color="+text_color+"]. . ."
 	
 	# parse dialogue and process first line
 	dialogue_dict = parse_dialogue(json_path)
@@ -75,7 +77,7 @@ func _process(_delta):
 	# timer system for dialogue string to write itself on UI
 	if (next_char_timer >= next_char_wait) and (char_index <= card_text.length()):
 		next_char_timer = 0.0
-		target_text.text = "[color=black]"+card_text.substr(0,char_index)+"[/color]"
+		target_text.text = "[color="+text_color+"]"+card_text.substr(0,char_index)+"[/color]"
 		char_index = char_index + 1
 	else:
 		next_char_timer += _delta
@@ -123,7 +125,7 @@ func process_next_text():
 		opposing_arrow.visible = false
 		# if dialogue entry name is not Player, edit right text box of UI
 		if (dialogue_dict[current_dialogue_id]["name"] != "Player"):
-			opposing_name.text = "[right][color=black][b]"+card_name+"[/b][/color]"
+			opposing_name.text = "[right][color="+text_color+"][b]"+card_name+"[/b][/color]"
 			opposing_scale.scale = Vector2(1.4, 1.4)
 			opposing_color.modulate.v = 1
 			opposing_avatar.texture = load("res://Assets/UI/portraits/"+card_name+".PNG")
@@ -133,8 +135,8 @@ func process_next_text():
 		# else, edit left text box of UI
 		else:
 			print(card_name)
-			if (card_name == "Player"): player_name.text = "[color=black][b]"+GlobalPlayerName.global_player_name+"[/b][/color]"
-			else: player_name.text = "[color=black][b]"+card_name+"[/b][/color]"
+			if (card_name == "Player"): player_name.text = "[color="+text_color+"][b]"+GlobalPlayerName.global_player_name+"[/b][/color]"
+			else: player_name.text = "[color="+text_color+"][b]"+card_name+"[/b][/color]"
 			player_scale.scale = Vector2(1.4, 1.4)
 			player_color.modulate.v = 1
 			player_avatar.texture = load("res://Assets/UI/portraits/"+card_name+".PNG")

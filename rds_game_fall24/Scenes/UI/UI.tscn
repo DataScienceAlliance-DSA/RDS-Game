@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/UI/dialogue.gd" id="1_ne7wx"]
 [ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://Assets/Debug/icon.svg" id="1_q8u87"]
-[ext_resource type="Texture2D" uid="uid://b5ednfhfm8au0" path="res://Assets/UI/Light_Short_Dialogue.png" id="3_k87fs"]
+[ext_resource type="Texture2D" uid="uid://cx2glqrq61mel" path="res://Assets/UI/V2Dialogue Box_Short_Light.png" id="3_fdsbw"]
 [ext_resource type="Script" path="res://Scripts/UI/3choice_dialogue.gd" id="3_rj2pq"]
 [ext_resource type="Texture2D" uid="uid://c2o8far2sc0u" path="res://Assets/UI/Dialogue Arrow_Active_Light.png" id="4_0lg18"]
 [ext_resource type="Texture2D" uid="uid://d6kvpuxma1dd" path="res://Assets/UI/portraits/Player.PNG" id="4_faomy"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://c6u4wdoosptab" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Pressed.png" id="19_5gvgm"]
 [ext_resource type="Texture2D" uid="uid://wxhymweehla0" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Hover.png" id="20_euilg"]
 [ext_resource type="Texture2D" uid="uid://b2qgnc42fi0ba" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Visted.png" id="21_cei1u"]
-[ext_resource type="Texture2D" uid="uid://368psvt1tbm2" path="res://Assets/UI/Light_Long_Dialogue.png" id="22_84ua4"]
+[ext_resource type="Texture2D" uid="uid://b6d5j8hghat4w" path="res://Assets/UI/V2Dialogue Box_Long_Light.png" id="22_es88q"]
 [ext_resource type="Texture2D" uid="uid://tliuryc0xeqr" path="res://Assets/UI/Name_Menu.png" id="28_3sout"]
 [ext_resource type="Script" path="res://Scripts/Components/PlayerNameInput.gd" id="28_bndvi"]
 [ext_resource type="Texture2D" uid="uid://buownsnidnok4" path="res://Assets/UI/button_states/Mix Button/Normal.png" id="29_hke57"]
@@ -132,7 +132,7 @@ offset_right = 5738.4
 offset_bottom = 1717.0
 scale = Vector2(0.08, 0.08)
 mouse_filter = 2
-texture = ExtResource("3_k87fs")
+texture = ExtResource("3_fdsbw")
 
 [node name="ArrowContainer" type="MarginContainer" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect"]
 layout_mode = 1
@@ -288,7 +288,7 @@ scale = Vector2(-0.08, 0.08)
 pivot_offset = Vector2(1423, 0)
 size_flags_vertical = 8
 mouse_filter = 2
-texture = ExtResource("3_k87fs")
+texture = ExtResource("3_fdsbw")
 
 [node name="ArrowContainer" type="MarginContainer" parent="Dialogue/CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
 layout_mode = 1
@@ -581,25 +581,27 @@ grow_vertical = 2
 scale = Vector2(0.988986, 1.00495)
 size_flags_vertical = 8
 mouse_filter = 2
-texture = ExtResource("22_84ua4")
+texture = ExtResource("22_es88q")
 expand_mode = 2
 
 [node name="ArrowContainer" type="MarginContainer" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner"]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -45.8056
-offset_top = -41.0454
+offset_left = -45.806
+offset_top = -41.0
 offset_right = 265.194
-offset_bottom = 244.955
+offset_bottom = 245.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.13, 0.13)
-theme_override_constants/margin_right = 90
-theme_override_constants/margin_bottom = 65
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 85
+theme_override_constants/margin_bottom = 50
 
 [node name="Arrow" type="TextureRect" parent="Monologue/TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer"]
 layout_mode = 2

@@ -57,6 +57,8 @@ signal closed_signal
 # Setting Global Player Name for Monologue
 @onready var player_name_label = $TextContainer/PositionControl/ScaleControl/Namecont/DialogueText
 
+@onready var text_color = "black"
+
 func _ready():
 	self.set_process(false)
 
@@ -93,15 +95,18 @@ func _process(_delta):
 	# timer system for dialogue string to write itself on UI
 	if (next_char_timer >= next_char_wait) and (char_index <= +character_text.length()):
 		next_char_timer = 0.0
-		response_text.text = "[color=black]"+character_text.substr(0,char_index)+"[/color]"
+		response_text.text = "[color="+text_color+"]"+character_text.substr(0,char_index)+"[/color]"
 		char_index = char_index + 1
 	else:
 		next_char_timer += _delta
 	
+	if char_index > character_text.length():
+		response_arrow.visible = true
+		response_arrow.position.y = (5 * cos(5 * next_char_timer) + 205) / 2
+	
 	# check for and process dialogue if next button (E) is pressed
 	if !choosing:
-		response_arrow.visible = true
-		response_arrow.add_theme_constant_override("margin_bottom", (25 * cos(5 * next_char_timer) + 125) / 2)
+		pass
 	elif (Input.is_action_just_pressed("interaction")) and (char_index <= character_text.length()):
 		char_index = character_text.length()
 	
@@ -149,9 +154,9 @@ func process_next_text():
 		
 		if character_name: 
 			response_avatar.texture = load("res://Assets/UI/portraits/"+character_name+".PNG")
-		if (character_name != "Player"): response_name.text = "[left][color=black][b]"+character_name+"[/b]"
-		else: response_name.text = "[left][color=black][b]"+GlobalPlayerName.global_player_name+"[/b]"
-		response_text.text = "[left][color=black]"+character_text
+		if (character_name != "Player"): response_name.text = "[left][color="+text_color+"][b]"+character_name+"[/b]"
+		else: response_name.text = "[left][color="+text_color+"][b]"+GlobalPlayerName.global_player_name+"[/b]"
+		response_text.text = "[left][color="+text_color+"]"+character_text
 		
 		if (dialogue_dict[current_dialogue_id].has("choices")):
 			choosing = true

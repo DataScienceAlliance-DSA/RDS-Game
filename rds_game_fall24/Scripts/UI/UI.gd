@@ -22,12 +22,25 @@ var next_scene : String # string to next scene
 var screen_fade_goal
 var current_screen_fade_val
 
+@onready var dialogue = $Dialogue
+@onready var monologue = $Monologue
+
 var active_cutscene_manager : CutsceneManager # reference to the current scene's active CM
 
 signal ui_change_complete
 
 func _ready():
 	screen_hide.visible = false
+
+func set_ui_color_mode(color : String):
+	dialogue.text_color = "#311E1C" if color == "light" else "#FFFFFF"
+	monologue.text_color = "#311E1C" if color == "light" else "#FFFFFF"
+	dialogue.get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect").texture = load("res://Assets/UI/V2Dialogue Box_Short_Light.png") if color == "light" else load("res://Assets/UI/V2Dialogue Box_Short_Dark.png") 
+	dialogue.get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner").texture = load("res://Assets/UI/V2Dialogue Box_Short_Light.png") if color == "light" else load("res://Assets/UI/V2Dialogue Box_Short_Dark.png") 
+	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner").texture = load("res://Assets/UI/V2Dialogue Box_Long_Light.png") if color == "light" else load("res://Assets/UI/V2Dialogue Box_Long_Dark.png") 
+	dialogue.get_node("PlayerContainer/PositionControl/ScaleControl/IconCenter/TextureRect/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
+	dialogue.get_node("CharacterContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
+	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
 
 func _process(delta):
 	# print(scene_hide_timer)
