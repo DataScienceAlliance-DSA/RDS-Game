@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://liqb24n40j00"]
+[gd_scene load_steps=21 format=3 uid="uid://b4pbj5lhqo383"]
 
 [ext_resource type="Texture2D" uid="uid://b5ednfhfm8au0" path="res://Assets/UI/Light_Short_Dialogue.png" id="1_6ku6c"]
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame1/panel_ui_handler.gd" id="1_t8a0l"]
@@ -105,8 +105,8 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -300.0
-offset_right = 300.0
+offset_left = -234.0
+offset_right = 366.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
@@ -255,6 +255,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -29.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -281,8 +283,8 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(324, 77)
 mouse_filter = 2
-theme_override_constants/h_separation = -100
-theme_override_constants/v_separation = 50
+theme_override_constants/h_separation = -80
+theme_override_constants/v_separation = 30
 columns = 2
 
 [node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer"]
