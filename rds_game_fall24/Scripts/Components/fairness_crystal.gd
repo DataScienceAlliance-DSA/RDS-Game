@@ -16,6 +16,11 @@ func levitate():
 	action_max = 5.
 	sprite_anim.play("spin")
 
+func disappear():
+	action_state = "disappear"
+	action_delta = 0.
+	action_max = 1.
+
 func _process(delta):
 	match(action_state):
 		"levitate":
@@ -31,6 +36,15 @@ func _process(delta):
 					sprite.modulate.a = 1.
 				self.position = self.position - Vector2(0, 25) * delta
 			else:
+				action_state = ""
+				performance_completion.emit()
+		"disappear":
+			if (action_delta < action_max):
+				action_delta = action_delta + delta
+				var t = action_delta / action_max
+				sprite.modulate.a = 1. - t
+			else:
+				self.visible = false
 				action_state = ""
 				performance_completion.emit()
 		_:

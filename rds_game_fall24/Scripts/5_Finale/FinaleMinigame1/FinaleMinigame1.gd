@@ -7,12 +7,20 @@ extends Node2D
 
 @onready var malvoren_aura = $MalvorenAura
 @onready var player_aura = $PlayerAura
+@onready var malvoren_smoke = $MalvorenSmoke
+@onready var mind_attack = $MindAttack
+@onready var mind_attack2 = $MindAttack2
+@onready var paraccuracy_cast = $ParaccuracyCast/GPUParticles2D
 
 var cm : CutsceneManager # cutscene manager for this 
 
 @onready var panel = $MinigamePanel/Control
 @onready var game_stage = 0
 @onready var retrying = false
+
+@onready var game_camera = $GameCamera
+@onready var cam_zoom_target = 1.
+@onready var new_zoom = 1.
 
 func _ready():
 	UI.set_ui_color_mode("light")
@@ -26,7 +34,7 @@ func _ready():
 	player.autonomous = true
 	player.in_cutscene = true
 	
-	if (false): ## INTRO CUTSCENE, SET TRUE TO FALSE TO SKIP FOR DEBUGGING MINIGAME
+	if (true): ## INTRO CUTSCENE, SET TRUE TO FALSE TO SKIP FOR DEBUGGING MINIGAME
 		var actionA = Action.new(player, "LerpMove", Vector2(800, 1152), 200)
 		var actionB = Action.new(fox, "LerpMove", Vector2(672, 1152), 200)
 		# var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
@@ -45,7 +53,7 @@ func _ready():
 		cm.series_action()
 		await cm.actions_complete
 		
-		cm.call_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json")
+		cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxReconvening.json")
 		await cm.lines_complete
 		
 		var actionD = Action.new(fox, "LerpMove", Vector2(736, 1152), 200)
@@ -83,22 +91,24 @@ func _ready():
 		cm.series_action()
 		await cm.actions_complete
 		
-		cm.call_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json")
+		cm.call_monologue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/VeracityCrystal.json")
 		await cm.lines_complete
 		
 		malvoren.visible = true
+		
+		crystal_rises = UniqueAction.new(crystal, Callable(crystal, "disappear"))
 		var actionH = Action.new(malvoren, "LerpMove", Vector2(960, 476), 200)
-		actions = [actionH]
+		actions = [crystal_rises, actionH]
 		for action in actions:
 			add_child(action)
 		cm.set_actions(actions)
-		cm.series_action()
+		cm.parallel_action()
 		await cm.actions_complete
 		
 		player_cam.enabled = false
 		
-		var actionI = Action.new(fox, "LerpMove", Vector2(604, 540), 200)
-		var actionJ = Action.new(player, "LerpMove", Vector2(636, 508), 200)
+		var actionI = Action.new(fox, "LerpMove", Vector2(604, 508), 200)
+		var actionJ = Action.new(player, "LerpMove", Vector2(636, 476), 200)
 		actions = [actionI, actionJ]
 		for action in actions:
 			add_child(action)
@@ -106,14 +116,25 @@ func _ready():
 		cm.parallel_action()
 		await cm.actions_complete
 		
-		var actionK = Action.new(fox, "LerpMove", Vector2(608, 540), 200)
-		var actionL = Action.new(player, "LerpMove", Vector2(640, 508), 200)
+		var actionK = Action.new(fox, "LerpMove", Vector2(608, 508), 200)
+		var actionL = Action.new(player, "LerpMove", Vector2(640, 476), 200)
 		actions = [actionK, actionL]
 		for action in actions:
 			add_child(action)
 		cm.set_actions(actions)
 		cm.parallel_action()
 		await cm.actions_complete
+		
+		cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/MeetMalvorenAgain.json")
+		await cm.lines_complete
+		
+		cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxDiscoversMalvoren.json")
+		await cm.lines_complete
+		
+		cm.call_monologue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/MalvorenReveal.json")
+		await cm.lines_complete
+	
+	cam_zoom_target = 1.255
 	
 	# MALVOREN CASTS HER AURA...
 	var malvoren_spell = UniqueAction.new(malvoren_aura, Callable(malvoren_aura, "aura_spell"))
@@ -131,8 +152,6 @@ func _ready():
 	# player begins spell selection game
 	panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxFairness1.json", null)
 	
-	UI.set_ui_color_mode("dark")
-	
 	var spell_container = panel.get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer") as Node
 	for spell in spell_container.get_children():
 		var button = spell.get_node("TextureRect").get_children()[0]
@@ -141,6 +160,9 @@ func _ready():
 	return
 
 func _process(_delta):
+	new_zoom = lerp(new_zoom, cam_zoom_target, _delta * 2)
+	game_camera.zoom = Vector2(new_zoom, new_zoom)
+	
 	for button in panel.buttons:
 		if !panel.current_dialogue_ended: 
 			button.disabled = true
@@ -177,16 +199,66 @@ func perform_spell_cutscene():
 			cm.parallel_action()
 			await cm.actions_complete
 			
+			malvoren_smoke.visible = true
+			
+			malvoren_spell = UniqueAction.new(malvoren, Callable(malvoren, "dematerialize_spell"))
+			actions = [malvoren_spell]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
 			panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxTransparency.json", null)
 		2:
+			malvoren_smoke.get_node("GPUParticles2D").emitting = false
+			
+			var malvoren_spell = UniqueAction.new(malvoren, Callable(malvoren, "rematerialize"))
+			var actions : Array[Action] = [malvoren_spell]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
 			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/TransparenciaCast.json")
 			await cm.lines_complete
+			
+			mind_attack.visible = true
+			mind_attack2.visible = true
+			
 			panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxPrivacy.json", null)
 		3:
+			for child in mind_attack.get_children():
+				child.emitting = false
+			for child in mind_attack2.get_children():
+				child.emitting = false
+			
 			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/LockcinnoCast.json")
 			await cm.lines_complete
+			
+			var malvoren_spell = UniqueAction.new(malvoren, Callable(malvoren, "multiply"))
+			var actions : Array[Action] = [malvoren_spell]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
 			panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxVeracity.json", null)
 		4:
+			paraccuracy_cast.emitting = true
+			cm.wait(.5)
+			await cm.wait_complete
+			
+			var malvoren_spell = UniqueAction.new(malvoren, Callable(malvoren, "demultiply"))
+			var actions : Array[Action] = [malvoren_spell]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
 			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/ParaccuracyCast.json")
 			await cm.lines_complete
 

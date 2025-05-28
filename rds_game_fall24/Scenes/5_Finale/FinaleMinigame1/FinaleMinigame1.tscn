@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://brbvje62otapx"]
+[gd_scene load_steps=58 format=3 uid="uid://brbvje62otapx"]
 
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_7g5v0"]
 [ext_resource type="Texture2D" uid="uid://blaeuafsqnao0" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png" id="1_l6flh"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://dg832qlytv3k6" path="res://Scenes/Characters/principal_villain.tscn" id="8_stkhg"]
 [ext_resource type="Texture2D" uid="uid://b3sv5cuxqkss7" path="res://Assets/5_Finale/power_aura.png" id="10_1465w"]
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame1/Aura.gd" id="11_l14mh"]
+[ext_resource type="Texture2D" uid="uid://dux0rqvioyk6y" path="res://Assets/5_Finale/mind_attack_1.png" id="12_jkktr"]
+[ext_resource type="Texture2D" uid="uid://2klsp1idybs6" path="res://Assets/5_Finale/hide_smoke.png" id="12_m7l8r"]
+[ext_resource type="Texture2D" uid="uid://0e1y3vg343ko" path="res://Assets/5_Finale/mind_attack_2.png" id="13_6lh0w"]
+[ext_resource type="Texture2D" uid="uid://fjlfk3kb6sf0" path="res://Assets/5_Finale/mind_attack_3.png" id="14_vruxm"]
+[ext_resource type="Texture2D" uid="uid://c1u8wglqn432y" path="res://Assets/5_Finale/mind_attack_response.png" id="15_ublhv"]
+[ext_resource type="Texture2D" uid="uid://kbxbj4q7sg75" path="res://Assets/5_Finale/paraccuracy_cast.png" id="16_kfvd2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uiw2i"]
 texture = ExtResource("1_l6flh")
@@ -151,6 +157,143 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0lo1i"]
 gradient = SubResource("Gradient_l5p83")
 
+[sub_resource type="Curve" id="Curve_t831o"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.502809, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_5t1ho"]
+curve = SubResource("Curve_t831o")
+
+[sub_resource type="Curve" id="Curve_iehut"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_trkqg"]
+curve = SubResource("Curve_iehut")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0sggd"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_trkqg")
+alpha_curve = SubResource("CurveTexture_5t1ho")
+
+[sub_resource type="Curve" id="Curve_mwcui"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_1hdvp"]
+curve = SubResource("Curve_mwcui")
+
+[sub_resource type="Curve" id="Curve_0113l"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qxdof"]
+curve = SubResource("Curve_0113l")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fkvsx"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_qxdof")
+alpha_curve = SubResource("CurveTexture_1hdvp")
+
+[sub_resource type="Curve" id="Curve_su85m"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.497191, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_cpacf"]
+curve = SubResource("Curve_su85m")
+
+[sub_resource type="Curve" id="Curve_emu5h"]
+_data = [Vector2(0, 0.75), 0.0, -2.70484, 0, 0, Vector2(0.75, 1), -6.63102e-07, -6.63102e-07, 0, 0, Vector2(1, 0.75), -1.73208, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_v2pwl"]
+curve = SubResource("Curve_emu5h")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gol46"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_v2pwl")
+alpha_curve = SubResource("CurveTexture_cpacf")
+
+[sub_resource type="Curve" id="Curve_e03yr"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0308989, 1), 0.0, 0.0, 0, 0, Vector2(0.0505618, 0), 0.0, 0.0, 0, 0, Vector2(0.0702247, 1), 0.0, 0.0, 0, 0, Vector2(0.106742, 0), 0.0, 0.0, 0, 0, Vector2(0.123596, 1), 0.0, 0.0, 0, 0, Vector2(0.157303, 0), 0.0, 0.0, 0, 0, Vector2(0.188202, 1), 0.0, 0.0, 0, 0, Vector2(0.210674, 0), 0.0, 0.0, 0, 0, Vector2(0.224719, 1), 0.0, 0.0, 0, 0, Vector2(0.25, 0), 0.0, 0.0, 0, 0, Vector2(0.261236, 1), 0.0, 0.0, 0, 0, Vector2(0.294944, 0), 0.0, 0.0, 0, 0, Vector2(0.311798, 1), 0.0, 0.0, 0, 0, Vector2(0.337079, 0), 0.0, 0.0, 0, 0, Vector2(0.359551, 1), 0.0, 0.0, 0, 0, Vector2(0.379214, 0), 0.0, 0.0, 0, 0, Vector2(0.401685, 1), 0.0, 0.0, 0, 0, Vector2(0.421348, 0), 0.0, 0.0, 0, 0, Vector2(0.441011, 1), 0.0, 0.0, 0, 0, Vector2(0.455056, 0), 0.0, 0.0, 0, 0, Vector2(0.47191, 1), 0.0, 0.0, 0, 0, Vector2(0.488764, 0), 0.0, 0.0, 0, 0, Vector2(0.508427, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 25
+
+[sub_resource type="CurveTexture" id="CurveTexture_ryra2"]
+curve = SubResource("Curve_e03yr")
+
+[sub_resource type="Curve" id="Curve_tbg2u"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.751094), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_taedl"]
+curve = SubResource("Curve_tbg2u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a4ey8"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_taedl")
+alpha_curve = SubResource("CurveTexture_ryra2")
+
+[sub_resource type="Curve" id="Curve_cp3k0"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0955056, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(0.51, 0), 0.0, 0.0, 0, 0, Vector2(0.59, 0), 0.0, 0.0, 0, 0, Vector2(0.6, 1), 0.0, 0.0, 0, 0, Vector2(0.7, 1), 0.0, 0.0, 0, 0, Vector2(0.71, 0), 0.0, 0.0, 0, 0, Vector2(0.79, 0), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(0.9, 1), 0.0, 0.0, 0, 0, Vector2(0.91, 0), 0.0, 0.0, 0, 0]
+point_count = 12
+
+[sub_resource type="CurveTexture" id="CurveTexture_jweas"]
+curve = SubResource("Curve_cp3k0")
+
+[sub_resource type="Curve" id="Curve_5skrb"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gsvmg"]
+curve = SubResource("Curve_5skrb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1l41i"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_gsvmg")
+alpha_curve = SubResource("CurveTexture_jweas")
+
+[sub_resource type="Gradient" id="Gradient_vvlxn"]
+offsets = PackedFloat32Array(0, 0.246951, 0.472561, 0.710366, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 0.625597, 0.625597, 0.625597, 1, 0.404511, 0.404511, 0.404511, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_doxi2"]
+gradient = SubResource("Gradient_vvlxn")
+
+[sub_resource type="Curve" id="Curve_w21jq"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0730337, 0.537746), 6.41371, 6.41371, 0, 0, Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_knnwl"]
+curve = SubResource("Curve_w21jq")
+
+[sub_resource type="Curve" id="Curve_0vx2q"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_cxqvb"]
+curve = SubResource("Curve_0vx2q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_inyqa"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_knnwl")
+color_ramp = SubResource("GradientTexture1D_doxi2")
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_noise_scale = 13.755
+turbulence_noise_speed_random = 4.0
+turbulence_influence_min = 0.691
+turbulence_influence_max = 0.752
+turbulence_initial_displacement_min = 5.0
+turbulence_initial_displacement_max = 20.0
+turbulence_influence_over_life = SubResource("CurveTexture_cxqvb")
+
 [node name="FinaleMinigame1" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_vu4ba")
@@ -175,7 +318,7 @@ rotation = 3.14159
 scale = Vector2(4, -4)
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_tuqcr")]
-position = Vector2(672, 1120)
+position = Vector2(804, 1728)
 
 [node name="Columns" type="CanvasGroup" parent="."]
 y_sort_enabled = true
@@ -234,13 +377,13 @@ scale = Vector2(3.99678, 3)
 texture = SubResource("GradientTexture2D_0lo1i")
 
 [node name="GameCamera" type="Camera2D" parent="."]
-position = Vector2(795.825, 391)
+position = Vector2(800, 440)
 
 [node name="MinigamePanel" parent="." instance=ExtResource("2_ii12c")]
 layer = 0
 
 [node name="PlayerAura" type="CharacterBody2D" parent="."]
-position = Vector2(677, 1080)
+position = Vector2(648, 432)
 script = ExtResource("11_l14mh")
 
 [node name="AuraSprite" type="Sprite2D" parent="PlayerAura"]
@@ -248,11 +391,22 @@ visible = false
 texture = ExtResource("10_1465w")
 
 [node name="AuraLight" type="PointLight2D" parent="PlayerAura/AuraSprite"]
-energy = 0.0
+energy = 16.0
+texture = ExtResource("10_1465w")
+
+[node name="AuraSprite" type="Sprite2D" parent="PlayerAura/AuraSprite"]
+modulate = Color(1, 0.85098, 0.698039, 1)
+rotation = -0.785397
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_1465w")
+
+[node name="AuraLight2" type="PointLight2D" parent="PlayerAura/AuraSprite/AuraSprite"]
+color = Color(0.454902, 0.0392157, 0.196078, 1)
+energy = 16.0
 texture = ExtResource("10_1465w")
 
 [node name="MalvorenAura" type="CharacterBody2D" parent="."]
-position = Vector2(929, 1082)
+position = Vector2(960, 416)
 script = ExtResource("11_l14mh")
 
 [node name="AuraSprite" type="Sprite2D" parent="MalvorenAura"]
@@ -260,8 +414,82 @@ visible = false
 texture = ExtResource("10_1465w")
 
 [node name="AuraLight" type="PointLight2D" parent="MalvorenAura/AuraSprite"]
-energy = 0.0
+energy = 11.84
+texture = ExtResource("10_1465w")
+
+[node name="AuraSprite" type="Sprite2D" parent="MalvorenAura/AuraSprite"]
+modulate = Color(1, 0.85098, 0.698039, 1)
+rotation = -0.785397
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_1465w")
+
+[node name="AuraLight2" type="PointLight2D" parent="MalvorenAura/AuraSprite/AuraSprite"]
+color = Color(0.454902, 0.0392157, 0.196078, 1)
+energy = 20.0
 texture = ExtResource("10_1465w")
 
 [node name="principal_villain" parent="." instance=ExtResource("8_stkhg")]
-position = Vector2(928, 1088)
+visible = false
+z_index = 1
+position = Vector2(929, 1120)
+
+[node name="MindAttack" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(960, 384)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="MindAttack"]
+z_index = 1
+amount = 2
+process_material = SubResource("ParticleProcessMaterial_0sggd")
+texture = ExtResource("12_jkktr")
+lifetime = 5.0
+speed_scale = 1.5
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="MindAttack"]
+z_index = 1
+amount = 2
+process_material = SubResource("ParticleProcessMaterial_fkvsx")
+texture = ExtResource("13_6lh0w")
+lifetime = 5.0
+speed_scale = 1.75
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="MindAttack"]
+z_index = 1
+amount = 2
+process_material = SubResource("ParticleProcessMaterial_gol46")
+texture = ExtResource("14_vruxm")
+lifetime = 5.0
+speed_scale = 1.25
+
+[node name="MindAttack2" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(648, 400)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="MindAttack2"]
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_a4ey8")
+texture = ExtResource("15_ublhv")
+lifetime = 7.5
+
+[node name="ParaccuracyCast" type="CharacterBody2D" parent="."]
+z_index = 1
+position = Vector2(960, 352)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="ParaccuracyCast"]
+z_index = 1
+emitting = false
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_1l41i")
+texture = ExtResource("16_kfvd2")
+one_shot = true
+
+[node name="MalvorenSmoke" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(960, 440)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="MalvorenSmoke"]
+z_index = 1
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_inyqa")
+texture = ExtResource("12_m7l8r")
+lifetime = 10.0

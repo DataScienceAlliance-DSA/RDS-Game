@@ -16,7 +16,7 @@ extends CanvasLayer
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
 @onready var villagers : Array[SickVillager] = [] # array of all on-screen villagers
 @onready var max_villagers : int = 10 # total # of villagers that can be on screen at a time
-@onready var villager_scene = load("res://Scene Folder/Character Scenes/sick_villager.tscn")
+@onready var villager_scene = load("res://Scenes/Characters/sick_villager.tscn")
 
 var game_running : bool # runs npc generation in process if true
 var game_paused : bool
@@ -64,7 +64,7 @@ func _process(delta):
 		game_running = false
 		timer.paused = true
 		player.pause()
-		UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Fairness/FairnessSegue.json", null)
+		UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/1_Fairness/FairnessMinigame1/FairnessSegue.json", null)
 		await UI.get_node("Monologue").closed_signal
 		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn")
 	

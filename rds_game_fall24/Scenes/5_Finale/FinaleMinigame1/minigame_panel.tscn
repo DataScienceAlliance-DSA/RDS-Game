@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://d6kvpuxma1dd" path="res://Assets/UI/portraits/Player.PNG" id="3_jod1f"]
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://Assets/UI/fonts/Quattrocento-Bold.ttf" id="4_c4emw"]
 [ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://Assets/UI/fonts/Quattrocento-Regular.ttf" id="5_yrkiw"]
-[ext_resource type="Texture2D" uid="uid://5jum335kufy6" path="res://Assets/5_Finale/fairness_button.png" id="6_jk5a7"]
-[ext_resource type="Texture2D" uid="uid://ncb7d7jydgug" path="res://Assets/5_Finale/transparency_button.png" id="7_mlf0g"]
-[ext_resource type="Texture2D" uid="uid://c0qhy4q5rcui4" path="res://Assets/5_Finale/privacy_button.png" id="8_y40w4"]
-[ext_resource type="Texture2D" uid="uid://bu2yw542vg7jk" path="res://Assets/5_Finale/veracity_button.png" id="9_kwixo"]
+[ext_resource type="Texture2D" uid="uid://c5ujkxm8vyua3" path="res://Assets/5_Finale/Fairness.png" id="8_sbpft"]
+[ext_resource type="Texture2D" uid="uid://cy8hh4i6w16ye" path="res://Assets/5_Finale/Transparency.png" id="9_mc7t8"]
+[ext_resource type="Texture2D" uid="uid://6ue6rl4eo6m7" path="res://Assets/5_Finale/Privacy.png" id="10_xa2nl"]
+[ext_resource type="Texture2D" uid="uid://c3v7nrbabs0ah" path="res://Assets/5_Finale/Accuracy.png" id="11_am65y"]
 
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
@@ -281,8 +281,8 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(324, 77)
 mouse_filter = 2
-theme_override_constants/h_separation = 5
-theme_override_constants/v_separation = 5
+theme_override_constants/h_separation = -100
+theme_override_constants/v_separation = 50
 columns = 2
 
 [node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer"]
@@ -298,10 +298,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(163, 39)
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(505, 172)
 mouse_filter = 2
-texture = ExtResource("6_jk5a7")
-expand_mode = 2
+texture = ExtResource("8_sbpft")
 
 [node name="fairness" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer/Control/TextureRect"]
 layout_mode = 1
@@ -327,10 +327,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(163, 39)
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(505, 172)
 mouse_filter = 2
-texture = ExtResource("7_mlf0g")
-expand_mode = 2
+texture = ExtResource("9_mc7t8")
 
 [node name="transparency" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer/Control2/TextureRect"]
 layout_mode = 1
@@ -358,10 +358,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(163, 39)
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(505, 172)
 mouse_filter = 2
-texture = ExtResource("8_y40w4")
-expand_mode = 2
+texture = ExtResource("10_xa2nl")
 
 [node name="privacy" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer/Control3/TextureRect"]
 layout_mode = 1
@@ -389,10 +389,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(163, 39)
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(505, 172)
 mouse_filter = 2
-texture = ExtResource("9_kwixo")
-expand_mode = 2
+texture = ExtResource("11_am65y")
 
 [node name="veracity" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer/Control4/TextureRect"]
 layout_mode = 1

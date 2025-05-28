@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://dw5rykc2ps4g3"]
 
-[ext_resource type="Shader" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/gui_blur.gdshader" id="1_k41k8"]
+[ext_resource type="Shader" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/gui_blur.gdshader" id="1_k41k8"]
 [ext_resource type="Texture2D" uid="uid://e8y24jfjuqws" path="res://Assets/0_Tutorial/TutorialMinigame2/Orb Placement UI.png" id="1_lji7o"]
 [ext_resource type="Texture2D" uid="uid://bgwwsgq3lyrw4" path="res://Assets/0_Tutorial/TutorialMinigame2/empty_bag.png" id="2_fbe2l"]
 [ext_resource type="Texture2D" uid="uid://bsk7megi46n57" path="res://Assets/0_Tutorial/TutorialMinigame2/smoke assets/redviolet.png" id="3_esetp"]
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Mixing_Game/DragAndDrop/mix_button.gd" id="4_6d0ck"]
-[ext_resource type="PackedScene" uid="uid://dl510nt7j3vra" path="res://Scenes/Tutorial/MixingGame/Mixing_Game/DragAndDrop/DropSpot.tscn" id="4_clvvt"]
-[ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scenes/Tutorial/MixingGame/Mixing_Game/DragAndDrop/draggable.tscn" id="4_o6hdc"]
+[ext_resource type="Script" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/mix_button.gd" id="4_6d0ck"]
+[ext_resource type="PackedScene" uid="uid://dl510nt7j3vra" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/DropSpot.tscn" id="4_clvvt"]
+[ext_resource type="PackedScene" uid="uid://dqts64q2gs8nx" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/draggable.tscn" id="4_o6hdc"]
 [ext_resource type="Texture2D" uid="uid://cv5djbk75mub8" path="res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 6.PNG" id="6_7l24o"]
 [ext_resource type="Texture2D" uid="uid://dymegq2gsesuu" path="res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 4.PNG" id="7_v7e68"]
 [ext_resource type="Texture2D" uid="uid://ug8afxm6hldc" path="res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 2.PNG" id="8_t5oxb"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://d23lr7r0mmrl5" path="res://Assets/UI/button_states/Mix Button/Pressed.png" id="15_2gugu"]
 [ext_resource type="Texture2D" uid="uid://d1coaggnvi3gi" path="res://Assets/UI/button_states/Mix Button/Hover.png" id="16_uetye"]
 [ext_resource type="Texture2D" uid="uid://cercn5dplsnfv" path="res://Assets/UI/button_states/Mix Button/Disables.png" id="17_q2b16"]
-
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ohrwf"]
 shader = ExtResource("1_k41k8")

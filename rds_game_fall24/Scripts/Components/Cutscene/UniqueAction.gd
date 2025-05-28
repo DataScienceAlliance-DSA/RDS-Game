@@ -11,6 +11,7 @@ func cue():
 	performance.call()
 	await actor.performance_completion
 	action_completed.emit()
+	action_finished = true
 
 func skip_action():
 	actor.skip_deltas()

@@ -1,33 +1,81 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg832qlytv3k6"]
+[gd_scene load_steps=10 format=3 uid="uid://dg832qlytv3k6"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Principal/Malvoren.gd" id="1_dv1va"]
 [ext_resource type="Texture2D" uid="uid://c0hmcci4r5byh" path="res://Assets/Characters/Principal/Principal.PNG" id="2_ikdob"]
-[ext_resource type="Texture2D" uid="uid://b3sv5cuxqkss7" path="res://Assets/5_Finale/power_aura.png" id="2_j31pj"]
+[ext_resource type="Shader" path="res://Resources/Shaders/principal_villain_blur.gdshader" id="3_1xqbt"]
+[ext_resource type="Texture2D" uid="uid://cdw02kderfec1" path="res://Assets/Characters/Principal/principal_shadow.png" id="4_x7qif"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tpe3k"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0d7vn"]
 light_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phi3j"]
+shader = ExtResource("3_1xqbt")
+shader_parameter/strength = 4.75e-08
+shader_parameter/samples = 16
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7a3lg"]
 size = Vector2(67, 22)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1wsny"]
+shader = ExtResource("3_1xqbt")
+shader_parameter/strength = 4.75e-08
+shader_parameter/samples = 16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phq0d"]
+shader = ExtResource("3_1xqbt")
+shader_parameter/strength = 4.75e-08
+shader_parameter/samples = 16
+
 [node name="principal_villain" type="CharacterBody2D"]
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_0d7vn")
 script = ExtResource("1_dv1va")
 
-[node name="AuraSprite" type="Sprite2D" parent="."]
+[node name="Shadow" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("2_j31pj")
+modulate = Color(1, 1, 1, 0.682353)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("4_x7qif")
 
-[node name="AuraLight" type="PointLight2D" parent="AuraSprite"]
-energy = 0.0
-texture = ExtResource("2_j31pj")
+[node name="Shadow2" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.682353)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("4_x7qif")
+
+[node name="Shadow3" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.682353)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("4_x7qif")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
-material = SubResource("CanvasItemMaterial_tpe3k")
+material = SubResource("ShaderMaterial_phi3j")
+use_parent_material = true
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("2_ikdob")
-offset = Vector2(0, -270)
+offset = Vector2(0, -540)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7a3lg")
 disabled = true
+
+[node name="CloneSprite1" type="Sprite2D" parent="."]
+visible = false
+y_sort_enabled = true
+texture_filter = 1
+material = SubResource("ShaderMaterial_1wsny")
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_ikdob")
+offset = Vector2(0, -540)
+
+[node name="CloneSprite2" type="Sprite2D" parent="."]
+visible = false
+y_sort_enabled = true
+texture_filter = 1
+material = SubResource("ShaderMaterial_phq0d")
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_ikdob")
+offset = Vector2(0, -540)

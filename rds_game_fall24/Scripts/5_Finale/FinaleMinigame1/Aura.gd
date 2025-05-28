@@ -8,6 +8,7 @@ signal performance_completion
 
 @onready var aura = $AuraSprite
 @onready var aura_light = $AuraSprite/AuraLight
+@onready var aura_light2 = $AuraSprite/AuraSprite/AuraLight2
 
 @onready var aura_t = 0.
 
@@ -30,6 +31,7 @@ func _process(delta):
 		
 		aura.rotation = aura_t
 		aura_light.energy = -5. * cos(3. * aura_t) + 5.
+		aura_light2.energy = -5. * cos(3. * aura_t) + 5.
 		
 		if action_delta > 0.:
 			var scale_x = .125 * cos(3. * (aura_t - 1.)) + .875

@@ -1,12 +1,11 @@
 [gd_scene load_steps=23 format=3 uid="uid://dc867tjqrrdyl"]
 
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Mixing_Game/GameManager/mixing_game.gd" id="1_43cay"]
+[ext_resource type="Script" path="res://Scenes/0_Tutorial/TutorialMinigame2/GameManager/mixing_game.gd" id="1_43cay"]
 [ext_resource type="Texture2D" uid="uid://d3ts7tyirdj4b" path="res://Assets/0_Tutorial/TutorialMinigame2/Podium.png" id="2_g2hsw"]
 [ext_resource type="Texture2D" uid="uid://fq046hrx6lal" path="res://Assets/0_Tutorial/TutorialMinigame2/mixing_game_bkg.PNG" id="3_pdt84"]
-[ext_resource type="PackedScene" uid="uid://dw5rykc2ps4g3" path="res://Scenes/Tutorial/MixingGame/Mixing_Game/DragAndDrop/DragAndDrop.tscn" id="4_wkjg7"]
+[ext_resource type="PackedScene" uid="uid://dw5rykc2ps4g3" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/DragAndDrop.tscn" id="4_wkjg7"]
 [ext_resource type="Texture2D" uid="uid://8vw07d50xiwm" path="res://Assets/0_Tutorial/TutorialMinigame2/cauldron_mixing_spritesheet.png" id="6_0kkcw"]
-[ext_resource type="PackedScene" uid="uid://bjsn5l36wjgx2" path="res://Scenes/Tutorial/MixingGame/Mixing_Game/orb.tscn" id="6_avnpx"]
-
+[ext_resource type="PackedScene" uid="uid://bjsn5l36wjgx2" path="res://Scenes/0_Tutorial/TutorialMinigame2/orb.tscn" id="6_avnpx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3in4"]
 size = Vector2(20, 16.25)

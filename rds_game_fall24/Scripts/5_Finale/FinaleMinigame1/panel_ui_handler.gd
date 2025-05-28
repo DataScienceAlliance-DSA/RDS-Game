@@ -115,10 +115,10 @@ func _process(_delta):
 		var texture = button.get_parent()
 		if button.is_hovered() and current_dialogue_ended:
 			print(button.name)
-			texture.scale = texture.scale.lerp(Vector2(1.1,1.1), _delta * 5.)
+			texture.scale = texture.scale.lerp(Vector2(.275,.275), _delta * 5.)
 			texture.z_index = 1
 		else:
-			texture.scale = texture.scale.lerp(Vector2(1.,1.), _delta * 5.)
+			texture.scale = texture.scale.lerp(Vector2(.25,.25), _delta * 5.)
 			texture.z_index = 0
 
 func parse_dialogue(json_path):

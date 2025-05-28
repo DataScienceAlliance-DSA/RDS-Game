@@ -1,9 +1,9 @@
 extends TextureRect
 
-@onready var active_png = load("res://assets/Fairness_Village/Help Button_Active.png")
-@onready var hover_png = load("res://assets/Fairness_Village/Help Button_Hover.png")
-@onready var click_png = load("res://assets/Fairness_Village/Help Button_On-Click.png")
-@onready var visit_png = load("res://assets/Fairness_Village/Help Button_Visited.png")
+@onready var active_png = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Active.png")
+@onready var hover_png = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Hover.png")
+@onready var click_png = load("res://Assets/1_Fairness/FairnessEnv/Help Button_On-Click.png")
+@onready var visit_png = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Visited.png")
 
 enum ui_states {ACTIVE, HOVER, CLICK, VISIT}
 var ui_state = ui_states.ACTIVE
@@ -11,7 +11,7 @@ var ui_state = ui_states.ACTIVE
 var primed
 @onready var visited = false
 
-@onready var tooltip = get_tree().get_nodes_in_group("Tooltip")[0]
+@onready var tooltip = get_tree().get_nodes_in_group("Tooltip")[0].get_node("Control/TextureRect")
 var tooltip_target_pos
 @onready var screenblur_mat = get_tree().get_nodes_in_group("ScreenBlur")[0].material
 
@@ -23,7 +23,6 @@ func _process(delta):
 			ui_state = ui_states.CLICK
 		elif (Input.is_action_just_released("left_click")):
 			visited = !visited
-			print("doop")
 			if (visited): minigame_controller.pause_game()
 			else: minigame_controller.resume_game()
 		else:
@@ -48,7 +47,8 @@ func _process(delta):
 		ui_states.VISIT:
 			texture = visit_png
 	
-	tooltip_target_pos = Vector2(0,0) if visited else Vector2(0, DisplayServer.screen_get_size().y)
+	tooltip_target_pos = Vector2(-1752,-1752) if visited else Vector2(-1752, -981.)
+	print(tooltip.position)
 	var screenblur_target_LOD = 0.75 if visited else 0.0
 	var screenblur_target_dim = 0.075 if visited else 0.0
 	
