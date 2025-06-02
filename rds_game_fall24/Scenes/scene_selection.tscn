@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://5d4njket782a"]
+[gd_scene load_steps=13 format=3 uid="uid://fweegrv33m56"]
 
 [ext_resource type="Shader" path="res://Resources/Shaders/scrolling_tiled_texture.gdshader" id="1_h587x"]
 [ext_resource type="Script" path="res://Scenes/UniversalComponents/scene_selection.gd" id="1_ix1cn"]

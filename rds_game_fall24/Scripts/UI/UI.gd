@@ -21,9 +21,13 @@ var next_scene : String # string to next scene
 @onready var screen_hide_begin = Vector2(1366, 0)
 var screen_fade_goal
 var current_screen_fade_val
+@onready var screen_blur = $ScreenBlur.material as ShaderMaterial
+@onready var exit_game_button = $PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control3/TextureButton
 
 @onready var dialogue = $Dialogue
 @onready var monologue = $Monologue
+
+@onready var pause_menu = $PauseMenu
 
 var active_cutscene_manager : CutsceneManager # reference to the current scene's active CM
 
@@ -43,11 +47,15 @@ func set_ui_color_mode(color : String):
 	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
 
 func _process(delta):
+	pause_menu.visible = get_tree().paused
 	
 	if (Input.is_action_just_released("menu")):
 		get_tree().paused = !get_tree().paused
 		var player_group = get_tree().get_nodes_in_group("Player")
 		if player_group: player_group[0].reset_player()
+	
+	screen_blur.set_shader_parameter("lod", .75 if get_tree().paused else 0.)
+	screen_blur.set_shader_parameter("dim", .3 if get_tree().paused else 0.)
 	
 	if get_tree().paused: return
 	
@@ -125,3 +133,12 @@ func enter_next_scene():
 
 func set_active_cm(active_cutscene_manager):
 	self.active_cutscene_manager = active_cutscene_manager
+
+func resume_button_pressed():
+	get_tree().paused = false
+
+func exit_game_button_pressed():
+	get_tree().paused = false
+	dialogue.close_dialogue()
+	monologue.close_3choice_dialogue()
+	start_scene_change(true, true, "res://Scenes/scene_selection.tscn")

@@ -19,7 +19,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xc1ba"]
 shader = ExtResource("14_r32iy")
 shader_parameter/lod = 0.75
-shader_parameter/dim = 0.075
+shader_parameter/dim = 0.15
 
 [node name="UIFairnessMinigame1" type="CanvasLayer" groups=["MinigameController"]]
 script = ExtResource("1_f7l2o")

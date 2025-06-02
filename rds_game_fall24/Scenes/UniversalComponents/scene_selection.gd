@@ -14,6 +14,8 @@ var target_button
 @onready var current_desc_container_margin = Vector2(-650,1366)
 
 func _ready():
+	UI.start_scene_change(false, false, "")
+	
 	for button in scene_container.get_children():
 		button.pressed.connect(register_button_press.bind(button))
 

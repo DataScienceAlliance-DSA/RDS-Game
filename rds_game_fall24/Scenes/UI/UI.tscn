@@ -1,12 +1,18 @@
-[gd_scene load_steps=43 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=53 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/UI/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/UI/dialogue.gd" id="1_ne7wx"]
 [ext_resource type="Texture2D" uid="uid://br8nvmsg2wo75" path="res://Assets/Debug/icon.svg" id="1_q8u87"]
+[ext_resource type="Shader" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/gui_blur.gdshader" id="2_jc1cx"]
+[ext_resource type="Texture2D" uid="uid://c2qxjvfoxkxpt" path="res://Assets/UI/blank.png" id="3_1emve"]
 [ext_resource type="Texture2D" uid="uid://cx2glqrq61mel" path="res://Assets/UI/V2Dialogue Box_Short_Light.png" id="3_fdsbw"]
 [ext_resource type="Script" path="res://Scripts/UI/3choice_dialogue.gd" id="3_rj2pq"]
 [ext_resource type="Texture2D" uid="uid://c2o8far2sc0u" path="res://Assets/UI/Dialogue Arrow_Active_Light.png" id="4_0lg18"]
 [ext_resource type="Texture2D" uid="uid://d6kvpuxma1dd" path="res://Assets/UI/portraits/Player.PNG" id="4_faomy"]
+[ext_resource type="Texture2D" uid="uid://dlkvr48poauh1" path="res://Assets/UI/Button_Active.png" id="4_io764"]
+[ext_resource type="Texture2D" uid="uid://p88dp0clfweh" path="res://Assets/UI/Button_Clicked.png" id="5_8caay"]
+[ext_resource type="Texture2D" uid="uid://c2yxq6cnd6e0x" path="res://Assets/UI/Button_Hover.png" id="6_drrxe"]
+[ext_resource type="Texture2D" uid="uid://b4oj0x3e1fwmn" path="res://Assets/UI/Button_Pressed.png" id="7_mn856"]
 [ext_resource type="Script" path="res://Scripts/UI/instructions.gd" id="9_n6h7w"]
 [ext_resource type="Texture2D" uid="uid://ds8d7hxthwbxp" path="res://Assets/UI/selection_button_states/Orbs_Selection/Orbs_Active.png" id="10_2g7ig"]
 [ext_resource type="Texture2D" uid="uid://ckmgth8tt6dg3" path="res://Assets/UI/selection_button_states/Orbs_Selection/Orbs_Pressed.png" id="11_glrh1"]
@@ -38,13 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://m610fx1858uc" path="res://Assets/1_Fairness/FairnessEnv/Help Button_Visited.png" id="37_p6xph"]
 [ext_resource type="Texture2D" uid="uid://dqh2bgipuwxef" path="res://Assets/1_Fairness/FairnessEnv/Help Button_Hover.png" id="38_ta4q2"]
 
-[sub_resource type="Gradient" id="Gradient_ci8dm"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_em4cu"]
-gradient = SubResource("Gradient_ci8dm")
-fill_to = Vector2(0.482906, 1)
-
 [sub_resource type="Gradient" id="Gradient_6hbbo"]
 colors = PackedColorArray(0.522046, 0.527665, 0.325254, 1, 0.901493, 0.910416, 0.860156, 1)
 
@@ -58,23 +57,28 @@ gradient = SubResource("Gradient_6hbbo")
 fill_from = Vector2(0.508547, 1)
 fill_to = Vector2(0.5, 0)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1sd0w"]
+shader = ExtResource("2_jc1cx")
+shader_parameter/lod = 0.75
+shader_parameter/dim = 0.075
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1hkr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jp42"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xuthb"]
+
+[sub_resource type="Gradient" id="Gradient_ci8dm"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_em4cu"]
+gradient = SubResource("Gradient_ci8dm")
+fill_to = Vector2(0.482906, 1)
+
 [node name="UI" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_gxgmr")
-
-[node name="ScreenHide" type="TextureRect" parent="."]
-visible = false
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -683.0
-offset_right = 685.0
-offset_bottom = 696.0
-grow_horizontal = 2
-size_flags_vertical = 0
-mouse_filter = 2
-texture = SubResource("GradientTexture2D_em4cu")
-expand_mode = 1
 
 [node name="Dialogue" type="MarginContainer" parent="."]
 visible = false
@@ -821,6 +825,10 @@ fit_content = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -23.0
+offset_right = -37.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -998,9 +1006,240 @@ texture_pressed = ExtResource("37_p6xph")
 texture_hover = ExtResource("38_ta4q2")
 stretch_mode = 3
 
+[node name="ScreenBlur" type="TextureRect" parent="." groups=["ScreenBlur"]]
+material = SubResource("ShaderMaterial_1sd0w")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_1emve")
+expand_mode = 2
+
+[node name="PauseMenu" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.1
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r1hkr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PauseMenu/VBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+mouse_filter = 2
+theme_override_constants/line_separation = 30
+theme_override_font_sizes/bold_font_size = 124
+bbcode_enabled = true
+text = "[center][b][color=white]Pause"
+fit_content = true
+
+[node name="Panel" type="Panel" parent="PauseMenu/VBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(900, 2)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5jp42")
+
+[node name="Panel2" type="Panel" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.75
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xuthb")
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 550
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 550
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 90
+
+[node name="Control" type="Control" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureButton" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.055, 0.055)
+pivot_offset = Vector2(1950, 750)
+texture_normal = ExtResource("4_io764")
+texture_pressed = ExtResource("5_8caay")
+texture_hover = ExtResource("6_drrxe")
+texture_disabled = ExtResource("7_mn856")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control/TextureButton"]
+custom_minimum_size = Vector2(4000, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -286.5
+offset_right = 0.5
+offset_bottom = 286.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/line_separation = 90
+theme_override_font_sizes/normal_font_size = 420
+theme_override_font_sizes/bold_font_size = 500
+bbcode_enabled = true
+text = "[center][b][color=black]Resume"
+fit_content = true
+
+[node name="Control2" type="Control" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureButton" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.055, 0.055)
+pivot_offset = Vector2(1950, 750)
+disabled = true
+texture_normal = ExtResource("4_io764")
+texture_pressed = ExtResource("5_8caay")
+texture_hover = ExtResource("6_drrxe")
+texture_disabled = ExtResource("7_mn856")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control2/TextureButton"]
+custom_minimum_size = Vector2(4000, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -286.5
+offset_right = 0.5
+offset_bottom = 286.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/line_separation = 90
+theme_override_font_sizes/normal_font_size = 420
+theme_override_font_sizes/bold_font_size = 500
+bbcode_enabled = true
+text = "[center][b][color=black]Settings"
+fit_content = true
+
+[node name="Control3" type="Control" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureButton" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.055, 0.055)
+pivot_offset = Vector2(1950, 750)
+texture_normal = ExtResource("4_io764")
+texture_pressed = ExtResource("5_8caay")
+texture_hover = ExtResource("6_drrxe")
+texture_disabled = ExtResource("7_mn856")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control3/TextureButton"]
+custom_minimum_size = Vector2(4000, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -286.5
+offset_right = 0.5
+offset_bottom = 286.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/line_separation = 90
+theme_override_font_sizes/normal_font_size = 420
+theme_override_font_sizes/bold_font_size = 500
+bbcode_enabled = true
+text = "[center][b][color=black]Exit Game"
+fit_content = true
+
+[node name="ScreenHide" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -683.0
+offset_right = 685.0
+offset_bottom = 696.0
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_em4cu")
+expand_mode = 1
+
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_exited"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control/TextureButton" to="." method="resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control3/TextureButton" to="." method="exit_game_button_pressed"]

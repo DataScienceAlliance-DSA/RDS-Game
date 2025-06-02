@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://duebt314dsyf5"]
 
-[ext_resource type="Script" path="res://Scripts/Transparency/CargoGame/Cargo_Game.gd" id="1_3ljot"]
-[ext_resource type="Texture2D" uid="uid://4c7krm7ftp2w" path="res://Assets/2_Transparency/Cargo_Game/grid_temp.png" id="1_mohk4"]
+[ext_resource type="Script" path="res://Scripts/2_Transparency/TransparencyMinigame1/Cargo_Game.gd" id="1_3ljot"]
+[ext_resource type="Texture2D" uid="uid://4c7krm7ftp2w" path="res://Assets/2_Transparency/TransparencyMinigame1/grid_temp.png" id="1_mohk4"]
 [ext_resource type="Texture2D" uid="uid://dveihhhr2tnys" path="res://Assets/1_Fairness/FairnessEnv/Shapes/shape_1.png" id="2_r1i83"]
 [ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://Assets/UI/fonts/Quattrocento-Regular.ttf" id="4_v6q7a"]
 

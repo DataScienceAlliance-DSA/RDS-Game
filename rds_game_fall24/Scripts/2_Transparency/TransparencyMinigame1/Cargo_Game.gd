@@ -39,6 +39,8 @@ signal stage_visuals_cleared # emitted when stage's visuals are cleared to usher
 @onready var timer = $MarginContainer/Panel/Timer
 
 func _ready():
+	UI.start_scene_change(false, false, "")
+	
 	shape_textures = [load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_1.png"),
 						load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_2.png"),
 						load("res://Assets/1_Fairness/FairnessEnv/Shapes/shape_3.png"),
