@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_7g5v0"]
 [ext_resource type="Texture2D" uid="uid://blaeuafsqnao0" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png" id="1_l6flh"]
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame1/FinaleMinigame1.gd" id="1_vu4ba"]
-[ext_resource type="PackedScene" uid="uid://liqb24n40j00" path="res://Scenes/5_Finale/FinaleMinigame1/minigame_panel.tscn" id="2_ii12c"]
+[ext_resource type="PackedScene" uid="uid://b4pbj5lhqo383" path="res://Scenes/5_Finale/FinaleMinigame1/minigame_panel.tscn" id="2_ii12c"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="2_tuqcr"]
 [ext_resource type="PackedScene" uid="uid://c0b5pntcik1eq" path="res://Scenes/1_Fairness/FairnessEnv/fairness_crystal.tscn" id="4_qftsv"]
 [ext_resource type="Script" path="res://Scripts/Components/fairness_crystal.gd" id="5_8elv8"]
