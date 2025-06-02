@@ -75,7 +75,7 @@ func _ready():
 	load_new_bag()
 
 # Update loop for moving the bags side-to-side
-func _process(delta): 
+func _process(delta):
 	self.get_node("PowerGauge/PinkCounter/RichTextLabel").text = "[center][b]" + str(get_node("cannon").bag_attempts)
 	
 	if (bag_load_phase == 1) and (bag_load_timer < 0.5):

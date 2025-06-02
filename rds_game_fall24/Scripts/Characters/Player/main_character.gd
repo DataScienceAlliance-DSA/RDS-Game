@@ -43,6 +43,9 @@ func _ready():
 	movement_stack = []
 	set_process(true)
 
+func reset_player():
+	movement_stack = []
+
 func get_movement_vector(direction: String) -> Vector2:
 	match direction:
 		"right": return Vector2(speed, 0)

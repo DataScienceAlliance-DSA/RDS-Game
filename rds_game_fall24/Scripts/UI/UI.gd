@@ -43,7 +43,14 @@ func set_ui_color_mode(color : String):
 	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
 
 func _process(delta):
-	# print(scene_hide_timer)
+	
+	if (Input.is_action_just_released("menu")):
+		get_tree().paused = !get_tree().paused
+		var player_group = get_tree().get_nodes_in_group("Player")
+		if player_group: player_group[0].reset_player()
+	
+	if get_tree().paused: return
+	
 	if (scene_hide_timer < scene_hide_max) and (scene_change_active):
 		screen_hide.size = screen_hide_begin.lerp(screen_hide_goal, (((scene_hide_timer - scene_hide_max) ** 3.0) / (scene_hide_max ** 3.0)) + 1.0) 
 		scene_hide_timer += delta

@@ -11,7 +11,7 @@ var ui_state = ui_states.ACTIVE
 var primed
 @onready var visited = false
 
-@onready var tooltip = get_tree().get_nodes_in_group("Tooltip")[0].get_node("Control/TextureRect")
+@onready var tooltip = get_tree().get_nodes_in_group("Tooltip")[0]
 var tooltip_target_pos
 @onready var screenblur_mat = get_tree().get_nodes_in_group("ScreenBlur")[0].material
 
@@ -48,11 +48,10 @@ func _process(delta):
 			texture = visit_png
 	
 	tooltip_target_pos = Vector2(-1752,-1752) if visited else Vector2(-1752, -981.)
-	print(tooltip.position)
 	var screenblur_target_LOD = 0.75 if visited else 0.0
 	var screenblur_target_dim = 0.075 if visited else 0.0
 	
-	tooltip.position = tooltip.position.lerp(tooltip_target_pos, delta * 5.)
+	tooltip.global_position = tooltip.global_position.lerp(tooltip_target_pos, delta * 5.)
 	var screenblur_lod = screenblur_mat.get_shader_parameter("lod")
 	var screenblur_dim = screenblur_mat.get_shader_parameter("dim")
 	

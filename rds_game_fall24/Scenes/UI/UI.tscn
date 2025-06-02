@@ -59,6 +59,7 @@ fill_from = Vector2(0.508547, 1)
 fill_to = Vector2(0.5, 0)
 
 [node name="UI" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_gxgmr")
 
 [node name="ScreenHide" type="TextureRect" parent="."]
