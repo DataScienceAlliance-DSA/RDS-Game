@@ -1105,7 +1105,6 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 
 [node name="TextureButton" type="TextureButton" parent="InstructionsPanel/Control"]
-modulate = Color(0.99, 0.6105, 0.0792, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1122,7 +1121,7 @@ scale = Vector2(0.04, 0.04)
 pivot_offset = Vector2(830, 874)
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture_normal = ExtResource("37_p6xph")
+texture_normal = ExtResource("36_mnawb")
 texture_pressed = ExtResource("39_vmub6")
 texture_hover = ExtResource("38_ta4q2")
 

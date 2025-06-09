@@ -29,9 +29,16 @@ var current_screen_fade_val
 
 @onready var pause_menu = $PauseMenu
 
+@onready var tooltip_active = false
+
+@onready var tooltip_button = $InstructionsPanel/Control/TextureButton
+
 var active_cutscene_manager : CutsceneManager # reference to the current scene's active CM
 
 signal ui_change_complete
+
+@onready var TOOLTIP_BUTTON_VISITED_PATH = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Visited.png")
+@onready var TOOLTIP_BUTTON_NORMAL_PATH = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Active.png")
 
 func _ready():
 	screen_hide.visible = false
@@ -58,6 +65,9 @@ func _process(delta):
 	screen_blur.set_shader_parameter("dim", .3 if get_tree().paused else 0.)
 	
 	if get_tree().paused: return
+	
+	if tooltip_active:
+		pass
 	
 	if (scene_hide_timer < scene_hide_max) and (scene_change_active):
 		screen_hide.size = screen_hide_begin.lerp(screen_hide_goal, (((scene_hide_timer - scene_hide_max) ** 3.0) / (scene_hide_max ** 3.0)) + 1.0) 
@@ -142,3 +152,11 @@ func exit_game_button_pressed():
 	dialogue.close_dialogue()
 	monologue.close_3choice_dialogue()
 	start_scene_change(true, true, "res://Scenes/scene_selection.tscn")
+
+func tooltip_button_pressed():
+	tooltip_active = !tooltip_active
+	if tooltip_active:
+		tooltip_button.texture_normal = TOOLTIP_BUTTON_VISITED_PATH
+	else:
+		tooltip_button.texture_normal = TOOLTIP_BUTTON_NORMAL_PATH
+		tooltip_button.modulate = Color(0.988,0.612,0.078, 1.)
