@@ -30,7 +30,9 @@ var current_screen_fade_val
 @onready var pause_menu = $PauseMenu
 
 @onready var tooltip_active = false
+@onready var pause_menu_active = false
 
+@onready var tooltip_image = $InstructionsPanel2/Control2/TextureRect
 @onready var tooltip_button = $InstructionsPanel/Control/TextureButton
 
 var active_cutscene_manager : CutsceneManager # reference to the current scene's active CM
@@ -54,20 +56,17 @@ func set_ui_color_mode(color : String):
 	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
 
 func _process(delta):
-	pause_menu.visible = get_tree().paused
+	pause_menu.visible = pause_menu_active
 	
 	if (Input.is_action_just_released("menu")):
-		get_tree().paused = !get_tree().paused
-		var player_group = get_tree().get_nodes_in_group("Player")
-		if player_group: player_group[0].reset_player()
+		pause_menu_active = !pause_menu_active
+		if (!pause_menu_active): resume_game()
+		else: pause_game()
 	
-	screen_blur.set_shader_parameter("lod", .75 if get_tree().paused else 0.)
-	screen_blur.set_shader_parameter("dim", .3 if get_tree().paused else 0.)
+	screen_blur.set_shader_parameter("lod", .75 if pause_menu_active else 0.)
+	screen_blur.set_shader_parameter("dim", .3 if pause_menu_active else 0.)
 	
 	if get_tree().paused: return
-	
-	if tooltip_active:
-		pass
 	
 	if (scene_hide_timer < scene_hide_max) and (scene_change_active):
 		screen_hide.size = screen_hide_begin.lerp(screen_hide_goal, (((scene_hide_timer - scene_hide_max) ** 3.0) / (scene_hide_max ** 3.0)) + 1.0) 
@@ -157,6 +156,19 @@ func tooltip_button_pressed():
 	tooltip_active = !tooltip_active
 	if tooltip_active:
 		tooltip_button.texture_normal = TOOLTIP_BUTTON_VISITED_PATH
+		tooltip_image.visible = true
+		pause_game()
 	else:
 		tooltip_button.texture_normal = TOOLTIP_BUTTON_NORMAL_PATH
 		tooltip_button.modulate = Color(0.988,0.612,0.078, 1.)
+		tooltip_image.visible = false
+		resume_game()
+
+func pause_game():
+	get_tree().paused = true
+	var player_group = get_tree().get_nodes_in_group("Player")
+	if player_group: player_group[0].reset_player()
+
+func resume_game():
+	if !(pause_menu_active or tooltip_active): get_tree().paused = false
+

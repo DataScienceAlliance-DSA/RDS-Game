@@ -55,7 +55,7 @@ fill_to = Vector2(0.5, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1sd0w"]
 shader = ExtResource("2_jc1cx")
-shader_parameter/lod = 0.75
+shader_parameter/lod = 0.0
 shader_parameter/dim = 0.075
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1hkr"]
@@ -861,6 +861,17 @@ texture_pressed = ExtResource("37_p6xph")
 texture_hover = ExtResource("38_ta4q2")
 stretch_mode = 3
 
+[node name="TooltipBlur" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_1sd0w")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_1emve")
+expand_mode = 2
+
 [node name="ScreenBlur" type="TextureRect" parent="." groups=["ScreenBlur"]]
 material = SubResource("ShaderMaterial_1sd0w")
 anchors_preset = 15
@@ -871,6 +882,77 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("3_1emve")
 expand_mode = 2
+
+[node name="InstructionsPanel2" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Control2" type="Control" parent="InstructionsPanel2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InstructionsPanel2/Control2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1752.0
+offset_top = -981.5
+offset_right = 1752.0
+offset_bottom = 981.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.18, 0.18)
+pivot_offset = Vector2(1752, 981)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("34_1se8c")
+
+[node name="InstructionsPanel" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Control" type="Control" parent="InstructionsPanel"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="TextureButton" type="TextureButton" parent="InstructionsPanel/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -830.0
+offset_top = -874.5
+offset_right = 830.0
+offset_bottom = 874.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.04, 0.04)
+pivot_offset = Vector2(830, 874)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("37_p6xph")
+texture_pressed = ExtResource("39_vmub6")
+texture_hover = ExtResource("38_ta4q2")
 
 [node name="PauseMenu" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -1090,48 +1172,12 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_em4cu")
 expand_mode = 1
 
-[node name="InstructionsPanel" type="MarginContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="Control" type="Control" parent="InstructionsPanel"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-
-[node name="TextureButton" type="TextureButton" parent="InstructionsPanel/Control"]
-modulate = Color(0.99, 0.6105, 0.0792, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -830.0
-offset_top = -874.5
-offset_right = 830.0
-offset_bottom = 874.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.04, 0.04)
-pivot_offset = Vector2(830, 874)
-size_flags_horizontal = 8
-size_flags_vertical = 8
-texture_normal = ExtResource("37_p6xph")
-texture_pressed = ExtResource("39_vmub6")
-texture_hover = ExtResource("38_ta4q2")
-
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_exited"]
+[connection signal="pressed" from="InstructionsPanel/Control/TextureButton" to="." method="tooltip_button_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control/TextureButton" to="." method="resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control3/TextureButton" to="." method="exit_game_button_pressed"]
-[connection signal="pressed" from="InstructionsPanel/Control/TextureButton" to="." method="tooltip_button_pressed"]
