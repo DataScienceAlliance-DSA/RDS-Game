@@ -124,6 +124,9 @@ func _remove_movement_direction(direction: String) -> void:
 			movement_stack.remove_at(i)
 			break
 
+func reset_player():
+	movement_stack = []
+
 func updateAnimation():
 	if velocity.length() == 0:
 		animations.play("animation_frameworks_hero_player/idle" + last_direction)

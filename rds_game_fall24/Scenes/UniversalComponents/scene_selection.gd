@@ -15,6 +15,7 @@ var target_button
 
 func _ready():
 	UI.start_scene_change(false, false, "")
+	UI.set_tooltip("")
 	
 	for button in scene_container.get_children():
 		button.pressed.connect(register_button_press.bind(button))

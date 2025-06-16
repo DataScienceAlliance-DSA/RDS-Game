@@ -20,6 +20,9 @@ var trigger_map_delete
 
 func _ready():
 	UI.start_scene_change(false, false, "")
+	
+	
+	
 	game_cam.reparent(self)
 	
 	game_cam.limit_top = -99999
@@ -27,6 +30,8 @@ func _ready():
 	
 	# intro_cutscene()
 	player.autonomous = false
+	
+	UI.set_tooltip("res://Assets/UI/tooltips/Veracity Mini Game_2.png")
 	
 	new_map = get_tree().get_nodes_in_group("FirstMap")[0]
 	old_map = null

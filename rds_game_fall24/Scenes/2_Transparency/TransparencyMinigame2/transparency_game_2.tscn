@@ -1,15 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://5cbdgvq7d2bv"]
 
-[ext_resource type="Script" path="res://Scene Folder/Environment/transparency_game_2.gd" id="1_7ms5p"]
+[ext_resource type="Script" path="res://Scripts/2_Transparency/TransparencyMinigame2/transparency_game_2.gd" id="1_7ms5p"]
 [ext_resource type="Texture2D" uid="uid://iqykg7760ug7" path="res://Assets/1_Fairness/FairnessEnv/EnvironmentSpreadSheetFinal.png" id="1_tj2v6"]
-[ext_resource type="Script" path="res://Scene Folder/Environment/ConstructedTileMap.gd" id="1_v174r"]
+[ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_v174r"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="2_tmlac"]
-[ext_resource type="PackedScene" uid="uid://cqtrkfn7c7gyw" path="res://Scenes/Transparency/ShippingGame/whirlpool.tscn" id="4_4ij4c"]
-[ext_resource type="PackedScene" uid="uid://cu7kckdrjhlop" path="res://Scenes/Transparency/ShippingGame/riptide.tscn" id="6_8wma1"]
-[ext_resource type="PackedScene" uid="uid://qw4qvsvnuucb" path="res://Scenes/Transparency/ShippingGame/sea_rock.tscn" id="7_7wnol"]
-[ext_resource type="PackedScene" uid="uid://82m506d8815g" path="res://Scenes/Transparency/ShippingGame/island.tscn" id="8_g4nwx"]
-[ext_resource type="PackedScene" uid="uid://b4wjc8kwmoylw" path="res://Scenes/Transparency/ShippingGame/ui_transparency_minigame_2.tscn" id="9_id1am"]
-
+[ext_resource type="PackedScene" uid="uid://cqtrkfn7c7gyw" path="res://Scenes/2_Transparency/TransparencyMinigame2/whirlpool.tscn" id="4_4ij4c"]
+[ext_resource type="PackedScene" uid="uid://cu7kckdrjhlop" path="res://Scenes/2_Transparency/TransparencyMinigame2/riptide.tscn" id="6_8wma1"]
+[ext_resource type="PackedScene" uid="uid://qw4qvsvnuucb" path="res://Scenes/2_Transparency/TransparencyMinigame2/sea_rock.tscn" id="7_7wnol"]
+[ext_resource type="PackedScene" uid="uid://82m506d8815g" path="res://Scenes/2_Transparency/TransparencyMinigame2/island.tscn" id="8_g4nwx"]
+[ext_resource type="PackedScene" uid="uid://b4wjc8kwmoylw" path="res://Scenes/2_Transparency/TransparencyMinigame2/ui_transparency_minigame_2.tscn" id="9_id1am"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evnht"]
 texture = ExtResource("1_tj2v6")

@@ -21,6 +21,7 @@ var saved_new_sea_position : Vector2
 signal stopping_sea_done
 
 func _ready():
+	UI.set_tooltip("")
 	UI.start_scene_change(false, true, "")
 	
 	sea_cutscene = true
@@ -79,17 +80,40 @@ func _process(delta):
 
 func initiate_rest_of_cutscene():
 	
-	cm.call_monologue("res://Scripts/Monologues/Information/SirenIntro2.json")
+	cm.call_monologue("res://Resources/Texts/Monologues/3_Privacy/PrivacyMinigame1/SirenIntro2.json")
 	await cm.lines_complete
-	cm.call_dialogue("res://Scripts/Dialogues/Information/SirenIntro3.json")
+	cm.call_dialogue("res://Resources/Texts/Dialogues/3_Privacy/PrivacyMinigame1/SirenIntro3.json")
 	await cm.lines_complete
-	cm.call_dialogue("res://Scripts/Dialogues/Information/SirenIntro4.json")
+	cm.call_dialogue("res://Resources/Texts/Dialogues/3_Privacy/PrivacyMinigame1/SirenIntro4.json")
 	await cm.lines_complete
 	
 	panel.open_ui()
 	await panel.ui_opened
 	
-	cm.call_monologue("res://Scripts/Monologues/Information/PIIGameIntro.json")
+	cm.call_monologue("res://Resources/Texts/Monologues/3_Privacy/PrivacyMinigame1/PIIGameIntro.json")
+	await cm.lines_complete
+	
+	UI.set_tooltip("res://Assets/UI/tooltips/Privacy Mini Game_1_Part 1.png")
+	
+	panel.next_stage()
+	await panel.single_element_opened
+	await panel.stage_condition_passed
+	panel.close_page_element()
+	await panel.single_element_closed
+	
+	panel.next_stage()
+	await panel.single_element_opened
+	await panel.stage_condition_passed
+	panel.close_page_element()
+	await panel.single_element_closed
+	
+	panel.next_stage()
+	await panel.single_element_opened
+	await panel.stage_condition_passed
+	panel.close_page_element()
+	await panel.single_element_closed
+	
+	cm.call_monologue("res://Resources/Texts/Monologues/3_Privacy/PrivacyMinigame1/EncryptionGameIntro.json")
 	await cm.lines_complete
 	
 	panel.next_stage()
@@ -110,28 +134,7 @@ func initiate_rest_of_cutscene():
 	panel.close_page_element()
 	await panel.single_element_closed
 	
-	cm.call_monologue("res://Scripts/Monologues/Information/EncryptionGameIntro.json")
-	await cm.lines_complete
-	
-	panel.next_stage()
-	await panel.single_element_opened
-	await panel.stage_condition_passed
-	panel.close_page_element()
-	await panel.single_element_closed
-	
-	panel.next_stage()
-	await panel.single_element_opened
-	await panel.stage_condition_passed
-	panel.close_page_element()
-	await panel.single_element_closed
-	
-	panel.next_stage()
-	await panel.single_element_opened
-	await panel.stage_condition_passed
-	panel.close_page_element()
-	await panel.single_element_closed
-	
-	cm.call_monologue("res://Scripts/Monologues/Information/MemoryGameIntro.json")
+	cm.call_monologue("res://Resources/Texts/Monologues/3_Privacy/PrivacyMinigame1/MemoryGameIntro.json")
 	await cm.lines_complete
 	
 	panel.next_stage()
@@ -155,10 +158,10 @@ func initiate_rest_of_cutscene():
 	panel.close_ui()
 	await panel.ui_closed
 	
-	cm.call_monologue("res://Scripts/Monologues/Information/SirenCompleted.json")
+	cm.call_monologue("res://Resources/Texts/Monologues/3_Privacy/PrivacyMinigame1/SirenCompleted.json")
 	await cm.lines_complete
 	
-	cm.call_monologue("res://Scripts/Monologues/Information/FoxPostInformationGame.json")
+	cm.call_monologue("res://Resources/Texts/Monologues/3_Privacy/PrivacyMinigame1/FoxPostInformationGame.json")
 	await cm.lines_complete
 	
 	UI.start_scene_change(true, false, "")

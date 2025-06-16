@@ -1,86 +1,151 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq4wdipsppx1l"]
+[gd_scene load_steps=3 format=3 uid="uid://bq4wdipsppx1l"]
 
 [ext_resource type="Script" path="res://Scenes/end_credits.gd" id="1_b2m0k"]
+[ext_resource type="Texture2D" uid="uid://b4e0q0jutnqfo" path="res://Assets/UI/dsalogo.png" id="2_iclik"]
 
 [node name="EndCredits" type="Node2D"]
 script = ExtResource("1_b2m0k")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.0784314, 0.0470588, 0.133333, 1)
 
-[node name="TextEdit" type="RichTextLabel" parent="CanvasLayer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1900.0
+offset_bottom = -388.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="TextEdit" type="RichTextLabel" parent="CanvasLayer/MarginContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/bold_font_size = 50
 bbcode_enabled = true
-text = "[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits
-
-[center]Credits"
+text = "[center][b]Credits[/b]
+____________________________________________________________________________________________________________________________________________________________"
 fit_content = true
 autowrap_mode = 0
+
+[node name="TextEdit2" type="RichTextLabel" parent="CanvasLayer/MarginContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "
+[center][b]Project Manager[/b]
+[center]Orion Tang
+
+[center][b]Designers[/b]
+[center]Orion Tang            Orion Tang
+
+[center][b]Developers[/b]
+[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang
+
+[center][b]Artists[/b]
+[center]Orion Tang            Orion Tang            Orion Tang
+
+[center][b]Slayboss[/b]
+[center]Orion Tang
+
+[center][b]Slayking[/b]
+[center]Orion Tang
+
+[center][b]Slayqueen[/b]
+[center]Orion Tang
+
+[center][b]Producers[/b]
+[center]Orion Tang            Orion Tang 
+
+[center][b]Jingle Composer[/b]
+[center]Orion Tang
+
+[center][b]Ornament Designer[/b]
+[center]Orion Tang
+
+[center][b]Basket Weaver[/b]
+[center]Orion Tang
+
+[center][b]This Guy Also Did Something[/b]
+[center]Orion Tang
+
+
+
+
+
+
+[center][b]Special Thanks to[/b]
+
+[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
+
+[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
+
+[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
+
+[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
+
+[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
+
+[center]Orion Tang            Orion Tang            Orion Tang      
+
+
+
+
+
+[center][b]Dedicated to[/b]
+[center]Orion Tang
+
+
+
+
+
+
+
+
+
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 150
+
+[node name="Control" type="Control" parent="CanvasLayer/MarginContainer/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/Control/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5908.0
+offset_top = -700.0
+offset_right = 5908.0
+offset_bottom = 700.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.07, 0.07)
+pivot_offset = Vector2(5908, 700)
+texture = ExtResource("2_iclik")

@@ -37,6 +37,9 @@ var riptide_path: Array[Vector2] = []
 var riptide_path_index: int = 0
 
 func _ready():
+	UI.set_tooltip("res://Assets/UI/tooltips/Transparency Mini Game_2.png")
+	UI.start_scene_change(false, false, "")
+	
 	packages_remaining = total_packages
 	emit_signal("packages_updated", packages_remaining)
 	

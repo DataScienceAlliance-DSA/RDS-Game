@@ -22,6 +22,7 @@ var next_scene : String # string to next scene
 var screen_fade_goal
 var current_screen_fade_val
 @onready var screen_blur = $ScreenBlur.material as ShaderMaterial
+@onready var screen_blur_node = $ScreenBlur
 @onready var exit_game_button = $PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control3/TextureButton
 
 @onready var dialogue = $Dialogue
@@ -34,6 +35,9 @@ var current_screen_fade_val
 
 @onready var tooltip_image = $InstructionsPanel2/Control2/TextureRect
 @onready var tooltip_button = $InstructionsPanel/Control/TextureButton
+@onready var tooltip_blur = $TooltipBlur
+@onready var tooltip_button_panel = $InstructionsPanel
+@onready var tooltip_instructions_panel = $InstructionsPanel2
 
 var active_cutscene_manager : CutsceneManager # reference to the current scene's active CM
 
@@ -42,11 +46,8 @@ signal ui_change_complete
 @onready var TOOLTIP_BUTTON_VISITED_PATH = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Visited.png")
 @onready var TOOLTIP_BUTTON_NORMAL_PATH = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Active.png")
 
-func _ready():
-	screen_hide.visible = false
-	dialogue.visible = false
-	monologue.visible = false
-	tooltip_image.visible = false
+func ready():
+	UI.set_tooltip("res://Assets/UI/tooltips/Fairness Mini Game_1.png")
 
 func set_ui_color_mode(color : String):
 	dialogue.text_color = "#311E1C" if color == "light" else "#FFFFFF"
@@ -63,13 +64,12 @@ func _process(delta):
 	
 	if (Input.is_action_just_released("menu")):
 		pause_menu_active = !pause_menu_active
+		screen_blur_node.visible = pause_menu_active
 		if (!pause_menu_active): resume_game()
 		else: pause_game()
 	
-	screen_blur.set_shader_parameter("lod", .75 if pause_menu_active else 0.)
-	screen_blur.set_shader_parameter("dim", .3 if pause_menu_active else 0.)
-	
-	if get_tree().paused: return
+	# screen_blur.set_shader_parameter("lod", .75 if pause_menu_active else 0.)
+	# screen_blur.set_shader_parameter("dim", .3 if pause_menu_active else 0.)
 	
 	if (scene_hide_timer < scene_hide_max) and (scene_change_active):
 		screen_hide.size = screen_hide_begin.lerp(screen_hide_goal, (((scene_hide_timer - scene_hide_max) ** 3.0) / (scene_hide_max ** 3.0)) + 1.0) 
@@ -141,10 +141,17 @@ func fade(close):
 
 func enter_next_scene():
 	if (next_scene):
+		# UI NODE + TREE PROCESS CLEANUP
 		get_tree().change_scene_to_file(next_scene)
 		pause_menu_active = false
 		tooltip_active = false
 		get_tree().paused = false
+		screen_blur_node.visible = false
+		screen_hide.visible = false
+		dialogue.visible = false
+		monologue.visible = false
+		tooltip_image.visible = false
+		tooltip_blur.visible = false
 
 func set_active_cm(active_cutscene_manager):
 	self.active_cutscene_manager = active_cutscene_manager
@@ -152,25 +159,36 @@ func set_active_cm(active_cutscene_manager):
 func resume_button_pressed():
 	pause_menu_active = false
 	pause_menu.visible = false
+	screen_blur_node.visible = false
 	
 	resume_game()
 
 func exit_game_button_pressed():
-	get_tree().paused = true
-	
 	start_scene_change(true, true, "res://Scenes/scene_selection.tscn")
 
 func tooltip_button_pressed():
 	tooltip_active = !tooltip_active
 	if tooltip_active:
 		tooltip_button.texture_normal = TOOLTIP_BUTTON_VISITED_PATH
+		tooltip_button.modulate = Color(0.988,0.612,0.078, 1.)
 		tooltip_image.visible = true
+		tooltip_blur.visible = true
 		pause_game()
 	else:
 		tooltip_button.texture_normal = TOOLTIP_BUTTON_NORMAL_PATH
-		tooltip_button.modulate = Color(0.988,0.612,0.078, 1.)
+		tooltip_button.modulate = Color(1.,1.,1., 1.)
 		tooltip_image.visible = false
+		tooltip_blur.visible = false
 		resume_game()
+
+func set_tooltip(image_path):
+	if image_path == "":
+		tooltip_button_panel.visible = false
+		tooltip_instructions_panel.visible = false
+	else:
+		tooltip_button_panel.visible = true
+		tooltip_instructions_panel.visible = true
+		tooltip_image.texture = load(image_path)
 
 func pause_game():
 	get_tree().paused = true
