@@ -20,8 +20,8 @@ color = Color(0.0784314, 0.0470588, 0.133333, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1900.0
-offset_bottom = -388.0
+offset_top = 768.0
+offset_bottom = 3234.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -45,88 +45,73 @@ autowrap_mode = 0
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 22
+theme_override_constants/line_separation = 12
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 32
 bbcode_enabled = true
 text = "
-[center][b]Project Manager[/b]
+[center][b]Executive Director[/b]
+[center]Orion Tang
+
+[center][b]Project Managers[/b]
+[center]Orion Tang          
+[center]Orion Tang
 [center]Orion Tang
 
 [center][b]Designers[/b]
-[center]Orion Tang            Orion Tang
+[center]Orion Tang
+Orion Tang
 
 [center][b]Developers[/b]
-[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang
+[center]Orion Tang
+Orion Tang
+Orion Tang
+Orion Tang
 
 [center][b]Artists[/b]
-[center]Orion Tang            Orion Tang            Orion Tang
+[center]Orion Tang
+Orion Tang
+Orion Tang
+Orion Tang
 
-[center][b]Slayboss[/b]
+[center][b]Writer[/b]
 [center]Orion Tang
 
-[center][b]Slayking[/b]
+[center][b]Playtesters[/b]
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
 [center]Orion Tang
 
-[center][b]Slayqueen[/b]
+[center][b]Composer[/b]
 [center]Orion Tang
-
-[center][b]Producers[/b]
-[center]Orion Tang            Orion Tang 
-
-[center][b]Jingle Composer[/b]
-[center]Orion Tang
-
-[center][b]Ornament Designer[/b]
-[center]Orion Tang
-
-[center][b]Basket Weaver[/b]
-[center]Orion Tang
-
-[center][b]This Guy Also Did Something[/b]
-[center]Orion Tang
-
 
 
 
 
 
 [center][b]Special Thanks to[/b]
-
-[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
-
-[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
-
-[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
-
-[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
-
-[center]Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            Orion Tang            
-
-[center]Orion Tang            Orion Tang            Orion Tang      
-
-
-
-
-
-[center][b]Dedicated to[/b]
 [center]Orion Tang
-
-
-
-
-
-
-
-
-
-"
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang
+[center]Orion Tang"
 fit_content = true
 autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Control"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/margin_top = 150
+theme_override_constants/margin_top = 365
 
 [node name="Control" type="Control" parent="CanvasLayer/MarginContainer/Control/MarginContainer"]
 layout_mode = 2
@@ -149,3 +134,14 @@ grow_vertical = 2
 scale = Vector2(0.07, 0.07)
 pivot_offset = Vector2(5908, 700)
 texture = ExtResource("2_iclik")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
