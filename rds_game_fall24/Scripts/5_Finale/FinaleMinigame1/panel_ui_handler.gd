@@ -33,9 +33,6 @@ var interactable
 # UI placement variables
 var target_position
 
-# Setting Global Player Name for Dialogue
-@onready var player_name_label = $PlayerContainer/PositionControl/ScaleControl/Namecont/DialogueText
-
 func _ready():
 	self.set_process(false)
 	self.connect("dialogue_complete", get_dialogue_finished)

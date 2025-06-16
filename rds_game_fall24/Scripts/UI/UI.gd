@@ -44,6 +44,9 @@ signal ui_change_complete
 
 func _ready():
 	screen_hide.visible = false
+	dialogue.visible = false
+	monologue.visible = false
+	tooltip_image.visible = false
 
 func set_ui_color_mode(color : String):
 	dialogue.text_color = "#311E1C" if color == "light" else "#FFFFFF"
@@ -139,17 +142,22 @@ func fade(close):
 func enter_next_scene():
 	if (next_scene):
 		get_tree().change_scene_to_file(next_scene)
+		pause_menu_active = false
+		tooltip_active = false
+		get_tree().paused = false
 
 func set_active_cm(active_cutscene_manager):
 	self.active_cutscene_manager = active_cutscene_manager
 
 func resume_button_pressed():
-	get_tree().paused = false
+	pause_menu_active = false
+	pause_menu.visible = false
+	
+	resume_game()
 
 func exit_game_button_pressed():
-	get_tree().paused = false
-	dialogue.close_dialogue()
-	monologue.close_3choice_dialogue()
+	get_tree().paused = true
+	
 	start_scene_change(true, true, "res://Scenes/scene_selection.tscn")
 
 func tooltip_button_pressed():
@@ -170,5 +178,6 @@ func pause_game():
 	if player_group: player_group[0].reset_player()
 
 func resume_game():
-	if !(pause_menu_active or tooltip_active): get_tree().paused = false
+	if !(pause_menu_active or tooltip_active): 
+		get_tree().paused = false
 
