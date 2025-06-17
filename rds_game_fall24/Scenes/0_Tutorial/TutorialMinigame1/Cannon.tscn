@@ -2,16 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dowfc81kafhnk" path="res://Assets/0_Tutorial/TutorialMinigame1/cannon body.png" id="1_o1g55"]
 [ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://Assets/0_Tutorial/TutorialMinigame1/trajectory dot.png" id="2_ee8mj"]
-[ext_resource type="Shader" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader" id="2_inmcu"]
+[ext_resource type="Shader" path="res://Resources/Shaders/trajection.gdshader" id="2_inmcu"]
 [ext_resource type="Texture2D" uid="uid://qmjfamltg3oh" path="res://Assets/0_Tutorial/TutorialMinigame1/cannnon wheel.png" id="4_2rgn1"]
-[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scenes/Tutorial/CannonGame/tile_map.tscn" id="5_2pikp"]
-
+[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scenes/0_Tutorial/TutorialMinigame1/tile_map.tscn" id="5_2pikp"]
 
 [sub_resource type="GDScript" id="GDScript_3go7r"]
 script/source = "extends Node2D
 
 @onready var power_gauge = get_node(\"../PowerGauge/gaugebar/power_gauge\") # Reference to the power gauge
-@onready var cannonball_scene: PackedScene = preload(\"res://Scene Folder/Minigames/Cannonball_Game/Cannonball/Cannonball.tscn\")  # Preload the cannonball scene
+@onready var cannonball_scene: PackedScene = preload(\"res://Scenes/0_Tutorial/TutorialMinigame1/Cannonball.tscn\")  # Preload the cannonball scene
 
 @onready var env_gravity : float = 981
 @onready var cannon_tip_position : Vector2 = self.get_node(\"./dart_spawn\").position  # Replace with the actual position of the cannon's tip
@@ -148,6 +147,7 @@ func bag_hit():
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q06xq"]
 shader = ExtResource("2_inmcu")
 shader_parameter/scrolling_speed = 2.0
+shader_parameter/texture_modulate = Vector4(1, 1, 1, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q0ujv"]
 

@@ -23,4 +23,4 @@ func _physics_process(delta):
 		player_body.autonomous = true
 		area_activated = true
 		PS.spawning_at = to_spawn_position
-		UI.start_scene_change(true, true, "res://Scene Folder/Environment/" + to_scene_name + ".tscn")
+		UI.start_scene_change(true, true, to_scene_name)
