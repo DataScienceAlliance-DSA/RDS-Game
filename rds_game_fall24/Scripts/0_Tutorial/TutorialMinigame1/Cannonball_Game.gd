@@ -53,8 +53,6 @@ var cannonball_scene = preload("res://Scenes/0_Tutorial/TutorialMinigame1/Cannon
 
 func _ready():
 	UI.start_scene_change(false, false, "")
-	UI.get_node("Instructions").visible = true
-	UI.get_node("Instructions").set_process(true)
 	
 	# Get the platform nodes and their collision shapes
 	platform_1 = $platform_1
