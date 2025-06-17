@@ -28,7 +28,7 @@ func interact(character):
 			self.get_node("../OpenDoor").visible = true
 			self.get_node("../DoorShadow").visible = true
 			self.get_node("../OriginalBound").disabled = true
-			monologue.open_3choice_dialogue("res://Scripts/Monologues/Intro/BookshelfAmbient.json", null)
+			monologue.open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/BookshelfAmbient.json", null)
 			await monologue.closed_signal
 			
 			# fades back
