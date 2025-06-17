@@ -28,6 +28,8 @@ var current_screen_fade_val
 @onready var dialogue = $Dialogue
 @onready var monologue = $Monologue
 
+@onready var player_name_input = $PlayerNameInput
+
 @onready var pause_menu = $PauseMenu
 
 @onready var tooltip_active = false
@@ -88,6 +90,7 @@ func _process(delta):
 		if (!screen_fade_closing):
 			screen_hide.size = Vector2(DisplayServer.window_get_size().x, 0.)
 			screen_hide.visible = false
+			screen_hide.z_index = 0 # reset screen_hide to its original priority for scene transitions
 		ui_change_complete.emit()
 	
 	if (active_cutscene_manager != null):
@@ -124,6 +127,8 @@ func start_scene_change(close, switch, scene):
 
 func fade(close):
 	if (close):
+		screen_hide.z_index = -1 # allow other UI menus to overlap this fade screen
+		
 		screen_fade_active = true
 		current_screen_fade_val = 0.
 		screen_hide.modulate = Color(1.,1.,1.,current_screen_fade_val)
@@ -152,6 +157,7 @@ func enter_next_scene():
 		monologue.visible = false
 		tooltip_image.visible = false
 		tooltip_blur.visible = false
+		player_name_input.visible = false
 
 func set_active_cm(active_cutscene_manager):
 	self.active_cutscene_manager = active_cutscene_manager

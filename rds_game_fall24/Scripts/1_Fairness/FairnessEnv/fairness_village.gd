@@ -23,7 +23,7 @@ func _ready():
 			print(player.autonomous)
 			
 			player.global_position = Vector2(1629,-1839)
-			player.reset_camera()
+			# player.reset_camera()
 			
 			var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
 			var actions : Array[Action] = [crystal_rises]
@@ -37,6 +37,6 @@ func _ready():
 			
 			await cm.actions_complete
 			
-			cm.call_dialogue("res://Scripts/Dialogues/Fairness/FairnessCrystal2.json")
+			cm.call_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json")
 			
 			await cm.lines_complete

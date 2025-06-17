@@ -23,8 +23,8 @@ extends Node2D
 # _ _ 0 = 25 5 10
 # IDEAS FOR THIRD STAGE? negative weights, immovable weights and player weights on both sides?
 
-@onready var rock_weight = load("res://Scene Folder/Minigames/Fairness_Minigame_2/RockWeight.tscn")
-@onready var bag_poof = load("res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn")
+@onready var rock_weight = load("res://Scenes/1_Fairness/FairnessMinigame2/RockWeight.tscn")
+@onready var bag_poof = load("res://Scenes/UniversalComponents/bag_poof.tscn")
 
 @onready var timer = get_node("GameTimer")
 @onready var timer_label = get_node("TimerLabel")
@@ -87,10 +87,10 @@ func spawn_weight(value, spot):
 	new_weight.name = str(value)
 	if (value == 30) or (value == 35) or (value == 50): 
 		new_weight.get_node("TextEdit").text = "[center]" + str(value) + "[/center]"
-		new_weight.texture = load("res://assets/Fairness_Scale_Game/weight_50.png")
+		new_weight.texture = load("res://Assets/1_Fairness/FairnessMinigame2/weight_50.png")
 	else:
 		new_weight.get_node("TextEdit").text = ""
-		new_weight.texture = load("res://assets/Fairness_Scale_Game/weight_" + str(value) + ".png")
+		new_weight.texture = load("res://Assets/1_Fairness/FairnessMinigame2/weight_" + str(value) + ".png")
 	
 	
 	
@@ -146,7 +146,7 @@ func win_game():
 		weight.queue_free()
 	
 	PS.village_state = 3
-	UI.start_scene_change(true, true, "res://Scene Folder/Environment/fairness_village.tscn")
+	UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessEnv/fairness_village.tscn")
 	_on_game_timer_timeout()
 
 func _on_game_timer_timeout():

@@ -66,7 +66,7 @@ func _process(delta):
 		player.pause()
 		UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/1_Fairness/FairnessMinigame1/FairnessSegue.json", null)
 		await UI.get_node("Monologue").closed_signal
-		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Fairness_Minigame_2/GameManager/fairness_minigame_2.tscn")
+		UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessMinigame2/GameManager/fairness_minigame_2.tscn")
 	
 	# BEGINS GAME: SPAWNING SICK VILLAGERS
 	while (villagers.size() != max_villagers):
@@ -103,6 +103,6 @@ func is_shape_collected(index: int) -> bool:
 
 func _on_timer_timeout():
 	game_running = false
-	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Fairness/FairnessSegue.json", null)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/1_Fairness/FairnessMinigame1/FairnessSegue.json", null)
 	await UI.get_node("Monologue").closed_signal
-	UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn")
+	UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessMinigame1/GameManager/fairness_minigame_1.tscn")

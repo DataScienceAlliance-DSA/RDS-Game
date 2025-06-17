@@ -3,8 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://crwym4shqdj1" path="res://Scenes/1_Fairness/FairnessMinigame2/GameManager/Control_Fairness_Minigame_2.tscn" id="1_0mgk1"]
 [ext_resource type="Script" path="res://Scenes/1_Fairness/FairnessMinigame2/GameManager/FairnessMinigame2Logic.gd" id="1_jbw3n"]
 
-
-
 [node name="FairnessMinigame2" type="Node2D"]
 script = ExtResource("1_jbw3n")
 

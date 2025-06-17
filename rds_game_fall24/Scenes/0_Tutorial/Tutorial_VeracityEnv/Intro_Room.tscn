@@ -748,7 +748,6 @@ y_sort_enabled = true
 
 [node name="principal_villain" parent="characters" instance=ExtResource("12_k4bkc")]
 z_as_relative = false
-y_sort_enabled = true
 position = Vector2(-20, 608)
 
 [node name="Player" parent="characters" groups=["Player"] instance=ExtResource("11_75504")]
