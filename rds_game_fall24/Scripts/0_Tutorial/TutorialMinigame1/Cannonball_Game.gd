@@ -8,12 +8,12 @@ var bag_poof_animation = preload("res://Scenes/UniversalComponents/bag_poof.tscn
 
 # Declare an array to store your bag scenes
 var bag_scenes = [
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag1.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag2.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag3.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag4.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag6.tscn"),
 	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag5.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag6.tscn")
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag4.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag3.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag2.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag1.tscn")
 ]
 
 # Velocity settings for bags 4, 3, and 2

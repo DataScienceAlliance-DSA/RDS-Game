@@ -29,7 +29,7 @@ var reopening
 
 func _ready():
 	UI.start_scene_change(false, false, "")
-	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Mixing/MixingIntro.json", null)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/MixingIntro.json", null)
 	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
 	next_stage(true, true)
 
@@ -38,7 +38,7 @@ func next_stage(success : bool, readying : bool):
 	stage = stage + 1 if success else stage
 	match(stage):
 		1:
-			goal.texture = load("res://assets/Mixing_Game/smoke assets/redviolet.png")
+			goal.texture = load("res://Assets/0_Tutorial/TutorialMinigame2/smoke assets/redviolet.png")
 			goal_name = "redviolet"
 			print("goal is " + goal_name)
 		2:
