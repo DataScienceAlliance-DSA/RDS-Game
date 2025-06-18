@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwhf4kejdm1bn"]
+
+[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/item.gd" id="1_0skmo"]
+[ext_resource type="Texture2D" uid="uid://d1c8h6qhi8nmy" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Potions Assets/potion 1.PNG" id="2_fmveb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vfvpl"]
+radius = 39.6232
+
+[node name="Item" type="Node2D"]
+scale = Vector2(0.397294, 0.397294)
+script = ExtResource("1_0skmo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.309375, 0.309375)
+texture = ExtResource("2_fmveb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 6)
+shape = SubResource("CircleShape2D_vfvpl")

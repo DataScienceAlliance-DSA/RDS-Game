@@ -47,7 +47,7 @@ func _ready():
 			UI.start_scene_change(false, false, "")
 			
 			# Show the player name input screen
-			player_name_input.visible = true
+			#player_name_input.visible = true
 			#player_name_input.get_node("PlayerName").grab_focus()
 			
 			# Waiting for player to finish their name
