@@ -797,7 +797,6 @@ fit_content = true
 
 [node name="PlayerNameInput" type="Control" parent="."]
 process_mode = 2
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15

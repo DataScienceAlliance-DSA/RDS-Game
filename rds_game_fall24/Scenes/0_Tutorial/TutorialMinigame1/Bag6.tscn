@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://liw6a8ddr8lb"]
 
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd" id="1_7w61m"]
-[ext_resource type="Texture2D" uid="uid://c8d06m7lgrftv" path="res://assets/Cannon_Game/bags/Bag6.PNG" id="2_av7gp"]
+[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialMinigame1/Bag6_2.gd" id="1_7w61m"]
+[ext_resource type="Texture2D" uid="uid://c8d06m7lgrftv" path="res://Assets/0_Tutorial/TutorialMinigame1/bags/Bag6.PNG" id="2_av7gp"]
+
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uhxg"]
 radius = 5.0
