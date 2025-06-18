@@ -1,6 +1,5 @@
-extends Node
 class_name DirectionHelper
-
+extends Node
 
 static func get_vector_for_direction(direction: Enums.Direction):
 	match direction:

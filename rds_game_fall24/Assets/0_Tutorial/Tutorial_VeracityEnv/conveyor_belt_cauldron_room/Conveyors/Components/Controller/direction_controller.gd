@@ -1,5 +1,6 @@
-extends Area2D
 class_name DirectionController
+extends Area2D
+
 @export var to_directions : Array[Enums.Direction] = [Enums.Direction.Left]
 signal directions_changed
 const DIRECTION_ORDER : Array[Enums.Direction] = [Enums.Direction.Left, Enums.Direction.Up, Enums.Direction.Right, Enums.Direction.Down]

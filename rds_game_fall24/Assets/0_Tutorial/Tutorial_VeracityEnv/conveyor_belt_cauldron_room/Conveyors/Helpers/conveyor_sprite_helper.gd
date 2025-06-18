@@ -1,6 +1,5 @@
-extends Node
 class_name ConveyorSpriteHelper
-
+extends Node
 
 static func get_sprite_frame(to: Enums.Direction, from: Enums.Direction):
 	var frame = 0

@@ -1,12 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://di6osi7174the"]
 
-[ext_resource type="Script" path="res://Conveyors/belt.gd" id="1_67wq5"]
+[ext_resource type="Script" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/belt.gd" id="1_67wq5"]
 [ext_resource type="PackedScene" uid="uid://ct44m1aobfnpe" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detectors.tscn" id="2_tytce"]
 [ext_resource type="Texture2D" uid="uid://cnxmkieinng6s" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Art/conveyors_1.png" id="3_ilvd7"]
 [ext_resource type="PackedScene" uid="uid://des4s18nx8jee" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn" id="4_ix2dn"]
 [ext_resource type="PackedScene" uid="uid://bu00ntiiddy1k" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/Components/Controller/direction_controller.tscn" id="5_cclvv"]
-[ext_resource type="Script" path="res://Conveyors/Components/Controller/from_direction_controller.gd" id="6_djdp7"]
-
+[ext_resource type="Script" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/Components/Controller/from_direction_controller.gd" id="6_djdp7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_luv85"]
 size = Vector2(16, 16)
@@ -39,8 +38,3 @@ shape = SubResource("RectangleShape2D_s75kh")
 
 [node name="FromDirectionController" type="Node2D" parent="."]
 script = ExtResource("6_djdp7")
-
-[connection signal="inventory_found" from="ConveyorDetectors" to="." method="_on_conveyor_detectors_inventory_found"]
-[connection signal="item_held" from="ConveyorInventory" to="." method="_on_conveyor_inventory_item_held"]
-[connection signal="directions_changed" from="DirectionController" to="." method="_on_direction_controller_directions_changed"]
-[connection signal="direction_changed" from="FromDirectionController" to="." method="_on_from_direction_controller_direction_changed"]

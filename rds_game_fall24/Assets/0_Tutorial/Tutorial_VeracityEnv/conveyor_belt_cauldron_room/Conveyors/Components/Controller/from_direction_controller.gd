@@ -1,6 +1,7 @@
-extends Node2D
 class_name FromDirectionController
-const DIRECTION_DETECTOR = preload("res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/direction_detector.tscn")
+extends Node2D
+
+const DIRECTION_DETECTOR = preload("res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/direction_detector.tscn")
 signal direction_changed
 var directions := {}
 

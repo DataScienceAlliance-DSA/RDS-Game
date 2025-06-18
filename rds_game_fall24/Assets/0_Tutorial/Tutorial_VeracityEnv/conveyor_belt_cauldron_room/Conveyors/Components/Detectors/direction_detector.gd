@@ -1,5 +1,6 @@
-extends Area2D
 class_name DirectionDetector
+extends Area2D
+
 signal directions_changed
 var direction_controller: DirectionController
 

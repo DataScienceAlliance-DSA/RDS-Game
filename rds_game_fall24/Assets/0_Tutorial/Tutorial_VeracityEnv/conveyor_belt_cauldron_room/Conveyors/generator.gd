@@ -1,24 +1,22 @@
 extends Node2D
 
-@onready var item_scene = preload("res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/ConveyorItem.tscn")
+@onready var item_scene = preload("res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/ConveyorItem.tscn")
 @onready var timer: Timer = $Timer
 @export var directions : Array[Enums.Direction] = []
 
 func _ready():
 	$DirectionController.set_directions(directions)
-	
 
 func _on_conveyor_detectors_inventory_found(inventory: ConveyorInventory):
 	var item = $ConveyorInventory.offload_item()
 	inventory.receive_item(item)
 	timer.start()
 
-
 func _on_timer_timeout():
 	var item_area = item_scene.instantiate()
 	var item_number = randi() % 10
 	
-	var item_script = load("res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/cauldron_item.gd")
+	var item_script = load("res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/cauldron_item.gd")
 	item_area.set_script(item_script)
 	
 	var item_node = item_area as Node

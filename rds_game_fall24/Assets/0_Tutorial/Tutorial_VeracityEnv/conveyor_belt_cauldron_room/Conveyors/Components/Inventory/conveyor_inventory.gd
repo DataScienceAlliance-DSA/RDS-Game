@@ -1,5 +1,6 @@
-extends Area2D
 class_name ConveyorInventory
+extends Area2D
+
 var moving_item = false
 @export var speed: int = 100
 signal item_held
@@ -18,6 +19,7 @@ func generate_item(item: Node2D):
 
 func receive_item(item: Node2D):
 	item.reparent(holder, true)
+	print(item.name)
 	moving_item = true
 
 func offload_item():

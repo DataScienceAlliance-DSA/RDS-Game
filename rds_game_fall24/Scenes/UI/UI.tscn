@@ -793,7 +793,7 @@ fit_content = true
 
 [node name="PlayerNameInput" type="Control" parent="."]
 process_mode = 2
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -803,54 +803,39 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("28_bndvi")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PlayerNameInput"]
+[node name="MarginContainer" type="MarginContainer" parent="PlayerNameInput"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -548.0
-offset_right = 548.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 100
 
-[node name="Player NamePanel" type="TextureRect" parent="PlayerNameInput/HBoxContainer"]
+[node name="Player NamePanel" type="TextureRect" parent="PlayerNameInput/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
 texture = ExtResource("28_3sout")
+expand_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PlayerNameInput"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -120.5
-offset_top = -80.0
-offset_right = 120.5
-grow_horizontal = 2
-grow_vertical = 0
+[node name="PlayerName" type="LineEdit" parent="PlayerNameInput/MarginContainer"]
+layout_mode = 2
+placeholder_text = "name"
+alignment = 1
+max_length = 8
+selecting_enabled = false
 
-[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/VBoxContainer"]
+[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 texture_normal = ExtResource("29_hke57")
 texture_pressed = ExtResource("30_gxcxm")
 texture_hover = ExtResource("31_u3tru")
 texture_disabled = ExtResource("32_jle5g")
-
-[node name="PlayerName" type="LineEdit" parent="PlayerNameInput"]
-layout_mode = 0
-offset_left = 467.0
-offset_top = 377.0
-offset_right = 899.0
-offset_bottom = 425.0
-placeholder_text = "name"
-alignment = 1
-max_length = 8
-selecting_enabled = false
 
 [node name="Tooltip" type="MarginContainer" parent="." groups=["Tooltip"]]
 process_mode = 2
@@ -986,6 +971,7 @@ texture = ExtResource("34_1se8c")
 
 [node name="InstructionsPanel" type="MarginContainer" parent="."]
 process_mode = 3
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1041,6 +1027,7 @@ expand_mode = 2
 
 [node name="PauseMenu" type="MarginContainer" parent="."]
 process_mode = 2
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

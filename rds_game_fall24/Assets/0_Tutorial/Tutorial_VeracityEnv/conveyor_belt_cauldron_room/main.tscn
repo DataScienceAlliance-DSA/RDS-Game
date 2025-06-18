@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://d3r5ri72l82h6" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/trash.tscn" id="5_1poeg"]
 [ext_resource type="PackedScene" uid="uid://cfwfejmwtkwmg" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/belt.tscn" id="7_mtc1u"]
 
-
 [node name="Main" type="Node2D"]
 texture_filter = 1
+position = Vector2(0, 64)
 
 [node name="Belt" parent="." instance=ExtResource("7_mtc1u")]
 position = Vector2(96, 32)
@@ -36,6 +36,7 @@ scale = Vector2(2, 2)
 [node name="Generator" parent="." instance=ExtResource("5_1a0pq")]
 position = Vector2(96, -32)
 scale = Vector2(2, 2)
+directions = Array[int]([])
 
 [node name="Trash" parent="." instance=ExtResource("5_1poeg")]
 position = Vector2(656, 416)

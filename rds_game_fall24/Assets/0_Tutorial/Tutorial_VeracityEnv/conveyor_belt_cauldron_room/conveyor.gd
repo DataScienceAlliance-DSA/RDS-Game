@@ -11,7 +11,7 @@ func reset_cutscene():
 	
 	var item1_area = item_scene.instantiate()
 	
-	var item_script = load("res://ConveyorBelt Master/Managers/cauldron_item.gd")
+	var item_script = load("res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/cauldron_item.gd")
 	item1_area.set_script(item_script)
 	
 	var item1_node = item1_area as Node

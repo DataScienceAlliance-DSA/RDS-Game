@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://u0a3qrofb114"]
 
-[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://assets/Cauldron_Room/Orbs Assets/OrbsWandsPotions.png" id="1_p702c"]
-[ext_resource type="Script" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/Managers/ConveyorItem.gd" id="1_r7pwg"]
+[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/OrbsWandsPotions.png" id="1_p702c"]
+[ext_resource type="Script" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/ConveyorItem.gd" id="1_r7pwg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqe3t"]
 

@@ -1,9 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3r5ri72l82h6"]
 
 [ext_resource type="PackedScene" uid="uid://des4s18nx8jee" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/Components/Inventory/conveyor_inventory.tscn" id="1_oedog"]
-[ext_resource type="Script" path="res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/trash.gd" id="1_q3gsk"]
+[ext_resource type="Script" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/trash.gd" id="1_q3gsk"]
 [ext_resource type="Texture2D" uid="uid://dg2lae4h8h8qi" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Art/item delete.png" id="2_vurs7"]
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lanr3"]
 size = Vector2(16, 16)
@@ -20,5 +19,3 @@ shape = SubResource("RectangleShape2D_lanr3")
 visible = false
 z_index = -2
 texture = ExtResource("2_vurs7")
-
-[connection signal="item_held" from="ConveyorInventory" to="." method="_on_conveyor_inventory_item_held"]

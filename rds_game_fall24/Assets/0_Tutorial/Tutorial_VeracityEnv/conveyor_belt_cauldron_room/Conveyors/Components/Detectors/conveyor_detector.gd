@@ -1,5 +1,5 @@
-extends Area2D
 class_name ConveyorDetector
+extends Area2D
 
 var conveyor_inventory: ConveyorInventory
 

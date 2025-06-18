@@ -1,6 +1,5 @@
 extends Node2D
-class_name ConveyorDetectors
-const CONVEYOR_DETECTOR = preload("res://Scene Folder/Environment/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detector.tscn")
+const CONVEYOR_DETECTOR = preload("res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Conveyors/Components/Detectors/conveyor_detector.tscn")
 var directions : Array[Enums.Direction] = []
 const DIRECTION_ORDER : Array[Enums.Direction] = [Enums.Direction.Left, Enums.Direction.Up, Enums.Direction.Right, Enums.Direction.Down]
 const DIR_COUNT := 4
