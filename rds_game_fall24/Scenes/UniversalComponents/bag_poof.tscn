@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfjaebxk4cl2a"]
 
-[ext_resource type="Texture2D" uid="uid://driya7hway11j" path="res://assets/Cannon_Game/bag_poof/poof_spritesheet.png" id="1_4n71e"]
-[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.gd" id="2_wrcje"]
+[ext_resource type="Texture2D" uid="uid://driya7hway11j" path="res://Assets/0_Tutorial/TutorialMinigame1/bag_poof/poof_spritesheet.png" id="1_4n71e"]
+[ext_resource type="Script" path="res://Scripts/Components/bag_poof.gd" id="2_djvon"]
 
 [sub_resource type="Animation" id="Animation_ye7pj"]
 length = 0.001
@@ -62,7 +62,7 @@ z_index = 5
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_4n71e")
 hframes = 5
-script = ExtResource("2_wrcje")
+script = ExtResource("2_djvon")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

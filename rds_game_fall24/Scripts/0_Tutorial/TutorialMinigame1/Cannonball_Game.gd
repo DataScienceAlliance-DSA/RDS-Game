@@ -8,12 +8,12 @@ var bag_poof_animation = preload("res://Scenes/UniversalComponents/bag_poof.tscn
 
 # Declare an array to store your bag scenes
 var bag_scenes = [
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag1.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag2.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag3.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag4.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag6.tscn"),
 	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag5.tscn"),
-	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag6.tscn")
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag4.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag3.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag2.tscn"),
+	preload("res://Scenes/0_Tutorial/TutorialMinigame1/Bag1.tscn")
 ]
 
 # Velocity settings for bags 4, 3, and 2
@@ -188,7 +188,7 @@ func _on_bag_triggered():
 
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():
-	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/UnhappyCannon.json", null)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame1/UnhappyCannon.json", null)
 	await UI.get_node("Monologue").closed_signal
 	
 	if current_bag_index == 5:  # Assuming index 5 is the final bag
@@ -212,6 +212,6 @@ func end_game():
 	bag_load_phase = 0
 	_play_animation_at_position(current_bag.position, "bagpoof_go")
 	current_bag.visible = false
-	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/MixingSegue.json", null)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame1/MixingSegue.json", null)
 	await UI.get_node("Monologue").closed_signal
-	UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Mixing_Game/GameManager/Mixing_Game.tscn")
+	UI.start_scene_change(true, true, "res://Scenes/0_Tutorial/TutorialMinigame2/GameManager/Mixing_Game.tscn")

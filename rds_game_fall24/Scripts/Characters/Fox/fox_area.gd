@@ -17,7 +17,7 @@ func interact(interactor_object):
 	
 	interactions = interactions + 1	# increment interactions made with this area
 	interactor_object.set_process(false)
-	dialogue_ui.open_dialogue("res://Scripts/Dialogues/Cauldron/FoxBlurb.json", self)
+	dialogue_ui.open_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialEnv/FoxBlurb.json", self)
 
 func end_interaction():
 	# disable interactable, enable player (interactor)
