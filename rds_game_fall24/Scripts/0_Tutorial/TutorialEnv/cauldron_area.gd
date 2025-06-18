@@ -31,9 +31,9 @@ func interact(interactor_object):
 	interactor.set_process(false)
 	match interactions:
 		1:
-			monologue_ui.open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/OrbHypothesis.json", self)
+			monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Cauldron/OrbHypothesis.json", self)
 		_:
-			monologue_ui.open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/CauldronBlurb.json", self)
+			monologue_ui.open_3choice_dialogue("res://Scripts/Monologues/Cauldron/CauldronBlurb.json", self)
 
 func end_interaction():
 	# disable interactable, enable player (interactor)
@@ -41,7 +41,7 @@ func end_interaction():
 	self.set_process(true)
 	
 	if (interactions == 1):
-		UI.start_scene_change(true, true, "res://Scenes/0_Tutorial/TutorialMinigame1/Cannonball_Game.tscn")
+		UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Cannonball_Game/GameManager/Cannonball_Game.tscn")
 
 func set_animation(anim_name: String):
 	animation_player.current_animation = anim_name

@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dowfc81kafhnk" path="res://Assets/0_Tutorial/TutorialMinigame1/cannon body.png" id="1_o1g55"]
 [ext_resource type="Texture2D" uid="uid://b1lsbaaj37mn3" path="res://Assets/0_Tutorial/TutorialMinigame1/trajectory dot.png" id="2_ee8mj"]
-[ext_resource type="Shader" path="res://Scene Folder/Minigames/Cannonball_Game/GameManager/trajection.gdshader" id="2_inmcu"]
+[ext_resource type="Shader" path="res://Resources/Shaders/trajection.gdshader" id="2_inmcu"]
 [ext_resource type="Texture2D" uid="uid://qmjfamltg3oh" path="res://Assets/0_Tutorial/TutorialMinigame1/cannnon wheel.png" id="4_2rgn1"]
-[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scenes/Tutorial/CannonGame/tile_map.tscn" id="5_2pikp"]
+[ext_resource type="PackedScene" uid="uid://b1k24nnqgwa42" path="res://Scenes/0_Tutorial/TutorialMinigame1/tile_map.tscn" id="5_2pikp"]
+
 
 
 [sub_resource type="GDScript" id="GDScript_3go7r"]

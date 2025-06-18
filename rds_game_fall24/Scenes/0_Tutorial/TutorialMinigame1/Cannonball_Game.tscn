@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://driya7hway11j" path="res://Assets/0_Tutorial/TutorialMinigame1/bag_poof/poof_spritesheet.png" id="6_1k8v2"]
 [ext_resource type="Texture2D" uid="uid://cfveiu5idd6ok" path="res://Assets/0_Tutorial/TutorialMinigame1/Platform2.PNG" id="11_qwkcx"]
 
+
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sapuo"]
 size = Vector2(43.8422, 361.9)
 
