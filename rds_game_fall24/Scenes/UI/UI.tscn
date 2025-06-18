@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=52 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/UI/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/UI/dialogue.gd" id="1_ne7wx"]
@@ -52,6 +52,10 @@ fill_to = Vector2(0.5, 0)
 gradient = SubResource("Gradient_6hbbo")
 fill_from = Vector2(0.508547, 1)
 fill_to = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_seqqk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmiho"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sde5j"]
 shader = ExtResource("2_jc1cx")
@@ -793,6 +797,7 @@ fit_content = true
 
 [node name="PlayerNameInput" type="Control" parent="."]
 process_mode = 2
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
@@ -816,22 +821,55 @@ theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 250
 theme_override_constants/margin_bottom = 100
 
-[node name="Player NamePanel" type="TextureRect" parent="PlayerNameInput/MarginContainer"]
+[node name="PlayerNamePanel" type="TextureRect" parent="PlayerNameInput/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("28_3sout")
 expand_mode = 3
 
-[node name="PlayerName" type="LineEdit" parent="PlayerNameInput/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PlayerNameInput/MarginContainer/PlayerNamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 275
+theme_override_constants/margin_top = 275
+theme_override_constants/margin_right = 275
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer"]
 layout_mode = 2
-placeholder_text = "name"
+
+[node name="PlayerName" type="LineEdit" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 0)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("12_sp71b")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_seqqk")
+placeholder_text = "Hero"
 alignment = 1
 max_length = 8
 selecting_enabled = false
 
-[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/MarginContainer"]
+[node name="Panel" type="Panel" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lmiho")
+
+[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
 texture_normal = ExtResource("29_hke57")
 texture_pressed = ExtResource("30_gxcxm")
 texture_hover = ExtResource("31_u3tru")
