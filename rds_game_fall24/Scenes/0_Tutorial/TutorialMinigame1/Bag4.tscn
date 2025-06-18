@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b61jawdkrxcmy"]
 
-[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialMinigame1/Bag6_2.gd" id="1_puoe5"]
-[ext_resource type="Texture2D" uid="uid://bp5xu33omo7wo" path="res://Assets/0_Tutorial/TutorialMinigame1/bags/Bag4.PNG" id="2_rbor8"]
+[ext_resource type="Script" path="res://Scene Folder/Minigames/Cannonball_Game/Bag/Bag6_2.gd" id="1_8xfij"]
+[ext_resource type="Texture2D" uid="uid://bp5xu33omo7wo" path="res://assets/Cannon_Game/bags/Bag4.PNG" id="2_rbor8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uhxg"]
 radius = 5.0
@@ -10,7 +10,7 @@ height = 46.0
 [node name="bag_" type="StaticBody2D"]
 collision_layer = 255
 collision_mask = 255
-script = ExtResource("1_puoe5")
+script = ExtResource("1_8xfij")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.17, 0.17)

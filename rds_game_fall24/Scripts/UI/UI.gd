@@ -158,7 +158,6 @@ func enter_next_scene():
 		tooltip_image.visible = false
 		tooltip_blur.visible = false
 		player_name_input.visible = false
-		screen_hide.z_index = 0
 
 func set_active_cm(active_cutscene_manager):
 	self.active_cutscene_manager = active_cutscene_manager

@@ -29,7 +29,7 @@ var reopening
 
 func _ready():
 	UI.start_scene_change(false, false, "")
-	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/MixingIntro.json", null)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/Mixing/MixingIntro.json", null)
 	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
 	next_stage(true, true)
 
@@ -38,48 +38,48 @@ func next_stage(success : bool, readying : bool):
 	stage = stage + 1 if success else stage
 	match(stage):
 		1:
-			goal.texture = load("res://Assets/0_Tutorial/TutorialMinigame2/smoke assets/redviolet.png")
+			goal.texture = load("res://assets/Mixing_Game/smoke assets/redviolet.png")
 			goal_name = "redviolet"
 			print("goal is " + goal_name)
 		2:
-			goal.texture = load("res://Assets/0_Tutorial/TutorialMinigame2/smoke assets/greenyellow.png")
+			goal.texture = load("res://assets/Mixing_Game/smoke assets/greenyellow.png")
 			goal_name = "greenyellow"
 			var orbs = get_tree().get_nodes_in_group("MixingOrbs")
 			for orb in orbs:
 				if (orb.name == 'red') or (orb.name == 'violet'):
 					orb.queue_free()
 			if success:
-				UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/goodmix1.json", null)
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix1.json", null)
 			else:
-				UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/badmix.json", null)
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 		3:
-			goal.texture = load("res://Assets/0_Tutorial/TutorialMinigame2/smoke assets/tealblue.png")
+			goal.texture = load("res://assets/Mixing_Game/smoke assets/tealblue.png")
 			goal_name = "tealblue"
 			var orbs = get_tree().get_nodes_in_group("MixingOrbs")
 			for orb in orbs:
 				if (orb.name == 'green') or (orb.name == 'yellow'):
 					orb.queue_free()
 			if success:
-				UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/goodmix2.json", null)
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix2.json", null)
 			else:
-				UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/badmix.json", null)
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 		4:
-			goal.texture = load("res://Assets/0_Tutorial/TutorialMinigame2/smoke assets/blank.tres")
+			goal.texture = load("res://assets/Mixing_Game/smoke assets/blank.tres")
 			var orbs = get_tree().get_nodes_in_group("MixingOrbs")
 			for orb in orbs:
 				if (orb.name == 'teal') or (orb.name == 'blue'):
 					orb.queue_free()
 			if success:
-				UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/goodmix3.json", null)
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/goodmix3.json", null)
 				await UI.get_node("Monologue").monologue_complete
 				
 				PS.spawning_at = Vector2(962,902)
 				PS.cauldron_state = 1
 				PS.library_state = 2
 				print(PS.cauldron_state)
-				UI.start_scene_change(true, true, "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room.tscn")
+				UI.start_scene_change(true, true, "res://Scene Folder/Environment/Cauldron_Room.tscn")
 			else:
-				UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/badmix.json", null)
+				UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 	if not readying:
 		await UI.get_node("Monologue").closed_signal
 		set_mixing_ui_visibility(true)
@@ -152,7 +152,7 @@ func set_cauldron_animation(anim_name):
 			await get_tree().create_timer(1.0).timeout
 			cauldron_player.current_animation = "bubbles"
 			await get_tree().create_timer(2.0).timeout
-			UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/badmix.json", null)
+			UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/badmix.json", null)
 			next_stage(false, false)
 
 func mix():
@@ -164,31 +164,31 @@ func mix():
 		
 		match(orb_slot[1]):
 			"violet":
-				get_node("LeftOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 1.PNG")
+				get_node("LeftOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG")
 			"red":
-				get_node("LeftOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 2.PNG")
+				get_node("LeftOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG")
 			"teal":
-				get_node("LeftOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 3.PNG")
+				get_node("LeftOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 3.PNG")
 			"yellow":
-				get_node("LeftOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 4.PNG")
+				get_node("LeftOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG")
 			"blue":
-				get_node("LeftOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 5.PNG")
+				get_node("LeftOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG")
 			"green":
-				get_node("LeftOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 6.PNG")
+				get_node("LeftOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG")
 		
 		match(orb_slot[0]):
 			"violet":
-				get_node("RightOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 1.PNG")
+				get_node("RightOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 1.PNG")
 			"red":
-				get_node("RightOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 2.PNG")
+				get_node("RightOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 2.PNG")
 			"teal":
-				get_node("RightOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 3.PNG")
+				get_node("RightOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 3.PNG")
 			"yellow":
-				get_node("RightOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 4.PNG")
+				get_node("RightOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 4.PNG")
 			"blue":
-				get_node("RightOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 5.PNG")
+				get_node("RightOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 5.PNG")
 			"green":
-				get_node("RightOrb/Sprite2D").texture = load("res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/orb 6.PNG")
+				get_node("RightOrb/Sprite2D").texture = load("res://assets/Cauldron_Room/Orbs Assets/orb 6.PNG")
 		
 		_play_animation_at_position(orb_pos1, "bagpoof_come")
 		get_node("LeftOrb").position = orb_pos1
@@ -220,7 +220,7 @@ func set_mixing_ui_visibility(visibility):
 		reopening = true
 
 func _play_animation_at_position(position: Vector2, animation_name: String):
-	var bag_poof_animation = load("res://Scenes/UniversalComponents/bag_poof.tscn")
+	var bag_poof_animation = load("res://Scene Folder/Minigames/Cannonball_Game/BagPoof/bag_poof.tscn")
 	
 	var bag_poof = bag_poof_animation.instantiate()
 	bag_poof.position = position

@@ -147,4 +147,3 @@ stretch_mode = 4
 script = ExtResource("4_6d0ck")
 
 [connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
