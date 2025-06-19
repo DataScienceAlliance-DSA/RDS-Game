@@ -11393,7 +11393,7 @@ script = ExtResource("1_7ms5p")
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("2_tmlac")]
 z_index = 2
-position = Vector2(1664, 2816)
+position = Vector2(3328, 1657)
 cam_zoom = 0.85
 speed = 450.0
 

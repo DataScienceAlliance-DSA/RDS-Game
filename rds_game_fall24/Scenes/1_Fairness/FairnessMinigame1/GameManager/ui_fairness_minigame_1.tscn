@@ -24,7 +24,7 @@ offset_bottom = 239.0
 theme_override_font_sizes/normal_font_size = 48
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 120.0
 one_shot = true
 autostart = true
 

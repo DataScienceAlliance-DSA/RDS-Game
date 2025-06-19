@@ -40,3 +40,5 @@ func _ready():
 			cm.call_dialogue("res://Resources/Texts/Dialogues/1_Fairness/FairnessEnv/FairnessCrystal2.json")
 			
 			await cm.lines_complete
+			
+			UI.start_scene_change(true, true, "res://Scenes/2_Transparency/TransparencyMinigame1/Cargo_Game.tscn") # TBD: FINISH CUTSCENES FROM FIGMA HERE, THEN PERMIT PLAYER TO GO TO DOCK

@@ -1,15 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxx43n3wh7m6v"]
 
-[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialMinigame1/Bag6_2.gd" id="1_mfpl3"]
+[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialMinigame1/Bag6_2.gd" id="1_sqg8r"]
 [ext_resource type="Texture2D" uid="uid://qapi487lx3j6" path="res://Assets/0_Tutorial/TutorialMinigame1/bags/Bag5.PNG" id="2_oci0m"]
-
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uhxg"]
 radius = 3.0
 height = 44.0
 
 [node name="bag_" type="StaticBody2D"]
-script = ExtResource("1_mfpl3")
+script = ExtResource("1_sqg8r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.17, 0.17)
