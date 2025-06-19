@@ -73,6 +73,10 @@ func _process(delta):
 			if (game_cam_velocity.y < 0.):
 				game_cam.global_position += game_cam_velocity * delta
 				game_cam_velocity.y += 50. * delta
+				print("helping...")
+			else:
+				set_process(false)
+				UI.start_scene_change(true, true, "res://Scenes/5_Finale/FinaleMinigame1/FinaleMinigame1.tscn")
 			player.game_permits_player = false
 		else:
 			player.speed = 0.
@@ -84,7 +88,7 @@ func _process(delta):
 				restart_game()
 
 func restart_game():
-	UI.start_scene_change(true, false, "")
+	UI.fade(true)
 	var fake_actions : Array[Action] = []
 	cm = CutsceneManager.new(fake_actions)
 	add_child(cm)

@@ -62,8 +62,6 @@ func set_ui_color_mode(color : String):
 	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
 
 func _process(delta):
-	print("pause_menu_active: " + str(pause_menu_active))
-	
 	if (Input.is_action_just_released("menu")):
 		pause_menu_active = !pause_menu_active
 		if (pause_menu_active): 

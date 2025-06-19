@@ -12,6 +12,8 @@ extends Node2D
 func _ready():
 	match(PS.cauldron_state):
 		0:
+			PS.library_state = 1 # PRE-SET LIBRARY STATE WHENEVER PLAYER LEAVES
+			
 			player.autonomous = true
 			get_tree().get_nodes_in_group("Fox")[0].following_player = false
 			
@@ -39,6 +41,8 @@ func _ready():
 			# RE ENABLE THE PLAYER
 			player.autonomous = false
 		1:
+			PS.library_state = 2 # PRE-SET LIBRARY STATE WHENEVER PLAYER LEAVES
+			
 			player.autonomous = true
 			
 			if PS.spawning_at != Vector2(0.,0.): player.global_position = PS.spawning_at

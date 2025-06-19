@@ -875,8 +875,8 @@ texture_scale = 3.0
 [node name="LibraryToCourtyardExit" type="Area2D" parent="."]
 position = Vector2(3776, 610)
 script = ExtResource("25_kbg87")
-from_scene_name = "Intro_Room"
-to_scene_name = "school_courtyard"
+from_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Intro_Room.tscn"
+to_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/school_courtyard.tscn"
 from_respawn_position = Vector2(3712, 610)
 to_spawn_position = Vector2(72, 449)
 

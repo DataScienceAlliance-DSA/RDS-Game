@@ -164,7 +164,7 @@ func initiate_rest_of_cutscene():
 	cm.call_monologue("res://Resources/Texts/Monologues/3_Privacy/PrivacyMinigame1/FoxPostInformationGame.json")
 	await cm.lines_complete
 	
-	UI.start_scene_change(true, false, "")
+	UI.start_scene_change(true, true, "res://Scenes/4_Veracity/VeracityMinigame2/VeracityMinigame2.tscn") # TEMPORARILY TRANSPORTS PLAYER TO VERACITY 2, SINCE PRIVACY 2 AND VERACITY 1 ARE TBD
 
 func interp(start, finish, delta, easing):
 	match(easing):

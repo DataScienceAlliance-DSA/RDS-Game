@@ -11,16 +11,23 @@ func _process(delta):
 	for area in get_overlapping_areas():
 		if (!item_stack.has(area)):
 			item_stack.push_back(area)
-	
-	enable_animation()
 
-func enable_animation():
-	if (!item_stack.is_empty()):
-		var item_name = item_stack.pop_back().name
-		if (item_name != "PlayerArea"):
-			set_animation(item_name)
-		else:
-			enable_animation()
+func enable_animation(item_index):
+	match(item_index):
+		0:
+			set_animation("MagentaOrb")
+		1:
+			set_animation("PinkOrb")
+		0:
+			set_animation("TealOrb")
+		1:
+			set_animation("YellowOrb")
+		0:
+			set_animation("BlueOrb")
+		1:
+			set_animation("GreenOrb")
+		_:
+			set_animation("NonOrb")
 
 ## INTERACT METHOD, called when player interacts with this area
 func interact(interactor_object):

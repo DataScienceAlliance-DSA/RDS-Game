@@ -176,7 +176,7 @@ func _ready():
 			
 			get_node("bookshelves/SecretBookshelf/DoorArea").open_bookshelf()
 			UI.start_scene_change(false, false, "")
-			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = false
+			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
 		2:
 			player.position = PS.spawning_at
 			

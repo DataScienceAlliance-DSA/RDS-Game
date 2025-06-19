@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://82m506d8815g"]
+[gd_scene load_steps=5 format=3 uid="uid://82m506d8815g"]
 
 [ext_resource type="Texture2D" uid="uid://dre16lbm54kh2" path="res://Assets/2_Transparency/TransparencyMinigame2/island_mock.png" id="1_ahvgj"]
 [ext_resource type="Script" path="res://Scripts/2_Transparency/TransparencyMinigame2/island_area.gd" id="2_ggcwl"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_68qra"]
+radius = 135.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_swmgn"]
-radius = 128.0
+radius = 134.742
 
 [node name="Island" type="Node2D"]
 y_sort_enabled = true
@@ -17,16 +19,16 @@ texture = ExtResource("1_ahvgj")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 14)
-scale = Vector2(0.861354, -0.762605)
-shape = SubResource("CircleShape2D_swmgn")
+position = Vector2(0, 38)
+scale = Vector2(0.716, -0.428)
+shape = SubResource("CircleShape2D_68qra")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("2_ggcwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 14)
-scale = Vector2(0.861354, -0.762605)
+position = Vector2(0, 39)
+scale = Vector2(0.861, -0.493)
 shape = SubResource("CircleShape2D_swmgn")
 
 [node name="CheckpointPosition" type="Marker2D" parent="."]

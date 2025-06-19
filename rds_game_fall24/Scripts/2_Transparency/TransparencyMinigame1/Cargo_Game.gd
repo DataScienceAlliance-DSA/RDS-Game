@@ -157,10 +157,10 @@ func end_game(complete):
 		dragging_line.queue_free()
 	
 	if complete:
-		print("GAME BEAT")
+		UI.start_scene_change(true, true, "res://Scenes/2_Transparency/TransparencyMinigame2/transparency_game_2.tscn")
 	else:
 		undesignate_all()
-		print("GAME FAILED")
+		UI.start_scene_change(true, true, "res://Scenes/2_Transparency/TransparencyMinigame1/Cargo_Game.tscn")
 
 func check_game():
 	pass

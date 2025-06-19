@@ -103,6 +103,7 @@ func is_shape_collected(index: int) -> bool:
 
 func _on_timer_timeout():
 	game_running = false
+	player.autonomous = true
 	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/1_Fairness/FairnessMinigame1/FairnessSegue.json", null)
 	await UI.get_node("Monologue").closed_signal
 	UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessMinigame1/GameManager/fairness_minigame_1.tscn")

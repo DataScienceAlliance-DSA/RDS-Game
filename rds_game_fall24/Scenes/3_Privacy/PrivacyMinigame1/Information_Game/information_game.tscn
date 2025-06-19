@@ -4743,6 +4743,7 @@ offset_right = 852.0
 offset_bottom = 839.0
 
 [node name="Encryption1" type="VBoxContainer" parent="InformationPanel/Panel/SingleElement"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

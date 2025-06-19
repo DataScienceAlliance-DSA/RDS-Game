@@ -300,7 +300,6 @@ script = ExtResource("4_5dn57")
 position = Vector2(960, 1248)
 
 [node name="Follower" parent="." groups=["Fox"] instance=ExtResource("8_o1l77")]
-y_sort_enabled = true
 position = Vector2(1056, 928)
 script = ExtResource("8_k8trx")
 
@@ -313,7 +312,7 @@ position = Vector2(2, 0)
 [node name="Cauldron" type="StaticBody2D" parent="."]
 y_sort_enabled = true
 
-[node name="CauldronArea" type="Area2D" parent="Cauldron"]
+[node name="CauldronArea" type="Area2D" parent="Cauldron" groups=["CauldronArea"]]
 position = Vector2(960, 672)
 script = ExtResource("15_u11sj")
 
@@ -346,8 +345,8 @@ texture = ExtResource("6_55uhj")
 
 [node name="ExitArea" parent="." instance=ExtResource("14_a7qit")]
 position = Vector2(960, 1344)
-from_scene_name = "Cauldron_Room"
-to_scene_name = "Intro_Room"
+from_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room.tscn"
+to_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Intro_Room.tscn"
 from_respawn_position = Vector2(960, 1248)
 to_spawn_position = Vector2(1056, 128)
 

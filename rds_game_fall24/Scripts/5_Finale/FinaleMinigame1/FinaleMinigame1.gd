@@ -261,6 +261,8 @@ func perform_spell_cutscene():
 			
 			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/ParaccuracyCast.json")
 			await cm.lines_complete
+			
+			UI.start_scene_change(true, true, "res://Scenes/end_credits.tscn")
 
 func continue_retry():
 	panel.current_dialogue_ended = false

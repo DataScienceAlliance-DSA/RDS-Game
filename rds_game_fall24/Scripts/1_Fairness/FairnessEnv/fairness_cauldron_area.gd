@@ -9,5 +9,5 @@ func interact(interactor_object):
 	interactions = interactions + 1
 	match interactions:
 		1:
-			UI.start_scene_change(true, true, "res://Scene Folder/Minigames/Fairness_Minigame_1/GameManager/fairness_minigame_1.tscn")
+			UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessMinigame1/GameManager/fairness_minigame_1.tscn")
 	

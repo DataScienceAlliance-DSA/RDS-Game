@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dscubawkhsn0f"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/item.gd" id="1_0skmo"]
-[ext_resource type="Texture2D" uid="uid://d1c8h6qhi8nmy" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Potions Assets/potion 1.PNG" id="2_fmveb"]
+[ext_resource type="Texture2D" uid="uid://ckhae4btifobd" path="res://Assets/0_Tutorial/TutorialMinigame2/Orbs Assets/OrbsWandsPotions.png" id="2_81lh2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vfvpl"]
 radius = 39.6232
@@ -11,8 +11,10 @@ scale = Vector2(0.397294, 0.397294)
 script = ExtResource("1_0skmo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.309375, 0.309375)
-texture = ExtResource("2_fmveb")
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("2_81lh2")
+hframes = 6
+vframes = 2
 
 [node name="Area2D" type="Area2D" parent="."]
 

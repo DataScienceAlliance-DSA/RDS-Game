@@ -117,3 +117,5 @@ func deliver_package(island: Node2D):
 	print("Signal emitted with packages_remaining:", packages_remaining)
 	
 	checkpoint_position = player.global_position
+	
+	if (!packages_remaining): UI.start_scene_change(true, true, "res://Scenes/3_Privacy/PrivacyMinigame1/Information_Game/information_game.tscn")
