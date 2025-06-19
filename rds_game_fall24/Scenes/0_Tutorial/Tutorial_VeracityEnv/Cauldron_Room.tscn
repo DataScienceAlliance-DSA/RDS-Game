@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=27 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/Cauldron_Room.gd" id="1_qh2ts"]
 [ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Interior_Tiles.tres" id="3_ja67r"]
@@ -7,13 +7,12 @@
 [ext_resource type="Script" path="res://Scripts/Characters/Fox/fox.gd" id="8_k8trx"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="8_o1l77"]
 [ext_resource type="PackedScene" uid="uid://cfqpepeud7y6s" path="res://Scenes/UI/UI.tscn" id="9_n76cm"]
+[ext_resource type="PackedScene" uid="uid://bwkny0df24gmh" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/ConveyorBelt.tscn" id="10_lutkq"]
 [ext_resource type="Texture2D" uid="uid://ccfd0hhfjvrlj" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Misc Assets/candlelight.PNG" id="11_bl43j"]
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/candle_light.gd" id="12_1uavd"]
-[ext_resource type="Script" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/conveyor.gd" id="12_y73ja"]
 [ext_resource type="PackedScene" uid="uid://cylx63fkud7d5" path="res://Scenes/UniversalComponents/Areas/environment_exit_area.tscn" id="14_a7qit"]
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="16_0o7eq"]
-[ext_resource type="PackedScene" uid="uid://cosv56386e4bn" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/main.tscn" id="16_ukm0n"]
 [ext_resource type="Texture2D" uid="uid://v3fe3rbixa55" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Cauldron Assets/Cauldron SS.png" id="20_rac73"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bu35p"]
@@ -308,10 +307,8 @@ script = ExtResource("8_k8trx")
 [node name="UI" parent="." instance=ExtResource("9_n76cm")]
 visible = false
 
-[node name="Conveyor" parent="." instance=ExtResource("16_ukm0n")]
-z_index = -2
-position = Vector2(256, 256)
-script = ExtResource("12_y73ja")
+[node name="ConveyorBelt" parent="." instance=ExtResource("10_lutkq")]
+position = Vector2(2, 0)
 
 [node name="Cauldron" type="StaticBody2D" parent="."]
 y_sort_enabled = true
