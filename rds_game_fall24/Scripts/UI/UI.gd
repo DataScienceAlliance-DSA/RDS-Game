@@ -62,13 +62,16 @@ func set_ui_color_mode(color : String):
 	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
 
 func _process(delta):
-	pause_menu.visible = pause_menu_active
+	print("pause_menu_active: " + str(pause_menu_active))
 	
 	if (Input.is_action_just_released("menu")):
 		pause_menu_active = !pause_menu_active
-		screen_blur_node.visible = pause_menu_active
-		if (!pause_menu_active): resume_game()
-		else: pause_game()
+		if (pause_menu_active): 
+			pause_menu_active = true
+			pause_menu.visible = true
+			screen_blur_node.visible = true
+			pause_game()
+		else: resume_button_pressed()
 	
 	# screen_blur.set_shader_parameter("lod", .75 if pause_menu_active else 0.)
 	# screen_blur.set_shader_parameter("dim", .3 if pause_menu_active else 0.)
@@ -167,7 +170,7 @@ func resume_button_pressed():
 	pause_menu.visible = false
 	screen_blur_node.visible = false
 	
-	resume_game()
+	resume_game(true)
 
 func exit_game_button_pressed():
 	start_scene_change(true, true, "res://Scenes/scene_selection.tscn")
@@ -185,7 +188,7 @@ func tooltip_button_pressed():
 		tooltip_button.modulate = Color(1.,1.,1., 1.)
 		tooltip_image.visible = false
 		tooltip_blur.visible = false
-		resume_game()
+		resume_game(false)
 
 func set_tooltip(image_path):
 	if image_path == "":
@@ -201,7 +204,8 @@ func pause_game():
 	var player_group = get_tree().get_nodes_in_group("Player")
 	if player_group: player_group[0].reset_player()
 
-func resume_game():
-	if !(pause_menu_active or tooltip_active): 
-		get_tree().paused = false
-
+func resume_game(caller_is_pause_menu):
+	if caller_is_pause_menu:
+		if !tooltip_active: get_tree().paused = false
+	else:
+		if !pause_menu_active: get_tree().paused = false

@@ -10,7 +10,6 @@ func start_path_movement(path_ref: Path2D):
 	done = false
 	t = 0.0
 	set_process(true)
-	print("Item ready to move")
 
 func _process(delta):
 	if done or not path:

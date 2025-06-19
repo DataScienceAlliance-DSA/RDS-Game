@@ -2,11 +2,11 @@ extends Control
 
 signal confirmed
 
-@onready var name_input = $MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer/PlayerName
-@onready var confirm_button = $MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer/ConfirmButton
+@onready var name_input = $PlayerNamePanel/MarginContainer/VBoxContainer/PlayerName
+@onready var confirm_button = $PlayerNamePanel/MarginContainer/VBoxContainer/ConfirmButton
 
-func _ready():
-	confirm_button.pressed.connect(_on_confirm_button_pressed)
+func _process(delta):
+	if len(name_input.text) > 12: name_input.text = name_input.text.substr(0,11)
 
 func _on_confirm_button_pressed():
 	var name = name_input.text.strip_edges()
@@ -16,5 +16,7 @@ func _on_confirm_button_pressed():
 		emit_signal("confirmed")
 		print(GlobalPlayerName.global_player_name)
 	else:
-		print("Name cannot be empty.")
-		
+		GlobalPlayerName.global_player_name = "Hero"
+		visible = false
+		emit_signal("confirmed")
+		print(GlobalPlayerName.global_player_name)

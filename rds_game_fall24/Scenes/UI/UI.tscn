@@ -737,6 +737,7 @@ scroll_active = false
 
 [node name="DebugStuff" type="MarginContainer" parent="."]
 process_mode = 2
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -795,53 +796,47 @@ bbcode_enabled = true
 text = "[center][b]Skipping..."
 fit_content = true
 
-[node name="PlayerNameInput" type="Control" parent="."]
-process_mode = 2
+[node name="PlayerNameInput" type="MarginContainer" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -2.0
+offset_left = -4.47253
+offset_right = 4.47253
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("28_bndvi")
-
-[node name="MarginContainer" type="MarginContainer" parent="PlayerNameInput"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 250
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 250
 theme_override_constants/margin_bottom = 100
+script = ExtResource("28_bndvi")
 
-[node name="PlayerNamePanel" type="TextureRect" parent="PlayerNameInput/MarginContainer"]
+[node name="PlayerNamePanel" type="TextureRect" parent="PlayerNameInput"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 texture = ExtResource("28_3sout")
 expand_mode = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="PlayerNameInput/MarginContainer/PlayerNamePanel"]
+[node name="MarginContainer" type="MarginContainer" parent="PlayerNameInput/PlayerNamePanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 275
 theme_override_constants/margin_top = 275
 theme_override_constants/margin_right = 275
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerNameInput/PlayerNamePanel/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 
-[node name="PlayerName" type="LineEdit" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer"]
+[node name="PlayerName" type="LineEdit" parent="PlayerNameInput/PlayerNamePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
@@ -860,13 +855,14 @@ alignment = 1
 max_length = 8
 selecting_enabled = false
 
-[node name="Panel" type="Panel" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer"]
+[node name="Panel" type="Panel" parent="PlayerNameInput/PlayerNamePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_lmiho")
 
-[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/MarginContainer/PlayerNamePanel/MarginContainer/VBoxContainer"]
+[node name="ConfirmButton" type="TextureButton" parent="PlayerNameInput/PlayerNamePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -1307,6 +1303,7 @@ expand_mode = 1
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3" to="Monologue" method="_on_choice_texture_3_mouse_exited"]
+[connection signal="pressed" from="PlayerNameInput/PlayerNamePanel/MarginContainer/VBoxContainer/ConfirmButton" to="PlayerNameInput" method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="InstructionsPanel/Control/TextureButton" to="." method="tooltip_button_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control/TextureButton" to="." method="resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Panel2/MarginContainer/VBoxContainer/Control3/TextureButton" to="." method="exit_game_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwhf4kejdm1bn"]
+[gd_scene load_steps=4 format=3 uid="uid://dscubawkhsn0f"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/item.gd" id="1_0skmo"]
 [ext_resource type="Texture2D" uid="uid://d1c8h6qhi8nmy" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Potions Assets/potion 1.PNG" id="2_fmveb"]

@@ -8,7 +8,6 @@ func _ready():
 	$SpawnTimer.start()
 
 func _on_spawn_timer_timeout():
-	print("timer has timed out")
 	var item = item_scene.instantiate()
 	add_child(item)
 	item.global_position = $Path2D.global_position + $Path2D.curve.sample_baked(0)  # Optional: set initial pos

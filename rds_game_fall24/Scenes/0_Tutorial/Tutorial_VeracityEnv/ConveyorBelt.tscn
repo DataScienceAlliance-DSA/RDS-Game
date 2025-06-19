@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwkny0df24gmh"]
+[gd_scene load_steps=4 format=3 uid="uid://m6ha36b3vkti"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/ConveyorBelt.gd" id="1_ck7w0"]
-[ext_resource type="PackedScene" uid="uid://bwhf4kejdm1bn" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/item.tscn" id="2_hdfb7"]
+[ext_resource type="PackedScene" uid="uid://dscubawkhsn0f" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/item.tscn" id="2_hdfb7"]
 
 [sub_resource type="Curve2D" id="Curve2D_qaocy"]
 _data = {
