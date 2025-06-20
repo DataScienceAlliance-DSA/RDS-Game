@@ -4,6 +4,7 @@ extends Node2D
 @onready var target_scene_container_pos = Vector2(100, 64)
 var target_button
 @onready var target_button_just_clicked = false
+@onready var play_scene_button = $CanvasLayer/MarginContainer2/VBoxContainer/Panel2/VBoxContainer/Button
 
 @onready var game_title = $CanvasLayer/MarginContainer2/VBoxContainer/Panel/RichTextLabel
 @onready var title_margin_container = $CanvasLayer/MarginContainer
@@ -17,24 +18,27 @@ func _ready():
 	UI.start_scene_change(false, false, "")
 	UI.set_tooltip("")
 	
-	for button in scene_container.get_children():
+	for control in scene_container.get_children():
+		var button = control.get_children()[0]
 		button.pressed.connect(register_button_press.bind(button))
 
 func _process(delta):
 	## SCENE CONTAINER VISUAL ANIMATION
 	if !target_button_just_clicked:
 		if Input.is_action_just_released("scroll_down"):
+			if target_button: target_button.scale = Vector2(1., 1.)
 			target_scene_container_pos.x -= 128.
 			target_button = null
 			target_title_container_margin = Vector2(450,450)
 			target_desc_container_margin = Vector2(-650,1366)
 		elif Input.is_action_just_released("scroll_up"):
+			if target_button: target_button.scale = Vector2(1., 1.)
 			target_scene_container_pos.x += 128.
 			target_button = null
 			target_title_container_margin = Vector2(450,450)
 			target_desc_container_margin = Vector2(-650,1366)
 	else:
-		target_scene_container_pos.x = 100. - target_button.position.x
+		target_scene_container_pos.x = 100. - target_button.get_parent().position.x
 		target_button_just_clicked = false
 	target_scene_container_pos.x = max(min(100., target_scene_container_pos.x), -5472.)
 	
@@ -46,8 +50,14 @@ func _process(delta):
 	title_margin_container.add_theme_constant_override("margin_right", current_title_container_margin.y)
 	desc_margin_container.add_theme_constant_override("margin_left", current_desc_container_margin.x)
 	desc_margin_container.add_theme_constant_override("margin_right", current_desc_container_margin.y)
+	
+	if target_button: 
+		var f_scale = lerpf(target_button.scale.x, 1.25, delta * 5.)
+		target_button.scale = Vector2(f_scale, f_scale)
 
 func register_button_press(button):
+	if target_button: target_button.scale = Vector2(1., 1.)
+	
 	target_button = button
 	target_button_just_clicked = true
 	
@@ -55,6 +65,45 @@ func register_button_press(button):
 	target_desc_container_margin = Vector2(100,616)
 	
 	game_title.text = "[color=EAEDFA][center]\n[b]"+str(button.editor_description)+"[/b]"
+	
+	var index = target_button.name.substr(target_button.name.length() - 2, 2) as int
+	match index:
+		1:
+			play_scene_button.disabled = false
+		2:
+			play_scene_button.disabled = false
+		3:
+			play_scene_button.disabled = false
+		4:
+			play_scene_button.disabled = false
+		5:
+			play_scene_button.disabled = false
+		6:
+			play_scene_button.disabled = false
+		7:
+			play_scene_button.disabled = true
+		8:
+			play_scene_button.disabled = false
+		9:
+			play_scene_button.disabled = false
+		10:
+			play_scene_button.disabled = true
+		11:
+			play_scene_button.disabled = false
+		12:
+			play_scene_button.disabled = true
+		13:
+			play_scene_button.disabled = true
+		14:
+			play_scene_button.disabled = true
+		15:
+			play_scene_button.disabled = false
+		16:
+			play_scene_button.disabled = true
+		17:
+			play_scene_button.disabled = false
+		18:
+			play_scene_button.disabled = true
 
 func play_scene_button_pressed():
 	if target_button:

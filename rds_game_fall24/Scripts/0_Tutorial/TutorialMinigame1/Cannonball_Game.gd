@@ -188,7 +188,7 @@ func _on_bag_triggered():
 
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():
-	UI.get_node("Monologue").open_3choice_dialogue("res://Scripts/Monologues/UnhappyCannon.json", null)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialMinigame1/UnhappyCannon.json", null)
 	await UI.get_node("Monologue").closed_signal
 	
 	if current_bag_index == 5:  # Assuming index 5 is the final bag

@@ -1,11 +1,22 @@
-[gd_scene load_steps=13 format=3 uid="uid://fweegrv33m56"]
+[gd_scene load_steps=25 format=3 uid="uid://fweegrv33m56"]
 
 [ext_resource type="Shader" path="res://Resources/Shaders/scrolling_tiled_texture.gdshader" id="1_h587x"]
 [ext_resource type="Script" path="res://Scenes/UniversalComponents/scene_selection.gd" id="1_ix1cn"]
 [ext_resource type="Texture2D" uid="uid://bhpnu1qk4apj5" path="res://Assets/Debug/scene_selection_bg_tile.png" id="2_ugman"]
-[ext_resource type="Texture2D" uid="uid://62ruo4svafg2" path="res://Assets/Debug/finale_minigame_1_scene.png" id="3_whro6"]
+[ext_resource type="Texture2D" uid="uid://c44whxdiginrk" path="res://Assets/UI/scene-previews/prologue.png" id="4_yuxbb"]
+[ext_resource type="Texture2D" uid="uid://cisim30mxd2td" path="res://Assets/UI/scene-previews/cannongame.png" id="5_rb2wy"]
 [ext_resource type="Texture2D" uid="uid://ciaiu1rnjnsde" path="res://Assets/Debug/mouse_scroll_indicator.png" id="5_ru00l"]
 [ext_resource type="Texture2D" uid="uid://bbcsov6w731s5" path="res://Assets/Debug/mouse_click_indicator.png" id="6_23l82"]
+[ext_resource type="Texture2D" uid="uid://c7n5l3b6e8sw5" path="res://Assets/UI/scene-previews/mixinggame.png" id="6_c2dc2"]
+[ext_resource type="Texture2D" uid="uid://c48fhthjxxh5j" path="res://Assets/UI/scene-previews/fairnesspillar.png" id="7_ibwwu"]
+[ext_resource type="Texture2D" uid="uid://cd8urq1l5sekr" path="res://Assets/UI/scene-previews/collectiongame.png" id="8_aviwp"]
+[ext_resource type="Texture2D" uid="uid://cnuikcvexx2pf" path="res://Assets/UI/scene-previews/balancegame.png" id="9_4fojm"]
+[ext_resource type="Texture2D" uid="uid://0c7802q8dbwe" path="res://Assets/UI/scene-previews/WIP.png" id="10_dk0bm"]
+[ext_resource type="Texture2D" uid="uid://dhssj0rdexlxu" path="res://Assets/UI/scene-previews/cargogame.png" id="11_3gfef"]
+[ext_resource type="Texture2D" uid="uid://ddg423vf5xwkm" path="res://Assets/UI/scene-previews/shippinggame.png" id="12_0dg8o"]
+[ext_resource type="Texture2D" uid="uid://bqspfj0c3qfqd" path="res://Assets/UI/scene-previews/encryptiongame.png" id="13_ygbbw"]
+[ext_resource type="Texture2D" uid="uid://rsy864gbenrf" path="res://Assets/UI/scene-previews/escapegame.png" id="14_7qnie"]
+[ext_resource type="Texture2D" uid="uid://calyt8vvr5v5c" path="res://Assets/UI/scene-previews/spellgame.png" id="15_gen5x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kjttl"]
 shader = ExtResource("1_h587x")
@@ -50,6 +61,13 @@ corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4776s"]
+bg_color = Color(0.0784314, 0.109804, 0.364706, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [node name="SceneSelection" type="Node2D"]
 script = ExtResource("1_ix1cn")
 
@@ -80,98 +98,224 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_constants/h_separation = 150
+theme_override_constants/h_separation = 383
 columns = 18
 
-[node name="TextureButton01" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton01" type="TextureButton" parent="CanvasLayer/GridContainer/Control"]
 editor_description = "Prologue"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_yuxbb")
 
-[node name="TextureButton02" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control2" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton02" type="TextureButton" parent="CanvasLayer/GridContainer/Control2"]
 editor_description = "Cannon Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_rb2wy")
 
-[node name="TextureButton03" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control3" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton03" type="TextureButton" parent="CanvasLayer/GridContainer/Control3"]
 editor_description = "Mixing Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_c2dc2")
 
-[node name="TextureButton04" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control4" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton04" type="TextureButton" parent="CanvasLayer/GridContainer/Control4"]
 editor_description = "Fairness Pillar"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_ibwwu")
 
-[node name="TextureButton05" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control5" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton05" type="TextureButton" parent="CanvasLayer/GridContainer/Control5"]
 editor_description = "Collection Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_aviwp")
 
-[node name="TextureButton06" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control6" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton06" type="TextureButton" parent="CanvasLayer/GridContainer/Control6"]
 editor_description = "Balance Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_4fojm")
 
-[node name="TextureButton07" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control7" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton07" type="TextureButton" parent="CanvasLayer/GridContainer/Control7"]
 editor_description = "Transparency Pillar"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_dk0bm")
 
-[node name="TextureButton08" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control8" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton08" type="TextureButton" parent="CanvasLayer/GridContainer/Control8"]
 editor_description = "Cargo Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("11_3gfef")
 
-[node name="TextureButton09" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control9" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton09" type="TextureButton" parent="CanvasLayer/GridContainer/Control9"]
 editor_description = "Shipping Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_0dg8o")
 
-[node name="TextureButton10" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control10" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton10" type="TextureButton" parent="CanvasLayer/GridContainer/Control10"]
 editor_description = "Privacy Pillar"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_dk0bm")
 
-[node name="TextureButton11" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control11" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton11" type="TextureButton" parent="CanvasLayer/GridContainer/Control11"]
 editor_description = "Encryption Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("13_ygbbw")
 
-[node name="TextureButton12" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control12" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton12" type="TextureButton" parent="CanvasLayer/GridContainer/Control12"]
 editor_description = "Security Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_dk0bm")
 
-[node name="TextureButton13" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control13" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton13" type="TextureButton" parent="CanvasLayer/GridContainer/Control13"]
 editor_description = "Veracity Pillar"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_dk0bm")
 
-[node name="TextureButton14" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control14" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton14" type="TextureButton" parent="CanvasLayer/GridContainer/Control14"]
 editor_description = "Map Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_dk0bm")
 
-[node name="TextureButton15" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control15" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton15" type="TextureButton" parent="CanvasLayer/GridContainer/Control15"]
 editor_description = "Escape Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_7qnie")
 
-[node name="TextureButton16" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control16" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton16" type="TextureButton" parent="CanvasLayer/GridContainer/Control16"]
 editor_description = "Finale"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_dk0bm")
 
-[node name="TextureButton17" type="TextureButton" parent="CanvasLayer/GridContainer"]
+[node name="Control17" type="Control" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton17" type="TextureButton" parent="CanvasLayer/GridContainer/Control17"]
 editor_description = "Spell Game"
-layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("15_gen5x")
 
-[node name="TextureButton18" type="TextureButton" parent="CanvasLayer/GridContainer"]
-editor_description = "Memory Game"
+[node name="Control18" type="Control" parent="CanvasLayer/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_whro6")
+
+[node name="TextureButton18" type="TextureButton" parent="CanvasLayer/GridContainer/Control18"]
+editor_description = "Memory Game"
+layout_mode = 1
+offset_right = 233.0
+offset_bottom = 131.0
+pivot_offset = Vector2(116, 65)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_dk0bm")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -357,6 +501,7 @@ size_flags_stretch_ratio = 0.25
 theme_override_styles/normal = SubResource("StyleBoxFlat_33y2k")
 theme_override_styles/hover = SubResource("StyleBoxFlat_a5wny")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_50wwr")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4776s")
 text = "Play"
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer2/VBoxContainer/Panel2/VBoxContainer/Button" to="." method="play_scene_button_pressed"]
