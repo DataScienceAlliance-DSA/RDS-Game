@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var end_point: Node2D = $EndPoint
-@onready var collider: CollisionShape2D = $Collider
+@onready var collider: CollisionShape2D = $CollisionShape2D
 @onready var blocker: StaticBody2D = $Blocker
 
 @export var tile_size: int = 128  # Size of one riptide tile

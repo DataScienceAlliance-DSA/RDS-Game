@@ -152,6 +152,7 @@ func enter_next_scene():
 		pause_menu_active = false
 		tooltip_active = false
 		get_tree().paused = false
+		pause_menu.visible = false
 		screen_blur_node.visible = false
 		screen_hide.visible = false
 		dialogue.visible = false

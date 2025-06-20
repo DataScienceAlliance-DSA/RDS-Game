@@ -1,8 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcokypoe8ay0"]
 
-[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialMinigame1/bag1.gd" id="1_46g5t"]
+[ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialMinigame1/bag1.gd" id="1_0lvn6"]
 [ext_resource type="Texture2D" uid="uid://bwi12w4x6ahy3" path="res://Assets/0_Tutorial/TutorialMinigame1/flying bag spritesheet.png" id="2_yvekq"]
-
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uhxg"]
 radius = 7.0
@@ -50,7 +49,7 @@ _data = {
 [node name="Bag1" type="StaticBody2D"]
 collision_layer = 255
 collision_mask = 255
-script = ExtResource("1_46g5t")
+script = ExtResource("1_0lvn6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2, -14)

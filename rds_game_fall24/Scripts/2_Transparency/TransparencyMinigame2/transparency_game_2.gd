@@ -5,6 +5,7 @@ signal packages_updated(count: int)
 @onready var whirlpools = get_tree().get_nodes_in_group("whirlpools")
 @onready var riptides = get_tree().get_nodes_in_group("riptides")
 @onready var player = $"Main Character"
+@onready var crystal = get_tree().get_nodes_in_group("Crystal")[0]
 @onready var game_ui = $UITransparencyMinigame2
 
 @export var spin_speed: float = 0.7
@@ -36,7 +37,13 @@ var is_in_riptide := false
 var riptide_path: Array[Vector2] = []
 var riptide_path_index: int = 0
 
+var cm : CutsceneManager # cutscene manager for this 
+
 func _ready():
+	var actions : Array[Action] = []
+	cm = CutsceneManager.new(actions)
+	add_child(cm)
+	
 	UI.set_tooltip("res://Assets/UI/tooltips/Transparency Mini Game_2.png")
 	UI.start_scene_change(false, false, "")
 	
@@ -48,7 +55,7 @@ func _ready():
 	for wp in whirlpools:
 		wp.connect("body_entered", Callable(self, "_on_whirlpool_body_entered").bind(wp))
 		whirlpool_max_scales[wp] = wp.scale  # Save the editor set scale!
-
+	
 	for rt in riptides:
 		rt.connect("body_entered", Callable(self, "_on_riptide_body_entered").bind(rt))
 
@@ -118,4 +125,19 @@ func deliver_package(island: Node2D):
 	
 	checkpoint_position = player.global_position
 	
-	if (!packages_remaining): UI.start_scene_change(true, true, "res://Scenes/3_Privacy/PrivacyMinigame1/Information_Game/information_game.tscn")
+	if (!packages_remaining): 
+		player.autonomous = true
+		
+		crystal.global_position = player.global_position + Vector2(141,-64)
+		
+		crystal.get_node("crystal").sprite = load("res://Assets/1_Fairness/FairnessEnv/transparency_crystal_animation.png")
+		var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
+		var actions : Array[Action] = [crystal_rises]
+		for action in actions:
+			add_child(action)
+		
+		cm.series_action()
+		
+		await cm.actions_complete
+		
+		UI.start_scene_change(true, true, "res://Scenes/3_Privacy/PrivacyMinigame1/Information_Game/information_game.tscn")
