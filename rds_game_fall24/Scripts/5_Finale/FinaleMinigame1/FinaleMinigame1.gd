@@ -263,10 +263,8 @@ func perform_spell_cutscene():
 			
 			## PLACE GUARDIAN DATA CHARM SEQUENCE HERE, then initiate memory game:
 			
-			run_memory_game()
-
-func run_memory_game():
-	
+			# run_memory_game()
+			UI.start_scene_change(true, true, "res://Scenes/end_credits.tscn")
 
 func continue_retry():
 	panel.current_dialogue_ended = false
