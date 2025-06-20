@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://brbvje62otapx"]
+[gd_scene load_steps=59 format=3 uid="uid://brbvje62otapx"]
 
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_7g5v0"]
 [ext_resource type="Texture2D" uid="uid://blaeuafsqnao0" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Wall Assets/floors_walls_spritesheet.png" id="1_l6flh"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://fjlfk3kb6sf0" path="res://Assets/5_Finale/mind_attack_3.png" id="14_vruxm"]
 [ext_resource type="Texture2D" uid="uid://c1u8wglqn432y" path="res://Assets/5_Finale/mind_attack_response.png" id="15_ublhv"]
 [ext_resource type="Texture2D" uid="uid://kbxbj4q7sg75" path="res://Assets/5_Finale/paraccuracy_cast.png" id="16_kfvd2"]
+[ext_resource type="PackedScene" uid="uid://u6e7muqd2r2d" path="res://Scenes/5_Finale/FinaleMinigame2/memory_panel.tscn" id="18_3fxn0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uiw2i"]
 texture = ExtResource("1_l6flh")
@@ -493,3 +494,5 @@ amount = 30
 process_material = SubResource("ParticleProcessMaterial_inyqa")
 texture = ExtResource("12_m7l8r")
 lifetime = 10.0
+
+[node name="MemoryPanel" parent="." instance=ExtResource("18_3fxn0")]

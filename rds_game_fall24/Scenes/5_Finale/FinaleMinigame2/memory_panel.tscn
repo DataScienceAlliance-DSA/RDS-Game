@@ -1,0 +1,207 @@
+[gd_scene load_steps=9 format=3 uid="uid://u6e7muqd2r2d"]
+
+[ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame2/memory_panel_handler.gd" id="1_3rhlm"]
+[ext_resource type="Texture2D" uid="uid://cd8urq1l5sekr" path="res://Assets/UI/scene-previews/collectiongame.png" id="1_aemx6"]
+[ext_resource type="Texture2D" uid="uid://rsy864gbenrf" path="res://Assets/UI/scene-previews/escapegame.png" id="2_co442"]
+[ext_resource type="Texture2D" uid="uid://ddg423vf5xwkm" path="res://Assets/UI/scene-previews/shippinggame.png" id="3_fcqxy"]
+[ext_resource type="Texture2D" uid="uid://0c7802q8dbwe" path="res://Assets/UI/scene-previews/WIP.png" id="4_j1ptn"]
+[ext_resource type="Texture2D" uid="uid://bqspfj0c3qfqd" path="res://Assets/UI/scene-previews/encryptiongame.png" id="5_mh0i3"]
+[ext_resource type="Texture2D" uid="uid://dhssj0rdexlxu" path="res://Assets/UI/scene-previews/cargogame.png" id="6_jtxnn"]
+[ext_resource type="Texture2D" uid="uid://cnuikcvexx2pf" path="res://Assets/UI/scene-previews/balancegame.png" id="7_b1lat"]
+
+[node name="MemoryPanel" type="CanvasLayer"]
+script = ExtResource("1_3rhlm")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_right = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 300
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -65.0
+offset_right = 115.5
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("1_aemx6")
+
+[node name="Panel2" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -65.0
+offset_right = 115.5
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("2_co442")
+
+[node name="Panel3" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -64.5
+offset_right = 115.5
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("3_fcqxy")
+
+[node name="Panel4" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -65.0
+offset_right = 107.34
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("4_j1ptn")
+expand_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -65.0
+offset_right = 115.5
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("5_mh0i3")
+
+[node name="Panel2" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -65.0
+offset_right = 115.5
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("6_jtxnn")
+
+[node name="Panel3" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -64.5
+offset_right = 115.5
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("4_j1ptn")
+
+[node name="Panel4" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -65.0
+offset_right = 107.34
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 65)
+texture = ExtResource("7_b1lat")
+expand_mode = 2

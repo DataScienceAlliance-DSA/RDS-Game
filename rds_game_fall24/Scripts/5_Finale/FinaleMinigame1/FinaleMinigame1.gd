@@ -22,7 +22,7 @@ var cm : CutsceneManager # cutscene manager for this
 @onready var cam_zoom_target = 1.
 @onready var new_zoom = 1.
 
-func _ready():
+func _ready(): # FINALE CUTSCENE + MINIGAME 1: SPELL GAME
 	UI.set_ui_color_mode("light")
 	
 	var actions : Array[Action] = []
@@ -157,8 +157,6 @@ func _ready():
 	for spell in spell_container.get_children():
 		var button = spell.get_node("TextureRect").get_children()[0]
 		button.pressed.connect(register_button_press.bind(button))
-	
-	return
 
 func _process(_delta):
 	new_zoom = lerp(new_zoom, cam_zoom_target, _delta * 2)
@@ -263,7 +261,12 @@ func perform_spell_cutscene():
 			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/ParaccuracyCast.json")
 			await cm.lines_complete
 			
-			UI.start_scene_change(true, true, "res://Scenes/end_credits.tscn")
+			## PLACE GUARDIAN DATA CHARM SEQUENCE HERE, then initiate memory game:
+			
+			run_memory_game()
+
+func run_memory_game():
+	
 
 func continue_retry():
 	panel.current_dialogue_ended = false
