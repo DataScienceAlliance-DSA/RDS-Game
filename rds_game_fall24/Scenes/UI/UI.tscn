@@ -1005,7 +1005,6 @@ texture = ExtResource("34_1se8c")
 
 [node name="InstructionsPanel" type="MarginContainer" parent="."]
 process_mode = 3
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -41,7 +41,7 @@ func _process(delta):
 	var time_left = timer.time_left
 	
 	# update timer ui
-	timer_bar.size = Vector2(10130. * (time_left / 60.), 1122.)
+	timer_bar.size = Vector2(10130. * (time_left / timer.wait_time), 1122.)
 	
 	#Calculate minutes and seconds
 	var minutes = int(time_left) / 60

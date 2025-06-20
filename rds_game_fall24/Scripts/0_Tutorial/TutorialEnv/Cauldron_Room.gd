@@ -57,8 +57,8 @@ func _ready():
 			# Waiting for player to finish their name
 			await player_name_input.confirmed
 			
-			dialogue_ui.open_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialEnv/FoxIntro.json", null)
-			await dialogue_ui.dialogue_complete
+			# dialogue_ui.open_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialEnv/FoxIntro.json", null)
+			# await dialogue_ui.dialogue_complete
 			
 			get_node("Cauldron/CauldronArea").interactions = 2
 			

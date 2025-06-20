@@ -496,3 +496,4 @@ texture = ExtResource("12_m7l8r")
 lifetime = 10.0
 
 [node name="MemoryPanel" parent="." instance=ExtResource("18_3fxn0")]
+visible = false

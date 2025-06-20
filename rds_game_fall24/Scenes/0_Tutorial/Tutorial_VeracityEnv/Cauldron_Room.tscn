@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Characters/Fox/fox.gd" id="8_k8trx"]
 [ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="8_o1l77"]
 [ext_resource type="PackedScene" uid="uid://cfqpepeud7y6s" path="res://Scenes/UI/UI.tscn" id="9_n76cm"]
-[ext_resource type="PackedScene" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/ConveyorBelt.tscn" id="10_lutkq"]
+[ext_resource type="PackedScene" uid="uid://m6ha36b3vkti" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/ConveyorBelt.tscn" id="10_lutkq"]
 [ext_resource type="Texture2D" uid="uid://ccfd0hhfjvrlj" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Misc Assets/candlelight.PNG" id="11_bl43j"]
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/candle_light.gd" id="12_1uavd"]
 [ext_resource type="PackedScene" uid="uid://cylx63fkud7d5" path="res://Scenes/UniversalComponents/Areas/environment_exit_area.tscn" id="14_a7qit"]
