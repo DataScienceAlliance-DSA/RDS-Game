@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://qw4qvsvnuucb" path="res://Scenes/2_Transparency/TransparencyMinigame2/sea_rock.tscn" id="7_7wnol"]
 [ext_resource type="PackedScene" uid="uid://82m506d8815g" path="res://Scenes/2_Transparency/TransparencyMinigame2/island.tscn" id="8_g4nwx"]
 [ext_resource type="PackedScene" uid="uid://b4wjc8kwmoylw" path="res://Scenes/2_Transparency/TransparencyMinigame2/ui_transparency_minigame_2.tscn" id="9_id1am"]
+[ext_resource type="Script" path="res://Scripts/Components/fairness_crystal.gd" id="10_1epod"]
 [ext_resource type="PackedScene" uid="uid://c0b5pntcik1eq" path="res://Scenes/1_Fairness/FairnessEnv/fairness_crystal.tscn" id="10_osueo"]
-[ext_resource type="Script" path="res://Scripts/Characters/CharacterController.gd" id="10_uqvqa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evnht"]
 texture = ExtResource("1_tj2v6")
@@ -13209,8 +13209,9 @@ position = Vector2(1664, 2816)
 [node name="UITransparencyMinigame2" parent="." instance=ExtResource("9_id1am")]
 
 [node name="Crystal" type="CharacterBody2D" parent="." groups=["Crystal"]]
+z_index = 2
 position = Vector2(2016, 3072)
-script = ExtResource("10_uqvqa")
+script = ExtResource("10_1epod")
 
 [node name="crystal" parent="Crystal" instance=ExtResource("10_osueo")]
 visible = true

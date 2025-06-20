@@ -83,6 +83,7 @@ func _ready():
 		cm.series_action()
 		await cm.actions_complete
 		
+		crystal.get_node("crystal").texture = load("res://Assets/1_Fairness/FairnessEnv/veracity_crystal_animation.png")
 		var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
 		actions = [crystal_rises]
 		for action in actions:
@@ -96,7 +97,6 @@ func _ready():
 		
 		malvoren.visible = true
 		
-		crystal.get_node("crystal").sprite = load("res://Assets/1_Fairness/FairnessEnv/veracity_crystal_animation.png")
 		crystal_rises = UniqueAction.new(crystal, Callable(crystal, "disappear"))
 		var actionH = Action.new(malvoren, "LerpMove", Vector2(960, 476), 200)
 		actions = [crystal_rises, actionH]

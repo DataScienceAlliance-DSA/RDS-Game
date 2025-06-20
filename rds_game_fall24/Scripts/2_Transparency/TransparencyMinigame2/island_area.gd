@@ -19,3 +19,7 @@ func interact(player):
 	game_controller.checkpoint_position = player.global_position
 	
 	delivered = true
+	
+	if (game_controller.packages_remaining == 0): 
+		game_controller.end_game()
+

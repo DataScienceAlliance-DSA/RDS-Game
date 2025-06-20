@@ -124,20 +124,20 @@ func deliver_package(island: Node2D):
 	print("Signal emitted with packages_remaining:", packages_remaining)
 	
 	checkpoint_position = player.global_position
+
+func end_game():
+	set_process(false)
+	player.autonomous = true
 	
-	if (!packages_remaining): 
-		player.autonomous = true
-		
-		crystal.global_position = player.global_position + Vector2(141,-64)
-		
-		crystal.get_node("crystal").sprite = load("res://Assets/1_Fairness/FairnessEnv/transparency_crystal_animation.png")
-		var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
-		var actions : Array[Action] = [crystal_rises]
-		for action in actions:
-			add_child(action)
-		
-		cm.series_action()
-		
-		await cm.actions_complete
-		
-		UI.start_scene_change(true, true, "res://Scenes/3_Privacy/PrivacyMinigame1/Information_Game/information_game.tscn")
+	crystal.global_position = player.global_position + Vector2(141,-64)
+	
+	crystal.get_node("crystal").texture = load("res://Assets/1_Fairness/FairnessEnv/transparency_crystal_animation.png")
+	var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
+	var actions : Array[Action] = [crystal_rises]
+	for action in actions:
+		add_child(action)
+	cm.set_actions(actions)
+	cm.series_action()
+	await cm.actions_complete
+	
+	UI.start_scene_change(true, true, "res://Scenes/3_Privacy/PrivacyMinigame1/Information_Game/information_game.tscn")
