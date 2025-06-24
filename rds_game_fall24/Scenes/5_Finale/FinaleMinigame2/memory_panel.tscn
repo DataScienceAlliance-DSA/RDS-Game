@@ -1,13 +1,127 @@
-[gd_scene load_steps=9 format=3 uid="uid://u6e7muqd2r2d"]
+[gd_scene load_steps=25 format=3 uid="uid://u6e7muqd2r2d"]
 
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame2/memory_panel_handler.gd" id="1_3rhlm"]
 [ext_resource type="Texture2D" uid="uid://cd8urq1l5sekr" path="res://Assets/UI/scene-previews/collectiongame.png" id="1_aemx6"]
 [ext_resource type="Texture2D" uid="uid://rsy864gbenrf" path="res://Assets/UI/scene-previews/escapegame.png" id="2_co442"]
+[ext_resource type="Shader" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/gui_blur.gdshader" id="2_lpv3j"]
 [ext_resource type="Texture2D" uid="uid://ddg423vf5xwkm" path="res://Assets/UI/scene-previews/shippinggame.png" id="3_fcqxy"]
 [ext_resource type="Texture2D" uid="uid://0c7802q8dbwe" path="res://Assets/UI/scene-previews/WIP.png" id="4_j1ptn"]
 [ext_resource type="Texture2D" uid="uid://bqspfj0c3qfqd" path="res://Assets/UI/scene-previews/encryptiongame.png" id="5_mh0i3"]
 [ext_resource type="Texture2D" uid="uid://dhssj0rdexlxu" path="res://Assets/UI/scene-previews/cargogame.png" id="6_jtxnn"]
 [ext_resource type="Texture2D" uid="uid://cnuikcvexx2pf" path="res://Assets/UI/scene-previews/balancegame.png" id="7_b1lat"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ysxhy"]
+shader = ExtResource("2_lpv3j")
+shader_parameter/lod = 1.5
+shader_parameter/dim = 0.15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrmpf"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6f28q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tvphi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1yql"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7saf8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h8n0u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boexw"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu6hv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpt8n"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quaoo"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tb14h"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mxaxf"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfu23"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1swsw"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="MemoryPanel" type="CanvasLayer"]
 script = ExtResource("1_3rhlm")
@@ -19,6 +133,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Blur" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_ysxhy")
+offset_right = 1366.0
+offset_bottom = 768.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.482353)
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
@@ -41,6 +162,7 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Fairness"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -60,7 +182,32 @@ grow_vertical = 2
 pivot_offset = Vector2(115, 65)
 texture = ExtResource("1_aemx6")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hrmpf")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel/TextureRect"]
+editor_description = "Fairness"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h8n0u")
+
 [node name="Panel2" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Veracity"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -80,7 +227,32 @@ grow_vertical = 2
 pivot_offset = Vector2(115, 65)
 texture = ExtResource("2_co442")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_boexw")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel2/TextureRect"]
+editor_description = "Veracity"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu6hv")
+
 [node name="Panel3" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Transparency"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -100,7 +272,32 @@ grow_vertical = 2
 pivot_offset = Vector2(115, 65)
 texture = ExtResource("3_fcqxy")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel3/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpt8n")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel3/TextureRect"]
+editor_description = "Transparency"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu6hv")
+
 [node name="Panel4" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Privacy"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -121,11 +318,36 @@ pivot_offset = Vector2(115, 65)
 texture = ExtResource("4_j1ptn")
 expand_mode = 2
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel4/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_quaoo")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel4/TextureRect"]
+editor_description = "Privacy"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu6hv")
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+editor_description = "Privacy"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -145,7 +367,32 @@ grow_vertical = 2
 pivot_offset = Vector2(115, 65)
 texture = ExtResource("5_mh0i3")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tb14h")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel/TextureRect"]
+editor_description = "Privacy"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu6hv")
+
 [node name="Panel2" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+editor_description = "Transparency"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -165,7 +412,32 @@ grow_vertical = 2
 pivot_offset = Vector2(115, 65)
 texture = ExtResource("6_jtxnn")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel2/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mxaxf")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel2/TextureRect"]
+editor_description = "Transparency"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu6hv")
+
 [node name="Panel3" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+editor_description = "Veracity"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -185,7 +457,32 @@ grow_vertical = 2
 pivot_offset = Vector2(115, 65)
 texture = ExtResource("4_j1ptn")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel3/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jfu23")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel3/TextureRect"]
+editor_description = "Veracity"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu6hv")
+
 [node name="Panel4" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+editor_description = "Fairness"
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -205,3 +502,29 @@ grow_vertical = 2
 pivot_offset = Vector2(115, 65)
 texture = ExtResource("7_b1lat")
 expand_mode = 2
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel4/TextureRect"]
+custom_minimum_size = Vector2(232, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1swsw")
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel4/TextureRect"]
+editor_description = "Fairness"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6f28q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tvphi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1yql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7saf8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu6hv")
+
+[connection signal="mouse_entered" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel/TextureRect/Button" to="." method="_on_button_mouse_entered"]
