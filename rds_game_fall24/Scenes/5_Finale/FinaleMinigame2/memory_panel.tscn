@@ -1,14 +1,15 @@
-[gd_scene load_steps=25 format=3 uid="uid://u6e7muqd2r2d"]
+[gd_scene load_steps=26 format=3 uid="uid://u6e7muqd2r2d"]
 
 [ext_resource type="Script" path="res://Scripts/5_Finale/FinaleMinigame2/memory_panel_handler.gd" id="1_3rhlm"]
 [ext_resource type="Texture2D" uid="uid://cd8urq1l5sekr" path="res://Assets/UI/scene-previews/collectiongame.png" id="1_aemx6"]
 [ext_resource type="Texture2D" uid="uid://rsy864gbenrf" path="res://Assets/UI/scene-previews/escapegame.png" id="2_co442"]
 [ext_resource type="Shader" path="res://Scenes/0_Tutorial/TutorialMinigame2/DragAndDrop/gui_blur.gdshader" id="2_lpv3j"]
 [ext_resource type="Texture2D" uid="uid://ddg423vf5xwkm" path="res://Assets/UI/scene-previews/shippinggame.png" id="3_fcqxy"]
-[ext_resource type="Texture2D" uid="uid://0c7802q8dbwe" path="res://Assets/UI/scene-previews/WIP.png" id="4_j1ptn"]
 [ext_resource type="Texture2D" uid="uid://bqspfj0c3qfqd" path="res://Assets/UI/scene-previews/encryptiongame.png" id="5_mh0i3"]
 [ext_resource type="Texture2D" uid="uid://dhssj0rdexlxu" path="res://Assets/UI/scene-previews/cargogame.png" id="6_jtxnn"]
+[ext_resource type="Texture2D" uid="uid://d07pjaxmc6bg8" path="res://Assets/UI/scene-previews/debug-privacyscreen2.png" id="6_tgtnd"]
 [ext_resource type="Texture2D" uid="uid://cnuikcvexx2pf" path="res://Assets/UI/scene-previews/balancegame.png" id="7_b1lat"]
+[ext_resource type="Texture2D" uid="uid://d4fefxa4alcqa" path="res://Assets/UI/scene-previews/finale.png" id="9_tym4o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ysxhy"]
 shader = ExtResource("2_lpv3j")
@@ -316,7 +317,7 @@ offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(115, 65)
-texture = ExtResource("4_j1ptn")
+texture = ExtResource("6_tgtnd")
 expand_mode = 2
 
 [node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Panel4/TextureRect"]
@@ -456,7 +457,7 @@ offset_bottom = 64.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(115, 65)
-texture = ExtResource("4_j1ptn")
+texture = ExtResource("9_tym4o")
 
 [node name="Panel" type="Panel" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/Panel3/TextureRect"]
 custom_minimum_size = Vector2(232, 140)
