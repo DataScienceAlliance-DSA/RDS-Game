@@ -14,6 +14,8 @@ extends Node2D
 
 var cm : CutsceneManager # cutscene manager for this 
 
+@onready var memory_panel = $MemoryPanel
+
 @onready var panel = $MinigamePanel/Control
 @onready var game_stage = 0
 @onready var retrying = false
@@ -263,7 +265,11 @@ func perform_spell_cutscene():
 			
 			## PLACE GUARDIAN DATA CHARM SEQUENCE HERE, then initiate memory game:
 			
-			# run_memory_game()
+			memory_panel.visible = true
+			memory_panel.run_memory_game()
+			await memory_panel.game_complete
+			memory_panel.visible = false
+			
 			UI.start_scene_change(true, true, "res://Scenes/end_credits.tscn")
 
 func continue_retry():
