@@ -36,129 +36,167 @@ func _ready(): # FINALE CUTSCENE + MINIGAME 1: SPELL GAME
 	player.autonomous = true
 	player.in_cutscene = true
 	
-	if (true): ## INTRO CUTSCENE, SET TRUE TO FALSE TO SKIP FOR DEBUGGING MINIGAME
-		var actionA = Action.new(player, "LerpMove", Vector2(800, 1152), 200)
-		var actionB = Action.new(fox, "LerpMove", Vector2(672, 1152), 200)
-		# var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
-		actions = [actionA, actionB]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.parallel_action()
-		await cm.actions_complete
-		
-		var actionC = Action.new(player, "LerpMove", Vector2(784, 1152), 200)
-		actions = [actionC]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.series_action()
-		await cm.actions_complete
-		
-		cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxReconvening.json")
-		await cm.lines_complete
-		
-		var actionD = Action.new(fox, "LerpMove", Vector2(736, 1152), 200)
-		var actionE = Action.new(player, "LerpMove", Vector2(864, 1152), 200)
-		actions = [actionD, actionE]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.parallel_action()
-		await cm.actions_complete
-		
-		var actionF = Action.new(fox, "LerpMove", Vector2(736, 507), 200)
-		var actionG = Action.new(player, "LerpMove", Vector2(864, 507), 200)
-		actions = [actionF, actionG]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.parallel_action()
-		await cm.actions_complete
-		
-		var player_cam = player.get_node("Camera2D")
-		var actionCam = Action.new(player_cam, "LerpMove", Vector2(-64, -64), 200)
-		actions = [actionCam]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.series_action()
-		await cm.actions_complete
-		
-		crystal.get_node("crystal").texture = load("res://Assets/1_Fairness/FairnessEnv/veracity_crystal_animation.png")
-		var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
-		actions = [crystal_rises]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.series_action()
-		await cm.actions_complete
-		
-		cm.call_monologue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/VeracityCrystal.json")
-		await cm.lines_complete
-		
-		malvoren.visible = true
-		
-		crystal_rises = UniqueAction.new(crystal, Callable(crystal, "disappear"))
-		var actionH = Action.new(malvoren, "LerpMove", Vector2(960, 476), 200)
-		actions = [crystal_rises, actionH]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.parallel_action()
-		await cm.actions_complete
-		
-		player_cam.enabled = false
-		
-		var actionI = Action.new(fox, "LerpMove", Vector2(604, 508), 200)
-		var actionJ = Action.new(player, "LerpMove", Vector2(636, 476), 200)
-		actions = [actionI, actionJ]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.parallel_action()
-		await cm.actions_complete
-		
-		var actionK = Action.new(fox, "LerpMove", Vector2(608, 508), 200)
-		var actionL = Action.new(player, "LerpMove", Vector2(640, 476), 200)
-		actions = [actionK, actionL]
-		for action in actions:
-			add_child(action)
-		cm.set_actions(actions)
-		cm.parallel_action()
-		await cm.actions_complete
-		
-		cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/MeetMalvorenAgain.json")
-		await cm.lines_complete
-		
-		cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxDiscoversMalvoren.json")
-		await cm.lines_complete
-		
-		cm.call_monologue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/MalvorenReveal.json")
-		await cm.lines_complete
-	
-	cam_zoom_target = 1.255
-	
-	# MALVOREN CASTS HER AURA...
-	var malvoren_spell = UniqueAction.new(malvoren_aura, Callable(malvoren_aura, "aura_spell"))
-	actions = [malvoren_spell]
-	for action in actions:
-		add_child(action)
-	cm.set_actions(actions)
-	cm.series_action()
-	await cm.actions_complete
-	
-	# she prides herself on her strength
-	cm.call_monologue("res://Resources/Texts/Monologues/5_Finale/FinaleMinigame1/Malvoren01.json")
-	await cm.lines_complete
-	
-	# player begins spell selection game
-	panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxFairness1.json", null)
-	
-	var spell_container = panel.get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer") as Node
-	for spell in spell_container.get_children():
-		var button = spell.get_node("TextureRect").get_children()[0]
-		button.pressed.connect(register_button_press.bind(button))
+	state_ready()
+
+func state_ready():
+	match(PS.dungeon_state):
+		0:	## cutscenes state
+			var actions : Array[Action] = []
+			
+			var actionA = Action.new(player, "LerpMove", Vector2(800, 1152), 200)
+			var actionB = Action.new(fox, "LerpMove", Vector2(672, 1152), 200)
+			# var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
+			actions = [actionA, actionB]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.parallel_action()
+			await cm.actions_complete
+			
+			var actionC = Action.new(player, "LerpMove", Vector2(784, 1152), 200)
+			actions = [actionC]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
+			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxReconvening.json")
+			await cm.lines_complete
+			
+			var actionD = Action.new(fox, "LerpMove", Vector2(736, 1152), 200)
+			var actionE = Action.new(player, "LerpMove", Vector2(864, 1152), 200)
+			actions = [actionD, actionE]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.parallel_action()
+			await cm.actions_complete
+			
+			var actionF = Action.new(fox, "LerpMove", Vector2(736, 507), 200)
+			var actionG = Action.new(player, "LerpMove", Vector2(864, 507), 200)
+			actions = [actionF, actionG]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.parallel_action()
+			await cm.actions_complete
+			
+			var player_cam = player.get_node("Camera2D")
+			var actionCam = Action.new(player_cam, "LerpMove", Vector2(-64, -64), 200)
+			actions = [actionCam]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
+			crystal.get_node("crystal").texture = load("res://Assets/1_Fairness/FairnessEnv/veracity_crystal_animation.png")
+			var crystal_rises = UniqueAction.new(crystal, Callable(crystal, "levitate"))
+			actions = [crystal_rises]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
+			cm.call_monologue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/VeracityCrystal.json")
+			await cm.lines_complete
+			
+			malvoren.visible = true
+			
+			crystal_rises = UniqueAction.new(crystal, Callable(crystal, "disappear"))
+			var actionH = Action.new(malvoren, "LerpMove", Vector2(960, 476), 200)
+			actions = [crystal_rises, actionH]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.parallel_action()
+			await cm.actions_complete
+			
+			player_cam.enabled = false
+			
+			var actionI = Action.new(fox, "LerpMove", Vector2(604, 508), 200)
+			var actionJ = Action.new(player, "LerpMove", Vector2(636, 476), 200)
+			actions = [actionI, actionJ]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.parallel_action()
+			await cm.actions_complete
+			
+			var actionK = Action.new(fox, "LerpMove", Vector2(608, 508), 200)
+			var actionL = Action.new(player, "LerpMove", Vector2(640, 476), 200)
+			actions = [actionK, actionL]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.parallel_action()
+			await cm.actions_complete
+			
+			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/MeetMalvorenAgain.json")
+			await cm.lines_complete
+			
+			cm.call_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxDiscoversMalvoren.json")
+			await cm.lines_complete
+			
+			cm.call_monologue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/MalvorenReveal.json")
+			await cm.lines_complete
+			
+			cam_zoom_target = 1.255
+			
+			PS.dungeon_state = 1
+			state_ready()
+		1:	## MINIGAME 1: Spell Game
+			var player_cam = player.get_node("Camera2D")
+			malvoren.visible = true
+			player_cam.enabled = false
+			cam_zoom_target = 1.255
+			fox.global_position = Vector2(608, 508)
+			fox.force_animation("idleRight")
+			player.global_position = Vector2(640, 476)
+			player.force_animation("idleRight")
+			malvoren.global_position = Vector2(960, 476)
+			
+			var actions : Array[Action] = []
+			# MALVOREN CASTS HER AURA...
+			var malvoren_spell = UniqueAction.new(malvoren_aura, Callable(malvoren_aura, "aura_spell"))
+			actions = [malvoren_spell]
+			for action in actions:
+				add_child(action)
+			cm.set_actions(actions)
+			cm.series_action()
+			await cm.actions_complete
+			
+			# she prides herself on her strength
+			cm.call_monologue("res://Resources/Texts/Monologues/5_Finale/FinaleMinigame1/Malvoren01.json")
+			await cm.lines_complete
+			
+			# player begins spell selection game
+			panel.open_dialogue("res://Resources/Texts/Dialogues/5_Finale/FinaleMinigame1/FoxFairness1.json", null)
+			
+			var spell_container = panel.get_node("MarginContainer/VBoxContainer/HBoxContainer/Panel2/VBoxContainer/Spells/GridContainer") as Node
+			for spell in spell_container.get_children():
+				var button = spell.get_node("TextureRect").get_children()[0]
+				button.pressed.connect(register_button_press.bind(button))
+		2:	## MINIGAME 2: Memory Game
+			var player_cam = player.get_node("Camera2D")
+			malvoren.visible = true
+			player_cam.enabled = false
+			cam_zoom_target = 1.255
+			fox.global_position = Vector2(608, 508)
+			fox.force_animation("idleRight")
+			player.global_position = Vector2(640, 476)
+			player.force_animation("idleRight")
+			malvoren.global_position = Vector2(960, 476)
+			
+			panel.visible = false
+			memory_panel.visible = true
+			memory_panel.run_memory_game()
+			await memory_panel.game_complete
+			memory_panel.visible = false
+			
+			UI.start_scene_change(true, true, "res://Scenes/end_credits.tscn")
 
 func _process(_delta):
 	new_zoom = lerp(new_zoom, cam_zoom_target, _delta * 2)
@@ -265,12 +303,8 @@ func perform_spell_cutscene():
 			
 			## PLACE GUARDIAN DATA CHARM SEQUENCE HERE, then initiate memory game:
 			
-			memory_panel.visible = true
-			memory_panel.run_memory_game()
-			await memory_panel.game_complete
-			memory_panel.visible = false
-			
-			UI.start_scene_change(true, true, "res://Scenes/end_credits.tscn")
+			PS.dungeon_state = 2
+			state_ready()
 
 func continue_retry():
 	panel.current_dialogue_ended = false

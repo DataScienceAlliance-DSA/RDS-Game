@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://fweegrv33m56"]
+[gd_scene load_steps=27 format=3 uid="uid://fweegrv33m56"]
 
 [ext_resource type="Shader" path="res://Resources/Shaders/scrolling_tiled_texture.gdshader" id="1_h587x"]
 [ext_resource type="Script" path="res://Scenes/UniversalComponents/scene_selection.gd" id="1_ix1cn"]
@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://bqspfj0c3qfqd" path="res://Assets/UI/scene-previews/encryptiongame.png" id="13_ygbbw"]
 [ext_resource type="Texture2D" uid="uid://rsy864gbenrf" path="res://Assets/UI/scene-previews/escapegame.png" id="14_7qnie"]
 [ext_resource type="Texture2D" uid="uid://calyt8vvr5v5c" path="res://Assets/UI/scene-previews/spellgame.png" id="15_gen5x"]
+[ext_resource type="Texture2D" uid="uid://d4fefxa4alcqa" path="res://Assets/UI/scene-previews/finale.png" id="15_m8bkd"]
+[ext_resource type="Texture2D" uid="uid://bmcfhx202ople" path="res://Assets/UI/scene-previews/memorygame.png" id="17_l8dbw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kjttl"]
 shader = ExtResource("1_h587x")
@@ -291,7 +293,7 @@ offset_right = 233.0
 offset_bottom = 131.0
 pivot_offset = Vector2(116, 65)
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("10_dk0bm")
+texture_normal = ExtResource("15_m8bkd")
 
 [node name="Control17" type="Control" parent="CanvasLayer/GridContainer"]
 layout_mode = 2
@@ -315,7 +317,7 @@ offset_right = 233.0
 offset_bottom = 131.0
 pivot_offset = Vector2(116, 65)
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("10_dk0bm")
+texture_normal = ExtResource("17_l8dbw")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15

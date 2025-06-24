@@ -102,6 +102,9 @@ func set_directional_anim(theta, moving):
 	if anim_player.current_animation != next_anim:
 		anim_player.play(next_anim)
 
+func force_animation(animation):
+	if anim_player: anim_player.play(str(anim_lib_name) + "/" + animation)
+
 # PAUSES ALL STATES OF CHARACTER (animation, movement, etc.)
 func pause():
 	self.set_process(false)

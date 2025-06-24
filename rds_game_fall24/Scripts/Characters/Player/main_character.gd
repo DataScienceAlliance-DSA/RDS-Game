@@ -10,7 +10,6 @@ var shape_index
 
 @onready var follower = get_parent().get_node("Follower")
 @onready var player_cast = self.get_node("PlayerCast") as RayCast2D
-@onready var animations = $AnimationPlayer
 
 @onready var in_cutscene = false
 
@@ -26,6 +25,8 @@ var neighbor_areas
 
 func _ready():
 	set_process(false)
+	
+	anim_player = $AnimationPlayer
 	
 	if get_tree().current_scene.is_in_group("minigame"):
 		is_minigame_scene = true
@@ -106,7 +107,7 @@ func _remove_movement_direction(direction: String):
 
 func updateAnimation():
 	if velocity.length() == 0:
-		animations.play("animation_frameworks_hero_player/idle" + last_direction)
+		anim_player.play("animation_frameworks_hero_player/idle" + last_direction)
 	else:
 		var direction = "Down"
 		if velocity.x < 0: direction = "Left"
@@ -114,7 +115,7 @@ func updateAnimation():
 		elif velocity.y < 0: direction = "Up"
 
 		last_direction = direction
-		animations.play("animation_frameworks_hero_player/walk" + direction)
+		anim_player.play("animation_frameworks_hero_player/walk" + direction)
 
 func update_cast():
 	if movement_stack.size() == 0:
@@ -145,10 +146,10 @@ func enable_process():
 	movement_stack = [Vector2.ZERO]
 
 func pause():
-	animations.pause()
+	anim_player.pause()
 	movement_stack = [Vector2.ZERO]
 	super()
 
 func resume():
-	animations.play()
+	anim_player.play()
 	super()

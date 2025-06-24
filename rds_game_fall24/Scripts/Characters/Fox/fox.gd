@@ -18,9 +18,9 @@ func _physics_process(delta):
 		var player_position = player.position
 		var direction = player_position - position
 		print(direction)
-
+		
 		var distance_to_player = direction.length()
-
+		
 		if distance_to_player > lag_distance:
 			# Determine the primary direction to move in (horizontal or vertical)
 			if abs(direction.x) > abs(direction.y):
@@ -37,7 +37,7 @@ func _physics_process(delta):
 					velocity = Vector2(0, -follow_speed)  # Move up
 		else:
 			velocity = Vector2.ZERO  # Stop moving when within lag distance
-
+		
 		move_and_slide()
 
 func update_animation():
@@ -54,4 +54,6 @@ func update_animation():
 			
 		last_direction = direction
 		fox_anim.play("walk" + direction)
-			
+
+func force_animation(animation):
+	fox_anim.play(animation)

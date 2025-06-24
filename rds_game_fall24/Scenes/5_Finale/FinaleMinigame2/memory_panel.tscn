@@ -13,7 +13,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ysxhy"]
 shader = ExtResource("2_lpv3j")
 shader_parameter/lod = 1.5
-shader_parameter/dim = 0.15
+shader_parameter/dim = 0.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrmpf"]
 bg_color = Color(1, 1, 1, 0)
@@ -136,6 +136,7 @@ grow_vertical = 2
 
 [node name="Blur" type="ColorRect" parent="Control"]
 material = SubResource("ShaderMaterial_ysxhy")
+layout_mode = 0
 offset_right = 1366.0
 offset_bottom = 768.0
 mouse_filter = 2

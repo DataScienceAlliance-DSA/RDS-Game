@@ -17,6 +17,7 @@ var target_button
 func _ready():
 	UI.start_scene_change(false, false, "")
 	UI.set_tooltip("")
+	PS.reset_states()
 	
 	for control in scene_container.get_children():
 		var button = control.get_children()[0]
@@ -99,11 +100,11 @@ func register_button_press(button):
 		15:
 			play_scene_button.disabled = false
 		16:
-			play_scene_button.disabled = true
+			play_scene_button.disabled = false
 		17:
 			play_scene_button.disabled = false
 		18:
-			play_scene_button.disabled = true
+			play_scene_button.disabled = false
 
 func play_scene_button_pressed():
 	if target_button:
@@ -140,8 +141,11 @@ func play_scene_button_pressed():
 			15:
 				UI.start_scene_change(true, true, "res://Scenes/4_Veracity/VeracityMinigame2/VeracityMinigame2.tscn")
 			16:
-				print("FINALE IS WIP")
+				PS.dungeon_state = 0
+				UI.start_scene_change(true, true, "res://Scenes/5_Finale/FinaleMinigame1/FinaleMinigame1.tscn")
 			17:
+				PS.dungeon_state = 1
 				UI.start_scene_change(true, true, "res://Scenes/5_Finale/FinaleMinigame1/FinaleMinigame1.tscn")
 			18:
-				print("MEMORY GAME IS WIP")
+				PS.dungeon_state = 2
+				UI.start_scene_change(true, true, "res://Scenes/5_Finale/FinaleMinigame1/FinaleMinigame1.tscn")
