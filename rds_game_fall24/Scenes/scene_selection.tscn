@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://bqspfj0c3qfqd" path="res://Assets/UI/scene-previews/encryptiongame.png" id="13_ygbbw"]
 [ext_resource type="Texture2D" uid="uid://rsy864gbenrf" path="res://Assets/UI/scene-previews/escapegame.png" id="14_7qnie"]
 [ext_resource type="Texture2D" uid="uid://calyt8vvr5v5c" path="res://Assets/UI/scene-previews/spellgame.png" id="15_gen5x"]
-[ext_resource type="Texture2D" uid="uid://d4fefxa4alcqa" path="res://Assets/UI/scene-previews/finale.png" id="15_m8bkd"]
-[ext_resource type="Texture2D" uid="uid://bmcfhx202ople" path="res://Assets/UI/scene-previews/memorygame.png" id="17_l8dbw"]
+[ext_resource type="Texture2D" path="res://Assets/UI/scene-previews/finale.png" id="15_m8bkd"]
+[ext_resource type="Texture2D" path="res://Assets/UI/scene-previews/memorygame.png" id="17_l8dbw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kjttl"]
 shader = ExtResource("1_h587x")
