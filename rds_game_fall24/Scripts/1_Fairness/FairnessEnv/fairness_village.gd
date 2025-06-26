@@ -13,10 +13,10 @@ func _ready():
 	
 	match(PS.village_state):
 		1:
-			if PS.spawning_at != Vector2(0.,0.): player.global_posiion = PS.spawning_at
+			if PS.spawning_at != Vector2(0.,0.): player.global_position = PS.spawning_at
 			else: player.global_position = default_spawn
 		2:
-			if PS.spawning_at != Vector2(0.,0.): player.global_posiion = PS.spawning_at
+			if PS.spawning_at != Vector2(0.,0.): player.global_position = PS.spawning_at
 			else: player.global_position = default_spawn
 		3:
 			player.autonomous = true

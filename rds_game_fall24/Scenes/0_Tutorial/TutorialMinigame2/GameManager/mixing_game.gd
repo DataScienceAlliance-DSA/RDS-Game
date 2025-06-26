@@ -78,6 +78,7 @@ func next_stage(success : bool, readying : bool):
 				PS.library_state = 2
 				print(PS.cauldron_state)
 				UI.start_scene_change(true, true, "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room.tscn")
+				return
 			else:
 				UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/badmix.json", null)
 	if not readying:

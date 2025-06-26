@@ -160,6 +160,9 @@ func enter_next_scene():
 		tooltip_image.visible = false
 		tooltip_blur.visible = false
 		player_name_input.visible = false
+		
+		dialogue.close_dialogue()
+		monologue.close_3choice_dialogue()
 
 func set_active_cm(active_cutscene_manager):
 	self.active_cutscene_manager = active_cutscene_manager

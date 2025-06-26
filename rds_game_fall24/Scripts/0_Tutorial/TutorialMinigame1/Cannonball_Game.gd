@@ -51,6 +51,9 @@ var cannonball_scene = preload("res://Scenes/0_Tutorial/TutorialMinigame1/Cannon
 @onready var bag_load_phase : int = 1
 @onready var bag_load_timer : float = 0.5
 
+#Referencing cannon instance
+@onready var cannon = $cannon
+
 func _ready():
 	UI.start_scene_change(false, false, "")
 	
@@ -74,7 +77,7 @@ func _ready():
 
 # Update loop for moving the bags side-to-side
 func _process(delta):
-	self.get_node("PowerGauge/PinkCounter/RichTextLabel").text = "[center][b]" + str(get_node("cannon").bag_attempts)
+	self.get_node("PowerGauge/PinkCounter/RichTextLabel").text = "[center][b]" + str(cannon.bag_attempts)
 	
 	if (bag_load_phase == 1) and (bag_load_timer < 0.5):
 		bag_load_timer += delta
@@ -142,6 +145,8 @@ func _load_new_bag():
 		show_platforms()
 	else:
 		hide_platforms()
+	
+	cannon.set_process(true)
 
 func _play_animation_at_position(position: Vector2, animation_name: String):
 	var bag_poof = bag_poof_animation.instantiate()
@@ -188,6 +193,7 @@ func _on_bag_triggered():
 
 # Function to stop bag motion and drop an orb into it
 func perform_auto_drop():
+	
 	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame1/UnhappyCannon.json", null)
 	await UI.get_node("Monologue").closed_signal
 	

@@ -1467,8 +1467,8 @@ scale = Vector2(0.05, 0.05)
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-132, -792)
 script = ExtResource("9_8sig2")
-from_scene_name = "fairness_village"
-to_scene_name = "school_courtyard"
+from_scene_name = "res://Scenes/1_Fairness/FairnessEnv/fairness_village.tscn"
+to_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/school_courtyard.tscn"
 from_respawn_position = Vector2(-168, -280)
 to_spawn_position = Vector2(1590, 446)
 
