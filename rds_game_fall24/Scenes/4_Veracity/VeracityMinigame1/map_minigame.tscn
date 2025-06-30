@@ -1,0 +1,259 @@
+[gd_scene load_steps=20 format=3 uid="uid://b5jxph270qwya"]
+
+[ext_resource type="Script" path="res://Scripts/4_Veracity/VeracityMinigame1/map_minigame.gd" id="1_qjr2i"]
+
+[sub_resource type="Gradient" id="Gradient_p33aq"]
+colors = PackedColorArray(1, 0.498039, 0, 1, 1, 0.498039, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kos1k"]
+gradient = SubResource("Gradient_p33aq")
+
+[sub_resource type="Gradient" id="Gradient_vifk6"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hr2l2"]
+gradient = SubResource("Gradient_vifk6")
+
+[sub_resource type="Gradient" id="Gradient_jujnx"]
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_myecr"]
+gradient = SubResource("Gradient_jujnx")
+
+[sub_resource type="Gradient" id="Gradient_lxfsj"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pumkv"]
+gradient = SubResource("Gradient_lxfsj")
+
+[sub_resource type="Gradient" id="Gradient_r72wn"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_np5my"]
+gradient = SubResource("Gradient_r72wn")
+width = 640
+height = 640
+
+[sub_resource type="Gradient" id="Gradient_mo40w"]
+colors = PackedColorArray(0, 0, 1, 1, 0, 0, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_81qow"]
+gradient = SubResource("Gradient_mo40w")
+
+[sub_resource type="Gradient" id="Gradient_lu8ra"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7h8sg"]
+gradient = SubResource("Gradient_lu8ra")
+
+[sub_resource type="Gradient" id="Gradient_40cy6"]
+colors = PackedColorArray(0, 1, 0, 1, 0, 1, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l5vfi"]
+gradient = SubResource("Gradient_40cy6")
+
+[sub_resource type="Gradient" id="Gradient_ag5do"]
+colors = PackedColorArray(0.498039, 0.498039, 0.498039, 1, 0.498039, 0.498039, 0.498039, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_h6yrr"]
+gradient = SubResource("Gradient_ag5do")
+
+[node name="MapMinigame" type="Node2D"]
+script = ExtResource("1_qjr2i")
+
+[node name="GameCanvas" type="CanvasLayer" parent="."]
+
+[node name="MapContainer" type="MarginContainer" parent="GameCanvas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(964, 964)
+
+[node name="MapGrid" type="GridContainer" parent="GameCanvas/MapContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="TileControl" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_kos1k")
+
+[node name="TileControl2" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_hr2l2")
+
+[node name="TileControl3" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_myecr")
+
+[node name="TileControl4" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_pumkv")
+
+[node name="TileControl5" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture2D_np5my")
+
+[node name="TileControl6" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_81qow")
+
+[node name="TileControl7" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_7h8sg")
+
+[node name="TileControl8" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_l5vfi")
+
+[node name="TileControl9" type="Control" parent="GameCanvas/MapContainer/MapGrid"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameCanvas/MapContainer/MapGrid/TileControl9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = SubResource("GradientTexture1D_h6yrr")
