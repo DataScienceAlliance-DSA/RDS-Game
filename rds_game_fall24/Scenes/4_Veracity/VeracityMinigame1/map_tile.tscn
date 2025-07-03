@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjfabcy7wvrfs"]
+
+[ext_resource type="Script" path="res://Scenes/4_Veracity/VeracityMinigame1/map_tile.gd" id="1_kydb8"]
+[ext_resource type="Texture2D" uid="uid://ceqhqibf6diib" path="res://Assets/4_Veracity/VeracityMinigame1/sliding puzzle full map.png" id="2_3udwr"]
+[ext_resource type="Texture2D" uid="uid://st6jcosrcviu" path="res://Assets/4_Veracity/VeracityMinigame1/bad path puzzle full map.png" id="2_dxtrc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg8xt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+
+[node name="TileControl" type="Control"]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 3
+anchors_preset = 0
+pivot_offset = Vector2(320, 320)
+script = ExtResource("1_kydb8")
+
+[node name="ImageNodeB" type="Sprite2D" parent="."]
+texture = ExtResource("2_dxtrc")
+offset = Vector2(320, 320)
+hframes = 3
+vframes = 3
+
+[node name="ImageNodeA" type="Sprite2D" parent="."]
+texture = ExtResource("2_3udwr")
+offset = Vector2(320, 320)
+hframes = 3
+vframes = 3
+
+[node name="BorderPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dg8xt")
