@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1vjngh0pynhr"
-path="res://.godot/imported/Conveyor top.png-38dfa963f7474c20a6e8624167e83437.ctex"
+uid="uid://4d8d75h1ro58"
+path="res://.godot/imported/Pressed.png-42f9a7838a4403f98330db8b2d61751d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Conveyor top.png"
-dest_files=["res://.godot/imported/Conveyor top.png-38dfa963f7474c20a6e8624167e83437.ctex"]
+source_file="res://Assets/UI/button_states/Confirm Button/Pressed.png"
+dest_files=["res://.godot/imported/Pressed.png-42f9a7838a4403f98330db8b2d61751d.ctex"]
 
 [params]
 

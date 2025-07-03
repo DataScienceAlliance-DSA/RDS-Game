@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=53 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/UI/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/UI/dialogue.gd" id="1_ne7wx"]
@@ -28,12 +28,12 @@
 [ext_resource type="Texture2D" uid="uid://wxhymweehla0" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Hover.png" id="20_euilg"]
 [ext_resource type="Texture2D" uid="uid://b2qgnc42fi0ba" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Visted.png" id="21_cei1u"]
 [ext_resource type="Texture2D" uid="uid://b6d5j8hghat4w" path="res://Assets/UI/V2Dialogue Box_Long_Light.png" id="22_es88q"]
+[ext_resource type="Texture2D" uid="uid://dc6gax07oukrv" path="res://Assets/UI/button_states/Confirm Button/Normal.png" id="25_5bv13"]
+[ext_resource type="Texture2D" uid="uid://4d8d75h1ro58" path="res://Assets/UI/button_states/Confirm Button/Pressed.png" id="26_8y088"]
+[ext_resource type="Texture2D" uid="uid://ct2cwkesra506" path="res://Assets/UI/button_states/Confirm Button/Hover.png" id="27_4dcdv"]
 [ext_resource type="Texture2D" uid="uid://tliuryc0xeqr" path="res://Assets/UI/Name_Menu.png" id="28_3sout"]
 [ext_resource type="Script" path="res://Scripts/Components/PlayerNameInput.gd" id="28_bndvi"]
-[ext_resource type="Texture2D" uid="uid://buownsnidnok4" path="res://Assets/UI/button_states/Mix Button/Normal.png" id="29_hke57"]
-[ext_resource type="Texture2D" uid="uid://cercn5dplsnfv" path="res://Assets/UI/button_states/Mix Button/Disables.png" id="30_gxcxm"]
-[ext_resource type="Texture2D" uid="uid://d1coaggnvi3gi" path="res://Assets/UI/button_states/Mix Button/Hover.png" id="31_u3tru"]
-[ext_resource type="Texture2D" uid="uid://d23lr7r0mmrl5" path="res://Assets/UI/button_states/Mix Button/Pressed.png" id="32_jle5g"]
+[ext_resource type="Texture2D" uid="uid://bpe0k57otrnuy" path="res://Assets/UI/button_states/Confirm Button/Disables.png" id="28_rnvn1"]
 [ext_resource type="Texture2D" uid="uid://cftmonv5cmnkp" path="res://Assets/UI/tooltips/Fairness Mini Game_1.png" id="34_1se8c"]
 [ext_resource type="Texture2D" uid="uid://b8lllx8uob7gw" path="res://Assets/1_Fairness/FairnessEnv/Help Button_Active.png" id="36_mnawb"]
 [ext_resource type="Texture2D" uid="uid://m610fx1858uc" path="res://Assets/1_Fairness/FairnessEnv/Help Button_Visited.png" id="37_p6xph"]
@@ -54,6 +54,10 @@ fill_from = Vector2(0.508547, 1)
 fill_to = Vector2(0.5, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_seqqk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f1cq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmiho"]
 
@@ -436,7 +440,6 @@ scroll_active = false
 
 [node name="Monologue" type="MarginContainer" parent="."]
 process_mode = 1
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -843,16 +846,17 @@ size_flags_stretch_ratio = 0.25
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
 theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.466667, 0.466667, 0.466667, 0.717647)
 theme_override_colors/selection_color = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("12_sp71b")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxEmpty_seqqk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1f1cq")
 placeholder_text = "Hero"
 alignment = 1
-max_length = 8
+max_length = 16
 selecting_enabled = false
 
 [node name="Panel" type="Panel" parent="PlayerNameInput/PlayerNamePanel/MarginContainer/VBoxContainer"]
@@ -866,10 +870,10 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_lmiho")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
-texture_normal = ExtResource("29_hke57")
-texture_pressed = ExtResource("30_gxcxm")
-texture_hover = ExtResource("31_u3tru")
-texture_disabled = ExtResource("32_jle5g")
+texture_normal = ExtResource("25_5bv13")
+texture_pressed = ExtResource("26_8y088")
+texture_hover = ExtResource("27_4dcdv")
+texture_disabled = ExtResource("28_rnvn1")
 
 [node name="Tooltip" type="MarginContainer" parent="." groups=["Tooltip"]]
 process_mode = 2
