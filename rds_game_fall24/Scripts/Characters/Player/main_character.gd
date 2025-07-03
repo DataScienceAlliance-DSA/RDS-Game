@@ -8,7 +8,6 @@ var shape_index
 @export var cam_speed: float = 3.0
 @onready var camera = get_node("Camera2D")
 
-@onready var follower = get_parent().get_node("Follower")
 @onready var player_cast = self.get_node("PlayerCast") as RayCast2D
 
 @onready var in_cutscene = false

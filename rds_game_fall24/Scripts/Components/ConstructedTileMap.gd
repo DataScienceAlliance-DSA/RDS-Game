@@ -38,9 +38,9 @@ func _ready():
 				# print("#" + str(idx) + ": " + str(aStar.get_point_connections(idx)))
 	
 	# DEBUG visualize the cells
-	# var astar_debugger = get_parent().get_node("DEBUG") as Node2D
-	# print(astar_debugger.name)
-	# astar_debugger.visualize(aStar)
+	var astar_debugger = get_parent().get_node("DEBUG") as Node2D
+	print(astar_debugger.name)
+	astar_debugger.visualize(aStar)
 
 func getAStarPath(vStartPosition:Vector2,vTargetPosition:Vector2)->Array:
 	var vCellStart = vStartPosition

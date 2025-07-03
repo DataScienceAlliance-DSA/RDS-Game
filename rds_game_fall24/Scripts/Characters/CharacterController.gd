@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var start_autonomous : bool # dictates whether autonomous from start of scene
 var autonomous : bool # dictates whether or not its own routines control itself
 @export var speed : float = 100. # 100 is default speed
-@export var target_pos : Vector2
+var target_pos : Vector2
 
 @onready var map : ConstructedTileMap = get_tree().get_nodes_in_group("Map")[0] as ConstructedTileMap
 @onready var aStar : AStar2D = map.aStar as AStar2D

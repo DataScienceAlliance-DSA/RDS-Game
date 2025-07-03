@@ -141,12 +141,14 @@ func _process(delta):
 		return
 	
 	if (!autonomous):
+		print("NOT")
 		if (target_pos_arr.size() != 0):
 			target_pos = target_pos_arr.pop_front()
 			autonomous = true
 		else:
 			villager_complete = true
 	else:
+		print("AUTONOMOUS")
 		super(delta)
 
 func refuse_shape():
