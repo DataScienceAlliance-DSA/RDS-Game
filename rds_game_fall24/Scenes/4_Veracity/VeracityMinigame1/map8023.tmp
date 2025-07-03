@@ -1,17 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxywlr0jt2eyi"]
+[gd_scene load_steps=11 format=3 uid="uid://bxywlr0jt2eyi"]
 
 [ext_resource type="Script" path="res://Scripts/4_Veracity/VeracityMinigame1/map_minigame.gd" id="1_qjr2i"]
+[ext_resource type="Texture2D" uid="uid://ceqhqibf6diib" path="res://Assets/4_Veracity/VeracityMinigame1/sliding puzzle full map.png" id="2_nq8x8"]
 [ext_resource type="PackedScene" uid="uid://cjfabcy7wvrfs" path="res://Scenes/4_Veracity/VeracityMinigame1/map_tile.tscn" id="2_qdue6"]
-[ext_resource type="PackedScene" uid="uid://bipc2b8w712u8" path="res://Scenes/4_Veracity/VeracityMinigame1/draggable_tile.tscn" id="3_wxrs6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1oyjk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_im7k3"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia1e6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7sj7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yv0vw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n558b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w352n"]
+
 [node name="MapMinigame" type="Node2D"]
 script = ExtResource("1_qjr2i")
-phase_1_timer = 150.0
-phase_2_timer = 35.0
+phase_1_timer = 5.0
+phase_2_timer = 30.0
 
 [node name="GameCanvas" type="CanvasLayer" parent="."]
 
@@ -51,7 +61,7 @@ alignment = 1
 [node name="MapPanel" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 20.0
+size_flags_stretch_ratio = 2.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1oyjk")
 
@@ -79,36 +89,45 @@ columns = 3
 
 [node name="MapTile" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 5
 
 [node name="MapTile2" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 3
 
 [node name="MapTile3" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 2
 
 [node name="MapTile4" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
 
 [node name="MapTile5" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 8
+is_empty_tile = true
 
 [node name="MapTile6" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 1
 
 [node name="MapTile7" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 7
 
 [node name="MapTile8" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 4
 
 [node name="MapTile9" parent="GameCanvas/GameContainer/HBoxContainer/MapPanel/Control/MapGrid" instance=ExtResource("2_qdue6")]
 layout_mode = 2
+correct_index = 6
 
 [node name="TilePanel" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
+size_flags_stretch_ratio = 0.75
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_im7k3")
 
@@ -146,8 +165,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
 
 [node name="Panel2" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -166,8 +203,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel2/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel2/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel2/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
 
 [node name="Panel3" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -186,8 +241,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel3/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel3/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel3/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
 
 [node name="Panel4" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -206,8 +279,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel4/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel4/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel4/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
 
 [node name="Panel5" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -226,8 +317,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel5/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel5/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel5/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
 
 [node name="Panel6" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -246,8 +355,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel6/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel6/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel6/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
 
 [node name="Panel7" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -266,8 +393,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel7/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel7/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel7/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
 
 [node name="Panel8" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -286,5 +431,23 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
-[node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel8/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel8/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel8/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")

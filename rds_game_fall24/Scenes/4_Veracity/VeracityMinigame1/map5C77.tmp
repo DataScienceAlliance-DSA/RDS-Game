@@ -10,8 +10,8 @@
 
 [node name="MapMinigame" type="Node2D"]
 script = ExtResource("1_qjr2i")
-phase_1_timer = 150.0
-phase_2_timer = 35.0
+phase_1_timer = 1.0
+phase_2_timer = 30.0
 
 [node name="GameCanvas" type="CanvasLayer" parent="."]
 
@@ -167,7 +167,6 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel2/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
 
 [node name="Panel3" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -187,7 +186,6 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel3/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
 
 [node name="Panel4" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -207,7 +205,6 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel4/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
 
 [node name="Panel5" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -227,7 +224,6 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel5/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
 
 [node name="Panel6" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -247,7 +243,6 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel6/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
 
 [node name="Panel7" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -267,7 +262,6 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel7/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)
 
 [node name="Panel8" type="Panel" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -287,4 +281,3 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" parent="GameCanvas/GameContainer/HBoxContainer/TilePanel/MarginContainer/HBoxContainer/Panel8/Control" instance=ExtResource("3_wxrs6")]
-scale = Vector2(1, 1e-05)

@@ -4,7 +4,7 @@ class_name MapTile
 extends Node
 ## - deeg
 
-@export var correct_index : int
+var correct_index : int
 var current_index
 
 @onready var image_node_top : Sprite2D = $ImageNodeA
@@ -13,19 +13,31 @@ var current_index
 
 var occupied_drag_tile
 
+@onready var is_empty_tile : bool = false
+
 func _ready():
 	image_node_top.frame = correct_index
-	if is_empty_tile(): image_node_top.visible = false
+	if is_empty_tile: image_node_top.visible = false
 	
 	image_node_bottom.frame = correct_index
-	if is_empty_tile(): image_node_bottom.visible = false
+	if is_empty_tile: image_node_bottom.visible = false
+
+func is_matched(): return correct_index == current_index
 
 func get_current_index(): return current_index
 func set_current_index(index): current_index = index
 
-func get_image_node(): return image_node_top
+func get_correct_index(): return correct_index
+func set_correct_index(index): 
+	correct_index = index
+	image_node_top.frame = correct_index
 
-func is_empty_tile(): return correct_index == 8
+func set_is_empty_tile():
+	is_empty_tile = true
+	image_node_top.visible = false
+	image_node_bottom.visible = false
+
+func get_image_node(): return image_node_top
 
 func disable_visuals(): border_style.visible = false
 func enable_visuals(): border_style.visible = true
