@@ -1,12 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxywlr0jt2eyi"]
+[gd_scene load_steps=12 format=3 uid="uid://bxywlr0jt2eyi"]
 
 [ext_resource type="Script" path="res://Scripts/4_Veracity/VeracityMinigame1/map_minigame.gd" id="1_qjr2i"]
 [ext_resource type="Texture2D" uid="uid://ceqhqibf6diib" path="res://Assets/4_Veracity/VeracityMinigame1/sliding puzzle full map.png" id="2_nq8x8"]
 [ext_resource type="PackedScene" uid="uid://cjfabcy7wvrfs" path="res://Scenes/4_Veracity/VeracityMinigame1/map_tile.tscn" id="2_qdue6"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1oyjk"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_im7k3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1oyjk"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia1e6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7sj7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yv0vw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n558b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w352n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8c7f"]
 
@@ -24,54 +34,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
-
-[node name="LeftPanel" type="Panel" parent="GameCanvas/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.75
-theme_override_styles/panel = SubResource("StyleBoxEmpty_im7k3")
-
-[node name="MarginContainer" type="MarginContainer" parent="GameCanvas/HBoxContainer/LeftPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer"]
-layout_mode = 2
-
-[node name="Panel" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel"]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel/Control"]
-texture = ExtResource("2_nq8x8")
-hframes = 3
-vframes = 3
-
-[node name="Panel2" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Panel3" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Panel4" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
 
 [node name="CenterPanel" type="Panel" parent="GameCanvas/HBoxContainer"]
 layout_mode = 2
@@ -95,6 +57,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(960, 960)
 size_flags_horizontal = 3
 theme_override_constants/h_separation = -1
 theme_override_constants/v_separation = -1
@@ -135,8 +98,342 @@ correct_index = 4
 layout_mode = 2
 correct_index = 6
 
+[node name="LeftPanel" type="Panel" parent="GameCanvas/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+theme_override_styles/panel = SubResource("StyleBoxEmpty_im7k3")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameCanvas/HBoxContainer/LeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
+
+[node name="Panel2" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel2/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+frame = 2
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel2/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
+
+[node name="Panel3" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel3/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+frame = 4
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel3/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
+
+[node name="Panel4" type="Panel" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel4/Control"]
+z_index = 1
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+frame = 6
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/LeftPanel/MarginContainer/VBoxContainer/Panel4/Control/Sprite2D"]
+process_priority = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
+metadata/_edit_use_anchors_ = true
+
 [node name="RightPanel" type="Panel" parent="GameCanvas/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.75
 theme_override_styles/panel = SubResource("StyleBoxEmpty_t8c7f")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameCanvas/HBoxContainer/RightPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+frame = 7
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
+
+[node name="Panel2" type="Panel" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel2/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+frame = 5
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel2/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
+
+[node name="Panel3" type="Panel" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel3/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+frame = 3
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel3/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")
+
+[node name="Panel4" type="Panel" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+
+[node name="Sprite2D" type="Sprite2D" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel4/Control"]
+texture = ExtResource("2_nq8x8")
+hframes = 3
+vframes = 3
+frame = 1
+
+[node name="Button" type="Button" parent="GameCanvas/HBoxContainer/RightPanel/MarginContainer/VBoxContainer/Panel4/Control/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia1e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7sj7f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yv0vw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n558b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w352n")

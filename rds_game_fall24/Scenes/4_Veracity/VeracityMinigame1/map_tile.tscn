@@ -17,7 +17,11 @@ corner_radius_top_left = 5
 custom_minimum_size = Vector2(640, 640)
 layout_mode = 3
 anchors_preset = 0
-pivot_offset = Vector2(320, 320)
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+pivot_offset = Vector2(640, 640)
 script = ExtResource("1_kydb8")
 
 [node name="ImageNodeB" type="Sprite2D" parent="."]

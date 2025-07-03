@@ -11,6 +11,8 @@ var current_index
 @onready var image_node_bottom : Sprite2D = $ImageNodeB
 @onready var border_style : Panel = $BorderPanel
 
+var occupied_drag_tile
+
 func _ready():
 	image_node_top.frame = correct_index
 	if is_empty_tile(): image_node_top.visible = false
