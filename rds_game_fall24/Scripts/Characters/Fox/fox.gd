@@ -9,5 +9,7 @@ func _process(delta):
 	if (!autonomous):
 		target_pos = player.global_position
 		autonomous = true
+		print("OFF")
 	else:
+		print("AUTONOMOUS")
 		super(delta)

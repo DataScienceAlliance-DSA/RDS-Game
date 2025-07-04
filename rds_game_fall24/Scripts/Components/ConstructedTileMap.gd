@@ -5,37 +5,34 @@ extends TileMap
 # - deeg
 
 var aStar : AStar2D # AStar2D manager of all nodes
+var rect : Rect2i
 
 func _ready():
 	# get and reserve size of scene space on aStar
-	var size = self.get_used_rect().size
+	rect = self.get_used_rect()
 	aStar = AStar2D.new()
-	aStar.reserve_space(size.x * size.y)
+	aStar.reserve_space(rect.size.x * rect.size.y)
 	
 	# add points on all cells in tilemap to aStar
-	for i in size.x:
-		for j in size.y:
-			if get_cell_source_id(0, Vector2(i,j))!=-1:
-				var idx = getAStarCellIndex(Vector2(i,j))
-				aStar.add_point(idx, Vector2(i,j))
+	for i in rect.size.x:
+		for j in rect.size.y:
+			var cell = rect.position + Vector2i(i, j)
+			if get_cell_source_id(0, cell) != -1:
+				var idx = getAStarCellIndex(cell)
+				aStar.add_point(idx, cell)
 	
 	# fill and connect aStar's grid with all valid cells
-	for i in size.x:
-		for j in size.y:
-			if get_cell_source_id(0, Vector2(i,j))!=-1:
-				var idx = getAStarCellIndex(Vector2(i,j))
-				for vNeighborCell in [Vector2(i,j-1),Vector2(i,j+1),Vector2(i-1,j),Vector2(i+1,j)]:
-					if (vNeighborCell.x >= 0) and (vNeighborCell.x < size.x) and (vNeighborCell.y >= 0) and (vNeighborCell.y < size.y):
-						var idxNeighbor=getAStarCellIndex(vNeighborCell)
-						if aStar.has_point(idxNeighbor) and get_cell_source_id(0, vNeighborCell)!=-1:
-							# print("DID I EVER EVEN HAPPEN")
-							aStar.connect_points(idx, idxNeighbor, false)
-	
-	for i in size.x:
-		for j in size.y:
-			if get_cell_source_id(0, Vector2(i,j)) != -1:
-				var idx = getAStarCellIndex(Vector2(i,j))
-				# print("#" + str(idx) + ": " + str(aStar.get_point_connections(idx)))
+	for i in rect.size.x:
+		for j in rect.size.y:
+			var cell = rect.position + Vector2i(i, j)
+			if get_cell_source_id(0, cell)!=-1:
+				var idx = getAStarCellIndex(cell)
+				for offset in [Vector2i(0,-1),Vector2i(0,1),Vector2i(-1,0),Vector2i(1,0)]:
+					var neighbor = cell + offset
+					if get_cell_source_id(0, neighbor) != -1:
+						var neighbor_idx = getAStarCellIndex(neighbor)
+						if aStar.has_point(neighbor_idx):
+							aStar.connect_points(idx, neighbor_idx, false)
 	
 	# DEBUG visualize the cells
 	var astar_debugger = get_parent().get_node("DEBUG") as Node2D
@@ -55,5 +52,6 @@ func getAStarPath(vStartPosition:Vector2,vTargetPosition:Vector2)->Array:
 		return Array(aStar.get_point_path(idxStart, idxTarget))
 	return []
 
-func getAStarCellIndex(vCell : Vector2):
-	return int(vCell.y + vCell.x * self.get_used_rect().size.y)
+func getAStarCellIndex(vCell : Vector2i):
+	var local = vCell - rect.position
+	return int(local.y + local.x * rect.size.y)

@@ -45,7 +45,6 @@ func _process(delta):
 			hopping = true
 		elif (self.name != "Player"):
 			autonomous = false
-			pass
 	else:
 		hop_interpolation += (delta * speed)
 		
