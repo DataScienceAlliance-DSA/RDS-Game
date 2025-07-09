@@ -21,11 +21,11 @@ func enable_animation(item_index):
 		2:
 			set_animation("TealOrb")
 		3:
-			set_animation("YellowOrb")
-		4:
 			set_animation("BlueOrb")
-		5:
+		4:
 			set_animation("GreenOrb")
+		5:
+			set_animation("YellowOrb")
 		_:
 			set_animation("NonOrb")
 
