@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=45 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/UI/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/UI/dialogue.gd" id="1_ne7wx"]
@@ -13,20 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://p88dp0clfweh" path="res://Assets/UI/Button_Clicked.png" id="5_8caay"]
 [ext_resource type="Texture2D" uid="uid://c2yxq6cnd6e0x" path="res://Assets/UI/Button_Hover.png" id="6_drrxe"]
 [ext_resource type="Texture2D" uid="uid://b4oj0x3e1fwmn" path="res://Assets/UI/Button_Pressed.png" id="7_mn856"]
-[ext_resource type="Texture2D" uid="uid://ds8d7hxthwbxp" path="res://Assets/UI/selection_button_states/Orbs_Selection/Orbs_Active.png" id="10_2g7ig"]
-[ext_resource type="Texture2D" uid="uid://ckmgth8tt6dg3" path="res://Assets/UI/selection_button_states/Orbs_Selection/Orbs_Pressed.png" id="11_glrh1"]
-[ext_resource type="Texture2D" uid="uid://bme4p8mckxegf" path="res://Assets/UI/selection_button_states/Orbs_Selection/Orbs_Hover.png" id="12_finca"]
+[ext_resource type="Texture2D" uid="uid://upj21h3cxd1g" path="res://Assets/UI/button_states/Large Buttons/Button_Active_Large.png" id="10_5bywk"]
+[ext_resource type="Texture2D" uid="uid://0t6pa4cvqfoa" path="res://Assets/UI/button_states/Large Buttons/Button_On Press_Large.png" id="11_r6hm0"]
+[ext_resource type="Texture2D" uid="uid://do8v3gok0m17d" path="res://Assets/UI/button_states/Large Buttons/Button_Hover_Large.png" id="12_qjoia"]
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://Assets/UI/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
-[ext_resource type="Texture2D" uid="uid://ci0havxrkeguw" path="res://Assets/UI/selection_button_states/Orbs_Selection/Orbs_Visted.png" id="13_uwh05"]
+[ext_resource type="Texture2D" uid="uid://dera7x5lrboba" path="res://Assets/UI/button_states/Large Buttons/Button_Inactive_Large.png" id="13_teu3g"]
 [ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://Assets/UI/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
-[ext_resource type="Texture2D" uid="uid://bcwaxymjtlorf" path="res://Assets/UI/selection_button_states/Potions_Selection/Potions_Active.png" id="14_sddsj"]
-[ext_resource type="Texture2D" uid="uid://ce8ih4fkowtko" path="res://Assets/UI/selection_button_states/Potions_Selection/Potions_Pressed.png" id="15_sqvjo"]
-[ext_resource type="Texture2D" uid="uid://dg1eky31u2ghm" path="res://Assets/UI/selection_button_states/Potions_Selection/Potions_Hover.png" id="16_3yibk"]
-[ext_resource type="Texture2D" uid="uid://r68o4hiey6ew" path="res://Assets/UI/selection_button_states/Potions_Selection/Potions_Visted.png" id="17_tfw6t"]
-[ext_resource type="Texture2D" uid="uid://bygnom1g3evsk" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Active.png" id="18_2ulfr"]
-[ext_resource type="Texture2D" uid="uid://c6u4wdoosptab" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Pressed.png" id="19_5gvgm"]
-[ext_resource type="Texture2D" uid="uid://wxhymweehla0" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Hover.png" id="20_euilg"]
-[ext_resource type="Texture2D" uid="uid://b2qgnc42fi0ba" path="res://Assets/UI/selection_button_states/Wands_Selection/Wands_Visted.png" id="21_cei1u"]
 [ext_resource type="Texture2D" uid="uid://b6d5j8hghat4w" path="res://Assets/UI/V2Dialogue Box_Long_Light.png" id="22_es88q"]
 [ext_resource type="Texture2D" uid="uid://dc6gax07oukrv" path="res://Assets/UI/button_states/Confirm Button/Normal.png" id="25_5bv13"]
 [ext_resource type="Texture2D" uid="uid://4d8d75h1ro58" path="res://Assets/UI/button_states/Confirm Button/Pressed.png" id="26_8y088"]
@@ -484,25 +476,66 @@ size_flags_vertical = 4
 process_mode = 1
 texture_filter = 1
 layout_mode = 1
+offset_left = -149.0
+offset_top = -173.0
+offset_right = 196.0
+offset_bottom = 174.0
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(172, 168)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("10_5bywk")
+texture_pressed = ExtResource("11_r6hm0")
+texture_hover = ExtResource("12_qjoia")
+texture_disabled = ExtResource("13_teu3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.096
+anchor_top = 0.131
+anchor_right = 0.878
+anchor_bottom = 0.884
+offset_left = 93.88
+offset_top = 15.543
+offset_right = -66.91
+offset_bottom = -189.748
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 3
+theme_override_font_sizes/bold_italics_font_size = 3
+theme_override_font_sizes/mono_font_size = 3
+bbcode_enabled = true
+text = "[b]Orbs[/b]"
+tab_size = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -172.5
-offset_top = -168.0
-offset_right = 172.5
-offset_bottom = 168.0
+offset_left = -136.971
+offset_top = -56.0882
+offset_right = 136.029
+offset_bottom = 95.9117
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.85, 0.85)
-pivot_offset = Vector2(172, 168)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("10_2g7ig")
-texture_pressed = ExtResource("11_glrh1")
-texture_hover = ExtResource("12_finca")
-texture_disabled = ExtResource("13_uwh05")
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "[center] make smoke emerge from the cauldron"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
 process_mode = 1
@@ -537,10 +570,61 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.85, 0.85)
 pivot_offset = Vector2(172, 168)
-texture_normal = ExtResource("14_sddsj")
-texture_pressed = ExtResource("15_sqvjo")
-texture_hover = ExtResource("16_3yibk")
-texture_disabled = ExtResource("17_tfw6t")
+texture_normal = ExtResource("10_5bywk")
+texture_pressed = ExtResource("11_r6hm0")
+texture_hover = ExtResource("12_qjoia")
+texture_disabled = ExtResource("13_teu3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.096
+anchor_top = 0.131
+anchor_right = 0.878
+anchor_bottom = 0.884
+offset_left = 64.1741
+offset_top = 11.6285
+offset_right = -36.6159
+offset_bottom = -194.156
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 3
+theme_override_font_sizes/bold_italics_font_size = 3
+theme_override_font_sizes/mono_font_size = 3
+bbcode_enabled = true
+text = "[b]Potions[/b]"
+fit_content = true
+scroll_active = false
+tab_size = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.029
+offset_top = -55.6765
+offset_right = 138.971
+offset_bottom = 96.3235
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "[center] make smoke emerge from the cauldron"
 
 [node name="MarginContainer3" type="MarginContainer" parent="Monologue/ChoiceContainer/HBoxContainer"]
 process_mode = 1
@@ -575,10 +659,61 @@ grow_vertical = 2
 scale = Vector2(0.85, 0.85)
 pivot_offset = Vector2(172, 168)
 size_flags_horizontal = 0
-texture_normal = ExtResource("18_2ulfr")
-texture_pressed = ExtResource("19_5gvgm")
-texture_hover = ExtResource("20_euilg")
-texture_disabled = ExtResource("21_cei1u")
+texture_normal = ExtResource("10_5bywk")
+texture_pressed = ExtResource("11_r6hm0")
+texture_hover = ExtResource("12_qjoia")
+texture_disabled = ExtResource("13_teu3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.096
+anchor_top = 0.131
+anchor_right = 0.878
+anchor_bottom = 0.884
+offset_left = 73.5859
+offset_top = 15.1579
+offset_right = 74.5859
+offset_bottom = 400.158
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 3
+theme_override_font_sizes/bold_italics_font_size = 3
+theme_override_font_sizes/mono_font_size = 3
+bbcode_enabled = true
+text = "[b]Wands[/b]"
+fit_content = true
+scroll_active = false
+tab_size = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Monologue/ChoiceContainer/HBoxContainer/MarginContainer3/Control/ChoiceTexture3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.676
+offset_top = -55.6765
+offset_right = 141.324
+offset_bottom = 96.3235
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "[center] make smoke emerge from the cauldron"
 
 [node name="TextContainer" type="MarginContainer" parent="Monologue"]
 process_mode = 1
@@ -1010,6 +1145,7 @@ texture = ExtResource("34_1se8c")
 
 [node name="InstructionsPanel" type="MarginContainer" parent="."]
 process_mode = 3
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
