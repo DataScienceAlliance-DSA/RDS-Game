@@ -13180,6 +13180,30 @@ position = Vector2(1856, 2496)
 [node name="Sea_Rock2" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
 position = Vector2(1474, 2179)
 
+[node name="Sea_Rock77" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(1341, 2812)
+
+[node name="Sea_Rock78" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(1495, 2817)
+
+[node name="Sea_Rock79" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(1647, 2820)
+
+[node name="Sea_Rock80" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(1779, 2824)
+
+[node name="Sea_Rock82" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(5070, 55)
+
+[node name="Sea_Rock83" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(5070, 159)
+
+[node name="Sea_Rock84" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(5068, 237)
+
+[node name="Sea_Rock85" parent="Sea_Rocks" instance=ExtResource("7_7wnol")]
+position = Vector2(5072, 343)
+
 [node name="Islands" type="Node2D" parent="."]
 position = Vector2(128, 128)
 
