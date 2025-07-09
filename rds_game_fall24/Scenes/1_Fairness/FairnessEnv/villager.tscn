@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://ci8p7fqrp68q1"]
+
+[ext_resource type="Script" path="res://Scripts/1_Fairness/FairnessEnv/villager.gd" id="1_otvr0"]
+[ext_resource type="Texture2D" uid="uid://dafdjhqy64erc" path="res://Assets/Characters/Villagers/GreenVillagerSpread2.png" id="2_5bri3"]
+[ext_resource type="AnimationLibrary" uid="uid://bno22rbbtr61j" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_green_villager.res" id="3_3hqis"]
+[ext_resource type="Texture2D" uid="uid://hacq6a2culte" path="res://Assets/Characters/Villagers/OrangeSpread.png" id="4_u2jwn"]
+[ext_resource type="AnimationLibrary" uid="uid://bo27j3v5s5k5v" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_orange_villager.res" id="5_c5fg6"]
+[ext_resource type="Texture2D" uid="uid://dqhp5ge3cu77i" path="res://Assets/Characters/Villagers/PeachVillagerSpreadSheet.png" id="6_c7jyb"]
+[ext_resource type="AnimationLibrary" uid="uid://btod0xbfayfkn" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_peach_villager.res" id="7_dxl7c"]
+[ext_resource type="Texture2D" uid="uid://c7o3d6wrkyjwr" path="res://Assets/Characters/Villagers/BlueVillagerSpreadsheet.png" id="8_s3m8d"]
+[ext_resource type="AnimationLibrary" uid="uid://wf0bixyyngpi" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_blue_villager.res" id="9_ecu86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akhno"]
+size = Vector2(85.3333, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k27a5"]
+size = Vector2(81.3333, 20)
+
+[node name="Villager" type="CharacterBody2D"]
+script = ExtResource("1_otvr0")
+start_autonomous = true
+
+[node name="villager_sprites" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="GreenVillager" type="Sprite2D" parent="villager_sprites"]
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_5bri3")
+offset = Vector2(0, -210)
+hframes = 10
+vframes = 20
+frame = 30
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/GreenVillager"]
+libraries = {
+"animation_frameworks": ExtResource("3_3hqis")
+}
+
+[node name="OrangeVillager" type="Sprite2D" parent="villager_sprites"]
+visible = false
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("4_u2jwn")
+offset = Vector2(0, -240)
+hframes = 10
+vframes = 20
+frame = 30
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/OrangeVillager"]
+libraries = {
+"animation_frameworks_orange_villager": ExtResource("5_c5fg6")
+}
+
+[node name="PeachVillager" type="Sprite2D" parent="villager_sprites"]
+visible = false
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("6_c7jyb")
+offset = Vector2(0, -260)
+hframes = 10
+vframes = 20
+frame = 30
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/PeachVillager"]
+libraries = {
+"animation_frameworks_peach_villager": ExtResource("7_dxl7c")
+}
+
+[node name="BlueVillager" type="Sprite2D" parent="villager_sprites"]
+visible = false
+y_sort_enabled = true
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("8_s3m8d")
+offset = Vector2(0, -250)
+hframes = 10
+vframes = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/BlueVillager"]
+root_node = NodePath("../../..")
+libraries = {
+"animation_frameworks_blue_villager": ExtResource("9_ecu86")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+y_sort_enabled = true
+position = Vector2(-1.27157e-06, -64)
+shape = SubResource("RectangleShape2D_akhno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0.666668, -9.33333)
+shape = SubResource("RectangleShape2D_k27a5")

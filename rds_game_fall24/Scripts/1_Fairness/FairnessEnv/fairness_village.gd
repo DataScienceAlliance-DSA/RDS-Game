@@ -1,16 +1,19 @@
 extends Node2D
 
 @onready var player = get_tree().get_nodes_in_group("Player")[0]
+@onready var fox = get_tree().get_nodes_in_group("Fox")[0]
 
 @export var default_spawn : Vector2
 @onready var crystal = $PodiumGroup/Crystal
 
 var cm : CutsceneManager # cutscene manager for this 
+@export var use_ps_spawn = true
 
 func _ready():
-	player.global_position = PS.spawning_at
+	if use_ps_spawn: player.global_position = PS.spawning_at
 	UI.start_scene_change(false, false, "")
 	
+	fox.following_player = true
 	match(PS.village_state):
 		1:
 			if PS.spawning_at != Vector2(0.,0.): player.global_position = PS.spawning_at

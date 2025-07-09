@@ -136,7 +136,9 @@ func update_cast():
 		player_cast.position = Vector2(0, -12)
 
 func confirmed_interaction():
-	player_cast.get_collider().interact(self)
+	var collider = player_cast.get_collider()
+	if collider and collider.has_method("interact"):
+		collider.interact(self)
 	movement_stack = [Vector2.ZERO]
 
 func enable_process():

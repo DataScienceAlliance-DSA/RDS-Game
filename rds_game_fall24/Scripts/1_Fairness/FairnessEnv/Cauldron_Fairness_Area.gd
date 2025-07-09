@@ -1,5 +1,5 @@
 extends Area2D
-@onready var shape_ui = get_node("../../UIFairnessMinigame1")
+@onready var shape_ui = get_node("../../../UIFairnessMinigame1")
 var interactor = null
 
 # Called when the player interacts with the sick villager

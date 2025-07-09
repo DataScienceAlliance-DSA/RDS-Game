@@ -21,6 +21,10 @@ var move_start : Vector2
 var anim_player
 @export var anim_lib_name : String ## IMPORTANT: set name of character's animation_framework here, or else animations in cutscenes/autonav will not work
 
+@onready var char_dir_theta = 0. # character facing direction stored for when not moving
+@onready var prev_pos_1: Vector2 = Vector2.ZERO
+@onready var prev_pos_2: Vector2 = Vector2.ZERO
+
 func _ready():
 	autonomous = start_autonomous
 
@@ -49,6 +53,10 @@ func _process(delta):
 		hop_interpolation += (delta * speed)
 		
 		moveTo(move_start, move_target, hop_interpolation)
+	
+	set_directional_anim(char_dir_theta, true)
+	prev_pos_2 = prev_pos_1
+	prev_pos_1 = self.global_position
 
 func set_autonomous(autonomous):
 	self.autonomous = autonomous
@@ -62,9 +70,7 @@ func moveTo(start_pos : Vector2, target_pos : Vector2, t : float):
 		hopping = false
 	
 	var diff = target_pos - start_pos
-	var theta = atan2(diff.y, diff.x)
-	
-	set_directional_anim(theta, true)
+	char_dir_theta = atan2(diff.y, diff.x)
 	
 	self.position = start_pos.lerp(target_pos, t)
 
@@ -82,13 +88,23 @@ func set_directional_anim(theta, moving):
 	if not anim_player:
 		return
 	
+	# print(str(prev_pos.x) + "," + str(prev_pos.y) + "     " + str(global_position.x) + "," + str(global_position.y))
+	# print(prev_pos.distance_to(global_position))
+	var current_pos = self.global_position
+	var same1 = prev_pos_1.distance_to(current_pos) < 0.001
+	var same2 = prev_pos_2.distance_to(current_pos) < 0.001
+	if same1 and same2:
+		moving = false
+	
 	theta = fmod(theta, TAU)
 	if theta < 0.:
 		theta += TAU
 	
 	anim_player.speed_scale = speed / 100.
 	
-	var next_anim = str(anim_lib_name) + "/"
+	var next_anim = ""
+	if anim_lib_name: next_anim = str(anim_lib_name) + "/"
+	
 	if ((theta <= PI / 4) and (theta >= 0)) or ((theta >= 7 * PI / 4) and (theta <= 2 * PI)):
 		next_anim += "walkRight" if moving else "idleRight"
 	if (theta >= PI / 4) and (theta <= 3 * PI / 4):

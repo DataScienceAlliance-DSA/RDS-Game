@@ -1505,6 +1505,5 @@ to_spawn_position = Vector2(1590, 446)
 position = Vector2(-124, 380)
 shape = SubResource("RectangleShape2D_t5mqp")
 
-[node name="Villager" parent="." instance=ExtResource("16_ayg5p")]
+[node name="CharacterController" parent="." instance=ExtResource("16_ayg5p")]
 position = Vector2(2448, -1292)
-start_autonomous = false
