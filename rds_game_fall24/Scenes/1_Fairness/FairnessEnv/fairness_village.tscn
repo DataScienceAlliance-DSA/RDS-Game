@@ -716,7 +716,6 @@ size = Vector2(51, 1096)
 y_sort_enabled = true
 script = ExtResource("1_x0gev")
 default_spawn = Vector2(-184, -280)
-use_ps_spawn = false
 
 [node name="Map" type="TileMap" parent="." groups=["Map"]]
 z_index = -1
@@ -749,7 +748,7 @@ speed = 275.0
 script = ExtResource("15_4d8c8")
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("1_p4jvy")]
-position = Vector2(2538, -1219)
+position = Vector2(-160, -224)
 cam_zoom = 0.75
 speed = 250.0
 
@@ -1507,4 +1506,3 @@ shape = SubResource("RectangleShape2D_t5mqp")
 
 [node name="Villager" parent="." instance=ExtResource("16_ayg5p")]
 position = Vector2(2448, -1292)
-start_autonomous = false
