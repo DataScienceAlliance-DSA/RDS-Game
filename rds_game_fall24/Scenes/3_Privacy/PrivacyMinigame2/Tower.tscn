@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://dmrhask8gfnct"]
+[gd_scene load_steps=3 format=3 uid="uid://dmrhask8gfnct"]
+
+[ext_resource type="Texture2D" uid="uid://b4ndjuadmgjdq" path="res://Assets/3_Privacy/PrivacyMinigame2/TowerSummon.png" id="1_32ff3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sgnsw"]
+radius = 93.0
 
 [node name="Tower" type="Node2D"]
+position = Vector2(0, 1)
+
+[node name="TowerSummon" type="Sprite2D" parent="."]
+position = Vector2(1, -9)
+texture = ExtResource("1_32ff3")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_sgnsw")
+debug_color = Color(0, 0.643137, 0.282353, 0.419608)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt8mm4dpsyofd"]
+
+[ext_resource type="Texture2D" uid="uid://cexu5dtj5q1jg" path="res://Assets/3_Privacy/PrivacyMinigame2/Fireball.png" id="1_7mtaw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxm4c"]
+size = Vector2(13.5, 16.5)
+
+[node name="Fireball" type="Node2D"]
+
+[node name="Fireball" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_7mtaw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(2.25, -8.25)
+shape = SubResource("RectangleShape2D_hxm4c")

@@ -5,9 +5,13 @@
 
 [node name="Tower Defence Game" type="Node2D"]
 
+[node name="Timer" type="Timer" parent="."]
+
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_042pl")
 
 [node name="ConstructedTileMap" type="TileMap" parent="." groups=["Map"]]
 format = 2
 script = ExtResource("2_uredc")
+
+[connection signal="timeout" from="Timer" to="GameManager" method="_on_timer_timeout"]
