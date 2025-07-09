@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxhlint1k71yf"]
+
+[ext_resource type="Script" path="res://Scripts/3_Privacy/PrivacyMinigame2/TowerDefenceManager.gd" id="1_042pl"]
+[ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="2_uredc"]
+
+[node name="Tower Defence Game" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_042pl")
+
+[node name="Scaling Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="ConstructedTileMap" type="TileMap" parent="." groups=["Map"]]
+format = 2
+script = ExtResource("2_uredc")
+
+[connection signal="timeout" from="Scaling Timer" to="GameManager" method="_on_timer_timeout"]
