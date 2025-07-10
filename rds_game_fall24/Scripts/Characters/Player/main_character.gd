@@ -4,6 +4,9 @@ extends CharacterController
 var is_minigame_scene = false
 var shape_index
 
+#tracks if the tile is moved yet
+var tileMoved = false
+
 @export var cam_zoom: float = 1.0
 @export var cam_speed: float = 3.0
 @onready var camera = get_node("Camera2D")
@@ -138,8 +141,10 @@ func update_cast():
 func confirmed_interaction():
 	var collider = player_cast.get_collider()
 	if collider and collider.has_method("interact"):
-		collider.interact(self)
-	movement_stack = [Vector2.ZERO]
+		if tileMoved == false:
+			collider.interact(self)
+			movement_stack = [Vector2.ZERO]
+	tileMoved = true
 
 func enable_process():
 	autonomous = false

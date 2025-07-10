@@ -26,13 +26,13 @@ func _ready():
 func _process(delta):
 	## SCENE CONTAINER VISUAL ANIMATION
 	if !target_button_just_clicked:
-		if Input.is_action_just_released("scroll_down"):
+		if Input.is_action_just_released("scroll_down") or Input.is_action_just_pressed("right"):
 			if target_button: target_button.scale = Vector2(1., 1.)
 			target_scene_container_pos.x -= 128.
 			target_button = null
 			target_title_container_margin = Vector2(450,450)
 			target_desc_container_margin = Vector2(-650,1366)
-		elif Input.is_action_just_released("scroll_up"):
+		elif Input.is_action_just_released("scroll_up") or Input.is_action_just_pressed("left"):
 			if target_button: target_button.scale = Vector2(1., 1.)
 			target_scene_container_pos.x += 128.
 			target_button = null
