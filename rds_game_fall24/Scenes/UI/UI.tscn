@@ -270,7 +270,6 @@ theme_override_fonts/italics_font = ExtResource("8_rgi4l")
 theme_override_font_sizes/normal_font_size = 17
 theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
-text = "[color=black]Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
 fit_content = true
 scroll_active = false
 
