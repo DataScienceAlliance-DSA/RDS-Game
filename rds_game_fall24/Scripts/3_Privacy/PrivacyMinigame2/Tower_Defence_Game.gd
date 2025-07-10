@@ -1,7 +1,7 @@
 extends Node
 var scaling : int = 0 #Scaling for enemy health/speed
 var ap :int = 0 #These are your Action Points, the currency in the game 
-@onready var done = 1#This is how close to done the node is in terms of uploading the information
+var done = 0#This is how close to done the node is in terms of uploading the information
 var life : int = 15 #This is how many lives you have
 
 # Called when the node enters the scene tree for the first time.

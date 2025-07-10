@@ -6,6 +6,7 @@ var damage : int = 3 #sets damage
 var atksp : int = 2 #sets attack speed
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
