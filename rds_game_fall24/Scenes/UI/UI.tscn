@@ -258,21 +258,6 @@ text = "[color=black]Lorem ipsum dolor sit amet, consectetur adipiscing elit, se
 fit_content = true
 scroll_active = false
 
-[node name="DialogueItalicText" type="RichTextLabel" parent="Dialogue/PlayerContainer/PositionControl/ScaleControl/Textcont"]
-process_mode = 1
-clip_contents = false
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-mouse_filter = 2
-theme_override_colors/default_color = Color(0.141176, 0.133333, 0.345098, 1)
-theme_override_fonts/normal_font = ExtResource("7_uer3i")
-theme_override_fonts/italics_font = ExtResource("8_rgi4l")
-theme_override_font_sizes/normal_font_size = 17
-theme_override_font_sizes/bold_font_size = 0
-bbcode_enabled = true
-fit_content = true
-scroll_active = false
-
 [node name="CharacterContainer" type="HBoxContainer" parent="Dialogue"]
 process_mode = 1
 custom_minimum_size = Vector2(521, 0)
