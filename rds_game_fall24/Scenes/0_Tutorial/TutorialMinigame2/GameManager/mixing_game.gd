@@ -27,6 +27,11 @@ var goal_name : String				# current stage's pair of orb goal name
 @onready var mixing_ui_change_speed = 5.0
 var reopening
 
+var cur_lod_value = -1.0
+var cur_dim_value = -1.0
+var prev_lod_value = cur_lod_value
+var prev_dim_value = cur_dim_value
+
 func _ready():
 	UI.start_scene_change(false, false, "")
 	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialMinigame2/MixingIntro.json", null)
@@ -98,8 +103,15 @@ func _process(delta):
 	bg_blur_mat.set_shader_parameter("lod", 1.5 * bg_blur_prop)
 	bg_blur_mat.set_shader_parameter("dim", 0.15 * bg_blur_prop)
 	
-	print(bg_blur_mat.get_shader_parameter("LOD"))
-	print(bg_blur_mat.get_shader_parameter("Dim"))
+	cur_lod_value = bg_blur_mat.get_shader_parameter("lod")
+	cur_dim_value = bg_blur_mat.get_shader_parameter("dim")
+	
+	if (cur_lod_value != prev_lod_value):
+		print(bg_blur_mat.get_shader_parameter("lod"))
+		prev_lod_value = cur_lod_value
+	if (cur_dim_value != prev_dim_value):
+		print(bg_blur_mat.get_shader_parameter("dim"))
+		prev_dim_value = cur_dim_value
 	
 	if ((orb_container.position.x > orb_container_target_pos.x - 25.0) and reopening):
 		var spots = get_tree().get_nodes_in_group("DropSpots")
