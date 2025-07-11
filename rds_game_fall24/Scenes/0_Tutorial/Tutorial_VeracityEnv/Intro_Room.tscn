@@ -888,7 +888,6 @@ shape = SubResource("RectangleShape2D_lgce6")
 position = Vector2(1155, 256)
 script = ExtResource("27_kvvj0")
 following_player = true
-follow_speed = 200.0
 
 [node name="tables" type="Node2D" parent="."]
 
