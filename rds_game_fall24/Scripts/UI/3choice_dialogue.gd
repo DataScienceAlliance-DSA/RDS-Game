@@ -35,6 +35,11 @@ var choice2_next
 var choice3_next
 var potential_next_choice	# currently hovered choice
 
+#variables to fix the space bar shwoing the full text ahead of time
+var can_advance = false
+var skip_requested = false
+var finished_line = false
+
 # varaibles for ui dynamic changes
 var interactable : bool
 @onready var target_position : Vector2 = Vector2(0, 0)
@@ -96,8 +101,16 @@ func _process(_delta):
 	if not interactable: return
 	
 	# timer system for dialogue string to write itself on UI
-	if (next_char_timer >= next_char_wait) and (char_index <= +character_text.length()):
-		next_char_timer = 0.0
+	if char_index <= character_text.length():
+		if skip_requested:
+			char_index = character_text.length()
+			skip_requested = false
+		else:
+			if next_char_timer >= next_char_wait:
+				next_char_timer = 0.0
+				char_index += 1
+			else:
+				next_char_timer += _delta
 		if "style" in dialogue_dict[current_dialogue_id]:
 			var style = dialogue_dict[current_dialogue_id]["style"]
 			response_text.visible = false
@@ -116,7 +129,10 @@ func _process(_delta):
 	if char_index > character_text.length():
 		response_arrow.visible = true
 		response_arrow.position.y = (5 * cos(5 * next_char_timer) + 205) / 2
-	
+		if not finished_line:
+			finished_line = true
+			await get_tree().create_timer(0.5).timeout
+			can_advance = true
 	# check for and process dialogue if next button (E) is pressed
 	if !choosing:
 		pass
@@ -124,10 +140,13 @@ func _process(_delta):
 		char_index = character_text.length()
 	
 	if (Input.is_action_just_pressed("interaction") and !choosing):
-		if (char_index <= character_text.length()):
-			char_index = character_text.length()
+		if not finished_line:
+			skip_requested = true
 		else:
-			process_next_text()
+			if can_advance:
+				can_advance = false
+				finished_line = false
+				process_next_text()
 	elif (choosing) and (Input.is_action_just_pressed("left_click")) and (potential_next_choice != ""):
 		current_dialogue_id = potential_next_choice
 		process_next_text()
