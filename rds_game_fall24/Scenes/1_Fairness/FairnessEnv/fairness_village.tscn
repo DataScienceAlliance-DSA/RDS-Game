@@ -748,7 +748,7 @@ speed = 275.0
 script = ExtResource("15_4d8c8")
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("1_p4jvy")]
-position = Vector2(-160, -224)
+position = Vector2(-141, -224)
 cam_zoom = 0.75
 speed = 250.0
 
@@ -1503,6 +1503,36 @@ to_spawn_position = Vector2(1590, 446)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-124, 380)
 shape = SubResource("RectangleShape2D_t5mqp")
+
+[node name="Villager2" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(2624, -1292)
+
+[node name="Villager8" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(256, -2399)
+routine_walking = true
+routine_pos = Vector2(1376, -1311)
+
+[node name="Villager7" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(2752, -4255)
+routine_walking = true
+routine_pos = Vector2(1856, 0)
+
+[node name="Villager6" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(755, -3139)
+routine_walking = true
+
+[node name="Villager5" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(2931, -3264)
+routine_walking = true
+routine_pos = Vector2(309, -1173)
+
+[node name="Villager4" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(1728, -1823)
+
+[node name="Villager3" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(1267, -1311)
+routine_walking = true
+routine_pos = Vector2(-112, -416)
 
 [node name="Villager" parent="." instance=ExtResource("16_ayg5p")]
 position = Vector2(2448, -1292)

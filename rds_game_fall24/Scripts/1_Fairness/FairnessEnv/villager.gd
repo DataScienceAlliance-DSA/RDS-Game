@@ -11,6 +11,9 @@ extends CharacterController
 	$villager_sprites/BlueVillager
 ]
 
+@export var routine_walking : bool
+@export var routine_pos : Vector2
+
 func _ready():
 	# randomly choose villager sprite
 	for sprite in villager_sprites:
@@ -28,6 +31,7 @@ func _ready():
 func _process(delta):
 	if !autonomous:
 		autonomous = true
-		target_pos = Vector2(-33.,-288.)
+		if routine_walking:
+			target_pos = routine_pos
 	else:
 		super(delta)
