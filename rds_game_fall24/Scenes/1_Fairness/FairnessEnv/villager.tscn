@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ci8p7fqrp68q1"]
+[gd_scene load_steps=13 format=3 uid="uid://ci8p7fqrp68q1"]
 
 [ext_resource type="Script" path="res://Scripts/1_Fairness/FairnessEnv/villager.gd" id="1_otvr0"]
 [ext_resource type="Texture2D" uid="uid://dafdjhqy64erc" path="res://Assets/Characters/Villagers/GreenVillagerSpread2.png" id="2_5bri3"]
@@ -9,6 +9,7 @@
 [ext_resource type="AnimationLibrary" uid="uid://btod0xbfayfkn" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_peach_villager.res" id="7_dxl7c"]
 [ext_resource type="Texture2D" uid="uid://c7o3d6wrkyjwr" path="res://Assets/Characters/Villagers/BlueVillagerSpreadsheet.png" id="8_s3m8d"]
 [ext_resource type="AnimationLibrary" uid="uid://wf0bixyyngpi" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_blue_villager.res" id="9_ecu86"]
+[ext_resource type="Script" path="res://Scripts/1_Fairness/FairnessEnv/villager_area.gd" id="10_nuhtu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akhno"]
 size = Vector2(85.3333, 128)
@@ -84,6 +85,7 @@ libraries = {
 
 [node name="Area2D" type="Area2D" parent="."]
 y_sort_enabled = true
+script = ExtResource("10_nuhtu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 y_sort_enabled = true

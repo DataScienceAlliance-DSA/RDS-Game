@@ -11,7 +11,10 @@ func _ready():
 func _process(delta):
 	if following_player:
 		if (!autonomous):
-			autonomous = true
+			if (player.global_position.distance_to(self.global_position) > 128.):
+				autonomous = true
+			else:
+				set_directional_anim(char_dir_theta, false)
 		else:
 			target_pos = player.global_position
 			super(delta)

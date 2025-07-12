@@ -208,7 +208,6 @@ libraries = {
 y_sort_enabled = true
 scale = Vector2(0.7, 0.625)
 shape = SubResource("RectangleShape2D_nccn4")
-disabled = true
 debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="FoxArea" type="Area2D" parent="."]
