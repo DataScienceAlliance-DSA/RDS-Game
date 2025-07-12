@@ -1,18 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxhlint1k71yf"]
+[gd_scene load_steps=4 format=3 uid="uid://bxhlint1k71yf"]
 
-[ext_resource type="Script" path="res://Scripts/3_Privacy/PrivacyMinigame2/TowerDefenceManager.gd" id="1_042pl"]
+[ext_resource type="Script" path="res://Scripts/3_Privacy/PrivacyMinigame2/Tower_Defence_Game.gd" id="1_042pl"]
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="2_uredc"]
+[ext_resource type="PackedScene" uid="uid://dmrhask8gfnct" path="res://Scenes/3_Privacy/PrivacyMinigame2/Tower.tscn" id="3_arhdm"]
 
 [node name="Tower Defence Game" type="Node2D"]
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_042pl")
-
-[node name="Scaling Timer" type="Timer" parent="."]
-wait_time = 10.0
 
 [node name="ConstructedTileMap" type="TileMap" parent="." groups=["Map"]]
 format = 2
 script = ExtResource("2_uredc")
 
-[connection signal="timeout" from="Scaling Timer" to="GameManager" method="_on_timer_timeout"]
+[node name="Tower" parent="." instance=ExtResource("3_arhdm")]
+position = Vector2(337, 196)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 479.0
+offset_top = 80.0
+offset_right = 729.0
+offset_bottom = 168.0
+text = "% done
+"
+
+[connection signal="timeout" from="Timer" to="GameManager" method="_on_timer_timeout"]

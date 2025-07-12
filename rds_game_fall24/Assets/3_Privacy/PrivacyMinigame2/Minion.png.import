@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfpc1telihyoo"
-path="res://.godot/imported/green_bubble.png-37a53ea75efce25255cdbdbdf5cf531b.ctex"
+uid="uid://40dbm00fjtd8"
+path="res://.godot/imported/Minion.png-20f478b6e11d5b18e7f3ceec94646c20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Privacy/PrivacyMinigame2/green_bubble.png"
-dest_files=["res://.godot/imported/green_bubble.png-37a53ea75efce25255cdbdbdf5cf531b.ctex"]
+source_file="res://Assets/3_Privacy/PrivacyMinigame2/Minion.png"
+dest_files=["res://.godot/imported/Minion.png-20f478b6e11d5b18e7f3ceec94646c20.ctex"]
 
 [params]
 

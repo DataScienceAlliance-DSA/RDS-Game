@@ -1,9 +1,13 @@
 extends Node2D
 
+#NOT WORKING????
+
 @onready var power_gauge: TextureProgressBar = $"../PowerGauge/power_gauge"  # Reference to the power gauge
 @onready var cannonball_scene: PackedScene = preload("res://Scenes/0_Tutorial/TutorialMinigame1/Cannonball.tscn")  # Preload the cannonball scene
 
 @onready var cannon_tip_position: Vector2 = self.get_node("./dart_spawn").position  # Replace with the actual position of the cannon's tip
+
+var is_paused: bool = false
 
 func _ready() -> void:
 	UI.start_scene_change(false, false)
@@ -12,6 +16,15 @@ func _ready() -> void:
 		pass
 
 func _process(_delta: float) -> void:
+	print("entered cannon game")
+	if is_paused:
+		return  # stop processing while manually paused
+	
+	if Input.is_action_just_pressed("pause"):
+		print("Toggled Pause")
+		is_paused = not is_paused  # toggle pause
+		power_gauge.stop_fluctuating()
+		
 	if Input.is_action_just_pressed("cannon shoot"):  # Assuming you have an input action called "shoot"
 		power_gauge.start_fluctuating()
 		

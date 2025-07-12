@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bboa4goihqbep"]
+
+[ext_resource type="Texture2D" uid="uid://40dbm00fjtd8" path="res://Assets/3_Privacy/PrivacyMinigame2/Minion.png" id="1_nu380"]
+[ext_resource type="Script" path="res://Scenes/3_Privacy/PrivacyMinigame2/Minion.gd" id="1_va26a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptkva"]
+size = Vector2(55, 66)
+
+[node name="Minion" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+script = ExtResource("1_va26a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ptkva")
+
+[node name="Minion" type="Sprite2D" parent="."]
+texture = ExtResource("1_nu380")

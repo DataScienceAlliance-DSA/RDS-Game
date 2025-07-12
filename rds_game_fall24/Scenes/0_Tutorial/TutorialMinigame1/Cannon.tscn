@@ -47,8 +47,13 @@ func _process(_delta: float) -> void:
 	
 	if bag_attempts <= 0: return
 	
+	if Input.is_action_just_pressed(\"menu\"):
+		power_gauge.stop_fluctuating()
+		trajectory.visible = false
+	
 	if Input.is_action_just_pressed(\"cannon shoot\") and (pause_timer.is_stopped()) and (!cannonball):  # Assuming you have an input action called \"shoot\"
 		power_gauge.start_fluctuating()
+		trajectory.clear_points()
 		trajectory.visible = true
 		collision_test.get_child(0).disabled = false
 		cannon_primed = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnrx1mgr3ia4t"
-path="res://.godot/imported/Bubble.png-8f14798b14fd3bf2bf781dc3bec79439.ctex"
+uid="uid://cexu5dtj5q1jg"
+path="res://.godot/imported/Fireball.png-adbc794f62a20bad0fa494fc59257778.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Privacy/PrivacyMinigame2/Bubble.png"
-dest_files=["res://.godot/imported/Bubble.png-8f14798b14fd3bf2bf781dc3bec79439.ctex"]
+source_file="res://Assets/3_Privacy/PrivacyMinigame2/Fireball.png"
+dest_files=["res://.godot/imported/Fireball.png-adbc794f62a20bad0fa494fc59257778.ctex"]
 
 [params]
 
