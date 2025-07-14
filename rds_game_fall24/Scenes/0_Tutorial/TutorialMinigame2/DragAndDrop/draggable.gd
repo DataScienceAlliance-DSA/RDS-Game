@@ -9,12 +9,12 @@ var snap_position
 var current_spot
 
 func _ready():
-	start_position = self.position
-	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
+	start_position = self.position #Sets Position
+	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup') #Finds where the drop locations are
 
-func _process(delta):
-	if (!is_dragging) and (current_spot):
-		position = current_spot.global_position
+#func _process(delta): ##Uncomment this if issues arise with the snapping into place"
+#	if (!is_dragging) and (current_spot):
+#		position = current_spot.global_position #Makes the orbs snap into place rather then sliding into place
 
 func _physics_process(delta):
 	if is_dragging == true:
@@ -24,7 +24,7 @@ func _physics_process(delta):
 			'position', 
 			get_global_mouse_position() - mouse_offset, 
 			delay * delta
-		)
+		) #Allows for the movement of the orbs
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -37,7 +37,7 @@ func _input(event):
 			var planned_position
 			drop_spots = get_tree().get_nodes_in_group('DropSpotGroup')
 			print(drop_spots)
-			for drop_spot in drop_spots:
+			for drop_spot in drop_spots:  #Recognizes the Drop Spots, and allows things to be placed there
 				if ((drop_spot.has_overlapping_areas())
 					and 
 					(drop_spot.get_overlapping_areas().has(self.get_node("Area2D")))
