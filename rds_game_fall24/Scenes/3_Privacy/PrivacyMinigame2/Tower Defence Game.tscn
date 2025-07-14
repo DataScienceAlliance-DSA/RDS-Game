@@ -7,7 +7,7 @@
 [node name="Tower Defence Game" type="Node2D"]
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
+wait_time = 1.8
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_042pl")
@@ -17,14 +17,6 @@ format = 2
 script = ExtResource("2_uredc")
 
 [node name="Tower" parent="." instance=ExtResource("3_arhdm")]
-position = Vector2(337, 196)
-
-[node name="Label" type="Label" parent="."]
-offset_left = 479.0
-offset_top = 80.0
-offset_right = 729.0
-offset_bottom = 168.0
-text = "% done
-"
+position = Vector2(677, 360)
 
 [connection signal="timeout" from="Timer" to="GameManager" method="_on_timer_timeout"]
