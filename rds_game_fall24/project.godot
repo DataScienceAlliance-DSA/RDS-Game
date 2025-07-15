@@ -22,6 +22,7 @@ Enums="*res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room
 Constants="*res://Assets/0_Tutorial/Tutorial_VeracityEnv/conveyor_belt_cauldron_room/Managers/Constants.gd"
 PS="*res://Scenes/Characters/Player/PlayerState.tscn"
 GlobalPlayerName="*res://Scripts/Components/Cutscene/global_player_name.tscn"
+Global="*res://Scripts/global.gd"
 
 [display]
 
