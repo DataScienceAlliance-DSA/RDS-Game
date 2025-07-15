@@ -13,7 +13,7 @@ func _ready():
 	if use_ps_spawn: player.global_position = PS.spawning_at
 	UI.start_scene_change(false, false, "")
 	
-	fox.following_player = true
+	# fox.following_player = true
 	match(PS.village_state):
 		1:
 			if PS.spawning_at != Vector2(0.,0.): player.global_position = PS.spawning_at

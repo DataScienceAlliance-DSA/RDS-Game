@@ -1,7 +1,7 @@
 {
   "routine": [
 	{ "type": "blurb",  "text": "Fresh bread, hot out of the oven!", "seconds": 5.0 },
-	{ "type": "wait",   "seconds": 6.0 },
+	{ "type": "wait",   "seconds": 1.0 },
 	{ "type": "blurb",  "text": "Fresh bread, hot out of the oven!", "seconds": 5.0 },
 	{ "type": "action", "position": { "x": 1856, "y": -1216 } },
 	{ "type": "wait",   "seconds": 3.0 },

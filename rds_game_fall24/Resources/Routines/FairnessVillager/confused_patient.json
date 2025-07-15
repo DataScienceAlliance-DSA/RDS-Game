@@ -1,0 +1,13 @@
+{
+  "routine": [
+	{ "type": "blurb", "text": "I just don’t understand!", "seconds": 4.0 },
+	{ "type": "blurb", "text": "The entire village was feeling well just last week.", "seconds": 5.0 },
+	{ "type": "blurb", "text": "Then all of a sudden, we all come down with this weird cold?", "seconds": 6.0 },
+	{ "type": "blurb", "text": "It just doesn’t make sense...", "seconds": 4.5 },
+	{ "type": "wait",  "seconds": 6.5 },
+	{ "type": "blurb", "text": "I think so, she’s probably too busy trying to find the crystals.", "seconds": 6.5 },
+	{ "type": "wait",  "seconds": 5.5 },
+	{ "type": "blurb", "text": "I hope so... [i]cough[/i]...", "seconds": 3.0 },
+	{ "type": "wait",  "seconds": 25.0 }
+  ]
+}

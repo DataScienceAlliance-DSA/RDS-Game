@@ -31,7 +31,7 @@ scale = Vector2(4, -4)
 script = ExtResource("6_utkob")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_4pnkf")]
-position = Vector2(72, 449)
+position = Vector2(1568, 480)
 
 [node name="temp_courtyard_map" type="Sprite2D" parent="."]
 z_index = -1

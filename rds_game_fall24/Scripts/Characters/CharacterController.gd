@@ -107,11 +107,11 @@ func set_directional_anim(theta, moving):
 	
 	if ((theta <= PI / 4) and (theta >= 0)) or ((theta >= 7 * PI / 4) and (theta <= 2 * PI)):
 		next_anim += "walkRight" if moving else "idleRight"
-	if (theta >= PI / 4) and (theta <= 3 * PI / 4):
+	elif (theta >= PI / 4) and (theta <= 3 * PI / 4):
 		next_anim += "walkDown" if moving else "idleDown"
-	if (theta >= 3 * PI / 4) and (theta <= 5 * PI / 4):
+	elif (theta >= 3 * PI / 4) and (theta <= 5 * PI / 4):
 		next_anim += "walkLeft" if moving else "idleLeft"
-	if (theta >= 5 * PI / 4) and (theta <= 7 * PI / 4):
+	elif (theta >= 5 * PI / 4) and (theta <= 7 * PI / 4):
 		next_anim += "walkUp" if moving else "idleUp"
 	
 	if anim_player.current_animation != next_anim:

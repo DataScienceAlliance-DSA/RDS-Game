@@ -1,0 +1,13 @@
+{
+  "routine": [
+	{ "type": "action", "position": { "x": 1664, "y": -3200 } },
+	{ "type": "blurb",  "text": "Jeez, I hope this forest can get cleared up soon.", "seconds": 10.0 },
+	{ "type": "action", "position": { "x": 192, "y": -2880 } },
+	{ "type": "wait",   "seconds": 15.0 },
+	{ "type": "action", "position": { "x": 448, "y": -1920 } },
+	{ "type": "action", "position": { "x": 1792, "y": -1408 } },
+	{ "type": "blurb",  "text": "The cauldron sure smells funny...", "seconds": 5.0 },
+	{ "type": "action", "position": { "x": 3072, "y": -2816 } },
+	{ "type": "wait",   "seconds": 15.0 }
+  ]
+}

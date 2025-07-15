@@ -122,9 +122,6 @@ func _process(_delta):
 			response_text.text = "[color="+text_color+"]"+character_text.substr(0,char_index)+"[/color]"
 			response_text.visible = true
 			response_italic_text.visible = false
-		char_index = char_index + 1
-	else:
-		next_char_timer += _delta
 	
 	if char_index > character_text.length():
 		response_arrow.visible = true

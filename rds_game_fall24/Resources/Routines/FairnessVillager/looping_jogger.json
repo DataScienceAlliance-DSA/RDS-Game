@@ -1,0 +1,16 @@
+{
+  "routine": [
+	{ "type": "action", "position": { "x": 1152, "y": -1152 } },
+	{ "type": "action", "position": { "x": 2112, "y": -1152 } },
+	{ "type": "action", "position": { "x": 2368, "y": -2304 } },
+	{ "type": "action", "position": { "x": 960,  "y": -2304 } },
+	{ "type": "action", "position": { "x": 1152, "y": -1152 } },
+	{ "type": "action", "position": { "x": 2112, "y": -1152 } },
+	{ "type": "blurb", "text": "[i]Huff[/i]... [i]puff[/i]...", "seconds": 3.0 },
+	{ "type": "blurb", "text": "...I'm not... built for... cardio...", "seconds": 5.5 },
+	{ "type": "action", "position": { "x": 2368, "y": -2304 } },
+	{ "type": "action", "position": { "x": 960,  "y": -2304 } },
+	{ "type": "action", "position": { "x": 1152, "y": -1152 } },
+	{ "type": "action", "position": { "x": 2112, "y": -1152 } }
+  ]
+}
