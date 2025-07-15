@@ -147,10 +147,9 @@ func win_game():
 	
 	PS.village_state = 3
 	UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessEnv/fairness_village.tscn")
-	_on_game_timer_timeout()
 
 func _on_game_timer_timeout():
-	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/1_Fairness/FairnessMinigame2/FoxFairness1Failure.json", null)
+	UI.get_node("Monologue").open_3choice_dialogue("res://Resources/Texts/Monologues/1_Fairness/FairnessMinigame2/FoxFairness2Failure.json", null)
 	await UI.get_node("Monologue").closed_signal
-	UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessMinigame1/GameManager/fairness_minigame_2.tscn")
+	UI.start_scene_change(true, true, "res://Scenes/1_Fairness/FairnessMinigame2/GameManager/fairness_minigame_2.tscn")
 	print("times up")

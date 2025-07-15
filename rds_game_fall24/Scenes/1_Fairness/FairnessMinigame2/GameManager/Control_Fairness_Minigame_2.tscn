@@ -16,8 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://ck77ho1jxqfh4" path="res://Assets/1_Fairness/FairnessMinigame2/weight_25.png" id="14_etopw"]
 [ext_resource type="Texture2D" uid="uid://dwlp18cogkvgt" path="res://Assets/1_Fairness/FairnessMinigame2/weight_50.png" id="15_17l28"]
 
-
-
 [node name="Minigame2" type="CanvasLayer"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
