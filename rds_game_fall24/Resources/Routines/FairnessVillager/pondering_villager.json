@@ -1,0 +1,15 @@
+{
+  "routine": [
+	{ "type": "wait", "seconds": 4.0 },
+	{ "type": "wait", "seconds": 5.0 },
+	{ "type": "wait", "seconds": 6.0 },
+	{ "type": "wait", "seconds": 4.5 },
+	{ "type": "blurb", "text": "Wasn’t the academy's [b]principal[/b] passing through here not too long ago?", "seconds": 6.5 },
+	{ "type": "wait", "seconds": 6.5 },
+	{ "type": "blurb", "text": "She’ll come around and help us out, I’m sure of it.", "seconds": 5.5 },
+	{ "type": "wait", "seconds": 3.0 },
+	{ "type": "wait", "seconds": 5. },
+	{ "type": "blurb", "text": "...[i]sniffle[/i]...", "seconds":3.},
+	{ "type": "wait", "seconds": 17. },
+  ]
+}

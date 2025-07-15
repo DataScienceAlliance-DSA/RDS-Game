@@ -1,0 +1,9 @@
+{
+  "routine": [
+	{ "type": "blurb",  "text": "Lies...", "seconds": 3.0, "wait": 1 },
+	{ "type": "blurb",  "text": "Gossip...", "seconds": 3.0, "wait": 1 },
+	{ "type": "wait",	"seconds": 1.0},
+	{ "type": "blurb",  "text": ":3...", "seconds": 3.0, "wait": 1 },
+	{ "type": "wait",	"seconds": 1.0}
+  ]
+}

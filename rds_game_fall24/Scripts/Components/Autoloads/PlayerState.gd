@@ -8,6 +8,8 @@ extends Node2D
 
 @export var spawning_at = Vector2(0,0)
 
+@export var text_character_speed = 0.01
+
 func reset_states():
 	library_state = 0
 	cauldron_state = 0

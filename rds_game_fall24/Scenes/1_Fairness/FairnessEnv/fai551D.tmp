@@ -716,6 +716,7 @@ size = Vector2(51, 1096)
 y_sort_enabled = true
 script = ExtResource("1_x0gev")
 default_spawn = Vector2(-184, -280)
+use_ps_spawn = false
 
 [node name="Map" type="TileMap" parent="." groups=["Map"]]
 z_index = -1
@@ -742,14 +743,13 @@ position = Vector2(-64, -320)
 rotation = 3.14159
 scale = Vector2(4, -4)
 script = ExtResource("3_2josw")
-following_player = true
 speed = 275.0
 
 [node name="DEBUG" type="Node2D" parent="."]
 script = ExtResource("15_4d8c8")
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("1_p4jvy")]
-position = Vector2(-128, -256)
+position = Vector2(2560, -1216)
 cam_zoom = 0.75
 speed = 250.0
 
@@ -1505,32 +1505,30 @@ to_spawn_position = Vector2(1590, 446)
 position = Vector2(-124, 380)
 shape = SubResource("RectangleShape2D_t5mqp")
 
-[node name="Villager" parent="." instance=ExtResource("16_ayg5p")]
-position = Vector2(2448, -1292)
-routine_enabled = true
-routine_json = "res://Resources/Routines/FairnessVillager/confused_patient.json"
-
 [node name="Villager2" parent="." instance=ExtResource("16_ayg5p")]
-position = Vector2(3072, -2816)
-routine_enabled = true
-routine_interruptable = true
-routine_json = "res://Resources/Routines/FairnessVillager/forest_watcher.json"
-sprite_index = 2
-speed = 125.0
+position = Vector2(2624, -1292)
 
-[node name="Villager3" parent="." instance=ExtResource("16_ayg5p")]
-position = Vector2(960, -2304)
-routine_enabled = true
-routine_interruptable = true
-routine_json = "res://Resources/Routines/FairnessVillager/looping_jogger.json"
-sprite_index = 2
-speed = 250.0
+[node name="Villager8" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(256, -2399)
+
+[node name="Villager7" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(2752, -4255)
+
+[node name="Villager6" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(755, -3139)
+
+[node name="Villager5" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(2931, -3264)
 
 [node name="Villager4" parent="." instance=ExtResource("16_ayg5p")]
-position = Vector2(2624, -1292)
-routine_enabled = true
-routine_json = "res://Resources/Routines/FairnessVillager/pondering_villager.json"
-sprite_index = 1
+position = Vector2(1728, -1823)
+
+[node name="Villager3" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(1267, -1311)
+
+[node name="Villager" parent="." instance=ExtResource("16_ayg5p")]
+position = Vector2(2448, -1292)
+routine_json = "res://Resources/Routines/FairnessVillager/villager_test.json"
 
 [node name="Tree" parent="." instance=ExtResource("6_ljd2i")]
 position = Vector2(1358, -3714)

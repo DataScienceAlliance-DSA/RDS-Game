@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=49 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/UI/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/UI/dialogue.gd" id="1_ne7wx"]
@@ -15,7 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://b4oj0x3e1fwmn" path="res://Assets/UI/Button_Pressed.png" id="7_mn856"]
 [ext_resource type="FontFile" uid="uid://qmrm71tyawp0" path="res://Assets/UI/fonts/QuattrocentoSans-Regular.ttf" id="7_uer3i"]
 [ext_resource type="FontFile" uid="uid://dxq25e12h245j" path="res://Assets/UI/fonts/QuattrocentoSans-Italic.ttf" id="8_rgi4l"]
+[ext_resource type="FontFile" uid="uid://bxn5tw20wggft" path="res://Assets/UI/fonts/QuattrocentoSans-Bold.ttf" id="8_tetox"]
 [ext_resource type="Texture2D" uid="uid://upj21h3cxd1g" path="res://Assets/UI/button_states/Large Buttons/Button_Active_Large.png" id="10_5bywk"]
+[ext_resource type="FontFile" uid="uid://e4a536e28u8n" path="res://Assets/UI/fonts/QuattrocentoSans-BoldItalic.ttf" id="10_net7d"]
 [ext_resource type="Texture2D" uid="uid://0t6pa4cvqfoa" path="res://Assets/UI/button_states/Large Buttons/Button_On Press_Large.png" id="11_r6hm0"]
 [ext_resource type="Texture2D" uid="uid://do8v3gok0m17d" path="res://Assets/UI/button_states/Large Buttons/Button_Hover_Large.png" id="12_qjoia"]
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://Assets/UI/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
@@ -250,7 +252,9 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.141176, 0.133333, 0.345098, 1)
 theme_override_fonts/normal_font = ExtResource("7_uer3i")
+theme_override_fonts/bold_font = ExtResource("8_tetox")
 theme_override_fonts/italics_font = ExtResource("8_rgi4l")
+theme_override_fonts/bold_italics_font = ExtResource("10_net7d")
 theme_override_font_sizes/normal_font_size = 17
 theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
@@ -425,7 +429,10 @@ clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_fonts/normal_font = ExtResource("7_uer3i")
+theme_override_fonts/bold_font = ExtResource("8_tetox")
+theme_override_fonts/italics_font = ExtResource("8_rgi4l")
+theme_override_fonts/bold_italics_font = ExtResource("10_net7d")
 theme_override_font_sizes/normal_font_size = 17
 theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true
@@ -869,7 +876,10 @@ process_mode = 1
 clip_contents = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("14_mugcx")
+theme_override_fonts/normal_font = ExtResource("7_uer3i")
+theme_override_fonts/bold_font = ExtResource("8_tetox")
+theme_override_fonts/italics_font = ExtResource("8_rgi4l")
+theme_override_fonts/bold_italics_font = ExtResource("10_net7d")
 theme_override_font_sizes/normal_font_size = 17
 theme_override_font_sizes/bold_font_size = 0
 bbcode_enabled = true

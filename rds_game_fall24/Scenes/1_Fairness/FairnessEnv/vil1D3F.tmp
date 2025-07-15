@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ci8p7fqrp68q1"]
+[gd_scene load_steps=13 format=3 uid="uid://ci8p7fqrp68q1"]
 
 [ext_resource type="Script" path="res://Scripts/1_Fairness/FairnessEnv/villager.gd" id="1_otvr0"]
 [ext_resource type="Texture2D" uid="uid://dafdjhqy64erc" path="res://Assets/Characters/Villagers/GreenVillagerSpread2.png" id="2_5bri3"]
@@ -9,12 +9,7 @@
 [ext_resource type="AnimationLibrary" uid="uid://btod0xbfayfkn" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_peach_villager.res" id="7_dxl7c"]
 [ext_resource type="Texture2D" uid="uid://c7o3d6wrkyjwr" path="res://Assets/Characters/Villagers/BlueVillagerSpreadsheet.png" id="8_s3m8d"]
 [ext_resource type="AnimationLibrary" uid="uid://wf0bixyyngpi" path="res://Assets/1_Fairness/FairnessMinigame1/animation_frameworks_blue_villager.res" id="9_ecu86"]
-[ext_resource type="Texture2D" uid="uid://c3162l8l012kd" path="res://Assets/Characters/Player/MCFinalSpreadSheet.png" id="10_drb45"]
 [ext_resource type="Script" path="res://Scripts/1_Fairness/FairnessEnv/villager_area.gd" id="10_nuhtu"]
-[ext_resource type="FontFile" uid="uid://qmrm71tyawp0" path="res://Assets/UI/fonts/QuattrocentoSans-Regular.ttf" id="12_b48nd"]
-[ext_resource type="FontFile" uid="uid://bxn5tw20wggft" path="res://Assets/UI/fonts/QuattrocentoSans-Bold.ttf" id="13_4lryo"]
-[ext_resource type="FontFile" uid="uid://dxq25e12h245j" path="res://Assets/UI/fonts/QuattrocentoSans-Italic.ttf" id="14_xrqs3"]
-[ext_resource type="FontFile" uid="uid://e4a536e28u8n" path="res://Assets/UI/fonts/QuattrocentoSans-BoldItalic.ttf" id="15_eiiou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akhno"]
 size = Vector2(85.3333, 128)
@@ -22,24 +17,12 @@ size = Vector2(85.3333, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k27a5"]
 size = Vector2(81.3333, 20)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iaiyh"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qrha"]
-bg_color = Color(1, 1, 1, 0.882353)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-anti_aliasing_size = 0.5
-
 [node name="Villager" type="CharacterBody2D"]
 script = ExtResource("1_otvr0")
+routine_json = null
 start_autonomous = true
+speed = null
+anim_lib_name = null
 
 [node name="villager_sprites" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -81,7 +64,7 @@ texture = ExtResource("6_c7jyb")
 offset = Vector2(0, -260)
 hframes = 10
 vframes = 20
-frame = 112
+frame = 30
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="villager_sprites/PeachVillager"]
 libraries = {
@@ -103,14 +86,6 @@ libraries = {
 "animation_frameworks_blue_villager": ExtResource("9_ecu86")
 }
 
-[node name="Player" type="Sprite2D" parent="villager_sprites"]
-visible = false
-position = Vector2(0, -64)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("10_drb45")
-hframes = 10
-vframes = 32
-
 [node name="Area2D" type="Area2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("10_nuhtu")
@@ -125,60 +100,28 @@ y_sort_enabled = true
 position = Vector2(0.666668, -9.33333)
 shape = SubResource("RectangleShape2D_k27a5")
 
-[node name="TextPanel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -500.0
-offset_top = -175.0
-offset_right = 500.0
-offset_bottom = -135.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(500, 20)
-theme_override_styles/panel = SubResource("StyleBoxEmpty_iaiyh")
-
-[node name="TextBubble" type="Panel" parent="TextPanel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -75.0
-offset_top = -15.0
-offset_right = 74.066
-offset_bottom = 15.0
+offset_left = -54.31
+offset_top = -180.0
+offset_right = 54.31
+offset_bottom = -140.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_6qrha")
 
-[node name="TextLabel" type="RichTextLabel" parent="TextPanel"]
-clip_contents = false
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 425.0
-offset_top = 10.0
-offset_right = -425.0
-offset_bottom = -5.00002
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(75, 12)
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("12_b48nd")
-theme_override_fonts/bold_font = ExtResource("13_4lryo")
-theme_override_fonts/italics_font = ExtResource("14_xrqs3")
-theme_override_fonts/bold_italics_font = ExtResource("15_eiiou")
-theme_override_font_sizes/normal_font_size = 18
-theme_override_font_sizes/bold_font_size = 18
-theme_override_font_sizes/italics_font_size = 18
-theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]Goop nuggets..."
-fit_content = true
+text = "What a day..."
