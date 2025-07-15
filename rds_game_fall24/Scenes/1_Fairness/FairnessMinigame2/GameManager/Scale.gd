@@ -23,12 +23,12 @@ func _ready():
 		spot.get_node("SlotTexture").visible = false
 
 func _process(delta):
-	# if Input.is_action_pressed("left"):
-	# 	current_tilt = clamp(current_tilt - 1, -tilt_angle, tilt_angle)
-	# elif Input.is_action_pressed("right"):
-	# 	current_tilt = clamp(current_tilt + 1, -tilt_angle, tilt_angle)
-	# else:
-	# 	current_tilt = lerp(current_tilt, 0.0, 0.1)
+	 #if Input.is_action_pressed("left"):
+	 	#current_tilt = clamp(current_tilt - 1, -tilt_angle, tilt_angle)
+	 #elif Input.is_action_pressed("right"):
+	 	#current_tilt = clamp(current_tilt + 1, -tilt_angle, tilt_angle)
+	 #else:
+	 	#current_tilt = lerp(current_tilt, 0.0, 0.1)
 	
 	var weight_score : float = 0
 	

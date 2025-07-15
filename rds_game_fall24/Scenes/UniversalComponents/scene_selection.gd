@@ -14,6 +14,10 @@ var target_button
 @onready var current_title_container_margin = Vector2(450,450)
 @onready var current_desc_container_margin = Vector2(-650,1366)
 
+#USED FOR MACOS TRACKPAD
+var scroll_accum := 0.0
+const SCROLL_TRIGGER := 1.50  # Tune this
+
 func _ready():
 	UI.start_scene_change(false, false, "")
 	UI.set_tooltip("")
@@ -23,41 +27,63 @@ func _ready():
 		var button = control.get_children()[0]
 		button.pressed.connect(register_button_press.bind(button))
 
+func _input(event):
+	print(event)
+
+func _unhandled_input(event):
+	if event is InputEventPanGesture:
+		scroll_accum += event.delta.y
+		if scroll_accum > SCROLL_TRIGGER:
+			scroll_accum = 0
+			_handle_scroll_up()
+		elif scroll_accum < -SCROLL_TRIGGER:
+			scroll_accum = 0
+			_handle_scroll_down()
+
+func _handle_scroll_up():
+	if target_button:
+		target_button.scale = Vector2(1., 1.)
+	target_scene_container_pos.x += 128.
+	target_button = null
+	target_title_container_margin = Vector2(450, 450)
+	target_desc_container_margin = Vector2(-650, 1366)
+
+func _handle_scroll_down():
+	if target_button:
+		target_button.scale = Vector2(1., 1.)
+	target_scene_container_pos.x -= 128.
+	target_button = null
+	target_title_container_margin = Vector2(450, 450)
+	target_desc_container_margin = Vector2(-650, 1366)
+
 func _process(delta):
-	## SCENE CONTAINER VISUAL ANIMATION
 	if !target_button_just_clicked:
-		if Input.is_action_just_released("scroll_down") or Input.is_action_just_pressed("right"):
-			if target_button: target_button.scale = Vector2(1., 1.)
-			target_scene_container_pos.x -= 128.
-			target_button = null
-			target_title_container_margin = Vector2(450,450)
-			target_desc_container_margin = Vector2(-650,1366)
-		elif Input.is_action_just_released("scroll_up") or Input.is_action_just_pressed("left"):
-			if target_button: target_button.scale = Vector2(1., 1.)
-			target_scene_container_pos.x += 128.
-			target_button = null
-			target_title_container_margin = Vector2(450,450)
-			target_desc_container_margin = Vector2(-650,1366)
+		if Input.is_action_just_pressed("right"):
+			_handle_scroll_down()
+		elif Input.is_action_just_pressed("left"):
+			_handle_scroll_up()
 	else:
 		target_scene_container_pos.x = 100. - target_button.get_parent().position.x
 		target_button_just_clicked = false
-	target_scene_container_pos.x = max(min(100., target_scene_container_pos.x), -5472.)
-	
+
+	target_scene_container_pos.x = clamp(target_scene_container_pos.x, -5472., 100.)
 	scene_container.position = scene_container.position.lerp(target_scene_container_pos, 5. * delta)
+
 	current_title_container_margin = current_title_container_margin.lerp(target_title_container_margin, 5. * delta)
 	current_desc_container_margin = current_desc_container_margin.lerp(target_desc_container_margin, 5. * delta)
-	
+
 	title_margin_container.add_theme_constant_override("margin_left", current_title_container_margin.x)
 	title_margin_container.add_theme_constant_override("margin_right", current_title_container_margin.y)
 	desc_margin_container.add_theme_constant_override("margin_left", current_desc_container_margin.x)
 	desc_margin_container.add_theme_constant_override("margin_right", current_desc_container_margin.y)
-	
-	if target_button: 
+
+	if target_button:
 		var f_scale = lerpf(target_button.scale.x, 1.25, delta * 5.)
 		target_button.scale = Vector2(f_scale, f_scale)
 
 func register_button_press(button):
-	if target_button: target_button.scale = Vector2(1., 1.)
+	if target_button: 
+		target_button.scale = Vector2(1., 1.)
 	
 	target_button = button
 	target_button_just_clicked = true
@@ -69,42 +95,10 @@ func register_button_press(button):
 	
 	var index = target_button.name.substr(target_button.name.length() - 2, 2) as int
 	match index:
-		1:
+		1,2,3,4,5,6,8,9,11,15,16,17,18:
 			play_scene_button.disabled = false
-		2:
-			play_scene_button.disabled = false
-		3:
-			play_scene_button.disabled = false
-		4:
-			play_scene_button.disabled = false
-		5:
-			play_scene_button.disabled = false
-		6:
-			play_scene_button.disabled = false
-		7:
+		_:
 			play_scene_button.disabled = true
-		8:
-			play_scene_button.disabled = false
-		9:
-			play_scene_button.disabled = false
-		10:
-			play_scene_button.disabled = true
-		11:
-			play_scene_button.disabled = false
-		12:
-			play_scene_button.disabled = true
-		13:
-			play_scene_button.disabled = true
-		14:
-			play_scene_button.disabled = true
-		15:
-			play_scene_button.disabled = false
-		16:
-			play_scene_button.disabled = false
-		17:
-			play_scene_button.disabled = false
-		18:
-			play_scene_button.disabled = false
 
 func play_scene_button_pressed():
 	if target_button:
