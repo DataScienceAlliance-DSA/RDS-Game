@@ -1,10 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://1q1al4h8xolo"]
+[gd_scene load_steps=17 format=3 uid="uid://1q1al4h8xolo"]
 
-[ext_resource type="Texture2D" uid="uid://bndss7qu042es" path="res://Assets/Characters/Fox/FoxFinalSpreadSheet.png" id="1_ukv1w"]
 [ext_resource type="Script" path="res://Scripts/Characters/Fox/fox_area.gd" id="2_lp4ex"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_53jex"]
 light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_1i021"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bsmn6"]
+gradient = SubResource("Gradient_1i021")
+width = 2767
+height = 8372
 
 [sub_resource type="Animation" id="Animation_ngfvs"]
 length = 0.001
@@ -193,7 +200,7 @@ y_sort_enabled = true
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_53jex")
 scale = Vector2(0.06, 0.06)
-texture = ExtResource("1_ukv1w")
+texture = SubResource("GradientTexture2D_bsmn6")
 offset = Vector2(0, -114.67)
 hframes = 10
 vframes = 32
