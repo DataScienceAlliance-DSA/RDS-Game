@@ -1,0 +1,13 @@
+{
+  "routine": [
+	{ "type": "action", "position": { "x": 12.5, "y": 7.0 } },
+	{ "type": "blurb",  "text": "Fresh bread, hot out of the oven!" },
+	{ "type": "wait",   "seconds": 3.0 },
+	{ "type": "action", "position": { "x": 5.0,  "y": 14.2 } },
+	{ "type": "blurb",  "text": "Morning, traveler." },
+	{ "type": "wait",   "seconds": 2.5 },
+	{ "type": "action", "position": { "x": 8.8,  "y": 9.6 } },
+	{ "type": "blurb",  "text": "Let me check the dough…" },
+	{ "type": "wait",   "seconds": 4.0 }
+  ]
+}
