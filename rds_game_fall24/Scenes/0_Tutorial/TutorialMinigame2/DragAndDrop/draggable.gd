@@ -12,9 +12,9 @@ func _ready():
 	start_position = self.position #Sets Position
 	drop_spots = get_tree().get_nodes_in_group('DropSpotGroup') #Finds where the drop locations are
 
-#func _process(delta): ##Uncomment this if issues arise with the snapping into place"
-#	if (!is_dragging) and (current_spot):
-#		position = current_spot.global_position #Makes the orbs snap into place rather then sliding into place
+func _process(delta): ##Uncomment this if issues arise with the snapping into place"
+	if (!is_dragging) and (current_spot):
+		position = current_spot.global_position #Makes the orbs snap into place rather then sliding into place
 
 func _physics_process(delta):
 	if is_dragging == true:
