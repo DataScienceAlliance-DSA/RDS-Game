@@ -51,12 +51,18 @@ func _ready():
 			UI.start_scene_change(false, false, "")
 			
 			# Show the player name input screen
-			player_name_input.visible = true
-			# player_name_input.get_node("PlayerName").grab_focus()
+			print("Name set: ", Global.name_set)
+			if Global.name_set:
+				player_name_input.visible = false
+				print("Didn't enter Name set: ", Global.name_set)
+			else:
+				player_name_input.visible = true
+				# player_name_input.get_node("PlayerName").grab_focus()
 			
-			# Waiting for player to finish their name
-			await player_name_input.confirmed
-			
+				# Waiting for player to finish their name
+				await player_name_input.confirmed
+				Global.name_set = true
+				print("Entered Name set: ", Global.name_set)
 			# dialogue_ui.open_dialogue("res://Resources/Texts/Dialogues/0_Tutorial/TutorialEnv/FoxIntro.json", null)
 			# await dialogue_ui.dialogue_complete
 			
