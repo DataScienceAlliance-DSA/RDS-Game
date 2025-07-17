@@ -14,7 +14,7 @@ func _ready():
 
 func _process(delta):
 	if (!is_dragging) and (current_spot):
-		position = current_spot.global_position #Makes the orbs snap into place rather then sliding into place
+		position = current_spot.global_position #Makes the weights update their position in the balance game
 
 func _physics_process(delta):
 	if is_dragging == true:
