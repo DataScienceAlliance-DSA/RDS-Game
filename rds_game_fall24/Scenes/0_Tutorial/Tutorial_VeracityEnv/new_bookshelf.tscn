@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://de5m2lnwygbi0"]
+
+[ext_resource type="Texture2D" uid="uid://bbpebv3iayoqx" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Left_bookshelf_1.PNG" id="1_4kjvu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3gll"]
+size = Vector2(364, 88)
+
+[node name="Bookshelf" type="StaticBody2D"]
+position = Vector2(0, 205.15)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-8, 746.85)
+texture = ExtResource("1_4kjvu")
+offset = Vector2(0, -1100)
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -253.15)
+shape = SubResource("RectangleShape2D_k3gll")
