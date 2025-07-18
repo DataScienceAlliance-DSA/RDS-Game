@@ -11,7 +11,6 @@ size = Vector2(60, 22)
 light_mode = 1
 
 [node name="Main Character" type="CharacterBody2D"]
-y_sort_enabled = true
 script = ExtResource("1_xf38u")
 speed = 200.0
 anim_lib_name = "animation_frameworks_hero_player"

@@ -2,8 +2,8 @@ extends CharacterBody2D
 @onready var rangeshape = $CollisionShape2D
 var bullet_path = preload("res://Scenes/3_Privacy/PrivacyMinigame2/Fireball.tscn")
 var range : int = 50 #sets range
-var damage : int = 3 #sets damage
-var atksp : int = 2 #sets attack speed
+var damage : int = 5 #sets damage
+var atksp : int = 1 #sets attack speed
 
 
 
