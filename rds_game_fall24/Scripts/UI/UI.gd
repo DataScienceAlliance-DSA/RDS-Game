@@ -175,7 +175,7 @@ func resume_button_pressed():
 	resume_game(true)
 
 func exit_game_button_pressed():
-	start_scene_change(true, true, "res://Scenes/scene_selection.tscn")
+	start_scene_change(true, true, "res://Scenes/scene_selection_redux.tscn")
 
 func tooltip_button_pressed():
 	tooltip_active = !tooltip_active
