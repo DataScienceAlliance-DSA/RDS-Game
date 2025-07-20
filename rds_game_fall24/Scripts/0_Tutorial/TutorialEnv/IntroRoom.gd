@@ -5,6 +5,7 @@ var cm : CutsceneManager # cutscene manager for this
 @onready var monologue_ui = UI.get_node("Monologue")
 @onready var fox = get_tree().get_nodes_in_group("Fox")[0]
 
+
 func _ready():
 	var player = get_tree().get_nodes_in_group("Player")[0]
 	player.get_node("Camera2D").limit_right = 3776.
@@ -18,10 +19,14 @@ func _ready():
 	var malvoren = get_node("characters/principal_villain")
 	var thornewood = get_node("characters/ProfessorThornewood")
 	
+	PS.set_process(true)
+	
 	match (PS.library_state):
 		0:
 			# DISABLE PLAYER WHILE CUTSCENES ARE OCCURRING
 			player.autonomous = true
+			
+			PS.in_intro_room = true
 			
 			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
 			
@@ -51,7 +56,19 @@ func _ready():
 			cm.parallel_action()
 			
 			cm.wait(1.0)
+			
 			cm.call_monologue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/PlayerMonologue.json")
+			
+			await get_tree().create_timer(2.5).timeout
+			print(Global.interaction_pressed)
+			
+			if not Global.interaction_pressed:
+				Global.show_interaction_help = true
+			
+			#we dont need set process to run after this, because it will monitor it here
+			PS.set_process(false)
+				
+			
 			
 			await cm.actions_complete
 			
@@ -163,6 +180,8 @@ func _ready():
 			
 			PS.library_state = 1 # next time player enters room, scene will be on state #1 from now on
 			player.autonomous = false
+			var movement_label = UI.get_node("TutorialTexts/MovementHelpLabel")
+			movement_label.visible = true
 			
 		1:
 			player.position = PS.spawning_at

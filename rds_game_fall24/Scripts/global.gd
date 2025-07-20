@@ -2,6 +2,10 @@ extends Node
 
 var name_set = false
 
+var show_interaction_help = false
+
+var interaction_pressed = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Global script loaded")

@@ -137,6 +137,7 @@ func _process(_delta):
 		char_index = character_text.length()
 	
 	if (Input.is_action_just_pressed("interaction") and !choosing):
+		Global.show_interaction_help = false
 		if not finished_line:
 			skip_requested = true
 		else:
@@ -190,14 +191,28 @@ func process_next_text():
 		if "style" in dialogue_dict[current_dialogue_id]:
 			var style = dialogue_dict[current_dialogue_id]["style"]
 			response_text.visible = false
-			response_italic_text.visible = true
-			if style == "italic":
-				italic_character_text = character_text
-				response_italic_text.text = "[color="+text_color+"]"+italic_character_text.substr(0,char_index)+"[/color]"
-		else: 
-			response_text.text = "[left][color="+text_color+"]"+character_text
-			response_text.visible = true
 			response_italic_text.visible = false
+			response_italic_text.bbcode_text = "[color=" + text_color + "]" + italic_character_text
+			response_italic_text.bbcode_enabled = true
+
+			await get_tree().create_timer(0.05).timeout
+
+			response_italic_text.visible = true
+		else: 
+			response_text.visible = false
+			response_italic_text.visible = false
+
+# 			Set the text but don't show it yet
+			response_text.text = "[left][color=" + text_color + "]" + character_text
+			response_text.bbcode_enabled = true
+
+			# Wait 0.2 seconds before showing
+			await get_tree().create_timer(0.05).timeout
+
+			response_text.visible = true
+		
+		
+		char_index = 1  # start animating normally
 		if (dialogue_dict[current_dialogue_id].has("choices")):
 			choosing = true
 			
