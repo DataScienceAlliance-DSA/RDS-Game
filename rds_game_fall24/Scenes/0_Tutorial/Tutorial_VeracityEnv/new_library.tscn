@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dr2u0i2ekgrj6" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Behind_bookshelf.PNG" id="7_nj1ts"]
 [ext_resource type="Texture2D" uid="uid://ii21s1w7xawj" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Bookshelf_1.PNG" id="8_dtwal"]
 [ext_resource type="Texture2D" uid="uid://bt2mna5h3oeas" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Vertical_bookshelf.PNG" id="9_hrfir"]
-[ext_resource type="PackedScene" uid="uid://de5m2lnwygbi0" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/new_bookshelf.tscn" id="10_agimv"]
+[ext_resource type="PackedScene" uid="uid://b8ir6p0y01nl8" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/new_bookshelf.tscn" id="10_agimv"]
 [ext_resource type="Texture2D" uid="uid://dhs6jmty0ba6k" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewMisc/Column.PNG" id="10_o6pq4"]
 [ext_resource type="Texture2D" uid="uid://cimsxdd3otybg" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewMisc/Map.PNG" id="11_s57cy"]
 [ext_resource type="Texture2D" uid="uid://dmp3uycwjss3t" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewMisc/Small_table_2.PNG" id="12_uofpc"]

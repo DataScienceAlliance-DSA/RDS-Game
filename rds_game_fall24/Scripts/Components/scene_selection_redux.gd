@@ -2,6 +2,8 @@ extends Node
 
 @onready var chapter_container: VBoxContainer = $CanvasLayer/MarginContainer/VBoxContainer/Panel4/HBoxContainer/Panel3/VBoxContainer
 @onready var chapter_items: VBoxContainer = $"CanvasLayer/MarginContainer/VBoxContainer/Panel4/HBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/VBoxContainer"
+
+var chapter_title_buttons : Array = []
 var minigame_buttons: Array = []
 var chapter_index := 0
 const MAX_INDEX := 5
@@ -15,11 +17,49 @@ var v_sep := 0.0
 var chapter_buttons: Array = []
 var all_scene_buttons: Array = []
 
+# MAC OS TRACKPAD GESTURES
+var scroll_accum = 0.
+const SCROLL_TRIGGER = 1.5
+
 func _ready():
 	UI.start_scene_change(false, false, "")
+	UI.set_tooltip("")
+	PS.reset_states()
 	call_deferred("_calculate_item_size")
 	call_deferred("_gather_minigame_buttons")
 	call_deferred("_gather_all_buttons")
+	call_deferred("_gather_chapter_title_buttons")
+
+func _gather_chapter_title_buttons():
+	chapter_title_buttons.clear()
+	
+	for i in chapter_items.get_child_count():
+		var panel = chapter_items.get_child(i)
+		var button = panel.get_child(0).get_child(0)
+		chapter_title_buttons.append(button)
+		
+		# Store the panel for scaling later (so we don’t have to traverse again)
+		button.set_meta("scale_target", panel)
+		button.set_meta("index", i)
+		button.set_meta("hovering", false)
+		
+		button.mouse_entered.connect(_on_chapter_title_hover.bind(button))
+		button.mouse_exited.connect(_on_chapter_title_unhover.bind(button))
+		button.pressed.connect(_on_chapter_title_pressed.bind(button))
+
+func _on_chapter_title_hover(button):
+	button.set_meta("hovering", true)
+
+func _on_chapter_title_unhover(button):
+	button.set_meta("hovering", false)
+
+func _on_chapter_title_pressed(button):
+	if button.get_meta("index") > chapter_index:
+		while (chapter_index != button.get_meta("index")):
+			handle_scroll_down()
+	if button.get_meta("index") < chapter_index:
+		while (chapter_index != button.get_meta("index")):
+			handle_scroll_up()
 
 func _on_scene_button_pressed(index: int):
 	match index:
@@ -63,13 +103,29 @@ func _on_scene_button_pressed(index: int):
 			PS.dungeon_state = 2
 			UI.start_scene_change(true, true, "res://Scenes/5_Finale/FinaleMinigame1/FinaleMinigame1.tscn")
 
+func handle_scroll_down():
+	chapter_index = min(chapter_index + 1, MAX_INDEX)
+	target_chapter_container_pos = Vector2(chapter_container.position.x, -chapter_index * (item_height + v_sep))
+
+func handle_scroll_up():
+	chapter_index = max(chapter_index - 1, 0)
+	target_chapter_container_pos = Vector2(chapter_container.position.x, -chapter_index * (item_height + v_sep))
+
+func _unhandled_input(event):
+	if event is InputEventPanGesture:
+		scroll_accum += event.delta.y
+		if scroll_accum > SCROLL_TRIGGER:
+			scroll_accum = 0
+			handle_scroll_up()
+		elif scroll_accum < -SCROLL_TRIGGER:
+			scroll_accum = 0
+			handle_scroll_down()
+
 func _process(delta):
-	if (Input.is_action_just_pressed("scroll_down")): 
-		chapter_index = min(chapter_index + 1, MAX_INDEX)
-		target_chapter_container_pos = Vector2(chapter_container.position.x, -chapter_index * (item_height + v_sep))
-	elif (Input.is_action_just_pressed("scroll_up")): 
-		chapter_index = max(chapter_index - 1, 0)
-		target_chapter_container_pos = Vector2(chapter_container.position.x, -chapter_index * (item_height + v_sep))
+	if (Input.is_action_just_pressed("down") or Input.is_action_just_pressed("scroll_down")): 
+		handle_scroll_down()
+	elif (Input.is_action_just_pressed("up") or Input.is_action_just_pressed("scroll_up")): 
+		handle_scroll_up()
 	
 	chapter_container.position = chapter_container.position.lerp(target_chapter_container_pos, 10 * delta)
 	
@@ -81,7 +137,16 @@ func _process(delta):
 		if not label is RichTextLabel:
 			continue
 		
-		var target_scale = Vector2.ONE if (i == chapter_index) else Vector2(0.9, 0.9)
+		var item_button = item.get_child(0).get_child(0) #RichTextLabel/Button
+		
+		var target_scale
+		if (i == chapter_index):
+			target_scale = Vector2.ONE
+		elif (item_button.get_meta("hovering")):
+			target_scale = Vector2(.95,.95)
+		else:
+			target_scale = Vector2(0.9,0.9)
+		
 		var target_modulate = Color.WHITE if (i == chapter_index) else Color8(200, 200, 200)
 		
 		label.scale = label.scale.lerp(target_scale, 8 * delta)
