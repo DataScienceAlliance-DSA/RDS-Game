@@ -20,28 +20,28 @@ func _ready():
 	flow_direction = _get_direction_from_group()
 	_find_next_riptide()
 
-# func allow_entry(player_pos: Vector2) -> bool:
-# 	var group_name = ""
-# 	for g in group_to_direction:
-# 		if is_in_group(g):
-# 			group_name = g
-# 			break
-#
-# 	if group_name == "":
-# 		return true  # fail-safe: allow
-#
-# 	var flow = group_to_direction[group_name].normalized()
-# 	var to_player = (player_pos - global_position).normalized()
-#
-# 	# True only if approaching against the flow
-# 	return flow.dot(to_player) < 0
+func allow_entry(player_pos: Vector2) -> bool:
+	var group_name = ""
+	for g in group_to_direction:
+		if is_in_group(g):
+			group_name = g
+			break
+
+	if group_name == "":
+		return true  # fail-safe: allow
+
+	var flow = group_to_direction[group_name].normalized()
+	var to_player = (player_pos - global_position).normalized()
+
+ 	# True only if approaching against the flow
+	return flow.dot(to_player) < 0
 
 func _on_body_entered(body):
 	if body.name == "Main Character":
-		# var should_allow = allow_entry(body.global_position)
-		# blocker.set_deferred("collision_layer", 0 if should_allow else 1)
-		# blocker.set_deferred("collision_mask", 0 if should_allow else 1)
-		# blocker.visible = not should_allow
+		var should_allow = allow_entry(body.global_position)
+		blocker.set_deferred("collision_layer", 0 if should_allow else 1)
+		blocker.set_deferred("collision_mask", 0 if should_allow else 1)
+		blocker.visible = not should_allow
 		pass
 
 func _get_direction_from_group() -> Vector2:
