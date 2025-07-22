@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://sy1xb2dnhh7a"]
+[gd_scene load_steps=54 format=3 uid="uid://sy1xb2dnhh7a"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/LibraryRoom.gd" id="1_h32bk"]
 [ext_resource type="Texture2D" uid="uid://i0reufmosxv7" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTiles/Layout.png" id="1_tnlbb"]
@@ -38,7 +38,6 @@
 [ext_resource type="PackedScene" uid="uid://b3x8du405q3fd" path="res://Scenes/Characters/student_npc_2.tscn" id="34_xi1pr"]
 [ext_resource type="PackedScene" uid="uid://58nyyclu775n" path="res://Scenes/Characters/student_npc_3.tscn" id="35_acmpg"]
 [ext_resource type="PackedScene" uid="uid://c18dh30jhlcqd" path="res://Scenes/Characters/student_npc_4.tscn" id="36_aa766"]
-[ext_resource type="PackedScene" uid="uid://7pxxhbpnu2u2" path="res://Scenes/2_Transparency/TransparencyMinigame2/newriptide.tscn" id="39_iv767"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojhxy"]
 texture = ExtResource("2_c1qal")
@@ -1870,9 +1869,6 @@ size = Vector2(147, 73)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsbfe"]
 size = Vector2(80, 36)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_64otd"]
-size = Vector2(282, 20)
-
 [node name="LibraryRoom" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_h32bk")
@@ -2727,12 +2723,3 @@ offset = Vector2(0, -2.9)
 y_sort_enabled = true
 position = Vector2(64, -44)
 shape = SubResource("RectangleShape2D_lsbfe")
-
-[node name="Newriptide" parent="." instance=ExtResource("39_iv767")]
-position = Vector2(168, -400)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Newriptide"]
-position = Vector2(131, 0)
-shape = SubResource("RectangleShape2D_64otd")
-
-[connection signal="body_exited" from="Newriptide" to="Newriptide" method="_on_body_exited"]
