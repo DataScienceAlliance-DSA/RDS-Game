@@ -30,12 +30,12 @@ func _init(actor: Node2D, type: String, mark: Vector2, speed: float):
 	self.speed = speed
 
 func _ready():
-	self.set_process(false) # ensure that the action doesnt run until cue
+	self.set_physics_process(false) # ensure that the action doesnt run until cue
 
 func cue():
 	if (type == "AStarMove"):
 		actor.autonomous = true
-	self.set_process(true) # begin performing the action
+	self.set_physics_process(true) # begin performing the action
 	
 	walk_t = 0.
 	start_pos = actor.position
@@ -46,12 +46,12 @@ func cue():
 	
 	await action_completed
 	action_finished = true
-	self.set_process(false) # end the action
+	self.set_physics_process(false) # end the action
 
 func skip_action():
 	walk_t = 1.
 
-func _process(delta):
+func _physics_process(delta):
 	match type:
 		"AStarMove":
 			actor.target_pos = mark
@@ -59,11 +59,11 @@ func _process(delta):
 			if (!actor.autonomous):
 				actor.position = mark
 				action_completed.emit()
-				self.set_process(false)
+				self.set_physics_process(false)
 		"LerpMove":
 			walk_t += delta
 			var t = clamp(walk_t / duration, 0, 1)
-			actor.position = start_pos.lerp(mark, t)
+			actor.position = start_pos.lerp(mark, t).floor()
 
 			var diff = mark - start_pos
 			var theta = atan2(diff.y, diff.x)
@@ -72,7 +72,7 @@ func _process(delta):
 			if t >= 1.0:
 				set_directional_anim(theta, false)
 				action_completed.emit()
-				self.set_process(false)
+				self.set_physics_process(false)
 
 		"SmoothMove":
 			actor.position = actor.position.lerp(mark, delta * speed)
@@ -80,7 +80,7 @@ func _process(delta):
 			if approximately_at(actor.position.x, mark.x, 1.0) and approximately_at(actor.position.y, mark.y, 1.0):
 				actor.position = mark  # Snap to the exact target position
 				action_completed.emit()
-				self.set_process(false)  # Stop further processing
+				self.set_physics_process(false)  # Stop further processing
 
 func set_directional_anim(theta, moving):
 	if not anim_player:
