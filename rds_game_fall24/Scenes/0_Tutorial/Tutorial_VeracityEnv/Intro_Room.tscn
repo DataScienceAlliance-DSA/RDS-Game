@@ -759,15 +759,12 @@ position = Vector2(3939, 608)
 position = Vector2(4064, 608)
 
 [node name="student_npc1" parent="characters" instance=ExtResource("12_gscw8")]
-y_sort_enabled = true
 position = Vector2(3872, 672)
 
 [node name="student_npc2" parent="characters" instance=ExtResource("14_vgbx4")]
-y_sort_enabled = true
 position = Vector2(3867, 544)
 
 [node name="student_npc3" parent="characters" instance=ExtResource("15_ujceq")]
-y_sort_enabled = true
 position = Vector2(4000, 672)
 
 [node name="student_npc5" parent="characters" instance=ExtResource("17_qotbx")]

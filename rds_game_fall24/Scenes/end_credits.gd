@@ -63,7 +63,7 @@ func _process(delta):
 		if (fade_timer < 3.):
 			fade_color.color.a = fade_timer / 3.
 		else:
-			UI.start_scene_change(true, true, "res://Scenes/scene_selection.tscn")
+			UI.start_scene_change(true, true, "res://Scenes/scene_selection_redux.tscn")
 			set_process(false)
 
 func finish_credits():

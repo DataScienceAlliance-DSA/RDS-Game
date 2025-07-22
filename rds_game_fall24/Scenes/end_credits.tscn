@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://b4e0q0jutnqfo" path="res://Assets/UI/dsalogo.png" id="2_iclik"]
 [ext_resource type="Texture2D" uid="uid://ci0b452hirycw" path="res://Assets/UI/end_credits_ffw_icon.png" id="3_82a33"]
 
-
 [node name="EndCredits" type="Node2D"]
 script = ExtResource("1_b2m0k")
 

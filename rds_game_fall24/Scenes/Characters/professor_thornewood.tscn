@@ -1,17 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://daxhlrf5d2t45"]
 
-[ext_resource type="Texture2D" uid="uid://ckd8y4yaxtlia" path="res://assets/Characters/Professor/Professor.PNG" id="1_5q177"]
+[ext_resource type="Texture2D" uid="uid://ckd8y4yaxtlia" path="res://Assets/Characters/Professor/Professor.PNG" id="1_5q177"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6ds1"]
-size = Vector2(85.3333, 128)
+size = Vector2(54, 17)
 
 [node name="ProfessorThornewood" type="CharacterBody2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
+y_sort_enabled = true
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("1_5q177")
+offset = Vector2(0, -500)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -56)
+y_sort_enabled = true
+position = Vector2(2, -0.5)
 shape = SubResource("RectangleShape2D_k6ds1")
