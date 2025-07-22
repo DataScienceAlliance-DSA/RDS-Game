@@ -1,9 +1,8 @@
-[gd_scene load_steps=55 format=3 uid="uid://sy1xb2dnhh7a"]
+[gd_scene load_steps=56 format=3 uid="uid://sy1xb2dnhh7a"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/LibraryRoom.gd" id="1_h32bk"]
 [ext_resource type="Texture2D" uid="uid://i0reufmosxv7" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTiles/Layout.png" id="1_tnlbb"]
 [ext_resource type="Texture2D" uid="uid://4ijfrhsc8jpt" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTiles/Library Tiles.png" id="2_c1qal"]
-[ext_resource type="PackedScene" uid="uid://l2mas2ihi8ao" path="res://Scenes/2_Transparency/TransparencyMinigame2/riptide_tile.tscn" id="3_cxvg8"]
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="3_dnjeg"]
 [ext_resource type="Texture2D" uid="uid://bbpebv3iayoqx" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Left_bookshelf_1.PNG" id="4_g3qtq"]
 [ext_resource type="Texture2D" uid="uid://2rm83pm346lg" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Middle_bookshelf_1.PNG" id="5_dakkq"]
@@ -39,6 +38,10 @@
 [ext_resource type="PackedScene" uid="uid://b3x8du405q3fd" path="res://Scenes/Characters/student_npc_2.tscn" id="34_xi1pr"]
 [ext_resource type="PackedScene" uid="uid://58nyyclu775n" path="res://Scenes/Characters/student_npc_3.tscn" id="35_acmpg"]
 [ext_resource type="PackedScene" uid="uid://c18dh30jhlcqd" path="res://Scenes/Characters/student_npc_4.tscn" id="36_aa766"]
+[ext_resource type="Script" path="res://Scripts/2_Transparency/TransparencyMinigame2/test_riptide.gd" id="39_50yfy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqde4"]
+size = Vector2(64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojhxy"]
 texture = ExtResource("2_c1qal")
@@ -1882,6 +1885,15 @@ position = Vector2(1076, -960)
 scale = Vector2(0.992679, 1)
 texture = ExtResource("1_tnlbb")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(832, -384)
+script = ExtResource("39_50yfy")
+orientation = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(32, -32)
+shape = SubResource("RectangleShape2D_wqde4")
+
 [node name="ConstructedTileMap" type="TileMap" parent="." groups=["Map"]]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_gje8l")
@@ -1894,7 +1906,7 @@ metadata/_edit_group_ = true
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("29_boeig")]
 y_sort_enabled = true
-position = Vector2(640, -384)
+position = Vector2(448, -576)
 
 [node name="Fox" parent="." groups=["Fox"] instance=ExtResource("30_xr8tm")]
 position = Vector2(768, -1216)
@@ -1902,9 +1914,6 @@ rotation = 3.14159
 scale = Vector2(4, -4)
 script = ExtResource("7_o7vs3")
 following_player = true
-
-[node name="RiptideTile" parent="." instance=ExtResource("3_cxvg8")]
-position = Vector2(640, -384)
 
 [node name="characters" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -2727,3 +2736,6 @@ offset = Vector2(0, -2.9)
 y_sort_enabled = true
 position = Vector2(64, -44)
 shape = SubResource("RectangleShape2D_lsbfe")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

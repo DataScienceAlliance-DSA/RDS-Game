@@ -14,14 +14,4 @@ func _on_body_exited(body):
 
 func _process(delta):
 	while occupied == true:
-		if is_in_group("Left"):
-			player.global_position.x -= delta
-		if is_in_group("Right"):
-			player.global_position.x += delta
-		if is_in_group("Up"):
-			player.global_position.y -= delta
-		if is_in_group("Down"):
-			player.global_position.y += delta
-
-
-
+		print("stucked")
