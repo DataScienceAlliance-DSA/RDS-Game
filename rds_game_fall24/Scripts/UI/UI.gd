@@ -48,6 +48,8 @@ signal ui_change_complete
 @onready var TOOLTIP_BUTTON_VISITED_PATH = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Visited.png")
 @onready var TOOLTIP_BUTTON_NORMAL_PATH = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Active.png")
 
+@onready var interaction_prompt_label = get_node("TutorialTexts/InteractionHelpLabel")
+
 func ready():
 	UI.set_tooltip("res://Assets/UI/tooltips/Fairness Mini Game_1.png")
 
@@ -62,6 +64,12 @@ func set_ui_color_mode(color : String):
 	monologue.get_node("TextContainer/PositionControl/ScaleControl/IconCenter/TextBanner/ArrowContainer/Arrow").texture = load("res://Assets/UI/Dialogue Arrow_Active_Light.png") if color == "light" else load("res://Assets/UI/Dialogue Arrow_Active_Dark.png")
 
 func _process(delta):
+	if Global.show_interaction_help:
+		interaction_prompt_label.visible = true
+	else: 
+		interaction_prompt_label.visible = false
+		
+		
 	if (Input.is_action_just_released("menu")):
 		pause_menu_active = !pause_menu_active
 		if (pause_menu_active): 

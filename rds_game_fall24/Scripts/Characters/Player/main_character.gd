@@ -1,5 +1,8 @@
 extends CharacterController
 
+@onready var movement_help_label = UI.get_node("TutorialTexts/MovementHelpLabel")
+var movement_help_shown = true
+
 # Checking to see scene type
 var is_minigame_scene = false
 var shape_index
@@ -66,6 +69,11 @@ func _process(_delta):
 	if first_frame_processing:
 		first_frame_processing = false
 		return
+	# Tutorial hint: hide label once the player moves
+	if movement_help_shown:
+		if Input.is_action_just_pressed("right") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down"):
+			movement_help_label.visible = false
+			movement_help_shown = false
 	
 	# Input detection using movement stack
 	if Input.is_action_just_pressed("right"):

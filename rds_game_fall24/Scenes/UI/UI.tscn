@@ -1463,6 +1463,42 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_em4cu")
 expand_mode = 1
 
+[node name="TutorialTexts" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MovementHelpLabel" type="RichTextLabel" parent="TutorialTexts"]
+visible = false
+layout_mode = 0
+offset_left = 873.0
+offset_top = 164.0
+offset_right = 1317.0
+offset_bottom = 208.0
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+text = "Use [WASD] or [Arrow Keys] to move"
+fit_content = true
+
+[node name="InteractionHelpLabel" type="RichTextLabel" parent="TutorialTexts"]
+offset_left = 873.0
+offset_top = 164.0
+offset_right = 1317.0
+offset_bottom = 208.0
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+text = "Use [Space], [Enter], or [E] to interact"
+fit_content = true
+
+[node name="MovementHelpLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 873.0
+offset_top = 164.0
+offset_right = 1317.0
+offset_bottom = 208.0
+theme_override_fonts/normal_font = ExtResource("14_mugcx")
+text = "Use [WASD] or [Arrow Keys] to move"
+fit_content = true
+
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_entered"]
 [connection signal="mouse_exited" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer/Control/ChoiceTexture1" to="Monologue" method="_on_choice_texture_1_mouse_exited"]
 [connection signal="mouse_entered" from="Monologue/ChoiceContainer/HBoxContainer/MarginContainer2/Control/ChoiceTexture2" to="Monologue" method="_on_choice_texture_2_mouse_entered"]

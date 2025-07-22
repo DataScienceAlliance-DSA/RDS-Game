@@ -10,8 +10,20 @@ extends Node2D
 
 @export var text_character_speed = 0.01
 
+var in_intro_room = false
+
 func reset_states():
 	library_state = 0
 	cauldron_state = 0
 	village_state = 0
 	dungeon_state = 0
+	
+func _ready():
+	set_process(false)
+
+func _process(delta):
+	print("in intro room")
+	if (Input.is_action_just_pressed("interaction") and in_intro_room):
+		print("Interaction pressed: ", Global.interaction_pressed)
+		Global.interaction_pressed = true;
+		set_process(false)
