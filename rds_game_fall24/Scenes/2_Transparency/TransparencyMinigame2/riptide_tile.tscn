@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://l2mas2ihi8ao"]
+
+[ext_resource type="Script" path="res://Scripts/2_Transparency/TransparencyMinigame2/riptide_tile.gd" id="1_racf1"]
+[ext_resource type="Texture2D" uid="uid://depcak66xf1yd" path="res://Assets/UI/Up Arrow.png" id="2_ok4oo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqde4"]
+size = Vector2(64, 64)
+
+[node name="RiptideTile" type="Area2D"]
+y_sort_enabled = true
+script = ExtResource("1_racf1")
+orientation = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(32, -32)
+shape = SubResource("RectangleShape2D_wqde4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(32, -64)
+rotation = -1.5708
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_ok4oo")
+offset = Vector2(-90, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
