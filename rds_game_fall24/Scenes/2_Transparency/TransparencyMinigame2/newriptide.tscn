@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://7pxxhbpnu2u2"]
+
+[ext_resource type="Script" path="res://Scripts/2_Transparency/TransparencyMinigame2/newriptide.gd" id="1_rw88o"]
+
+[node name="Newriptide" type="Area2D"]
+script = ExtResource("1_rw88o")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
