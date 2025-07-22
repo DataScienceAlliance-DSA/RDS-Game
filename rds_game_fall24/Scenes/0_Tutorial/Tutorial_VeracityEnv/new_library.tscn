@@ -38,6 +38,14 @@
 [ext_resource type="Texture2D" uid="uid://c2v6gbyv7wg15" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewMisc/Book_cart.PNG" id="27_ndwec"]
 [ext_resource type="Texture2D" uid="uid://c10a070p3orua" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewMisc/Carpet.png" id="28_a2134"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="29_boeig"]
+[ext_resource type="PackedScene" uid="uid://1q1al4h8xolo" path="res://Scenes/Characters/fox.tscn" id="30_xr8tm"]
+[ext_resource type="PackedScene" uid="uid://dg832qlytv3k6" path="res://Scenes/Characters/principal_villain.tscn" id="31_sg0cc"]
+[ext_resource type="PackedScene" uid="uid://daxhlrf5d2t45" path="res://Scenes/Characters/professor_thornewood.tscn" id="32_3cgg1"]
+[ext_resource type="PackedScene" uid="uid://bl5dvy0nyd8yx" path="res://Scenes/Characters/student_npc1.tscn" id="33_0h6ob"]
+[ext_resource type="PackedScene" uid="uid://b3x8du405q3fd" path="res://Scenes/Characters/student_npc_2.tscn" id="34_xi1pr"]
+[ext_resource type="PackedScene" uid="uid://58nyyclu775n" path="res://Scenes/Characters/student_npc_3.tscn" id="35_acmpg"]
+[ext_resource type="PackedScene" uid="uid://c18dh30jhlcqd" path="res://Scenes/Characters/student_npc_4.tscn" id="36_aa766"]
+[ext_resource type="PackedScene" uid="uid://tc6xwxkrs2qo" path="res://Scenes/Characters/student_npc_5.tscn" id="37_oidnx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojhxy"]
 texture = ExtResource("2_c1qal")
@@ -2723,3 +2731,90 @@ offset = Vector2(0, -2.9)
 y_sort_enabled = true
 position = Vector2(64, -44)
 shape = SubResource("RectangleShape2D_lsbfe")
+
+[node name="Wall Collisions" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_0fq5u")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Wall Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D2"]
+position = Vector2(-96, -283)
+shape = SubResource("RectangleShape2D_i0xx3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Wall Collisions"]
+position = Vector2(-376, -408)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D3"]
+position = Vector2(-96, -283)
+shape = SubResource("WorldBoundaryShape2D_w7pbd")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Wall Collisions"]
+position = Vector2(1624, -600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D6"]
+position = Vector2(455, -396)
+shape = SubResource("RectangleShape2D_y2c1f")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Wall Collisions"]
+position = Vector2(2400, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D7"]
+position = Vector2(64.75, -660.5)
+shape = SubResource("RectangleShape2D_yumxk")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Wall Collisions"]
+position = Vector2(2400, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D8"]
+position = Vector2(64, -88)
+shape = SubResource("RectangleShape2D_yumxk")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Wall Collisions"]
+position = Vector2(-376, -408)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D4"]
+position = Vector2(310.75, -982.5)
+shape = SubResource("RectangleShape2D_lvrya")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Wall Collisions"]
+position = Vector2(168, -312)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Collisions/StaticBody2D5"]
+position = Vector2(310.75, -982.5)
+shape = SubResource("WorldBoundaryShape2D_tnrd4")
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Fox" parent="Characters" instance=ExtResource("30_xr8tm")]
+position = Vector2(768, -1216)
+rotation = 3.14159
+scale = Vector2(4, -4)
+
+[node name="principal_villain" parent="Characters" instance=ExtResource("31_sg0cc")]
+position = Vector2(720, -360)
+
+[node name="ProfessorThornewood" parent="Characters" instance=ExtResource("32_3cgg1")]
+position = Vector2(1112, -440)
+
+[node name="student_npc1" parent="Characters" instance=ExtResource("33_0h6ob")]
+position = Vector2(2152, -216)
+
+[node name="student_npc2" parent="Characters" instance=ExtResource("34_xi1pr")]
+position = Vector2(2320, -216)
+
+[node name="student_npc3" parent="Characters" instance=ExtResource("35_acmpg")]
+position = Vector2(2240, -168)
+
+[node name="student_npc4" parent="Characters" instance=ExtResource("36_aa766")]
+position = Vector2(2296, -352)
+
+[node name="student_npc5" parent="Characters" instance=ExtResource("37_oidnx")]
+position = Vector2(2192, -344)
+
+[node name="Player" parent="Characters" groups=["Player"] instance=ExtResource("29_boeig")]
+y_sort_enabled = true
+position = Vector2(2248, -264)
