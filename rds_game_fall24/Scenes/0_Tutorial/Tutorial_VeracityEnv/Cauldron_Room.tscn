@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://vkjj6qql4jgt"]
+[gd_scene load_steps=27 format=3 uid="uid://vkjj6qql4jgt"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/Cauldron_Room.gd" id="1_qh2ts"]
 [ext_resource type="TileSet" uid="uid://c3hphwxbvrqnq" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Interior_Tiles.tres" id="3_ja67r"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://ccfd0hhfjvrlj" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Misc Assets/candlelight.PNG" id="11_bl43j"]
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/candle_light.gd" id="12_1uavd"]
 [ext_resource type="PackedScene" uid="uid://cylx63fkud7d5" path="res://Scenes/UniversalComponents/Areas/environment_exit_area.tscn" id="14_a7qit"]
-[ext_resource type="PackedScene" uid="uid://7pxxhbpnu2u2" path="res://Scenes/2_Transparency/TransparencyMinigame2/newriptide.tscn" id="15_b04r3"]
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/cauldron_area.gd" id="15_u11sj"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="16_0o7eq"]
 [ext_resource type="Texture2D" uid="uid://v3fe3rbixa55" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Cauldron_Room/Cauldron Assets/Cauldron SS.png" id="20_rac73"]
@@ -189,9 +188,6 @@ _data = {
 "YellowOrb": SubResource("Animation_d3xp8")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugdhr"]
-size = Vector2(446, 58)
-
 [node name="Cauldron Room" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_qh2ts")
@@ -354,13 +350,5 @@ to_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Intro_Room.tscn"
 from_respawn_position = Vector2(960, 1248)
 to_spawn_position = Vector2(1056, 128)
 
-[node name="Newriptide" parent="." groups=["Left"] instance=ExtResource("15_b04r3")]
-position = Vector2(-196, 1083)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Newriptide" groups=["Left"]]
-position = Vector2(670, -70)
-shape = SubResource("RectangleShape2D_ugdhr")
-
 [connection signal="mouse_entered" from="Follower" to="Follower" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Follower" to="Follower" method="_on_mouse_exited"]
-[connection signal="body_exited" from="Newriptide" to="Newriptide" method="_on_body_exited"]
