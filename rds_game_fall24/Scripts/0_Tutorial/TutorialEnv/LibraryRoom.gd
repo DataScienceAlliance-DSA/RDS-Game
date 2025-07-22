@@ -25,6 +25,7 @@ func _ready():
 		0:
 			# DISABLE PLAYER WHILE CUTSCENES ARE OCCURRING
 			player.autonomous = true
+			player.global_position = Vector2(3904, -320)
 			
 			# get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
 			
@@ -181,3 +182,5 @@ func _ready():
 			
 			PS.library_state = 1 # next time player enters room, scene will be on state #1 from now on
 			player.autonomous = false
+		1:
+			return
