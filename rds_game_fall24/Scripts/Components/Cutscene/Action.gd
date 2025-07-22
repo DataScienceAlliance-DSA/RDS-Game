@@ -1,6 +1,8 @@
 class_name Action
 extends Node
 
+var duration: float = 0.0
+
 var actor : Node2D
 var type : String 
 
@@ -38,6 +40,10 @@ func cue():
 	walk_t = 0.
 	start_pos = actor.position
 	
+	if type == "LerpMove":
+		var distance = start_pos.distance_to(mark)
+		duration = distance / speed
+	
 	await action_completed
 	action_finished = true
 	self.set_process(false) # end the action
@@ -55,20 +61,19 @@ func _process(delta):
 				action_completed.emit()
 				self.set_process(false)
 		"LerpMove":
+			walk_t += delta
+			var t = clamp(walk_t / duration, 0, 1)
+			actor.position = start_pos.lerp(mark, t)
+
 			var diff = mark - start_pos
-			var unit = diff / diff.length()
-			
-			walk_t += delta * speed / (abs(diff.length()))
-			actor.position = start_pos.lerp(mark, walk_t)
-			
 			var theta = atan2(diff.y, diff.x)
 			set_directional_anim(theta, true)
-			
-			if (walk_t >= 1.):
-				# actor.position = mark  # Snap to the exact target position
+
+			if t >= 1.0:
 				set_directional_anim(theta, false)
 				action_completed.emit()
-				self.set_process(false)  # Stop further processing
+				self.set_process(false)
+
 		"SmoothMove":
 			actor.position = actor.position.lerp(mark, delta * speed)
 			
