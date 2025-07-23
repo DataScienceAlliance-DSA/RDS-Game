@@ -1,9 +1,8 @@
-[gd_scene load_steps=55 format=3 uid="uid://sy1xb2dnhh7a"]
+[gd_scene load_steps=54 format=3 uid="uid://sy1xb2dnhh7a"]
 
 [ext_resource type="Script" path="res://Scripts/0_Tutorial/TutorialEnv/LibraryRoom.gd" id="1_h32bk"]
 [ext_resource type="Texture2D" uid="uid://i0reufmosxv7" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTiles/Layout.png" id="1_tnlbb"]
 [ext_resource type="Texture2D" uid="uid://4ijfrhsc8jpt" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTiles/Library Tiles.png" id="2_c1qal"]
-[ext_resource type="PackedScene" uid="uid://l2mas2ihi8ao" path="res://Scenes/2_Transparency/TransparencyMinigame2/riptide_tile.tscn" id="3_cxvg8"]
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="3_dnjeg"]
 [ext_resource type="Texture2D" uid="uid://bbpebv3iayoqx" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Left_bookshelf_1.PNG" id="4_g3qtq"]
 [ext_resource type="Texture2D" uid="uid://2rm83pm346lg" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Middle_bookshelf_1.PNG" id="5_dakkq"]
@@ -1901,7 +1900,7 @@ metadata/_edit_group_ = true
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("29_boeig")]
 y_sort_enabled = true
-position = Vector2(640, -384)
+position = Vector2(3904, -320)
 
 [node name="Fox" parent="." groups=["Fox"] instance=ExtResource("30_xr8tm")]
 position = Vector2(1472, -960)
@@ -1910,9 +1909,6 @@ scale = Vector2(4, -4)
 script = ExtResource("7_o7vs3")
 following_player = true
 speed = 225.0
-
-[node name="RiptideTile" parent="." instance=ExtResource("3_cxvg8")]
-position = Vector2(640, -384)
 
 [node name="characters" type="Node2D" parent="."]
 y_sort_enabled = true

@@ -5,12 +5,12 @@
 [ext_resource type="Script" path="res://Scripts/Components/ConstructedTileMap.gd" id="1_v174r"]
 [ext_resource type="PackedScene" uid="uid://co48lktbon2ou" path="res://Scenes/Characters/Player/main_character.tscn" id="2_tmlac"]
 [ext_resource type="PackedScene" uid="uid://cqtrkfn7c7gyw" path="res://Scenes/2_Transparency/TransparencyMinigame2/whirlpool.tscn" id="4_4ij4c"]
-[ext_resource type="PackedScene" uid="uid://cu7kckdrjhlop" path="res://Scenes/2_Transparency/TransparencyMinigame2/riptide.tscn" id="6_8wma1"]
 [ext_resource type="PackedScene" uid="uid://qw4qvsvnuucb" path="res://Scenes/2_Transparency/TransparencyMinigame2/sea_rock.tscn" id="7_7wnol"]
 [ext_resource type="PackedScene" uid="uid://82m506d8815g" path="res://Scenes/2_Transparency/TransparencyMinigame2/island.tscn" id="8_g4nwx"]
 [ext_resource type="PackedScene" uid="uid://b4wjc8kwmoylw" path="res://Scenes/2_Transparency/TransparencyMinigame2/ui_transparency_minigame_2.tscn" id="9_id1am"]
 [ext_resource type="Script" path="res://Scripts/Components/fairness_crystal.gd" id="10_1epod"]
 [ext_resource type="PackedScene" uid="uid://c0b5pntcik1eq" path="res://Scenes/1_Fairness/FairnessEnv/fairness_crystal.tscn" id="10_osueo"]
+[ext_resource type="PackedScene" uid="uid://lqh227mfj61a" path="res://Scenes/2_Transparency/TransparencyMinigame2/riptide_tile.tscn" id="12_djebx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evnht"]
 texture = ExtResource("1_tj2v6")
@@ -11397,7 +11397,8 @@ script = ExtResource("1_7ms5p")
 z_index = 2
 position = Vector2(1659, 2848)
 cam_zoom = 0.85
-speed = 450.0
+start_autonomous = true
+speed = 300.0
 
 [node name="Map" type="TileMap" parent="." groups=["Map"]]
 z_index = -1
@@ -11504,901 +11505,210 @@ scale = Vector2(0.475464, 0.475464)
 [node name="Riptides_right" type="Node2D" parent="."]
 position = Vector2(128, 128)
 
-[node name="Riptide" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2176, 2176)
-
-[node name="Riptide2" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2304, 2176)
-
-[node name="Riptide3" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2432, 2176)
-
-[node name="Riptide4" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2560, 2176)
-
-[node name="Riptide5" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2688, 2176)
-
-[node name="Riptide6" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2816, 2176)
-
-[node name="Riptide7" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2944, 2176)
-
-[node name="Riptide8" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3072, 2176)
-
-[node name="Riptide9" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2176, 2368)
-
-[node name="Riptide10" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2304, 2368)
-
-[node name="Riptide11" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2432, 2368)
-
-[node name="Riptide12" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2560, 2368)
-
-[node name="Riptide13" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2688, 2368)
-
-[node name="Riptide14" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2816, 2368)
-
-[node name="Riptide15" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2944, 2368)
-
-[node name="Riptide28" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(320, 1536)
-
-[node name="Riptide29" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(448, 1536)
-
-[node name="Riptide31" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(448, 1344)
-
-[node name="Riptide33" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(320, 1344)
-
-[node name="Riptide32" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(576, 1344)
-
-[node name="Riptide34" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(448, 832)
-
-[node name="Riptide35" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(576, 832)
-
-[node name="Riptide30" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(576, 1536)
-
-[node name="Riptide16" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3072, 2368)
-
-[node name="Riptide17" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3200, 2368)
-
-[node name="Riptide18" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3328, 2368)
-
-[node name="Riptide25" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1984, 448)
-
-[node name="Riptide26" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2112, 448)
-
-[node name="Riptide27" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2240, 448)
-
-[node name="Riptide36" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2368, 448)
-
-[node name="Riptide37" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2496, 448)
-
-[node name="Riptide38" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2624, 448)
-
-[node name="Riptide39" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2752, 448)
-
-[node name="Riptide40" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2880, 448)
-
-[node name="Riptide41" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3008, 448)
-
-[node name="Riptide42" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3136, 448)
-
-[node name="Riptide43" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3264, 448)
-
-[node name="Riptide44" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3392, 448)
-
-[node name="Riptide45" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3520, 448)
-
-[node name="Riptide46" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3648, 448)
-
-[node name="Riptide47" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3776, 448)
-
-[node name="Riptide48" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3904, 448)
-
-[node name="Riptide49" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4032, 448)
-
-[node name="Riptide50" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4160, 448)
-
-[node name="Riptide53" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1984, 64)
-
-[node name="Riptide57" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2112, 64)
-
-[node name="Riptide58" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2240, 64)
-
-[node name="Riptide59" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2368, 64)
-
-[node name="Riptide60" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2496, 64)
-
-[node name="Riptide61" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2624, 64)
-
-[node name="Riptide62" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2752, 64)
-
-[node name="Riptide63" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2880, 64)
-
-[node name="Riptide64" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3008, 64)
-
-[node name="Riptide65" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3136, 64)
-
-[node name="Riptide66" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3264, 64)
-
-[node name="Riptide67" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3392, 64)
-
-[node name="Riptide68" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3520, 64)
-
-[node name="Riptide69" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3648, 64)
-
-[node name="Riptide70" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3776, 64)
-
-[node name="Riptide71" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3904, 64)
-
-[node name="Riptide72" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4032, 64)
-
-[node name="Riptide73" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4160, 64)
-
-[node name="Riptide51" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4288, 448)
-
-[node name="Riptide52" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4416, 448)
-
-[node name="Riptide54" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 448)
-
-[node name="Riptide55" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4672, 448)
-
-[node name="Riptide56" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4800, 448)
-
-[node name="Riptide19" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4288, 960)
-
-[node name="Riptide23" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4160, 960)
-
-[node name="Riptide20" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4416, 960)
-
-[node name="Riptide21" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 960)
-
-[node name="Riptide22" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4672, 960)
-
-[node name="Riptide24" parent="Riptides_right" groups=["riptide_right", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4800, 960)
+[node name="RiptideTile" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(2097, 2443)
+scale = Vector2(20, 2)
+orientation = 0
+riptide_speed = 1000.0
+
+[node name="RiptideTile4" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(286, 1598)
+scale = Vector2(6, 2)
+orientation = 0
+riptide_speed = 1500.0
+
+[node name="RiptideTile5" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(286, 1400)
+scale = Vector2(6, 2)
+orientation = 0
+riptide_speed = 1500.0
+
+[node name="RiptideTile6" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(382, 899)
+scale = Vector2(4, 2)
+orientation = 0
+riptide_speed = 1500.0
+
+[node name="RiptideTile2" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(2116, 2227)
+scale = Vector2(16, 2)
+orientation = 0
+riptide_speed = 1000.0
+
+[node name="RiptideTile3" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(4091, 1029)
+scale = Vector2(12.1, 2)
+orientation = 0
+riptide_speed = 1000.0
+
+[node name="RiptideTile7" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(1925, 131)
+scale = Vector2(36, 2)
+orientation = 0
+riptide_speed = 1000.0
+
+[node name="RiptideTile8" parent="Riptides_right" instance=ExtResource("12_djebx")]
+position = Vector2(1921, 504)
+scale = Vector2(46, 2)
+orientation = 0
+riptide_speed = 1000.0
 
 [node name="Riptides_left" type="Node2D" parent="."]
 position = Vector2(128, 128)
 
-[node name="Riptide" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3200, 1664)
-rotation = 3.14159
+[node name="RiptideTile3" parent="Riptides_left" instance=ExtResource("12_djebx")]
+position = Vector2(2100, 1723)
+scale = Vector2(18, 2)
+orientation = 1
+riptide_speed = 1000.0
 
-[node name="Riptide2" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3072, 1664)
-rotation = 3.14159
+[node name="RiptideTile4" parent="Riptides_left" instance=ExtResource("12_djebx")]
+position = Vector2(1475, 1720)
+scale = Vector2(4, 2)
+orientation = 1
+riptide_speed = 1000.0
 
-[node name="Riptide3" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2944, 1664)
-rotation = 3.14159
+[node name="RiptideTile9" parent="Riptides_left" instance=ExtResource("12_djebx")]
+position = Vector2(1478, 1536)
+scale = Vector2(4, 2)
+orientation = 1
+riptide_speed = 1000.0
 
-[node name="Riptide4" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2816, 1664)
-rotation = 3.14159
+[node name="RiptideTile5" parent="Riptides_left" instance=ExtResource("12_djebx")]
+position = Vector2(1216, 2115)
+scale = Vector2(4, 2)
+orientation = 1
+riptide_speed = 1000.0
 
-[node name="Riptide5" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2688, 1664)
-rotation = 3.14159
+[node name="RiptideTile6" parent="Riptides_left" instance=ExtResource("12_djebx")]
+position = Vector2(1157, 1595)
+scale = Vector2(2, 2)
+orientation = 1
+riptide_speed = 1000.0
 
-[node name="Riptide6" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2560, 1664)
-rotation = 3.14159
+[node name="RiptideTile7" parent="Riptides_left" instance=ExtResource("12_djebx")]
+position = Vector2(1082, 901)
+scale = Vector2(2, 2)
+orientation = 1
+riptide_speed = 1000.0
 
-[node name="Riptide7" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2432, 1664)
-rotation = 3.14159
-
-[node name="Riptide8" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2304, 1664)
-rotation = 3.14159
-
-[node name="Riptide9" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2176, 1664)
-rotation = 3.14159
-
-[node name="Riptide13" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1664, 1664)
-rotation = 3.14159
-
-[node name="Riptide18" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1536, 1664)
-rotation = 3.14159
-
-[node name="Riptide16" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1216, 1536)
-rotation = 3.14159
-
-[node name="Riptide20" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 2048)
-rotation = 3.14159
-
-[node name="Riptide21" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1280, 2048)
-rotation = 3.14159
-
-[node name="Riptide22" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 1088)
-rotation = 3.14159
-
-[node name="Riptide23" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1152, 832)
-rotation = 3.14159
-
-[node name="Riptide15" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1664, 1472)
-rotation = 3.14159
-
-[node name="Riptide19" parent="Riptides_left" groups=["riptide_left", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1536, 1472)
-rotation = 3.14159
+[node name="RiptideTile8" parent="Riptides_left" instance=ExtResource("12_djebx")]
+position = Vector2(1348, 1140)
+scale = Vector2(2, 2)
+orientation = 1
+riptide_speed = 1000.0
 
 [node name="Riptides_down" type="Node2D" parent="."]
 position = Vector2(128, 128)
 
-[node name="Riptide" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 1856)
-rotation = 1.5708
+[node name="RiptideTile4" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(4877, 1976)
+scale = Vector2(2, 25)
+riptide_speed = 1000.0
 
-[node name="Riptide2" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 1728)
-rotation = 1.5708
+[node name="RiptideTile5" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(1918, 1534)
+scale = Vector2(2, 6)
+riptide_speed = 1000.0
 
-[node name="Riptide3" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 1600)
-rotation = 1.5708
+[node name="RiptideTile6" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(1718, 1360)
+scale = Vector2(2, 3)
+riptide_speed = 1000.0
 
-[node name="Riptide4" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 1472)
-rotation = 1.5708
+[node name="RiptideTile8" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(1155, 1413)
+scale = Vector2(2, 4)
+riptide_speed = 1000.0
 
-[node name="Riptide5" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 1344)
-rotation = 1.5708
+[node name="RiptideTile10" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(258, 1240)
+scale = Vector2(2, 4)
+riptide_speed = 1000.0
 
-[node name="Riptide6" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 1216)
-rotation = 1.5708
+[node name="RiptideTile11" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(643, 893)
+scale = Vector2(2, 2)
+riptide_speed = 1000.0
 
-[node name="Riptide7" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 1088)
-rotation = 1.5708
+[node name="RiptideTile7" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(1339, 1980)
+scale = Vector2(2, 6)
+riptide_speed = 1000.0
 
-[node name="Riptide8" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 960)
-rotation = 1.5708
-
-[node name="Riptide9" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 832)
-rotation = 1.5708
-
-[node name="Riptide10" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 704)
-rotation = 1.5708
-
-[node name="Riptide11" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 576)
-rotation = 1.5708
-
-[node name="Riptide12" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4928, 448)
-rotation = 1.5708
-
-[node name="Riptide13" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1984, 1216)
-rotation = 1.5708
-
-[node name="Riptide14" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1984, 1344)
-rotation = 1.5708
-
-[node name="Riptide17" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1984, 1472)
-rotation = 1.5708
-
-[node name="Riptide15" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1792, 1216)
-rotation = 1.5708
-
-[node name="Riptide16" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1792, 1344)
-rotation = 1.5708
-
-[node name="Riptide18" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 1664)
-rotation = 1.5708
-
-[node name="Riptide19" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 1792)
-rotation = 1.5708
-
-[node name="Riptide24" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1216, 1344)
-rotation = 1.5708
-
-[node name="Riptide28" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(704, 832)
-rotation = 1.5708
-
-[node name="Riptide25" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1216, 1216)
-rotation = 1.5708
-
-[node name="Riptide26" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(320, 1152)
-rotation = 1.5708
-
-[node name="Riptide27" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(320, 1024)
-rotation = 1.5708
-
-[node name="Riptide20" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 1920)
-rotation = 1.5708
-
-[node name="Riptide21" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1024, 832)
-rotation = 1.5708
-
-[node name="Riptide22" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1024, 960)
-rotation = 1.5708
-
-[node name="Riptide23" parent="Riptides_down" groups=["riptide_down", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1024, 1088)
-rotation = 1.5708
+[node name="RiptideTile9" parent="Riptides_down" instance=ExtResource("12_djebx")]
+position = Vector2(949, 1148)
+scale = Vector2(2, 6)
+riptide_speed = 1000.0
 
 [node name="Riptides_up" type="Node2D" parent="."]
 position = Vector2(128, 128)
 
-[node name="Riptide" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3200, 2176)
-rotation = -1.5708
+[node name="RiptideTile3" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(3128, 2231)
+scale = Vector2(2, 7.8)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide2" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3200, 2048)
-rotation = -1.5708
+[node name="RiptideTile4" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(3710, 1888)
+scale = Vector2(2, 6)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide3" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3200, 1920)
-rotation = -1.5708
+[node name="RiptideTile8" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(1343, 1531)
+scale = Vector2(2, 6)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide4" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3200, 1792)
-rotation = -1.5708
+[node name="RiptideTile9" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(691, 1588)
+scale = Vector2(2, 6)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide18" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 1472)
-rotation = -1.5708
+[node name="RiptideTile12" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(896, 1724)
+scale = Vector2(2, 5)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide19" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 1344)
-rotation = -1.5708
+[node name="RiptideTile13" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(1155, 1726)
+scale = Vector2(2, 2)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide21" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1216, 1664)
-rotation = -1.5708
+[node name="RiptideTile10" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(45, 1417)
+scale = Vector2(2, 8)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide22" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(960, 1664)
-rotation = -1.5708
+[node name="RiptideTile11" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(37, 768)
+scale = Vector2(2, 8)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide23" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(960, 1536)
-rotation = -1.5708
+[node name="RiptideTile5" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(4097, 1644)
+scale = Vector2(2, 9.5)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide24" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(768, 1408)
-rotation = -1.5708
+[node name="RiptideTile6" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(4283, 1772)
+scale = Vector2(2, 11.5)
+orientation = 2
+riptide_speed = 1000.0
 
-[node name="Riptide26" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(768, 1536)
-rotation = -1.5708
-
-[node name="Riptide25" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(768, 1280)
-rotation = -1.5708
-
-[node name="Riptide27" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 1216)
-rotation = -1.5708
-
-[node name="Riptide28" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 1344)
-rotation = -1.5708
-
-[node name="Riptide29" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 1088)
-rotation = -1.5708
-
-[node name="Riptide30" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 960)
-rotation = -1.5708
-
-[node name="Riptide31" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 576)
-rotation = -1.5708
-
-[node name="Riptide32" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 704)
-rotation = -1.5708
-
-[node name="Riptide33" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 448)
-rotation = -1.5708
-
-[node name="Riptide34" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(128, 320)
-rotation = -1.5708
-
-[node name="Riptide20" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1408, 1216)
-rotation = -1.5708
-
-[node name="Riptide5" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4160, 1472)
-rotation = -1.5708
-
-[node name="Riptide6" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4160, 1344)
-rotation = -1.5708
-
-[node name="Riptide7" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4160, 1216)
-rotation = -1.5708
-
-[node name="Riptide8" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4160, 1088)
-rotation = -1.5708
-
-[node name="Riptide9" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4352, 1472)
-rotation = -1.5708
-
-[node name="Riptide13" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4352, 1600)
-rotation = -1.5708
-
-[node name="Riptide14" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4352, 1728)
-rotation = -1.5708
-
-[node name="Riptide15" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3776, 1664)
-rotation = -1.5708
-
-[node name="Riptide17" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3776, 1536)
-rotation = -1.5708
-
-[node name="Riptide16" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(3776, 1792)
-rotation = -1.5708
-
-[node name="Riptide10" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4352, 1344)
-rotation = -1.5708
-
-[node name="Riptide11" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4352, 1216)
-rotation = -1.5708
-
-[node name="Riptide12" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4352, 1088)
-rotation = -1.5708
-
-[node name="Riptide35" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 1472)
-rotation = -1.5708
-
-[node name="Riptide36" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 1600)
-rotation = -1.5708
-
-[node name="Riptide37" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 1728)
-rotation = -1.5708
-
-[node name="Riptide41" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 1856)
-rotation = -1.5708
-
-[node name="Riptide38" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 1344)
-rotation = -1.5708
-
-[node name="Riptide39" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 1216)
-rotation = -1.5708
-
-[node name="Riptide40" parent="Riptides_up" groups=["riptide_up", "riptides"] instance=ExtResource("6_8wma1")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4544, 1088)
-rotation = -1.5708
+[node name="RiptideTile7" parent="Riptides_up" instance=ExtResource("12_djebx")]
+position = Vector2(4484, 1900)
+scale = Vector2(2, 13.5)
+orientation = 2
+riptide_speed = 1000.0
 
 [node name="Sea_Rocks" type="Node2D" parent="."]
 position = Vector2(128, 128)
