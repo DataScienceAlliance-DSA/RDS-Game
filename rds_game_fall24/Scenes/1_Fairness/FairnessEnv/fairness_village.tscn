@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://iqykg7760ug7" path="res://Assets/1_Fairness/FairnessEnv/EnvironmentSpreadSheetFinal.png" id="4_yipns"]
 [ext_resource type="PackedScene" uid="uid://drq1vgo2ie7ic" path="res://Scenes/1_Fairness/FairnessEnv/tree.tscn" id="6_ljd2i"]
 [ext_resource type="Texture2D" uid="uid://c5eykjcfkvpa2" path="res://Assets/1_Fairness/FairnessEnv/VillageCauldron.PNG" id="7_kmh2l"]
-[ext_resource type="PackedScene" uid="uid://dnl4khh4eunli" path="res://Scenes/1_Fairness/FairnessEnv/fairness_house.tscn" id="8_4ls51"]
+[ext_resource type="PackedScene" path="res://Scenes/1_Fairness/FairnessEnv/fairness_house.tscn" id="8_4ls51"]
 [ext_resource type="Script" path="res://Scripts/Components/Areas/EnvironmentExitArea.gd" id="9_8sig2"]
 [ext_resource type="Script" path="res://Scripts/1_Fairness/FairnessEnv/fairness_cauldron_area.gd" id="9_jppmd"]
 [ext_resource type="PackedScene" uid="uid://cqf3f1xk2qp07" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/fairness_podium.tscn" id="9_mq5hf"]

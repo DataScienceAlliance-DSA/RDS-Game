@@ -89,12 +89,8 @@ func _process(delta):
 
 func restart_game():
 	UI.fade(true)
-	var fake_actions : Array[Action] = []
-	cm = CutsceneManager.new(fake_actions)
-	add_child(cm)
-	cm.call_monologue("res://Resources/Texts/Monologues/4_Veracity/VeracityMinigame2/failure.json")
-	print("hereherehere")
-	await cm.lines_complete
+	UI.console.open_console("res://Resources/Texts/Monologues/4_Veracity/VeracityMinigame2/failure.json", false)
+	await UI.console.console_complete
 	get_tree().change_scene_to_file("res://Scenes/4_Veracity/VeracityMinigame2/VeracityMinigame2.tscn")
 
 func intro_cutscene():

@@ -27,7 +27,7 @@ func _ready():
 			player.autonomous = true
 			player.global_position = Vector2(3904, -320)
 			
-			# get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
+			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
 			
 			fox.following_player = false
 			fox.visible = false
@@ -183,4 +183,28 @@ func _ready():
 			PS.library_state = 1 # next time player enters room, scene will be on state #1 from now on
 			player.autonomous = false
 		1:
-			return
+			player.position = PS.spawning_at
+			
+			malvoren.queue_free()
+			thornewood.queue_free()
+			
+			fox.following_player = false
+			fox.visible = false
+			fox.get_node("FoxCollider").disabled = true
+			
+			get_node("Bookshelves/SecretBookshelf/DoorArea").open_bookshelf()
+			UI.start_scene_change(false, false, "")
+			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = true
+		2:
+			player.position = PS.spawning_at
+			
+			malvoren.queue_free()
+			thornewood.queue_free()
+			
+			fox.following_player = true
+			fox.visible = true
+			fox.get_node("FoxCollider").disabled = false
+			
+			get_node("Bookshelves/SecretBookshelf/DoorArea").open_bookshelf()
+			UI.start_scene_change(false, false, "")
+			get_node("LibraryToCourtyardExit/CollisionShape2D").disabled = false

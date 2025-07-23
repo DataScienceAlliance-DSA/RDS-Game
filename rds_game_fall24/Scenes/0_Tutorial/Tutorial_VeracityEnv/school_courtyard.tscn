@@ -42,9 +42,9 @@ texture = ExtResource("3_fmot5")
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("8_g2mmf")
 from_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/school_courtyard.tscn"
-to_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Intro_Room.tscn"
+to_scene_name = "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/new_library.tscn"
 from_respawn_position = Vector2(72, 449)
-to_spawn_position = Vector2(3712, 610)
+to_spawn_position = Vector2(3584, -320)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-3.5, 445.5)

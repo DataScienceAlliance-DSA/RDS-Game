@@ -27,6 +27,7 @@ var current_screen_fade_val
 
 @onready var dialogue = $Dialogue
 @onready var monologue = $Monologue
+@onready var console = $Console
 
 @onready var player_name_input = $PlayerNameInput
 
@@ -49,7 +50,7 @@ signal ui_change_complete
 @onready var TOOLTIP_BUTTON_NORMAL_PATH = load("res://Assets/1_Fairness/FairnessEnv/Help Button_Active.png")
 
 func ready():
-	UI.set_tooltip("res://Assets/UI/tooltips/Fairness Mini Game_1.png")
+	UI.set_tooltip("")
 
 func set_ui_color_mode(color : String):
 	dialogue.text_color = "#311E1C" if color == "light" else "#FFFFFF"
@@ -157,6 +158,7 @@ func enter_next_scene():
 		screen_hide.visible = false
 		dialogue.visible = false
 		monologue.visible = false
+		console.visible = false
 		tooltip_image.visible = false
 		tooltip_blur.visible = false
 		player_name_input.visible = false

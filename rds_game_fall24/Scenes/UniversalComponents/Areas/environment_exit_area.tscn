@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/Components/Areas/EnvironmentExitArea.gd" id="1_0tgn3"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3etb5"]
 size = Vector2(74, 51)
 

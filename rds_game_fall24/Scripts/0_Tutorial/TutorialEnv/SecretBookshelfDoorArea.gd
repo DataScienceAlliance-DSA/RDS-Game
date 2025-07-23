@@ -3,12 +3,14 @@ extends Area2D
 var interactor
 @onready var interact_count = 0
 
-@onready var monologue = UI.get_node("Monologue") # reference to monologue script
-
 func open_bookshelf():
-	self.get_node("../OpenDoor").visible = true
-	self.get_node("../DoorShadow").visible = true
-	self.get_node("../OriginalBound").disabled = true
+	self.get_node("../BookshelfSprite").texture = load("res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Secret_bookshelf.PNG")
+	self.get_node("../SlidingSprite").visible = true
+	self.get_node("../Gradient1").visible = true
+	self.get_node("../Gradient2").visible = true
+	self.get_node("../FirstCollision").disabled = true
+	self.get_node("../SecondCollision").disabled = false
+	self.get_node("../SecondCollision2").disabled = false
 
 # Called when the player interacts with the secret bookshelf (bottom sprite)
 func interact(character):
@@ -25,11 +27,9 @@ func interact(character):
 			await UI.ui_change_complete
 			
 			# change visual state of bookshelf & open dialogue
-			self.get_node("../OpenDoor").visible = true
-			self.get_node("../DoorShadow").visible = true
-			self.get_node("../OriginalBound").disabled = true
-			monologue.open_3choice_dialogue("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/BookshelfAmbient.json", null)
-			await monologue.closed_signal
+			open_bookshelf()
+			UI.console.open_console("res://Resources/Texts/Monologues/0_Tutorial/TutorialEnv/BookshelfAmbient.json", null)
+			await UI.console.console_complete
 			
 			# fades back
 			UI.fade(false)

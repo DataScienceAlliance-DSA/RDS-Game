@@ -64,7 +64,7 @@ func _on_chapter_title_pressed(button):
 func _on_scene_button_pressed(index: int):
 	match index:
 		1:
-			UI.start_scene_change(true, true, "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/Intro_Room.tscn")
+			UI.start_scene_change(true, true, "res://Scenes/0_Tutorial/Tutorial_VeracityEnv/new_library.tscn")
 		2:
 			UI.start_scene_change(true, true, "res://Scenes/0_Tutorial/TutorialMinigame1/Cannonball_Game.tscn")
 		3:

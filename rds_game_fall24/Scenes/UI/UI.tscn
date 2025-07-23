@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cfqpepeud7y6s"]
+[gd_scene load_steps=51 format=3 uid="uid://cfqpepeud7y6s"]
 
 [ext_resource type="Script" path="res://Scripts/UI/UI.gd" id="1_gxgmr"]
 [ext_resource type="Script" path="res://Scripts/UI/dialogue.gd" id="1_ne7wx"]
@@ -23,6 +23,7 @@
 [ext_resource type="FontFile" uid="uid://bqc64n7kj3qia" path="res://Assets/UI/fonts/Quattrocento-Bold.ttf" id="12_sp71b"]
 [ext_resource type="Texture2D" uid="uid://dera7x5lrboba" path="res://Assets/UI/button_states/Large Buttons/Button_Inactive_Large.png" id="13_teu3g"]
 [ext_resource type="FontFile" uid="uid://2h6tqsybxfa6" path="res://Assets/UI/fonts/Quattrocento-Regular.ttf" id="14_mugcx"]
+[ext_resource type="Script" path="res://Scripts/UI/console.gd" id="19_hcjgh"]
 [ext_resource type="Texture2D" uid="uid://b6d5j8hghat4w" path="res://Assets/UI/V2Dialogue Box_Long_Light.png" id="22_es88q"]
 [ext_resource type="Texture2D" uid="uid://dc6gax07oukrv" path="res://Assets/UI/button_states/Confirm Button/Normal.png" id="25_5bv13"]
 [ext_resource type="Texture2D" uid="uid://4d8d75h1ro58" path="res://Assets/UI/button_states/Confirm Button/Pressed.png" id="26_8y088"]
@@ -48,6 +49,9 @@ fill_to = Vector2(0.5, 0)
 gradient = SubResource("Gradient_6hbbo")
 fill_from = Vector2(0.508547, 1)
 fill_to = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c8ju4"]
+texture = ExtResource("3_fdsbw")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_seqqk"]
 
@@ -900,6 +904,83 @@ bbcode_enabled = true
 fit_content = true
 scroll_active = false
 
+[node name="Console" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("19_hcjgh")
+
+[node name="TextContainer" type="MarginContainer" parent="Console"]
+process_mode = 1
+custom_minimum_size = Vector2(1366, 223)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 400
+theme_override_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="Console/TextContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_c8ju4")
+
+[node name="TextCont" type="MarginContainer" parent="Console/TextContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_right = 45
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Console/TextContainer/Panel/TextCont"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("7_uer3i")
+theme_override_fonts/bold_font = ExtResource("8_tetox")
+theme_override_fonts/italics_font = ExtResource("8_rgi4l")
+theme_override_fonts/bold_italics_font = ExtResource("10_net7d")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+bbcode_enabled = true
+text = "[center][color=black][i]Help"
+fit_content = true
+
+[node name="ArrowCont" type="MarginContainer" parent="Console/TextContainer/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -348.0
+offset_top = -264.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 358
+theme_override_constants/margin_bottom = 264
+
+[node name="Control" type="Control" parent="Console/TextContainer/Panel/ArrowCont"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Console/TextContainer/Panel/ArrowCont/Control"]
+layout_mode = 2
+offset_right = 348.0
+offset_bottom = 264.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(348, 264)
+texture = ExtResource("4_0lg18")
+
 [node name="DebugStuff" type="MarginContainer" parent="."]
 process_mode = 2
 visible = false
@@ -1451,6 +1532,7 @@ fit_content = true
 [node name="ScreenHide" type="TextureRect" parent="."]
 process_mode = 2
 visible = false
+z_index = 2
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
