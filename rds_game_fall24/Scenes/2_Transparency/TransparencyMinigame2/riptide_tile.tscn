@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://lqh227mfj61a"]
+[gd_scene load_steps=4 format=3 uid="uid://l2mas2ihi8ao"]
 
 [ext_resource type="Script" path="res://Scripts/2_Transparency/TransparencyMinigame2/riptide_tile.gd" id="1_racf1"]
 [ext_resource type="Texture2D" uid="uid://depcak66xf1yd" path="res://Assets/UI/Up Arrow.png" id="2_ok4oo"]

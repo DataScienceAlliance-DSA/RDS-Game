@@ -64,16 +64,16 @@ func _physics_process(delta):
 			walk_t += delta
 			var t = clamp(walk_t / duration, 0, 1)
 			actor.position = start_pos.lerp(mark, t).floor()
-
+			
 			var diff = mark - start_pos
 			var theta = atan2(diff.y, diff.x)
 			set_directional_anim(theta, true)
-
+			
 			if t >= 1.0:
 				set_directional_anim(theta, false)
 				action_completed.emit()
 				self.set_physics_process(false)
-
+			
 		"SmoothMove":
 			actor.position = actor.position.lerp(mark, delta * speed)
 			

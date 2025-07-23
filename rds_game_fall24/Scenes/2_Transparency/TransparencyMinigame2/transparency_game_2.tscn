@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b4wjc8kwmoylw" path="res://Scenes/2_Transparency/TransparencyMinigame2/ui_transparency_minigame_2.tscn" id="9_id1am"]
 [ext_resource type="Script" path="res://Scripts/Components/fairness_crystal.gd" id="10_1epod"]
 [ext_resource type="PackedScene" uid="uid://c0b5pntcik1eq" path="res://Scenes/1_Fairness/FairnessEnv/fairness_crystal.tscn" id="10_osueo"]
-[ext_resource type="PackedScene" uid="uid://lqh227mfj61a" path="res://Scenes/2_Transparency/TransparencyMinigame2/riptide_tile.tscn" id="12_djebx"]
+[ext_resource type="PackedScene" uid="uid://l2mas2ihi8ao" path="res://Scenes/2_Transparency/TransparencyMinigame2/riptide_tile.tscn" id="12_djebx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evnht"]
 texture = ExtResource("1_tj2v6")

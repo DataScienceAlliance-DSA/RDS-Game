@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://2rm83pm346lg" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Middle_bookshelf_1.PNG" id="5_dakkq"]
 [ext_resource type="Texture2D" uid="uid://dr2u0i2ekgrj6" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Behind_bookshelf.PNG" id="7_nj1ts"]
 [ext_resource type="Script" path="res://Scripts/Characters/Fox/fox.gd" id="7_o7vs3"]
-[ext_resource type="Texture2D" uid="uid://ii21s1w7xawj" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Bookshelf_1.PNG" id="8_dtwal"]
 [ext_resource type="Texture2D" uid="uid://bt2mna5h3oeas" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewBookshelves/Vertical_bookshelf.PNG" id="9_hrfir"]
 [ext_resource type="PackedScene" uid="uid://de5m2lnwygbi0" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/new_bookshelf.tscn" id="10_agimv"]
 [ext_resource type="Texture2D" uid="uid://dhs6jmty0ba6k" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewMisc/Column.PNG" id="10_o6pq4"]
@@ -19,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cllbvwqk0kbdy" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTables/Table_5.PNG" id="15_u7syi"]
 [ext_resource type="Texture2D" uid="uid://dnf083ogcumh1" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTables/Table_3.PNG" id="16_1avig"]
 [ext_resource type="Texture2D" uid="uid://dasss2vkv3jc1" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTables/Table_2.PNG" id="17_dm8ch"]
+[ext_resource type="PackedScene" uid="uid://bis26wiglj82a" path="res://Scenes/0_Tutorial/Tutorial_VeracityEnv/secret_bookshelf_redo.tscn" id="17_ua1y1"]
 [ext_resource type="Texture2D" uid="uid://dxkyofjtfon0i" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTables/Table_1.PNG" id="18_eonct"]
 [ext_resource type="Texture2D" uid="uid://cnm5aotje7uo8" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewTables/Table_4.PNG" id="19_gfavo"]
 [ext_resource type="Texture2D" uid="uid://bt51adqaevaj" path="res://Assets/0_Tutorial/Tutorial_VeracityEnv/Intro_Room/NewAssets/NewMisc/Plant_1.PNG" id="20_8pms7"]
@@ -1900,7 +1900,7 @@ metadata/_edit_group_ = true
 
 [node name="Main Character" parent="." groups=["Player"] instance=ExtResource("29_boeig")]
 y_sort_enabled = true
-position = Vector2(3904, -320)
+position = Vector2(1565, -904)
 
 [node name="Fox" parent="." groups=["Fox"] instance=ExtResource("30_xr8tm")]
 position = Vector2(1472, -960)
@@ -1984,18 +1984,8 @@ y_sort_enabled = true
 position = Vector2(191, -20)
 shape = SubResource("RectangleShape2D_l7v3e")
 
-[node name="SoloBookshelf" type="StaticBody2D" parent="Bookshelves"]
-y_sort_enabled = true
+[node name="SoloBookshelf" parent="Bookshelves" instance=ExtResource("17_ua1y1")]
 position = Vector2(1280, -1024)
-
-[node name="Sprite2D" type="Sprite2D" parent="Bookshelves/SoloBookshelf"]
-position = Vector2(188, -39.065)
-texture = ExtResource("8_dtwal")
-offset = Vector2(0, -112)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookshelves/SoloBookshelf"]
-position = Vector2(191, -20)
-shape = SubResource("RectangleShape2D_7g85e")
 
 [node name="VerticalBookshelfLeft" type="StaticBody2D" parent="Bookshelves"]
 y_sort_enabled = true
